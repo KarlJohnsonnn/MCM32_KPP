@@ -1,0 +1,19 @@
+#INTEGRATOR rosenbrock
+
+#LANGUAGE Fortran90
+
+#DOUBLE on
+
+#DRIVER general
+
+#HESSIAN off
+
+#MEX off
+
+#STOICMAT off
+
+#INCLUDE mcm_32.spc
+
+#INCLUDE mcm_32.def
+
+#INCLUDE mcm_32.eqn

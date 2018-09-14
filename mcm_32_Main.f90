@@ -58,6 +58,30 @@ PROGRAM mcm_32_Driver
       &     action='write', access='sequential', iostat=io_stat    )
       WRITE(999,*) ' T             ',( TRIM(SPC_NAMES(MONITOR(i)))//'            ', i=1,NMONITOR )
       WRITE(999,*) ' T(idx)  ',( MONITOR(i),' ', i=1,NMONITOR )
+
+
+      WRITE(*,*) ' Diagnose species'
+      DO i = 1 , SIZE(SPC_NAMES)
+        IF ( TRIM(SPC_NAMES(i)) == 'SPC177' ) WRITE(*,*) 'SPC177',i
+        IF ( TRIM(SPC_NAMES(i)) == 'SPC5664' ) WRITE(*,*) 'SPC5664',i
+        IF ( TRIM(SPC_NAMES(i)) == 'SPC172' ) WRITE(*,*) 'SPC172',i
+        IF ( TRIM(SPC_NAMES(i)) == 'SPC5599' ) WRITE(*,*) 'SPC5599',i
+        IF ( TRIM(SPC_NAMES(i)) == 'SPC5647' ) WRITE(*,*) 'SPC5647',i
+        IF ( TRIM(SPC_NAMES(i)) == 'SPC5624' ) WRITE(*,*) 'SPC5624',i
+        IF ( TRIM(SPC_NAMES(i)) == 'SPC5714' ) WRITE(*,*) 'SPC5714',i
+        IF ( TRIM(SPC_NAMES(i)) == 'SPC5701' ) WRITE(*,*) 'SPC5701',i
+        IF ( TRIM(SPC_NAMES(i)) == 'SPC5680' ) WRITE(*,*) 'SPC5680',i
+        IF ( TRIM(SPC_NAMES(i)) == 'SPC5597' ) WRITE(*,*) 'SPC5597',i
+        IF ( TRIM(SPC_NAMES(i)) == 'SPC5608' ) WRITE(*,*) 'SPC5608',i
+        IF ( TRIM(SPC_NAMES(i)) == 'SPC4193' ) WRITE(*,*) 'SPC4193',i
+        IF ( TRIM(SPC_NAMES(i)) == 'SPC5562' ) WRITE(*,*) 'SPC5562',i
+        IF ( TRIM(SPC_NAMES(i)) == 'SPC5558' ) WRITE(*,*) 'SPC5558',i
+        IF ( TRIM(SPC_NAMES(i)) == 'SPC5563' ) WRITE(*,*) 'SPC5563',i
+        IF ( TRIM(SPC_NAMES(i)) == 'SPC5590' ) WRITE(*,*) 'SPC5590',i
+      END DO
+
+
+
       CALL CPU_TIME(t0)
       T = TSTART
 kron: DO WHILE (T < TEND)
@@ -68,7 +92,7 @@ kron: DO WHILE (T < TEND)
                    ( TRIM(SPC_NAMES(MONITOR(i))),           &
                      C(MONITOR(i))/CFACTOR, i=1,NMONITOR )
         WRITE(999,'(*(Es14.6))') T, ( C(MONITOR(i))/CFACTOR, i=1,NMONITOR )           
-        CALL SaveData()
+        !CALL SaveData()
         CALL Update_SUN() 
         CALL Update_RCONST()
 

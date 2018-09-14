@@ -62,6 +62,8 @@ PROGRAM mcm_32_Driver
 
       WRITE(*,*) ' Diagnose species'
       DO i = 1 , SIZE(SPC_NAMES)
+        IF ( TRIM(SPC_NAMES(i)) == 'SPC3939' ) WRITE(*,*) 'SPC3939 (NO2)',i   ! NO2
+        IF ( TRIM(SPC_NAMES(i)) == 'SPC3951' ) WRITE(*,*) 'SPC3951 (O3)',i   ! O3
         IF ( TRIM(SPC_NAMES(i)) == 'SPC177' ) WRITE(*,*) 'SPC177',i
         IF ( TRIM(SPC_NAMES(i)) == 'SPC5664' ) WRITE(*,*) 'SPC5664',i
         IF ( TRIM(SPC_NAMES(i)) == 'SPC172' ) WRITE(*,*) 'SPC172',i

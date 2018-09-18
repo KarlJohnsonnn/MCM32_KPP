@@ -13,7 +13,7 @@
 !        R. Sander, Max-Planck Institute for Chemistry, Mainz, Germany
 ! 
 ! File                 : mcm_32_Util.f90
-! Time                 : Mon Aug 27 18:55:50 2018
+! Time                 : Sat Sep 15 19:57:21 2018
 ! Working directory    : /vols/fs1/work/schimmel/Code/kpp-2.2.3
 ! Equation file        : mcm_32.kpp
 ! Output root filename : mcm_32
@@ -143,6 +143,34 @@ CONTAINS
 ! End of GenerateMatlab function
 ! ****************************************************************
 
+
+! ****************************************************************
+!                            
+! tag2num - convert equation tags to kpp reaction number
+!   Arguments :
+!      id        - string with the equation tag
+!
+! ****************************************************************
+
+ELEMENTAL INTEGER FUNCTION tag2num ( id )
+
+  USE mcm_32_Monitor, ONLY: EQN_TAGS
+
+  CHARACTER(LEN=*), INTENT(IN) :: id
+  INTEGER i
+
+  tag2num = 0 ! mz_rs_20050115
+  DO i = 1, SIZE(EQN_TAGS)
+    IF (TRIM(EQN_TAGS(i)) == TRIM(id)) THEN
+      tag2num = i ! mz_rs_20050115
+      EXIT
+    ENDIF
+  END DO
+
+END FUNCTION tag2num
+
+! End of tag2num function
+! ****************************************************************
 
 ! End Utility Functions from KPP_HOME/util/util
 ! End of UTIL function

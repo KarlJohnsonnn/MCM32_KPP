@@ -1,5724 +1,5724 @@
 #include atoms
 
 #DEFVAR
-SPC1 = IGNORE ;    //  BR
-SPC2 = IGNORE ;    //  BRCC(=O)O
-SPC3 = IGNORE ;    //  BRCC(=O)OO
-SPC4 = IGNORE ;    //  BRCC(=O)OON(=O)=O
-SPC5 = IGNORE ;    //  BRCC(=O)O[O]
-SPC6 = IGNORE ;    //  BRCC(BR)OO
-SPC7 = IGNORE ;    //  BRCC(BR)O[O]
-SPC8 = IGNORE ;    //  BRCC(BR)[O]
-SPC9 = IGNORE ;    //  BRCC(O)BR
-SPC10 = IGNORE ;    //  BRCC=O
-SPC11 = IGNORE ;    //  BRCCBR
-SPC12 = IGNORE ;    //  BRCOO
-SPC13 = IGNORE ;    //  BRCO[O]
-SPC14 = IGNORE ;    //  BRC[O]
-SPC15 = IGNORE ;    //  C
-SPC16 = IGNORE ;    //  C#C
-SPC17 = IGNORE ;    //  C(CC(C(=O)OO[N+](=O)[O-])C(C)=C)C(=O)C
-SPC18 = IGNORE ;    //  C(CC(C(=O)OO[N+](=O)[O-])C(C)=C)O
-SPC19 = IGNORE ;    //  C(CC(C(=O)OO[N+](=O)[O-])C(C)=O)=O
-SPC20 = IGNORE ;    //  C(CC(C(=O)OO[N+](=O)[O-])C(C)=O)C(=O)C
-SPC21 = IGNORE ;    //  C(CC(C(=O)OO[N+](=O)[O-])C(C)=O)O
-SPC22 = IGNORE ;    //  C(CC(C=O)C(C)(CO)O[N+](=O)[O-])O
-SPC23 = IGNORE ;    //  C(CC(C=O)C(C)(CO[N+](=O)[O-])O)O
-SPC24 = IGNORE ;    //  C(CC(C=O)C(C)(CO[N+](=O)[O-])OO)O
-SPC25 = IGNORE ;    //  C(CC(C=O)C(C)(CO[N+](=O)[O-])O[O])O
-SPC26 = IGNORE ;    //  C(CC(C=O)C(C)(CO[N+](=O)[O-])[O])O
-SPC27 = IGNORE ;    //  C(CC(C=O)[C](C)O[O])O
-SPC28 = IGNORE ;    //  C(CC(CC(=O)OO[N+](=O)[O-])C(C)=C)=O
-SPC29 = IGNORE ;    //  C(CC(CC(=O)OO[N+](=O)[O-])C(C)=C)C(=O)C
-SPC30 = IGNORE ;    //  C(CC(CC(=O)OO[N+](=O)[O-])C(C)=C)C(=O)O
-SPC31 = IGNORE ;    //  C(CC(CC(=O)OO[N+](=O)[O-])C(C)=O)=O
-SPC32 = IGNORE ;    //  C(CC(CC(=O)OO[N+](=O)[O-])C(C)=O)C(=O)O
-SPC33 = IGNORE ;    //  C(CC(CC(OO[N+](=O)[O-])=O)C(C)=O)C(=O)C
-SPC34 = IGNORE ;    //  C(CC(CC=O)C(C)(CO)O[N+](=O)[O-])=O
-SPC35 = IGNORE ;    //  C(CC(CC=O)C(C)(CO)O[N+](=O)[O-])C(C)=O
-SPC36 = IGNORE ;    //  C(CC(CC=O)C(C)(CO[N+](=O)[O-])O)=O
-SPC37 = IGNORE ;    //  C(CC(CC=O)C(C)(CO[N+](=O)[O-])O)C(C)=O
-SPC38 = IGNORE ;    //  C(CC(CC=O)C(C)(CO[N+](=O)[O-])OO)=O
-SPC39 = IGNORE ;    //  C(CC(CC=O)C(C)(CO[N+](=O)[O-])OO)C(C)=O
-SPC40 = IGNORE ;    //  C(CC(CC=O)C(C)(CO[N+](=O)[O-])O[O])=O
-SPC41 = IGNORE ;    //  C(CC(CC=O)C(C)(CO[N+](=O)[O-])O[O])C(C)=O
-SPC42 = IGNORE ;    //  C(CC(CC=O)C(C)(CO[N+](=O)[O-])[O])=O
-SPC43 = IGNORE ;    //  C(CC(CC=O)C(C)(CO[N+](=O)[O-])[O])C(C)=O
-SPC44 = IGNORE ;    //  C(CC(CC=O)C(C)=C)C(=O)OO[N+](=O)[O-]
-SPC45 = IGNORE ;    //  C(CC(CC=O)C(C)=C)O[N+](=O)[O-]
-SPC46 = IGNORE ;    //  C(CC(CC=O)C(C)=C)[C](C)O[O]
-SPC47 = IGNORE ;    //  C(CC(CC=O)C(C)=O)C(=O)OO[N+](=O)[O-]
-SPC48 = IGNORE ;    //  C(CC(CC=O)C(C)=O)O[N+](=O)[O-]
-SPC49 = IGNORE ;    //  C(CC(CC=O)C(C)=O)[C](C)O[O]
-SPC50 = IGNORE ;    //  C(CC(CC=O)[C](C)O[O])=O
-SPC51 = IGNORE ;    //  C(CC(CC=O)[C](C)O[O])C(C)=O
-SPC52 = IGNORE ;    //  C(CC(CO)C(C)(CO)O[N+](=O)[O-])=O
-SPC53 = IGNORE ;    //  C(CC(CO)C(C)(CO[N+](=O)[O-])O)=O
-SPC54 = IGNORE ;    //  C(CC(CO)C(C)(CO[N+](=O)[O-])OO)=O
-SPC55 = IGNORE ;    //  C(CC(CO)C(C)(CO[N+](=O)[O-])O[O])=O
-SPC56 = IGNORE ;    //  C(CC(CO)C(C)(CO[N+](=O)[O-])[O])=O
-SPC57 = IGNORE ;    //  C(CC(CO)C(C)=C)(=O)OO[N+](=O)[O-]
-SPC58 = IGNORE ;    //  C(CC(CO)C(C)=O)(=O)OO[N+](=O)[O-]
-SPC59 = IGNORE ;    //  C(CC(CO)[C](C)O[O])=O
-SPC60 = IGNORE ;    //  C(CC(CO[N+](=O)[O-])C(C)=C)=O
-SPC61 = IGNORE ;    //  C(CC(CO[N+](=O)[O-])C(C)=C)C(=O)C
-SPC62 = IGNORE ;    //  C(CC(CO[N+](=O)[O-])C(C)=C)C(=O)O
-SPC63 = IGNORE ;    //  C(CC(CO[N+](=O)[O-])C(C)=O)=O
-SPC64 = IGNORE ;    //  C(CC(CO[N+](=O)[O-])C(C)=O)C(=O)C
-SPC65 = IGNORE ;    //  C(CC(CO[N+](=O)[O-])C(C)=O)C(=O)O
-SPC66 = IGNORE ;    //  C(CC(C[CH]O[O])C(C)=C)C(C)=O
-SPC67 = IGNORE ;    //  C(CC(C[CH]O[O])C(C)=C)C(C)=O*b
-SPC68 = IGNORE ;    //  C(CC(C[CH]O[O])C(C)=O)C(C)=O
-SPC69 = IGNORE ;    //  C(CC(C[CH]O[O])C(C)=O)C(C)=O*b
-SPC70 = IGNORE ;    //  C(CC(O[N+](=O)[O-])C(C)=C)O
-SPC71 = IGNORE ;    //  C(O[N+](=O)[O-])C(CO)C(C)=C
-SPC72 = IGNORE ;    //  C(O[N+](=O)[O-])C(CO)C(C)=O
-SPC73 = IGNORE ;    //  C/C1=C/CCC(=C)C2CC(C)(C)C2CC\1
-SPC74 = IGNORE ;    //  C/C1=C/CCC(=O)C2CC(C)(C)C2CC\1
-SPC75 = IGNORE ;    //  C/C=C/C(=O)O
-SPC76 = IGNORE ;    //  C12CC(C1(C)C)CC(=O)C2(O)C
-SPC77 = IGNORE ;    //  C12CC(C1(C)C)CC(=O)C2(ON(=O)=O)C
-SPC78 = IGNORE ;    //  C12CC(C1(C)C)CC(O)C2(O)C
-SPC79 = IGNORE ;    //  C12CC(C1(C)C)CC(O)C2(ON(=O)=O)C
-SPC80 = IGNORE ;    //  C12CC(C1(C)C)CC(O)C2(OO)C
-SPC81 = IGNORE ;    //  C12CC(C1(C)C)CC(O)C2(O[O])C
-SPC82 = IGNORE ;    //  C12CC(C1(C)C)CC(O)C2([O])C
-SPC83 = IGNORE ;    //  C12CC(C1(C)C)CC(ON(=O)=O)C2(O)C
-SPC84 = IGNORE ;    //  C12CC(C1(C)C)CC(ON(=O)=O)C2(OO)C
-SPC85 = IGNORE ;    //  C12CC(C1(C)C)CC(ON(=O)=O)C2(O[O])C
-SPC86 = IGNORE ;    //  C12CC(C1(C)C)CC(ON(=O)=O)C2([O])C
-SPC87 = IGNORE ;    //  C12CC(C1(C)C)CC(OO)C2(O)C
-SPC88 = IGNORE ;    //  C12CC(C1(C)C)CC(OO)C2(ON(=O)=O)C
-SPC89 = IGNORE ;    //  C12CC(C1(C)C)CC(O[O])C2(O)C
-SPC90 = IGNORE ;    //  C12CC(C1(C)C)CC(O[O])C2(ON(=O)=O)C
-SPC91 = IGNORE ;    //  C12CC(C1(C)C)CC([O])C2(O)C
-SPC92 = IGNORE ;    //  C12CC(C1(C)C)CC([O])C2(ON(=O)=O)C
-SPC93 = IGNORE ;    //  C12CC(C1(C)C)CC=C2C
-SPC94 = IGNORE ;    //  C12CC(OO)(C1(C)C)CC(=O)C2(ON(=O)=O)C
-SPC95 = IGNORE ;    //  C12CC(O[O])(C1(C)C)CC(=O)C2(ON(=O)=O)C
-SPC96 = IGNORE ;    //  C12CC([O])(C1(C)C)CC(=O)C2(ON(=O)=O)C
-SPC97 = IGNORE ;    //  C1C(=O)C(=O)C(C)(C)C(=O)C1
-SPC98 = IGNORE ;    //  C1C(=O)C(=O)CC(OO)C1
-SPC99 = IGNORE ;    //  C1C(=O)C(=O)CC(O[O])C1
-SPC100 = IGNORE ;    //  C1C(=O)C(=O)CC([O])C1
-SPC101 = IGNORE ;    //  C1C(=O)C(O)C(C)(C)C(=O)C1
-SPC102 = IGNORE ;    //  C1C(=O)C(OO)C(C)(C)C(=O)C1
-SPC103 = IGNORE ;    //  C1C(=O)C(O[O])C(C)(C)C(=O)C1
-SPC104 = IGNORE ;    //  C1C(=O)C([O])C(C)(C)C(=O)C1
-SPC105 = IGNORE ;    //  C1C(=O)CC(=O)C(=O)C1
-SPC106 = IGNORE ;    //  C1C(=O)CC(=O)CC1=O
-SPC107 = IGNORE ;    //  C1C(=O)CC(O)C(=O)C1
-SPC108 = IGNORE ;    //  C1C(=O)CC(ON(=O)=O)CC1
-SPC109 = IGNORE ;    //  C1C(=O)CC(OO)C(=O)C1
-SPC110 = IGNORE ;    //  C1C(=O)CC(OO)CC1
-SPC111 = IGNORE ;    //  C1C(=O)CC(OO)CC1=O
-SPC112 = IGNORE ;    //  C1C(=O)CC(O[O])C(=O)C1
-SPC113 = IGNORE ;    //  C1C(=O)CC(O[O])CC1
-SPC114 = IGNORE ;    //  C1C(=O)CC(O[O])CC1=O
-SPC115 = IGNORE ;    //  C1C(=O)CC([O])C(=O)C1
-SPC116 = IGNORE ;    //  C1C(=O)CC([O])CC1
-SPC117 = IGNORE ;    //  C1C(=O)CC([O])CC1=O
-SPC118 = IGNORE ;    //  C1C(=O)CCC(=O)C1C(O)(C)C
-SPC119 = IGNORE ;    //  C1C(=O)CCC(=O)C1C(ON(=O)=O)(C)C
-SPC120 = IGNORE ;    //  C1C(=O)CCC(=O)C1C(OO)(C)C
-SPC121 = IGNORE ;    //  C1C(=O)CCC(=O)C1C(O[O])(C)C
-SPC122 = IGNORE ;    //  C1C(=O)CCC(=O)C1C([O])(C)C
-SPC123 = IGNORE ;    //  C1C(O)C(C)=CCC1C(O)(C)C
-SPC124 = IGNORE ;    //  C1C(O)C(C)=CCC1C(ON(=O)=O)(C)C
-SPC125 = IGNORE ;    //  C1C(O)C(C)=CCC1C(OO)(C)C
-SPC126 = IGNORE ;    //  C1C(O)C(C)=CCC1C(O[O])(C)C
-SPC127 = IGNORE ;    //  C1C(O)C(C)=CCC1C([O])(C)C
-SPC128 = IGNORE ;    //  C1C(O)CC(=O)CC1
-SPC129 = IGNORE ;    //  C1C(O[O])O1
-SPC130 = IGNORE ;    //  C1CC(=O)C(=O)CC1
-SPC131 = IGNORE ;    //  C1CC(=O)CC(=O)C1
-SPC132 = IGNORE ;    //  C1CC(C)=CCC1C(=O)C
-SPC133 = IGNORE ;    //  C1CC(C)=CCC1C(C)=C
-SPC134 = IGNORE ;    //  C1CC(C)=CCC1C(O)(C)CO
-SPC135 = IGNORE ;    //  C1CC(C)=CCC1C(OO)(C)CO
-SPC136 = IGNORE ;    //  C1CC(C)=CCC1C(O[O])(C)CO
-SPC137 = IGNORE ;    //  C1CC(C)=CCC1C([O])(C)CO
-SPC138 = IGNORE ;    //  C1CC(CC(C1(C)O)O[N+](=O)[O-])C(C)=C
-SPC139 = IGNORE ;    //  C1CC(CC(C1(C)O)O[N+](=O)[O-])C(C)=O
-SPC140 = IGNORE ;    //  C1CC(CC(C1(C)OO)O[N+](=O)[O-])C(C)=C
-SPC141 = IGNORE ;    //  C1CC(CC(C1(C)OO)O[N+](=O)[O-])C(C)=O
-SPC142 = IGNORE ;    //  C1CC(CC(C1(C)O[N+](=O)[O-])O)C(C)=C
-SPC143 = IGNORE ;    //  C1CC(CC(C1(C)O[N+](=O)[O-])O)C(C)=O
-SPC144 = IGNORE ;    //  C1CC(CC(C1(C)O[O])O[N+](=O)[O-])C(C)=C
-SPC145 = IGNORE ;    //  C1CC(CC(C1(C)O[O])O[N+](=O)[O-])C(C)=O
-SPC146 = IGNORE ;    //  C1CC(CC(C1(C)[O])O[N+](=O)[O-])C(C)=C
-SPC147 = IGNORE ;    //  C1CC(CC(C1(C)[O])O[N+](=O)[O-])C(C)=O
-SPC148 = IGNORE ;    //  C1CC(CC=C1C)C(C)(O[N+](=O)[O-])CO
-SPC149 = IGNORE ;    //  C1CC(O)(C)C(=O)CC1C(=O)C
-SPC150 = IGNORE ;    //  C1CC(O)(C)C(=O)CC1C(C)=C
-SPC151 = IGNORE ;    //  C1CC(O)(C)C(O)CC1C(=O)C
-SPC152 = IGNORE ;    //  C1CC(O)(C)C(O)CC1C(C)=C
-SPC153 = IGNORE ;    //  C1CC(O)(C)C(OO)CC1C(=O)C
-SPC154 = IGNORE ;    //  C1CC(O)(C)C(OO)CC1C(C)=C
-SPC155 = IGNORE ;    //  C1CC(O)(C)C(O[O])CC1C(=O)C
-SPC156 = IGNORE ;    //  C1CC(O)(C)C(O[O])CC1C(C)=C
-SPC157 = IGNORE ;    //  C1CC(O)(C)C([O])CC1C(=O)C
-SPC158 = IGNORE ;    //  C1CC(O)(C)C([O])CC1C(C)=C
-SPC159 = IGNORE ;    //  C1CC(O)C(=O)CC1
-SPC160 = IGNORE ;    //  C1CC(O)C(O)CC1
-SPC161 = IGNORE ;    //  C1CC(O)C(ON(=O)=O)CC1
-SPC162 = IGNORE ;    //  C1CC(O)C(OO)CC1
-SPC163 = IGNORE ;    //  C1CC(O)C(O[O])CC1
-SPC164 = IGNORE ;    //  C1CC(O)C([O])CC1
-SPC165 = IGNORE ;    //  C1CC(OO)(C)C(O)CC1C(=O)C
-SPC166 = IGNORE ;    //  C1CC(OO)(C)C(O)CC1C(C)=C
-SPC167 = IGNORE ;    //  C1CC(O[O])(C)C(O)CC1C(=O)C
-SPC168 = IGNORE ;    //  C1CC(O[O])(C)C(O)CC1C(C)=C
-SPC169 = IGNORE ;    //  C1CC([O])(C)C(O)CC1C(=O)C
-SPC170 = IGNORE ;    //  C1CC([O])(C)C(O)CC1C(C)=C
-SPC171 = IGNORE ;    //  C1CCC(=O)CC1
-SPC172 = IGNORE ;    //  C1CCC(O)CC1
-SPC173 = IGNORE ;    //  C1CCC(ON(=O)=O)CC1
-SPC174 = IGNORE ;    //  C1CCC(OO)CC1
-SPC175 = IGNORE ;    //  C1CCC(O[O])CC1
-SPC176 = IGNORE ;    //  C1CCC([O])CC1
-SPC177 = IGNORE ;    //  C1CCCCC1
-SPC178 = IGNORE ;    //  C1OC(=O)C(C)=C1C
-SPC179 = IGNORE ;    //  C1OC(=O)C(O[O])C1O
-SPC180 = IGNORE ;    //  C1OC(=O)C([O])C1O
-SPC181 = IGNORE ;    //  C1OC1
-SPC182 = IGNORE ;    //  C1OC1(C)C(O)C(=O)OO
-SPC183 = IGNORE ;    //  C1OC1(C)C(O)C(=O)O[O]
-SPC184 = IGNORE ;    //  C1OC1(C)C(O)C=O
-SPC185 = IGNORE ;    //  C1OC1(C)C(O)CO
-SPC186 = IGNORE ;    //  C1OC1C(O)(C)C(=O)OO
-SPC187 = IGNORE ;    //  C1OC1C(O)(C)C(=O)O[O]
-SPC188 = IGNORE ;    //  C1OC1C(O)(C)C=O
-SPC189 = IGNORE ;    //  C1OC1C(O)(C)CO
-SPC190 = IGNORE ;    //  C=C
-SPC191 = IGNORE ;    //  C=C(C)C(=O)O[O]
-SPC192 = IGNORE ;    //  C=C(C)C(C(=O)O[O])CCO
-SPC193 = IGNORE ;    //  C=C(C)C(CC=O)CC(=O)O[O]
-SPC194 = IGNORE ;    //  C=C(C)C(CC=O)CCC(=O)CO[O]
-SPC195 = IGNORE ;    //  C=C(C)C(CC=O)CCC(=O)C[O]
-SPC196 = IGNORE ;    //  C=C(C)C(CC=O)CCC(=O)O[O]
-SPC197 = IGNORE ;    //  C=C(C)C(CC=O)CCC(=O)[O]
-SPC198 = IGNORE ;    //  C=C(C)C(CC=O)CCO[O]
-SPC199 = IGNORE ;    //  C=C(C)C(CC=O)CC[O]
-SPC200 = IGNORE ;    //  C=C(C)C(CO)C(=O)O[O]
-SPC201 = IGNORE ;    //  C=C(C)C(CO)CC(=O)O[O]
-SPC202 = IGNORE ;    //  C=C(C)C(CO)CO[O]
-SPC203 = IGNORE ;    //  C=C(C)C(CO)C[O]
-SPC204 = IGNORE ;    //  C=C(C)C(CO[O])CC=O
-SPC205 = IGNORE ;    //  C=C(C)C(C[O])CC=O
-SPC206 = IGNORE ;    //  C=C(CCC=O)C(CC1(C)C)C1CCC(=O)CO[O]
-SPC207 = IGNORE ;    //  C=C(CCC=O)C(CC1(C)C)C1CCC(=O)C[O]
-SPC208 = IGNORE ;    //  C=C(CCC=O)C(CC1(C)C)C1CCC(=O)O[O]
-SPC209 = IGNORE ;    //  C=C(CCC=O)C(CC1(C)C)C1CCC(=O)[O]
-SPC210 = IGNORE ;    //  C=C(CCC=O)C(CC1(C)C)C1CCO[O]
-SPC211 = IGNORE ;    //  C=C(CCC=O)C(CC1(C)C)C1CC[O]
-SPC212 = IGNORE ;    //  C=C(CCO)C(=O)CO[O]
-SPC213 = IGNORE ;    //  C=C(CCO)C(=O)C[O]
-SPC214 = IGNORE ;    //  C=C(CO)C(=O)O[O]
-SPC215 = IGNORE ;    //  C=C1CCC(=O)C(C)(O)CCC2C1CC2(C)C
-SPC216 = IGNORE ;    //  C=C1CCC(O)C(C)(O)CCC2C1CC2(C)C
-SPC217 = IGNORE ;    //  C=C1CCC(O)C(C)([O])CCC2C1CC2(C)C
-SPC218 = IGNORE ;    //  C=C1CCC([O])C(C)(O)CCC2C1CC2(C)C
-SPC219 = IGNORE ;    //  C=C1CCC2OOC(C)(CCC3C1CC3(C)C)O2
-SPC220 = IGNORE ;    //  C=CC(=O)CO[O]
-SPC221 = IGNORE ;    //  C=CC(=O)C[O]
-SPC222 = IGNORE ;    //  C=CC(=O)O[O]
-SPC223 = IGNORE ;    //  C=CC(C)=C
-SPC224 = IGNORE ;    //  C=CC(O)C(=O)O[O]
-SPC225 = IGNORE ;    //  C=CC(O)CO[O]
-SPC226 = IGNORE ;    //  C=CC(O)C[O]
-SPC227 = IGNORE ;    //  C=CC=C
-SPC228 = IGNORE ;    //  C=O
-SPC229 = IGNORE ;    //  CBR
-SPC230 = IGNORE ;    //  CC
-SPC231 = IGNORE ;    //  CC(=O)C
-SPC232 = IGNORE ;    //  CC(=O)C(=O)C
-SPC233 = IGNORE ;    //  CC(=O)C(=O)C(=O)C
-SPC234 = IGNORE ;    //  CC(=O)C(=O)C(=O)C(OO)C
-SPC235 = IGNORE ;    //  CC(=O)C(=O)C(=O)C(O[O])C
-SPC236 = IGNORE ;    //  CC(=O)C(=O)C(=O)C([O])C
-SPC237 = IGNORE ;    //  CC(=O)C(=O)C(=O)C=O
-SPC238 = IGNORE ;    //  CC(=O)C(=O)C(=O)COO
-SPC239 = IGNORE ;    //  CC(=O)C(=O)C(=O)CO[O]
-SPC240 = IGNORE ;    //  CC(=O)C(=O)C(=O)C[O]
-SPC241 = IGNORE ;    //  CC(=O)C(=O)C(C)=C(C)C(=O)C=O
-SPC242 = IGNORE ;    //  CC(=O)C(=O)C(C)=CC(=O)C=O
-SPC243 = IGNORE ;    //  CC(=O)C(=O)C(C)C
-SPC244 = IGNORE ;    //  CC(=O)C(=O)C(C)C(=O)C
-SPC245 = IGNORE ;    //  CC(=O)C(=O)C(C)C(=O)OO
-SPC246 = IGNORE ;    //  CC(=O)C(=O)C(C)C(=O)O[O]
-SPC247 = IGNORE ;    //  CC(=O)C(=O)C(C)C=O
-SPC248 = IGNORE ;    //  CC(=O)C(=O)C(C)CO
-SPC249 = IGNORE ;    //  CC(=O)C(=O)C(CC)=CC(=O)C=O
-SPC250 = IGNORE ;    //  CC(=O)C(=O)C(CC)=CC(=O)OO
-SPC251 = IGNORE ;    //  CC(=O)C(=O)C(CC)=CC(=O)OON(=O)=O
-SPC252 = IGNORE ;    //  CC(=O)C(=O)C(CC)=CC(=O)O[O]
-SPC253 = IGNORE ;    //  CC(=O)C(=O)C(O)(C)C
-SPC254 = IGNORE ;    //  CC(=O)C(=O)C(O)(C)C(=O)OO
-SPC255 = IGNORE ;    //  CC(=O)C(=O)C(O)(C)C(=O)O[O]
-SPC256 = IGNORE ;    //  CC(=O)C(=O)C(O)(C)C=O
-SPC257 = IGNORE ;    //  CC(=O)C(=O)C(O)(C)COO
-SPC258 = IGNORE ;    //  CC(=O)C(=O)C(O)(C)CO[O]
-SPC259 = IGNORE ;    //  CC(=O)C(=O)C(O)(C)C[O]
-SPC260 = IGNORE ;    //  CC(=O)C(=O)C(O)C1(C)OC1C=O
-SPC261 = IGNORE ;    //  CC(=O)C(=O)C(O)C1OC1(C)C=O
-SPC262 = IGNORE ;    //  CC(=O)C(=O)C(O)C1OC1C=O
-SPC263 = IGNORE ;    //  CC(=O)C(=O)C(O)C=O
-SPC264 = IGNORE ;    //  CC(=O)C(=O)C(OO)(C)C
-SPC265 = IGNORE ;    //  CC(=O)C(=O)C(OO)(C)C(=O)C
-SPC266 = IGNORE ;    //  CC(=O)C(=O)C(OO)C
-SPC267 = IGNORE ;    //  CC(=O)C(=O)C(OO)C(=O)C
-SPC268 = IGNORE ;    //  CC(=O)C(=O)C(O[O])(C)C
-SPC269 = IGNORE ;    //  CC(=O)C(=O)C(O[O])(C)C(=O)C
-SPC270 = IGNORE ;    //  CC(=O)C(=O)C(O[O])C
-SPC271 = IGNORE ;    //  CC(=O)C(=O)C(O[O])C(=O)C
-SPC272 = IGNORE ;    //  CC(=O)C(=O)C([O])(C)C
-SPC273 = IGNORE ;    //  CC(=O)C(=O)C([O])(C)C(=O)C
-SPC274 = IGNORE ;    //  CC(=O)C(=O)C([O])C
-SPC275 = IGNORE ;    //  CC(=O)C(=O)C([O])C(=O)C
-SPC276 = IGNORE ;    //  CC(=O)C(=O)C=C(C(=O)OO)CC
-SPC277 = IGNORE ;    //  CC(=O)C(=O)C=C(C(=O)OON(=O)=O)CC
-SPC278 = IGNORE ;    //  CC(=O)C(=O)C=C(C(=O)O[O])CC
-SPC279 = IGNORE ;    //  CC(=O)C(=O)C=C(C)C(=O)C=O
-SPC280 = IGNORE ;    //  CC(=O)C(=O)C=C(CC)C(=O)C=O
-SPC281 = IGNORE ;    //  CC(=O)C(=O)C=CC(=O)C
-SPC282 = IGNORE ;    //  CC(=O)C(=O)C=O
-SPC283 = IGNORE ;    //  CC(=O)C(=O)CC(=O)C(OO)C
-SPC284 = IGNORE ;    //  CC(=O)C(=O)CC(=O)C(O[O])C
-SPC285 = IGNORE ;    //  CC(=O)C(=O)CC(=O)C([O])C
-SPC286 = IGNORE ;    //  CC(=O)C(=O)CC(=O)C=O
-SPC287 = IGNORE ;    //  CC(=O)C(=O)CC(=O)CC(=O)OO
-SPC288 = IGNORE ;    //  CC(=O)C(=O)CC(=O)CC(=O)OON(=O)=O
-SPC289 = IGNORE ;    //  CC(=O)C(=O)CC(=O)CC(=O)O[O]
-SPC290 = IGNORE ;    //  CC(=O)C(=O)CC(=O)CC=O
-SPC291 = IGNORE ;    //  CC(=O)C(=O)CC(=O)CO
-SPC292 = IGNORE ;    //  CC(=O)C(=O)CC(=O)COO
-SPC293 = IGNORE ;    //  CC(=O)C(=O)CC(=O)CO[O]
-SPC294 = IGNORE ;    //  CC(=O)C(=O)CC(=O)C[O]
-SPC295 = IGNORE ;    //  CC(=O)C(=O)CC(=O)OO
-SPC296 = IGNORE ;    //  CC(=O)C(=O)CC(=O)O[O]
-SPC297 = IGNORE ;    //  CC(=O)C(=O)CC(C(=O)C)CC=O
-SPC298 = IGNORE ;    //  CC(=O)C(=O)CC(C(O)(C)C)CC=O
-SPC299 = IGNORE ;    //  CC(=O)C(=O)CC(C(ON(=O)=O)(C)C)CC=O
-SPC300 = IGNORE ;    //  CC(=O)C(=O)CC(C(OO)(C)C)CC=O
-SPC301 = IGNORE ;    //  CC(=O)C(=O)CC(C(O[O])(C)C)CC=O
-SPC302 = IGNORE ;    //  CC(=O)C(=O)CC(C([O])(C)C)CC=O
-SPC303 = IGNORE ;    //  CC(=O)C(=O)CC(CC=O)C(C)=C
-SPC304 = IGNORE ;    //  CC(=O)C(=O)CC(CO)C(=O)C
-SPC305 = IGNORE ;    //  CC(=O)C(=O)CC(CO)C(C)=C
-SPC306 = IGNORE ;    //  CC(=O)C(=O)CC(CO)C(OO)(C)CO
-SPC307 = IGNORE ;    //  CC(=O)C(=O)CC(CO)C(O[O])(C)CO
-SPC308 = IGNORE ;    //  CC(=O)C(=O)CC(CO)C([O])(C)CO
-SPC309 = IGNORE ;    //  CC(=O)C(=O)CC(O)(C)C
-SPC310 = IGNORE ;    //  CC(=O)C(=O)CC(O)CC=O
-SPC311 = IGNORE ;    //  CC(=O)C(=O)CC(O)CO
-SPC312 = IGNORE ;    //  CC(=O)C(=O)CC(ON(=O)=O)CC=O
-SPC313 = IGNORE ;    //  CC(=O)C(=O)CC(ON(=O)=O)CO
-SPC314 = IGNORE ;    //  CC(=O)C(=O)CC(OO)(CO)C(=O)C
-SPC315 = IGNORE ;    //  CC(=O)C(=O)CC(OO)C
-SPC316 = IGNORE ;    //  CC(=O)C(=O)CC(OO)CC=O
-SPC317 = IGNORE ;    //  CC(=O)C(=O)CC(OO)CO
-SPC318 = IGNORE ;    //  CC(=O)C(=O)CC(O[O])(CO)C(=O)C
-SPC319 = IGNORE ;    //  CC(=O)C(=O)CC(O[O])C
-SPC320 = IGNORE ;    //  CC(=O)C(=O)CC(O[O])CC=O
-SPC321 = IGNORE ;    //  CC(=O)C(=O)CC(O[O])CO
-SPC322 = IGNORE ;    //  CC(=O)C(=O)CC([O])(CO)C(=O)C
-SPC323 = IGNORE ;    //  CC(=O)C(=O)CC([O])C
-SPC324 = IGNORE ;    //  CC(=O)C(=O)CC([O])CC=O
-SPC325 = IGNORE ;    //  CC(=O)C(=O)CC([O])CO
-SPC326 = IGNORE ;    //  CC(=O)C(=O)CC1C(CC1(C)C)C(=O)CCC=O
-SPC327 = IGNORE ;    //  CC(=O)C(=O)CC1C(CC1(C)C)C(CCC=O)=C
-SPC328 = IGNORE ;    //  CC(=O)C(=O)CC=O
-SPC329 = IGNORE ;    //  CC(=O)C(=O)CCO
-SPC330 = IGNORE ;    //  CC(=O)C(=O)CO
-SPC331 = IGNORE ;    //  CC(=O)C(=O)CON(=O)=O
-SPC332 = IGNORE ;    //  CC(=O)C(=O)COO
-SPC333 = IGNORE ;    //  CC(=O)C(=O)CO[O]
-SPC334 = IGNORE ;    //  CC(=O)C(=O)C[O]
-SPC335 = IGNORE ;    //  CC(=O)C(=O)O
-SPC336 = IGNORE ;    //  CC(=O)C(=O)OC
-SPC337 = IGNORE ;    //  CC(=O)C(=O)OC(=O)C
-SPC338 = IGNORE ;    //  CC(=O)C(=O)OC(=O)C(=O)C
-SPC339 = IGNORE ;    //  CC(=O)C(=O)OC(=O)C(=O)COO
-SPC340 = IGNORE ;    //  CC(=O)C(=O)OC(=O)C(=O)CO[O]
-SPC341 = IGNORE ;    //  CC(=O)C(=O)OC(=O)C(=O)C[O]
-SPC342 = IGNORE ;    //  CC(=O)C(=O)OC(=O)C(O[O])C
-SPC343 = IGNORE ;    //  CC(=O)C(=O)OC(=O)C([O])C
-SPC344 = IGNORE ;    //  CC(=O)C(=O)OC(C(=O)O)CC
-SPC345 = IGNORE ;    //  CC(=O)C(=O)OC(C(=O)OO)CC
-SPC346 = IGNORE ;    //  CC(=O)C(=O)OC(C(=O)OON(=O)=O)CC
-SPC347 = IGNORE ;    //  CC(=O)C(=O)OC(C(=O)O[O])CC
-SPC348 = IGNORE ;    //  CC(=O)C(=O)OC(C)C(=O)C
-SPC349 = IGNORE ;    //  CC(=O)C(=O)OC(C)C(=O)O
-SPC350 = IGNORE ;    //  CC(=O)C(=O)OC(C)C(=O)OO
-SPC351 = IGNORE ;    //  CC(=O)C(=O)OC(C)C(=O)O[O]
-SPC352 = IGNORE ;    //  CC(=O)C(=O)OC(C)C=O
-SPC353 = IGNORE ;    //  CC(=O)C(=O)OC(C=O)CC
-SPC354 = IGNORE ;    //  CC(=O)C(=O)OC(O)(C)C(=O)C
-SPC355 = IGNORE ;    //  CC(=O)C(=O)OC(OO)(C)C(=O)C
-SPC356 = IGNORE ;    //  CC(=O)C(=O)OC(O[O])(C)C(=O)C
-SPC357 = IGNORE ;    //  CC(=O)C(=O)OC(O[O])C
-SPC358 = IGNORE ;    //  CC(=O)C(=O)OC(O[O])C(=O)C
-SPC359 = IGNORE ;    //  CC(=O)C(=O)OC(O[O])CC
-SPC360 = IGNORE ;    //  CC(=O)C(=O)OC(O[O])CCC
-SPC361 = IGNORE ;    //  CC(=O)C(=O)OC([O])(C)C(=O)C
-SPC362 = IGNORE ;    //  CC(=O)C(=O)OC([O])C
-SPC363 = IGNORE ;    //  CC(=O)C(=O)OC([O])C(=O)C
-SPC364 = IGNORE ;    //  CC(=O)C(=O)OC([O])CC
-SPC365 = IGNORE ;    //  CC(=O)C(=O)OC([O])CCC
-SPC366 = IGNORE ;    //  CC(=O)C(=O)OC=O
-SPC367 = IGNORE ;    //  CC(=O)C(=O)OCC(=O)O
-SPC368 = IGNORE ;    //  CC(=O)C(=O)OCC(=O)OO
-SPC369 = IGNORE ;    //  CC(=O)C(=O)OCC(=O)OON(=O)=O
-SPC370 = IGNORE ;    //  CC(=O)C(=O)OCC(=O)O[O]
-SPC371 = IGNORE ;    //  CC(=O)C(=O)OCC=O
-SPC372 = IGNORE ;    //  CC(=O)C(=O)OCOO
-SPC373 = IGNORE ;    //  CC(=O)C(=O)OCO[O]
-SPC374 = IGNORE ;    //  CC(=O)C(=O)OC[O]
-SPC375 = IGNORE ;    //  CC(=O)C(=O)OO
-SPC376 = IGNORE ;    //  CC(=O)C(=O)O[O]
-SPC377 = IGNORE ;    //  CC(=O)C(C(=O)OO)CC=O
-SPC378 = IGNORE ;    //  CC(=O)C(C(O)(C)C)CC(=O)CC=O
-SPC379 = IGNORE ;    //  CC(=O)C(C(ON(=O)=O)(C)C)CC(=O)CC=O
-SPC380 = IGNORE ;    //  CC(=O)C(C(OO)(C)C)CC(=O)CC=O
-SPC381 = IGNORE ;    //  CC(=O)C(C(OO)(C)C)CC=O
-SPC382 = IGNORE ;    //  CC(=O)C(C(O[O])(C)C)CC(=O)CC=O
-SPC383 = IGNORE ;    //  CC(=O)C(C(O[O])(C)C)CC=O
-SPC384 = IGNORE ;    //  CC(=O)C(C([O])(C)C)CC(=O)CC=O
-SPC385 = IGNORE ;    //  CC(=O)C(C([O])(C)C)CC=O
-SPC386 = IGNORE ;    //  CC(=O)C(C)(C)C
-SPC387 = IGNORE ;    //  CC(=O)C(C)(C)C(=O)O
-SPC388 = IGNORE ;    //  CC(=O)C(C)(C)C(=O)OO
-SPC389 = IGNORE ;    //  CC(=O)C(C)(C)C(=O)O[O]
-SPC390 = IGNORE ;    //  CC(=O)C(C)(C)C=O
-SPC391 = IGNORE ;    //  CC(=O)C(C)(C)CO
-SPC392 = IGNORE ;    //  CC(=O)C(C)(C)CON(=O)=O
-SPC393 = IGNORE ;    //  CC(=O)C(C)(C)COO
-SPC394 = IGNORE ;    //  CC(=O)C(C)(C)CO[O]
-SPC395 = IGNORE ;    //  CC(=O)C(C)(C)C[O]
-SPC396 = IGNORE ;    //  CC(=O)C(C)=C(C)C(=O)O
-SPC397 = IGNORE ;    //  CC(=O)C(C)=C(C)C(=O)OO
-SPC398 = IGNORE ;    //  CC(=O)C(C)=C(C)C(=O)O[O]
-SPC399 = IGNORE ;    //  CC(=O)C(C)=C(C)C(=O)[O]
-SPC400 = IGNORE ;    //  CC(=O)C(C)=C(C)C=O
-SPC401 = IGNORE ;    //  CC(=O)C(C)=CC(=O)O
-SPC402 = IGNORE ;    //  CC(=O)C(C)=CC(=O)OO
-SPC403 = IGNORE ;    //  CC(=O)C(C)=CC(=O)O[O]
-SPC404 = IGNORE ;    //  CC(=O)C(C)=CC(=O)[O]
-SPC405 = IGNORE ;    //  CC(=O)C(C)=CC=O
-SPC406 = IGNORE ;    //  CC(=O)C(C)C
-SPC407 = IGNORE ;    //  CC(=O)C(C)C(=O)C
-SPC408 = IGNORE ;    //  CC(=O)C(C)C(=O)C=O
-SPC409 = IGNORE ;    //  CC(=O)C(C)C(=O)CO
-SPC410 = IGNORE ;    //  CC(=O)C(C)C(=O)O
-SPC411 = IGNORE ;    //  CC(=O)C(C)C(=O)OO
-SPC412 = IGNORE ;    //  CC(=O)C(C)C(=O)O[O]
-SPC413 = IGNORE ;    //  CC(=O)C(C)C(O)CO
-SPC414 = IGNORE ;    //  CC(=O)C(C)C(ON(=O)=O)CO
-SPC415 = IGNORE ;    //  CC(=O)C(C)C(OO)CO
-SPC416 = IGNORE ;    //  CC(=O)C(C)C(O[O])CO
-SPC417 = IGNORE ;    //  CC(=O)C(C)C([O])CO
-SPC418 = IGNORE ;    //  CC(=O)C(C)C=O
-SPC419 = IGNORE ;    //  CC(=O)C(C)CC(=O)O
-SPC420 = IGNORE ;    //  CC(=O)C(C)CC(=O)OO
-SPC421 = IGNORE ;    //  CC(=O)C(C)CC(=O)O[O]
-SPC422 = IGNORE ;    //  CC(=O)C(C)CC=O
-SPC423 = IGNORE ;    //  CC(=O)C(C)CCO
-SPC424 = IGNORE ;    //  CC(=O)C(C)CO
-SPC425 = IGNORE ;    //  CC(=O)C(C)CON(=O)=O
-SPC426 = IGNORE ;    //  CC(=O)C(C)COO
-SPC427 = IGNORE ;    //  CC(=O)C(C)CO[O]
-SPC428 = IGNORE ;    //  CC(=O)C(C)C[O]
-SPC429 = IGNORE ;    //  CC(=O)C(C)OC(=O)C=O
-SPC430 = IGNORE ;    //  CC(=O)C(C1(C)C)CC1CC(=O)O
-SPC431 = IGNORE ;    //  CC(=O)C(C1(C)C)CC1CC(=O)OO
-SPC432 = IGNORE ;    //  CC(=O)C(C1(C)C)CC1CC(=O)O[O]
-SPC433 = IGNORE ;    //  CC(=O)C(C1(C)C)CC1CC=O
-SPC434 = IGNORE ;    //  CC(=O)C(C=O)CC=O
-SPC435 = IGNORE ;    //  CC(=O)C(CC(=O)O)CC=O
-SPC436 = IGNORE ;    //  CC(=O)C(CC(=O)O)CCC(=O)O
-SPC437 = IGNORE ;    //  CC(=O)C(CC(=O)OO)CC=O
-SPC438 = IGNORE ;    //  CC(=O)C(CC=O)CC(=O)O[O]
-SPC439 = IGNORE ;    //  CC(=O)C(CC=O)CC=O
-SPC440 = IGNORE ;    //  CC(=O)C(CC=O)CCC(=O)C=O
-SPC441 = IGNORE ;    //  CC(=O)C(CC=O)CCC(=O)CO[O]
-SPC442 = IGNORE ;    //  CC(=O)C(CC=O)CCC(=O)C[O]
-SPC443 = IGNORE ;    //  CC(=O)C(CC=O)CCC(=O)O[O]
-SPC444 = IGNORE ;    //  CC(=O)C(CC=O)CCC(=O)[O]
-SPC445 = IGNORE ;    //  CC(=O)C(CC=O)CCO[O]
-SPC446 = IGNORE ;    //  CC(=O)C(CC=O)CC[O]
-SPC447 = IGNORE ;    //  CC(=O)C(CCO)C(=O)C=O
-SPC448 = IGNORE ;    //  CC(=O)C(CCO)C(O)C=O
-SPC449 = IGNORE ;    //  CC(=O)C(CCO)C(OO)C=O
-SPC450 = IGNORE ;    //  CC(=O)C(CCO)C(O[O])C=O
-SPC451 = IGNORE ;    //  CC(=O)C(CCO)C([O])C=O
-SPC452 = IGNORE ;    //  CC(=O)C(CCO)CC=O
-SPC453 = IGNORE ;    //  CC(=O)C(CCOO)CC=O
-SPC454 = IGNORE ;    //  CC(=O)C(CL)OO
-SPC455 = IGNORE ;    //  CC(=O)C(CL)O[O]
-SPC456 = IGNORE ;    //  CC(=O)C(CL)[O]
-SPC457 = IGNORE ;    //  CC(=O)C(CO)C(=O)O
-SPC458 = IGNORE ;    //  CC(=O)C(CO)C(=O)OO
-SPC459 = IGNORE ;    //  CC(=O)C(CO)C(=O)O[O]
-SPC460 = IGNORE ;    //  CC(=O)C(CO)C=O
-SPC461 = IGNORE ;    //  CC(=O)C(CO)CC(=O)C(=O)O
-SPC462 = IGNORE ;    //  CC(=O)C(CO)CC(=O)O
-SPC463 = IGNORE ;    //  CC(=O)C(CO)CC(=O)OO
-SPC464 = IGNORE ;    //  CC(=O)C(CO)CC(=O)O[O]
-SPC465 = IGNORE ;    //  CC(=O)C(CO)CC(O)C(=O)O
-SPC466 = IGNORE ;    //  CC(=O)C(CO)CC(OO)C(=O)O
-SPC467 = IGNORE ;    //  CC(=O)C(CO)CC(O[O])C(=O)O
-SPC468 = IGNORE ;    //  CC(=O)C(CO)CC([O])C(=O)O
-SPC469 = IGNORE ;    //  CC(=O)C(CO)CC=O
-SPC470 = IGNORE ;    //  CC(=O)C(CO)CCC(=O)O
-SPC471 = IGNORE ;    //  CC(=O)C(CO)CO
-SPC472 = IGNORE ;    //  CC(=O)C(CO)COO
-SPC473 = IGNORE ;    //  CC(=O)C(CO)CO[O]
-SPC474 = IGNORE ;    //  CC(=O)C(CO)C[O]
-SPC475 = IGNORE ;    //  CC(=O)C(COO)CC=O
-SPC476 = IGNORE ;    //  CC(=O)C(N(=O)=O)=C(C)C(=O)O
-SPC477 = IGNORE ;    //  CC(=O)C(O)(C)C
-SPC478 = IGNORE ;    //  CC(=O)C(O)(C)C(=O)C
-SPC479 = IGNORE ;    //  CC(=O)C(O)(C)C(=O)OO
-SPC480 = IGNORE ;    //  CC(=O)C(O)(C)C(=O)O[O]
-SPC481 = IGNORE ;    //  CC(=O)C(O)(C)C(O)(C)C=O
-SPC482 = IGNORE ;    //  CC(=O)C(O)(C)C(O)C=O
-SPC483 = IGNORE ;    //  CC(=O)C(O)(C)C(OO)CO
-SPC484 = IGNORE ;    //  CC(=O)C(O)(C)C(O[O])CO
-SPC485 = IGNORE ;    //  CC(=O)C(O)(C)C([O])CO
-SPC486 = IGNORE ;    //  CC(=O)C(O)(C)C=CC=O
-SPC487 = IGNORE ;    //  CC(=O)C(O)(C)C=O
-SPC488 = IGNORE ;    //  CC(=O)C(O)(C)CCO
-SPC489 = IGNORE ;    //  CC(=O)C(O)(C1(C)C)CC1CC=O
-SPC490 = IGNORE ;    //  CC(=O)C(O)(C1(C)C)CC1CO
-SPC491 = IGNORE ;    //  CC(=O)C(O)(CC=O)CC=O
-SPC492 = IGNORE ;    //  CC(=O)C(O)(CO)C=O
-SPC493 = IGNORE ;    //  CC(=O)C(O)(CO)CC=O
-SPC494 = IGNORE ;    //  CC(=O)C(O)C(=O)C
-SPC495 = IGNORE ;    //  CC(=O)C(O)C(=O)C(=O)C
-SPC496 = IGNORE ;    //  CC(=O)C(O)C(=O)C(C)=C(C)C(=O)OO
-SPC497 = IGNORE ;    //  CC(=O)C(O)C(=O)C(C)=C(C)C(=O)O[O]
-SPC498 = IGNORE ;    //  CC(=O)C(O)C(=O)C(C)=CC(=O)OO
-SPC499 = IGNORE ;    //  CC(=O)C(O)C(=O)C(C)=CC(=O)O[O]
-SPC500 = IGNORE ;    //  CC(=O)C(O)C(=O)C1(C)OC1(C)C=O
-SPC501 = IGNORE ;    //  CC(=O)C(O)C(=O)C1OC1(C)C(=O)C
-SPC502 = IGNORE ;    //  CC(=O)C(O)C(=O)C=C(C(=O)OO)CC
-SPC503 = IGNORE ;    //  CC(=O)C(O)C(=O)C=C(C(=O)OON(=O)=O)CC
-SPC504 = IGNORE ;    //  CC(=O)C(O)C(=O)C=C(C(=O)O[O])CC
-SPC505 = IGNORE ;    //  CC(=O)C(O)C(=O)C=C(C)C(=O)OO
-SPC506 = IGNORE ;    //  CC(=O)C(O)C(=O)C=C(C)C(=O)O[O]
-SPC507 = IGNORE ;    //  CC(=O)C(O)C(=O)C=O
-SPC508 = IGNORE ;    //  CC(=O)C(O)C(=O)OO
-SPC509 = IGNORE ;    //  CC(=O)C(O)C(=O)O[O]
-SPC510 = IGNORE ;    //  CC(=O)C(O)C(C)=CC(=O)C
-SPC511 = IGNORE ;    //  CC(=O)C(O)C(C)=CC(=O)CC
-SPC512 = IGNORE ;    //  CC(=O)C(O)C(C)C
-SPC513 = IGNORE ;    //  CC(=O)C(O)C(C)C(=O)C
-SPC514 = IGNORE ;    //  CC(=O)C(O)C(O)(C)C
-SPC515 = IGNORE ;    //  CC(=O)C(O)C(O)(C)C(=O)C
-SPC516 = IGNORE ;    //  CC(=O)C(O)C(O)(C)C1OC1(C)C=O
-SPC517 = IGNORE ;    //  CC(=O)C(O)C(O)(C)C=O
-SPC518 = IGNORE ;    //  CC(=O)C(O)C(O)C(=O)C
-SPC519 = IGNORE ;    //  CC(=O)C(O)C(O)C1(C)OC1(C)C=O
-SPC520 = IGNORE ;    //  CC(=O)C(O)C(O)C1(C)OC1C=O
-SPC521 = IGNORE ;    //  CC(=O)C(O)C(O)C1OC1(C)C(=O)C
-SPC522 = IGNORE ;    //  CC(=O)C(O)C(O)C1OC1(C)C=O
-SPC523 = IGNORE ;    //  CC(=O)C(O)C(O)C1OC1C=O
-SPC524 = IGNORE ;    //  CC(=O)C(O)C(O)C=O
-SPC525 = IGNORE ;    //  CC(=O)C(O)C(ON(=O)=O)(C)C1OC1(C)C=O
-SPC526 = IGNORE ;    //  CC(=O)C(O)C(ON(=O)=O)C1(C)OC1(C)C=O
-SPC527 = IGNORE ;    //  CC(=O)C(O)C(ON(=O)=O)C1OC1(C)C(=O)C
-SPC528 = IGNORE ;    //  CC(=O)C(O)C(OO)(C)C(=O)C
-SPC529 = IGNORE ;    //  CC(=O)C(O)C(OO)(C)C1OC1(C)C=O
-SPC530 = IGNORE ;    //  CC(=O)C(O)C(OO)(C)C=O
-SPC531 = IGNORE ;    //  CC(=O)C(O)C(OO)C(=O)C
-SPC532 = IGNORE ;    //  CC(=O)C(O)C(OO)C1(C)OC1(C)C=O
-SPC533 = IGNORE ;    //  CC(=O)C(O)C(OO)C1OC1(C)C(=O)C
-SPC534 = IGNORE ;    //  CC(=O)C(O)C(O[O])(C)C(=O)C
-SPC535 = IGNORE ;    //  CC(=O)C(O)C(O[O])(C)C1OC1(C)C=O
-SPC536 = IGNORE ;    //  CC(=O)C(O)C(O[O])(C)C=O
-SPC537 = IGNORE ;    //  CC(=O)C(O)C(O[O])C(=O)C
-SPC538 = IGNORE ;    //  CC(=O)C(O)C(O[O])C1(C)OC1(C)C=O
-SPC539 = IGNORE ;    //  CC(=O)C(O)C(O[O])C1OC1(C)C(=O)C
-SPC540 = IGNORE ;    //  CC(=O)C(O)C([O])(C)C(=O)C
-SPC541 = IGNORE ;    //  CC(=O)C(O)C([O])(C)C1OC1(C)C=O
-SPC542 = IGNORE ;    //  CC(=O)C(O)C([O])(C)C=O
-SPC543 = IGNORE ;    //  CC(=O)C(O)C([O])C(=O)C
-SPC544 = IGNORE ;    //  CC(=O)C(O)C([O])C1(C)OC1(C)C=O
-SPC545 = IGNORE ;    //  CC(=O)C(O)C([O])C1OC1(C)C(=O)C
-SPC546 = IGNORE ;    //  CC(=O)C(O)C=CC(=O)C
-SPC547 = IGNORE ;    //  CC(=O)C(O)C=CC(=O)CC
-SPC548 = IGNORE ;    //  CC(=O)C(O)C=O
-SPC549 = IGNORE ;    //  CC(=O)C(O)CC(=O)C=O
-SPC550 = IGNORE ;    //  CC(=O)C(O)CC(=O)CC(=O)O
-SPC551 = IGNORE ;    //  CC(=O)C(O)CC(=O)CC(=O)OO
-SPC552 = IGNORE ;    //  CC(=O)C(O)CC(=O)CC(=O)OON(=O)=O
-SPC553 = IGNORE ;    //  CC(=O)C(O)CC(=O)CC(=O)O[O]
-SPC554 = IGNORE ;    //  CC(=O)C(O)CC(=O)CC=O
-SPC555 = IGNORE ;    //  CC(=O)C(O)CC(=O)CO
-SPC556 = IGNORE ;    //  CC(=O)C(O)CC(=O)COO
-SPC557 = IGNORE ;    //  CC(=O)C(O)CC(=O)CO[O]
-SPC558 = IGNORE ;    //  CC(=O)C(O)CC(=O)C[O]
-SPC559 = IGNORE ;    //  CC(=O)C(O)CC(=O)O
-SPC560 = IGNORE ;    //  CC(=O)C(O)CC(=O)OO
-SPC561 = IGNORE ;    //  CC(=O)C(O)CC(=O)O[O]
-SPC562 = IGNORE ;    //  CC(=O)C(O)CC(C(=O)C)CC=O
-SPC563 = IGNORE ;    //  CC(=O)C(O)CC(CC=O)C(C)=C
-SPC564 = IGNORE ;    //  CC(=O)C(O)CC(CO)C(=O)C
-SPC565 = IGNORE ;    //  CC(=O)C(O)CC(CO)C(C)=C
-SPC566 = IGNORE ;    //  CC(=O)C(O)CC(O)(C)C
-SPC567 = IGNORE ;    //  CC(=O)C(O)CC1C(CC1(C)C)C(=O)CCC=O
-SPC568 = IGNORE ;    //  CC(=O)C(O)CC1C(CC1(C)C)C(CCC=O)=C
-SPC569 = IGNORE ;    //  CC(=O)C(O)CCO
-SPC570 = IGNORE ;    //  CC(=O)C(O)CO
-SPC571 = IGNORE ;    //  CC(=O)C(O)CON(=O)=O
-SPC572 = IGNORE ;    //  CC(=O)C(O)COO
-SPC573 = IGNORE ;    //  CC(=O)C(O)CO[O]
-SPC574 = IGNORE ;    //  CC(=O)C(O)C[O]
-SPC575 = IGNORE ;    //  CC(=O)C(O)OC
-SPC576 = IGNORE ;    //  CC(=O)C(O)OC(=O)C
-SPC577 = IGNORE ;    //  CC(=O)C(O)OC(=O)C(=O)C
-SPC578 = IGNORE ;    //  CC(=O)C(ON(=O)=O)(C)C
-SPC579 = IGNORE ;    //  CC(=O)C(ON(=O)=O)(C)C=O
-SPC580 = IGNORE ;    //  CC(=O)C(ON(=O)=O)(C)COO
-SPC581 = IGNORE ;    //  CC(=O)C(ON(=O)=O)(C)CO[O]
-SPC582 = IGNORE ;    //  CC(=O)C(ON(=O)=O)(C)C[O]
-SPC583 = IGNORE ;    //  CC(=O)C(ON(=O)=O)C
-SPC584 = IGNORE ;    //  CC(=O)C(ON(=O)=O)C(=O)C
-SPC585 = IGNORE ;    //  CC(=O)C(ON(=O)=O)C(=O)OO
-SPC586 = IGNORE ;    //  CC(=O)C(ON(=O)=O)C(=O)O[O]
-SPC587 = IGNORE ;    //  CC(=O)C(ON(=O)=O)C(O)C1(C)OC1C=O
-SPC588 = IGNORE ;    //  CC(=O)C(ON(=O)=O)C(O)C1OC1(C)C=O
-SPC589 = IGNORE ;    //  CC(=O)C(ON(=O)=O)C(O)C1OC1C=O
-SPC590 = IGNORE ;    //  CC(=O)C(ON(=O)=O)C(OO)C
-SPC591 = IGNORE ;    //  CC(=O)C(ON(=O)=O)C(OO)CC
-SPC592 = IGNORE ;    //  CC(=O)C(ON(=O)=O)C(O[O])C
-SPC593 = IGNORE ;    //  CC(=O)C(ON(=O)=O)C(O[O])CC
-SPC594 = IGNORE ;    //  CC(=O)C(ON(=O)=O)C([O])C
-SPC595 = IGNORE ;    //  CC(=O)C(ON(=O)=O)C([O])CC
-SPC596 = IGNORE ;    //  CC(=O)C(ON(=O)=O)C=O
-SPC597 = IGNORE ;    //  CC(=O)C(ON(=O)=O)CO
-SPC598 = IGNORE ;    //  CC(=O)C(OO)(C)C
-SPC599 = IGNORE ;    //  CC(=O)C(OO)(C)C(=O)C
-SPC600 = IGNORE ;    //  CC(=O)C(OO)(C)C(O)(C)C=O
-SPC601 = IGNORE ;    //  CC(=O)C(OO)(C)C(O)C=O
-SPC602 = IGNORE ;    //  CC(=O)C(OO)(C)C=CC=O
-SPC603 = IGNORE ;    //  CC(=O)C(OO)(C)C=O
-SPC604 = IGNORE ;    //  CC(=O)C(OO)(C1(C)C)CC1CC=O
-SPC605 = IGNORE ;    //  CC(=O)C(OO)(C1(C)C)CC1CO
-SPC606 = IGNORE ;    //  CC(=O)C(OO)(CC=O)CC=O
-SPC607 = IGNORE ;    //  CC(=O)C(OO)(CO)C=O
-SPC608 = IGNORE ;    //  CC(=O)C(OO)(CO)CC=O
-SPC609 = IGNORE ;    //  CC(=O)C(OO)C
-SPC610 = IGNORE ;    //  CC(=O)C(OO)C(=O)C
-SPC611 = IGNORE ;    //  CC(=O)C(OO)C(C)=CC(=O)C
-SPC612 = IGNORE ;    //  CC(=O)C(OO)C(C)=CC(=O)CC
-SPC613 = IGNORE ;    //  CC(=O)C(OO)C(C)C
-SPC614 = IGNORE ;    //  CC(=O)C(OO)C(C)C(=O)C
-SPC615 = IGNORE ;    //  CC(=O)C(OO)C(O)(C)C
-SPC616 = IGNORE ;    //  CC(=O)C(OO)C(O)C1(C)OC1C=O
-SPC617 = IGNORE ;    //  CC(=O)C(OO)C(O)C1OC1(C)C=O
-SPC618 = IGNORE ;    //  CC(=O)C(OO)C(O)C1OC1C=O
-SPC619 = IGNORE ;    //  CC(=O)C(OO)C(O)C=O
-SPC620 = IGNORE ;    //  CC(=O)C(OO)C=CC(=O)C
-SPC621 = IGNORE ;    //  CC(=O)C(OO)C=CC(=O)CC
-SPC622 = IGNORE ;    //  CC(=O)C(OO)C=O
-SPC623 = IGNORE ;    //  CC(=O)C(OO)CC(=O)CC=O
-SPC624 = IGNORE ;    //  CC(=O)C(OO)CC(C(=O)C)CC=O
-SPC625 = IGNORE ;    //  CC(=O)C(OO)CC(CC=O)C(C)=C
-SPC626 = IGNORE ;    //  CC(=O)C(OO)CC(CO)C(=O)C
-SPC627 = IGNORE ;    //  CC(=O)C(OO)CC(CO)C(C)=C
-SPC628 = IGNORE ;    //  CC(=O)C(OO)CC(O)(C)C
-SPC629 = IGNORE ;    //  CC(=O)C(OO)CC1C(CC1(C)C)C(=O)CCC=O
-SPC630 = IGNORE ;    //  CC(=O)C(OO)CC1C(CC1(C)C)C(CCC=O)=C
-SPC631 = IGNORE ;    //  CC(=O)C(OO)CC=O
-SPC632 = IGNORE ;    //  CC(=O)C(OO)CCO
-SPC633 = IGNORE ;    //  CC(=O)C(OO)CO
-SPC634 = IGNORE ;    //  CC(=O)C(OO)OC
-SPC635 = IGNORE ;    //  CC(=O)C(OO)OC(=O)C
-SPC636 = IGNORE ;    //  CC(=O)C(OO)OC(=O)C(=O)C
-SPC637 = IGNORE ;    //  CC(=O)C(OO)OC=O
-SPC638 = IGNORE ;    //  CC(=O)C(O[O])(C)C
-SPC639 = IGNORE ;    //  CC(=O)C(O[O])(C)C(=O)C
-SPC640 = IGNORE ;    //  CC(=O)C(O[O])(C)C(O)(C)C=O
-SPC641 = IGNORE ;    //  CC(=O)C(O[O])(C)C(O)C=O
-SPC642 = IGNORE ;    //  CC(=O)C(O[O])(C)C=CC=O
-SPC643 = IGNORE ;    //  CC(=O)C(O[O])(C)C=O
-SPC644 = IGNORE ;    //  CC(=O)C(O[O])(C1(C)C)CC1CC=O
-SPC645 = IGNORE ;    //  CC(=O)C(O[O])(C1(C)C)CC1CO
-SPC646 = IGNORE ;    //  CC(=O)C(O[O])(CC=O)CC=O
-SPC647 = IGNORE ;    //  CC(=O)C(O[O])(CO)C=O
-SPC648 = IGNORE ;    //  CC(=O)C(O[O])(CO)CC=O
-SPC649 = IGNORE ;    //  CC(=O)C(O[O])C
-SPC650 = IGNORE ;    //  CC(=O)C(O[O])C(=O)C
-SPC651 = IGNORE ;    //  CC(=O)C(O[O])C(C)=CC(=O)C
-SPC652 = IGNORE ;    //  CC(=O)C(O[O])C(C)=CC(=O)CC
-SPC653 = IGNORE ;    //  CC(=O)C(O[O])C(C)C
-SPC654 = IGNORE ;    //  CC(=O)C(O[O])C(C)C(=O)C
-SPC655 = IGNORE ;    //  CC(=O)C(O[O])C(O)(C)C
-SPC656 = IGNORE ;    //  CC(=O)C(O[O])C(O)C1(C)OC1C=O
-SPC657 = IGNORE ;    //  CC(=O)C(O[O])C(O)C1OC1(C)C=O
-SPC658 = IGNORE ;    //  CC(=O)C(O[O])C(O)C1OC1C=O
-SPC659 = IGNORE ;    //  CC(=O)C(O[O])C(O)C=O
-SPC660 = IGNORE ;    //  CC(=O)C(O[O])C=O
-SPC661 = IGNORE ;    //  CC(=O)C(O[O])CC(=O)CC=O
-SPC662 = IGNORE ;    //  CC(=O)C(O[O])CC(C(=O)C)CC=O
-SPC663 = IGNORE ;    //  CC(=O)C(O[O])CC(CC=O)C(C)=C
-SPC664 = IGNORE ;    //  CC(=O)C(O[O])CC(CO)C(=O)C
-SPC665 = IGNORE ;    //  CC(=O)C(O[O])CC(CO)C(C)=C
-SPC666 = IGNORE ;    //  CC(=O)C(O[O])CC(O)(C)C
-SPC667 = IGNORE ;    //  CC(=O)C(O[O])CC1C(CC1(C)C)C(=O)CCC=O
-SPC668 = IGNORE ;    //  CC(=O)C(O[O])CC1C(CC1(C)C)C(CCC=O)=C
-SPC669 = IGNORE ;    //  CC(=O)C(O[O])CC=O
-SPC670 = IGNORE ;    //  CC(=O)C(O[O])CCO
-SPC671 = IGNORE ;    //  CC(=O)C(O[O])CO
-SPC672 = IGNORE ;    //  CC(=O)C(O[O])OC=O
-SPC673 = IGNORE ;    //  CC(=O)C([O])(C)C
-SPC674 = IGNORE ;    //  CC(=O)C([O])(C)C(=O)C
-SPC675 = IGNORE ;    //  CC(=O)C([O])(C)C(O)(C)C=O
-SPC676 = IGNORE ;    //  CC(=O)C([O])(C)C(O)C=O
-SPC677 = IGNORE ;    //  CC(=O)C([O])(C)C=CC=O
-SPC678 = IGNORE ;    //  CC(=O)C([O])(C)C=O
-SPC679 = IGNORE ;    //  CC(=O)C([O])(C1(C)C)CC1CC=O
-SPC680 = IGNORE ;    //  CC(=O)C([O])(C1(C)C)CC1CO
-SPC681 = IGNORE ;    //  CC(=O)C([O])(CC=O)CC=O
-SPC682 = IGNORE ;    //  CC(=O)C([O])(CO)C=O
-SPC683 = IGNORE ;    //  CC(=O)C([O])(CO)CC=O
-SPC684 = IGNORE ;    //  CC(=O)C([O])C
-SPC685 = IGNORE ;    //  CC(=O)C([O])C(=O)C
-SPC686 = IGNORE ;    //  CC(=O)C([O])C(C)=CC(=O)C
-SPC687 = IGNORE ;    //  CC(=O)C([O])C(C)C
-SPC688 = IGNORE ;    //  CC(=O)C([O])C(C)C(=O)C
-SPC689 = IGNORE ;    //  CC(=O)C([O])C(O)(C)C
-SPC690 = IGNORE ;    //  CC(=O)C([O])C(O)C1(C)OC1C=O
-SPC691 = IGNORE ;    //  CC(=O)C([O])C(O)C1OC1(C)C=O
-SPC692 = IGNORE ;    //  CC(=O)C([O])C(O)C1OC1C=O
-SPC693 = IGNORE ;    //  CC(=O)C([O])C(O)C=O
-SPC694 = IGNORE ;    //  CC(=O)C([O])C=O
-SPC695 = IGNORE ;    //  CC(=O)C([O])CC(=O)CC=O
-SPC696 = IGNORE ;    //  CC(=O)C([O])CC(C(=O)C)CC=O
-SPC697 = IGNORE ;    //  CC(=O)C([O])CC(CC=O)C(C)=C
-SPC698 = IGNORE ;    //  CC(=O)C([O])CC(CO)C(=O)C
-SPC699 = IGNORE ;    //  CC(=O)C([O])CC(CO)C(C)=C
-SPC700 = IGNORE ;    //  CC(=O)C([O])CC(O)(C)C
-SPC701 = IGNORE ;    //  CC(=O)C([O])CC1C(CC1(C)C)C(=O)CCC=O
-SPC702 = IGNORE ;    //  CC(=O)C([O])CC1C(CC1(C)C)C(CCC=O)=C
-SPC703 = IGNORE ;    //  CC(=O)C([O])CC=O
-SPC704 = IGNORE ;    //  CC(=O)C([O])CCO
-SPC705 = IGNORE ;    //  CC(=O)C([O])CO
-SPC706 = IGNORE ;    //  CC(=O)C([O])OC=O
-SPC707 = IGNORE ;    //  CC(=O)C1(C)OC1C(=O)O
-SPC708 = IGNORE ;    //  CC(=O)C1(C)OC1C(=O)OO
-SPC709 = IGNORE ;    //  CC(=O)C1(C)OC1C(=O)O[O]
-SPC710 = IGNORE ;    //  CC(=O)C1(C)OC1C=O
-SPC711 = IGNORE ;    //  CC(=O)C1CC(C(=O)OO)C1(C)C
-SPC712 = IGNORE ;    //  CC(=O)C1CC(C(=O)O[O])C1(C)C
-SPC713 = IGNORE ;    //  CC(=O)C1CC(C=O)C1(C)C
-SPC714 = IGNORE ;    //  CC(=O)C1CC(CO)C1(C)C
-SPC715 = IGNORE ;    //  CC(=O)C1CC(CON(=O)=O)C1(C)C
-SPC716 = IGNORE ;    //  CC(=O)C1CC(COO)C1(C)C
-SPC717 = IGNORE ;    //  CC(=O)C1CC(CO[O])C1(C)C
-SPC718 = IGNORE ;    //  CC(=O)C1CC(C[O])C1(C)C
-SPC719 = IGNORE ;    //  CC(=O)C1CC(O)(C1(C)C)CC=O
-SPC720 = IGNORE ;    //  CC(=O)C1CC(ON(=O)=O)(C1(C)C)CC=O
-SPC721 = IGNORE ;    //  CC(=O)C1CC(OO)(C1(C)C)CC=O
-SPC722 = IGNORE ;    //  CC(=O)C1CC(OO)C1(C)C
-SPC723 = IGNORE ;    //  CC(=O)C1CC(O[O])(C1(C)C)CC=O
-SPC724 = IGNORE ;    //  CC(=O)C1CC(O[O])C1(C)C
-SPC725 = IGNORE ;    //  CC(=O)C1CC([O])(C1(C)C)CC=O
-SPC726 = IGNORE ;    //  CC(=O)C1CC([O])C1(C)C
-SPC727 = IGNORE ;    //  CC(=O)C1OC1(C(=O)O)CC
-SPC728 = IGNORE ;    //  CC(=O)C1OC1(C(=O)OO)CC
-SPC729 = IGNORE ;    //  CC(=O)C1OC1(C(=O)OON(=O)=O)CC
-SPC730 = IGNORE ;    //  CC(=O)C1OC1(C(=O)O[O])CC
-SPC731 = IGNORE ;    //  CC(=O)C1OC1(C)C(=O)O
-SPC732 = IGNORE ;    //  CC(=O)C1OC1(C)C(=O)OO
-SPC733 = IGNORE ;    //  CC(=O)C1OC1(C)C(=O)O[O]
-SPC734 = IGNORE ;    //  CC(=O)C1OC1(C)C=O
-SPC735 = IGNORE ;    //  CC(=O)C1OC1(C=O)CC
-SPC736 = IGNORE ;    //  CC(=O)C=C
-SPC737 = IGNORE ;    //  CC(=O)C=C(C)C(=O)C
-SPC738 = IGNORE ;    //  CC(=O)C=C(C)C(=O)C(=O)C
-SPC739 = IGNORE ;    //  CC(=O)C=C(C)C(=O)O
-SPC740 = IGNORE ;    //  CC(=O)C=C(C)C(=O)OO
-SPC741 = IGNORE ;    //  CC(=O)C=C(C)C(=O)O[O]
-SPC742 = IGNORE ;    //  CC(=O)C=C(C)C(=O)[O]
-SPC743 = IGNORE ;    //  CC(=O)C=C(C)C1OC1(C)C(=O)O
-SPC744 = IGNORE ;    //  CC(=O)C=C(C)C1OC1(C)C(=O)OO
-SPC745 = IGNORE ;    //  CC(=O)C=C(C)C1OC1(C)C(=O)O[O]
-SPC746 = IGNORE ;    //  CC(=O)C=C(C)C1OC1(C)C=O
-SPC747 = IGNORE ;    //  CC(=O)C=C(C)C=O
-SPC748 = IGNORE ;    //  CC(=O)C=CC(=O)C
-SPC749 = IGNORE ;    //  CC(=O)C=CC(=O)C=O
-SPC750 = IGNORE ;    //  CC(=O)C=CC(=O)O
-SPC751 = IGNORE ;    //  CC(=O)C=CC(=O)OO
-SPC752 = IGNORE ;    //  CC(=O)C=CC(=O)O[O]
-SPC753 = IGNORE ;    //  CC(=O)C=CC(=O)[O]
-SPC754 = IGNORE ;    //  CC(=O)C=CC(O)(C)C(=O)C
-SPC755 = IGNORE ;    //  CC(=O)C=CC(O)(C)C=O
-SPC756 = IGNORE ;    //  CC(=O)C=CC(O)C=O
-SPC757 = IGNORE ;    //  CC(=O)C=CC(OO)(C)C(=O)C
-SPC758 = IGNORE ;    //  CC(=O)C=CC(OO)(C)C=O
-SPC759 = IGNORE ;    //  CC(=O)C=CC(OO)C=O
-SPC760 = IGNORE ;    //  CC(=O)C=CC(O[O])(C)C(=O)C
-SPC761 = IGNORE ;    //  CC(=O)C=CC(O[O])(C)C=O
-SPC762 = IGNORE ;    //  CC(=O)C=CC(O[O])C(=O)C
-SPC763 = IGNORE ;    //  CC(=O)C=CC(O[O])C=O
-SPC764 = IGNORE ;    //  CC(=O)C=CC([O])(C)C(=O)C
-SPC765 = IGNORE ;    //  CC(=O)C=CC([O])(C)C=O
-SPC766 = IGNORE ;    //  CC(=O)C=CC([O])C(=O)C
-SPC767 = IGNORE ;    //  CC(=O)C=CC([O])C=O
-SPC768 = IGNORE ;    //  CC(=O)C=CC1(C)OC1(C)C(=O)O
-SPC769 = IGNORE ;    //  CC(=O)C=CC1(C)OC1(C)C(=O)OO
-SPC770 = IGNORE ;    //  CC(=O)C=CC1(C)OC1(C)C(=O)O[O]
-SPC771 = IGNORE ;    //  CC(=O)C=CC1(C)OC1(C)C=O
-SPC772 = IGNORE ;    //  CC(=O)C=CC1(C)OC1C(=O)O
-SPC773 = IGNORE ;    //  CC(=O)C=CC1(C)OC1C(=O)OO
-SPC774 = IGNORE ;    //  CC(=O)C=CC1(C)OC1C(=O)O[O]
-SPC775 = IGNORE ;    //  CC(=O)C=CC1(C)OC1C=O
-SPC776 = IGNORE ;    //  CC(=O)C=CC1OC1(C)C(=O)C
-SPC777 = IGNORE ;    //  CC(=O)C=CC1OC1(C)C(=O)O
-SPC778 = IGNORE ;    //  CC(=O)C=CC1OC1(C)C(=O)OO
-SPC779 = IGNORE ;    //  CC(=O)C=CC1OC1(C)C(=O)O[O]
-SPC780 = IGNORE ;    //  CC(=O)C=CC1OC1(C)C=O
-SPC781 = IGNORE ;    //  CC(=O)C=CC1OC1C(=O)O
-SPC782 = IGNORE ;    //  CC(=O)C=CC1OC1C(=O)OO
-SPC783 = IGNORE ;    //  CC(=O)C=CC1OC1C(=O)O[O]
-SPC784 = IGNORE ;    //  CC(=O)C=CC1OC1C=O
-SPC785 = IGNORE ;    //  CC(=O)C=CC=O
-SPC786 = IGNORE ;    //  CC(=O)C=O
-SPC787 = IGNORE ;    //  CC(=O)CC(=O)C
-SPC788 = IGNORE ;    //  CC(=O)CC(=O)C(=O)C
-SPC789 = IGNORE ;    //  CC(=O)CC(=O)C(=O)C(C)(C)C(=O)OO
-SPC790 = IGNORE ;    //  CC(=O)CC(=O)C(=O)C(C)(C)C(=O)O[O]
-SPC791 = IGNORE ;    //  CC(=O)CC(=O)C(=O)C(C)(C)C=O
-SPC792 = IGNORE ;    //  CC(=O)CC(=O)C(=O)C(C)(C)CO
-SPC793 = IGNORE ;    //  CC(=O)CC(=O)C(=O)C(OO)(C)C
-SPC794 = IGNORE ;    //  CC(=O)CC(=O)C(=O)C(OO)C
-SPC795 = IGNORE ;    //  CC(=O)CC(=O)C(=O)C(O[O])(C)C
-SPC796 = IGNORE ;    //  CC(=O)CC(=O)C(=O)C(O[O])C
-SPC797 = IGNORE ;    //  CC(=O)CC(=O)C(=O)C([O])(C)C
-SPC798 = IGNORE ;    //  CC(=O)CC(=O)C(=O)C([O])C
-SPC799 = IGNORE ;    //  CC(=O)CC(=O)C(O)(C)C
-SPC800 = IGNORE ;    //  CC(=O)CC(=O)C(O)(C)COO
-SPC801 = IGNORE ;    //  CC(=O)CC(=O)C(O)(C)CO[O]
-SPC802 = IGNORE ;    //  CC(=O)CC(=O)C(O)(C)C[O]
-SPC803 = IGNORE ;    //  CC(=O)CC(=O)C(ON(=O)=O)C
-SPC804 = IGNORE ;    //  CC(=O)CC(=O)C(OO)C
-SPC805 = IGNORE ;    //  CC(=O)CC(=O)C(O[O])C
-SPC806 = IGNORE ;    //  CC(=O)CC(=O)C([O])C
-SPC807 = IGNORE ;    //  CC(=O)CC(=O)C=O
-SPC808 = IGNORE ;    //  CC(=O)CC(=O)CO
-SPC809 = IGNORE ;    //  CC(=O)CC(=O)CON(=O)=O
-SPC810 = IGNORE ;    //  CC(=O)CC(=O)C[O]
-SPC811 = IGNORE ;    //  CC(=O)CC(=O)OC(=O)C
-SPC812 = IGNORE ;    //  CC(=O)CC(=O)OO
-SPC813 = IGNORE ;    //  CC(=O)CC(=O)OON(=O)=O
-SPC814 = IGNORE ;    //  CC(=O)CC(=O)O[O]
-SPC815 = IGNORE ;    //  CC(=O)CC(C)C
-SPC816 = IGNORE ;    //  CC(=O)CC(C)C(=O)C
-SPC817 = IGNORE ;    //  CC(=O)CC(C)C(=O)O
-SPC818 = IGNORE ;    //  CC(=O)CC(C)C(=O)OO
-SPC819 = IGNORE ;    //  CC(=O)CC(C)C(=O)O[O]
-SPC820 = IGNORE ;    //  CC(=O)CC(C)C=O
-SPC821 = IGNORE ;    //  CC(=O)CC(C)CC
-SPC822 = IGNORE ;    //  CC(=O)CC(C)CO
-SPC823 = IGNORE ;    //  CC(=O)CC(O)(C)C
-SPC824 = IGNORE ;    //  CC(=O)CC(O)(C)C(=O)C
-SPC825 = IGNORE ;    //  CC(=O)CC(O)(C)C=O
-SPC826 = IGNORE ;    //  CC(=O)CC(O)(C)CO
-SPC827 = IGNORE ;    //  CC(=O)CC(O)(C)CON(=O)=O
-SPC828 = IGNORE ;    //  CC(=O)CC(O)(C)COO
-SPC829 = IGNORE ;    //  CC(=O)CC(O)(C)CO[O]
-SPC830 = IGNORE ;    //  CC(=O)CC(O)(C)C[O]
-SPC831 = IGNORE ;    //  CC(=O)CC(O)C(=O)C
-SPC832 = IGNORE ;    //  CC(=O)CC(O)C(=O)C(C)(C)CO
-SPC833 = IGNORE ;    //  CC(=O)CC(O)C(O)(C)C
-SPC834 = IGNORE ;    //  CC(=O)CC(O)CO
-SPC835 = IGNORE ;    //  CC(=O)CC(O)OC(=O)C
-SPC836 = IGNORE ;    //  CC(=O)CC(ON(=O)=O)(C)C
-SPC837 = IGNORE ;    //  CC(=O)CC(ON(=O)=O)(C)CO
-SPC838 = IGNORE ;    //  CC(=O)CC(ON(=O)=O)C
-SPC839 = IGNORE ;    //  CC(=O)CC(ON(=O)=O)C(O)(C)C
-SPC840 = IGNORE ;    //  CC(=O)CC(ON(=O)=O)CC
-SPC841 = IGNORE ;    //  CC(=O)CC(ON(=O)=O)CO
-SPC842 = IGNORE ;    //  CC(=O)CC(ON(=O)=O)OC(=O)C
-SPC843 = IGNORE ;    //  CC(=O)CC(OO)(C)C
-SPC844 = IGNORE ;    //  CC(=O)CC(OO)(C)C(=O)C
-SPC845 = IGNORE ;    //  CC(=O)CC(OO)(C)C=O
-SPC846 = IGNORE ;    //  CC(=O)CC(OO)(C)CC
-SPC847 = IGNORE ;    //  CC(=O)CC(OO)(C)CO
-SPC848 = IGNORE ;    //  CC(=O)CC(OO)C
-SPC849 = IGNORE ;    //  CC(=O)CC(OO)C(=O)C
-SPC850 = IGNORE ;    //  CC(=O)CC(OO)C(=O)C(=O)C
-SPC851 = IGNORE ;    //  CC(=O)CC(OO)C(=O)C(C)(C)CO
-SPC852 = IGNORE ;    //  CC(=O)CC(OO)C(C)C
-SPC853 = IGNORE ;    //  CC(=O)CC(OO)C(O)(C)C
-SPC854 = IGNORE ;    //  CC(=O)CC(OO)CC
-SPC855 = IGNORE ;    //  CC(=O)CC(OO)CO
-SPC856 = IGNORE ;    //  CC(=O)CC(OO)OC(=O)C
-SPC857 = IGNORE ;    //  CC(=O)CC(O[O])(C)C
-SPC858 = IGNORE ;    //  CC(=O)CC(O[O])(C)C(=O)C
-SPC859 = IGNORE ;    //  CC(=O)CC(O[O])(C)C=O
-SPC860 = IGNORE ;    //  CC(=O)CC(O[O])(C)CC
-SPC861 = IGNORE ;    //  CC(=O)CC(O[O])(C)CO
-SPC862 = IGNORE ;    //  CC(=O)CC(O[O])C
-SPC863 = IGNORE ;    //  CC(=O)CC(O[O])C(=O)C
-SPC864 = IGNORE ;    //  CC(=O)CC(O[O])C(=O)C(=O)C
-SPC865 = IGNORE ;    //  CC(=O)CC(O[O])C(=O)C(C)(C)CO
-SPC866 = IGNORE ;    //  CC(=O)CC(O[O])C(C)C
-SPC867 = IGNORE ;    //  CC(=O)CC(O[O])C(O)(C)C
-SPC868 = IGNORE ;    //  CC(=O)CC(O[O])CC
-SPC869 = IGNORE ;    //  CC(=O)CC(O[O])CO
-SPC870 = IGNORE ;    //  CC(=O)CC(O[O])OC(=O)C
-SPC871 = IGNORE ;    //  CC(=O)CC([O])(C)C
-SPC872 = IGNORE ;    //  CC(=O)CC([O])(C)C(=O)C
-SPC873 = IGNORE ;    //  CC(=O)CC([O])(C)C=O
-SPC874 = IGNORE ;    //  CC(=O)CC([O])(C)CC
-SPC875 = IGNORE ;    //  CC(=O)CC([O])(C)CO
-SPC876 = IGNORE ;    //  CC(=O)CC([O])C
-SPC877 = IGNORE ;    //  CC(=O)CC([O])C(=O)C
-SPC878 = IGNORE ;    //  CC(=O)CC([O])C(=O)C(=O)C
-SPC879 = IGNORE ;    //  CC(=O)CC([O])C(=O)C(C)(C)CO
-SPC880 = IGNORE ;    //  CC(=O)CC([O])C(C)C
-SPC881 = IGNORE ;    //  CC(=O)CC([O])C(O)(C)C
-SPC882 = IGNORE ;    //  CC(=O)CC([O])CC
-SPC883 = IGNORE ;    //  CC(=O)CC([O])CO
-SPC884 = IGNORE ;    //  CC(=O)CC([O])OC(=O)C
-SPC885 = IGNORE ;    //  CC(=O)CC=O
-SPC886 = IGNORE ;    //  CC(=O)CCC(=O)C
-SPC887 = IGNORE ;    //  CC(=O)CCC(=O)C(=O)C
-SPC888 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)C(=O)C(=O)C(=O)C(OO)CO
-SPC889 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)C(=O)C(=O)C(=O)C(O[O])CO
-SPC890 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)C(=O)C(=O)C(=O)C([O])CO
-SPC891 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)C(=O)C(=O)C(=O)CCO
-SPC892 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)C(=O)O
-SPC893 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)C(=O)OO
-SPC894 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)C(=O)OO[N+](=O)[O-]
-SPC895 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)C(=O)O[O]
-SPC896 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)C(O)C(=O)C(=O)CCO
-SPC897 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)C(OO)C(=O)C(=O)CCO
-SPC898 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)C(O[O])C(=O)C(=O)CCO
-SPC899 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)C([O])C(=O)C(=O)CCO
-SPC900 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)C=O
-SPC901 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)CC(=O)C(=O)CCO
-SPC902 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)CC(=O)C(CCO)=C
-SPC903 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)CC(=O)C(O)(CO)CCO
-SPC904 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)CC(=O)C(OO)(CO)CCO
-SPC905 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)CC(=O)C(O[O])(CO)CCO
-SPC906 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)CC(=O)C([O])(CO)CCO
-SPC907 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)CC(=O)O
-SPC908 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)CC(=O)OO
-SPC909 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)CC(=O)OO[N+](=O)[O-]
-SPC910 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)CC(=O)O[O]
-SPC911 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)CC=O
-SPC912 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)CO
-SPC913 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)COO
-SPC914 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)CO[N+](=O)[O-]
-SPC915 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)CO[O]
-SPC916 = IGNORE ;    //  CC(=O)CCC(=O)C(C)(C)C[O]
-SPC917 = IGNORE ;    //  CC(=O)CCC(=O)C(C)=C
-SPC918 = IGNORE ;    //  CC(=O)CCC(=O)C(O)(C)C
-SPC919 = IGNORE ;    //  CC(=O)CCC(=O)C(OO)(C)C
-SPC920 = IGNORE ;    //  CC(=O)CCC(=O)C(OO)(C)CO
-SPC921 = IGNORE ;    //  CC(=O)CCC(=O)C(O[O])(C)CO
-SPC922 = IGNORE ;    //  CC(=O)CCC(=O)C([O])(C)C
-SPC923 = IGNORE ;    //  CC(=O)CCC(=O)C([O])(C)CO
-SPC924 = IGNORE ;    //  CC(=O)CCC(=O)C=O
-SPC925 = IGNORE ;    //  CC(=O)CCC(=O)CC(=O)O
-SPC926 = IGNORE ;    //  CC(=O)CCC(=O)CC(=O)OO
-SPC927 = IGNORE ;    //  CC(=O)CCC(=O)CC(=O)O[O]
-SPC928 = IGNORE ;    //  CC(=O)CCC(=O)CC=O
-SPC929 = IGNORE ;    //  CC(=O)CCC(=O)CO
-SPC930 = IGNORE ;    //  CC(=O)CCC(=O)COO
-SPC931 = IGNORE ;    //  CC(=O)CCC(=O)C[O]
-SPC932 = IGNORE ;    //  CC(=O)CCC(=O)O
-SPC933 = IGNORE ;    //  CC(=O)CCC(=O)OO
-SPC934 = IGNORE ;    //  CC(=O)CCC(=O)OON(=O)=O
-SPC935 = IGNORE ;    //  CC(=O)CCC(=O)O[O]
-SPC936 = IGNORE ;    //  CC(=O)CCC(C(=O)C)CC(=O)O
-SPC937 = IGNORE ;    //  CC(=O)CCC(C(=O)C)CC(=O)OO
-SPC938 = IGNORE ;    //  CC(=O)CCC(C(=O)C)CC(=O)O[O]
-SPC939 = IGNORE ;    //  CC(=O)CCC(C(=O)C)CC=O
-SPC940 = IGNORE ;    //  CC(=O)CCC(C(=O)OO)C(=O)C
-SPC941 = IGNORE ;    //  CC(=O)CCC(C(=O)OO)C(C)=C
-SPC942 = IGNORE ;    //  CC(=O)CCC(C(=O)O[O])C(=O)C
-SPC943 = IGNORE ;    //  CC(=O)CCC(C(=O)O[O])C(C)=C
-SPC944 = IGNORE ;    //  CC(=O)CCC(C(O)(C)CO)CC=O
-SPC945 = IGNORE ;    //  CC(=O)CCC(C(OO)(C)CO)CC=O
-SPC946 = IGNORE ;    //  CC(=O)CCC(C(O[O])(C)CO)CC=O
-SPC947 = IGNORE ;    //  CC(=O)CCC(C([O])(C)CO)CC=O
-SPC948 = IGNORE ;    //  CC(=O)CCC(C)C
-SPC949 = IGNORE ;    //  CC(=O)CCC(C=O)C(=O)C
-SPC950 = IGNORE ;    //  CC(=O)CCC(C=O)C(C)=C
-SPC951 = IGNORE ;    //  CC(=O)CCC(CC(=O)O)C(C)=C
-SPC952 = IGNORE ;    //  CC(=O)CCC(CC(=O)OO)C(C)=C
-SPC953 = IGNORE ;    //  CC(=O)CCC(CC(=O)O[O])C(C)=C
-SPC954 = IGNORE ;    //  CC(=O)CCC(CC=O)C(C)=C
-SPC955 = IGNORE ;    //  CC(=O)CCC(CO)C(=O)C
-SPC956 = IGNORE ;    //  CC(=O)CCC(CO)C(C)=C
-SPC957 = IGNORE ;    //  CC(=O)CCC(COO)C(=O)C
-SPC958 = IGNORE ;    //  CC(=O)CCC(COO)C(C)=C
-SPC959 = IGNORE ;    //  CC(=O)CCC(CO[O])C(=O)C
-SPC960 = IGNORE ;    //  CC(=O)CCC(CO[O])C(C)=C
-SPC961 = IGNORE ;    //  CC(=O)CCC(C[O])C(=O)C
-SPC962 = IGNORE ;    //  CC(=O)CCC(C[O])C(C)=C
-SPC963 = IGNORE ;    //  CC(=O)CCC(O)(C(=O)C)CC=O
-SPC964 = IGNORE ;    //  CC(=O)CCC(O)(C)C
-SPC965 = IGNORE ;    //  CC(=O)CCC(O)C(C)(C)CC(=O)C(=O)CCO
-SPC966 = IGNORE ;    //  CC(=O)CCC(O)C(C)(C)CC(=O)C(CCO)=C
-SPC967 = IGNORE ;    //  CC(=O)CCC(O)C(C)(C)CC=O
-SPC968 = IGNORE ;    //  CC(=O)CCC(ON(=O)=O)C
-SPC969 = IGNORE ;    //  CC(=O)CCC(OO)(C(=O)C)CC=O
-SPC970 = IGNORE ;    //  CC(=O)CCC(OO)C
-SPC971 = IGNORE ;    //  CC(=O)CCC(OO)C(=O)C
-SPC972 = IGNORE ;    //  CC(=O)CCC(OO)C(C)(C)CC(=O)C(=O)CCO
-SPC973 = IGNORE ;    //  CC(=O)CCC(OO)C(C)(C)CC(=O)C(CCO)=C
-SPC974 = IGNORE ;    //  CC(=O)CCC(OO)C(C)(C)CC=O
-SPC975 = IGNORE ;    //  CC(=O)CCC(OO)C(C)=C
-SPC976 = IGNORE ;    //  CC(=O)CCC(O[O])(C(=O)C)CC=O
-SPC977 = IGNORE ;    //  CC(=O)CCC(O[O])C
-SPC978 = IGNORE ;    //  CC(=O)CCC(O[O])C(=O)C
-SPC979 = IGNORE ;    //  CC(=O)CCC(O[O])C(C)(C)CC(=O)C(=O)CCO
-SPC980 = IGNORE ;    //  CC(=O)CCC(O[O])C(C)(C)CC(=O)C(CCO)=C
-SPC981 = IGNORE ;    //  CC(=O)CCC(O[O])C(C)(C)CC=O
-SPC982 = IGNORE ;    //  CC(=O)CCC(O[O])C(C)=C
-SPC983 = IGNORE ;    //  CC(=O)CCC([O])(C(=O)C)CC=O
-SPC984 = IGNORE ;    //  CC(=O)CCC([O])C
-SPC985 = IGNORE ;    //  CC(=O)CCC([O])C(=O)C
-SPC986 = IGNORE ;    //  CC(=O)CCC([O])C(C)(C)CC(=O)C(=O)CCO
-SPC987 = IGNORE ;    //  CC(=O)CCC([O])C(C)(C)CC(=O)C(CCO)=C
-SPC988 = IGNORE ;    //  CC(=O)CCC([O])C(C)(C)CC=O
-SPC989 = IGNORE ;    //  CC(=O)CCC([O])C(C)=C
-SPC990 = IGNORE ;    //  CC(=O)CCC1C(=O)CC1(C)C
-SPC991 = IGNORE ;    //  CC(=O)CCC1C(C(=O)O)CC1(C)C
-SPC992 = IGNORE ;    //  CC(=O)CCC1C(C(=O)OO)CC1(C)C
-SPC993 = IGNORE ;    //  CC(=O)CCC1C(C(=O)O[O])CC1(C)C
-SPC994 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=C)CCC(=O)OO[N+](=O)[O-]
-SPC995 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=C)CCO[N+](=O)[O-]
-SPC996 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)C(=O)CC(=O)O
-SPC997 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)C(=O)CC=O
-SPC998 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)C(O)CC(=O)O
-SPC999 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)C(O)CC=O
-SPC1000 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)C(OO)CC(=O)O
-SPC1001 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)C(OO)CC=O
-SPC1002 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)C(O[O])CC(=O)O
-SPC1003 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)C(O[O])CC=O
-SPC1004 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)C([O])CC(=O)O
-SPC1005 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)C([O])CC=O
-SPC1006 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)CC(=O)C=O
-SPC1007 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)CC(O)C=O
-SPC1008 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)CC(OO)C=O
-SPC1009 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)CC(O[O])C=O
-SPC1010 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)CC([O])C=O
-SPC1011 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)CC=O
-SPC1012 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)CCC(=O)O
-SPC1013 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)CCC(=O)OO
-SPC1014 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)CCC(=O)OO[N+](=O)[O-]
-SPC1015 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)CCC(=O)O[O]
-SPC1016 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)CCC=O
-SPC1017 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)CCO
-SPC1018 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)CCOO
-SPC1019 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)CCO[N+](=O)[O-]
-SPC1020 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)CCO[O]
-SPC1021 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)CC[O]
-SPC1022 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(=O)OO[N+](=O)[O-]
-SPC1023 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(CC(=O)C=O)=C
-SPC1024 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(CC(O)C=O)=C
-SPC1025 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(CC(OO)C=O)=C
-SPC1026 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(CC(O[O])C=O)=C
-SPC1027 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(CC([O])C=O)=C
-SPC1028 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(CC=O)=C
-SPC1029 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(CCC(=O)O)=C
-SPC1030 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(CCC(=O)OO)=C
-SPC1031 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(CCC(=O)O[O])=C
-SPC1032 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(CCC=O)=C
-SPC1033 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(CCO)=C
-SPC1034 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(CCOO)=C
-SPC1035 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(CCO[O])=C
-SPC1036 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(CC[O])=C
-SPC1037 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(O)(CO)CCC(=O)O
-SPC1038 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(O)(CO)CCC=O
-SPC1039 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(OO)(CO)CC=O
-SPC1040 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(OO)(CO)CCC(=O)O
-SPC1041 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(OO)(CO)CCC=O
-SPC1042 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(O[O])(CO)CC=O
-SPC1043 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(O[O])(CO)CCC(=O)O
-SPC1044 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C(O[O])(CO)CCC=O
-SPC1045 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C([O])(CO)CC=O
-SPC1046 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C([O])(CO)CCC(=O)O
-SPC1047 = IGNORE ;    //  CC(=O)CCC1C(CC1(C)C)C([O])(CO)CCC=O
-SPC1048 = IGNORE ;    //  CC(=O)CCC1C(O)(CC1(C)C)C(=O)CCO
-SPC1049 = IGNORE ;    //  CC(=O)CCC1C(O)(CC1(C)C)C(CCO)=C
-SPC1050 = IGNORE ;    //  CC(=O)CCC1C(O)CC1(C)C
-SPC1051 = IGNORE ;    //  CC(=O)CCC1C(OO)(CC1(C)C)C(=O)CCO
-SPC1052 = IGNORE ;    //  CC(=O)CCC1C(OO)(CC1(C)C)C(CCO)=C
-SPC1053 = IGNORE ;    //  CC(=O)CCC1C(OO)CC1(C)C
-SPC1054 = IGNORE ;    //  CC(=O)CCC1C(O[N+](=O)[O-])CC1(C)C
-SPC1055 = IGNORE ;    //  CC(=O)CCC1C(O[O])(CC1(C)C)C(=O)CCO
-SPC1056 = IGNORE ;    //  CC(=O)CCC1C(O[O])(CC1(C)C)C(CCO)=C
-SPC1057 = IGNORE ;    //  CC(=O)CCC1C(O[O])CC1(C)C
-SPC1058 = IGNORE ;    //  CC(=O)CCC1C([O])(CC1(C)C)C(=O)CCO
-SPC1059 = IGNORE ;    //  CC(=O)CCC1C([O])(CC1(C)C)C(CCO)=C
-SPC1060 = IGNORE ;    //  CC(=O)CCC1C([O])CC1(C)C
-SPC1061 = IGNORE ;    //  CC(=O)CCC=O
-SPC1062 = IGNORE ;    //  CC(=O)CCCO
-SPC1063 = IGNORE ;    //  CC(=O)CCL
-SPC1064 = IGNORE ;    //  CC(=O)CCO
-SPC1065 = IGNORE ;    //  CC(=O)CCOC(=O)C
-SPC1066 = IGNORE ;    //  CC(=O)CCON(=O)=O
-SPC1067 = IGNORE ;    //  CC(=O)CCOO
-SPC1068 = IGNORE ;    //  CC(=O)CCO[O]
-SPC1069 = IGNORE ;    //  CC(=O)CC[O]
-SPC1070 = IGNORE ;    //  CC(=O)CL
-SPC1071 = IGNORE ;    //  CC(=O)CO
-SPC1072 = IGNORE ;    //  CC(=O)COC
-SPC1073 = IGNORE ;    //  CC(=O)COC(=O)C
-SPC1074 = IGNORE ;    //  CC(=O)COC(=O)C(=O)C
-SPC1075 = IGNORE ;    //  CC(=O)COC(=O)CC(O[O])C
-SPC1076 = IGNORE ;    //  CC(=O)COC(=O)CC([O])C
-SPC1077 = IGNORE ;    //  CC(=O)COC(=O)COO
-SPC1078 = IGNORE ;    //  CC(=O)COC(=O)CO[O]
-SPC1079 = IGNORE ;    //  CC(=O)COC(=O)C[O]
-SPC1080 = IGNORE ;    //  CC(=O)COC(O[O])CCC
-SPC1081 = IGNORE ;    //  CC(=O)COC([O])CCC
-SPC1082 = IGNORE ;    //  CC(=O)COC=O
-SPC1083 = IGNORE ;    //  CC(=O)CON(=O)=O
-SPC1084 = IGNORE ;    //  CC(=O)COO
-SPC1085 = IGNORE ;    //  CC(=O)CO[O]
-SPC1086 = IGNORE ;    //  CC(=O)C[O]
-SPC1087 = IGNORE ;    //  CC(=O)O
-SPC1088 = IGNORE ;    //  CC(=O)OC
-SPC1089 = IGNORE ;    //  CC(=O)OC(=O)C
-SPC1090 = IGNORE ;    //  CC(=O)OC(=O)C(=O)C(O[O])C
-SPC1091 = IGNORE ;    //  CC(=O)OC(=O)C(=O)C([O])C
-SPC1092 = IGNORE ;    //  CC(=O)OC(=O)C(=O)COO
-SPC1093 = IGNORE ;    //  CC(=O)OC(=O)C(=O)CO[O]
-SPC1094 = IGNORE ;    //  CC(=O)OC(=O)C(=O)C[O]
-SPC1095 = IGNORE ;    //  CC(=O)OC(=O)CC(=O)COO
-SPC1096 = IGNORE ;    //  CC(=O)OC(=O)CC(=O)CO[O]
-SPC1097 = IGNORE ;    //  CC(=O)OC(=O)CC(=O)C[O]
-SPC1098 = IGNORE ;    //  CC(=O)OC(=O)CC(=O)O
-SPC1099 = IGNORE ;    //  CC(=O)OC(=O)CC(=O)OO
-SPC1100 = IGNORE ;    //  CC(=O)OC(=O)CC(=O)OON(=O)=O
-SPC1101 = IGNORE ;    //  CC(=O)OC(=O)CC(=O)O[O]
-SPC1102 = IGNORE ;    //  CC(=O)OC(=O)CC(O[O])C
-SPC1103 = IGNORE ;    //  CC(=O)OC(=O)CC([O])C
-SPC1104 = IGNORE ;    //  CC(=O)OC(=O)CC=O
-SPC1105 = IGNORE ;    //  CC(=O)OC(=O)CCOO
-SPC1106 = IGNORE ;    //  CC(=O)OC(=O)CCO[O]
-SPC1107 = IGNORE ;    //  CC(=O)OC(=O)CC[O]
-SPC1108 = IGNORE ;    //  CC(=O)OC(=O)COO
-SPC1109 = IGNORE ;    //  CC(=O)OC(=O)CO[O]
-SPC1110 = IGNORE ;    //  CC(=O)OC(=O)C[O]
-SPC1111 = IGNORE ;    //  CC(=O)OC(C)(C)C
-SPC1112 = IGNORE ;    //  CC(=O)OC(C)(C)C(=O)OO
-SPC1113 = IGNORE ;    //  CC(=O)OC(C)(C)C(=O)O[O]
-SPC1114 = IGNORE ;    //  CC(=O)OC(C)(C)C=O
-SPC1115 = IGNORE ;    //  CC(=O)OC(C)(C)CO
-SPC1116 = IGNORE ;    //  CC(=O)OC(C)(C)CON(=O)=O
-SPC1117 = IGNORE ;    //  CC(=O)OC(C)(C)COO
-SPC1118 = IGNORE ;    //  CC(=O)OC(C)(C)CO[O]
-SPC1119 = IGNORE ;    //  CC(=O)OC(C)(C)C[O]
-SPC1120 = IGNORE ;    //  CC(=O)OC(C)C
-SPC1121 = IGNORE ;    //  CC(=O)OC(C)C(=O)C
-SPC1122 = IGNORE ;    //  CC(=O)OC(C)C(=O)O
-SPC1123 = IGNORE ;    //  CC(=O)OC(C)C(=O)OO
-SPC1124 = IGNORE ;    //  CC(=O)OC(C)C(=O)O[O]
-SPC1125 = IGNORE ;    //  CC(=O)OC(C)C=O
-SPC1126 = IGNORE ;    //  CC(=O)OC(C)CC
-SPC1127 = IGNORE ;    //  CC(=O)OC(C)CO
-SPC1128 = IGNORE ;    //  CC(=O)OC(C)CON(=O)=O
-SPC1129 = IGNORE ;    //  CC(=O)OC(C)COO
-SPC1130 = IGNORE ;    //  CC(=O)OC(C)CO[O]
-SPC1131 = IGNORE ;    //  CC(=O)OC(C)C[O]
-SPC1132 = IGNORE ;    //  CC(=O)OC(O)(C)C
-SPC1133 = IGNORE ;    //  CC(=O)OC(O)(C)C(=O)C
-SPC1134 = IGNORE ;    //  CC(=O)OC(O)(C)CC
-SPC1135 = IGNORE ;    //  CC(=O)OC(O)COO
-SPC1136 = IGNORE ;    //  CC(=O)OC(O)CO[O]
-SPC1137 = IGNORE ;    //  CC(=O)OC(O)C[O]
-SPC1138 = IGNORE ;    //  CC(=O)OC(ON(=O)=O)(C)C
-SPC1139 = IGNORE ;    //  CC(=O)OC(ON(=O)=O)(C)CC
-SPC1140 = IGNORE ;    //  CC(=O)OC(OO)(C)C
-SPC1141 = IGNORE ;    //  CC(=O)OC(OO)(C)C(=O)C
-SPC1142 = IGNORE ;    //  CC(=O)OC(OO)(C)CC
-SPC1143 = IGNORE ;    //  CC(=O)OC(O[O])(C)C
-SPC1144 = IGNORE ;    //  CC(=O)OC(O[O])(C)C(=O)C
-SPC1145 = IGNORE ;    //  CC(=O)OC(O[O])(C)CC
-SPC1146 = IGNORE ;    //  CC(=O)OC(O[O])C
-SPC1147 = IGNORE ;    //  CC(=O)OC(O[O])C(=O)C
-SPC1148 = IGNORE ;    //  CC(=O)OC(O[O])CC
-SPC1149 = IGNORE ;    //  CC(=O)OC([O])(C)C
-SPC1150 = IGNORE ;    //  CC(=O)OC([O])(C)C(=O)C
-SPC1151 = IGNORE ;    //  CC(=O)OC([O])(C)CC
-SPC1152 = IGNORE ;    //  CC(=O)OC([O])C
-SPC1153 = IGNORE ;    //  CC(=O)OC([O])C(=O)C
-SPC1154 = IGNORE ;    //  CC(=O)OC([O])CC
-SPC1155 = IGNORE ;    //  CC(=O)OC=O
-SPC1156 = IGNORE ;    //  CC(=O)OCC(=O)OO
-SPC1157 = IGNORE ;    //  CC(=O)OCC(=O)OON(=O)=O
-SPC1158 = IGNORE ;    //  CC(=O)OCC(=O)O[O]
-SPC1159 = IGNORE ;    //  CC(=O)OCC(O[O])C
-SPC1160 = IGNORE ;    //  CC(=O)OCC(O[O])CC
-SPC1161 = IGNORE ;    //  CC(=O)OCC([O])C
-SPC1162 = IGNORE ;    //  CC(=O)OCC([O])CC
-SPC1163 = IGNORE ;    //  CC(=O)OCC=O
-SPC1164 = IGNORE ;    //  CC(=O)OCCC(=O)O
-SPC1165 = IGNORE ;    //  CC(=O)OCCC(=O)OO
-SPC1166 = IGNORE ;    //  CC(=O)OCCC(=O)OON(=O)=O
-SPC1167 = IGNORE ;    //  CC(=O)OCCC(=O)O[O]
-SPC1168 = IGNORE ;    //  CC(=O)OCCC(O[O])C
-SPC1169 = IGNORE ;    //  CC(=O)OCCC([O])C
-SPC1170 = IGNORE ;    //  CC(=O)OCCC=O
-SPC1171 = IGNORE ;    //  CC(=O)OCCCO
-SPC1172 = IGNORE ;    //  CC(=O)OCCCON(=O)=O
-SPC1173 = IGNORE ;    //  CC(=O)OCCCOO
-SPC1174 = IGNORE ;    //  CC(=O)OCCCO[O]
-SPC1175 = IGNORE ;    //  CC(=O)OCCC[O]
-SPC1176 = IGNORE ;    //  CC(=O)OCCO
-SPC1177 = IGNORE ;    //  CC(=O)OCCON(=O)=O
-SPC1178 = IGNORE ;    //  CC(=O)OCCOO
-SPC1179 = IGNORE ;    //  CC(=O)OCCO[O]
-SPC1180 = IGNORE ;    //  CC(=O)OCC[O]
-SPC1181 = IGNORE ;    //  CC(=O)OCO
-SPC1182 = IGNORE ;    //  CC(=O)OCON(=O)=O
-SPC1183 = IGNORE ;    //  CC(=O)OCOO
-SPC1184 = IGNORE ;    //  CC(=O)OCO[O]
-SPC1185 = IGNORE ;    //  CC(=O)OC[O]
-SPC1186 = IGNORE ;    //  CC(=O)OO
-SPC1187 = IGNORE ;    //  CC(=O)OON(=O)=O
-SPC1188 = IGNORE ;    //  CC(=O)O[O]
-SPC1189 = IGNORE ;    //  CC(=O)c(c1)cc(C)cc1CC
-SPC1190 = IGNORE ;    //  CC(C(=O)O)(C)C(=O)CC=O
-SPC1191 = IGNORE ;    //  CC(C(=O)O)(C)C=O
-SPC1192 = IGNORE ;    //  CC(C(=O)O)(C)OC=O
-SPC1193 = IGNORE ;    //  CC(C(=O)O)=C
-SPC1194 = IGNORE ;    //  CC(C(=O)O)=C(C)C=O
-SPC1195 = IGNORE ;    //  CC(C(=O)O)=C(N(=O)=O)C=O
-SPC1196 = IGNORE ;    //  CC(C(=O)O)=CC=O
-SPC1197 = IGNORE ;    //  CC(C(=O)O)C=O
-SPC1198 = IGNORE ;    //  CC(C(=O)OO)(C)C(=O)CC=O
-SPC1199 = IGNORE ;    //  CC(C(=O)OO)(C)OC=O
-SPC1200 = IGNORE ;    //  CC(C(=O)OO)=C
-SPC1201 = IGNORE ;    //  CC(C(=O)OO)=C(C)C(=O)C(O)C=O
-SPC1202 = IGNORE ;    //  CC(C(=O)OO)=C(C)C(=O)C=O
-SPC1203 = IGNORE ;    //  CC(C(=O)OO)=C(CC)C(=O)C(O)C=O
-SPC1204 = IGNORE ;    //  CC(C(=O)OO)=C(CC)C(=O)C=O
-SPC1205 = IGNORE ;    //  CC(C(=O)OO)=CC(=O)C=O
-SPC1206 = IGNORE ;    //  CC(C(=O)OO)=CC=O
-SPC1207 = IGNORE ;    //  CC(C(=O)OO)C=O
-SPC1208 = IGNORE ;    //  CC(C(=O)OON(=O)=O)(C)C(=O)CC=O
-SPC1209 = IGNORE ;    //  CC(C(=O)OON(=O)=O)(C)C=O
-SPC1210 = IGNORE ;    //  CC(C(=O)OON(=O)=O)(C)OC=O
-SPC1211 = IGNORE ;    //  CC(C(=O)OON(=O)=O)=C(C)C(=O)C(O)C=O
-SPC1212 = IGNORE ;    //  CC(C(=O)OON(=O)=O)=C(C)C(=O)C=O
-SPC1213 = IGNORE ;    //  CC(C(=O)OON(=O)=O)=C(CC)C(=O)C(O)C=O
-SPC1214 = IGNORE ;    //  CC(C(=O)OON(=O)=O)=C(CC)C(=O)C=O
-SPC1215 = IGNORE ;    //  CC(C(=O)OON(=O)=O)=CC(=O)C=O
-SPC1216 = IGNORE ;    //  CC(C(=O)OON(=O)=O)=CC=O
-SPC1217 = IGNORE ;    //  CC(C(=O)OON(=O)=O)C=O
-SPC1218 = IGNORE ;    //  CC(C)(C(=O)OO)C=O
-SPC1219 = IGNORE ;    //  CC(C)(C)C
-SPC1220 = IGNORE ;    //  CC(C)(C)C(=O)OO
-SPC1221 = IGNORE ;    //  CC(C)(C)C(=O)O[O]
-SPC1222 = IGNORE ;    //  CC(C)(C)C=O
-SPC1223 = IGNORE ;    //  CC(C)(C)CC(=O)OO
-SPC1224 = IGNORE ;    //  CC(C)(C)CC(=O)O[O]
-SPC1225 = IGNORE ;    //  CC(C)(C)CC=O
-SPC1226 = IGNORE ;    //  CC(C)(C)CCO
-SPC1227 = IGNORE ;    //  CC(C)(C)CCON(=O)=O
-SPC1228 = IGNORE ;    //  CC(C)(C)CCOO
-SPC1229 = IGNORE ;    //  CC(C)(C)CCO[O]
-SPC1230 = IGNORE ;    //  CC(C)(C)CC[O]
-SPC1231 = IGNORE ;    //  CC(C)(C)CO
-SPC1232 = IGNORE ;    //  CC(C)(C)CON(=O)=O
-SPC1233 = IGNORE ;    //  CC(C)(C)COO
-SPC1234 = IGNORE ;    //  CC(C)(C)CO[O]
-SPC1235 = IGNORE ;    //  CC(C)(C)C[O]
-SPC1236 = IGNORE ;    //  CC(C)(C)OC(=O)C=O
-SPC1237 = IGNORE ;    //  CC(C)(C)OC(=O)CO
-SPC1238 = IGNORE ;    //  CC(C)(C)OC(=O)COO
-SPC1239 = IGNORE ;    //  CC(C)(C)OC(=O)CO[O]
-SPC1240 = IGNORE ;    //  CC(C)(C)OC(=O)C[O]
-SPC1241 = IGNORE ;    //  CC(C)(C)OC=O
-SPC1242 = IGNORE ;    //  CC(C)(C)OCC(=O)OO
-SPC1243 = IGNORE ;    //  CC(C)(C)OCC(=O)OON(=O)=O
-SPC1244 = IGNORE ;    //  CC(C)(C)OCC(=O)O[O]
-SPC1245 = IGNORE ;    //  CC(C)(C)OCC=O
-SPC1246 = IGNORE ;    //  CC(C)(C)OCCO
-SPC1247 = IGNORE ;    //  CC(C)(C)OCCON(=O)=O
-SPC1248 = IGNORE ;    //  CC(C)(C)OCCOO
-SPC1249 = IGNORE ;    //  CC(C)(C)OCCO[O]
-SPC1250 = IGNORE ;    //  CC(C)(C)OCC[O]
-SPC1251 = IGNORE ;    //  CC(C)(C)OCO
-SPC1252 = IGNORE ;    //  CC(C)(C)OCON(=O)=O
-SPC1253 = IGNORE ;    //  CC(C)(C)OCOO
-SPC1254 = IGNORE ;    //  CC(C)(C)OCO[O]
-SPC1255 = IGNORE ;    //  CC(C)(C)OC[O]
-SPC1256 = IGNORE ;    //  CC(C)(C=O)C=O
-SPC1257 = IGNORE ;    //  CC(C)(CO)C(=O)O
-SPC1258 = IGNORE ;    //  CC(C)(CO)C(=O)OON(=O)=O
-SPC1259 = IGNORE ;    //  CC(C)(CO)C=O
-SPC1260 = IGNORE ;    //  CC(C)(CO)CC(=O)O
-SPC1261 = IGNORE ;    //  CC(C)(CO)CC(=O)OON(=O)=O
-SPC1262 = IGNORE ;    //  CC(C)(CO)CCON(=O)=O
-SPC1263 = IGNORE ;    //  CC(C)(CO)CO
-SPC1264 = IGNORE ;    //  CC(C)(CO)CON(=O)=O
-SPC1265 = IGNORE ;    //  CC(C)(CO)C[O]
-SPC1266 = IGNORE ;    //  CC(C)(COO)OC=O
-SPC1267 = IGNORE ;    //  CC(C)=C
-SPC1268 = IGNORE ;    //  CC(C)=C(C)C
-SPC1269 = IGNORE ;    //  CC(C)C
-SPC1270 = IGNORE ;    //  CC(C)C(=O)C(=O)C(O)C(=O)OO
-SPC1271 = IGNORE ;    //  CC(C)C(=O)C(=O)C(O)C(=O)O[O]
-SPC1272 = IGNORE ;    //  CC(C)C(=O)C(=O)C(O)C1OC1C=O
-SPC1273 = IGNORE ;    //  CC(C)C(=O)C(=O)C(O)C=O
-SPC1274 = IGNORE ;    //  CC(C)C(=O)C(=O)C=O
-SPC1275 = IGNORE ;    //  CC(C)C(=O)C(=O)O
-SPC1276 = IGNORE ;    //  CC(C)C(=O)C(O)C(=O)OO
-SPC1277 = IGNORE ;    //  CC(C)C(=O)C(O)C(=O)O[O]
-SPC1278 = IGNORE ;    //  CC(C)C(=O)C(O)C(O)C1OC1C=O
-SPC1279 = IGNORE ;    //  CC(C)C(=O)C(O)C(O)C=O
-SPC1280 = IGNORE ;    //  CC(C)C(=O)C(O)C=O
-SPC1281 = IGNORE ;    //  CC(C)C(=O)C(ON(=O)=O)C(O)C1OC1C=O
-SPC1282 = IGNORE ;    //  CC(C)C(=O)C(OO)C(O)C(=O)C=O
-SPC1283 = IGNORE ;    //  CC(C)C(=O)C(OO)C(O)C1OC1C=O
-SPC1284 = IGNORE ;    //  CC(C)C(=O)C(OO)C(O)C=O
-SPC1285 = IGNORE ;    //  CC(C)C(=O)C(O[O])C(O)C(=O)C=O
-SPC1286 = IGNORE ;    //  CC(C)C(=O)C(O[O])C(O)C1OC1C=O
-SPC1287 = IGNORE ;    //  CC(C)C(=O)C(O[O])C(O)C=O
-SPC1288 = IGNORE ;    //  CC(C)C(=O)C([O])C(O)C(=O)C=O
-SPC1289 = IGNORE ;    //  CC(C)C(=O)C([O])C(O)C1OC1C=O
-SPC1290 = IGNORE ;    //  CC(C)C(=O)C([O])C(O)C=O
-SPC1291 = IGNORE ;    //  CC(C)C(=O)C=CC(=O)C=O
-SPC1292 = IGNORE ;    //  CC(C)C(=O)C=CC(=O)O
-SPC1293 = IGNORE ;    //  CC(C)C(=O)C=CC(=O)OO
-SPC1294 = IGNORE ;    //  CC(C)C(=O)C=CC(=O)OON(=O)=O
-SPC1295 = IGNORE ;    //  CC(C)C(=O)C=CC(=O)O[O]
-SPC1296 = IGNORE ;    //  CC(C)C(=O)C=CC(=O)[O]
-SPC1297 = IGNORE ;    //  CC(C)C(=O)C=CC(O)C=O
-SPC1298 = IGNORE ;    //  CC(C)C(=O)C=CC(OO)C=O
-SPC1299 = IGNORE ;    //  CC(C)C(=O)C=CC(O[O])C=O
-SPC1300 = IGNORE ;    //  CC(C)C(=O)C=CC([O])C=O
-SPC1301 = IGNORE ;    //  CC(C)C(=O)C=CC1OC1C(=O)O
-SPC1302 = IGNORE ;    //  CC(C)C(=O)C=CC1OC1C(=O)OO
-SPC1303 = IGNORE ;    //  CC(C)C(=O)C=CC1OC1C(=O)O[O]
-SPC1304 = IGNORE ;    //  CC(C)C(=O)C=CC1OC1C=O
-SPC1305 = IGNORE ;    //  CC(C)C(=O)C=CC=O
-SPC1306 = IGNORE ;    //  CC(C)C(=O)C=O
-SPC1307 = IGNORE ;    //  CC(C)C(=O)CO
-SPC1308 = IGNORE ;    //  CC(C)C(=O)CON(=O)=O
-SPC1309 = IGNORE ;    //  CC(C)C(=O)C[O]
-SPC1310 = IGNORE ;    //  CC(C)C(=O)O
-SPC1311 = IGNORE ;    //  CC(C)C(=O)OO
-SPC1312 = IGNORE ;    //  CC(C)C(=O)O[O]
-SPC1313 = IGNORE ;    //  CC(C)C(C(=O)C=O)=CC(=O)C=O
-SPC1314 = IGNORE ;    //  CC(C)C(C(=O)O)=C(N(=O)=O)C=O
-SPC1315 = IGNORE ;    //  CC(C)C(C(=O)O)=CC=O
-SPC1316 = IGNORE ;    //  CC(C)C(C(=O)OO)=CC(=O)C=O
-SPC1317 = IGNORE ;    //  CC(C)C(C(=O)OON(=O)=O)=CC(=O)C=O
-SPC1318 = IGNORE ;    //  CC(C)C(C(=O)O[O])=CC(=O)C=O
-SPC1319 = IGNORE ;    //  CC(C)C(C(=O)[O])=C(N(=O)=O)C=O
-SPC1320 = IGNORE ;    //  CC(C)C(C)C
-SPC1321 = IGNORE ;    //  CC(C)C(C)C(=O)O
-SPC1322 = IGNORE ;    //  CC(C)C(C)C(=O)OO
-SPC1323 = IGNORE ;    //  CC(C)C(C)C(=O)O[O]
-SPC1324 = IGNORE ;    //  CC(C)C(C)C=O
-SPC1325 = IGNORE ;    //  CC(C)C(C)CO
-SPC1326 = IGNORE ;    //  CC(C)C(C)CON(=O)=O
-SPC1327 = IGNORE ;    //  CC(C)C(C)COO
-SPC1328 = IGNORE ;    //  CC(C)C(C)CO[O]
-SPC1329 = IGNORE ;    //  CC(C)C(C)C[O]
-SPC1330 = IGNORE ;    //  CC(C)C(C=O)OC(=O)C=O
-SPC1331 = IGNORE ;    //  CC(C)C(O)C(=O)OO
-SPC1332 = IGNORE ;    //  CC(C)C(O)C(=O)O[O]
-SPC1333 = IGNORE ;    //  CC(C)C(O)C=O
-SPC1334 = IGNORE ;    //  CC(C)C(O)CC(=O)COO
-SPC1335 = IGNORE ;    //  CC(C)C(O)CC(=O)CO[O]
-SPC1336 = IGNORE ;    //  CC(C)C(O)CC(=O)C[O]
-SPC1337 = IGNORE ;    //  CC(C)C(O)CC(=O)OO
-SPC1338 = IGNORE ;    //  CC(C)C(O)CC(=O)O[O]
-SPC1339 = IGNORE ;    //  CC(C)C(O)CO
-SPC1340 = IGNORE ;    //  CC(C)C(O)CON(=O)=O
-SPC1341 = IGNORE ;    //  CC(C)C(O)COO
-SPC1342 = IGNORE ;    //  CC(C)C(O)CO[O]
-SPC1343 = IGNORE ;    //  CC(C)C(O)C[O]
-SPC1344 = IGNORE ;    //  CC(C)C(ON(=O)=O)C(=O)O
-SPC1345 = IGNORE ;    //  CC(C)C(ON(=O)=O)C(=O)OO
-SPC1346 = IGNORE ;    //  CC(C)C(ON(=O)=O)C(=O)O[O]
-SPC1347 = IGNORE ;    //  CC(C)C(ON(=O)=O)C=O
-SPC1348 = IGNORE ;    //  CC(C)C(ON(=O)=O)CO
-SPC1349 = IGNORE ;    //  CC(C)C(ON(=O)=O)COO
-SPC1350 = IGNORE ;    //  CC(C)C(ON(=O)=O)CO[O]
-SPC1351 = IGNORE ;    //  CC(C)C(ON(=O)=O)C[O]
-SPC1352 = IGNORE ;    //  CC(C)C(OO)C=O
-SPC1353 = IGNORE ;    //  CC(C)C(OO)CO
-SPC1354 = IGNORE ;    //  CC(C)C(OO)CON(=O)=O
-SPC1355 = IGNORE ;    //  CC(C)C(O[O])C=O
-SPC1356 = IGNORE ;    //  CC(C)C(O[O])CO
-SPC1357 = IGNORE ;    //  CC(C)C(O[O])CON(=O)=O
-SPC1358 = IGNORE ;    //  CC(C)C([O])C=O
-SPC1359 = IGNORE ;    //  CC(C)C([O])CO
-SPC1360 = IGNORE ;    //  CC(C)C([O])CON(=O)=O
-SPC1361 = IGNORE ;    //  CC(C)C12OOC(C2O)C(O)(O)C=C1
-SPC1362 = IGNORE ;    //  CC(C)C12OOC(C2O)C([O])(O)C=C1
-SPC1363 = IGNORE ;    //  CC(C)C=C
-SPC1364 = IGNORE ;    //  CC(C)C=O
-SPC1365 = IGNORE ;    //  CC(C)CC(=O)O
-SPC1366 = IGNORE ;    //  CC(C)CC(=O)OO
-SPC1367 = IGNORE ;    //  CC(C)CC(=O)OON(=O)=O
-SPC1368 = IGNORE ;    //  CC(C)CC(=O)O[O]
-SPC1369 = IGNORE ;    //  CC(C)CC=O
-SPC1370 = IGNORE ;    //  CC(C)CCO
-SPC1371 = IGNORE ;    //  CC(C)CO
-SPC1372 = IGNORE ;    //  CC(C)CON(=O)=O
-SPC1373 = IGNORE ;    //  CC(C)COO
-SPC1374 = IGNORE ;    //  CC(C)CO[O]
-SPC1375 = IGNORE ;    //  CC(C)C[O]
-SPC1376 = IGNORE ;    //  CC(C)OC(C)C
-SPC1377 = IGNORE ;    //  CC(C)OC(C)C(=O)OO
-SPC1378 = IGNORE ;    //  CC(C)OC(C)C(=O)O[O]
-SPC1379 = IGNORE ;    //  CC(C)OC(C)C=O
-SPC1380 = IGNORE ;    //  CC(C)OC(C)CO
-SPC1381 = IGNORE ;    //  CC(C)OC(C)CON(=O)=O
-SPC1382 = IGNORE ;    //  CC(C)OC(C)COO
-SPC1383 = IGNORE ;    //  CC(C)OC(C)CO[O]
-SPC1384 = IGNORE ;    //  CC(C)OC(C)C[O]
-SPC1385 = IGNORE ;    //  CC(C)OC=O
-SPC1386 = IGNORE ;    //  CC(C=O)(C)C(=O)C=O
-SPC1387 = IGNORE ;    //  CC(C=O)(C)C(=O)CC(=O)O[O]
-SPC1388 = IGNORE ;    //  CC(C=O)(C)C(=O)CC=O
-SPC1389 = IGNORE ;    //  CC(C=O)(C)C(=O)CCC(=O)O[O]
-SPC1390 = IGNORE ;    //  CC(C=O)(C)C(=O)CCO[O]
-SPC1391 = IGNORE ;    //  CC(C=O)(C)C(=O)CC[O]
-SPC1392 = IGNORE ;    //  CC(C=O)(C)C(=O)CO[O]
-SPC1393 = IGNORE ;    //  CC(C=O)(C)C(=O)C[O]
-SPC1394 = IGNORE ;    //  CC(C=O)(C)C(=O)O[O]
-SPC1395 = IGNORE ;    //  CC(C=O)(C)C(C=O)C(=O)C=O
-SPC1396 = IGNORE ;    //  CC(C=O)(C)C(C=O)C(=O)CC(=O)O[O]
-SPC1397 = IGNORE ;    //  CC(C=O)(C)C(C=O)C(=O)CO[O]
-SPC1398 = IGNORE ;    //  CC(C=O)(C)C(C=O)C(=O)C[O]
-SPC1399 = IGNORE ;    //  CC(C=O)(C)C(C=O)C(=O)O[O]
-SPC1400 = IGNORE ;    //  CC(C=O)(C)C(O)C=O
-SPC1401 = IGNORE ;    //  CC(C=O)(C)C(OO)C=O
-SPC1402 = IGNORE ;    //  CC(C=O)(C)C(O[O])C=O
-SPC1403 = IGNORE ;    //  CC(C=O)(C)C([O])C=O
-SPC1404 = IGNORE ;    //  CC(C=O)(C)OC=O
-SPC1405 = IGNORE ;    //  CC(C=O)=C
-SPC1406 = IGNORE ;    //  CC(C=O)=CC(=O)O[O]
-SPC1407 = IGNORE ;    //  CC(C=O)=CC(=O)[O]
-SPC1408 = IGNORE ;    //  CC(C=O)=CC=O
-SPC1409 = IGNORE ;    //  CC(C=O)C(=O)O[O]
-SPC1410 = IGNORE ;    //  CC(C=O)C=O
-SPC1411 = IGNORE ;    //  CC(C=O)CO[O]
-SPC1412 = IGNORE ;    //  CC(C=O)C[O]
-SPC1413 = IGNORE ;    //  CC(CCC(CC(=O)OO[N+](=O)[O-])=O)=O
-SPC1414 = IGNORE ;    //  CC(CCC(C[O])=O)=O.[OH]
-SPC1415 = IGNORE ;    //  CC(CL)(CL)CL
-SPC1416 = IGNORE ;    //  CC(CL)(CL)OO
-SPC1417 = IGNORE ;    //  CC(CL)(CL)O[O]
-SPC1418 = IGNORE ;    //  CC(CL)(CL)[O]
-SPC1419 = IGNORE ;    //  CC(CL)(OO)C(=O)CL
-SPC1420 = IGNORE ;    //  CC(CL)(OO)CCL
-SPC1421 = IGNORE ;    //  CC(CL)(O[O])C(=O)CL
-SPC1422 = IGNORE ;    //  CC(CL)(O[O])CCL
-SPC1423 = IGNORE ;    //  CC(CL)([O])C(=O)CL
-SPC1424 = IGNORE ;    //  CC(CL)([O])CCL
-SPC1425 = IGNORE ;    //  CC(CL)C(=O)CL
-SPC1426 = IGNORE ;    //  CC(CL)C(CL)OO
-SPC1427 = IGNORE ;    //  CC(CL)C(CL)O[O]
-SPC1428 = IGNORE ;    //  CC(CL)C(CL)[O]
-SPC1429 = IGNORE ;    //  CC(CL)C(O)CL
-SPC1430 = IGNORE ;    //  CC(CL)CCL
-SPC1431 = IGNORE ;    //  CC(CL)CL
-SPC1432 = IGNORE ;    //  CC(CL)OO
-SPC1433 = IGNORE ;    //  CC(CL)O[O]
-SPC1434 = IGNORE ;    //  CC(CL)[O]
-SPC1435 = IGNORE ;    //  CC(CO)(C)C(=O)C=O
-SPC1436 = IGNORE ;    //  CC(CO)(C)C(=O)CO
-SPC1437 = IGNORE ;    //  CC(CO)(C)C(=O)COO
-SPC1438 = IGNORE ;    //  CC(CO)(C)C(=O)CO[O]
-SPC1439 = IGNORE ;    //  CC(CO)(C)C(=O)C[O]
-SPC1440 = IGNORE ;    //  CC(CO)(C)C(=O)OO
-SPC1441 = IGNORE ;    //  CC(CO)(C)C(=O)O[O]
-SPC1442 = IGNORE ;    //  CC(CO)(C)CC(=O)OO
-SPC1443 = IGNORE ;    //  CC(CO)(C)CC(=O)O[O]
-SPC1444 = IGNORE ;    //  CC(CO)(C)CC=O
-SPC1445 = IGNORE ;    //  CC(CO)(C)CCO
-SPC1446 = IGNORE ;    //  CC(CO)(C)CCOO
-SPC1447 = IGNORE ;    //  CC(CO)(C)CCO[O]
-SPC1448 = IGNORE ;    //  CC(CO)(C)CC[O]
-SPC1449 = IGNORE ;    //  CC(CO)(C)COO
-SPC1450 = IGNORE ;    //  CC(CO)(C)CO[O]
-SPC1451 = IGNORE ;    //  CC(CO)(C)OC=O
-SPC1452 = IGNORE ;    //  CC(CO)=CC(=O)O
-SPC1453 = IGNORE ;    //  CC(CO)=CC(=O)OO
-SPC1454 = IGNORE ;    //  CC(CO)=CC(=O)O[O]
-SPC1455 = IGNORE ;    //  CC(CO)=CC=O
-SPC1456 = IGNORE ;    //  CC(CO)=CCO
-SPC1457 = IGNORE ;    //  CC(CO)=CCON(=O)=O
-SPC1458 = IGNORE ;    //  CC(CO)=CCOO
-SPC1459 = IGNORE ;    //  CC(CO)=CCO[O]
-SPC1460 = IGNORE ;    //  CC(CO)=CC[O]
-SPC1461 = IGNORE ;    //  CC(CO)C(=O)C=O
-SPC1462 = IGNORE ;    //  CC(CO)C(=O)CO
-SPC1463 = IGNORE ;    //  CC(CO)C(=O)COO
-SPC1464 = IGNORE ;    //  CC(CO)C(=O)CO[O]
-SPC1465 = IGNORE ;    //  CC(CO)C(=O)C[O]
-SPC1466 = IGNORE ;    //  CC(CO)C(=O)O
-SPC1467 = IGNORE ;    //  CC(CO)C(=O)OO
-SPC1468 = IGNORE ;    //  CC(CO)C(=O)OON(=O)=O
-SPC1469 = IGNORE ;    //  CC(CO)C(=O)O[O]
-SPC1470 = IGNORE ;    //  CC(CO)C(C)C(=O)O
-SPC1471 = IGNORE ;    //  CC(CO)C(C)C(=O)OO
-SPC1472 = IGNORE ;    //  CC(CO)C(C)C(=O)OON(=O)=O
-SPC1473 = IGNORE ;    //  CC(CO)C(C)C(=O)O[O]
-SPC1474 = IGNORE ;    //  CC(CO)C(C)C=O
-SPC1475 = IGNORE ;    //  CC(CO)C(C)CO
-SPC1476 = IGNORE ;    //  CC(CO)C(C)CON(=O)=O
-SPC1477 = IGNORE ;    //  CC(CO)C(C)COO
-SPC1478 = IGNORE ;    //  CC(CO)C(C)CO[O]
-SPC1479 = IGNORE ;    //  CC(CO)C(C)C[O]
-SPC1480 = IGNORE ;    //  CC(CO)C(O)C(=O)OO
-SPC1481 = IGNORE ;    //  CC(CO)C(O)C(=O)OON(=O)=O
-SPC1482 = IGNORE ;    //  CC(CO)C(O)C(=O)O[O]
-SPC1483 = IGNORE ;    //  CC(CO)C(O)C=O
-SPC1484 = IGNORE ;    //  CC(CO)C(O)CO
-SPC1485 = IGNORE ;    //  CC(CO)C(O)COO
-SPC1486 = IGNORE ;    //  CC(CO)C(O)CO[O]
-SPC1487 = IGNORE ;    //  CC(CO)C(O)C[O]
-SPC1488 = IGNORE ;    //  CC(CO)C(O)ON(=O)=O
-SPC1489 = IGNORE ;    //  CC(CO)C=O
-SPC1490 = IGNORE ;    //  CC(CO)CC(=O)OO
-SPC1491 = IGNORE ;    //  CC(CO)CC(=O)OON(=O)=O
-SPC1492 = IGNORE ;    //  CC(CO)CC(=O)O[O]
-SPC1493 = IGNORE ;    //  CC(CO)CC=O
-SPC1494 = IGNORE ;    //  CC(CO)CCO
-SPC1495 = IGNORE ;    //  CC(CO)CCON(=O)=O
-SPC1496 = IGNORE ;    //  CC(CO)CCOO
-SPC1497 = IGNORE ;    //  CC(CO)CCO[O]
-SPC1498 = IGNORE ;    //  CC(CO)CC[O]
-SPC1499 = IGNORE ;    //  CC(CO)CO
-SPC1500 = IGNORE ;    //  CC(CO)CON(=O)=O
-SPC1501 = IGNORE ;    //  CC(CO)COO
-SPC1502 = IGNORE ;    //  CC(CO)CO[O]
-SPC1503 = IGNORE ;    //  CC(CO)C[O]
-SPC1504 = IGNORE ;    //  CC(CON(=O)=O)(C)OC=O
-SPC1505 = IGNORE ;    //  CC(CON(=O)=O)=CC(=O)OO
-SPC1506 = IGNORE ;    //  CC(CON(=O)=O)=CC(=O)OON(=O)=O
-SPC1507 = IGNORE ;    //  CC(CON(=O)=O)=CC(=O)O[O]
-SPC1508 = IGNORE ;    //  CC(CON(=O)=O)=CC=O
-SPC1509 = IGNORE ;    //  CC(CON(=O)=O)=CCON(=O)=O
-SPC1510 = IGNORE ;    //  CC(CON(=O)=O)=CCOO
-SPC1511 = IGNORE ;    //  CC(CON(=O)=O)=CCO[O]
-SPC1512 = IGNORE ;    //  CC(CON(=O)=O)=CC[O]
-SPC1513 = IGNORE ;    //  CC(CON(=O)=O)C=O
-SPC1514 = IGNORE ;    //  CC(COO)C=O
-SPC1515 = IGNORE ;    //  CC(O)(C(=O)O)C(O)CON(=O)=O
-SPC1516 = IGNORE ;    //  CC(O)(C(=O)O)C=O
-SPC1517 = IGNORE ;    //  CC(O)(C(=O)O)CON(=O)=O
-SPC1518 = IGNORE ;    //  CC(O)(C(=O)OO)C=O
-SPC1519 = IGNORE ;    //  CC(O)(C(=O)OON(=O)=O)C=O
-SPC1520 = IGNORE ;    //  CC(O)(C)C
-SPC1521 = IGNORE ;    //  CC(O)(C)C(=O)C=O
-SPC1522 = IGNORE ;    //  CC(O)(C)C(=O)CC(=O)OO
-SPC1523 = IGNORE ;    //  CC(O)(C)C(=O)CC(=O)O[O]
-SPC1524 = IGNORE ;    //  CC(O)(C)C(=O)CC=O
-SPC1525 = IGNORE ;    //  CC(O)(C)C(=O)CO
-SPC1526 = IGNORE ;    //  CC(O)(C)C(=O)CON(=O)=O
-SPC1527 = IGNORE ;    //  CC(O)(C)C(=O)COO
-SPC1528 = IGNORE ;    //  CC(O)(C)C(=O)CO[O]
-SPC1529 = IGNORE ;    //  CC(O)(C)C(=O)C[O]
-SPC1530 = IGNORE ;    //  CC(O)(C)C(=O)O
-SPC1531 = IGNORE ;    //  CC(O)(C)C(=O)OO
-SPC1532 = IGNORE ;    //  CC(O)(C)C(=O)O[O]
-SPC1533 = IGNORE ;    //  CC(O)(C)C(C)C
-SPC1534 = IGNORE ;    //  CC(O)(C)C(C=O)C(=O)CCC=O
-SPC1535 = IGNORE ;    //  CC(O)(C)C(CC=O)C(=O)CC=O
-SPC1536 = IGNORE ;    //  CC(O)(C)C(CC=O)CC=O
-SPC1537 = IGNORE ;    //  CC(O)(C)C(CO)CC(=O)C(=O)C
-SPC1538 = IGNORE ;    //  CC(O)(C)C(CO)CC(=O)C(=O)O
-SPC1539 = IGNORE ;    //  CC(O)(C)C(O)(C)C
-SPC1540 = IGNORE ;    //  CC(O)(C)C(O)C(=O)OO
-SPC1541 = IGNORE ;    //  CC(O)(C)C(O)C(=O)O[O]
-SPC1542 = IGNORE ;    //  CC(O)(C)C(O)C=O
-SPC1543 = IGNORE ;    //  CC(O)(C)C(O)CC=O
-SPC1544 = IGNORE ;    //  CC(O)(C)C(O)CO
-SPC1545 = IGNORE ;    //  CC(O)(C)C(O)CON(=O)=O
-SPC1546 = IGNORE ;    //  CC(O)(C)C(O)COO
-SPC1547 = IGNORE ;    //  CC(O)(C)C(O)CO[O]
-SPC1548 = IGNORE ;    //  CC(O)(C)C(O)C[O]
-SPC1549 = IGNORE ;    //  CC(O)(C)C(ON(=O)=O)C(=O)OO
-SPC1550 = IGNORE ;    //  CC(O)(C)C(ON(=O)=O)C(=O)O[O]
-SPC1551 = IGNORE ;    //  CC(O)(C)C(ON(=O)=O)C=O
-SPC1552 = IGNORE ;    //  CC(O)(C)C(ON(=O)=O)CC=O
-SPC1553 = IGNORE ;    //  CC(O)(C)C(ON(=O)=O)CO
-SPC1554 = IGNORE ;    //  CC(O)(C)C(ON(=O)=O)COO
-SPC1555 = IGNORE ;    //  CC(O)(C)C(ON(=O)=O)CO[O]
-SPC1556 = IGNORE ;    //  CC(O)(C)C(ON(=O)=O)C[O]
-SPC1557 = IGNORE ;    //  CC(O)(C)C(OO)CC=O
-SPC1558 = IGNORE ;    //  CC(O)(C)C(OO)CO
-SPC1559 = IGNORE ;    //  CC(O)(C)C(OO)CON(=O)=O
-SPC1560 = IGNORE ;    //  CC(O)(C)C(O[O])CC=O
-SPC1561 = IGNORE ;    //  CC(O)(C)C(O[O])CO
-SPC1562 = IGNORE ;    //  CC(O)(C)C(O[O])CON(=O)=O
-SPC1563 = IGNORE ;    //  CC(O)(C)C([O])(C)C
-SPC1564 = IGNORE ;    //  CC(O)(C)C([O])CC=O
-SPC1565 = IGNORE ;    //  CC(O)(C)C([O])CO
-SPC1566 = IGNORE ;    //  CC(O)(C)C([O])CON(=O)=O
-SPC1567 = IGNORE ;    //  CC(O)(C)C1CC=C(CO)CC1
-SPC1568 = IGNORE ;    //  CC(O)(C)C=C
-SPC1569 = IGNORE ;    //  CC(O)(C)C=O
-SPC1570 = IGNORE ;    //  CC(O)(C)CC(=O)C(=O)CCC=O
-SPC1571 = IGNORE ;    //  CC(O)(C)CC(=O)C(=O)CCO
-SPC1572 = IGNORE ;    //  CC(O)(C)CC(=O)C(CCC=O)=C
-SPC1573 = IGNORE ;    //  CC(O)(C)CC(=O)C(CCO)=C
-SPC1574 = IGNORE ;    //  CC(O)(C)CC(=O)C=O
-SPC1575 = IGNORE ;    //  CC(O)(C)CC(=O)CO
-SPC1576 = IGNORE ;    //  CC(O)(C)CC(=O)COO
-SPC1577 = IGNORE ;    //  CC(O)(C)CC(=O)CO[O]
-SPC1578 = IGNORE ;    //  CC(O)(C)CC(=O)C[O]
-SPC1579 = IGNORE ;    //  CC(O)(C)CC(=O)OO
-SPC1580 = IGNORE ;    //  CC(O)(C)CC(=O)O[O]
-SPC1581 = IGNORE ;    //  CC(O)(C)CC=O
-SPC1582 = IGNORE ;    //  CC(O)(C)CCC(=O)O
-SPC1583 = IGNORE ;    //  CC(O)(C)CCC(=O)OO
-SPC1584 = IGNORE ;    //  CC(O)(C)CCC(=O)OON(=O)=O
-SPC1585 = IGNORE ;    //  CC(O)(C)CCC(=O)O[O]
-SPC1586 = IGNORE ;    //  CC(O)(C)CCC=O
-SPC1587 = IGNORE ;    //  CC(O)(C)CCCO
-SPC1588 = IGNORE ;    //  CC(O)(C)CCCON(=O)=O
-SPC1589 = IGNORE ;    //  CC(O)(C)CCCOO
-SPC1590 = IGNORE ;    //  CC(O)(C)CCCO[O]
-SPC1591 = IGNORE ;    //  CC(O)(C)CCC[O]
-SPC1592 = IGNORE ;    //  CC(O)(C)CCO
-SPC1593 = IGNORE ;    //  CC(O)(C)CCON(=O)=O
-SPC1594 = IGNORE ;    //  CC(O)(C)CCOO
-SPC1595 = IGNORE ;    //  CC(O)(C)CCO[O]
-SPC1596 = IGNORE ;    //  CC(O)(C)CC[O]
-SPC1597 = IGNORE ;    //  CC(O)(C)CO
-SPC1598 = IGNORE ;    //  CC(O)(C)CON(=O)=O
-SPC1599 = IGNORE ;    //  CC(O)(C)COO
-SPC1600 = IGNORE ;    //  CC(O)(C)CO[O]
-SPC1601 = IGNORE ;    //  CC(O)(C)C[O]
-SPC1602 = IGNORE ;    //  CC(O)(C)OC(C)C
-SPC1603 = IGNORE ;    //  CC(O)(C)OC=O
-SPC1604 = IGNORE ;    //  CC(O)(C=O)C(=O)O[O]
-SPC1605 = IGNORE ;    //  CC(O)(C=O)C(O)C=O
-SPC1606 = IGNORE ;    //  CC(O)(C=O)C=O
-SPC1607 = IGNORE ;    //  CC(O)(C=O)CO[O]
-SPC1608 = IGNORE ;    //  CC(O)(C=O)C[O]
-SPC1609 = IGNORE ;    //  CC(O)(CL)CCL
-SPC1610 = IGNORE ;    //  CC(O)(CL)CL
-SPC1611 = IGNORE ;    //  CC(O)(CO)C(=O)CCO
-SPC1612 = IGNORE ;    //  CC(O)(CO)C(C=O)CCO
-SPC1613 = IGNORE ;    //  CC(O)(CO)C(CC=O)CC=O
-SPC1614 = IGNORE ;    //  CC(O)(CO)C(CO)C=O
-SPC1615 = IGNORE ;    //  CC(O)(CO)C(CO)CC=O
-SPC1616 = IGNORE ;    //  CC(O)(CO)C(O)C=O
-SPC1617 = IGNORE ;    //  CC(O)(CO)C(O)CON(=O)=O
-SPC1618 = IGNORE ;    //  CC(O)(CO)C(ON(=O)=O)CO
-SPC1619 = IGNORE ;    //  CC(O)(CO)C(OO)C=O
-SPC1620 = IGNORE ;    //  CC(O)(CO)C(O[O])C=O
-SPC1621 = IGNORE ;    //  CC(O)(CO)C([O])C=O
-SPC1622 = IGNORE ;    //  CC(O)(CO)C=C
-SPC1623 = IGNORE ;    //  CC(O)(CO)C=O
-SPC1624 = IGNORE ;    //  CC(O)(CO)CCO
-SPC1625 = IGNORE ;    //  CC(O)(CON(=O)=O)C(=O)C=O
-SPC1626 = IGNORE ;    //  CC(O)(CON(=O)=O)C(=O)O[O]
-SPC1627 = IGNORE ;    //  CC(O)(CON(=O)=O)C(O)C=O
-SPC1628 = IGNORE ;    //  CC(O)(CON(=O)=O)C(ON(=O)=O)C(=O)OO
-SPC1629 = IGNORE ;    //  CC(O)(CON(=O)=O)C(ON(=O)=O)C(=O)O[O]
-SPC1630 = IGNORE ;    //  CC(O)(CON(=O)=O)C(ON(=O)=O)C=O
-SPC1631 = IGNORE ;    //  CC(O)(CON(=O)=O)C=O
-SPC1632 = IGNORE ;    //  CC(O)(COO)C=O
-SPC1633 = IGNORE ;    //  CC(O)C
-SPC1634 = IGNORE ;    //  CC(O)C(=O)C
-SPC1635 = IGNORE ;    //  CC(O)C(=O)C(C)CO
-SPC1636 = IGNORE ;    //  CC(O)C(=O)C=O
-SPC1637 = IGNORE ;    //  CC(O)C(=O)CC
-SPC1638 = IGNORE ;    //  CC(O)C(=O)CC(=O)C
-SPC1639 = IGNORE ;    //  CC(O)C(=O)CC(=O)CC
-SPC1640 = IGNORE ;    //  CC(O)C(=O)CCO
-SPC1641 = IGNORE ;    //  CC(O)C(=O)CON(=O)=O
-SPC1642 = IGNORE ;    //  CC(O)C(=O)C[O]
-SPC1643 = IGNORE ;    //  CC(O)C(=O)OC
-SPC1644 = IGNORE ;    //  CC(O)C(=O)OC(O[O])CCC
-SPC1645 = IGNORE ;    //  CC(O)C(=O)OC([O])CCC
-SPC1646 = IGNORE ;    //  CC(O)C(=O)OO
-SPC1647 = IGNORE ;    //  CC(O)C(=O)O[O]
-SPC1648 = IGNORE ;    //  CC(O)C(C)(C)C
-SPC1649 = IGNORE ;    //  CC(O)C(C)C
-SPC1650 = IGNORE ;    //  CC(O)C(C)C(=O)C
-SPC1651 = IGNORE ;    //  CC(O)C(C)C(=O)C=O
-SPC1652 = IGNORE ;    //  CC(O)C(C)C(=O)CO
-SPC1653 = IGNORE ;    //  CC(O)C(C)C(=O)COO
-SPC1654 = IGNORE ;    //  CC(O)C(C)C(=O)CO[O]
-SPC1655 = IGNORE ;    //  CC(O)C(C)C(=O)C[O]
-SPC1656 = IGNORE ;    //  CC(O)C(C)C(=O)O
-SPC1657 = IGNORE ;    //  CC(O)C(C)C(=O)OO
-SPC1658 = IGNORE ;    //  CC(O)C(C)C(=O)O[O]
-SPC1659 = IGNORE ;    //  CC(O)C(C)C=O
-SPC1660 = IGNORE ;    //  CC(O)C(C)CC
-SPC1661 = IGNORE ;    //  CC(O)C(C)CC(=O)C
-SPC1662 = IGNORE ;    //  CC(O)C(C)CC(=O)O
-SPC1663 = IGNORE ;    //  CC(O)C(C)CC(=O)OO
-SPC1664 = IGNORE ;    //  CC(O)C(C)CC(=O)OON(=O)=O
-SPC1665 = IGNORE ;    //  CC(O)C(C)CC(=O)O[O]
-SPC1666 = IGNORE ;    //  CC(O)C(C)CC=O
-SPC1667 = IGNORE ;    //  CC(O)C(C)CCO
-SPC1668 = IGNORE ;    //  CC(O)C(C)CCON(=O)=O
-SPC1669 = IGNORE ;    //  CC(O)C(C)CCOO
-SPC1670 = IGNORE ;    //  CC(O)C(C)CCO[O]
-SPC1671 = IGNORE ;    //  CC(O)C(C)CC[O]
-SPC1672 = IGNORE ;    //  CC(O)C(C)CO
-SPC1673 = IGNORE ;    //  CC(O)C(C)CON(=O)=O
-SPC1674 = IGNORE ;    //  CC(O)C(C)COO
-SPC1675 = IGNORE ;    //  CC(O)C(C)CO[O]
-SPC1676 = IGNORE ;    //  CC(O)C(C)C[O]
-SPC1677 = IGNORE ;    //  CC(O)C(C)OC(=O)C
-SPC1678 = IGNORE ;    //  CC(O)C(O)(C)C
-SPC1679 = IGNORE ;    //  CC(O)C(O)(C)CC(=O)C
-SPC1680 = IGNORE ;    //  CC(O)C(O)(C)CC=O
-SPC1681 = IGNORE ;    //  CC(O)C(O)(C)CCO
-SPC1682 = IGNORE ;    //  CC(O)C(O)C
-SPC1683 = IGNORE ;    //  CC(O)C(O)C=O
-SPC1684 = IGNORE ;    //  CC(O)C(O)CC(=O)C
-SPC1685 = IGNORE ;    //  CC(O)C(O)CC(=O)CC
-SPC1686 = IGNORE ;    //  CC(O)C(O)CCO
-SPC1687 = IGNORE ;    //  CC(O)C(O)OC
-SPC1688 = IGNORE ;    //  CC(O)C(O)OCCCC
-SPC1689 = IGNORE ;    //  CC(O)C(ON(=O)=O)(C)C
-SPC1690 = IGNORE ;    //  CC(O)C(ON(=O)=O)(C)CC(=O)C
-SPC1691 = IGNORE ;    //  CC(O)C(ON(=O)=O)(C)CC=O
-SPC1692 = IGNORE ;    //  CC(O)C(ON(=O)=O)C
-SPC1693 = IGNORE ;    //  CC(O)C(ON(=O)=O)C=O
-SPC1694 = IGNORE ;    //  CC(O)C(ON(=O)=O)CC
-SPC1695 = IGNORE ;    //  CC(O)C(ON(=O)=O)CC(=O)C
-SPC1696 = IGNORE ;    //  CC(O)C(ON(=O)=O)OC
-SPC1697 = IGNORE ;    //  CC(O)C(ON(=O)=O)OCCCC
-SPC1698 = IGNORE ;    //  CC(O)C(OO)(C)C
-SPC1699 = IGNORE ;    //  CC(O)C(OO)(C)CC(=O)C
-SPC1700 = IGNORE ;    //  CC(O)C(OO)(C)CC=O
-SPC1701 = IGNORE ;    //  CC(O)C(OO)C
-SPC1702 = IGNORE ;    //  CC(O)C(OO)C=O
-SPC1703 = IGNORE ;    //  CC(O)C(OO)CC
-SPC1704 = IGNORE ;    //  CC(O)C(OO)CC(=O)C
-SPC1705 = IGNORE ;    //  CC(O)C(OO)OC
-SPC1706 = IGNORE ;    //  CC(O)C(OO)OCCCC
-SPC1707 = IGNORE ;    //  CC(O)C(O[O])(C)C
-SPC1708 = IGNORE ;    //  CC(O)C(O[O])(C)CC(=O)C
-SPC1709 = IGNORE ;    //  CC(O)C(O[O])(C)CC=O
-SPC1710 = IGNORE ;    //  CC(O)C(O[O])C
-SPC1711 = IGNORE ;    //  CC(O)C(O[O])C=O
-SPC1712 = IGNORE ;    //  CC(O)C(O[O])CC
-SPC1713 = IGNORE ;    //  CC(O)C(O[O])CC(=O)C
-SPC1714 = IGNORE ;    //  CC(O)C(O[O])OC
-SPC1715 = IGNORE ;    //  CC(O)C([O])(C)C
-SPC1716 = IGNORE ;    //  CC(O)C([O])(C)CC(=O)C
-SPC1717 = IGNORE ;    //  CC(O)C([O])(C)CC=O
-SPC1718 = IGNORE ;    //  CC(O)C([O])C
-SPC1719 = IGNORE ;    //  CC(O)C([O])C=O
-SPC1720 = IGNORE ;    //  CC(O)C([O])CC
-SPC1721 = IGNORE ;    //  CC(O)C([O])CC(=O)C
-SPC1722 = IGNORE ;    //  CC(O)C([O])OC
-SPC1723 = IGNORE ;    //  CC(O)C=O
-SPC1724 = IGNORE ;    //  CC(O)CC(=O)C
-SPC1725 = IGNORE ;    //  CC(O)CC(=O)C(=O)C
-SPC1726 = IGNORE ;    //  CC(O)CC(=O)C(O)C
-SPC1727 = IGNORE ;    //  CC(O)CC(=O)C(ON(=O)=O)C
-SPC1728 = IGNORE ;    //  CC(O)CC(=O)C(OO)C
-SPC1729 = IGNORE ;    //  CC(O)CC(=O)C(O[O])C
-SPC1730 = IGNORE ;    //  CC(O)CC(=O)C([O])C
-SPC1731 = IGNORE ;    //  CC(O)CC(=O)C=O
-SPC1732 = IGNORE ;    //  CC(O)CC(=O)CC
-SPC1733 = IGNORE ;    //  CC(O)CC(=O)CO
-SPC1734 = IGNORE ;    //  CC(O)CC(=O)CON(=O)=O
-SPC1735 = IGNORE ;    //  CC(O)CC(=O)COO
-SPC1736 = IGNORE ;    //  CC(O)CC(=O)CO[O]
-SPC1737 = IGNORE ;    //  CC(O)CC(=O)C[O]
-SPC1738 = IGNORE ;    //  CC(O)CC(=O)O
-SPC1739 = IGNORE ;    //  CC(O)CC(=O)OO
-SPC1740 = IGNORE ;    //  CC(O)CC(=O)OON(=O)=O
-SPC1741 = IGNORE ;    //  CC(O)CC(=O)O[O]
-SPC1742 = IGNORE ;    //  CC(O)CC(C)C
-SPC1743 = IGNORE ;    //  CC(O)CC(C)C(=O)C
-SPC1744 = IGNORE ;    //  CC(O)CC(C)C(=O)O
-SPC1745 = IGNORE ;    //  CC(O)CC(C)C(=O)OO
-SPC1746 = IGNORE ;    //  CC(O)CC(C)C(=O)OON(=O)=O
-SPC1747 = IGNORE ;    //  CC(O)CC(C)C(=O)O[O]
-SPC1748 = IGNORE ;    //  CC(O)CC(C)C(O)C
-SPC1749 = IGNORE ;    //  CC(O)CC(C)C(ON(=O)=O)C
-SPC1750 = IGNORE ;    //  CC(O)CC(C)C(OO)C
-SPC1751 = IGNORE ;    //  CC(O)CC(C)C(O[O])C
-SPC1752 = IGNORE ;    //  CC(O)CC(C)C([O])C
-SPC1753 = IGNORE ;    //  CC(O)CC(C)C=O
-SPC1754 = IGNORE ;    //  CC(O)CC(C)CC
-SPC1755 = IGNORE ;    //  CC(O)CC(C)CO
-SPC1756 = IGNORE ;    //  CC(O)CC(C)CON(=O)=O
-SPC1757 = IGNORE ;    //  CC(O)CC(C)COO
-SPC1758 = IGNORE ;    //  CC(O)CC(C)CO[O]
-SPC1759 = IGNORE ;    //  CC(O)CC(C)C[O]
-SPC1760 = IGNORE ;    //  CC(O)CC(O)C
-SPC1761 = IGNORE ;    //  CC(O)CC(O)C(=O)OO
-SPC1762 = IGNORE ;    //  CC(O)CC(O)C(=O)OON(=O)=O
-SPC1763 = IGNORE ;    //  CC(O)CC(O)C(=O)O[O]
-SPC1764 = IGNORE ;    //  CC(O)CC(O)C=O
-SPC1765 = IGNORE ;    //  CC(O)CC(O)CO
-SPC1766 = IGNORE ;    //  CC(O)CC(O)CON(=O)=O
-SPC1767 = IGNORE ;    //  CC(O)CC(O)COO
-SPC1768 = IGNORE ;    //  CC(O)CC(O)CO[O]
-SPC1769 = IGNORE ;    //  CC(O)CC(O)C[O]
-SPC1770 = IGNORE ;    //  CC(O)CC(ON(=O)=O)C
-SPC1771 = IGNORE ;    //  CC(O)CC(OO)C
-SPC1772 = IGNORE ;    //  CC(O)CC(O[O])C
-SPC1773 = IGNORE ;    //  CC(O)CC([O])C
-SPC1774 = IGNORE ;    //  CC(O)CC=O
-SPC1775 = IGNORE ;    //  CC(O)CCC(=O)C
-SPC1776 = IGNORE ;    //  CC(O)CCC(=O)CC
-SPC1777 = IGNORE ;    //  CC(O)CCC(=O)O
-SPC1778 = IGNORE ;    //  CC(O)CCC(=O)OO
-SPC1779 = IGNORE ;    //  CC(O)CCC(=O)OON(=O)=O
-SPC1780 = IGNORE ;    //  CC(O)CCC(=O)O[O]
-SPC1781 = IGNORE ;    //  CC(O)CCC(C)C
-SPC1782 = IGNORE ;    //  CC(O)CCC(O)(C)C
-SPC1783 = IGNORE ;    //  CC(O)CCC(O)C
-SPC1784 = IGNORE ;    //  CC(O)CCC(ON(=O)=O)(C)C
-SPC1785 = IGNORE ;    //  CC(O)CCC(ON(=O)=O)C
-SPC1786 = IGNORE ;    //  CC(O)CCC(OO)(C)C
-SPC1787 = IGNORE ;    //  CC(O)CCC(OO)C
-SPC1788 = IGNORE ;    //  CC(O)CCC(O[O])(C)C
-SPC1789 = IGNORE ;    //  CC(O)CCC(O[O])C
-SPC1790 = IGNORE ;    //  CC(O)CCC([O])(C)C
-SPC1791 = IGNORE ;    //  CC(O)CCC([O])C
-SPC1792 = IGNORE ;    //  CC(O)CCC=O
-SPC1793 = IGNORE ;    //  CC(O)CCCO
-SPC1794 = IGNORE ;    //  CC(O)CCCON(=O)=O
-SPC1795 = IGNORE ;    //  CC(O)CCCOO
-SPC1796 = IGNORE ;    //  CC(O)CCCO[O]
-SPC1797 = IGNORE ;    //  CC(O)CCC[O]
-SPC1798 = IGNORE ;    //  CC(O)CCO
-SPC1799 = IGNORE ;    //  CC(O)CCOC(=O)C
-SPC1800 = IGNORE ;    //  CC(O)CCON(=O)=O
-SPC1801 = IGNORE ;    //  CC(O)CCOO
-SPC1802 = IGNORE ;    //  CC(O)CCO[O]
-SPC1803 = IGNORE ;    //  CC(O)CC[O]
-SPC1804 = IGNORE ;    //  CC(O)CL
-SPC1805 = IGNORE ;    //  CC(O)CO
-SPC1806 = IGNORE ;    //  CC(O)COC
-SPC1807 = IGNORE ;    //  CC(O)COC(=O)C
-SPC1808 = IGNORE ;    //  CC(O)COC(=O)CCC
-SPC1809 = IGNORE ;    //  CC(O)COC(O[O])CCC
-SPC1810 = IGNORE ;    //  CC(O)COC([O])CCC
-SPC1811 = IGNORE ;    //  CC(O)COC=O
-SPC1812 = IGNORE ;    //  CC(O)COCO
-SPC1813 = IGNORE ;    //  CC(O)COCON(=O)=O
-SPC1814 = IGNORE ;    //  CC(O)COCOO
-SPC1815 = IGNORE ;    //  CC(O)COCO[O]
-SPC1816 = IGNORE ;    //  CC(O)COC[O]
-SPC1817 = IGNORE ;    //  CC(O)CON(=O)=O
-SPC1818 = IGNORE ;    //  CC(O)COO
-SPC1819 = IGNORE ;    //  CC(O)CO[O]
-SPC1820 = IGNORE ;    //  CC(O)C[O]
-SPC1821 = IGNORE ;    //  CC(O)OC(=O)C
-SPC1822 = IGNORE ;    //  CC(O)OC(=O)C(=O)C
-SPC1823 = IGNORE ;    //  CC(O)OC(C)(C)C
-SPC1824 = IGNORE ;    //  CC(O)OC(C)C
-SPC1825 = IGNORE ;    //  CC(O)OC=O
-SPC1826 = IGNORE ;    //  CC(O)OCC
-SPC1827 = IGNORE ;    //  CC(O)OCCO
-SPC1828 = IGNORE ;    //  CC(O)c(c1)cc(C)cc1CC
-SPC1829 = IGNORE ;    //  CC(ON(=O)=O)(C(=O)O)C(=O)CON(=O)=O
-SPC1830 = IGNORE ;    //  CC(ON(=O)=O)(C(=O)O)C(O)C=O
-SPC1831 = IGNORE ;    //  CC(ON(=O)=O)(C(=O)O)C(O)CON(=O)=O
-SPC1832 = IGNORE ;    //  CC(ON(=O)=O)(C(=O)O)C=O
-SPC1833 = IGNORE ;    //  CC(ON(=O)=O)(C(=O)OO)C(=O)CC(=O)C=O
-SPC1834 = IGNORE ;    //  CC(ON(=O)=O)(C(=O)OO)C(O)C=O
-SPC1835 = IGNORE ;    //  CC(ON(=O)=O)(C(=O)OO)C=O
-SPC1836 = IGNORE ;    //  CC(ON(=O)=O)(C(=O)OON(=O)=O)C(=O)CC(=O)C=O
-SPC1837 = IGNORE ;    //  CC(ON(=O)=O)(C(=O)OON(=O)=O)C(O)C=O
-SPC1838 = IGNORE ;    //  CC(ON(=O)=O)(C(=O)OON(=O)=O)C=O
-SPC1839 = IGNORE ;    //  CC(ON(=O)=O)(C)C
-SPC1840 = IGNORE ;    //  CC(ON(=O)=O)(C)C(=O)O
-SPC1841 = IGNORE ;    //  CC(ON(=O)=O)(C)C(=O)OO
-SPC1842 = IGNORE ;    //  CC(ON(=O)=O)(C)C(=O)O[O]
-SPC1843 = IGNORE ;    //  CC(ON(=O)=O)(C)C(C)C
-SPC1844 = IGNORE ;    //  CC(ON(=O)=O)(C)C(C=O)C(=O)CCC=O
-SPC1845 = IGNORE ;    //  CC(ON(=O)=O)(C)C(CC=O)C(=O)CC=O
-SPC1846 = IGNORE ;    //  CC(ON(=O)=O)(C)C(CC=O)CC=O
-SPC1847 = IGNORE ;    //  CC(ON(=O)=O)(C)C(CO)CC(=O)C(=O)C
-SPC1848 = IGNORE ;    //  CC(ON(=O)=O)(C)C(CO)CC(=O)C(=O)O
-SPC1849 = IGNORE ;    //  CC(ON(=O)=O)(C)C(O)(C)C
-SPC1850 = IGNORE ;    //  CC(ON(=O)=O)(C)C(OO)(C)C
-SPC1851 = IGNORE ;    //  CC(ON(=O)=O)(C)C(O[O])(C)C
-SPC1852 = IGNORE ;    //  CC(ON(=O)=O)(C)C([O])(C)C
-SPC1853 = IGNORE ;    //  CC(ON(=O)=O)(C)C1CC=C(CO)CC1
-SPC1854 = IGNORE ;    //  CC(ON(=O)=O)(C)C=O
-SPC1855 = IGNORE ;    //  CC(ON(=O)=O)(C)CC=O
-SPC1856 = IGNORE ;    //  CC(ON(=O)=O)(C)CCO
-SPC1857 = IGNORE ;    //  CC(ON(=O)=O)(C)CO
-SPC1858 = IGNORE ;    //  CC(ON(=O)=O)(C)COO
-SPC1859 = IGNORE ;    //  CC(ON(=O)=O)(C)CO[O]
-SPC1860 = IGNORE ;    //  CC(ON(=O)=O)(C)C[O]
-SPC1861 = IGNORE ;    //  CC(ON(=O)=O)(C)OC(C)C
-SPC1862 = IGNORE ;    //  CC(ON(=O)=O)(C)OC=O
-SPC1863 = IGNORE ;    //  CC(ON(=O)=O)(C=O)C(=O)O[O]
-SPC1864 = IGNORE ;    //  CC(ON(=O)=O)(C=O)C(O)C(=O)O[O]
-SPC1865 = IGNORE ;    //  CC(ON(=O)=O)(C=O)C(O)C=O
-SPC1866 = IGNORE ;    //  CC(ON(=O)=O)(C=O)C=O
-SPC1867 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(=O)C=O
-SPC1868 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(=O)CO
-SPC1869 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(=O)CON(=O)=O
-SPC1870 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(=O)O
-SPC1871 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(=O)OO
-SPC1872 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(=O)OON(=O)=O
-SPC1873 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(=O)O[O]
-SPC1874 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(O)C(=O)O
-SPC1875 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(O)C(=O)OO
-SPC1876 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(O)C(=O)OON(=O)=O
-SPC1877 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(O)C(=O)O[O]
-SPC1878 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(O)C=O
-SPC1879 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(O)CO
-SPC1880 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(O)CON(=O)=O
-SPC1881 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(O)COO
-SPC1882 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(O)CO[O]
-SPC1883 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(O)C[O]
-SPC1884 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(ON(=O)=O)C(=O)O
-SPC1885 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(ON(=O)=O)C(=O)OO
-SPC1886 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(ON(=O)=O)C(=O)OON(=O)=O
-SPC1887 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(ON(=O)=O)C(=O)O[O]
-SPC1888 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(ON(=O)=O)C=O
-SPC1889 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(ON(=O)=O)CO
-SPC1890 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(OO)C(=O)O
-SPC1891 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(OO)C(=O)OO
-SPC1892 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(OO)C(=O)OON(=O)=O
-SPC1893 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(OO)C(=O)O[O]
-SPC1894 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(OO)C=O
-SPC1895 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(OO)CO
-SPC1896 = IGNORE ;    //  CC(ON(=O)=O)(CO)C(O[O])CO
-SPC1897 = IGNORE ;    //  CC(ON(=O)=O)(CO)C([O])CO
-SPC1898 = IGNORE ;    //  CC(ON(=O)=O)(CO)C=C
-SPC1899 = IGNORE ;    //  CC(ON(=O)=O)(CO)C=O
-SPC1900 = IGNORE ;    //  CC(ON(=O)=O)C
-SPC1901 = IGNORE ;    //  CC(ON(=O)=O)C(=O)C(OO)C
-SPC1902 = IGNORE ;    //  CC(ON(=O)=O)C(=O)C(O[O])C
-SPC1903 = IGNORE ;    //  CC(ON(=O)=O)C(=O)C([O])C
-SPC1904 = IGNORE ;    //  CC(ON(=O)=O)C(=O)CC(OO)C
-SPC1905 = IGNORE ;    //  CC(ON(=O)=O)C(=O)CC(O[O])C
-SPC1906 = IGNORE ;    //  CC(ON(=O)=O)C(=O)CC([O])C
-SPC1907 = IGNORE ;    //  CC(ON(=O)=O)C(=O)O
-SPC1908 = IGNORE ;    //  CC(ON(=O)=O)C(=O)OO
-SPC1909 = IGNORE ;    //  CC(ON(=O)=O)C(=O)O[O]
-SPC1910 = IGNORE ;    //  CC(ON(=O)=O)C(C)(C)C
-SPC1911 = IGNORE ;    //  CC(ON(=O)=O)C(C)C
-SPC1912 = IGNORE ;    //  CC(ON(=O)=O)C(C)C(=O)C
-SPC1913 = IGNORE ;    //  CC(ON(=O)=O)C(C)CC
-SPC1914 = IGNORE ;    //  CC(ON(=O)=O)C(C)CCO
-SPC1915 = IGNORE ;    //  CC(ON(=O)=O)C(C)CO
-SPC1916 = IGNORE ;    //  CC(ON(=O)=O)C(C)OC(=O)C
-SPC1917 = IGNORE ;    //  CC(ON(=O)=O)C(O)(C)C
-SPC1918 = IGNORE ;    //  CC(ON(=O)=O)C(O)(C)CCO
-SPC1919 = IGNORE ;    //  CC(ON(=O)=O)C(O)C=O
-SPC1920 = IGNORE ;    //  CC(ON(=O)=O)C(O)CCO
-SPC1921 = IGNORE ;    //  CC(ON(=O)=O)C(OO)(C)C
-SPC1922 = IGNORE ;    //  CC(ON(=O)=O)C(OO)C
-SPC1923 = IGNORE ;    //  CC(ON(=O)=O)C(OO)C=O
-SPC1924 = IGNORE ;    //  CC(ON(=O)=O)C(OO)CC
-SPC1925 = IGNORE ;    //  CC(ON(=O)=O)C(OO)CCC
-SPC1926 = IGNORE ;    //  CC(ON(=O)=O)C(O[O])(C)C
-SPC1927 = IGNORE ;    //  CC(ON(=O)=O)C(O[O])C
-SPC1928 = IGNORE ;    //  CC(ON(=O)=O)C(O[O])C=O
-SPC1929 = IGNORE ;    //  CC(ON(=O)=O)C(O[O])CC
-SPC1930 = IGNORE ;    //  CC(ON(=O)=O)C(O[O])CCC
-SPC1931 = IGNORE ;    //  CC(ON(=O)=O)C([O])(C)C
-SPC1932 = IGNORE ;    //  CC(ON(=O)=O)C([O])C
-SPC1933 = IGNORE ;    //  CC(ON(=O)=O)C([O])C=O
-SPC1934 = IGNORE ;    //  CC(ON(=O)=O)C([O])CC
-SPC1935 = IGNORE ;    //  CC(ON(=O)=O)C([O])CCC
-SPC1936 = IGNORE ;    //  CC(ON(=O)=O)C=O
-SPC1937 = IGNORE ;    //  CC(ON(=O)=O)CC(C)C
-SPC1938 = IGNORE ;    //  CC(ON(=O)=O)CC(C)CC
-SPC1939 = IGNORE ;    //  CC(ON(=O)=O)CC(C)CO
-SPC1940 = IGNORE ;    //  CC(ON(=O)=O)CC=O
-SPC1941 = IGNORE ;    //  CC(ON(=O)=O)CCC(C)C
-SPC1942 = IGNORE ;    //  CC(ON(=O)=O)CCC(O)(C)C
-SPC1943 = IGNORE ;    //  CC(ON(=O)=O)CCCO
-SPC1944 = IGNORE ;    //  CC(ON(=O)=O)CCO
-SPC1945 = IGNORE ;    //  CC(ON(=O)=O)CCOC(=O)C
-SPC1946 = IGNORE ;    //  CC(ON(=O)=O)CO
-SPC1947 = IGNORE ;    //  CC(ON(=O)=O)COC(=O)C
-SPC1948 = IGNORE ;    //  CC(ON(=O)=O)COO
-SPC1949 = IGNORE ;    //  CC(ON(=O)=O)CO[O]
-SPC1950 = IGNORE ;    //  CC(ON(=O)=O)C[O]
-SPC1951 = IGNORE ;    //  CC(ON(=O)=O)OC(=O)C
-SPC1952 = IGNORE ;    //  CC(ON(=O)=O)OC(C)(C)C
-SPC1953 = IGNORE ;    //  CC(ON(=O)=O)OC(C)C
-SPC1954 = IGNORE ;    //  CC(ON(=O)=O)OC=O
-SPC1955 = IGNORE ;    //  CC(ON(=O)=O)OCC
-SPC1956 = IGNORE ;    //  CC(ON(=O)=O)OCCO
-SPC1957 = IGNORE ;    //  CC(ON(=O)=O)c(c1)cc(C)cc1CC
-SPC1958 = IGNORE ;    //  CC(OO)(C(=O)O)C(O)CON(=O)=O
-SPC1959 = IGNORE ;    //  CC(OO)(C)C
-SPC1960 = IGNORE ;    //  CC(OO)(C)C(=O)CC=O
-SPC1961 = IGNORE ;    //  CC(OO)(C)C(=O)CON(=O)=O
-SPC1962 = IGNORE ;    //  CC(OO)(C)C(C(=O)O)CC=O
-SPC1963 = IGNORE ;    //  CC(OO)(C)C(C)C
-SPC1964 = IGNORE ;    //  CC(OO)(C)C(C=O)C(=O)CCC=O
-SPC1965 = IGNORE ;    //  CC(OO)(C)C(CC=O)C(=O)CC=O
-SPC1966 = IGNORE ;    //  CC(OO)(C)C(CC=O)CC=O
-SPC1967 = IGNORE ;    //  CC(OO)(C)C(CO)CC(=O)C(=O)C
-SPC1968 = IGNORE ;    //  CC(OO)(C)C(CO)CC(=O)C(=O)CO
-SPC1969 = IGNORE ;    //  CC(OO)(C)C(CO)CC(=O)C(=O)O
-SPC1970 = IGNORE ;    //  CC(OO)(C)C(O)(C)C
-SPC1971 = IGNORE ;    //  CC(OO)(C)C1CC=C(CO)CC1
-SPC1972 = IGNORE ;    //  CC(OO)(C)C=O
-SPC1973 = IGNORE ;    //  CC(OO)(C)CC(=O)C(=O)CCC=O
-SPC1974 = IGNORE ;    //  CC(OO)(C)CC(=O)C(=O)CCO
-SPC1975 = IGNORE ;    //  CC(OO)(C)CC(=O)C(CCC=O)=C
-SPC1976 = IGNORE ;    //  CC(OO)(C)CC(=O)C(CCO)=C
-SPC1977 = IGNORE ;    //  CC(OO)(C)CC=O
-SPC1978 = IGNORE ;    //  CC(OO)(C)CCO
-SPC1979 = IGNORE ;    //  CC(OO)(C)CO
-SPC1980 = IGNORE ;    //  CC(OO)(C)CON(=O)=O
-SPC1981 = IGNORE ;    //  CC(OO)(C)OC(C)C
-SPC1982 = IGNORE ;    //  CC(OO)(C)OC=O
-SPC1983 = IGNORE ;    //  CC(OO)(C=O)C(O)C=O
-SPC1984 = IGNORE ;    //  CC(OO)(C=O)C=O
-SPC1985 = IGNORE ;    //  CC(OO)(CO)C(=O)CCO
-SPC1986 = IGNORE ;    //  CC(OO)(CO)C(=O)CO
-SPC1987 = IGNORE ;    //  CC(OO)(CO)C(C=O)CCC(=O)C
-SPC1988 = IGNORE ;    //  CC(OO)(CO)C(C=O)CCO
-SPC1989 = IGNORE ;    //  CC(OO)(CO)C(CC=O)CC=O
-SPC1990 = IGNORE ;    //  CC(OO)(CO)C(CO)C=O
-SPC1991 = IGNORE ;    //  CC(OO)(CO)C(CO)CC=O
-SPC1992 = IGNORE ;    //  CC(OO)(CO)C(O)C=O
-SPC1993 = IGNORE ;    //  CC(OO)(CO)C(O)CON(=O)=O
-SPC1994 = IGNORE ;    //  CC(OO)(CO)C(ON(=O)=O)CO
-SPC1995 = IGNORE ;    //  CC(OO)(CO)C=C
-SPC1996 = IGNORE ;    //  CC(OO)(CO)C=O
-SPC1997 = IGNORE ;    //  CC(OO)(CON(=O)=O)C(O)C=O
-SPC1998 = IGNORE ;    //  CC(OO)C
-SPC1999 = IGNORE ;    //  CC(OO)C(=O)C(=O)OC(=O)C
-SPC2000 = IGNORE ;    //  CC(OO)C(=O)C(C)CO
-SPC2001 = IGNORE ;    //  CC(OO)C(=O)CCO
-SPC2002 = IGNORE ;    //  CC(OO)C(=O)CON(=O)=O
-SPC2003 = IGNORE ;    //  CC(OO)C(=O)OC(=O)C(=O)C
-SPC2004 = IGNORE ;    //  CC(OO)C(C)(C)C
-SPC2005 = IGNORE ;    //  CC(OO)C(C)C
-SPC2006 = IGNORE ;    //  CC(OO)C(C)C(=O)C
-SPC2007 = IGNORE ;    //  CC(OO)C(C)CC
-SPC2008 = IGNORE ;    //  CC(OO)C(C)CCO
-SPC2009 = IGNORE ;    //  CC(OO)C(C)CO
-SPC2010 = IGNORE ;    //  CC(OO)C(C)OC(=O)C
-SPC2011 = IGNORE ;    //  CC(OO)C(O)(C)C
-SPC2012 = IGNORE ;    //  CC(OO)C(O)(C)CCO
-SPC2013 = IGNORE ;    //  CC(OO)C(O)C=O
-SPC2014 = IGNORE ;    //  CC(OO)C(O)CCO
-SPC2015 = IGNORE ;    //  CC(OO)C(ON(=O)=O)(C)C
-SPC2016 = IGNORE ;    //  CC(OO)C(ON(=O)=O)C=O
-SPC2017 = IGNORE ;    //  CC(OO)C=O
-SPC2018 = IGNORE ;    //  CC(OO)CC(=O)CO
-SPC2019 = IGNORE ;    //  CC(OO)CC(=O)CON(=O)=O
-SPC2020 = IGNORE ;    //  CC(OO)CC(=O)OC(=O)C
-SPC2021 = IGNORE ;    //  CC(OO)CC(=O)OC=O
-SPC2022 = IGNORE ;    //  CC(OO)CC(=O)OCC(=O)C
-SPC2023 = IGNORE ;    //  CC(OO)CC(C)C
-SPC2024 = IGNORE ;    //  CC(OO)CC(C)CC
-SPC2025 = IGNORE ;    //  CC(OO)CC(C)CO
-SPC2026 = IGNORE ;    //  CC(OO)CC=O
-SPC2027 = IGNORE ;    //  CC(OO)CCC(C)C
-SPC2028 = IGNORE ;    //  CC(OO)CCC(O)(C)C
-SPC2029 = IGNORE ;    //  CC(OO)CCCO
-SPC2030 = IGNORE ;    //  CC(OO)CCO
-SPC2031 = IGNORE ;    //  CC(OO)CCOC(=O)C
-SPC2032 = IGNORE ;    //  CC(OO)CO
-SPC2033 = IGNORE ;    //  CC(OO)COC(=O)C
-SPC2034 = IGNORE ;    //  CC(OO)CON(=O)=O
-SPC2035 = IGNORE ;    //  CC(OO)OC(=O)C
-SPC2036 = IGNORE ;    //  CC(OO)OC(=O)C(=O)C
-SPC2037 = IGNORE ;    //  CC(OO)OC(=O)CO
-SPC2038 = IGNORE ;    //  CC(OO)OC(C)(C)C
-SPC2039 = IGNORE ;    //  CC(OO)OC(C)C
-SPC2040 = IGNORE ;    //  CC(OO)OC=O
-SPC2041 = IGNORE ;    //  CC(OO)OCC
-SPC2042 = IGNORE ;    //  CC(OO)OCCO
-SPC2043 = IGNORE ;    //  CC(OO)c(c1)cc(C)cc1CC
-SPC2044 = IGNORE ;    //  CC(O[O])(C)C
-SPC2045 = IGNORE ;    //  CC(O[O])(C)C(=O)CC=O
-SPC2046 = IGNORE ;    //  CC(O[O])(C)C(=O)CON(=O)=O
-SPC2047 = IGNORE ;    //  CC(O[O])(C)C(C(=O)O)CC=O
-SPC2048 = IGNORE ;    //  CC(O[O])(C)C(C)C
-SPC2049 = IGNORE ;    //  CC(O[O])(C)C(C=O)C(=O)CCC=O
-SPC2050 = IGNORE ;    //  CC(O[O])(C)C(CC=O)C(=O)CC=O
-SPC2051 = IGNORE ;    //  CC(O[O])(C)C(CC=O)CC=O
-SPC2052 = IGNORE ;    //  CC(O[O])(C)C(CO)CC(=O)C(=O)C
-SPC2053 = IGNORE ;    //  CC(O[O])(C)C(CO)CC(=O)C(=O)CO
-SPC2054 = IGNORE ;    //  CC(O[O])(C)C(CO)CC(=O)C(=O)O
-SPC2055 = IGNORE ;    //  CC(O[O])(C)C(O)(C)C
-SPC2056 = IGNORE ;    //  CC(O[O])(C)C1CC=C(CO)CC1
-SPC2057 = IGNORE ;    //  CC(O[O])(C)C=O
-SPC2058 = IGNORE ;    //  CC(O[O])(C)CC(=O)C(=O)CCC=O
-SPC2059 = IGNORE ;    //  CC(O[O])(C)CC(=O)C(=O)CCO
-SPC2060 = IGNORE ;    //  CC(O[O])(C)CC(=O)C(CCC=O)=C
-SPC2061 = IGNORE ;    //  CC(O[O])(C)CC(=O)C(CCO)=C
-SPC2062 = IGNORE ;    //  CC(O[O])(C)CC=O
-SPC2063 = IGNORE ;    //  CC(O[O])(C)CCO
-SPC2064 = IGNORE ;    //  CC(O[O])(C)CO
-SPC2065 = IGNORE ;    //  CC(O[O])(C)CON(=O)=O
-SPC2066 = IGNORE ;    //  CC(O[O])(C)OC(C)C
-SPC2067 = IGNORE ;    //  CC(O[O])(C)OC=O
-SPC2068 = IGNORE ;    //  CC(O[O])(C=O)C(O)C=O
-SPC2069 = IGNORE ;    //  CC(O[O])(C=O)C=O
-SPC2070 = IGNORE ;    //  CC(O[O])(CO)C(=O)CCO
-SPC2071 = IGNORE ;    //  CC(O[O])(CO)C(=O)CO
-SPC2072 = IGNORE ;    //  CC(O[O])(CO)C(C=O)CCC(=O)C
-SPC2073 = IGNORE ;    //  CC(O[O])(CO)C(C=O)CCO
-SPC2074 = IGNORE ;    //  CC(O[O])(CO)C(CC=O)CC=O
-SPC2075 = IGNORE ;    //  CC(O[O])(CO)C(CO)C=O
-SPC2076 = IGNORE ;    //  CC(O[O])(CO)C(CO)CC=O
-SPC2077 = IGNORE ;    //  CC(O[O])(CO)C(O)C=O
-SPC2078 = IGNORE ;    //  CC(O[O])(CO)C(O)CON(=O)=O
-SPC2079 = IGNORE ;    //  CC(O[O])(CO)C(ON(=O)=O)CO
-SPC2080 = IGNORE ;    //  CC(O[O])(CO)C=C
-SPC2081 = IGNORE ;    //  CC(O[O])(CO)C=O
-SPC2082 = IGNORE ;    //  CC(O[O])(CON(=O)=O)C(O)C=O
-SPC2083 = IGNORE ;    //  CC(O[O])=C
-SPC2084 = IGNORE ;    //  CC(O[O])C
-SPC2085 = IGNORE ;    //  CC(O[O])C(=O)C(C)CO
-SPC2086 = IGNORE ;    //  CC(O[O])C(=O)CCO
-SPC2087 = IGNORE ;    //  CC(O[O])C(=O)CON(=O)=O
-SPC2088 = IGNORE ;    //  CC(O[O])C(C)(C)C
-SPC2089 = IGNORE ;    //  CC(O[O])C(C)C
-SPC2090 = IGNORE ;    //  CC(O[O])C(C)C(=O)C
-SPC2091 = IGNORE ;    //  CC(O[O])C(C)CC
-SPC2092 = IGNORE ;    //  CC(O[O])C(C)CCO
-SPC2093 = IGNORE ;    //  CC(O[O])C(C)CO
-SPC2094 = IGNORE ;    //  CC(O[O])C(C)OC(=O)C
-SPC2095 = IGNORE ;    //  CC(O[O])C(O)(C)C
-SPC2096 = IGNORE ;    //  CC(O[O])C(O)(C)CCO
-SPC2097 = IGNORE ;    //  CC(O[O])C(O)C=O
-SPC2098 = IGNORE ;    //  CC(O[O])C(O)CCO
-SPC2099 = IGNORE ;    //  CC(O[O])C(ON(=O)=O)(C)C
-SPC2100 = IGNORE ;    //  CC(O[O])C(ON(=O)=O)C=O
-SPC2101 = IGNORE ;    //  CC(O[O])C=O
-SPC2102 = IGNORE ;    //  CC(O[O])CC(=O)CO
-SPC2103 = IGNORE ;    //  CC(O[O])CC(=O)CON(=O)=O
-SPC2104 = IGNORE ;    //  CC(O[O])CC(=O)OC=O
-SPC2105 = IGNORE ;    //  CC(O[O])CC(C)C
-SPC2106 = IGNORE ;    //  CC(O[O])CC(C)CC
-SPC2107 = IGNORE ;    //  CC(O[O])CC(C)CO
-SPC2108 = IGNORE ;    //  CC(O[O])CC=O
-SPC2109 = IGNORE ;    //  CC(O[O])CCC(C)C
-SPC2110 = IGNORE ;    //  CC(O[O])CCC(O)(C)C
-SPC2111 = IGNORE ;    //  CC(O[O])CCCO
-SPC2112 = IGNORE ;    //  CC(O[O])CCO
-SPC2113 = IGNORE ;    //  CC(O[O])CO
-SPC2114 = IGNORE ;    //  CC(O[O])CON(=O)=O
-SPC2115 = IGNORE ;    //  CC(O[O])OC(=O)CO
-SPC2116 = IGNORE ;    //  CC(O[O])OC(C)(C)C
-SPC2117 = IGNORE ;    //  CC(O[O])OC(C)C
-SPC2118 = IGNORE ;    //  CC(O[O])OC=O
-SPC2119 = IGNORE ;    //  CC(O[O])OCCO
-SPC2120 = IGNORE ;    //  CC(O[O])c(c1)cc(C)cc1CC
-SPC2121 = IGNORE ;    //  CC([O])(C)C
-SPC2122 = IGNORE ;    //  CC([O])(C)C(=O)CC=O
-SPC2123 = IGNORE ;    //  CC([O])(C)C(=O)CON(=O)=O
-SPC2124 = IGNORE ;    //  CC([O])(C)C(C(=O)O)CC=O
-SPC2125 = IGNORE ;    //  CC([O])(C)C(C)C
-SPC2126 = IGNORE ;    //  CC([O])(C)C(C=O)C(=O)CCC=O
-SPC2127 = IGNORE ;    //  CC([O])(C)C(CC=O)C(=O)CC=O
-SPC2128 = IGNORE ;    //  CC([O])(C)C(CC=O)CC=O
-SPC2129 = IGNORE ;    //  CC([O])(C)C(CO)CC(=O)C(=O)C
-SPC2130 = IGNORE ;    //  CC([O])(C)C(CO)CC(=O)C(=O)CO
-SPC2131 = IGNORE ;    //  CC([O])(C)C(CO)CC(=O)C(=O)O
-SPC2132 = IGNORE ;    //  CC([O])(C)C1CC=C(CO)CC1
-SPC2133 = IGNORE ;    //  CC([O])(C)C=O
-SPC2134 = IGNORE ;    //  CC([O])(C)CC(=O)C(=O)CCC=O
-SPC2135 = IGNORE ;    //  CC([O])(C)CC(=O)C(=O)CCO
-SPC2136 = IGNORE ;    //  CC([O])(C)CC(=O)C(CCC=O)=C
-SPC2137 = IGNORE ;    //  CC([O])(C)CC(=O)C(CCO)=C
-SPC2138 = IGNORE ;    //  CC([O])(C)CC=O
-SPC2139 = IGNORE ;    //  CC([O])(C)CCO
-SPC2140 = IGNORE ;    //  CC([O])(C)CO
-SPC2141 = IGNORE ;    //  CC([O])(C)CON(=O)=O
-SPC2142 = IGNORE ;    //  CC([O])(C)OC(C)C
-SPC2143 = IGNORE ;    //  CC([O])(C)OC=O
-SPC2144 = IGNORE ;    //  CC([O])(C=O)C(O)C=O
-SPC2145 = IGNORE ;    //  CC([O])(C=O)C=O
-SPC2146 = IGNORE ;    //  CC([O])(CO)C(=O)CCO
-SPC2147 = IGNORE ;    //  CC([O])(CO)C(=O)CO
-SPC2148 = IGNORE ;    //  CC([O])(CO)C(C=O)CCC(=O)C
-SPC2149 = IGNORE ;    //  CC([O])(CO)C(C=O)CCO
-SPC2150 = IGNORE ;    //  CC([O])(CO)C(CC=O)CC=O
-SPC2151 = IGNORE ;    //  CC([O])(CO)C(CO)C=O
-SPC2152 = IGNORE ;    //  CC([O])(CO)C(CO)CC=O
-SPC2153 = IGNORE ;    //  CC([O])(CO)C(O)C=O
-SPC2154 = IGNORE ;    //  CC([O])(CO)C(O)CON(=O)=O
-SPC2155 = IGNORE ;    //  CC([O])(CO)C(ON(=O)=O)CO
-SPC2156 = IGNORE ;    //  CC([O])(CO)C=C
-SPC2157 = IGNORE ;    //  CC([O])(CO)C=O
-SPC2158 = IGNORE ;    //  CC([O])(CON(=O)=O)C(O)C=O
-SPC2159 = IGNORE ;    //  CC([O])C
-SPC2160 = IGNORE ;    //  CC([O])C(=O)C(C)CO
-SPC2161 = IGNORE ;    //  CC([O])C(=O)CCO
-SPC2162 = IGNORE ;    //  CC([O])C(=O)CON(=O)=O
-SPC2163 = IGNORE ;    //  CC([O])C(C)(C)C
-SPC2164 = IGNORE ;    //  CC([O])C(C)C
-SPC2165 = IGNORE ;    //  CC([O])C(C)C(=O)C
-SPC2166 = IGNORE ;    //  CC([O])C(C)CC
-SPC2167 = IGNORE ;    //  CC([O])C(C)CCO
-SPC2168 = IGNORE ;    //  CC([O])C(C)CO
-SPC2169 = IGNORE ;    //  CC([O])C(C)OC(=O)C
-SPC2170 = IGNORE ;    //  CC([O])C(O)(C)C
-SPC2171 = IGNORE ;    //  CC([O])C(O)(C)CCO
-SPC2172 = IGNORE ;    //  CC([O])C(O)C=O
-SPC2173 = IGNORE ;    //  CC([O])C(O)CCO
-SPC2174 = IGNORE ;    //  CC([O])C(ON(=O)=O)(C)C
-SPC2175 = IGNORE ;    //  CC([O])C(ON(=O)=O)C=O
-SPC2176 = IGNORE ;    //  CC([O])C=O
-SPC2177 = IGNORE ;    //  CC([O])CC(=O)CO
-SPC2178 = IGNORE ;    //  CC([O])CC(=O)CON(=O)=O
-SPC2179 = IGNORE ;    //  CC([O])CC(=O)OC=O
-SPC2180 = IGNORE ;    //  CC([O])CC(C)C
-SPC2181 = IGNORE ;    //  CC([O])CC(C)CC
-SPC2182 = IGNORE ;    //  CC([O])CC(C)CO
-SPC2183 = IGNORE ;    //  CC([O])CC=O
-SPC2184 = IGNORE ;    //  CC([O])CCC(C)C
-SPC2185 = IGNORE ;    //  CC([O])CCC(O)(C)C
-SPC2186 = IGNORE ;    //  CC([O])CCCO
-SPC2187 = IGNORE ;    //  CC([O])CCO
-SPC2188 = IGNORE ;    //  CC([O])CO
-SPC2189 = IGNORE ;    //  CC([O])CON(=O)=O
-SPC2190 = IGNORE ;    //  CC([O])OC(=O)CO
-SPC2191 = IGNORE ;    //  CC([O])OC(C)(C)C
-SPC2192 = IGNORE ;    //  CC([O])OC(C)C
-SPC2193 = IGNORE ;    //  CC([O])OC=O
-SPC2194 = IGNORE ;    //  CC([O])OCCO
-SPC2195 = IGNORE ;    //  CC([O])c(c1)cc(C)cc1CC
-SPC2196 = IGNORE ;    //  CC/C=C\C
-SPC2197 = IGNORE ;    //  CC1(C(=O)O)OC1(C)C=CC=O
-SPC2198 = IGNORE ;    //  CC1(C(=O)O)OC1(C)C=O
-SPC2199 = IGNORE ;    //  CC1(C(=O)O)OC1(C=O)CC
-SPC2200 = IGNORE ;    //  CC1(C(=O)OO)OC1(C)C=CC=O
-SPC2201 = IGNORE ;    //  CC1(C(=O)OO)OC1(C)C=O
-SPC2202 = IGNORE ;    //  CC1(C(=O)OO)OC1(C=O)CC
-SPC2203 = IGNORE ;    //  CC1(C(=O)OON(=O)=O)OC1(C)C=CC=O
-SPC2204 = IGNORE ;    //  CC1(C(=O)OON(=O)=O)OC1(C)C=O
-SPC2205 = IGNORE ;    //  CC1(C(=O)OON(=O)=O)OC1(C=O)CC
-SPC2206 = IGNORE ;    //  CC1(C)C(=O)C(=O)CC(=O)C1C=O
-SPC2207 = IGNORE ;    //  CC1(C)C(=O)CCC(=O)C1C(=O)O
-SPC2208 = IGNORE ;    //  CC1(C)C(=O)CCC(=O)C1C(=O)OO
-SPC2209 = IGNORE ;    //  CC1(C)C(=O)CCC(=O)C1C(=O)O[O]
-SPC2210 = IGNORE ;    //  CC1(C)C(=O)CCC(=O)C1C=O
-SPC2211 = IGNORE ;    //  CC1(C)C(C(=O)C12)C(=O)CC2
-SPC2212 = IGNORE ;    //  CC1(C)C(C(=O)C=O)CC1CC=O
-SPC2213 = IGNORE ;    //  CC1(C)C(C(=O)CO)CC1CC(=O)O
-SPC2214 = IGNORE ;    //  CC1(C)C(C(=O)CO)CC1CC(=O)OO
-SPC2215 = IGNORE ;    //  CC1(C)C(C(=O)CO)CC1CC(=O)OON(=O)=O
-SPC2216 = IGNORE ;    //  CC1(C)C(C(=O)CO)CC1CC(=O)O[O]
-SPC2217 = IGNORE ;    //  CC1(C)C(C(=O)CO)CC1CC=O
-SPC2218 = IGNORE ;    //  CC1(C)C(C(=O)COO)CC1CC=O
-SPC2219 = IGNORE ;    //  CC1(C)C(C(=O)O)CC1C(=O)O
-SPC2220 = IGNORE ;    //  CC1(C)C(C(=O)O)CC1CC(=O)O
-SPC2221 = IGNORE ;    //  CC1(C)C(C(=O)O)CC1CC(=O)OO
-SPC2222 = IGNORE ;    //  CC1(C)C(C(=O)O)CC1CC(=O)O[O]
-SPC2223 = IGNORE ;    //  CC1(C)C(C(=O)O)CC1CC=O
-SPC2224 = IGNORE ;    //  CC1(C)C(C(=O)OO)CC1CC=O
-SPC2225 = IGNORE ;    //  CC1(C)C(C(=O)OON(=O)=O)CC1CC=O
-SPC2226 = IGNORE ;    //  CC1(C)C(C(O)C12)C(=O)CC2
-SPC2227 = IGNORE ;    //  CC1(C)C(C(ON(=O)=O)C12)C(=O)CC2
-SPC2228 = IGNORE ;    //  CC1(C)C(C(ON(=O)=O)C12)C(=O)CC2=O
-SPC2229 = IGNORE ;    //  CC1(C)C(C(OO)C12)C(=O)CC2
-SPC2230 = IGNORE ;    //  CC1(C)C(C(OO)C12)C(=O)CC2=O
-SPC2231 = IGNORE ;    //  CC1(C)C(C(O[O])C12)C(=O)CC2
-SPC2232 = IGNORE ;    //  CC1(C)C(C(O[O])C12)C(=O)CC2=O
-SPC2233 = IGNORE ;    //  CC1(C)C(C([O])C12)C(=O)CC2
-SPC2234 = IGNORE ;    //  CC1(C)C(C([O])C12)C(=O)CC2=O
-SPC2235 = IGNORE ;    //  CC1(C)C(C2)C(=O)C(=O)CC12
-SPC2236 = IGNORE ;    //  CC1(C)C(C2)C(=O)C(O)CC12
-SPC2237 = IGNORE ;    //  CC1(C)C(C2)C(=O)C(OO)CC12
-SPC2238 = IGNORE ;    //  CC1(C)C(C2)C(=O)C(O[O])CC12
-SPC2239 = IGNORE ;    //  CC1(C)C(C2)C(=O)C([O])CC12
-SPC2240 = IGNORE ;    //  CC1(C)C(C2)C(=O)CC(=O)C12
-SPC2241 = IGNORE ;    //  CC1(C)C(C2)C(=O)CC(O)C12
-SPC2242 = IGNORE ;    //  CC1(C)C(C2)C(=O)CC12
-SPC2243 = IGNORE ;    //  CC1(C)C(C2)C(=O)CCC12
-SPC2244 = IGNORE ;    //  CC1(C)C(C2)C(O)CC12
-SPC2245 = IGNORE ;    //  CC1(C)C(C2)C(ON(=O)=O)CC(=O)C12
-SPC2246 = IGNORE ;    //  CC1(C)C(C2)C(ON(=O)=O)CC12
-SPC2247 = IGNORE ;    //  CC1(C)C(C2)C(OO)CC(=O)C12
-SPC2248 = IGNORE ;    //  CC1(C)C(C2)C(OO)CC12
-SPC2249 = IGNORE ;    //  CC1(C)C(C2)C(O[O])CC(=O)C12
-SPC2250 = IGNORE ;    //  CC1(C)C(C2)C(O[O])CC12
-SPC2251 = IGNORE ;    //  CC1(C)C(C2)C([O])CC(=O)C12
-SPC2252 = IGNORE ;    //  CC1(C)C(C2)C([O])CC12
-SPC2253 = IGNORE ;    //  CC1(C)C(C2)CCC12
-SPC2254 = IGNORE ;    //  CC1(C)C(C2=O)C(=O)CC(=O)C12
-SPC2255 = IGNORE ;    //  CC1(C)C(C2O)C(=O)CC(=O)C12
-SPC2256 = IGNORE ;    //  CC1(C)C(CC12)CCC2(O)C(=O)OO
-SPC2257 = IGNORE ;    //  CC1(C)C(CC12)CCC2(O)C(=O)O[O]
-SPC2258 = IGNORE ;    //  CC1(C)C(CC12)CCC2(O)C=O
-SPC2259 = IGNORE ;    //  CC1(C)C(CC12)CCC2(O)CO
-SPC2260 = IGNORE ;    //  CC1(C)C(CC12)CCC2(O)CON(=O)=O
-SPC2261 = IGNORE ;    //  CC1(C)C(CC12)CCC2(O)COO
-SPC2262 = IGNORE ;    //  CC1(C)C(CC12)CCC2(O)CO[O]
-SPC2263 = IGNORE ;    //  CC1(C)C(CC12)CCC2(O)C[O]
-SPC2264 = IGNORE ;    //  CC1(C)C(CC12)CCC2(ON(=O)=O)C(=O)OO
-SPC2265 = IGNORE ;    //  CC1(C)C(CC12)CCC2(ON(=O)=O)C(=O)O[O]
-SPC2266 = IGNORE ;    //  CC1(C)C(CC12)CCC2(ON(=O)=O)C=O
-SPC2267 = IGNORE ;    //  CC1(C)C(CC12)CCC2(ON(=O)=O)CO
-SPC2268 = IGNORE ;    //  CC1(C)C(CC12)CCC2(ON(=O)=O)COO
-SPC2269 = IGNORE ;    //  CC1(C)C(CC12)CCC2(ON(=O)=O)CO[O]
-SPC2270 = IGNORE ;    //  CC1(C)C(CC12)CCC2(ON(=O)=O)C[O]
-SPC2271 = IGNORE ;    //  CC1(C)C(CC12)CCC2(OO)CO
-SPC2272 = IGNORE ;    //  CC1(C)C(CC12)CCC2(OO)CON(=O)=O
-SPC2273 = IGNORE ;    //  CC1(C)C(CC12)CCC2(O[O])CO
-SPC2274 = IGNORE ;    //  CC1(C)C(CC12)CCC2(O[O])CON(=O)=O
-SPC2275 = IGNORE ;    //  CC1(C)C(CC12)CCC2([O])CO
-SPC2276 = IGNORE ;    //  CC1(C)C(CC12)CCC2([O])CON(=O)=O
-SPC2277 = IGNORE ;    //  CC1(C)C(CC12)CCC2=C
-SPC2278 = IGNORE ;    //  CC1(C)C(O)(C2)CCC(=O)C12
-SPC2279 = IGNORE ;    //  CC1(C)C(O)C(=O)CC(=O)C1C=O
-SPC2280 = IGNORE ;    //  CC1(C)C(O)CC1C(=O)CC=O
-SPC2281 = IGNORE ;    //  CC1(C)C(O)CC1CC=O
-SPC2282 = IGNORE ;    //  CC1(C)C(O)CCC(=O)C1C=O
-SPC2283 = IGNORE ;    //  CC1(C)C(ON(=O)=O)(C2)CCC(=O)C12
-SPC2284 = IGNORE ;    //  CC1(C)C(ON(=O)=O)CC1C(=O)CC=O
-SPC2285 = IGNORE ;    //  CC1(C)C(ON(=O)=O)CC1CC=O
-SPC2286 = IGNORE ;    //  CC1(C)C(ON(=O)=O)CCC(=O)C1C=O
-SPC2287 = IGNORE ;    //  CC1(C)C(OO)(C(=O)CO)CC1CO
-SPC2288 = IGNORE ;    //  CC1(C)C(OO)(C2)CCC(=O)C12
-SPC2289 = IGNORE ;    //  CC1(C)C(OO)C(=O)CC(=O)C1C=O
-SPC2290 = IGNORE ;    //  CC1(C)C(OO)CC1C(=O)CC=O
-SPC2291 = IGNORE ;    //  CC1(C)C(OO)CC1C(=O)O
-SPC2292 = IGNORE ;    //  CC1(C)C(OO)CC1CC=O
-SPC2293 = IGNORE ;    //  CC1(C)C(OO)CCC(=O)C1C=O
-SPC2294 = IGNORE ;    //  CC1(C)C(O[O])(C(=O)CO)CC1CO
-SPC2295 = IGNORE ;    //  CC1(C)C(O[O])(C2)CCC(=O)C12
-SPC2296 = IGNORE ;    //  CC1(C)C(O[O])C(=O)CC(=O)C1C=O
-SPC2297 = IGNORE ;    //  CC1(C)C(O[O])CC1C(=O)CC=O
-SPC2298 = IGNORE ;    //  CC1(C)C(O[O])CC1C(=O)O
-SPC2299 = IGNORE ;    //  CC1(C)C(O[O])CC1CC=O
-SPC2300 = IGNORE ;    //  CC1(C)C(O[O])CCC(=O)C1C=O
-SPC2301 = IGNORE ;    //  CC1(C)C([O])(C(=O)CO)CC1CO
-SPC2302 = IGNORE ;    //  CC1(C)C([O])(C2)CCC(=O)C12
-SPC2303 = IGNORE ;    //  CC1(C)C([O])C(=O)CC(=O)C1C=O
-SPC2304 = IGNORE ;    //  CC1(C)C([O])CC1C(=O)CC=O
-SPC2305 = IGNORE ;    //  CC1(C)C([O])CC1C(=O)O
-SPC2306 = IGNORE ;    //  CC1(C)C([O])CC1CC=O
-SPC2307 = IGNORE ;    //  CC1(C)C([O])CCC(=O)C1C=O
-SPC2308 = IGNORE ;    //  CC1(C)CC(=O)C1CC=O
-SPC2309 = IGNORE ;    //  CC1(C)CC(C(=O)CCO)C1CC=O
-SPC2310 = IGNORE ;    //  CC1(C)CC(C(=O)CCO)C1CCC(=O)O
-SPC2311 = IGNORE ;    //  CC1(C)CC(C(=O)CCOO)C1CC=O
-SPC2312 = IGNORE ;    //  CC1(C)CC(C(=O)O)C1CC=O
-SPC2313 = IGNORE ;    //  CC1(C)CC(C(=O)OO)C1CC=O
-SPC2314 = IGNORE ;    //  CC1(C)CC(C(=O)O[O])C1CC=O
-SPC2315 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(=O)C(=O)CC=O
-SPC2316 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(=O)C(O)CC=O
-SPC2317 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(=O)C(OO)CC=O
-SPC2318 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(=O)C(O[O])CC=O
-SPC2319 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(=O)C([O])CC=O
-SPC2320 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(=O)CC=O
-SPC2321 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(=O)CCC(=O)O[O]
-SPC2322 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(=O)CCC=O
-SPC2323 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(=O)CCO[O]
-SPC2324 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(=O)CC[O]
-SPC2325 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(CC=O)=C
-SPC2326 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(CCC(=O)O)=C
-SPC2327 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(CCC(=O)OO)=C
-SPC2328 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(CCC(=O)O[O])=C
-SPC2329 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(CCC=O)=C
-SPC2330 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(CCO)=C
-SPC2331 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(CCOO)=C
-SPC2332 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(CCO[O])=C
-SPC2333 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(CC[O])=C
-SPC2334 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(O)(CO)CCC=O
-SPC2335 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(OO)(CO)CCC=O
-SPC2336 = IGNORE ;    //  CC1(C)CC(C1CC=O)C(O[O])(CO)CCC=O
-SPC2337 = IGNORE ;    //  CC1(C)CC(C1CC=O)C([O])(CO)CCC=O
-SPC2338 = IGNORE ;    //  CC1(C)CC(C1CCO)C(=O)CCC=O
-SPC2339 = IGNORE ;    //  CC1(C)CC(C1CCO)C(CCC=O)=C
-SPC2340 = IGNORE ;    //  CC1(C)CC(C1CCOO)C(=O)CCC=O
-SPC2341 = IGNORE ;    //  CC1(C)CC(C1CCOO)C(CCC=O)=C
-SPC2342 = IGNORE ;    //  CC1(C)CC(O)(C(=O)CCO)C1CC=O
-SPC2343 = IGNORE ;    //  CC1(C)CC(O)(C(=O)CCO)C1CCC(=O)O
-SPC2344 = IGNORE ;    //  CC1(C)CC(O)(C1CC=O)C(CCO)=C
-SPC2345 = IGNORE ;    //  CC1(C)CC(O)(C1CCO)C(=O)CCC=O
-SPC2346 = IGNORE ;    //  CC1(C)CC(O)(C1CCO)C(CCC=O)=C
-SPC2347 = IGNORE ;    //  CC1(C)CC(O)C1CC=O
-SPC2348 = IGNORE ;    //  CC1(C)CC(OO)(C(=O)CCO)C1CC=O
-SPC2349 = IGNORE ;    //  CC1(C)CC(OO)(C(=O)CCO)C1CCC(=O)O
-SPC2350 = IGNORE ;    //  CC1(C)CC(OO)(C1CC=O)C(CCO)=C
-SPC2351 = IGNORE ;    //  CC1(C)CC(OO)(C1CCO)C(=O)CCC=O
-SPC2352 = IGNORE ;    //  CC1(C)CC(OO)(C1CCO)C(CCC=O)=C
-SPC2353 = IGNORE ;    //  CC1(C)CC(OO)C1CC=O
-SPC2354 = IGNORE ;    //  CC1(C)CC(O[O])(C(=O)CCO)C1CC=O
-SPC2355 = IGNORE ;    //  CC1(C)CC(O[O])(C(=O)CCO)C1CCC(=O)O
-SPC2356 = IGNORE ;    //  CC1(C)CC(O[O])(C1CC=O)C(CCO)=C
-SPC2357 = IGNORE ;    //  CC1(C)CC(O[O])(C1CCO)C(=O)CCC=O
-SPC2358 = IGNORE ;    //  CC1(C)CC(O[O])(C1CCO)C(CCC=O)=C
-SPC2359 = IGNORE ;    //  CC1(C)CC(O[O])C1CC=O
-SPC2360 = IGNORE ;    //  CC1(C)CC([O])(C(=O)CCO)C1CC=O
-SPC2361 = IGNORE ;    //  CC1(C)CC([O])(C(=O)CCO)C1CCC(=O)O
-SPC2362 = IGNORE ;    //  CC1(C)CC([O])(C1CC=O)C(CCO)=C
-SPC2363 = IGNORE ;    //  CC1(C)CC([O])(C1CCO)C(=O)CCC=O
-SPC2364 = IGNORE ;    //  CC1(C)CC([O])(C1CCO)C(CCC=O)=C
-SPC2365 = IGNORE ;    //  CC1(C)CC([O])C1CC=O
-SPC2366 = IGNORE ;    //  CC1(C)CC2C(=O)CCC(O)C(OO)(C)CCC12
-SPC2367 = IGNORE ;    //  CC1(C)CC2C(=O)CCC(O)C(O[O])(C)CCC12
-SPC2368 = IGNORE ;    //  CC1(C)CC2C(=O)CCC(OO)C(O)(C)CCC12
-SPC2369 = IGNORE ;    //  CC1(C)CC2C(=O)CCC(O[O])C(O)(C)CCC12
-SPC2370 = IGNORE ;    //  CC1(C=O)OC1(C)C(=O)O[O]
-SPC2371 = IGNORE ;    //  CC1(C=O)OC1(C)C(O)C(=O)C=O
-SPC2372 = IGNORE ;    //  CC1(C=O)OC1(C)C(O)C(O)C=O
-SPC2373 = IGNORE ;    //  CC1(C=O)OC1(C)C(O)C(ON(=O)=O)C=O
-SPC2374 = IGNORE ;    //  CC1(C=O)OC1(C)C(O)C(OO)C=O
-SPC2375 = IGNORE ;    //  CC1(C=O)OC1(C)C(O)C(O[O])C=O
-SPC2376 = IGNORE ;    //  CC1(C=O)OC1(C)C(O)C([O])C=O
-SPC2377 = IGNORE ;    //  CC1(C=O)OC1(C)C=CC=O
-SPC2378 = IGNORE ;    //  CC1(C=O)OC1(C)C=O
-SPC2379 = IGNORE ;    //  CC1(C=O)OC1C(=O)O[O]
-SPC2380 = IGNORE ;    //  CC1(C=O)OC1C=O
-SPC2381 = IGNORE ;    //  CC1(CO)OC1CO
-SPC2382 = IGNORE ;    //  CC1(O)C(=O)OC(=O)C1(O)C
-SPC2383 = IGNORE ;    //  CC1(O)C(=O)OC(=O)C1([O])C
-SPC2384 = IGNORE ;    //  CC1(O)C(O)C(=O)OC1C
-SPC2385 = IGNORE ;    //  CC1(O)C=CC(C)(C2O)OOC12C
-SPC2386 = IGNORE ;    //  CC1(O)C=CC(C2O)OOC12C
-SPC2387 = IGNORE ;    //  CC1(O)COC(=O)C1(O)C
-SPC2388 = IGNORE ;    //  CC1(O)COC(=O)C1(OO)C
-SPC2389 = IGNORE ;    //  CC1(O)COC(=O)C1(O[O])C
-SPC2390 = IGNORE ;    //  CC1(O)COC(=O)C1([O])C
-SPC2391 = IGNORE ;    //  CC1(ON(=O)=O)C(=O)CC(=O)CC1C(OO)(C)C
-SPC2392 = IGNORE ;    //  CC1(ON(=O)=O)C(=O)CC(=O)CC1C(O[O])(C)C
-SPC2393 = IGNORE ;    //  CC1(ON(=O)=O)C(=O)CC(=O)CC1C([O])(C)C
-SPC2394 = IGNORE ;    //  CC1(ON(=O)=O)C(=O)OC(=O)C1(OO)C
-SPC2395 = IGNORE ;    //  CC1(ON(=O)=O)C(=O)OC(=O)C1(O[O])C
-SPC2396 = IGNORE ;    //  CC1(ON(=O)=O)C(=O)OC(=O)C1([O])C
-SPC2397 = IGNORE ;    //  CC1(ON(=O)=O)C(OO)(C)C(=O)OC1C
-SPC2398 = IGNORE ;    //  CC1(ON(=O)=O)C(O[O])(C)C(=O)OC1C
-SPC2399 = IGNORE ;    //  CC1(ON(=O)=O)C([O])(C)C(=O)OC1C
-SPC2400 = IGNORE ;    //  CC1(ON(=O)=O)COC(=O)C1(OO)C
-SPC2401 = IGNORE ;    //  CC1(ON(=O)=O)COC(=O)C1(O[O])C
-SPC2402 = IGNORE ;    //  CC1(ON(=O)=O)COC(=O)C1([O])C
-SPC2403 = IGNORE ;    //  CC1(OO)C(=O)OC(=O)C1(O)C
-SPC2404 = IGNORE ;    //  CC1(OO)C(O)C(=O)OC1C
-SPC2405 = IGNORE ;    //  CC1(OO)C(ON(=O)=O)C(=O)C=C(C1=O)CC
-SPC2406 = IGNORE ;    //  CC1(OO)C(ON(=O)=O)C(=O)OC1C
-SPC2407 = IGNORE ;    //  CC1(O[O])C(=O)OC(=O)C1(O)C
-SPC2408 = IGNORE ;    //  CC1(O[O])C(O)C(=O)OC1C
-SPC2409 = IGNORE ;    //  CC1(O[O])C(ON(=O)=O)C(=O)OC1C
-SPC2410 = IGNORE ;    //  CC1([O])C(O)C(=O)OC1C
-SPC2411 = IGNORE ;    //  CC1([O])C(ON(=O)=O)C(=O)OC1C
-SPC2412 = IGNORE ;    //  CC1([O])C=CC(C)(C2O)OOC12C
-SPC2413 = IGNORE ;    //  CC1([O])C=CC(C2O)OOC12C
-SPC2414 = IGNORE ;    //  CC1=C(C)C(O)(O)C2(C)OOC1C2O
-SPC2415 = IGNORE ;    //  CC1=C(C)C([O])(O)C2(C)OOC1C2O
-SPC2416 = IGNORE ;    //  CC1=C(C)C2(C)OOC(C2O)C1(O)O
-SPC2417 = IGNORE ;    //  CC1=C(C)C2(C)OOC(C2O)C1([O])O
-SPC2418 = IGNORE ;    //  CC1=C(O)C([O])(O)C2(OOC1(C)C2O)N(=O)=O
-SPC2419 = IGNORE ;    //  CC1=CC(O)(O)C2(C)OOC1C2O
-SPC2420 = IGNORE ;    //  CC1=CC(O)(O)C2OOC1(C)C2O
-SPC2421 = IGNORE ;    //  CC1=CC([O])(O)C2(C)OOC1C2O
-SPC2422 = IGNORE ;    //  CC1=CC([O])(O)C2(OOC1(C)C2O)N(=O)=O
-SPC2423 = IGNORE ;    //  CC1=CC([O])(O)C2OOC1(C)C2O
-SPC2424 = IGNORE ;    //  CC1=CC2(C)OOC(C)(C1=O)C2O
-SPC2425 = IGNORE ;    //  CC1=CC2(C)OOC(C)(C1O)C2O
-SPC2426 = IGNORE ;    //  CC1=CC2(C)OOC(C)(C1[O])C2O
-SPC2427 = IGNORE ;    //  CC1OC(=O)C(C)=C1C
-SPC2428 = IGNORE ;    //  CC1OC(=O)C(O)(C)C1(O)C
-SPC2429 = IGNORE ;    //  CC1OC(=O)C(OO)(C)C1(O)C
-SPC2430 = IGNORE ;    //  CC1OC(=O)C(O[O])(C)C1(O)C
-SPC2431 = IGNORE ;    //  CC1OC(=O)C([O])(C)C1(O)C
-SPC2432 = IGNORE ;    //  CC1OC(=O)C=C1C
-SPC2433 = IGNORE ;    //  CC=C
-SPC2434 = IGNORE ;    //  CC=C(C)C
-SPC2435 = IGNORE ;    //  CC=CC
-SPC2436 = IGNORE ;    //  CC=CC(=O)OO
-SPC2437 = IGNORE ;    //  CC=CC(=O)OON(=O)=O
-SPC2438 = IGNORE ;    //  CC=CC(=O)O[O]
-SPC2439 = IGNORE ;    //  CC=CC=O
-SPC2440 = IGNORE ;    //  CC=O
-SPC2441 = IGNORE ;    //  CCC
-SPC2442 = IGNORE ;    //  CCC(=C/C=C(\C)/C(=O)O)C(=[O+][O-])O
-SPC2443 = IGNORE ;    //  CCC(=CC(=CC(=O)O)C)C(=[O+][O-])O
-SPC2444 = IGNORE ;    //  CCC(=O)C
-SPC2445 = IGNORE ;    //  CCC(=O)C(=O)C
-SPC2446 = IGNORE ;    //  CCC(=O)C(=O)C(=O)C
-SPC2447 = IGNORE ;    //  CCC(=O)C(=O)C(=O)C(=O)OO
-SPC2448 = IGNORE ;    //  CCC(=O)C(=O)C(=O)C(=O)OON(=O)=O
-SPC2449 = IGNORE ;    //  CCC(=O)C(=O)C(=O)C(=O)O[O]
-SPC2450 = IGNORE ;    //  CCC(=O)C(=O)C(=O)C=O
-SPC2451 = IGNORE ;    //  CCC(=O)C(=O)C(O)C1(C)OC1C=O
-SPC2452 = IGNORE ;    //  CCC(=O)C(=O)C(O)C1OC1(C)C=O
-SPC2453 = IGNORE ;    //  CCC(=O)C(=O)C(O)C1OC1C=O
-SPC2454 = IGNORE ;    //  CCC(=O)C(=O)C(O)C=O
-SPC2455 = IGNORE ;    //  CCC(=O)C(=O)C(OO)C
-SPC2456 = IGNORE ;    //  CCC(=O)C(=O)C(OO)C(=O)CC
-SPC2457 = IGNORE ;    //  CCC(=O)C(=O)C(O[O])C
-SPC2458 = IGNORE ;    //  CCC(=O)C(=O)C(O[O])C(=O)CC
-SPC2459 = IGNORE ;    //  CCC(=O)C(=O)C([O])C
-SPC2460 = IGNORE ;    //  CCC(=O)C(=O)C([O])C(=O)CC
-SPC2461 = IGNORE ;    //  CCC(=O)C(=O)C=O
-SPC2462 = IGNORE ;    //  CCC(=O)C(=O)CC
-SPC2463 = IGNORE ;    //  CCC(=O)C(=O)CC(=O)C
-SPC2464 = IGNORE ;    //  CCC(=O)C(=O)CC(=O)OO
-SPC2465 = IGNORE ;    //  CCC(=O)C(=O)CC(=O)OON(=O)=O
-SPC2466 = IGNORE ;    //  CCC(=O)C(=O)CC(=O)O[O]
-SPC2467 = IGNORE ;    //  CCC(=O)C(=O)CC=O
-SPC2468 = IGNORE ;    //  CCC(=O)C(=O)CCO
-SPC2469 = IGNORE ;    //  CCC(=O)C(=O)COO
-SPC2470 = IGNORE ;    //  CCC(=O)C(=O)CO[O]
-SPC2471 = IGNORE ;    //  CCC(=O)C(=O)C[O]
-SPC2472 = IGNORE ;    //  CCC(=O)C(=O)O
-SPC2473 = IGNORE ;    //  CCC(=O)C(=O)OC(=O)C
-SPC2474 = IGNORE ;    //  CCC(=O)C(C)=CC(=O)O
-SPC2475 = IGNORE ;    //  CCC(=O)C(C)C
-SPC2476 = IGNORE ;    //  CCC(=O)C(C)C(=O)OO
-SPC2477 = IGNORE ;    //  CCC(=O)C(C)C(=O)OON(=O)=O
-SPC2478 = IGNORE ;    //  CCC(=O)C(C)C(=O)O[O]
-SPC2479 = IGNORE ;    //  CCC(=O)C(C)C=O
-SPC2480 = IGNORE ;    //  CCC(=O)C(C)CO
-SPC2481 = IGNORE ;    //  CCC(=O)C(C)CON(=O)=O
-SPC2482 = IGNORE ;    //  CCC(=O)C(C)COO
-SPC2483 = IGNORE ;    //  CCC(=O)C(C)CO[O]
-SPC2484 = IGNORE ;    //  CCC(=O)C(C)C[O]
-SPC2485 = IGNORE ;    //  CCC(=O)C(O)(C)C
-SPC2486 = IGNORE ;    //  CCC(=O)C(O)(C)C=CC=O
-SPC2487 = IGNORE ;    //  CCC(=O)C(O)C(=O)C
-SPC2488 = IGNORE ;    //  CCC(=O)C(O)C(=O)C(=O)C
-SPC2489 = IGNORE ;    //  CCC(=O)C(O)C(=O)C(C)=CC(=O)OO
-SPC2490 = IGNORE ;    //  CCC(=O)C(O)C(=O)C(C)=CC(=O)OON(=O)=O
-SPC2491 = IGNORE ;    //  CCC(=O)C(O)C(=O)C(C)=CC(=O)O[O]
-SPC2492 = IGNORE ;    //  CCC(=O)C(O)C(=O)OO
-SPC2493 = IGNORE ;    //  CCC(=O)C(O)C(=O)OON(=O)=O
-SPC2494 = IGNORE ;    //  CCC(=O)C(O)C(=O)O[O]
-SPC2495 = IGNORE ;    //  CCC(=O)C(O)C(C)=CC(=O)CC
-SPC2496 = IGNORE ;    //  CCC(=O)C(O)C(O)(C)C1OC1(C)C=O
-SPC2497 = IGNORE ;    //  CCC(=O)C(O)C(O)(C)C1OC1(C=O)CC
-SPC2498 = IGNORE ;    //  CCC(=O)C(O)C(O)(C)C=O
-SPC2499 = IGNORE ;    //  CCC(=O)C(O)C(O)C(=O)C
-SPC2500 = IGNORE ;    //  CCC(=O)C(O)C(O)C1(C)OC1C=O
-SPC2501 = IGNORE ;    //  CCC(=O)C(O)C(O)C1OC1(C)C=O
-SPC2502 = IGNORE ;    //  CCC(=O)C(O)C(O)C1OC1C=O
-SPC2503 = IGNORE ;    //  CCC(=O)C(O)C(O)C=O
-SPC2504 = IGNORE ;    //  CCC(=O)C(O)C(ON(=O)=O)(C)C1OC1(C)C=O
-SPC2505 = IGNORE ;    //  CCC(=O)C(O)C(ON(=O)=O)(C)C1OC1(C=O)CC
-SPC2506 = IGNORE ;    //  CCC(=O)C(O)C(OO)(C)C1OC1(C)C=O
-SPC2507 = IGNORE ;    //  CCC(=O)C(O)C(OO)(C)C1OC1(C=O)CC
-SPC2508 = IGNORE ;    //  CCC(=O)C(O)C(OO)(C)C=O
-SPC2509 = IGNORE ;    //  CCC(=O)C(O)C(OO)C(=O)C
-SPC2510 = IGNORE ;    //  CCC(=O)C(O)C(O[O])(C)C1OC1(C)C=O
-SPC2511 = IGNORE ;    //  CCC(=O)C(O)C(O[O])(C)C1OC1(C=O)CC
-SPC2512 = IGNORE ;    //  CCC(=O)C(O)C(O[O])(C)C=O
-SPC2513 = IGNORE ;    //  CCC(=O)C(O)C(O[O])C(=O)C
-SPC2514 = IGNORE ;    //  CCC(=O)C(O)C([O])(C)C1OC1(C)C=O
-SPC2515 = IGNORE ;    //  CCC(=O)C(O)C([O])(C)C1OC1(C=O)CC
-SPC2516 = IGNORE ;    //  CCC(=O)C(O)C([O])(C)C=O
-SPC2517 = IGNORE ;    //  CCC(=O)C(O)C([O])C(=O)C
-SPC2518 = IGNORE ;    //  CCC(=O)C(O)C=O
-SPC2519 = IGNORE ;    //  CCC(=O)C(O)CC(=O)C
-SPC2520 = IGNORE ;    //  CCC(=O)C(O)OC(=O)C
-SPC2521 = IGNORE ;    //  CCC(=O)C(ON(=O)=O)C
-SPC2522 = IGNORE ;    //  CCC(=O)C(ON(=O)=O)C(=O)C
-SPC2523 = IGNORE ;    //  CCC(=O)C(ON(=O)=O)C(O)C1(C)OC1C=O
-SPC2524 = IGNORE ;    //  CCC(=O)C(ON(=O)=O)C(O)C1OC1(C)C=O
-SPC2525 = IGNORE ;    //  CCC(=O)C(ON(=O)=O)C(O)C1OC1C=O
-SPC2526 = IGNORE ;    //  CCC(=O)C(OO)(C)C
-SPC2527 = IGNORE ;    //  CCC(=O)C(OO)(C)C=CC=O
-SPC2528 = IGNORE ;    //  CCC(=O)C(OO)C
-SPC2529 = IGNORE ;    //  CCC(=O)C(OO)C(=O)C
-SPC2530 = IGNORE ;    //  CCC(=O)C(OO)C(C)=CC(=O)CC
-SPC2531 = IGNORE ;    //  CCC(=O)C(OO)C(O)C(=O)C=O
-SPC2532 = IGNORE ;    //  CCC(=O)C(OO)C(O)C1(C)OC1C=O
-SPC2533 = IGNORE ;    //  CCC(=O)C(OO)C(O)C1OC1(C)C=O
-SPC2534 = IGNORE ;    //  CCC(=O)C(OO)C(O)C1OC1C=O
-SPC2535 = IGNORE ;    //  CCC(=O)C(OO)C(O)C=O
-SPC2536 = IGNORE ;    //  CCC(=O)C(OO)CC
-SPC2537 = IGNORE ;    //  CCC(=O)C(OO)CC(=O)C
-SPC2538 = IGNORE ;    //  CCC(=O)C(OO)OC(=O)C
-SPC2539 = IGNORE ;    //  CCC(=O)C(O[O])(C)C
-SPC2540 = IGNORE ;    //  CCC(=O)C(O[O])(C)C=CC=O
-SPC2541 = IGNORE ;    //  CCC(=O)C(O[O])C
-SPC2542 = IGNORE ;    //  CCC(=O)C(O[O])C(=O)C
-SPC2543 = IGNORE ;    //  CCC(=O)C(O[O])C(C)=CC(=O)CC
-SPC2544 = IGNORE ;    //  CCC(=O)C(O[O])C(O)C(=O)C=O
-SPC2545 = IGNORE ;    //  CCC(=O)C(O[O])C(O)C1(C)OC1C=O
-SPC2546 = IGNORE ;    //  CCC(=O)C(O[O])C(O)C1OC1(C)C=O
-SPC2547 = IGNORE ;    //  CCC(=O)C(O[O])C(O)C1OC1C=O
-SPC2548 = IGNORE ;    //  CCC(=O)C(O[O])C(O)C=O
-SPC2549 = IGNORE ;    //  CCC(=O)C(O[O])CC
-SPC2550 = IGNORE ;    //  CCC(=O)C(O[O])CC(=O)C
-SPC2551 = IGNORE ;    //  CCC(=O)C(O[O])OC(=O)C
-SPC2552 = IGNORE ;    //  CCC(=O)C([O])(C)C
-SPC2553 = IGNORE ;    //  CCC(=O)C([O])(C)C=CC=O
-SPC2554 = IGNORE ;    //  CCC(=O)C([O])C
-SPC2555 = IGNORE ;    //  CCC(=O)C([O])C(=O)C
-SPC2556 = IGNORE ;    //  CCC(=O)C([O])C(C)=CC(=O)CC
-SPC2557 = IGNORE ;    //  CCC(=O)C([O])C(O)C(=O)C=O
-SPC2558 = IGNORE ;    //  CCC(=O)C([O])C(O)C1(C)OC1C=O
-SPC2559 = IGNORE ;    //  CCC(=O)C([O])C(O)C1OC1(C)C=O
-SPC2560 = IGNORE ;    //  CCC(=O)C([O])C(O)C1OC1C=O
-SPC2561 = IGNORE ;    //  CCC(=O)C([O])C(O)C=O
-SPC2562 = IGNORE ;    //  CCC(=O)C([O])CC
-SPC2563 = IGNORE ;    //  CCC(=O)C([O])CC(=O)C
-SPC2564 = IGNORE ;    //  CCC(=O)C([O])OC(=O)C
-SPC2565 = IGNORE ;    //  CCC(=O)C=C(C(=O)OO)CC
-SPC2566 = IGNORE ;    //  CCC(=O)C=C(C(=O)OON(=O)=O)CC
-SPC2567 = IGNORE ;    //  CCC(=O)C=C(C(=O)O[O])CC
-SPC2568 = IGNORE ;    //  CCC(=O)C=C(C)C(=O)C(=O)C
-SPC2569 = IGNORE ;    //  CCC(=O)C=C(C)C(=O)C(=O)CC
-SPC2570 = IGNORE ;    //  CCC(=O)C=C(C)C(=O)O
-SPC2571 = IGNORE ;    //  CCC(=O)C=C(C)C(=O)OO
-SPC2572 = IGNORE ;    //  CCC(=O)C=C(C)C(=O)OON(=O)=O
-SPC2573 = IGNORE ;    //  CCC(=O)C=C(C)C(=O)O[O]
-SPC2574 = IGNORE ;    //  CCC(=O)C=C(C)C(=O)[O]
-SPC2575 = IGNORE ;    //  CCC(=O)C=C(C)C([O])C(=O)C
-SPC2576 = IGNORE ;    //  CCC(=O)C=C(C)C1OC1(C(=O)O)CC
-SPC2577 = IGNORE ;    //  CCC(=O)C=C(C)C1OC1(C(=O)OO)CC
-SPC2578 = IGNORE ;    //  CCC(=O)C=C(C)C1OC1(C(=O)OON(=O)=O)CC
-SPC2579 = IGNORE ;    //  CCC(=O)C=C(C)C1OC1(C(=O)O[O])CC
-SPC2580 = IGNORE ;    //  CCC(=O)C=C(C)C1OC1(C)C(=O)O
-SPC2581 = IGNORE ;    //  CCC(=O)C=C(C)C1OC1(C)C(=O)OO
-SPC2582 = IGNORE ;    //  CCC(=O)C=C(C)C1OC1(C)C(=O)OON(=O)=O
-SPC2583 = IGNORE ;    //  CCC(=O)C=C(C)C1OC1(C)C(=O)O[O]
-SPC2584 = IGNORE ;    //  CCC(=O)C=C(C)C1OC1(C)C=O
-SPC2585 = IGNORE ;    //  CCC(=O)C=C(C)C1OC1(C=O)CC
-SPC2586 = IGNORE ;    //  CCC(=O)C=C(C)C=O
-SPC2587 = IGNORE ;    //  CCC(=O)C=CC(=O)C
-SPC2588 = IGNORE ;    //  CCC(=O)C=CC(=O)C(=O)C
-SPC2589 = IGNORE ;    //  CCC(=O)C=CC(=O)C=O
-SPC2590 = IGNORE ;    //  CCC(=O)C=CC(=O)O
-SPC2591 = IGNORE ;    //  CCC(=O)C=CC(=O)OO
-SPC2592 = IGNORE ;    //  CCC(=O)C=CC(=O)OON(=O)=O
-SPC2593 = IGNORE ;    //  CCC(=O)C=CC(=O)O[O]
-SPC2594 = IGNORE ;    //  CCC(=O)C=CC(=O)[O]
-SPC2595 = IGNORE ;    //  CCC(=O)C=CC(O)(C)C=O
-SPC2596 = IGNORE ;    //  CCC(=O)C=CC(O)C=O
-SPC2597 = IGNORE ;    //  CCC(=O)C=CC(OO)(C)C=O
-SPC2598 = IGNORE ;    //  CCC(=O)C=CC(OO)C=O
-SPC2599 = IGNORE ;    //  CCC(=O)C=CC(O[O])(C)C=O
-SPC2600 = IGNORE ;    //  CCC(=O)C=CC(O[O])C(=O)C
-SPC2601 = IGNORE ;    //  CCC(=O)C=CC(O[O])C=O
-SPC2602 = IGNORE ;    //  CCC(=O)C=CC([O])(C)C=O
-SPC2603 = IGNORE ;    //  CCC(=O)C=CC([O])C(=O)C
-SPC2604 = IGNORE ;    //  CCC(=O)C=CC([O])C=O
-SPC2605 = IGNORE ;    //  CCC(=O)C=CC1(C)OC1C(=O)O
-SPC2606 = IGNORE ;    //  CCC(=O)C=CC1(C)OC1C(=O)OO
-SPC2607 = IGNORE ;    //  CCC(=O)C=CC1(C)OC1C(=O)OON(=O)=O
-SPC2608 = IGNORE ;    //  CCC(=O)C=CC1(C)OC1C(=O)O[O]
-SPC2609 = IGNORE ;    //  CCC(=O)C=CC1(C)OC1C=O
-SPC2610 = IGNORE ;    //  CCC(=O)C=CC1OC1(C)C(=O)O
-SPC2611 = IGNORE ;    //  CCC(=O)C=CC1OC1(C)C(=O)OO
-SPC2612 = IGNORE ;    //  CCC(=O)C=CC1OC1(C)C(=O)OON(=O)=O
-SPC2613 = IGNORE ;    //  CCC(=O)C=CC1OC1(C)C(=O)O[O]
-SPC2614 = IGNORE ;    //  CCC(=O)C=CC1OC1(C)C=O
-SPC2615 = IGNORE ;    //  CCC(=O)C=CC1OC1C(=O)O
-SPC2616 = IGNORE ;    //  CCC(=O)C=CC1OC1C(=O)OO
-SPC2617 = IGNORE ;    //  CCC(=O)C=CC1OC1C(=O)OON(=O)=O
-SPC2618 = IGNORE ;    //  CCC(=O)C=CC1OC1C(=O)O[O]
-SPC2619 = IGNORE ;    //  CCC(=O)C=CC1OC1C=O
-SPC2620 = IGNORE ;    //  CCC(=O)C=CC=O
-SPC2621 = IGNORE ;    //  CCC(=O)C=O
-SPC2622 = IGNORE ;    //  CCC(=O)CC
-SPC2623 = IGNORE ;    //  CCC(=O)CC(=O)C
-SPC2624 = IGNORE ;    //  CCC(=O)CC(=O)C(=O)C
-SPC2625 = IGNORE ;    //  CCC(=O)CC(=O)C(=O)CC
-SPC2626 = IGNORE ;    //  CCC(=O)CC(=O)C=O
-SPC2627 = IGNORE ;    //  CCC(=O)CC(=O)CO
-SPC2628 = IGNORE ;    //  CCC(=O)CC(=O)CON(=O)=O
-SPC2629 = IGNORE ;    //  CCC(=O)CC(=O)O
-SPC2630 = IGNORE ;    //  CCC(=O)CC(=O)OO
-SPC2631 = IGNORE ;    //  CCC(=O)CC(=O)OON(=O)=O
-SPC2632 = IGNORE ;    //  CCC(=O)CC(=O)O[O]
-SPC2633 = IGNORE ;    //  CCC(=O)CC(O)C(=O)C
-SPC2634 = IGNORE ;    //  CCC(=O)CC(O)C(=O)CC
-SPC2635 = IGNORE ;    //  CCC(=O)CC(O)CO
-SPC2636 = IGNORE ;    //  CCC(=O)CC(ON(=O)=O)C
-SPC2637 = IGNORE ;    //  CCC(=O)CC(ON(=O)=O)C(O)C
-SPC2638 = IGNORE ;    //  CCC(=O)CC(ON(=O)=O)CO
-SPC2639 = IGNORE ;    //  CCC(=O)CC(OO)C
-SPC2640 = IGNORE ;    //  CCC(=O)CC(OO)C(=O)C
-SPC2641 = IGNORE ;    //  CCC(=O)CC(OO)C(=O)CC
-SPC2642 = IGNORE ;    //  CCC(=O)CC(OO)C(O)C
-SPC2643 = IGNORE ;    //  CCC(=O)CC(OO)CC
-SPC2644 = IGNORE ;    //  CCC(=O)CC(OO)CCC
-SPC2645 = IGNORE ;    //  CCC(=O)CC(OO)CO
-SPC2646 = IGNORE ;    //  CCC(=O)CC(O[O])C
-SPC2647 = IGNORE ;    //  CCC(=O)CC(O[O])C(=O)C
-SPC2648 = IGNORE ;    //  CCC(=O)CC(O[O])C(=O)CC
-SPC2649 = IGNORE ;    //  CCC(=O)CC(O[O])C(O)C
-SPC2650 = IGNORE ;    //  CCC(=O)CC(O[O])CC
-SPC2651 = IGNORE ;    //  CCC(=O)CC(O[O])CCC
-SPC2652 = IGNORE ;    //  CCC(=O)CC(O[O])CO
-SPC2653 = IGNORE ;    //  CCC(=O)CC([O])C
-SPC2654 = IGNORE ;    //  CCC(=O)CC([O])C(=O)C
-SPC2655 = IGNORE ;    //  CCC(=O)CC([O])C(=O)CC
-SPC2656 = IGNORE ;    //  CCC(=O)CC([O])C(O)C
-SPC2657 = IGNORE ;    //  CCC(=O)CC([O])CC
-SPC2658 = IGNORE ;    //  CCC(=O)CC([O])CCC
-SPC2659 = IGNORE ;    //  CCC(=O)CC([O])CO
-SPC2660 = IGNORE ;    //  CCC(=O)CC=O
-SPC2661 = IGNORE ;    //  CCC(=O)CCC(=O)C
-SPC2662 = IGNORE ;    //  CCC(=O)CCC(=O)CC
-SPC2663 = IGNORE ;    //  CCC(=O)CCC(=O)O
-SPC2664 = IGNORE ;    //  CCC(=O)CCC(=O)OO
-SPC2665 = IGNORE ;    //  CCC(=O)CCC(=O)OON(=O)=O
-SPC2666 = IGNORE ;    //  CCC(=O)CCC(=O)O[O]
-SPC2667 = IGNORE ;    //  CCC(=O)CCC=O
-SPC2668 = IGNORE ;    //  CCC(=O)CCCO
-SPC2669 = IGNORE ;    //  CCC(=O)CCCON(=O)=O
-SPC2670 = IGNORE ;    //  CCC(=O)CCO
-SPC2671 = IGNORE ;    //  CCC(=O)CCON(=O)=O
-SPC2672 = IGNORE ;    //  CCC(=O)CCOO
-SPC2673 = IGNORE ;    //  CCC(=O)CCO[O]
-SPC2674 = IGNORE ;    //  CCC(=O)CC[O]
-SPC2675 = IGNORE ;    //  CCC(=O)CO
-SPC2676 = IGNORE ;    //  CCC(=O)COC(=O)C
-SPC2677 = IGNORE ;    //  CCC(=O)CON(=O)=O
-SPC2678 = IGNORE ;    //  CCC(=O)COO
-SPC2679 = IGNORE ;    //  CCC(=O)CO[O]
-SPC2680 = IGNORE ;    //  CCC(=O)C[O]
-SPC2681 = IGNORE ;    //  CCC(=O)O
-SPC2682 = IGNORE ;    //  CCC(=O)OC(=O)C
-SPC2683 = IGNORE ;    //  CCC(=O)OC(=O)C(=O)C
-SPC2684 = IGNORE ;    //  CCC(=O)OO
-SPC2685 = IGNORE ;    //  CCC(=O)OON(=O)=O
-SPC2686 = IGNORE ;    //  CCC(=O)O[O]
-SPC2687 = IGNORE ;    //  CCC(C(=O)C=O)=C(C)C(=O)C=O
-SPC2688 = IGNORE ;    //  CCC(C(=O)C=O)=C(C)C(=O)O[O]
-SPC2689 = IGNORE ;    //  CCC(C(=O)C=O)=CC(=O)C=O
-SPC2690 = IGNORE ;    //  CCC(C(=O)O)=C(N(=O)=O)C=O
-SPC2691 = IGNORE ;    //  CCC(C(=O)O)=CC=O
-SPC2692 = IGNORE ;    //  CCC(C(=O)OO)=CC(=O)C=O
-SPC2693 = IGNORE ;    //  CCC(C(=O)OON(=O)=O)=CC(=O)C=O
-SPC2694 = IGNORE ;    //  CCC(C)(C)C
-SPC2695 = IGNORE ;    //  CCC(C)(C)C(=O)O
-SPC2696 = IGNORE ;    //  CCC(C)(C)C(=O)OO
-SPC2697 = IGNORE ;    //  CCC(C)(C)C(=O)OON(=O)=O
-SPC2698 = IGNORE ;    //  CCC(C)(C)C(=O)O[O]
-SPC2699 = IGNORE ;    //  CCC(C)(C)C=O
-SPC2700 = IGNORE ;    //  CCC(C)(C)CO
-SPC2701 = IGNORE ;    //  CCC(C)(C)CON(=O)=O
-SPC2702 = IGNORE ;    //  CCC(C)(C)COO
-SPC2703 = IGNORE ;    //  CCC(C)(C)CO[O]
-SPC2704 = IGNORE ;    //  CCC(C)(C)C[O]
-SPC2705 = IGNORE ;    //  CCC(C)=C
-SPC2706 = IGNORE ;    //  CCC(C)C
-SPC2707 = IGNORE ;    //  CCC(C)C(=O)C
-SPC2708 = IGNORE ;    //  CCC(C)C(=O)O
-SPC2709 = IGNORE ;    //  CCC(C)C(=O)OO
-SPC2710 = IGNORE ;    //  CCC(C)C(=O)OON(=O)=O
-SPC2711 = IGNORE ;    //  CCC(C)C(=O)O[O]
-SPC2712 = IGNORE ;    //  CCC(C)C=O
-SPC2713 = IGNORE ;    //  CCC(C)CC
-SPC2714 = IGNORE ;    //  CCC(C)CC(=O)OO
-SPC2715 = IGNORE ;    //  CCC(C)CC(=O)OON(=O)=O
-SPC2716 = IGNORE ;    //  CCC(C)CC(=O)O[O]
-SPC2717 = IGNORE ;    //  CCC(C)CC=O
-SPC2718 = IGNORE ;    //  CCC(C)CCO
-SPC2719 = IGNORE ;    //  CCC(C)CCON(=O)=O
-SPC2720 = IGNORE ;    //  CCC(C)CCOO
-SPC2721 = IGNORE ;    //  CCC(C)CCO[O]
-SPC2722 = IGNORE ;    //  CCC(C)CC[O]
-SPC2723 = IGNORE ;    //  CCC(C)CO
-SPC2724 = IGNORE ;    //  CCC(C)CON(=O)=O
-SPC2725 = IGNORE ;    //  CCC(C)COO
-SPC2726 = IGNORE ;    //  CCC(C)CO[O]
-SPC2727 = IGNORE ;    //  CCC(C)C[O]
-SPC2728 = IGNORE ;    //  CCC(C=O)OC(=O)C=O
-SPC2729 = IGNORE ;    //  CCC(O)(C)C
-SPC2730 = IGNORE ;    //  CCC(O)(C)C(=O)C
-SPC2731 = IGNORE ;    //  CCC(O)(C)C(=O)OO
-SPC2732 = IGNORE ;    //  CCC(O)(C)C(=O)OON(=O)=O
-SPC2733 = IGNORE ;    //  CCC(O)(C)C(=O)O[O]
-SPC2734 = IGNORE ;    //  CCC(O)(C)C=O
-SPC2735 = IGNORE ;    //  CCC(O)(C)CC
-SPC2736 = IGNORE ;    //  CCC(O)(C)CC(=O)COO
-SPC2737 = IGNORE ;    //  CCC(O)(C)CC(=O)CO[O]
-SPC2738 = IGNORE ;    //  CCC(O)(C)CC(=O)C[O]
-SPC2739 = IGNORE ;    //  CCC(O)(C)CC(=O)OO
-SPC2740 = IGNORE ;    //  CCC(O)(C)CC(=O)OON(=O)=O
-SPC2741 = IGNORE ;    //  CCC(O)(C)CC(=O)O[O]
-SPC2742 = IGNORE ;    //  CCC(O)(C)CC=O
-SPC2743 = IGNORE ;    //  CCC(O)(C)CCC(=O)O
-SPC2744 = IGNORE ;    //  CCC(O)(C)CCC(=O)OO
-SPC2745 = IGNORE ;    //  CCC(O)(C)CCC(=O)OON(=O)=O
-SPC2746 = IGNORE ;    //  CCC(O)(C)CCC(=O)O[O]
-SPC2747 = IGNORE ;    //  CCC(O)(C)CCC=O
-SPC2748 = IGNORE ;    //  CCC(O)(C)CCCO
-SPC2749 = IGNORE ;    //  CCC(O)(C)CCCON(=O)=O
-SPC2750 = IGNORE ;    //  CCC(O)(C)CCCOO
-SPC2751 = IGNORE ;    //  CCC(O)(C)CCCO[O]
-SPC2752 = IGNORE ;    //  CCC(O)(C)CCC[O]
-SPC2753 = IGNORE ;    //  CCC(O)(C)CCO
-SPC2754 = IGNORE ;    //  CCC(O)(C)CCON(=O)=O
-SPC2755 = IGNORE ;    //  CCC(O)(C)CCOO
-SPC2756 = IGNORE ;    //  CCC(O)(C)CCO[O]
-SPC2757 = IGNORE ;    //  CCC(O)(C)CC[O]
-SPC2758 = IGNORE ;    //  CCC(O)(C)CO
-SPC2759 = IGNORE ;    //  CCC(O)(C)CON(=O)=O
-SPC2760 = IGNORE ;    //  CCC(O)(C)COO
-SPC2761 = IGNORE ;    //  CCC(O)(C)CO[O]
-SPC2762 = IGNORE ;    //  CCC(O)(C)C[O]
-SPC2763 = IGNORE ;    //  CCC(O)(C=O)C=O
-SPC2764 = IGNORE ;    //  CCC(O)C
-SPC2765 = IGNORE ;    //  CCC(O)C(=O)C
-SPC2766 = IGNORE ;    //  CCC(O)C(=O)CC
-SPC2767 = IGNORE ;    //  CCC(O)C(=O)CC(=O)CC
-SPC2768 = IGNORE ;    //  CCC(O)C(=O)CCO
-SPC2769 = IGNORE ;    //  CCC(O)C(=O)OO
-SPC2770 = IGNORE ;    //  CCC(O)C(=O)OON(=O)=O
-SPC2771 = IGNORE ;    //  CCC(O)C(=O)O[O]
-SPC2772 = IGNORE ;    //  CCC(O)C(C)C
-SPC2773 = IGNORE ;    //  CCC(O)C(O)C
-SPC2774 = IGNORE ;    //  CCC(O)C(O)CC(=O)CC
-SPC2775 = IGNORE ;    //  CCC(O)C(ON(=O)=O)C
-SPC2776 = IGNORE ;    //  CCC(O)C(ON(=O)=O)C(=O)C
-SPC2777 = IGNORE ;    //  CCC(O)C(ON(=O)=O)CC(=O)CC
-SPC2778 = IGNORE ;    //  CCC(O)C(OO)C
-SPC2779 = IGNORE ;    //  CCC(O)C(OO)CC(=O)CC
-SPC2780 = IGNORE ;    //  CCC(O)C(O[O])C
-SPC2781 = IGNORE ;    //  CCC(O)C(O[O])CC(=O)CC
-SPC2782 = IGNORE ;    //  CCC(O)C([O])C
-SPC2783 = IGNORE ;    //  CCC(O)C([O])CC(=O)CC
-SPC2784 = IGNORE ;    //  CCC(O)C=O
-SPC2785 = IGNORE ;    //  CCC(O)CC
-SPC2786 = IGNORE ;    //  CCC(O)CC(=O)C
-SPC2787 = IGNORE ;    //  CCC(O)CC(=O)C(OO)C
-SPC2788 = IGNORE ;    //  CCC(O)CC(=O)C(O[O])C
-SPC2789 = IGNORE ;    //  CCC(O)CC(=O)C([O])C
-SPC2790 = IGNORE ;    //  CCC(O)CC(=O)C=O
-SPC2791 = IGNORE ;    //  CCC(O)CC(=O)CO
-SPC2792 = IGNORE ;    //  CCC(O)CC(=O)CON(=O)=O
-SPC2793 = IGNORE ;    //  CCC(O)CC(=O)COO
-SPC2794 = IGNORE ;    //  CCC(O)CC(=O)CO[O]
-SPC2795 = IGNORE ;    //  CCC(O)CC(=O)C[O]
-SPC2796 = IGNORE ;    //  CCC(O)CC(=O)OO
-SPC2797 = IGNORE ;    //  CCC(O)CC(=O)OON(=O)=O
-SPC2798 = IGNORE ;    //  CCC(O)CC(=O)O[O]
-SPC2799 = IGNORE ;    //  CCC(O)CC=O
-SPC2800 = IGNORE ;    //  CCC(O)CCC(=O)C
-SPC2801 = IGNORE ;    //  CCC(O)CCC(=O)CC
-SPC2802 = IGNORE ;    //  CCC(O)CCC(=O)O
-SPC2803 = IGNORE ;    //  CCC(O)CCC(=O)OO
-SPC2804 = IGNORE ;    //  CCC(O)CCC(=O)OON(=O)=O
-SPC2805 = IGNORE ;    //  CCC(O)CCC(=O)O[O]
-SPC2806 = IGNORE ;    //  CCC(O)CCC(O)C
-SPC2807 = IGNORE ;    //  CCC(O)CCC(O)CC
-SPC2808 = IGNORE ;    //  CCC(O)CCC(ON(=O)=O)C
-SPC2809 = IGNORE ;    //  CCC(O)CCC(ON(=O)=O)CC
-SPC2810 = IGNORE ;    //  CCC(O)CCC(ON(=O)=O)CCC
-SPC2811 = IGNORE ;    //  CCC(O)CCC(ON(=O)=O)CCCC
-SPC2812 = IGNORE ;    //  CCC(O)CCC(ON(=O)=O)CCCCC
-SPC2813 = IGNORE ;    //  CCC(O)CCC(OO)C
-SPC2814 = IGNORE ;    //  CCC(O)CCC(OO)CC
-SPC2815 = IGNORE ;    //  CCC(O)CCC(OO)CCC
-SPC2816 = IGNORE ;    //  CCC(O)CCC(OO)CCCC
-SPC2817 = IGNORE ;    //  CCC(O)CCC(OO)CCCCC
-SPC2818 = IGNORE ;    //  CCC(O)CCC(O[O])C
-SPC2819 = IGNORE ;    //  CCC(O)CCC(O[O])CC
-SPC2820 = IGNORE ;    //  CCC(O)CCC(O[O])CCC
-SPC2821 = IGNORE ;    //  CCC(O)CCC(O[O])CCCC
-SPC2822 = IGNORE ;    //  CCC(O)CCC(O[O])CCCCC
-SPC2823 = IGNORE ;    //  CCC(O)CCC([O])C
-SPC2824 = IGNORE ;    //  CCC(O)CCC([O])CC
-SPC2825 = IGNORE ;    //  CCC(O)CCC([O])CCC
-SPC2826 = IGNORE ;    //  CCC(O)CCC([O])CCCC
-SPC2827 = IGNORE ;    //  CCC(O)CCC([O])CCCCC
-SPC2828 = IGNORE ;    //  CCC(O)CCC=O
-SPC2829 = IGNORE ;    //  CCC(O)CCCO
-SPC2830 = IGNORE ;    //  CCC(O)CCCON(=O)=O
-SPC2831 = IGNORE ;    //  CCC(O)CCCOO
-SPC2832 = IGNORE ;    //  CCC(O)CCCO[O]
-SPC2833 = IGNORE ;    //  CCC(O)CCC[O]
-SPC2834 = IGNORE ;    //  CCC(O)CCO
-SPC2835 = IGNORE ;    //  CCC(O)CCON(=O)=O
-SPC2836 = IGNORE ;    //  CCC(O)CCOO
-SPC2837 = IGNORE ;    //  CCC(O)CCO[O]
-SPC2838 = IGNORE ;    //  CCC(O)CC[O]
-SPC2839 = IGNORE ;    //  CCC(O)CO
-SPC2840 = IGNORE ;    //  CCC(O)COC(=O)C
-SPC2841 = IGNORE ;    //  CCC(O)CON(=O)=O
-SPC2842 = IGNORE ;    //  CCC(O)COO
-SPC2843 = IGNORE ;    //  CCC(O)CO[O]
-SPC2844 = IGNORE ;    //  CCC(O)C[O]
-SPC2845 = IGNORE ;    //  CCC(O)OC(=O)C
-SPC2846 = IGNORE ;    //  CCC(O)OC(=O)C(=O)C
-SPC2847 = IGNORE ;    //  CCC(ON(=O)=O)(C)C
-SPC2848 = IGNORE ;    //  CCC(ON(=O)=O)(C)C(=O)O
-SPC2849 = IGNORE ;    //  CCC(ON(=O)=O)(C)C(=O)OO
-SPC2850 = IGNORE ;    //  CCC(ON(=O)=O)(C)C(=O)OON(=O)=O
-SPC2851 = IGNORE ;    //  CCC(ON(=O)=O)(C)C(=O)O[O]
-SPC2852 = IGNORE ;    //  CCC(ON(=O)=O)(C)C=O
-SPC2853 = IGNORE ;    //  CCC(ON(=O)=O)(C)CC
-SPC2854 = IGNORE ;    //  CCC(ON(=O)=O)(C)CO
-SPC2855 = IGNORE ;    //  CCC(ON(=O)=O)(C)COO
-SPC2856 = IGNORE ;    //  CCC(ON(=O)=O)(C)CO[O]
-SPC2857 = IGNORE ;    //  CCC(ON(=O)=O)(C)C[O]
-SPC2858 = IGNORE ;    //  CCC(ON(=O)=O)C
-SPC2859 = IGNORE ;    //  CCC(ON(=O)=O)C(=O)C
-SPC2860 = IGNORE ;    //  CCC(ON(=O)=O)C(C)C
-SPC2861 = IGNORE ;    //  CCC(ON(=O)=O)C(OO)C
-SPC2862 = IGNORE ;    //  CCC(ON(=O)=O)C(O[O])C
-SPC2863 = IGNORE ;    //  CCC(ON(=O)=O)C([O])C
-SPC2864 = IGNORE ;    //  CCC(ON(=O)=O)C=O
-SPC2865 = IGNORE ;    //  CCC(ON(=O)=O)CC
-SPC2866 = IGNORE ;    //  CCC(ON(=O)=O)CC=O
-SPC2867 = IGNORE ;    //  CCC(ON(=O)=O)CCCO
-SPC2868 = IGNORE ;    //  CCC(ON(=O)=O)CO
-SPC2869 = IGNORE ;    //  CCC(ON(=O)=O)COC(=O)C
-SPC2870 = IGNORE ;    //  CCC(ON(=O)=O)COO
-SPC2871 = IGNORE ;    //  CCC(ON(=O)=O)CO[O]
-SPC2872 = IGNORE ;    //  CCC(ON(=O)=O)C[O]
-SPC2873 = IGNORE ;    //  CCC(ON(=O)=O)OC(=O)C
-SPC2874 = IGNORE ;    //  CCC(OO)(C)C
-SPC2875 = IGNORE ;    //  CCC(OO)(C)C(=O)C
-SPC2876 = IGNORE ;    //  CCC(OO)(C)CC
-SPC2877 = IGNORE ;    //  CCC(OO)(C)CO
-SPC2878 = IGNORE ;    //  CCC(OO)(C)CON(=O)=O
-SPC2879 = IGNORE ;    //  CCC(OO)(C=O)C(=O)C
-SPC2880 = IGNORE ;    //  CCC(OO)(C=O)C=O
-SPC2881 = IGNORE ;    //  CCC(OO)C
-SPC2882 = IGNORE ;    //  CCC(OO)C(=O)C
-SPC2883 = IGNORE ;    //  CCC(OO)C(=O)CCO
-SPC2884 = IGNORE ;    //  CCC(OO)C(C)C
-SPC2885 = IGNORE ;    //  CCC(OO)C=O
-SPC2886 = IGNORE ;    //  CCC(OO)CC
-SPC2887 = IGNORE ;    //  CCC(OO)CC(=O)CO
-SPC2888 = IGNORE ;    //  CCC(OO)CC(=O)CON(=O)=O
-SPC2889 = IGNORE ;    //  CCC(OO)CC=O
-SPC2890 = IGNORE ;    //  CCC(OO)CCCO
-SPC2891 = IGNORE ;    //  CCC(OO)CO
-SPC2892 = IGNORE ;    //  CCC(OO)COC(=O)C
-SPC2893 = IGNORE ;    //  CCC(OO)CON(=O)=O
-SPC2894 = IGNORE ;    //  CCC(OO)OC(=O)C
-SPC2895 = IGNORE ;    //  CCC(OO)OC(=O)C(=O)C
-SPC2896 = IGNORE ;    //  CCC(O[O])(C)C
-SPC2897 = IGNORE ;    //  CCC(O[O])(C)C(=O)C
-SPC2898 = IGNORE ;    //  CCC(O[O])(C)CC
-SPC2899 = IGNORE ;    //  CCC(O[O])(C)CO
-SPC2900 = IGNORE ;    //  CCC(O[O])(C)CON(=O)=O
-SPC2901 = IGNORE ;    //  CCC(O[O])(C=O)C(=O)C
-SPC2902 = IGNORE ;    //  CCC(O[O])(C=O)C=O
-SPC2903 = IGNORE ;    //  CCC(O[O])C
-SPC2904 = IGNORE ;    //  CCC(O[O])C(=O)C
-SPC2905 = IGNORE ;    //  CCC(O[O])C(=O)CCO
-SPC2906 = IGNORE ;    //  CCC(O[O])C(C)C
-SPC2907 = IGNORE ;    //  CCC(O[O])C=O
-SPC2908 = IGNORE ;    //  CCC(O[O])CC
-SPC2909 = IGNORE ;    //  CCC(O[O])CC(=O)CO
-SPC2910 = IGNORE ;    //  CCC(O[O])CC(=O)CON(=O)=O
-SPC2911 = IGNORE ;    //  CCC(O[O])CC=O
-SPC2912 = IGNORE ;    //  CCC(O[O])CCCO
-SPC2913 = IGNORE ;    //  CCC(O[O])CO
-SPC2914 = IGNORE ;    //  CCC(O[O])CON(=O)=O
-SPC2915 = IGNORE ;    //  CCC([O])(C)C
-SPC2916 = IGNORE ;    //  CCC([O])(C)C(=O)C
-SPC2917 = IGNORE ;    //  CCC([O])(C)C=O
-SPC2918 = IGNORE ;    //  CCC([O])(C)CC
-SPC2919 = IGNORE ;    //  CCC([O])(C)CO
-SPC2920 = IGNORE ;    //  CCC([O])(C)CON(=O)=O
-SPC2921 = IGNORE ;    //  CCC([O])(C=O)C(=O)C
-SPC2922 = IGNORE ;    //  CCC([O])(C=O)C=O
-SPC2923 = IGNORE ;    //  CCC([O])C
-SPC2924 = IGNORE ;    //  CCC([O])C(=O)C
-SPC2925 = IGNORE ;    //  CCC([O])C(=O)CCO
-SPC2926 = IGNORE ;    //  CCC([O])C(C)C
-SPC2927 = IGNORE ;    //  CCC([O])C=O
-SPC2928 = IGNORE ;    //  CCC([O])CC
-SPC2929 = IGNORE ;    //  CCC([O])CC(=O)CO
-SPC2930 = IGNORE ;    //  CCC([O])CC(=O)CON(=O)=O
-SPC2931 = IGNORE ;    //  CCC([O])CC=O
-SPC2932 = IGNORE ;    //  CCC([O])CCCO
-SPC2933 = IGNORE ;    //  CCC([O])CO
-SPC2934 = IGNORE ;    //  CCC([O])CON(=O)=O
-SPC2935 = IGNORE ;    //  CCC/C=C\C
-SPC2936 = IGNORE ;    //  CCC1(C(=O)O)OC1(C)C=CC=O
-SPC2937 = IGNORE ;    //  CCC1(C(=O)OO)OC1(C)C=CC=O
-SPC2938 = IGNORE ;    //  CCC1(C(=O)OON(=O)=O)OC1(C)C=CC=O
-SPC2939 = IGNORE ;    //  CCC1(C=CC2OOC1(C)C2O)ON(=O)=O
-SPC2940 = IGNORE ;    //  CCC1(C=O)OC1(C)C(=O)O[O]
-SPC2941 = IGNORE ;    //  CCC1(C=O)OC1(C)C(O)C(=O)C=O
-SPC2942 = IGNORE ;    //  CCC1(C=O)OC1(C)C(O)C(O)C=O
-SPC2943 = IGNORE ;    //  CCC1(C=O)OC1(C)C(O)C(ON(=O)=O)C=O
-SPC2944 = IGNORE ;    //  CCC1(C=O)OC1(C)C(O)C(OO)C=O
-SPC2945 = IGNORE ;    //  CCC1(C=O)OC1(C)C(O)C(O[O])C=O
-SPC2946 = IGNORE ;    //  CCC1(C=O)OC1(C)C(O)C([O])C=O
-SPC2947 = IGNORE ;    //  CCC1(C=O)OC1(C)C=CC=O
-SPC2948 = IGNORE ;    //  CCC1(C=O)OC1(C)C=O
-SPC2949 = IGNORE ;    //  CCC1(O)C=CC2OOC1(C)C2O
-SPC2950 = IGNORE ;    //  CCC1(OO)C=CC2OOC1(C)C2O
-SPC2951 = IGNORE ;    //  CCC1(O[O])C=CC2OOC1(C)C2O
-SPC2952 = IGNORE ;    //  CCC1([O])C=CC2OOC1(C)C2O
-SPC2953 = IGNORE ;    //  CCC12C=CC(O)(O)C(C)(OO1)C2O
-SPC2954 = IGNORE ;    //  CCC12C=CC(O)(O)C(C)(OO1)C2ON(=O)=O
-SPC2955 = IGNORE ;    //  CCC12C=CC(O)(OO)C(C)(OO1)C2O
-SPC2956 = IGNORE ;    //  CCC12C=CC(O)(O[O])C(C)(OO1)C2O
-SPC2957 = IGNORE ;    //  CCC12C=CC(O)([O])C(C)(OO1)C2ON(=O)=O
-SPC2958 = IGNORE ;    //  CCC12C=CC(ON(=O)=O)C(OO1)C2O
-SPC2959 = IGNORE ;    //  CCC12C=CC([O])(O)C(C)(OO1)C2O
-SPC2960 = IGNORE ;    //  CCC12OOC(C(=C(O)C2(O)OO)N(=O)=O)C1ON(=O)=O
-SPC2961 = IGNORE ;    //  CCC12OOC(C(=C(O)C2(O)O[O])N(=O)=O)C1ON(=O)=O
-SPC2962 = IGNORE ;    //  CCC12OOC(C(=C(O)C2([O])O)N(=O)=O)C1O
-SPC2963 = IGNORE ;    //  CCC12OOC(C(=C(O)C2([O])O)N(=O)=O)C1ON(=O)=O
-SPC2964 = IGNORE ;    //  CCC12OOC(C(=CC2(O)O)C)C1O
-SPC2965 = IGNORE ;    //  CCC12OOC(C(=CC2(O)O)C)C1ON(=O)=O
-SPC2966 = IGNORE ;    //  CCC12OOC(C(=CC2(O)OO)C)C1ON(=O)=O
-SPC2967 = IGNORE ;    //  CCC12OOC(C(=CC2(O)O[O])C)C1ON(=O)=O
-SPC2968 = IGNORE ;    //  CCC12OOC(C(=CC2(O)[O])C)C1ON(=O)=O
-SPC2969 = IGNORE ;    //  CCC12OOC(C(=CC2([O])O)C)C1O
-SPC2970 = IGNORE ;    //  CCC12OOC(C(=O)C=C1)C2O
-SPC2971 = IGNORE ;    //  CCC12OOC(C(O)C=C1)C2O
-SPC2972 = IGNORE ;    //  CCC12OOC(C([O])C=C1)C2O
-SPC2973 = IGNORE ;    //  CCC12OOC(C)(C(=C(O)C2(O)OO)N(=O)=O)C1O
-SPC2974 = IGNORE ;    //  CCC12OOC(C)(C(=C(O)C2(O)OO)N(=O)=O)C1ON(=O)=O
-SPC2975 = IGNORE ;    //  CCC12OOC(C)(C(=C(O)C2(O)O[O])N(=O)=O)C1O
-SPC2976 = IGNORE ;    //  CCC12OOC(C)(C(=C(O)C2(O)O[O])N(=O)=O)C1ON(=O)=O
-SPC2977 = IGNORE ;    //  CCC12OOC(C)(C(=C(O)C2(O)[O])N(=O)=O)C1O
-SPC2978 = IGNORE ;    //  CCC12OOC(C)(C(=C(O)C2([O])O)N(=O)=O)C1ON(=O)=O
-SPC2979 = IGNORE ;    //  CCC12OOC(C)(C(=O)C(=C1)C)C2O
-SPC2980 = IGNORE ;    //  CCC12OOC(C)(C(O)C(=C1)C)C2O
-SPC2981 = IGNORE ;    //  CCC12OOC(C)(C(ON(=O)=O)C(=C1)C)C2O
-SPC2982 = IGNORE ;    //  CCC12OOC(C)(C([O])C(=C1)C)C2O
-SPC2983 = IGNORE ;    //  CCC12OOC(C)(C2ON(=O)=O)C(O)(OO)C=C1
-SPC2984 = IGNORE ;    //  CCC12OOC(C)(C2ON(=O)=O)C(O)(O[O])C=C1
-SPC2985 = IGNORE ;    //  CCC12OOC(C)(C=C(C)C2(O)O)C1O
-SPC2986 = IGNORE ;    //  CCC12OOC(C)(C=C(C)C2(O)O)C1ON(=O)=O
-SPC2987 = IGNORE ;    //  CCC12OOC(C)(C=C(C)C2(O)OO)C1O
-SPC2988 = IGNORE ;    //  CCC12OOC(C)(C=C(C)C2(O)OO)C1ON(=O)=O
-SPC2989 = IGNORE ;    //  CCC12OOC(C)(C=C(C)C2(O)O[O])C1O
-SPC2990 = IGNORE ;    //  CCC12OOC(C)(C=C(C)C2(O)O[O])C1ON(=O)=O
-SPC2991 = IGNORE ;    //  CCC12OOC(C)(C=C(C)C2(O)[O])C1ON(=O)=O
-SPC2992 = IGNORE ;    //  CCC12OOC(C)(C=C(C)C2([O])O)C1O
-SPC2993 = IGNORE ;    //  CCC12OOC(C)(C=CC1=O)C2O
-SPC2994 = IGNORE ;    //  CCC12OOC(C)(C=CC1O)C2O
-SPC2995 = IGNORE ;    //  CCC12OOC(C)(C=CC1ON(=O)=O)C2O
-SPC2996 = IGNORE ;    //  CCC12OOC(C)(C=CC1[O])C2O
-SPC2997 = IGNORE ;    //  CCC12OOC(C2O)C(C)(C=C1)ON(=O)=O
-SPC2998 = IGNORE ;    //  CCC12OOC(C2O)C(C)(O)C=C1
-SPC2999 = IGNORE ;    //  CCC12OOC(C2O)C(C)([O])C=C1
-SPC3000 = IGNORE ;    //  CCC12OOC(C2O)C(O)(O)C=C1
-SPC3001 = IGNORE ;    //  CCC12OOC(C2O)C(O)(O)C=C1C
-SPC3002 = IGNORE ;    //  CCC12OOC(C2O)C(O)(OO)C=C1C
-SPC3003 = IGNORE ;    //  CCC12OOC(C2O)C(O)(O[O])C=C1C
-SPC3004 = IGNORE ;    //  CCC12OOC(C2O)C([O])(O)C=C1
-SPC3005 = IGNORE ;    //  CCC12OOC(C2O)C([O])(O)C=C1C
-SPC3006 = IGNORE ;    //  CCC12OOC(C2ON(=O)=O)C(O)(O)C=C1
-SPC3007 = IGNORE ;    //  CCC12OOC(C2ON(=O)=O)C(O)(OO)C=C1
-SPC3008 = IGNORE ;    //  CCC12OOC(C2ON(=O)=O)C(O)(O[O])C=C1
-SPC3009 = IGNORE ;    //  CCC12OOC(C2ON(=O)=O)C([O])(O)C=C1
-SPC3010 = IGNORE ;    //  CCC12OOC(C=C(N(=O)=O)C2(O)OO)(N(=O)=O)C1O
-SPC3011 = IGNORE ;    //  CCC12OOC(C=C(N(=O)=O)C2(O)O[O])(N(=O)=O)C1O
-SPC3012 = IGNORE ;    //  CCC12OOC(C=C(N(=O)=O)C2([O])O)(N(=O)=O)C1O
-SPC3013 = IGNORE ;    //  CCC12OOC(C=C(N(=O)=O)C2([O])O)(N(=O)=O)C1ON(=O)=O
-SPC3014 = IGNORE ;    //  CCC12OOC(CC)(C2O)C(O)(O)C(=C1)C
-SPC3015 = IGNORE ;    //  CCC12OOC(CC)(C2O)C([O])(O)C(=C1)C
-SPC3016 = IGNORE ;    //  CCC12OOC(CC)(C2ON(=O)=O)C(O)(O)C(=C1)C
-SPC3017 = IGNORE ;    //  CCC12OOC(CC)(C2ON(=O)=O)C(O)(OO)C(=C1)C
-SPC3018 = IGNORE ;    //  CCC12OOC(CC)(C2ON(=O)=O)C(O)(O[O])C(=C1)C
-SPC3019 = IGNORE ;    //  CCC12OOC(CC)(C2ON(=O)=O)C(O)([O])C(=C1)C
-SPC3020 = IGNORE ;    //  CCC12OOC(CC)(C=C(C)C2(O)OO)C1O
-SPC3021 = IGNORE ;    //  CCC12OOC(CC)(C=C(C)C2(O)O[O])C1O
-SPC3022 = IGNORE ;    //  CCC12OOC(N(=O)=O)(C(=C(N(=O)=O)C2(O)OO)C)C1O
-SPC3023 = IGNORE ;    //  CCC12OOC(N(=O)=O)(C(=C(N(=O)=O)C2(O)OO)C)C1ON(=O)=O
-SPC3024 = IGNORE ;    //  CCC12OOC(N(=O)=O)(C(=C(N(=O)=O)C2(O)O[O])C)C1O
-SPC3025 = IGNORE ;    //  CCC12OOC(N(=O)=O)(C(=C(N(=O)=O)C2(O)O[O])C)C1ON(=O)=O
-SPC3026 = IGNORE ;    //  CCC12OOC(N(=O)=O)(C(=C(N(=O)=O)C2([O])O)C)C1O
-SPC3027 = IGNORE ;    //  CCC12OOC(N(=O)=O)(C(=C(N(=O)=O)C2([O])O)C)C1ON(=O)=O
-SPC3028 = IGNORE ;    //  CCC12OOC(N(=O)=O)(C(=C(O)C2(O)OO)C)C1O
-SPC3029 = IGNORE ;    //  CCC12OOC(N(=O)=O)(C(=C(O)C2(O)O[O])C)C1O
-SPC3030 = IGNORE ;    //  CCC12OOC(N(=O)=O)(C(=C(O)C2([O])O)C)C1O
-SPC3031 = IGNORE ;    //  CCC12OOC(N(=O)=O)(C(=C(O)C2([O])O)C)C1ON(=O)=O
-SPC3032 = IGNORE ;    //  CCC12OOC(N(=O)=O)(C2O)C(O)(OO)C(=C1C)N(=O)=O
-SPC3033 = IGNORE ;    //  CCC12OOC(N(=O)=O)(C2O)C(O)(O[O])C(=C1C)N(=O)=O
-SPC3034 = IGNORE ;    //  CCC12OOC(N(=O)=O)(C2O)C([O])(O)C(=C1C)N(=O)=O
-SPC3035 = IGNORE ;    //  CCC12OOC(N(=O)=O)(C2ON(=O)=O)C(O)(OO)C(=C1C)N(=O)=O
-SPC3036 = IGNORE ;    //  CCC12OOC(N(=O)=O)(C2ON(=O)=O)C(O)(O[O])C(=C1C)N(=O)=O
-SPC3037 = IGNORE ;    //  CCC12OOC(N(=O)=O)(C2ON(=O)=O)C([O])(O)C(=C1C)N(=O)=O
-SPC3038 = IGNORE ;    //  CCC1=C(C)C2OOC(C2ON(=O)=O)C1(O)O
-SPC3039 = IGNORE ;    //  CCC1=C(C)C2OOC(C2ON(=O)=O)C1(O)OO
-SPC3040 = IGNORE ;    //  CCC1=C(C)C2OOC(C2ON(=O)=O)C1(O)O[O]
-SPC3041 = IGNORE ;    //  CCC1=C(C)C2OOC(C2ON(=O)=O)C1(O)[O]
-SPC3042 = IGNORE ;    //  CCC1=C(N(=O)=O)C2(OOC(C)(C2O)C1(O)OO)N(=O)=O
-SPC3043 = IGNORE ;    //  CCC1=C(N(=O)=O)C2(OOC(C)(C2O)C1(O)O[O])N(=O)=O
-SPC3044 = IGNORE ;    //  CCC1=C(N(=O)=O)C2(OOC(C)(C2O)C1([O])O)N(=O)=O
-SPC3045 = IGNORE ;    //  CCC1=C(N(=O)=O)C2(OOC(C)(C2ON(=O)=O)C1(O)OO)N(=O)=O
-SPC3046 = IGNORE ;    //  CCC1=C(N(=O)=O)C2(OOC(C)(C2ON(=O)=O)C1(O)O[O])N(=O)=O
-SPC3047 = IGNORE ;    //  CCC1=C(N(=O)=O)C2(OOC(C)(C2ON(=O)=O)C1([O])O)N(=O)=O
-SPC3048 = IGNORE ;    //  CCC1=C(O)C(O)(OO)C2(OOC1(C)C2O)N(=O)=O
-SPC3049 = IGNORE ;    //  CCC1=C(O)C(O)(OO)C2(OOC1(C)C2ON(=O)=O)N(=O)=O
-SPC3050 = IGNORE ;    //  CCC1=C(O)C(O)(O[O])C2(OOC1(C)C2O)N(=O)=O
-SPC3051 = IGNORE ;    //  CCC1=C(O)C(O)(O[O])C2(OOC1(C)C2ON(=O)=O)N(=O)=O
-SPC3052 = IGNORE ;    //  CCC1=C(O)C([O])(O)C2(OOC1(C)C2O)N(=O)=O
-SPC3053 = IGNORE ;    //  CCC1=C(O)C([O])(O)C2(OOC1(C)C2ON(=O)=O)N(=O)=O
-SPC3054 = IGNORE ;    //  CCC1=CC(O)(OO)C2(OOC1C2(C)O)N(=O)=O
-SPC3055 = IGNORE ;    //  CCC1=CC(O)(O[O])C2(OOC1C2(C)O)N(=O)=O
-SPC3056 = IGNORE ;    //  CCC1=CC([O])(O)C2(OOC1C2(C)O)N(=O)=O
-SPC3057 = IGNORE ;    //  CCC1=CC2(CC)OOC(C)(C1=O)C2O
-SPC3058 = IGNORE ;    //  CCC1=CC2(CC)OOC(C)(C1O)C2O
-SPC3059 = IGNORE ;    //  CCC1=CC2(CC)OOC(C)(C1ON(=O)=O)C2O
-SPC3060 = IGNORE ;    //  CCC1=CC2(CC)OOC(C)(C1[O])C2O
-SPC3061 = IGNORE ;    //  CCC1OC(=O)C(C)(OO)C1ON(=O)=O
-SPC3062 = IGNORE ;    //  CCC=C
-SPC3063 = IGNORE ;    //  CCC=O
-SPC3064 = IGNORE ;    //  CCCC
-SPC3065 = IGNORE ;    //  CCCC(=CC(=O)C=O)C(=O)CO.O=C1CCC(=O)C(=C1)C
-SPC3066 = IGNORE ;    //  CCCC(=CC(=O)CO)C(=O)CO.O=C1CCC(=O)C(=C1)C
-SPC3067 = IGNORE ;    //  CCCC(=CC(=O)COO)C(=O)CO.O=C1CCC(=O)C(=C1)C
-SPC3068 = IGNORE ;    //  CCCC(=CC(=O)CO[O])C(=O)CO.O=C1CCC(=O)C(=C1)C
-SPC3069 = IGNORE ;    //  CCCC(=CC(=O)C[O])C(=O)CO.O=C1CCC(=O)C(=C1)C
-SPC3070 = IGNORE ;    //  CCCC(=O)C
-SPC3071 = IGNORE ;    //  CCCC(=O)C(=O)C
-SPC3072 = IGNORE ;    //  CCCC(=O)C(=O)C(O)C(=O)OO
-SPC3073 = IGNORE ;    //  CCCC(=O)C(=O)C(O)C(=O)OON(=O)=O
-SPC3074 = IGNORE ;    //  CCCC(=O)C(=O)C(O)C(=O)O[O]
-SPC3075 = IGNORE ;    //  CCCC(=O)C(=O)C(O)C1OC1C=O
-SPC3076 = IGNORE ;    //  CCCC(=O)C(=O)C(O)C=O
-SPC3077 = IGNORE ;    //  CCCC(=O)C(=O)C(OO)C(=O)CC
-SPC3078 = IGNORE ;    //  CCCC(=O)C(=O)C(O[O])C(=O)CC
-SPC3079 = IGNORE ;    //  CCCC(=O)C(=O)C([O])C(=O)CC
-SPC3080 = IGNORE ;    //  CCCC(=O)C(=O)C=O
-SPC3081 = IGNORE ;    //  CCCC(=O)C(=O)CC(=O)CC
-SPC3082 = IGNORE ;    //  CCCC(=O)C(=O)O
-SPC3083 = IGNORE ;    //  CCCC(=O)C(O)C
-SPC3084 = IGNORE ;    //  CCCC(=O)C(O)C(=O)OO
-SPC3085 = IGNORE ;    //  CCCC(=O)C(O)C(=O)OON(=O)=O
-SPC3086 = IGNORE ;    //  CCCC(=O)C(O)C(=O)O[O]
-SPC3087 = IGNORE ;    //  CCCC(=O)C(O)C(O)C1OC1C=O
-SPC3088 = IGNORE ;    //  CCCC(=O)C(O)C(O)C=O
-SPC3089 = IGNORE ;    //  CCCC(=O)C(O)C=O
-SPC3090 = IGNORE ;    //  CCCC(=O)C(O)CC(=O)CC
-SPC3091 = IGNORE ;    //  CCCC(=O)C(ON(=O)=O)C
-SPC3092 = IGNORE ;    //  CCCC(=O)C(ON(=O)=O)C(O)C1OC1C=O
-SPC3093 = IGNORE ;    //  CCCC(=O)C(OO)C
-SPC3094 = IGNORE ;    //  CCCC(=O)C(OO)C(O)C(=O)C=O
-SPC3095 = IGNORE ;    //  CCCC(=O)C(OO)C(O)C1OC1C=O
-SPC3096 = IGNORE ;    //  CCCC(=O)C(OO)C(O)C=O
-SPC3097 = IGNORE ;    //  CCCC(=O)C(OO)CC(=O)CC
-SPC3098 = IGNORE ;    //  CCCC(=O)C(O[O])C
-SPC3099 = IGNORE ;    //  CCCC(=O)C(O[O])C(O)C(=O)C=O
-SPC3100 = IGNORE ;    //  CCCC(=O)C(O[O])C(O)C1OC1C=O
-SPC3101 = IGNORE ;    //  CCCC(=O)C(O[O])C(O)C=O
-SPC3102 = IGNORE ;    //  CCCC(=O)C(O[O])CC(=O)CC
-SPC3103 = IGNORE ;    //  CCCC(=O)C([O])C
-SPC3104 = IGNORE ;    //  CCCC(=O)C([O])C(O)C(=O)C=O
-SPC3105 = IGNORE ;    //  CCCC(=O)C([O])C(O)C1OC1C=O
-SPC3106 = IGNORE ;    //  CCCC(=O)C([O])C(O)C=O
-SPC3107 = IGNORE ;    //  CCCC(=O)C([O])CC(=O)CC
-SPC3108 = IGNORE ;    //  CCCC(=O)C=CC(=O)C=O
-SPC3109 = IGNORE ;    //  CCCC(=O)C=CC(=O)O
-SPC3110 = IGNORE ;    //  CCCC(=O)C=CC(=O)OO
-SPC3111 = IGNORE ;    //  CCCC(=O)C=CC(=O)OON(=O)=O
-SPC3112 = IGNORE ;    //  CCCC(=O)C=CC(=O)O[O]
-SPC3113 = IGNORE ;    //  CCCC(=O)C=CC(=O)[O]
-SPC3114 = IGNORE ;    //  CCCC(=O)C=CC(O)C=O
-SPC3115 = IGNORE ;    //  CCCC(=O)C=CC(OO)C=O
-SPC3116 = IGNORE ;    //  CCCC(=O)C=CC(O[O])C=O
-SPC3117 = IGNORE ;    //  CCCC(=O)C=CC([O])C=O
-SPC3118 = IGNORE ;    //  CCCC(=O)C=CC1OC1C(=O)O
-SPC3119 = IGNORE ;    //  CCCC(=O)C=CC1OC1C(=O)OO
-SPC3120 = IGNORE ;    //  CCCC(=O)C=CC1OC1C(=O)OON(=O)=O
-SPC3121 = IGNORE ;    //  CCCC(=O)C=CC1OC1C(=O)O[O]
-SPC3122 = IGNORE ;    //  CCCC(=O)C=CC1OC1C=O
-SPC3123 = IGNORE ;    //  CCCC(=O)C=CC=O
-SPC3124 = IGNORE ;    //  CCCC(=O)C=O
-SPC3125 = IGNORE ;    //  CCCC(=O)CC
-SPC3126 = IGNORE ;    //  CCCC(=O)CC(=O)OO
-SPC3127 = IGNORE ;    //  CCCC(=O)CC(=O)OON(=O)=O
-SPC3128 = IGNORE ;    //  CCCC(=O)CC(=O)O[O]
-SPC3129 = IGNORE ;    //  CCCC(=O)CC=O
-SPC3130 = IGNORE ;    //  CCCC(=O)CCC(=O)CC
-SPC3131 = IGNORE ;    //  CCCC(=O)CCO
-SPC3132 = IGNORE ;    //  CCCC(=O)CCOO
-SPC3133 = IGNORE ;    //  CCCC(=O)CCO[O]
-SPC3134 = IGNORE ;    //  CCCC(=O)CC[O]
-SPC3135 = IGNORE ;    //  CCCC(=O)CO
-SPC3136 = IGNORE ;    //  CCCC(=O)CON(=O)=O
-SPC3137 = IGNORE ;    //  CCCC(=O)COO
-SPC3138 = IGNORE ;    //  CCCC(=O)CO[O]
-SPC3139 = IGNORE ;    //  CCCC(=O)C[O]
-SPC3140 = IGNORE ;    //  CCCC(=O)O
-SPC3141 = IGNORE ;    //  CCCC(=O)OC(=O)C
-SPC3142 = IGNORE ;    //  CCCC(=O)OC=O
-SPC3143 = IGNORE ;    //  CCCC(=O)OCC(=O)C
-SPC3144 = IGNORE ;    //  CCCC(=O)OCC(=O)OO
-SPC3145 = IGNORE ;    //  CCCC(=O)OCC(=O)OON(=O)=O
-SPC3146 = IGNORE ;    //  CCCC(=O)OCC(=O)O[O]
-SPC3147 = IGNORE ;    //  CCCC(=O)OCC=O
-SPC3148 = IGNORE ;    //  CCCC(=O)OCCO
-SPC3149 = IGNORE ;    //  CCCC(=O)OCOO
-SPC3150 = IGNORE ;    //  CCCC(=O)OCO[O]
-SPC3151 = IGNORE ;    //  CCCC(=O)OC[O]
-SPC3152 = IGNORE ;    //  CCCC(=O)OO
-SPC3153 = IGNORE ;    //  CCCC(=O)OON(=O)=O
-SPC3154 = IGNORE ;    //  CCCC(=O)O[O]
-SPC3155 = IGNORE ;    //  CCCC(C(=O)C(O)C=O)=CC(=O)O[O]
-SPC3156 = IGNORE ;    //  CCCC(C(=O)C=O)=CC(=O)C=O
-SPC3157 = IGNORE ;    //  CCCC(C(=O)O)=C(N(=O)=O)C=O
-SPC3158 = IGNORE ;    //  CCCC(C(=O)O)=CC=O
-SPC3159 = IGNORE ;    //  CCCC(C(=O)OO)=CC(=O)C=O
-SPC3160 = IGNORE ;    //  CCCC(C(=O)OON(=O)=O)=CC(=O)C=O
-SPC3161 = IGNORE ;    //  CCCC(C(=O)O[O])=CC(=O)C=O
-SPC3162 = IGNORE ;    //  CCCC(C)C
-SPC3163 = IGNORE ;    //  CCCC(C)C(=O)OO
-SPC3164 = IGNORE ;    //  CCCC(C)C(=O)OON(=O)=O
-SPC3165 = IGNORE ;    //  CCCC(C)C(=O)O[O]
-SPC3166 = IGNORE ;    //  CCCC(C)C=O
-SPC3167 = IGNORE ;    //  CCCC(C)CC
-SPC3168 = IGNORE ;    //  CCCC(C)CO
-SPC3169 = IGNORE ;    //  CCCC(C)CON(=O)=O
-SPC3170 = IGNORE ;    //  CCCC(C)COO
-SPC3171 = IGNORE ;    //  CCCC(C)CO[O]
-SPC3172 = IGNORE ;    //  CCCC(C)C[O]
-SPC3173 = IGNORE ;    //  CCCC(C=O)OC(=O)C=O
-SPC3174 = IGNORE ;    //  CCCC(O)(C)C
-SPC3175 = IGNORE ;    //  CCCC(O)(C)CC
-SPC3176 = IGNORE ;    //  CCCC(O)C
-SPC3177 = IGNORE ;    //  CCCC(O)C(=O)C
-SPC3178 = IGNORE ;    //  CCCC(O)C(=O)CC(=O)CC
-SPC3179 = IGNORE ;    //  CCCC(O)C(=O)OO
-SPC3180 = IGNORE ;    //  CCCC(O)C(=O)OON(=O)=O
-SPC3181 = IGNORE ;    //  CCCC(O)C(=O)O[O]
-SPC3182 = IGNORE ;    //  CCCC(O)C(O)C
-SPC3183 = IGNORE ;    //  CCCC(O)C(O)CC(=O)CC
-SPC3184 = IGNORE ;    //  CCCC(O)C(ON(=O)=O)C
-SPC3185 = IGNORE ;    //  CCCC(O)C(ON(=O)=O)CC(=O)CC
-SPC3186 = IGNORE ;    //  CCCC(O)C(OO)C
-SPC3187 = IGNORE ;    //  CCCC(O)C(OO)CC(=O)CC
-SPC3188 = IGNORE ;    //  CCCC(O)C(O[O])C
-SPC3189 = IGNORE ;    //  CCCC(O)C(O[O])CC(=O)CC
-SPC3190 = IGNORE ;    //  CCCC(O)C([O])C
-SPC3191 = IGNORE ;    //  CCCC(O)C([O])CC(=O)CC
-SPC3192 = IGNORE ;    //  CCCC(O)C=O
-SPC3193 = IGNORE ;    //  CCCC(O)CC
-SPC3194 = IGNORE ;    //  CCCC(O)CC(=O)C(OO)C
-SPC3195 = IGNORE ;    //  CCCC(O)CC(=O)C(O[O])C
-SPC3196 = IGNORE ;    //  CCCC(O)CC(=O)C([O])C
-SPC3197 = IGNORE ;    //  CCCC(O)CC(=O)OO
-SPC3198 = IGNORE ;    //  CCCC(O)CC(=O)OON(=O)=O
-SPC3199 = IGNORE ;    //  CCCC(O)CC(=O)O[O]
-SPC3200 = IGNORE ;    //  CCCC(O)CCC(=O)CC
-SPC3201 = IGNORE ;    //  CCCC(O)CCC(O)CC
-SPC3202 = IGNORE ;    //  CCCC(O)CO
-SPC3203 = IGNORE ;    //  CCCC(O)CON(=O)=O
-SPC3204 = IGNORE ;    //  CCCC(O)COO
-SPC3205 = IGNORE ;    //  CCCC(O)CO[O]
-SPC3206 = IGNORE ;    //  CCCC(O)C[O]
-SPC3207 = IGNORE ;    //  CCCC(O)OC(=O)C
-SPC3208 = IGNORE ;    //  CCCC(O)OC=O
-SPC3209 = IGNORE ;    //  CCCC(O)OCC(=O)C
-SPC3210 = IGNORE ;    //  CCCC(O)OCC(O)C
-SPC3211 = IGNORE ;    //  CCCC(O)OCCO
-SPC3212 = IGNORE ;    //  CCCC(ON(=O)=O)(C)C
-SPC3213 = IGNORE ;    //  CCCC(ON(=O)=O)(C)CC
-SPC3214 = IGNORE ;    //  CCCC(ON(=O)=O)C
-SPC3215 = IGNORE ;    //  CCCC(ON(=O)=O)C(=O)C
-SPC3216 = IGNORE ;    //  CCCC(ON(=O)=O)C(=O)O
-SPC3217 = IGNORE ;    //  CCCC(ON(=O)=O)C(=O)OO
-SPC3218 = IGNORE ;    //  CCCC(ON(=O)=O)C(=O)OON(=O)=O
-SPC3219 = IGNORE ;    //  CCCC(ON(=O)=O)C(=O)O[O]
-SPC3220 = IGNORE ;    //  CCCC(ON(=O)=O)C(O)C
-SPC3221 = IGNORE ;    //  CCCC(ON(=O)=O)C(OO)C
-SPC3222 = IGNORE ;    //  CCCC(ON(=O)=O)C(O[O])C
-SPC3223 = IGNORE ;    //  CCCC(ON(=O)=O)C([O])C
-SPC3224 = IGNORE ;    //  CCCC(ON(=O)=O)C=O
-SPC3225 = IGNORE ;    //  CCCC(ON(=O)=O)CC
-SPC3226 = IGNORE ;    //  CCCC(ON(=O)=O)CO
-SPC3227 = IGNORE ;    //  CCCC(ON(=O)=O)COO
-SPC3228 = IGNORE ;    //  CCCC(ON(=O)=O)CO[O]
-SPC3229 = IGNORE ;    //  CCCC(ON(=O)=O)C[O]
-SPC3230 = IGNORE ;    //  CCCC(ON(=O)=O)OC(=O)C
-SPC3231 = IGNORE ;    //  CCCC(ON(=O)=O)OCC(=O)C
-SPC3232 = IGNORE ;    //  CCCC(ON(=O)=O)OCC(O)C
-SPC3233 = IGNORE ;    //  CCCC(ON(=O)=O)OCCO
-SPC3234 = IGNORE ;    //  CCCC(OO)(C)C
-SPC3235 = IGNORE ;    //  CCCC(OO)(C)CC
-SPC3236 = IGNORE ;    //  CCCC(OO)C
-SPC3237 = IGNORE ;    //  CCCC(OO)C(=O)C
-SPC3238 = IGNORE ;    //  CCCC(OO)C(O)C
-SPC3239 = IGNORE ;    //  CCCC(OO)C=O
-SPC3240 = IGNORE ;    //  CCCC(OO)CC
-SPC3241 = IGNORE ;    //  CCCC(OO)CO
-SPC3242 = IGNORE ;    //  CCCC(OO)CON(=O)=O
-SPC3243 = IGNORE ;    //  CCCC(OO)OC(=O)C
-SPC3244 = IGNORE ;    //  CCCC(OO)OC(=O)C(=O)C
-SPC3245 = IGNORE ;    //  CCCC(OO)OC(=O)C(O)C
-SPC3246 = IGNORE ;    //  CCCC(OO)OC(=O)C=O
-SPC3247 = IGNORE ;    //  CCCC(OO)OC=O
-SPC3248 = IGNORE ;    //  CCCC(OO)OCC(=O)C
-SPC3249 = IGNORE ;    //  CCCC(OO)OCC(O)C
-SPC3250 = IGNORE ;    //  CCCC(OO)OCCO
-SPC3251 = IGNORE ;    //  CCCC(O[O])(C)C
-SPC3252 = IGNORE ;    //  CCCC(O[O])(C)CC
-SPC3253 = IGNORE ;    //  CCCC(O[O])C
-SPC3254 = IGNORE ;    //  CCCC(O[O])C(=O)C
-SPC3255 = IGNORE ;    //  CCCC(O[O])C(O)C
-SPC3256 = IGNORE ;    //  CCCC(O[O])C=O
-SPC3257 = IGNORE ;    //  CCCC(O[O])CC
-SPC3258 = IGNORE ;    //  CCCC(O[O])CO
-SPC3259 = IGNORE ;    //  CCCC(O[O])CON(=O)=O
-SPC3260 = IGNORE ;    //  CCCC(O[O])OC(=O)C
-SPC3261 = IGNORE ;    //  CCCC(O[O])OC(=O)C=O
-SPC3262 = IGNORE ;    //  CCCC(O[O])OC=O
-SPC3263 = IGNORE ;    //  CCCC(O[O])OCCO
-SPC3264 = IGNORE ;    //  CCCC([O])(C)C
-SPC3265 = IGNORE ;    //  CCCC([O])(C)CC
-SPC3266 = IGNORE ;    //  CCCC([O])C
-SPC3267 = IGNORE ;    //  CCCC([O])C(=O)C
-SPC3268 = IGNORE ;    //  CCCC([O])C(O)C
-SPC3269 = IGNORE ;    //  CCCC([O])C=O
-SPC3270 = IGNORE ;    //  CCCC([O])CC
-SPC3271 = IGNORE ;    //  CCCC([O])CO
-SPC3272 = IGNORE ;    //  CCCC([O])CON(=O)=O
-SPC3273 = IGNORE ;    //  CCCC([O])OC(=O)C
-SPC3274 = IGNORE ;    //  CCCC([O])OC(=O)C=O
-SPC3275 = IGNORE ;    //  CCCC([O])OC=O
-SPC3276 = IGNORE ;    //  CCCC([O])OCCO
-SPC3277 = IGNORE ;    //  CCCC12C=CC(ON(=O)=O)C(OO1)C2O
-SPC3278 = IGNORE ;    //  CCCC12OOC(C(=C(O)C2(O)OO)N(=O)=O)C1O
-SPC3279 = IGNORE ;    //  CCCC12OOC(C(=C(O)C2(O)OO)N(=O)=O)C1ON(=O)=O
-SPC3280 = IGNORE ;    //  CCCC12OOC(C(=C(O)C2(O)O[O])N(=O)=O)C1O
-SPC3281 = IGNORE ;    //  CCCC12OOC(C(=C(O)C2(O)O[O])N(=O)=O)C1ON(=O)=O
-SPC3282 = IGNORE ;    //  CCCC12OOC(C(=C(O)C2(O)[O])N(=O)=O)C1O
-SPC3283 = IGNORE ;    //  CCCC12OOC(C(=C(O)C2([O])O)N(=O)=O)C1ON(=O)=O
-SPC3284 = IGNORE ;    //  CCCC12OOC(C(OO)C=C1)C2O
-SPC3285 = IGNORE ;    //  CCCC12OOC(C(O[O])C=C1)C2O
-SPC3286 = IGNORE ;    //  CCCC12OOC(C2O)C(=O)C=C1
-SPC3287 = IGNORE ;    //  CCCC12OOC(C2O)C(O)(O)C=C1
-SPC3288 = IGNORE ;    //  CCCC12OOC(C2O)C(O)(OO)C=C1
-SPC3289 = IGNORE ;    //  CCCC12OOC(C2O)C(O)(O[O])C=C1
-SPC3290 = IGNORE ;    //  CCCC12OOC(C2O)C(O)C=C1
-SPC3291 = IGNORE ;    //  CCCC12OOC(C2O)C([O])(O)C=C1
-SPC3292 = IGNORE ;    //  CCCC12OOC(C2O)C([O])C=C1
-SPC3293 = IGNORE ;    //  CCCC12OOC(C2ON(=O)=O)C(O)(O)C=C1
-SPC3294 = IGNORE ;    //  CCCC12OOC(C2ON(=O)=O)C(O)(OO)C=C1
-SPC3295 = IGNORE ;    //  CCCC12OOC(C2ON(=O)=O)C(O)(O[O])C=C1
-SPC3296 = IGNORE ;    //  CCCC12OOC(C2ON(=O)=O)C(O)([O])C=C1
-SPC3297 = IGNORE ;    //  CCCC12OOC(C=C(N(=O)=O)C2(O)OO)(N(=O)=O)C1O
-SPC3298 = IGNORE ;    //  CCCC12OOC(C=C(N(=O)=O)C2(O)OO)(N(=O)=O)C1ON(=O)=O
-SPC3299 = IGNORE ;    //  CCCC12OOC(C=C(N(=O)=O)C2(O)O[O])(N(=O)=O)C1O
-SPC3300 = IGNORE ;    //  CCCC12OOC(C=C(N(=O)=O)C2(O)O[O])(N(=O)=O)C1ON(=O)=O
-SPC3301 = IGNORE ;    //  CCCC12OOC(C=C(N(=O)=O)C2([O])O)(N(=O)=O)C1O
-SPC3302 = IGNORE ;    //  CCCC12OOC(C=C(N(=O)=O)C2([O])O)(N(=O)=O)C1ON(=O)=O
-SPC3303 = IGNORE ;    //  CCCC=C
-SPC3304 = IGNORE ;    //  CCCC=O
-SPC3305 = IGNORE ;    //  CCCCC
-SPC3306 = IGNORE ;    //  CCCCC(=O)C
-SPC3307 = IGNORE ;    //  CCCCC(=O)C(=O)C(OO)C(=O)CC
-SPC3308 = IGNORE ;    //  CCCCC(=O)C(=O)C(O[O])C(=O)CC
-SPC3309 = IGNORE ;    //  CCCCC(=O)C(=O)C([O])C(=O)CC
-SPC3310 = IGNORE ;    //  CCCCC(=O)C(=O)CC(=O)CC
-SPC3311 = IGNORE ;    //  CCCCC(=O)C(O)CC(=O)CC
-SPC3312 = IGNORE ;    //  CCCCC(=O)C(OO)CC(=O)CC
-SPC3313 = IGNORE ;    //  CCCCC(=O)C(O[O])CC(=O)CC
-SPC3314 = IGNORE ;    //  CCCCC(=O)C([O])CC(=O)CC
-SPC3315 = IGNORE ;    //  CCCCC(=O)CC
-SPC3316 = IGNORE ;    //  CCCCC(=O)CCC(=O)CC
-SPC3317 = IGNORE ;    //  CCCCC(=O)CO
-SPC3318 = IGNORE ;    //  CCCCC(=O)CON(=O)=O
-SPC3319 = IGNORE ;    //  CCCCC(=O)O
-SPC3320 = IGNORE ;    //  CCCCC(=O)OO
-SPC3321 = IGNORE ;    //  CCCCC(=O)OON(=O)=O
-SPC3322 = IGNORE ;    //  CCCCC(=O)O[O]
-SPC3323 = IGNORE ;    //  CCCCC(C)C
-SPC3324 = IGNORE ;    //  CCCCC(O)(C)C
-SPC3325 = IGNORE ;    //  CCCCC(O)C
-SPC3326 = IGNORE ;    //  CCCCC(O)C(=O)CC(=O)CC
-SPC3327 = IGNORE ;    //  CCCCC(O)C(=O)OO
-SPC3328 = IGNORE ;    //  CCCCC(O)C(=O)OON(=O)=O
-SPC3329 = IGNORE ;    //  CCCCC(O)C(=O)O[O]
-SPC3330 = IGNORE ;    //  CCCCC(O)C(O)CC(=O)CC
-SPC3331 = IGNORE ;    //  CCCCC(O)C(ON(=O)=O)CC(=O)CC
-SPC3332 = IGNORE ;    //  CCCCC(O)C(OO)CC(=O)CC
-SPC3333 = IGNORE ;    //  CCCCC(O)C(O[O])CC(=O)CC
-SPC3334 = IGNORE ;    //  CCCCC(O)C([O])CC(=O)CC
-SPC3335 = IGNORE ;    //  CCCCC(O)C=O
-SPC3336 = IGNORE ;    //  CCCCC(O)CC
-SPC3337 = IGNORE ;    //  CCCCC(O)CC(=O)C(OO)C
-SPC3338 = IGNORE ;    //  CCCCC(O)CC(=O)C(O[O])C
-SPC3339 = IGNORE ;    //  CCCCC(O)CC(=O)C([O])C
-SPC3340 = IGNORE ;    //  CCCCC(O)CC(=O)OO
-SPC3341 = IGNORE ;    //  CCCCC(O)CC(=O)OON(=O)=O
-SPC3342 = IGNORE ;    //  CCCCC(O)CC(=O)O[O]
-SPC3343 = IGNORE ;    //  CCCCC(O)CCC(=O)CC
-SPC3344 = IGNORE ;    //  CCCCC(O)CCC(O)CC
-SPC3345 = IGNORE ;    //  CCCCC(O)CO
-SPC3346 = IGNORE ;    //  CCCCC(O)CON(=O)=O
-SPC3347 = IGNORE ;    //  CCCCC(O)COO
-SPC3348 = IGNORE ;    //  CCCCC(O)CO[O]
-SPC3349 = IGNORE ;    //  CCCCC(O)C[O]
-SPC3350 = IGNORE ;    //  CCCCC(ON(=O)=O)(C)C
-SPC3351 = IGNORE ;    //  CCCCC(ON(=O)=O)C
-SPC3352 = IGNORE ;    //  CCCCC(ON(=O)=O)C(=O)O
-SPC3353 = IGNORE ;    //  CCCCC(ON(=O)=O)C(=O)OO
-SPC3354 = IGNORE ;    //  CCCCC(ON(=O)=O)C(=O)OON(=O)=O
-SPC3355 = IGNORE ;    //  CCCCC(ON(=O)=O)C(=O)O[O]
-SPC3356 = IGNORE ;    //  CCCCC(ON(=O)=O)C=O
-SPC3357 = IGNORE ;    //  CCCCC(ON(=O)=O)CC
-SPC3358 = IGNORE ;    //  CCCCC(ON(=O)=O)CO
-SPC3359 = IGNORE ;    //  CCCCC(ON(=O)=O)COO
-SPC3360 = IGNORE ;    //  CCCCC(ON(=O)=O)CO[O]
-SPC3361 = IGNORE ;    //  CCCCC(ON(=O)=O)C[O]
-SPC3362 = IGNORE ;    //  CCCCC(OO)(C)C
-SPC3363 = IGNORE ;    //  CCCCC(OO)C
-SPC3364 = IGNORE ;    //  CCCCC(OO)CC
-SPC3365 = IGNORE ;    //  CCCCC(OO)CC(=O)CC
-SPC3366 = IGNORE ;    //  CCCCC(OO)CO
-SPC3367 = IGNORE ;    //  CCCCC(OO)CON(=O)=O
-SPC3368 = IGNORE ;    //  CCCCC(O[O])(C)C
-SPC3369 = IGNORE ;    //  CCCCC(O[O])C
-SPC3370 = IGNORE ;    //  CCCCC(O[O])CC
-SPC3371 = IGNORE ;    //  CCCCC(O[O])CC(=O)CC
-SPC3372 = IGNORE ;    //  CCCCC(O[O])CO
-SPC3373 = IGNORE ;    //  CCCCC(O[O])CON(=O)=O
-SPC3374 = IGNORE ;    //  CCCCC([O])(C)C
-SPC3375 = IGNORE ;    //  CCCCC([O])C
-SPC3376 = IGNORE ;    //  CCCCC([O])CC
-SPC3377 = IGNORE ;    //  CCCCC([O])CC(=O)CC
-SPC3378 = IGNORE ;    //  CCCCC([O])CO
-SPC3379 = IGNORE ;    //  CCCCC([O])CON(=O)=O
-SPC3380 = IGNORE ;    //  CCCCC=C
-SPC3381 = IGNORE ;    //  CCCCC=O
-SPC3382 = IGNORE ;    //  CCCCCC
-SPC3383 = IGNORE ;    //  CCCCCC(=O)C(=O)C(OO)C(=O)CC
-SPC3384 = IGNORE ;    //  CCCCCC(=O)C(=O)C(O[O])C(=O)CC
-SPC3385 = IGNORE ;    //  CCCCCC(=O)C(=O)C([O])C(=O)CC
-SPC3386 = IGNORE ;    //  CCCCCC(=O)C(=O)CC(=O)CC
-SPC3387 = IGNORE ;    //  CCCCCC(=O)C(O)CC(=O)CC
-SPC3388 = IGNORE ;    //  CCCCCC(=O)C(OO)CC(=O)CC
-SPC3389 = IGNORE ;    //  CCCCCC(=O)C(O[O])CC(=O)CC
-SPC3390 = IGNORE ;    //  CCCCCC(=O)C([O])CC(=O)CC
-SPC3391 = IGNORE ;    //  CCCCCC(=O)CC
-SPC3392 = IGNORE ;    //  CCCCCC(=O)CCC(=O)CC
-SPC3393 = IGNORE ;    //  CCCCCC(=O)OO
-SPC3394 = IGNORE ;    //  CCCCCC(=O)OON(=O)=O
-SPC3395 = IGNORE ;    //  CCCCCC(=O)O[O]
-SPC3396 = IGNORE ;    //  CCCCCC(O)C(=O)CC(=O)CC
-SPC3397 = IGNORE ;    //  CCCCCC(O)C(O)CC(=O)CC
-SPC3398 = IGNORE ;    //  CCCCCC(O)C(ON(=O)=O)CC(=O)CC
-SPC3399 = IGNORE ;    //  CCCCCC(O)C(OO)CC(=O)CC
-SPC3400 = IGNORE ;    //  CCCCCC(O)C(O[O])CC(=O)CC
-SPC3401 = IGNORE ;    //  CCCCCC(O)C([O])CC(=O)CC
-SPC3402 = IGNORE ;    //  CCCCCC(O)CC
-SPC3403 = IGNORE ;    //  CCCCCC(O)CC(=O)C(OO)C
-SPC3404 = IGNORE ;    //  CCCCCC(O)CC(=O)C(O[O])C
-SPC3405 = IGNORE ;    //  CCCCCC(O)CC(=O)C([O])C
-SPC3406 = IGNORE ;    //  CCCCCC(O)CC(=O)OO
-SPC3407 = IGNORE ;    //  CCCCCC(O)CC(=O)OON(=O)=O
-SPC3408 = IGNORE ;    //  CCCCCC(O)CC(=O)O[O]
-SPC3409 = IGNORE ;    //  CCCCCC(O)CCC(=O)CC
-SPC3410 = IGNORE ;    //  CCCCCC(O)CCC(O)CC
-SPC3411 = IGNORE ;    //  CCCCCC(O)COO
-SPC3412 = IGNORE ;    //  CCCCCC(O)CO[O]
-SPC3413 = IGNORE ;    //  CCCCCC(O)C[O]
-SPC3414 = IGNORE ;    //  CCCCCC(ON(=O)=O)CC
-SPC3415 = IGNORE ;    //  CCCCCC(OO)CC
-SPC3416 = IGNORE ;    //  CCCCCC(OO)CC(=O)CC
-SPC3417 = IGNORE ;    //  CCCCCC(O[O])CC
-SPC3418 = IGNORE ;    //  CCCCCC(O[O])CC(=O)CC
-SPC3419 = IGNORE ;    //  CCCCCC([O])CC
-SPC3420 = IGNORE ;    //  CCCCCC([O])CC(=O)CC
-SPC3421 = IGNORE ;    //  CCCCCC=O
-SPC3422 = IGNORE ;    //  CCCCCCC
-SPC3423 = IGNORE ;    //  CCCCCCC(=O)C(=O)C(OO)C(=O)CC
-SPC3424 = IGNORE ;    //  CCCCCCC(=O)C(=O)C(O[O])C(=O)CC
-SPC3425 = IGNORE ;    //  CCCCCCC(=O)C(=O)C([O])C(=O)CC
-SPC3426 = IGNORE ;    //  CCCCCCC(=O)C(=O)CC(=O)CC
-SPC3427 = IGNORE ;    //  CCCCCCC(=O)C(O)CC(=O)CC
-SPC3428 = IGNORE ;    //  CCCCCCC(=O)C(OO)CC(=O)CC
-SPC3429 = IGNORE ;    //  CCCCCCC(=O)C(O[O])CC(=O)CC
-SPC3430 = IGNORE ;    //  CCCCCCC(=O)C([O])CC(=O)CC
-SPC3431 = IGNORE ;    //  CCCCCCC(=O)CC
-SPC3432 = IGNORE ;    //  CCCCCCC(=O)CCC(=O)CC
-SPC3433 = IGNORE ;    //  CCCCCCC(=O)O
-SPC3434 = IGNORE ;    //  CCCCCCC(=O)OO
-SPC3435 = IGNORE ;    //  CCCCCCC(=O)OON(=O)=O
-SPC3436 = IGNORE ;    //  CCCCCCC(=O)O[O]
-SPC3437 = IGNORE ;    //  CCCCCCC(O)C(=O)CC(=O)CC
-SPC3438 = IGNORE ;    //  CCCCCCC(O)C(O)CC(=O)CC
-SPC3439 = IGNORE ;    //  CCCCCCC(O)C(ON(=O)=O)CC(=O)CC
-SPC3440 = IGNORE ;    //  CCCCCCC(O)C(OO)CC(=O)CC
-SPC3441 = IGNORE ;    //  CCCCCCC(O)C(O[O])CC(=O)CC
-SPC3442 = IGNORE ;    //  CCCCCCC(O)C([O])CC(=O)CC
-SPC3443 = IGNORE ;    //  CCCCCCC(O)CC
-SPC3444 = IGNORE ;    //  CCCCCCC(O)CC(=O)C(OO)C
-SPC3445 = IGNORE ;    //  CCCCCCC(O)CC(=O)C(O[O])C
-SPC3446 = IGNORE ;    //  CCCCCCC(O)CC(=O)C([O])C
-SPC3447 = IGNORE ;    //  CCCCCCC(O)CC(=O)OO
-SPC3448 = IGNORE ;    //  CCCCCCC(O)CC(=O)OON(=O)=O
-SPC3449 = IGNORE ;    //  CCCCCCC(O)CC(=O)O[O]
-SPC3450 = IGNORE ;    //  CCCCCCC(O)CCC(=O)CC
-SPC3451 = IGNORE ;    //  CCCCCCC(O)CCC(O)CC
-SPC3452 = IGNORE ;    //  CCCCCCC(O)COO
-SPC3453 = IGNORE ;    //  CCCCCCC(O)CO[O]
-SPC3454 = IGNORE ;    //  CCCCCCC(O)C[O]
-SPC3455 = IGNORE ;    //  CCCCCCC(ON(=O)=O)CC
-SPC3456 = IGNORE ;    //  CCCCCCC(ON(=O)=O)CCC(O)CC
-SPC3457 = IGNORE ;    //  CCCCCCC(OO)CC
-SPC3458 = IGNORE ;    //  CCCCCCC(OO)CC(=O)CC
-SPC3459 = IGNORE ;    //  CCCCCCC(OO)CCC(O)CC
-SPC3460 = IGNORE ;    //  CCCCCCC(O[O])CC
-SPC3461 = IGNORE ;    //  CCCCCCC(O[O])CC(=O)CC
-SPC3462 = IGNORE ;    //  CCCCCCC(O[O])CCC(O)CC
-SPC3463 = IGNORE ;    //  CCCCCCC([O])CC
-SPC3464 = IGNORE ;    //  CCCCCCC([O])CC(=O)CC
-SPC3465 = IGNORE ;    //  CCCCCCC([O])CCC(O)CC
-SPC3466 = IGNORE ;    //  CCCCCCC=O
-SPC3467 = IGNORE ;    //  CCCCCCCC
-SPC3468 = IGNORE ;    //  CCCCCCCC(=O)CC
-SPC3469 = IGNORE ;    //  CCCCCCCC(O)CC
-SPC3470 = IGNORE ;    //  CCCCCCCC(O)CC(=O)C(OO)C
-SPC3471 = IGNORE ;    //  CCCCCCCC(O)CC(=O)C(O[O])C
-SPC3472 = IGNORE ;    //  CCCCCCCC(O)CC(=O)C([O])C
-SPC3473 = IGNORE ;    //  CCCCCCCC(O)CC(=O)OO
-SPC3474 = IGNORE ;    //  CCCCCCCC(O)CC(=O)OON(=O)=O
-SPC3475 = IGNORE ;    //  CCCCCCCC(O)CC(=O)O[O]
-SPC3476 = IGNORE ;    //  CCCCCCCC(O)COO
-SPC3477 = IGNORE ;    //  CCCCCCCC(O)CO[O]
-SPC3478 = IGNORE ;    //  CCCCCCCC(O)C[O]
-SPC3479 = IGNORE ;    //  CCCCCCCC(ON(=O)=O)CC
-SPC3480 = IGNORE ;    //  CCCCCCCC(OO)CC
-SPC3481 = IGNORE ;    //  CCCCCCCC(OO)CC(=O)CC
-SPC3482 = IGNORE ;    //  CCCCCCCC(O[O])CC
-SPC3483 = IGNORE ;    //  CCCCCCCC(O[O])CC(=O)CC
-SPC3484 = IGNORE ;    //  CCCCCCCC([O])CC
-SPC3485 = IGNORE ;    //  CCCCCCCC([O])CC(=O)CC
-SPC3486 = IGNORE ;    //  CCCCCCCCC
-SPC3487 = IGNORE ;    //  CCCCCCCCC(=O)CC
-SPC3488 = IGNORE ;    //  CCCCCCCCC(O)CC
-SPC3489 = IGNORE ;    //  CCCCCCCCC(ON(=O)=O)CC
-SPC3490 = IGNORE ;    //  CCCCCCCCC(OO)CC
-SPC3491 = IGNORE ;    //  CCCCCCCCC(O[O])CC
-SPC3492 = IGNORE ;    //  CCCCCCCCC([O])CC
-SPC3493 = IGNORE ;    //  CCCCCCCCCC
-SPC3494 = IGNORE ;    //  CCCCCCCCCC(=O)CC
-SPC3495 = IGNORE ;    //  CCCCCCCCCC(O)CC
-SPC3496 = IGNORE ;    //  CCCCCCCCCC(ON(=O)=O)CC
-SPC3497 = IGNORE ;    //  CCCCCCCCCC(OO)CC
-SPC3498 = IGNORE ;    //  CCCCCCCCCC(O[O])CC
-SPC3499 = IGNORE ;    //  CCCCCCCCCC([O])CC
-SPC3500 = IGNORE ;    //  CCCCCCCCCCC
-SPC3501 = IGNORE ;    //  CCCCCCCCCCCC
-SPC3502 = IGNORE ;    //  CCCCCCO
-SPC3503 = IGNORE ;    //  CCCCCCON(=O)=O
-SPC3504 = IGNORE ;    //  CCCCCCOO
-SPC3505 = IGNORE ;    //  CCCCCCO[O]
-SPC3506 = IGNORE ;    //  CCCCCC[O]
-SPC3507 = IGNORE ;    //  CCCCCO
-SPC3508 = IGNORE ;    //  CCCCCON(=O)=O
-SPC3509 = IGNORE ;    //  CCCCCOO
-SPC3510 = IGNORE ;    //  CCCCCO[O]
-SPC3511 = IGNORE ;    //  CCCCC[O]
-SPC3512 = IGNORE ;    //  CCCCO
-SPC3513 = IGNORE ;    //  CCCCOC(=O)C
-SPC3514 = IGNORE ;    //  CCCCOC(=O)C(=O)C
-SPC3515 = IGNORE ;    //  CCCCOC(=O)C(O)C
-SPC3516 = IGNORE ;    //  CCCCOC(=O)C=O
-SPC3517 = IGNORE ;    //  CCCCOC(=O)CO
-SPC3518 = IGNORE ;    //  CCCCOC(O)C(=O)C
-SPC3519 = IGNORE ;    //  CCCCOC(O)CO
-SPC3520 = IGNORE ;    //  CCCCOC(ON(=O)=O)CO
-SPC3521 = IGNORE ;    //  CCCCOC(OO)C(=O)C
-SPC3522 = IGNORE ;    //  CCCCOC(OO)CO
-SPC3523 = IGNORE ;    //  CCCCOC(O[O])C(=O)C
-SPC3524 = IGNORE ;    //  CCCCOC(O[O])C(O)C
-SPC3525 = IGNORE ;    //  CCCCOC(O[O])CO
-SPC3526 = IGNORE ;    //  CCCCOC([O])C(=O)C
-SPC3527 = IGNORE ;    //  CCCCOC([O])C(O)C
-SPC3528 = IGNORE ;    //  CCCCOC([O])CO
-SPC3529 = IGNORE ;    //  CCCCOC=O
-SPC3530 = IGNORE ;    //  CCCCOCC(=O)C
-SPC3531 = IGNORE ;    //  CCCCOCC(=O)O
-SPC3532 = IGNORE ;    //  CCCCOCC(=O)OO
-SPC3533 = IGNORE ;    //  CCCCOCC(=O)OON(=O)=O
-SPC3534 = IGNORE ;    //  CCCCOCC(=O)O[O]
-SPC3535 = IGNORE ;    //  CCCCOCC(O)C
-SPC3536 = IGNORE ;    //  CCCCOCC=O
-SPC3537 = IGNORE ;    //  CCCCOCCO
-SPC3538 = IGNORE ;    //  CCCCOCO
-SPC3539 = IGNORE ;    //  CCCCOCOO
-SPC3540 = IGNORE ;    //  CCCCOCO[O]
-SPC3541 = IGNORE ;    //  CCCCOC[O]
-SPC3542 = IGNORE ;    //  CCCCON(=O)=O
-SPC3543 = IGNORE ;    //  CCCCOO
-SPC3544 = IGNORE ;    //  CCCCO[O]
-SPC3545 = IGNORE ;    //  CCCC[O]
-SPC3546 = IGNORE ;    //  CCCL
-SPC3547 = IGNORE ;    //  CCCO
-SPC3548 = IGNORE ;    //  CCCOC(=O)C
-SPC3549 = IGNORE ;    //  CCCON(=O)=O
-SPC3550 = IGNORE ;    //  CCCOO
-SPC3551 = IGNORE ;    //  CCCO[O]
-SPC3552 = IGNORE ;    //  CCC[O]
-SPC3553 = IGNORE ;    //  CCC\C=C\C
-SPC3554 = IGNORE ;    //  CCL
-SPC3555 = IGNORE ;    //  CCO
-SPC3556 = IGNORE ;    //  CCOC(=O)C
-SPC3557 = IGNORE ;    //  CCOC(=O)C=O
-SPC3558 = IGNORE ;    //  CCOC(=O)CO
-SPC3559 = IGNORE ;    //  CCOC(=O)COO
-SPC3560 = IGNORE ;    //  CCOC(=O)CO[O]
-SPC3561 = IGNORE ;    //  CCOC(=O)C[O]
-SPC3562 = IGNORE ;    //  CCOC(C)(C)C
-SPC3563 = IGNORE ;    //  CCOC(C)(C)C(=O)OO
-SPC3564 = IGNORE ;    //  CCOC(C)(C)C(=O)OON(=O)=O
-SPC3565 = IGNORE ;    //  CCOC(C)(C)C(=O)O[O]
-SPC3566 = IGNORE ;    //  CCOC(C)(C)C=O
-SPC3567 = IGNORE ;    //  CCOC(C)(C)CO
-SPC3568 = IGNORE ;    //  CCOC(C)(C)CON(=O)=O
-SPC3569 = IGNORE ;    //  CCOC(C)(C)COO
-SPC3570 = IGNORE ;    //  CCOC(C)(C)CO[O]
-SPC3571 = IGNORE ;    //  CCOC(C)(C)C[O]
-SPC3572 = IGNORE ;    //  CCOC(O)(C)C
-SPC3573 = IGNORE ;    //  CCOC(O)CO
-SPC3574 = IGNORE ;    //  CCOC(ON(=O)=O)CO
-SPC3575 = IGNORE ;    //  CCOC(OO)(C)C
-SPC3576 = IGNORE ;    //  CCOC(OO)CO
-SPC3577 = IGNORE ;    //  CCOC(O[O])(C)C
-SPC3578 = IGNORE ;    //  CCOC(O[O])C
-SPC3579 = IGNORE ;    //  CCOC(O[O])CO
-SPC3580 = IGNORE ;    //  CCOC([O])(C)C
-SPC3581 = IGNORE ;    //  CCOC([O])C
-SPC3582 = IGNORE ;    //  CCOC([O])CO
-SPC3583 = IGNORE ;    //  CCOC=O
-SPC3584 = IGNORE ;    //  CCOCC
-SPC3585 = IGNORE ;    //  CCOCC(=O)O
-SPC3586 = IGNORE ;    //  CCOCC(=O)OO
-SPC3587 = IGNORE ;    //  CCOCC(=O)OON(=O)=O
-SPC3588 = IGNORE ;    //  CCOCC(=O)O[O]
-SPC3589 = IGNORE ;    //  CCOCC=O
-SPC3590 = IGNORE ;    //  CCOCCO
-SPC3591 = IGNORE ;    //  CCOCCON(=O)=O
-SPC3592 = IGNORE ;    //  CCOCCOO
-SPC3593 = IGNORE ;    //  CCOCCO[O]
-SPC3594 = IGNORE ;    //  CCOCC[O]
-SPC3595 = IGNORE ;    //  CCOCN(=O)=O
-SPC3596 = IGNORE ;    //  CCOCO
-SPC3597 = IGNORE ;    //  CCOCOO
-SPC3598 = IGNORE ;    //  CCOCO[O]
-SPC3599 = IGNORE ;    //  CCOC[O]
-SPC3600 = IGNORE ;    //  CCON(=O)=O
-SPC3601 = IGNORE ;    //  CCOO
-SPC3602 = IGNORE ;    //  CCO[O]
-SPC3603 = IGNORE ;    //  CC[O]
-SPC3604 = IGNORE ;    //  CC\C=C\C
-SPC3605 = IGNORE ;    //  CCc(c1)c(O)c(C)cc1CC
-SPC3606 = IGNORE ;    //  CCc(c1)c(OO)c(O)cc1C
-SPC3607 = IGNORE ;    //  CCc(c1)c(O[O])c(O)cc1C
-SPC3608 = IGNORE ;    //  CCc(c1)c([O])c(C)cc1CC
-SPC3609 = IGNORE ;    //  CCc(c1)c([O])c(O)cc1C
-SPC3610 = IGNORE ;    //  CCc(c1)cc(C)cc1CC
-SPC3611 = IGNORE ;    //  CCc1c(O)c(N(=O)=O)cc(N(=O)=O)c1C
-SPC3612 = IGNORE ;    //  CCc1c(O)c(N(=O)=O)ccc1C
-SPC3613 = IGNORE ;    //  CCc1c(O)c(O)c(N(=O)=O)cc1C
-SPC3614 = IGNORE ;    //  CCc1cc(C)cc(c1)C(=O)C=O
-SPC3615 = IGNORE ;    //  CCc1cc(C)cc(c1)C(=O)CO
-SPC3616 = IGNORE ;    //  CCc1cc(C)cc(c1)C(=O)COO
-SPC3617 = IGNORE ;    //  CCc1cc(C)cc(c1)C(=O)CO[O]
-SPC3618 = IGNORE ;    //  CCc1cc(C)cc(c1)C(=O)C[O]
-SPC3619 = IGNORE ;    //  CL
-SPC3620 = IGNORE ;    //  CL/C=C/CL
-SPC3621 = IGNORE ;    //  CL/C=C\CL
-SPC3622 = IGNORE ;    //  CLC(CL)(CL)C(=O)OO
-SPC3623 = IGNORE ;    //  CLC(CL)(CL)C(=O)O[O]
-SPC3624 = IGNORE ;    //  CLC(CL)(CL)C=O
-SPC3625 = IGNORE ;    //  CLC(CL)(CL)COO
-SPC3626 = IGNORE ;    //  CLC(CL)(CL)CO[O]
-SPC3627 = IGNORE ;    //  CLC(CL)(CL)C[O]
-SPC3628 = IGNORE ;    //  CLC(CL)=C
-SPC3629 = IGNORE ;    //  CLC(CL)=C(CL)CL
-SPC3630 = IGNORE ;    //  CLC(CL)=CCL
-SPC3631 = IGNORE ;    //  CLC(CL)C(=O)CL
-SPC3632 = IGNORE ;    //  CLC(CL)C(=O)O
-SPC3633 = IGNORE ;    //  CLC(CL)C(=O)OO
-SPC3634 = IGNORE ;    //  CLC(CL)C(=O)O[O]
-SPC3635 = IGNORE ;    //  CLC(CL)C(CL)(CL)OO
-SPC3636 = IGNORE ;    //  CLC(CL)C(CL)(CL)O[O]
-SPC3637 = IGNORE ;    //  CLC(CL)C(CL)(CL)[O]
-SPC3638 = IGNORE ;    //  CLC(CL)C(CL)CL
-SPC3639 = IGNORE ;    //  CLC(CL)C(CL)OO
-SPC3640 = IGNORE ;    //  CLC(CL)C(CL)O[O]
-SPC3641 = IGNORE ;    //  CLC(CL)C(CL)[O]
-SPC3642 = IGNORE ;    //  CLC(CL)C(O)(CL)CL
-SPC3643 = IGNORE ;    //  CLC(CL)C(O)CL
-SPC3644 = IGNORE ;    //  CLC(CL)C=O
-SPC3645 = IGNORE ;    //  CLC(CL)CCL
-SPC3646 = IGNORE ;    //  CLC(CL)CL
-SPC3647 = IGNORE ;    //  CLC(CL)COO
-SPC3648 = IGNORE ;    //  CLC(CL)CO[O]
-SPC3649 = IGNORE ;    //  CLC(CL)C[O]
-SPC3650 = IGNORE ;    //  CLC(ON(=O)=O)C=O
-SPC3651 = IGNORE ;    //  CLC(ON(=O)=O)COO
-SPC3652 = IGNORE ;    //  CLC(ON(=O)=O)CO[O]
-SPC3653 = IGNORE ;    //  CLC(ON(=O)=O)C[O]
-SPC3654 = IGNORE ;    //  CLC=C
-SPC3655 = IGNORE ;    //  CLCC(=O)CL
-SPC3656 = IGNORE ;    //  CLCC(=O)O
-SPC3657 = IGNORE ;    //  CLCC(=O)OO
-SPC3658 = IGNORE ;    //  CLCC(=O)OON(=O)=O
-SPC3659 = IGNORE ;    //  CLCC(=O)O[O]
-SPC3660 = IGNORE ;    //  CLCC(CL)(CL)OO
-SPC3661 = IGNORE ;    //  CLCC(CL)(CL)O[O]
-SPC3662 = IGNORE ;    //  CLCC(CL)(CL)[O]
-SPC3663 = IGNORE ;    //  CLCC(CL)C(=O)O
-SPC3664 = IGNORE ;    //  CLCC(CL)C(=O)OO
-SPC3665 = IGNORE ;    //  CLCC(CL)C(=O)OON(=O)=O
-SPC3666 = IGNORE ;    //  CLCC(CL)C(=O)O[O]
-SPC3667 = IGNORE ;    //  CLCC(CL)C=O
-SPC3668 = IGNORE ;    //  CLCC(CL)COO
-SPC3669 = IGNORE ;    //  CLCC(CL)CO[O]
-SPC3670 = IGNORE ;    //  CLCC(CL)C[O]
-SPC3671 = IGNORE ;    //  CLCC(CL)OO
-SPC3672 = IGNORE ;    //  CLCC(CL)O[O]
-SPC3673 = IGNORE ;    //  CLCC(CL)[O]
-SPC3674 = IGNORE ;    //  CLCC(O)(CL)CL
-SPC3675 = IGNORE ;    //  CLCC(O)CL
-SPC3676 = IGNORE ;    //  CLCC=O
-SPC3677 = IGNORE ;    //  CLCCCL
-SPC3678 = IGNORE ;    //  CLCCL
-SPC3679 = IGNORE ;    //  CLCCOO
-SPC3680 = IGNORE ;    //  CLCCO[O]
-SPC3681 = IGNORE ;    //  CLCC[O]
-SPC3682 = IGNORE ;    //  CLCOO
-SPC3683 = IGNORE ;    //  CLCO[O]
-SPC3684 = IGNORE ;    //  CLC[O]
-SPC3685 = IGNORE ;    //  CO
-SPC3686 = IGNORE ;    //  COC
-SPC3687 = IGNORE ;    //  COC(=O)C=O
-SPC3688 = IGNORE ;    //  COC(=O)CC(=O)OO
-SPC3689 = IGNORE ;    //  COC(=O)CC(=O)O[O]
-SPC3690 = IGNORE ;    //  COC(=O)CC=O
-SPC3691 = IGNORE ;    //  COC(=O)CCC(=O)C(C)(C)CC=O
-SPC3692 = IGNORE ;    //  COC(=O)CCC(=O)OO
-SPC3693 = IGNORE ;    //  COC(=O)CCC(=O)O[O]
-SPC3694 = IGNORE ;    //  COC(=O)CCC(O)C(C)(C)CC=O
-SPC3695 = IGNORE ;    //  COC(=O)CCC(OO)C(C)(C)CC=O
-SPC3696 = IGNORE ;    //  COC(=O)CCC(O[O])C(C)(C)CC=O
-SPC3697 = IGNORE ;    //  COC(=O)CCC([O])C(C)(C)CC=O
-SPC3698 = IGNORE ;    //  COC(=O)CCC1C(=O)CC1(C)C
-SPC3699 = IGNORE ;    //  COC(=O)CCC1C(C(=O)O)CC1(C)C
-SPC3700 = IGNORE ;    //  COC(=O)CCC1C(C(=O)OO)CC1(C)C
-SPC3701 = IGNORE ;    //  COC(=O)CCC1C(C(=O)O[O])CC1(C)C
-SPC3702 = IGNORE ;    //  COC(=O)CCC1C(CC1(C)C)C(=O)C(=O)CC=O
-SPC3703 = IGNORE ;    //  COC(=O)CCC1C(CC1(C)C)C(=O)C(O)CC=O
-SPC3704 = IGNORE ;    //  COC(=O)CCC1C(CC1(C)C)C(=O)C(OO)CC=O
-SPC3705 = IGNORE ;    //  COC(=O)CCC1C(CC1(C)C)C(=O)C(O[O])CC=O
-SPC3706 = IGNORE ;    //  COC(=O)CCC1C(CC1(C)C)C(=O)C([O])CC=O
-SPC3707 = IGNORE ;    //  COC(=O)CCC1C(CC1(C)C)C(=O)CCC=O
-SPC3708 = IGNORE ;    //  COC(=O)CCC1C(CC1(C)C)C(=O)OO[N+](=O)[O-]
-SPC3709 = IGNORE ;    //  COC(=O)CCC1C(CC1(C)C)C(CCC=O)=C
-SPC3710 = IGNORE ;    //  COC(=O)CCC1C(CC1(C)C)C(O)(CO)CCC=O
-SPC3711 = IGNORE ;    //  COC(=O)CCC1C(CC1(C)C)C(OO)(CO)CCC=O
-SPC3712 = IGNORE ;    //  COC(=O)CCC1C(CC1(C)C)C(O[O])(CO)CCC=O
-SPC3713 = IGNORE ;    //  COC(=O)CCC1C(CC1(C)C)C([O])(CO)CCC=O
-SPC3714 = IGNORE ;    //  COC(=O)CCC1C(O)CC1(C)C
-SPC3715 = IGNORE ;    //  COC(=O)CCC1C(OO)CC1(C)C
-SPC3716 = IGNORE ;    //  COC(=O)CCC1C(O[N+](=O)[O-])CC1(C)C
-SPC3717 = IGNORE ;    //  COC(=O)CCC1C(O[O])CC1(C)C
-SPC3718 = IGNORE ;    //  COC(=O)CCC1C([O])CC1(C)C
-SPC3719 = IGNORE ;    //  COC(=O)CCC=O
-SPC3720 = IGNORE ;    //  COC(=O)CCOO
-SPC3721 = IGNORE ;    //  COC(=O)CCO[O]
-SPC3722 = IGNORE ;    //  COC(=O)CC[O]
-SPC3723 = IGNORE ;    //  COC(=O)CO
-SPC3724 = IGNORE ;    //  COC(=O)COO
-SPC3725 = IGNORE ;    //  COC(=O)CO[O]
-SPC3726 = IGNORE ;    //  COC(=O)C[O]
-SPC3727 = IGNORE ;    //  COC(=O)OC
-SPC3728 = IGNORE ;    //  COC(=O)OC=O
-SPC3729 = IGNORE ;    //  COC(=O)OCO
-SPC3730 = IGNORE ;    //  COC(=O)OCON(=O)=O
-SPC3731 = IGNORE ;    //  COC(=O)OCOO
-SPC3732 = IGNORE ;    //  COC(=O)OCO[O]
-SPC3733 = IGNORE ;    //  COC(=O)OC[O]
-SPC3734 = IGNORE ;    //  COC(C)(C)C
-SPC3735 = IGNORE ;    //  COC(C)(C)C(=O)O
-SPC3736 = IGNORE ;    //  COC(C)(C)C(=O)OO
-SPC3737 = IGNORE ;    //  COC(C)(C)C(=O)OON(=O)=O
-SPC3738 = IGNORE ;    //  COC(C)(C)C(=O)O[O]
-SPC3739 = IGNORE ;    //  COC(C)(C)C=O
-SPC3740 = IGNORE ;    //  COC(C)(C)CO
-SPC3741 = IGNORE ;    //  COC(C)(C)CON(=O)=O
-SPC3742 = IGNORE ;    //  COC(C)(C)COO
-SPC3743 = IGNORE ;    //  COC(C)(C)CO[O]
-SPC3744 = IGNORE ;    //  COC(C)(C)C[O]
-SPC3745 = IGNORE ;    //  COC(O)(C)C
-SPC3746 = IGNORE ;    //  COC(O)CO
-SPC3747 = IGNORE ;    //  COC(O)OC
-SPC3748 = IGNORE ;    //  COC(O)OC=O
-SPC3749 = IGNORE ;    //  COC(ON(=O)=O)CO
-SPC3750 = IGNORE ;    //  COC(ON(=O)=O)OC
-SPC3751 = IGNORE ;    //  COC(ON(=O)=O)OC=O
-SPC3752 = IGNORE ;    //  COC(OO)(C)C
-SPC3753 = IGNORE ;    //  COC(OO)CO
-SPC3754 = IGNORE ;    //  COC(OO)OC
-SPC3755 = IGNORE ;    //  COC(OO)OC=O
-SPC3756 = IGNORE ;    //  COC(O[O])(C)C
-SPC3757 = IGNORE ;    //  COC(O[O])C(=O)C
-SPC3758 = IGNORE ;    //  COC(O[O])CO
-SPC3759 = IGNORE ;    //  COC(O[O])OC
-SPC3760 = IGNORE ;    //  COC(O[O])OC=O
-SPC3761 = IGNORE ;    //  COC([O])(C)C
-SPC3762 = IGNORE ;    //  COC([O])C(=O)C
-SPC3763 = IGNORE ;    //  COC([O])CO
-SPC3764 = IGNORE ;    //  COC([O])OC
-SPC3765 = IGNORE ;    //  COC([O])OC=O
-SPC3766 = IGNORE ;    //  COC=O
-SPC3767 = IGNORE ;    //  COCC(=O)O
-SPC3768 = IGNORE ;    //  COCC(=O)OO
-SPC3769 = IGNORE ;    //  COCC(=O)OON(=O)=O
-SPC3770 = IGNORE ;    //  COCC(=O)O[O]
-SPC3771 = IGNORE ;    //  COCC=O
-SPC3772 = IGNORE ;    //  COCCO
-SPC3773 = IGNORE ;    //  COCO
-SPC3774 = IGNORE ;    //  COCOC
-SPC3775 = IGNORE ;    //  COCOC=O
-SPC3776 = IGNORE ;    //  COCOCO
-SPC3777 = IGNORE ;    //  COCOCON(=O)=O
-SPC3778 = IGNORE ;    //  COCOCOO
-SPC3779 = IGNORE ;    //  COCOCO[O]
-SPC3780 = IGNORE ;    //  COCOC[O]
-SPC3781 = IGNORE ;    //  COCON(=O)=O
-SPC3782 = IGNORE ;    //  COCOO
-SPC3783 = IGNORE ;    //  COCO[O]
-SPC3784 = IGNORE ;    //  COC[O]
-SPC3785 = IGNORE ;    //  CON(=O)=O
-SPC3786 = IGNORE ;    //  COO
-SPC3787 = IGNORE ;    //  COON(=O)=O
-SPC3788 = IGNORE ;    //  CO[O]
-SPC3789 = IGNORE ;    //  CS(=O)(=O)C
-SPC3790 = IGNORE ;    //  CS(=O)(=O)O
-SPC3791 = IGNORE ;    //  CS(=O)(=O)[O]
-SPC3792 = IGNORE ;    //  CS(=O)C
-SPC3793 = IGNORE ;    //  CS(=O)O
-SPC3794 = IGNORE ;    //  CS(=O)OO
-SPC3795 = IGNORE ;    //  CS(=O)O[O]
-SPC3796 = IGNORE ;    //  CSC
-SPC3797 = IGNORE ;    //  CSC=O
-SPC3798 = IGNORE ;    //  CSCO
-SPC3799 = IGNORE ;    //  CSCOO
-SPC3800 = IGNORE ;    //  CSCO[O]
-SPC3801 = IGNORE ;    //  CSC[O]
-SPC3802 = IGNORE ;    //  CSO[O]
-SPC3803 = IGNORE ;    //  CS[O]
-SPC3804 = IGNORE ;    //  C[O]
-SPC3805 = IGNORE ;    //  C[S]
-SPC3806 = IGNORE ;    //  C[S](=O)=O
-SPC3807 = IGNORE ;    //  Cc1c(N(=O)=O)c(N(=O)=O)c(C)c(O)c1C
-SPC3808 = IGNORE ;    //  Cc1c(N(=O)=O)cc(C)c(O)c1C
-SPC3809 = IGNORE ;    //  Cc1c(N(=O)=O)cc(C)c(OO)c1C
-SPC3810 = IGNORE ;    //  Cc1c(N(=O)=O)cc(C)c(O[O])c1C
-SPC3811 = IGNORE ;    //  Cc1c(N(=O)=O)cc(C)c([O])c1C
-SPC3812 = IGNORE ;    //  Cc1c(O)c(C)ccc1C
-SPC3813 = IGNORE ;    //  Cc1c(O)c(N(=O)=O)c(N(=O)=O)c(C)c1C
-SPC3814 = IGNORE ;    //  Cc1c(O)c(N(=O)=O)cc(N(=O)=O)c1C
-SPC3815 = IGNORE ;    //  Cc1c(O)c(N(=O)=O)ccc1C
-SPC3816 = IGNORE ;    //  Cc1c(O)c(O)c(C)c(N(=O)=O)c1C
-SPC3817 = IGNORE ;    //  Cc1c(O)c(O)c(C)cc1C
-SPC3818 = IGNORE ;    //  Cc1c(O)c(O)c(N(=O)=O)c(C)c1C
-SPC3819 = IGNORE ;    //  Cc1c(O)c(O)c(N(=O)=O)cc1C
-SPC3820 = IGNORE ;    //  Cc1c(OO)c(O)c(C)cc1C
-SPC3821 = IGNORE ;    //  Cc1c(OO)cc(C)cc1C
-SPC3822 = IGNORE ;    //  Cc1c(O[O])c(O)c(C)cc1C
-SPC3823 = IGNORE ;    //  Cc1c(O[O])cc(C)cc1C
-SPC3824 = IGNORE ;    //  Cc1c([O])c(C)ccc1C
-SPC3825 = IGNORE ;    //  Cc1c([O])c(O)c(C)cc1C
-SPC3826 = IGNORE ;    //  Cc1cc(N(=O)=O)c(O)c(C)c1C
-SPC3827 = IGNORE ;    //  Cc1cc(N(=O)=O)c(OO)c(C)c1C
-SPC3828 = IGNORE ;    //  Cc1cc(N(=O)=O)c(OO)c(c1)CC
-SPC3829 = IGNORE ;    //  Cc1cc(N(=O)=O)c(O[O])c(C)c1C
-SPC3830 = IGNORE ;    //  Cc1cc(N(=O)=O)c(O[O])c(c1)CC
-SPC3831 = IGNORE ;    //  Cc1cc(N(=O)=O)c([O])c(C)c1C
-SPC3832 = IGNORE ;    //  Cc1cc(N(=O)=O)c([O])c(c1)CC
-SPC3833 = IGNORE ;    //  Cc1cc(O)c(N(=O)=O)cc1C
-SPC3834 = IGNORE ;    //  Cc1cc(O)c(O)c(C)c1C
-SPC3835 = IGNORE ;    //  Cc1cc(O)c(OO)c(C)c1C
-SPC3836 = IGNORE ;    //  Cc1cc(O)c(O[O])c(C)c1C
-SPC3837 = IGNORE ;    //  Cc1cc(O)c([O])c(C)c1C
-SPC3838 = IGNORE ;    //  Cc1ccc(C(=O)O)cc1
-SPC3839 = IGNORE ;    //  Cc1ccc(C(=O)O)cc1C
-SPC3840 = IGNORE ;    //  Cc1ccc(C(=O)OO)cc1
-SPC3841 = IGNORE ;    //  Cc1ccc(C(=O)OO)cc1C
-SPC3842 = IGNORE ;    //  Cc1ccc(C(=O)OON(=O)=O)cc1
-SPC3843 = IGNORE ;    //  Cc1ccc(C(=O)O[O])cc1
-SPC3844 = IGNORE ;    //  Cc1ccc(C(=O)O[O])cc1C
-SPC3845 = IGNORE ;    //  Cc1ccc(C)cc1C
-SPC3846 = IGNORE ;    //  Cc1ccc(C=O)cc1
-SPC3847 = IGNORE ;    //  Cc1ccc(C=O)cc1C
-SPC3848 = IGNORE ;    //  Cc1ccc(CO)cc1
-SPC3849 = IGNORE ;    //  Cc1ccc(CO)cc1C
-SPC3850 = IGNORE ;    //  Cc1ccc(CON(=O)=O)cc1
-SPC3851 = IGNORE ;    //  Cc1ccc(CON(=O)=O)cc1C
-SPC3852 = IGNORE ;    //  Cc1ccc(COO)cc1
-SPC3853 = IGNORE ;    //  Cc1ccc(COO)cc1C
-SPC3854 = IGNORE ;    //  Cc1ccc(CO[O])cc1
-SPC3855 = IGNORE ;    //  Cc1ccc(CO[O])cc1C
-SPC3856 = IGNORE ;    //  Cc1ccc(C[O])cc1
-SPC3857 = IGNORE ;    //  Cc1ccc(C[O])cc1C
-SPC3858 = IGNORE ;    //  Cc1ccc(N(=O)=O)c(OO)c1C
-SPC3859 = IGNORE ;    //  Cc1ccc(N(=O)=O)c(OO)c1CC
-SPC3860 = IGNORE ;    //  Cc1ccc(N(=O)=O)c(O[O])c1C
-SPC3861 = IGNORE ;    //  Cc1ccc(N(=O)=O)c(O[O])c1CC
-SPC3862 = IGNORE ;    //  Cc1ccc(N(=O)=O)c([O])c1C
-SPC3863 = IGNORE ;    //  Cc1ccc(N(=O)=O)c([O])c1CC
-SPC3864 = IGNORE ;    //  Cc1ccc(O)c(C)c1C
-SPC3865 = IGNORE ;    //  Cc1ccc(O)c(O)c1C
-SPC3866 = IGNORE ;    //  Cc1ccc(O)c(O)c1CC
-SPC3867 = IGNORE ;    //  Cc1ccc(O)c(OO)c1C
-SPC3868 = IGNORE ;    //  Cc1ccc(O)c(OO)c1CC
-SPC3869 = IGNORE ;    //  Cc1ccc(O)c(O[O])c1C
-SPC3870 = IGNORE ;    //  Cc1ccc(O)c(O[O])c1CC
-SPC3871 = IGNORE ;    //  Cc1ccc(O)c([O])c1C
-SPC3872 = IGNORE ;    //  Cc1ccc(O)c([O])c1CC
-SPC3873 = IGNORE ;    //  Cc1ccc(OO)c(C)c1C
-SPC3874 = IGNORE ;    //  Cc1ccc(OO)cc1C
-SPC3875 = IGNORE ;    //  Cc1ccc(O[O])c(C)c1C
-SPC3876 = IGNORE ;    //  Cc1ccc(O[O])cc1C
-SPC3877 = IGNORE ;    //  Cc1ccc([O])c(C)c1C
-SPC3878 = IGNORE ;    //  Cc1ccc([O])cc1C
-SPC3879 = IGNORE ;    //  Cc1cccc(C(=O)O)c1C
-SPC3880 = IGNORE ;    //  Cc1cccc(C(=O)OO)c1C
-SPC3881 = IGNORE ;    //  Cc1cccc(C(=O)O[O])c1C
-SPC3882 = IGNORE ;    //  Cc1cccc(C)c1C
-SPC3883 = IGNORE ;    //  Cc1cccc(C=O)c1C
-SPC3884 = IGNORE ;    //  Cc1cccc(CO)c1C
-SPC3885 = IGNORE ;    //  Cc1cccc(CON(=O)=O)c1C
-SPC3886 = IGNORE ;    //  Cc1cccc(COO)c1C
-SPC3887 = IGNORE ;    //  Cc1cccc(CO[O])c1C
-SPC3888 = IGNORE ;    //  Cc1cccc(C[O])c1C
-SPC3889 = IGNORE ;    //  Cc1cccc(O)c1C
-SPC3890 = IGNORE ;    //  Cc1cccc(O)c1CC
-SPC3891 = IGNORE ;    //  Cc1cccc(OO)c1C
-SPC3892 = IGNORE ;    //  Cc1cccc(OO)c1CC
-SPC3893 = IGNORE ;    //  Cc1cccc(O[O])c1C
-SPC3894 = IGNORE ;    //  Cc1cccc(O[O])c1CC
-SPC3895 = IGNORE ;    //  Cc1cccc([O])c1C
-SPC3896 = IGNORE ;    //  Cc1cccc([O])c1CC
-SPC3897 = IGNORE ;    //  Cc1cccc(c1)C(=O)O
-SPC3898 = IGNORE ;    //  Cc1cccc(c1)C(=O)OO
-SPC3899 = IGNORE ;    //  Cc1cccc(c1)C(=O)O[O]
-SPC3900 = IGNORE ;    //  Cc1cccc(c1)C=O
-SPC3901 = IGNORE ;    //  Cc1cccc(c1)CO
-SPC3902 = IGNORE ;    //  Cc1cccc(c1)CON(=O)=O
-SPC3903 = IGNORE ;    //  Cc1cccc(c1)COO
-SPC3904 = IGNORE ;    //  Cc1cccc(c1)CO[O]
-SPC3905 = IGNORE ;    //  Cc1cccc(c1)C[O]
-SPC3906 = IGNORE ;    //  Cc1ccccc1C
-SPC3907 = IGNORE ;    //  Cc1ccccc1C(=O)C
-SPC3908 = IGNORE ;    //  Cc1ccccc1C(=O)C=O
-SPC3909 = IGNORE ;    //  Cc1ccccc1C(=O)CO
-SPC3910 = IGNORE ;    //  Cc1ccccc1C(=O)COO
-SPC3911 = IGNORE ;    //  Cc1ccccc1C(=O)CO[O]
-SPC3912 = IGNORE ;    //  Cc1ccccc1C(=O)C[O]
-SPC3913 = IGNORE ;    //  Cc1ccccc1C(=O)O
-SPC3914 = IGNORE ;    //  Cc1ccccc1C(=O)OO
-SPC3915 = IGNORE ;    //  Cc1ccccc1C(=O)O[O]
-SPC3916 = IGNORE ;    //  Cc1ccccc1C(O)C
-SPC3917 = IGNORE ;    //  Cc1ccccc1C(ON(=O)=O)C
-SPC3918 = IGNORE ;    //  Cc1ccccc1C(OO)C
-SPC3919 = IGNORE ;    //  Cc1ccccc1C(O[O])C
-SPC3920 = IGNORE ;    //  Cc1ccccc1C([O])C
-SPC3921 = IGNORE ;    //  Cc1ccccc1C=O
-SPC3922 = IGNORE ;    //  Cc1ccccc1CC
-SPC3923 = IGNORE ;    //  Cc1ccccc1CO
-SPC3924 = IGNORE ;    //  Cc1ccccc1CON(=O)=O
-SPC3925 = IGNORE ;    //  Cc1ccccc1COO
-SPC3926 = IGNORE ;    //  Cc1ccccc1CO[O]
-SPC3927 = IGNORE ;    //  Cc1ccccc1C[O]
-SPC3928 = IGNORE ;    //  H2
-SPC3929 = IGNORE ;    //  H2O2
-SPC3930 = IGNORE ;    //  HCL
-SPC3931 = IGNORE ;    //  HNO3
-SPC3932 = IGNORE ;    //  HNO4
-SPC3933 = IGNORE ;    //  HO2
-SPC3934 = IGNORE ;    //  HOCL
-SPC3935 = IGNORE ;    //  HONO
-SPC3936 = IGNORE ;    //  HSO3
-SPC3937 = IGNORE ;    //  N2O5
-SPC3938 = IGNORE ;    //  NO
-SPC3939 = IGNORE ;    //  NO2
-SPC3940 = IGNORE ;    //  NO3
-SPC3941 = IGNORE ;    //  O.[O]C(=O)CCC(=O)C1CC(C)(C)C1CCC(=O)O
-SPC3942 = IGNORE ;    //  O1C(=O)C=CC1
-SPC3943 = IGNORE ;    //  O1C(=O)C=CC1=O
-SPC3944 = IGNORE ;    //  O1C(=O)C=CC1C
-SPC3945 = IGNORE ;    //  O1C(=O)C=CC1C(C)C
-SPC3946 = IGNORE ;    //  O1C(=O)C=CC1CC
-SPC3947 = IGNORE ;    //  O1C(=O)C=CC1CCC
-SPC3948 = IGNORE ;    //  O1D
-SPC3949 = IGNORE ;    //  O2OC(C)(C1O)C(O)([O])C=CC12C
-SPC3950 = IGNORE ;    //  O2OC(C)(C1ON(=O)=O)C(O)([O])C=CC12C
-SPC3951 = IGNORE ;    //  O3
-SPC3952 = IGNORE ;    //  O3PX
-SPC3953 = IGNORE ;    //  O=C(C(CO)C(C)=C)OO[N+](=O)[O-]
-SPC3954 = IGNORE ;    //  O=C(C(CO)C(C)=O)OO[N+](=O)[O-]
-SPC3955 = IGNORE ;    //  O=C(CL)C(=O)CL
-SPC3956 = IGNORE ;    //  O=C(CL)C(CL)(CL)OO
-SPC3957 = IGNORE ;    //  O=C(CL)C(CL)(CL)O[O]
-SPC3958 = IGNORE ;    //  O=C(CL)C(CL)(CL)[O]
-SPC3959 = IGNORE ;    //  O=C(CL)C(CL)OO
-SPC3960 = IGNORE ;    //  O=C(CL)C(CL)O[O]
-SPC3961 = IGNORE ;    //  O=C(CL)C(CL)[O]
-SPC3962 = IGNORE ;    //  O=C(CL)C=O
-SPC3963 = IGNORE ;    //  O=C(CL)CL
-SPC3964 = IGNORE ;    //  O=C(CL)CON(=O)=O
-SPC3965 = IGNORE ;    //  O=C(CL)COO
-SPC3966 = IGNORE ;    //  O=C(CL)CO[O]
-SPC3967 = IGNORE ;    //  O=C(CL)C[O]
-SPC3968 = IGNORE ;    //  O=C(O)C(=O)CC(CO)C(C)=C
-SPC3969 = IGNORE ;    //  O=C(O)C(=O)CC=O
-SPC3970 = IGNORE ;    //  O=C(O)C(=O)OCC=O
-SPC3971 = IGNORE ;    //  O=C(O)C(C=O)C(C)(C)C=O
-SPC3972 = IGNORE ;    //  O=C(O)C(O)C(ON(=O)=O)(C)C=O
-SPC3973 = IGNORE ;    //  O=C(O)C(O)CC(CO)C(C)=C
-SPC3974 = IGNORE ;    //  O=C(O)C(ON(=O)=O)C(O)(C)CON(=O)=O
-SPC3975 = IGNORE ;    //  O=C(O)C(OO)CC(CO)C(C)=C
-SPC3976 = IGNORE ;    //  O=C(O)C(OO)CC=O
-SPC3977 = IGNORE ;    //  O=C(O)C(O[O])CC(CO)C(C)=C
-SPC3978 = IGNORE ;    //  O=C(O)C(O[O])CC=O
-SPC3979 = IGNORE ;    //  O=C(O)C([O])CC(CO)C(C)=C
-SPC3980 = IGNORE ;    //  O=C(O)C([O])CC=O
-SPC3981 = IGNORE ;    //  O=C(O)C1CC(C(=O)OO)C1(C)C
-SPC3982 = IGNORE ;    //  O=C(O)C1CC(C(=O)O[O])C1(C)C
-SPC3983 = IGNORE ;    //  O=C(O)C1CC(C=O)C1(C)C
-SPC3984 = IGNORE ;    //  O=C(O)C1CC(CON(=O)=O)C1(C)C
-SPC3985 = IGNORE ;    //  O=C(O)C1CC(COO)C1(C)C
-SPC3986 = IGNORE ;    //  O=C(O)C1CC(CO[O])C1(C)C
-SPC3987 = IGNORE ;    //  O=C(O)C1CC(C[O])C1(C)C
-SPC3988 = IGNORE ;    //  O=C(O)C1OC1(C)C=O
-SPC3989 = IGNORE ;    //  O=C(O)C1OC1C=CC=O
-SPC3990 = IGNORE ;    //  O=C(O)C1OC1C=O
-SPC3991 = IGNORE ;    //  O=C(O)C=C
-SPC3992 = IGNORE ;    //  O=C(O)C=C(C)C=O
-SPC3993 = IGNORE ;    //  O=C(O)C=C(C)CON(=O)=O
-SPC3994 = IGNORE ;    //  O=C(O)C=C(C=O)CC
-SPC3995 = IGNORE ;    //  O=C(O)C=C(N(=O)=O)C=O
-SPC3996 = IGNORE ;    //  O=C(O)C=CC=O
-SPC3997 = IGNORE ;    //  O=C(O)C=CCON(=O)=O
-SPC3998 = IGNORE ;    //  O=C(O)C=O
-SPC3999 = IGNORE ;    //  O=C(O)CC(=O)C(C)(C)C=O
-SPC4000 = IGNORE ;    //  O=C(O)CC(=O)C(C=O)C(C)(C)C=O
-SPC4001 = IGNORE ;    //  O=C(O)CC(=O)CCC=O
-SPC4002 = IGNORE ;    //  O=C(O)CC(CC=O)C(C)=C
-SPC4003 = IGNORE ;    //  O=C(O)CC(CO)C(C)=C
-SPC4004 = IGNORE ;    //  O=C(O)CC(O)CCC=O
-SPC4005 = IGNORE ;    //  O=C(O)CC=O
-SPC4006 = IGNORE ;    //  O=C(O)CCC(=O)C(C)(C)C=O
-SPC4007 = IGNORE ;    //  O=C(O)CCC(=O)C(C)(C)CC(=O)C(CCO)=C
-SPC4008 = IGNORE ;    //  O=C(O)CCC(=O)C(CC1(C)C)C1CC=O
-SPC4009 = IGNORE ;    //  O=C(O)CCC(=O)CC=O
-SPC4010 = IGNORE ;    //  O=C(O)CCC(C(=O)C)CC(=O)OO
-SPC4011 = IGNORE ;    //  O=C(O)CCC(C(=O)C)CC(=O)O[O]
-SPC4012 = IGNORE ;    //  O=C(O)CCC(C(=O)C)CC=O
-SPC4013 = IGNORE ;    //  O=C(O)CCC(C=O)C(=O)C
-SPC4014 = IGNORE ;    //  O=C(O)CCC(C=O)C(C)=C
-SPC4015 = IGNORE ;    //  O=C(O)CCC(CC(=O)O)C(C)=C
-SPC4016 = IGNORE ;    //  O=C(O)CCC(CC(=O)OO)C(C)=C
-SPC4017 = IGNORE ;    //  O=C(O)CCC(CC(=O)O[O])C(C)=C
-SPC4018 = IGNORE ;    //  O=C(O)CCC(CC=O)C(C)=C
-SPC4019 = IGNORE ;    //  O=C(O)CCC(CO)C(C)=C
-SPC4020 = IGNORE ;    //  O=C(O)CCC(COO)C(=O)C
-SPC4021 = IGNORE ;    //  O=C(O)CCC(COO)C(C)=C
-SPC4022 = IGNORE ;    //  O=C(O)CCC(CO[O])C(=O)C
-SPC4023 = IGNORE ;    //  O=C(O)CCC(CO[O])C(C)=C
-SPC4024 = IGNORE ;    //  O=C(O)CCC(C[O])C(=O)C
-SPC4025 = IGNORE ;    //  O=C(O)CCC(C[O])C(C)=C
-SPC4026 = IGNORE ;    //  O=C(O)CCC(O)C(C)(C)CC(=O)C(CCO)=C
-SPC4027 = IGNORE ;    //  O=C(O)CCC(OO)C(C)(C)CC(=O)C(CCO)=C
-SPC4028 = IGNORE ;    //  O=C(O)CCC(O[O])C(C)(C)CC(=O)C(CCO)=C
-SPC4029 = IGNORE ;    //  O=C(O)CCC([O])C(C)(C)CC(=O)C(CCO)=C
-SPC4030 = IGNORE ;    //  O=C(O)CCC1C(CC1(C)C)C(=O)CC=O
-SPC4031 = IGNORE ;    //  O=C(O)CCC1C(CC1(C)C)C(=O)CCC(=O)O
-SPC4032 = IGNORE ;    //  O=C(O)CCC1C(CC1(C)C)C(=O)CCC(=O)OO
-SPC4033 = IGNORE ;    //  O=C(O)CCC1C(CC1(C)C)C(=O)CCC=O
-SPC4034 = IGNORE ;    //  O=C(O)CCC1C(CC1(C)C)C(=O)CCOO
-SPC4035 = IGNORE ;    //  O=C(O)CCC1C(CC1(C)C)C(=O)CCO[O]
-SPC4036 = IGNORE ;    //  O=C(O)CCC1C(CC1(C)C)C(=O)CC[O]
-SPC4037 = IGNORE ;    //  O=C(O)CCC1C(CC1(C)C)C(CC=O)=C
-SPC4038 = IGNORE ;    //  O=C(O)CCC1C(CC1(C)C)C(CCC(=O)O)=C
-SPC4039 = IGNORE ;    //  O=C(O)CCC1C(CC1(C)C)C(CCC(=O)OO)=C
-SPC4040 = IGNORE ;    //  O=C(O)CCC1C(CC1(C)C)C(CCC(=O)O[O])=C
-SPC4041 = IGNORE ;    //  O=C(O)CCC1C(CC1(C)C)C(CCC=O)=C
-SPC4042 = IGNORE ;    //  O=C(O)CCC1C(CC1(C)C)C(CCO)=C
-SPC4043 = IGNORE ;    //  O=C(O)CCC1C(CC1(C)C)C(CCOO)=C
-SPC4044 = IGNORE ;    //  O=C(O)CCC1C(CC1(C)C)C(CCO[O])=C
-SPC4045 = IGNORE ;    //  O=C(O)CCC1C(CC1(C)C)C(CC[O])=C
-SPC4046 = IGNORE ;    //  O=C(O)CCC1C(O)(CC1(C)C)C(CCO)=C
-SPC4047 = IGNORE ;    //  O=C(O)CCC1C(OO)(CC1(C)C)C(CCO)=C
-SPC4048 = IGNORE ;    //  O=C(O)CCC1C(O[O])(CC1(C)C)C(CCO)=C
-SPC4049 = IGNORE ;    //  O=C(O)CCC1C([O])(CC1(C)C)C(CCO)=C
-SPC4050 = IGNORE ;    //  O=C(O)CCC=O
-SPC4051 = IGNORE ;    //  O=C(O)CON(=O)=O
-SPC4052 = IGNORE ;    //  O=C(OO)C(C=O)C(C)(C)C=O
-SPC4053 = IGNORE ;    //  O=C(OO)C(O)C(ON(=O)=O)(C)C=O
-SPC4054 = IGNORE ;    //  O=C(OO)C(O)C=C
-SPC4055 = IGNORE ;    //  O=C(OO)C(O)C=O
-SPC4056 = IGNORE ;    //  O=C(OO)C1OC1(C)C=O
-SPC4057 = IGNORE ;    //  O=C(OO)C1OC1C=CC=O
-SPC4058 = IGNORE ;    //  O=C(OO)C1OC1C=O
-SPC4059 = IGNORE ;    //  O=C(OO)C=C
-SPC4060 = IGNORE ;    //  O=C(OO)C=C(C(C)C)C(=O)C(O)C=O
-SPC4061 = IGNORE ;    //  O=C(OO)C=C(C)C(=O)C(O)C=O
-SPC4062 = IGNORE ;    //  O=C(OO)C=C(C)C(=O)C=O
-SPC4063 = IGNORE ;    //  O=C(OO)C=C(C)C=O
-SPC4064 = IGNORE ;    //  O=C(OO)C=C(CC)C(=O)C(O)C=O
-SPC4065 = IGNORE ;    //  O=C(OO)C=C(CCC)C(=O)C(O)C=O
-SPC4066 = IGNORE ;    //  O=C(OO)C=CC(=O)C(O)C=O
-SPC4067 = IGNORE ;    //  O=C(OO)C=CC(=O)C=O
-SPC4068 = IGNORE ;    //  O=C(OO)C=CC=O
-SPC4069 = IGNORE ;    //  O=C(OO)C=O
-SPC4070 = IGNORE ;    //  O=C(OO)CC(=O)C(=O)CC=O
-SPC4071 = IGNORE ;    //  O=C(OO)CC(=O)C(C)(C)C=O
-SPC4072 = IGNORE ;    //  O=C(OO)CC(=O)C(C=O)C(C)(C)C=O
-SPC4073 = IGNORE ;    //  O=C(OO)CC(=O)C=O
-SPC4074 = IGNORE ;    //  O=C(OO)CC(=O)CC(=O)C=O
-SPC4075 = IGNORE ;    //  O=C(OO)CC(=O)CC=O
-SPC4076 = IGNORE ;    //  O=C(OO)CC(=O)CCC=O
-SPC4077 = IGNORE ;    //  O=C(OO)CC(CC=O)C(C)=C
-SPC4078 = IGNORE ;    //  O=C(OO)CC(CO)C(C)=C
-SPC4079 = IGNORE ;    //  O=C(OO)CC(O)CCC=O
-SPC4080 = IGNORE ;    //  O=C(OO)CC=O
-SPC4081 = IGNORE ;    //  O=C(OO)CCC(=O)C(C)(C)C=O
-SPC4082 = IGNORE ;    //  O=C(OO)CCC(=O)C(CC1(C)C)C1CC=O
-SPC4083 = IGNORE ;    //  O=C(OO)CCC(=O)CC=O
-SPC4084 = IGNORE ;    //  O=C(OO)CCC(C(=O)C)CC=O
-SPC4085 = IGNORE ;    //  O=C(OO)CCC(CC=O)C(C)=C
-SPC4086 = IGNORE ;    //  O=C(OO)CCC1C(CC1(C)C)C(=O)CCC=O
-SPC4087 = IGNORE ;    //  O=C(OO)CCC1C(CC1(C)C)C(CCC=O)=C
-SPC4088 = IGNORE ;    //  O=C(OO)CCC=O
-SPC4089 = IGNORE ;    //  O=C(OO)CCCCC=O
-SPC4090 = IGNORE ;    //  O=C(OO)COC=O
-SPC4091 = IGNORE ;    //  O=C(OON(=O)=O)C(C=O)C(C)(C)C=O
-SPC4092 = IGNORE ;    //  O=C(OON(=O)=O)C(O)C(ON(=O)=O)(C)C=O
-SPC4093 = IGNORE ;    //  O=C(OON(=O)=O)C(O)C=C
-SPC4094 = IGNORE ;    //  O=C(OON(=O)=O)C(O)C=O
-SPC4095 = IGNORE ;    //  O=C(OON(=O)=O)C1OC1(C)C=O
-SPC4096 = IGNORE ;    //  O=C(OON(=O)=O)C1OC1C=CC=O
-SPC4097 = IGNORE ;    //  O=C(OON(=O)=O)C1OC1C=O
-SPC4098 = IGNORE ;    //  O=C(OON(=O)=O)C=C
-SPC4099 = IGNORE ;    //  O=C(OON(=O)=O)C=C(C(C)C)C(=O)C(O)C=O
-SPC4100 = IGNORE ;    //  O=C(OON(=O)=O)C=C(C)C(=O)C(O)C=O
-SPC4101 = IGNORE ;    //  O=C(OON(=O)=O)C=C(C)C(=O)C=O
-SPC4102 = IGNORE ;    //  O=C(OON(=O)=O)C=C(C)C=O
-SPC4103 = IGNORE ;    //  O=C(OON(=O)=O)C=C(CC)C(=O)C(O)C=O
-SPC4104 = IGNORE ;    //  O=C(OON(=O)=O)C=C(CCC)C(=O)C(O)C=O
-SPC4105 = IGNORE ;    //  O=C(OON(=O)=O)C=CC(=O)C(O)C=O
-SPC4106 = IGNORE ;    //  O=C(OON(=O)=O)C=CC(=O)C=O
-SPC4107 = IGNORE ;    //  O=C(OON(=O)=O)C=CC=O
-SPC4108 = IGNORE ;    //  O=C(OON(=O)=O)C=O
-SPC4109 = IGNORE ;    //  O=C(OON(=O)=O)CC(=O)C(=O)CC=O
-SPC4110 = IGNORE ;    //  O=C(OON(=O)=O)CC(=O)C(C)(C)C=O
-SPC4111 = IGNORE ;    //  O=C(OON(=O)=O)CC(=O)C(C=O)C(C)(C)C=O
-SPC4112 = IGNORE ;    //  O=C(OON(=O)=O)CC(=O)C=O
-SPC4113 = IGNORE ;    //  O=C(OON(=O)=O)CC(=O)CC(=O)C=O
-SPC4114 = IGNORE ;    //  O=C(OON(=O)=O)CC(=O)CC=O
-SPC4115 = IGNORE ;    //  O=C(OON(=O)=O)CC(=O)CCC=O
-SPC4116 = IGNORE ;    //  O=C(OON(=O)=O)CC(O)CCC=O
-SPC4117 = IGNORE ;    //  O=C(OON(=O)=O)CC=O
-SPC4118 = IGNORE ;    //  O=C(OON(=O)=O)CCC(=O)C(C)(C)C=O
-SPC4119 = IGNORE ;    //  O=C(OON(=O)=O)CCC(=O)CC=O
-SPC4120 = IGNORE ;    //  O=C(OON(=O)=O)CCC=O
-SPC4121 = IGNORE ;    //  O=C(OON(=O)=O)CCCCC=O
-SPC4122 = IGNORE ;    //  O=C(OON(=O)=O)COC=O
-SPC4123 = IGNORE ;    //  O=C1C(C)=C(C)C(=O)C(ON(=O)=O)C1(OO)C
-SPC4124 = IGNORE ;    //  O=C1C(C)=CC(=O)C(C)=C1C
-SPC4125 = IGNORE ;    //  O=C1C(C)=CC(=O)C(ON(=O)=O)C1(OO)C
-SPC4126 = IGNORE ;    //  O=C1C(C)=CC(=O)C=C1C
-SPC4127 = IGNORE ;    //  O=C1C(C)=CC(=O)C=C1CC
-SPC4128 = IGNORE ;    //  O=C1C(O)C(=O)C(=O)C(C)=C1C
-SPC4129 = IGNORE ;    //  O=C1C(O)C(=O)C(=O)C(C)=C1CC
-SPC4130 = IGNORE ;    //  O=C1C(O)C(=O)C(=O)C=C1C
-SPC4131 = IGNORE ;    //  O=C1C(O)C(=O)C(=O)C=C1C(C)C
-SPC4132 = IGNORE ;    //  O=C1C(O)C(O)C(=O)C(C)=C1CC
-SPC4133 = IGNORE ;    //  O=C1C(O)C(OO)C(=O)C(C)=C1C
-SPC4134 = IGNORE ;    //  O=C1C(O)C(OO)C(=O)C(C)=C1CC
-SPC4135 = IGNORE ;    //  O=C1C(O)C(OO)C(=O)C=C1C
-SPC4136 = IGNORE ;    //  O=C1C(O)C(OO)C(=O)C=C1C(C)C
-SPC4137 = IGNORE ;    //  O=C1C(O)C(O[O])(CC)C(=O)C=C1C
-SPC4138 = IGNORE ;    //  O=C1C(O)C(O[O])C(=O)C(C)=C1C
-SPC4139 = IGNORE ;    //  O=C1C(O)C(O[O])C(=O)C(C)=C1CC
-SPC4140 = IGNORE ;    //  O=C1C(O)C(O[O])C(=O)C=C1C
-SPC4141 = IGNORE ;    //  O=C1C(O)C(O[O])C(=O)C=C1C(C)C
-SPC4142 = IGNORE ;    //  O=C1C(O)C([O])(CC)C(=O)C=C1C
-SPC4143 = IGNORE ;    //  O=C1C(O)C([O])C(=O)C(C)=C1C
-SPC4144 = IGNORE ;    //  O=C1C(O)C([O])C(=O)C(C)=C1CC
-SPC4145 = IGNORE ;    //  O=C1C(O)C([O])C(=O)C=C1C
-SPC4146 = IGNORE ;    //  O=C1C(O)C([O])C(=O)C=C1C(C)C
-SPC4147 = IGNORE ;    //  O=C1C(ON(=O)=O)C(=O)OC1
-SPC4148 = IGNORE ;    //  O=C1C(ON(=O)=O)C(=O)OC1C(C)C
-SPC4149 = IGNORE ;    //  O=C1C(ON(=O)=O)C(=O)OC1CC
-SPC4150 = IGNORE ;    //  O=C1C(ON(=O)=O)C(=O)OC1CCC
-SPC4151 = IGNORE ;    //  O=C1C(ON(=O)=O)C(OO)(C)C(=O)C=C1C
-SPC4152 = IGNORE ;    //  O=C1C(ON(=O)=O)C(OO)C(=O)C(C)=C1C
-SPC4153 = IGNORE ;    //  O=C1C(ON(=O)=O)C(OO)C(=O)C(C)=C1CC
-SPC4154 = IGNORE ;    //  O=C1C(ON(=O)=O)C(OO)C(=O)C=C1C
-SPC4155 = IGNORE ;    //  O=C1C(ON(=O)=O)C(OO)C(=O)C=C1C(C)C
-SPC4156 = IGNORE ;    //  O=C1C(ON(=O)=O)C(OO)C(=O)C=C1CC
-SPC4157 = IGNORE ;    //  O=C1C(ON(=O)=O)C(OO)C(=O)C=C1CCC
-SPC4158 = IGNORE ;    //  O=C1C(ON(=O)=O)C(O[O])(C)C(=O)C=C1C
-SPC4159 = IGNORE ;    //  O=C1C(ON(=O)=O)C(O[O])(C)C(=O)C=C1CC
-SPC4160 = IGNORE ;    //  O=C1C(ON(=O)=O)C(O[O])C(=O)C(C)=C1C
-SPC4161 = IGNORE ;    //  O=C1C(ON(=O)=O)C(O[O])C(=O)C(C)=C1CC
-SPC4162 = IGNORE ;    //  O=C1C(ON(=O)=O)C(O[O])C(=O)C=C1C
-SPC4163 = IGNORE ;    //  O=C1C(ON(=O)=O)C(O[O])C(=O)C=C1C(C)C
-SPC4164 = IGNORE ;    //  O=C1C(ON(=O)=O)C(O[O])C(=O)C=C1CC
-SPC4165 = IGNORE ;    //  O=C1C(ON(=O)=O)C(O[O])C(=O)C=C1CCC
-SPC4166 = IGNORE ;    //  O=C1C(ON(=O)=O)C([O])(C)C(=O)C=C1C
-SPC4167 = IGNORE ;    //  O=C1C(ON(=O)=O)C([O])(C)C(=O)C=C1CC
-SPC4168 = IGNORE ;    //  O=C1C(ON(=O)=O)C([O])C(=O)C(C)=C1C
-SPC4169 = IGNORE ;    //  O=C1C(ON(=O)=O)C([O])C(=O)C(C)=C1CC
-SPC4170 = IGNORE ;    //  O=C1C(ON(=O)=O)C([O])C(=O)C=C1C
-SPC4171 = IGNORE ;    //  O=C1C(ON(=O)=O)C([O])C(=O)C=C1C(C)C
-SPC4172 = IGNORE ;    //  O=C1C(ON(=O)=O)C([O])C(=O)C=C1CC
-SPC4173 = IGNORE ;    //  O=C1C(ON(=O)=O)C([O])C(=O)C=C1CCC
-SPC4174 = IGNORE ;    //  O=C1C(O[O])(C)C(O)C(=O)C(C)=C1C
-SPC4175 = IGNORE ;    //  O=C1C(O[O])(C)C(O)C(=O)C=C1CC
-SPC4176 = IGNORE ;    //  O=C1C(O[O])(C)C(ON(=O)=O)C(=O)C(C)=C1C
-SPC4177 = IGNORE ;    //  O=C1C(O[O])(C)C(ON(=O)=O)C(=O)C=C1C
-SPC4178 = IGNORE ;    //  O=C1C(O[O])(C)C(ON(=O)=O)C(=O)C=C1CC
-SPC4179 = IGNORE ;    //  O=C1C([O])(C)C(O)C(=O)C(C)=C1C
-SPC4180 = IGNORE ;    //  O=C1C([O])(C)C(O)C(=O)C=C1CC
-SPC4181 = IGNORE ;    //  O=C1C([O])(C)C(ON(=O)=O)C(=O)C(C)=C1C
-SPC4182 = IGNORE ;    //  O=C1C([O])(C)C(ON(=O)=O)C(=O)C=C1C
-SPC4183 = IGNORE ;    //  O=C1C([O])(C)C(ON(=O)=O)C(=O)C=C1CC
-SPC4184 = IGNORE ;    //  O=C1C=C(C)C(=O)C=C1C
-SPC4185 = IGNORE ;    //  O=C1C=C(C)C(=O)C=C1CC
-SPC4186 = IGNORE ;    //  O=C1C=C(CC)C(=O)C(ON(=O)=O)C1(OO)C
-SPC4187 = IGNORE ;    //  O=C1C=CC(=O)C(C)=C1C
-SPC4188 = IGNORE ;    //  O=C1C=CC(=O)C(C)=C1CC
-SPC4189 = IGNORE ;    //  O=C1C=CC(=O)C(O[O])C1O
-SPC4190 = IGNORE ;    //  O=C1C=CC(=O)C(O[O])C1ON(=O)=O
-SPC4191 = IGNORE ;    //  O=C1C=CC(=O)C([O])C1O
-SPC4192 = IGNORE ;    //  O=C1C=CC(=O)C([O])C1ON(=O)=O
-SPC4193 = IGNORE ;    //  O=C1C=CC(=O)C=C1C
-SPC4194 = IGNORE ;    //  O=C1C=CC(=O)C=C1C(C)C
-SPC4195 = IGNORE ;    //  O=C1C=CC(=O)C=C1CC
-SPC4196 = IGNORE ;    //  O=C1C=CC(=O)C=C1CCC
-SPC4197 = IGNORE ;    //  O=C1C=CC2(C)OOC1(C)C2(C)O
-SPC4198 = IGNORE ;    //  O=C1C=CC2(C)OOC1(C)C2O
-SPC4199 = IGNORE ;    //  O=C1C=CC2(C)OOC1C2O
-SPC4200 = IGNORE ;    //  O=C1C=CC2(OOC1C2O)C(C)C
-SPC4201 = IGNORE ;    //  O=C1C=CC2OOC1(C)C2O
-SPC4202 = IGNORE ;    //  O=C1C=CC2OOC1C2O
-SPC4203 = IGNORE ;    //  O=C1CC(=O)C(OO)C(=O)C1
-SPC4204 = IGNORE ;    //  O=C1CC(=O)C(OO)C(=O)C1(ON(=O)=O)C
-SPC4205 = IGNORE ;    //  O=C1CC(=O)C(O[O])C(=O)C1
-SPC4206 = IGNORE ;    //  O=C1CC(=O)C(O[O])C(=O)C1(ON(=O)=O)C
-SPC4207 = IGNORE ;    //  O=C1CC(=O)C([O])C(=O)C1
-SPC4208 = IGNORE ;    //  O=C1CC(=O)C([O])C(=O)C1(ON(=O)=O)C
-SPC4209 = IGNORE ;    //  O=C1CC(=O)CC(=O)C1(ON(=O)=O)C
-SPC4210 = IGNORE ;    //  O=C1CC(=O)CC(OO)C1(ON(=O)=O)C
-SPC4211 = IGNORE ;    //  O=C1CC(=O)CC(O[O])C1(ON(=O)=O)C
-SPC4212 = IGNORE ;    //  O=C1CC(=O)CC([O])C1(ON(=O)=O)C
-SPC4213 = IGNORE ;    //  O=C1CCC(=O)C(C)(O)CCC2C1CC2(C)C
-SPC4214 = IGNORE ;    //  O=C1CCC(O)C(C)(O)CCC2C1CC2(C)C
-SPC4215 = IGNORE ;    //  O=C1CCC(O)C(C)([O])CCC2C1CC2(C)C
-SPC4216 = IGNORE ;    //  O=C1CCC([O])C(C)(O)CCC2C1CC2(C)C
-SPC4217 = IGNORE ;    //  O=C1CCC2OOC(C)(CCC3C1CC3(C)C)O2
-SPC4218 = IGNORE ;    //  O=C1OC(=O)C(C)=C1C
-SPC4219 = IGNORE ;    //  O=C1OC(=O)C(O[O])C1O
-SPC4220 = IGNORE ;    //  O=C1OC(=O)C([O])C1O
-SPC4221 = IGNORE ;    //  O=C1OC(=O)C=C1C
-SPC4222 = IGNORE ;    //  O=C1OC(=O)C=C1C(C)C
-SPC4223 = IGNORE ;    //  O=C1OC(=O)C=C1CC
-SPC4224 = IGNORE ;    //  O=C1OC(=O)C=C1CCC
-SPC4225 = IGNORE ;    //  O=C1OC(C)C(ON(=O)=O)C1(OO)C
-SPC4226 = IGNORE ;    //  O=C1OC(C)C(ON(=O)=O)C1(O[O])C
-SPC4227 = IGNORE ;    //  O=C1OC(C)C(ON(=O)=O)C1([O])C
-SPC4228 = IGNORE ;    //  O=C1OC(C)C=C1C
-SPC4229 = IGNORE ;    //  O=C1OC(CC)C(ON(=O)=O)C1(O[O])C
-SPC4230 = IGNORE ;    //  O=C1OC(CC)C(ON(=O)=O)C1([O])C
-SPC4231 = IGNORE ;    //  O=C1OC(CC)C=C1C
-SPC4232 = IGNORE ;    //  O=C1OCC(ON(=O)=O)C1(OO)C
-SPC4233 = IGNORE ;    //  O=C1OCC(ON(=O)=O)C1(O[O])C
-SPC4234 = IGNORE ;    //  O=C1OCC(ON(=O)=O)C1([O])C
-SPC4235 = IGNORE ;    //  O=C1OCC=CC1
-SPC4236 = IGNORE ;    //  O=CBR
-SPC4237 = IGNORE ;    //  O=CC(=O)C(=O)C=O
-SPC4238 = IGNORE ;    //  O=CC(=O)C(C)=C(C)C(=O)C=O
-SPC4239 = IGNORE ;    //  O=CC(=O)C(C)=C(C)C(=O)O[O]
-SPC4240 = IGNORE ;    //  O=CC(=O)C(C)=CC(=O)O[O]
-SPC4241 = IGNORE ;    //  O=CC(=O)C=C
-SPC4242 = IGNORE ;    //  O=CC(=O)C=C(C(=O)O[O])CC
-SPC4243 = IGNORE ;    //  O=CC(=O)C=C(C)C(=O)C=O
-SPC4244 = IGNORE ;    //  O=CC(=O)C=C(C)C(=O)O[O]
-SPC4245 = IGNORE ;    //  O=CC(=O)C=C(CC)C(=O)CO.O=C1CCC(=O)C(=C1)C
-SPC4246 = IGNORE ;    //  O=CC(=O)C=CC(=O)C=O
-SPC4247 = IGNORE ;    //  O=CC(=O)C=CC(=O)O[O]
-SPC4248 = IGNORE ;    //  O=CC(=O)C=CC=O
-SPC4249 = IGNORE ;    //  O=CC(=O)C=O
-SPC4250 = IGNORE ;    //  O=CC(=O)CC(=O)C(ON(=O)=O)(C)C(=O)O[O]
-SPC4251 = IGNORE ;    //  O=CC(=O)CC(=O)CC(=O)O[O]
-SPC4252 = IGNORE ;    //  O=CC(=O)CC(=O)CO[O]
-SPC4253 = IGNORE ;    //  O=CC(=O)CC(=O)C[O]
-SPC4254 = IGNORE ;    //  O=CC(=O)CC(=O)O[O]
-SPC4255 = IGNORE ;    //  O=CC(=O)CCC(CC=O)C(C)=C
-SPC4256 = IGNORE ;    //  O=CC(=O)CCC1C(CC1(C)C)C(=O)CCC=O
-SPC4257 = IGNORE ;    //  O=CC(=O)CCC1C(CC1(C)C)C(CCC=O)=C
-SPC4258 = IGNORE ;    //  O=CC(=O)CO[O]
-SPC4259 = IGNORE ;    //  O=CC(=O)C[O]
-SPC4260 = IGNORE ;    //  O=CC(=O)OCO[O]
-SPC4261 = IGNORE ;    //  O=CC(=O)OC[O]
-SPC4262 = IGNORE ;    //  O=CC(=O)O[O]
-SPC4263 = IGNORE ;    //  O=CC(C)(O)C(O)CON(=O)=O
-SPC4264 = IGNORE ;    //  O=CC(C)(ON(=O)=O)C(=O)CON(=O)=O
-SPC4265 = IGNORE ;    //  O=CC(C)(ON(=O)=O)C(O)CON(=O)=O
-SPC4266 = IGNORE ;    //  O=CC(CO)C(C)(CO)O[N+](=O)[O-]
-SPC4267 = IGNORE ;    //  O=CC(CO)C(C)(CO[N+](=O)[O-])O
-SPC4268 = IGNORE ;    //  O=CC(CO)C(C)(CO[N+](=O)[O-])OO
-SPC4269 = IGNORE ;    //  O=CC(CO)C(C)(CO[N+](=O)[O-])O[O]
-SPC4270 = IGNORE ;    //  O=CC(CO)C(C)(CO[N+](=O)[O-])[O]
-SPC4271 = IGNORE ;    //  O=CC(CO)[C](C)O[O]
-SPC4272 = IGNORE ;    //  O=CC(N(=O)=O)=C(C(=O)[O])CC
-SPC4273 = IGNORE ;    //  O=CC(N(=O)=O)=C(C(=O)[O])CCC
-SPC4274 = IGNORE ;    //  O=CC(N(=O)=O)=C(C)C(=O)[O]
-SPC4275 = IGNORE ;    //  O=CC(N(=O)=O)=CC(=O)[O]
-SPC4276 = IGNORE ;    //  O=CC(O)C(=O)C(C(C)C)=CC(=O)O[O]
-SPC4277 = IGNORE ;    //  O=CC(O)C(=O)C(C)=C(C)C(=O)O[O]
-SPC4278 = IGNORE ;    //  O=CC(O)C(=O)C(C)=CC(=O)O[O]
-SPC4279 = IGNORE ;    //  O=CC(O)C(=O)C(CC)=C(C)C(=O)O[O]
-SPC4280 = IGNORE ;    //  O=CC(O)C(=O)C(CC)=CC(=O)O[O]
-SPC4281 = IGNORE ;    //  O=CC(O)C(=O)C1OC1C=O
-SPC4282 = IGNORE ;    //  O=CC(O)C(=O)C=CC(=O)O[O]
-SPC4283 = IGNORE ;    //  O=CC(O)C(=O)C=O
-SPC4284 = IGNORE ;    //  O=CC(O)C(=O)O[O]
-SPC4285 = IGNORE ;    //  O=CC(O)C(O)C1OC1C=O
-SPC4286 = IGNORE ;    //  O=CC(O)C(O)C=O
-SPC4287 = IGNORE ;    //  O=CC(O)C(ON(=O)=O)(C)C(=O)O[O]
-SPC4288 = IGNORE ;    //  O=CC(O)C(ON(=O)=O)C1OC1C=O
-SPC4289 = IGNORE ;    //  O=CC(O)C(OO)C1OC1C=O
-SPC4290 = IGNORE ;    //  O=CC(O)C(OO)C=O
-SPC4291 = IGNORE ;    //  O=CC(O)C(O[O])C=O
-SPC4292 = IGNORE ;    //  O=CC(O)C([O])C=O
-SPC4293 = IGNORE ;    //  O=CC(O)C=C
-SPC4294 = IGNORE ;    //  O=CC(O)C=CC=O
-SPC4295 = IGNORE ;    //  O=CC(O)C=O
-SPC4296 = IGNORE ;    //  O=CC(O)CO[O]
-SPC4297 = IGNORE ;    //  O=CC(O)C[O]
-SPC4298 = IGNORE ;    //  O=CC(OO)C=CC=O
-SPC4299 = IGNORE ;    //  O=CC(OO)C=O
-SPC4300 = IGNORE ;    //  O=CC(O[O])C=O
-SPC4301 = IGNORE ;    //  O=CC([O])C=O
-SPC4302 = IGNORE ;    //  O=CC1OC1C(=O)O[O]
-SPC4303 = IGNORE ;    //  O=CC1OC1C(O[O])C(O)C=O
-SPC4304 = IGNORE ;    //  O=CC1OC1C([O])C(O)C=O
-SPC4305 = IGNORE ;    //  O=CC1OC1C=CC=O
-SPC4306 = IGNORE ;    //  O=CC1OC1C=O
-SPC4307 = IGNORE ;    //  O=CC=C
-SPC4308 = IGNORE ;    //  O=CC=C(C)C(=O)O[O]
-SPC4309 = IGNORE ;    //  O=CC=C(C)C(=O)[O]
-SPC4310 = IGNORE ;    //  O=CC=CC(=O)O[O]
-SPC4311 = IGNORE ;    //  O=CC=CC(=O)[O]
-SPC4312 = IGNORE ;    //  O=CC=CC(O[O])C=O
-SPC4313 = IGNORE ;    //  O=CC=CC([O])C=O
-SPC4314 = IGNORE ;    //  O=CC=CC1(C)OC1(C(=O)O[O])CC
-SPC4315 = IGNORE ;    //  O=CC=CC1(C)OC1(C)C(=O)O[O]
-SPC4316 = IGNORE ;    //  O=CC=CC1OC1C(=O)O[O]
-SPC4317 = IGNORE ;    //  O=CC=CC=O
-SPC4318 = IGNORE ;    //  O=CC=O
-SPC4319 = IGNORE ;    //  O=CCC(=O)C(=O)C=O
-SPC4320 = IGNORE ;    //  O=CCC(=O)C(=O)CC(=O)O[O]
-SPC4321 = IGNORE ;    //  O=CCC(=O)C(=O)CC=O
-SPC4322 = IGNORE ;    //  O=CCC(=O)C(=O)CO[O]
-SPC4323 = IGNORE ;    //  O=CCC(=O)C(=O)C[O]
-SPC4324 = IGNORE ;    //  O=CCC(=O)C(C)(C)C(=O)O[O]
-SPC4325 = IGNORE ;    //  O=CCC(=O)C(C)(C)CC(=O)C(CCO)=C
-SPC4326 = IGNORE ;    //  O=CCC(=O)C(C)(C)CC=O
-SPC4327 = IGNORE ;    //  O=CCC(=O)C(OO)CC=O
-SPC4328 = IGNORE ;    //  O=CCC(=O)C(O[O])CC=O
-SPC4329 = IGNORE ;    //  O=CCC(=O)C([O])CC=O
-SPC4330 = IGNORE ;    //  O=CCC(=O)C=O
-SPC4331 = IGNORE ;    //  O=CCC(=O)CC(=O)CO[O]
-SPC4332 = IGNORE ;    //  O=CCC(=O)CC(=O)C[O]
-SPC4333 = IGNORE ;    //  O=CCC(=O)CC(=O)O[O]
-SPC4334 = IGNORE ;    //  O=CCC(=O)CC=O
-SPC4335 = IGNORE ;    //  O=CCC(=O)CCC(=O)O[O]
-SPC4336 = IGNORE ;    //  O=CCC(=O)CCCO[O]
-SPC4337 = IGNORE ;    //  O=CCC(=O)CCC[O]
-SPC4338 = IGNORE ;    //  O=CCC(=O)CCO[O]
-SPC4339 = IGNORE ;    //  O=CCC(=O)CC[O]
-SPC4340 = IGNORE ;    //  O=CCC(=O)CO[O]
-SPC4341 = IGNORE ;    //  O=CCC(=O)C[O]
-SPC4342 = IGNORE ;    //  O=CCC(=O)O[O]
-SPC4343 = IGNORE ;    //  O=CCC(C(=O)O[O])C(=O)C
-SPC4344 = IGNORE ;    //  O=CCC(C)(C)C(CCC(=O)C)O[N+](=O)[O-]
-SPC4345 = IGNORE ;    //  O=CCC(C)(C)C(CCC(=O)OC)O[N+](=O)[O-]
-SPC4346 = IGNORE ;    //  O=CCC(CC=O)C(C)=C
-SPC4347 = IGNORE ;    //  O=CCC(CO)C(C)=C
-SPC4348 = IGNORE ;    //  O=CCC(COO)C(C)=C
-SPC4349 = IGNORE ;    //  O=CCC(CO[O])C(=O)C
-SPC4350 = IGNORE ;    //  O=CCC(C[O])C(=O)C
-SPC4351 = IGNORE ;    //  O=CCC(O)C(=O)CC=O
-SPC4352 = IGNORE ;    //  O=CCC(O)C(C)(C)CC(=O)C(CCO)=C
-SPC4353 = IGNORE ;    //  O=CCC(O)C(C)(C)CC=O
-SPC4354 = IGNORE ;    //  O=CCC(O)CC=O
-SPC4355 = IGNORE ;    //  O=CCC(ON(=O)=O)CC=O
-SPC4356 = IGNORE ;    //  O=CCC(OO)C(C)(C)CC(=O)C(CCO)=C
-SPC4357 = IGNORE ;    //  O=CCC(OO)C(C)(C)CC=O
-SPC4358 = IGNORE ;    //  O=CCC(OO)CC=O
-SPC4359 = IGNORE ;    //  O=CCC(O[N+](=O)[O-])C(C)(C)CC=O
-SPC4360 = IGNORE ;    //  O=CCC(O[O])C(C)(C)CC(=O)C(CCO)=C
-SPC4361 = IGNORE ;    //  O=CCC(O[O])C(C)(C)CC=O
-SPC4362 = IGNORE ;    //  O=CCC(O[O])CC=O
-SPC4363 = IGNORE ;    //  O=CCC([O])C(C)(C)CC(=O)C(CCO)=C
-SPC4364 = IGNORE ;    //  O=CCC([O])C(C)(C)CC=O
-SPC4365 = IGNORE ;    //  O=CCC([O])CC=O
-SPC4366 = IGNORE ;    //  O=CCC1C(CC1(C)C)C(=C)CCC(=O)OO[N+](=O)[O-]
-SPC4367 = IGNORE ;    //  O=CCC1C(CC1(C)C)C(=C)CCO[N+](=O)[O-]
-SPC4368 = IGNORE ;    //  O=CCC1C(CC1(C)C)C(=O)CCC(=O)OO[N+](=O)[O-]
-SPC4369 = IGNORE ;    //  O=CCC1C(CC1(C)C)C(=O)CCO[N+](=O)[O-]
-SPC4370 = IGNORE ;    //  O=CCC1C(CC1(C)C)C(=O)OO[N+](=O)[O-]
-SPC4371 = IGNORE ;    //  O=CCC1C(O[N+](=O)[O-])CC1(C)C
-SPC4372 = IGNORE ;    //  O=CCC1CC(C(=O)O[O])C1(C)C
-SPC4373 = IGNORE ;    //  O=CCC1CC(C(=O)[O])C1(C)C
-SPC4374 = IGNORE ;    //  O=CCC1CC(C(=[O+][O-])C)C1(C)C
-SPC4375 = IGNORE ;    //  O=CCC1CC(C1(C)C)C(=O)CO[O]
-SPC4376 = IGNORE ;    //  O=CCC1CC(C1(C)C)C(=O)C[O]
-SPC4377 = IGNORE ;    //  O=CCC=O
-SPC4378 = IGNORE ;    //  O=CCCC(=C)C(=O)CC(C)(C)C(CCO)O[N+](=O)[O-]
-SPC4379 = IGNORE ;    //  O=CCCC(=C)C(=O)CC(C)(C)O[N+](=O)[O-]
-SPC4380 = IGNORE ;    //  O=CCCC(=C)C(=O)OO[N+](=O)[O-]
-SPC4381 = IGNORE ;    //  O=CCCC(=C)C1(O[N+](=O)[O-])CC(C)(C)C1CCO
-SPC4382 = IGNORE ;    //  O=CCCC(=C)C1CC(C)(C)C1CCC(=O)OO[N+](=O)[O-]
-SPC4383 = IGNORE ;    //  O=CCCC(=C)C1CC(C)(C)C1CCC(=[O+][O-])C
-SPC4384 = IGNORE ;    //  O=CCCC(=C)C1CC(C)(C)C1CCC(=[O+][O-])C*a
-SPC4385 = IGNORE ;    //  O=CCCC(=C)C1CC(C)(C)C1CCO[N+](=O)[O-]
-SPC4386 = IGNORE ;    //  O=CCCC(=O)C(=O)C=O
-SPC4387 = IGNORE ;    //  O=CCCC(=O)C(=O)CC(C)(C)C(CCO)O[N+](=O)[O-]
-SPC4388 = IGNORE ;    //  O=CCCC(=O)C(=O)CC(C)(C)O[N+](=O)[O-]
-SPC4389 = IGNORE ;    //  O=CCCC(=O)C(=O)CO[O]
-SPC4390 = IGNORE ;    //  O=CCCC(=O)C(=O)C[O]
-SPC4391 = IGNORE ;    //  O=CCCC(=O)C(CC1(C)C)C1CCC(=O)CO[O]
-SPC4392 = IGNORE ;    //  O=CCCC(=O)C(CC1(C)C)C1CCC(=O)C[O]
-SPC4393 = IGNORE ;    //  O=CCCC(=O)C(CC1(C)C)C1CCC(=O)O[O]
-SPC4394 = IGNORE ;    //  O=CCCC(=O)C(CC1(C)C)C1CCC(=O)[O]
-SPC4395 = IGNORE ;    //  O=CCCC(=O)C(CC1(C)C)C1CCO[O]
-SPC4396 = IGNORE ;    //  O=CCCC(=O)C(CC1(C)C)C1CC[O]
-SPC4397 = IGNORE ;    //  O=CCCC(=O)C(O)C=O
-SPC4398 = IGNORE ;    //  O=CCCC(=O)C(OO)C=O
-SPC4399 = IGNORE ;    //  O=CCCC(=O)C(O[O])C=O
-SPC4400 = IGNORE ;    //  O=CCCC(=O)C([O])C=O
-SPC4401 = IGNORE ;    //  O=CCCC(=O)C1CC(C)(C)C1CCC(=O)OO[N+](=O)[O-]
-SPC4402 = IGNORE ;    //  O=CCCC(=O)C1CC(C)(C)C1CCC(=[O+][O-])C
-SPC4403 = IGNORE ;    //  O=CCCC(=O)C1CC(C)(C)C1CCC(=[O+][O-])C*a
-SPC4404 = IGNORE ;    //  O=CCCC(=O)C1CC(C)(C)C1CCO[N+](=O)[O-]
-SPC4405 = IGNORE ;    //  O=CCCC(=O)C=O
-SPC4406 = IGNORE ;    //  O=CCCC(=O)CC(=O)O[O]
-SPC4407 = IGNORE ;    //  O=CCCC(=O)CC=O
-SPC4408 = IGNORE ;    //  O=CCCC(=O)CO[O]
-SPC4409 = IGNORE ;    //  O=CCCC(=O)C[O]
-SPC4410 = IGNORE ;    //  O=CCCC(=O)O[O]
-SPC4411 = IGNORE ;    //  O=CCCC(=[O+][O-])C1CC(C)(C)C1CC=O
-SPC4412 = IGNORE ;    //  O=CCCC(=[O+][O-])C1CC(C)(C)C1CC=O*a
-SPC4413 = IGNORE ;    //  O=CCCC(=[O+][O-])C1CC(C)(C)C1CCC(=O)C
-SPC4414 = IGNORE ;    //  O=CCCC(=[O+][O-])C1CC(C)(C)C1CCC(=O)C*a
-SPC4415 = IGNORE ;    //  O=CCCC(=[O+][O-])C1CC(C)(C)C1CCC(=O)OC
-SPC4416 = IGNORE ;    //  O=CCCC(=[O+][O-])C1CC(C)(C)C1CCC(=O)OC*a
-SPC4417 = IGNORE ;    //  O=CCCC(C(=O)C=O)=C
-SPC4418 = IGNORE ;    //  O=CCCC(C(=O)CO)=C
-SPC4419 = IGNORE ;    //  O=CCCC(C(=O)COO)=C
-SPC4420 = IGNORE ;    //  O=CCCC(C(=O)CO[O])=C
-SPC4421 = IGNORE ;    //  O=CCCC(C(=O)C[O])=C
-SPC4422 = IGNORE ;    //  O=CCCC(C(=O)O)=C
-SPC4423 = IGNORE ;    //  O=CCCC(C(=O)OO)=C
-SPC4424 = IGNORE ;    //  O=CCCC(C(=O)O[O])=C
-SPC4425 = IGNORE ;    //  O=CCCC(CO)(O[N+](=O)[O-])C1CC(C)(C)C1CC=O
-SPC4426 = IGNORE ;    //  O=CCCC(CO)(O[N+](=O)[O-])C1CC(C)(C)C1CCC(=O)C
-SPC4427 = IGNORE ;    //  O=CCCC(CO)(O[N+](=O)[O-])C1CC(C)(C)C1CCC(=O)OC
-SPC4428 = IGNORE ;    //  O=CCCC(O)(CO[N+](=O)[O-])C1CC(C)(C)C1CC=O
-SPC4429 = IGNORE ;    //  O=CCCC(O)(CO[N+](=O)[O-])C1CC(C)(C)C1CCC(=O)C
-SPC4430 = IGNORE ;    //  O=CCCC(O)CC(=O)O[O]
-SPC4431 = IGNORE ;    //  O=CCCC(O)CC=O
-SPC4432 = IGNORE ;    //  O=CCCC(O)CO[O]
-SPC4433 = IGNORE ;    //  O=CCCC(O)C[O]
-SPC4434 = IGNORE ;    //  O=CCCC(OO)(CO[N+](=O)[O-])C1CC(C)(C)C1CC=O
-SPC4435 = IGNORE ;    //  O=CCCC(OO)(CO[N+](=O)[O-])C1CC(C)(C)C1CCC(=O)C
-SPC4436 = IGNORE ;    //  O=CCCC(OO)CC=O
-SPC4437 = IGNORE ;    //  O=CCCC(O[O])(CO[N+](=O)[O-])C1CC(C)(C)C1CC=O
-SPC4438 = IGNORE ;    //  O=CCCC(O[O])(CO[N+](=O)[O-])C1CC(C)(C)C1CCC(=O)C
-SPC4439 = IGNORE ;    //  O=CCCC(O[O])CC=O
-SPC4440 = IGNORE ;    //  O=CCCC([O])(CO[N+](=O)[O-])C1CC(C)(C)C1CC=O
-SPC4441 = IGNORE ;    //  O=CCCC([O])(CO[N+](=O)[O-])C1CC(C)(C)C1CCC(=O)C
-SPC4442 = IGNORE ;    //  O=CCCC([O])CC=O
-SPC4443 = IGNORE ;    //  O=CCCCCC(=O)O[O]
-SPC4444 = IGNORE ;    //  O=CCCCCC=O
-SPC4445 = IGNORE ;    //  O=CCCCCCON(=O)=O
-SPC4446 = IGNORE ;    //  O=CCCCCCO[O]
-SPC4447 = IGNORE ;    //  O=CCCCCC[O]
-SPC4448 = IGNORE ;    //  O=CCCCCO[O]
-SPC4449 = IGNORE ;    //  O=CCCCC[O]
-SPC4450 = IGNORE ;    //  O=CCCO[O]
-SPC4451 = IGNORE ;    //  O=CCC[O]
-SPC4452 = IGNORE ;    //  O=CCL
-SPC4453 = IGNORE ;    //  O=CCOC(=O)C=O
-SPC4454 = IGNORE ;    //  O=CCOC=O
-SPC4455 = IGNORE ;    //  O=CCO[O]
-SPC4456 = IGNORE ;    //  O=CC[O]
-SPC4457 = IGNORE ;    //  O=CO
-SPC4458 = IGNORE ;    //  O=COC(=O)CO[O]
-SPC4459 = IGNORE ;    //  O=COC(=O)C[O]
-SPC4460 = IGNORE ;    //  O=COC(=O)OC=O
-SPC4461 = IGNORE ;    //  O=COC(=O)OCO[O]
-SPC4462 = IGNORE ;    //  O=COC(=O)OC[O]
-SPC4463 = IGNORE ;    //  O=COC(C)(C)C(=O)O[O]
-SPC4464 = IGNORE ;    //  O=COC(C)(C)CO[O]
-SPC4465 = IGNORE ;    //  O=COC(C)(C)C[O]
-SPC4466 = IGNORE ;    //  O=COC=O
-SPC4467 = IGNORE ;    //  O=COCC(=O)O[O]
-SPC4468 = IGNORE ;    //  O=COCO[O]
-SPC4469 = IGNORE ;    //  O=COC[O]
-SPC4470 = IGNORE ;    //  O=CS(=O)(=O)C
-SPC4471 = IGNORE ;    //  O=N(=O)C12OOC(C)(C2O)C([O])(O)C(=C1C)O
-SPC4472 = IGNORE ;    //  O=N(=O)C12OOC(C)(C=C(C)C2([O])O)C1O
-SPC4473 = IGNORE ;    //  O=N(=O)C12OOC(C2O)C(O)([O])C(=C1)O
-SPC4474 = IGNORE ;    //  O=N(=O)C1=C(C)C([O])(O)C2(C)OOC1(N(=O)=O)C2O
-SPC4475 = IGNORE ;    //  O=N(=O)C1=C(C)C2(C)OOC(N(=O)=O)(C1([O])O)C2(C)O
-SPC4476 = IGNORE ;    //  O=N(=O)C1=C(C)C2(C)OOC(N(=O)=O)(C2O)C1([O])O
-SPC4477 = IGNORE ;    //  O=N(=O)C1=C(C)C2(OOC(C)(C1([O])O)C2(C)O)N(=O)=O
-SPC4478 = IGNORE ;    //  O=N(=O)C1=C(C)C2(OOC(C)(C2O)C1([O])O)N(=O)=O
-SPC4479 = IGNORE ;    //  O=N(=O)C1=C(O)C(O)([O])C2(C)OOC1C2O
-SPC4480 = IGNORE ;    //  O=N(=O)C1=C(O)C(O)([O])C2(OOC1C2O)C(C)C
-SPC4481 = IGNORE ;    //  O=N(=O)C1=C(O)C([O])(O)C2(C)OOC1(C)C2(C)O
-SPC4482 = IGNORE ;    //  O=N(=O)C1=C(O)C([O])(O)C2(C)OOC1(C)C2O
-SPC4483 = IGNORE ;    //  O=N(=O)C1=CC2(C)OOC(C2O)C1([O])O
-SPC4484 = IGNORE ;    //  O=N(=O)C1=CC2(OOC(C(C)C)(C2O)C1([O])O)N(=O)=O
-SPC4485 = IGNORE ;    //  O=N(=O)C1=CC2(OOC(C)(C2O)C1([O])O)N(=O)=O
-SPC4486 = IGNORE ;    //  O=N(=O)C1=CC2(OOC(C2O)C1([O])O)N(=O)=O
-SPC4487 = IGNORE ;    //  O=N(=O)OC1(C)C2(C)OOC1(C)C([O])(O)C(=C2N(=O)=O)O
-SPC4488 = IGNORE ;    //  O=N(=O)OC1(C)C2(C)OOC1(N(=O)=O)C([O])(O)C(=C2C)N(=O)=O
-SPC4489 = IGNORE ;    //  O=N(=O)OC1(C)C2(OOC1(C)C([O])(O)C(=C2C)N(=O)=O)N(=O)=O
-SPC4490 = IGNORE ;    //  O=N(=O)OC1(C)C2(OOC1(C)C([O])(O)C(=C2C)O)N(=O)=O
-SPC4491 = IGNORE ;    //  O=N(=O)OC1(C)C=CC2(C)OOC1(C)C2O
-SPC4492 = IGNORE ;    //  O=N(=O)OC1(C)C=CC2(C)OOC1C2O
-SPC4493 = IGNORE ;    //  O=N(=O)OC1(C)C=CC2OOC1(C)C2O
-SPC4494 = IGNORE ;    //  O=N(=O)OC1C(=CC2(C)OOC1(C)C2O)C
-SPC4495 = IGNORE ;    //  O=N(=O)OC1C(OO)C(=O)C=CC1=O
-SPC4496 = IGNORE ;    //  O=N(=O)OC1C(OO)C(=O)OC1
-SPC4497 = IGNORE ;    //  O=N(=O)OC1C(OO)C(=O)OC1C
-SPC4498 = IGNORE ;    //  O=N(=O)OC1C(OO)C(=O)OC1C(C)C
-SPC4499 = IGNORE ;    //  O=N(=O)OC1C(OO)C(=O)OC1CC
-SPC4500 = IGNORE ;    //  O=N(=O)OC1C(OO)C(=O)OC1CCC
-SPC4501 = IGNORE ;    //  O=N(=O)OC1C(O[O])C(=O)OC1
-SPC4502 = IGNORE ;    //  O=N(=O)OC1C(O[O])C(=O)OC1C
-SPC4503 = IGNORE ;    //  O=N(=O)OC1C(O[O])C(=O)OC1C(C)C
-SPC4504 = IGNORE ;    //  O=N(=O)OC1C(O[O])C(=O)OC1CC
-SPC4505 = IGNORE ;    //  O=N(=O)OC1C(O[O])C(=O)OC1CCC
-SPC4506 = IGNORE ;    //  O=N(=O)OC1C([O])C(=O)OC1
-SPC4507 = IGNORE ;    //  O=N(=O)OC1C([O])C(=O)OC1C
-SPC4508 = IGNORE ;    //  O=N(=O)OC1C([O])C(=O)OC1C(C)C
-SPC4509 = IGNORE ;    //  O=N(=O)OC1C([O])C(=O)OC1CC
-SPC4510 = IGNORE ;    //  O=N(=O)OC1C([O])C(=O)OC1CCC
-SPC4511 = IGNORE ;    //  O=N(=O)OC1C2(C)OOC1(C)C(O)(O)C(=C2)C
-SPC4512 = IGNORE ;    //  O=N(=O)OC1C2(C)OOC1(C)C(O)([O])C(=C2)C
-SPC4513 = IGNORE ;    //  O=N(=O)OC1C2(C)OOC1(C)C([O])(O)C(=C2N(=O)=O)O
-SPC4514 = IGNORE ;    //  O=N(=O)OC1C2(C)OOC1(N(=O)=O)C([O])(O)C(=C2C)N(=O)=O
-SPC4515 = IGNORE ;    //  O=N(=O)OC1C2(C)OOC1(N(=O)=O)C([O])(O)C(=C2C)O
-SPC4516 = IGNORE ;    //  O=N(=O)OC1C2(OOC1(C(C)C)C([O])(O)C(=C2)N(=O)=O)N(=O)=O
-SPC4517 = IGNORE ;    //  O=N(=O)OC1C2(OOC1(C)C([O])(O)C(=C2)N(=O)=O)N(=O)=O
-SPC4518 = IGNORE ;    //  O=N(=O)OC1C2(OOC1(C)C([O])(O)C(=C2C)N(=O)=O)N(=O)=O
-SPC4519 = IGNORE ;    //  O=N(=O)OC1C2(OOC1(C)C([O])(O)C(=C2C)O)N(=O)=O
-SPC4520 = IGNORE ;    //  O=N(=O)OC1C2(OOC1(C)C([O])(O)C(=C2N(=O)=O)C)N(=O)=O
-SPC4521 = IGNORE ;    //  O=N(=O)OC1C2OOC1(C(C)C)C([O])(O)C(=C2N(=O)=O)O
-SPC4522 = IGNORE ;    //  O=N(=O)OC1C2OOC1(C)C(=C(C)C2(O)O)C
-SPC4523 = IGNORE ;    //  O=N(=O)OC1C2OOC1(C)C(=C(C)C2([O])O)C
-SPC4524 = IGNORE ;    //  O=N(=O)OC1C2OOC1(C)C(=CC2(O)O)C
-SPC4525 = IGNORE ;    //  O=N(=O)OC1C2OOC1(C)C(=CC2([O])O)C
-SPC4526 = IGNORE ;    //  O=N(=O)OC1C2OOC1(C)C(O)(O)C(=C2C)C
-SPC4527 = IGNORE ;    //  O=N(=O)OC1C2OOC1(C)C(O)(O)C=C2C
-SPC4528 = IGNORE ;    //  O=N(=O)OC1C2OOC1(C)C(O)([O])C(=C2C)C
-SPC4529 = IGNORE ;    //  O=N(=O)OC1C2OOC1(C)C([O])(O)C(=C2N(=O)=O)O
-SPC4530 = IGNORE ;    //  O=N(=O)OC1C2OOC1(C)C([O])(O)C=C2C
-SPC4531 = IGNORE ;    //  O=N(=O)OC1C2OOC1(C)C=CC2(O)O
-SPC4532 = IGNORE ;    //  O=N(=O)OC1C2OOC1(C)C=CC2([O])O
-SPC4533 = IGNORE ;    //  O=N(=O)OC1C2OOC1(C=C(N(=O)=O)C2([O])O)N(=O)=O
-SPC4534 = IGNORE ;    //  O=N(=O)OC1C2OOC1(C=C(O)C2([O])O)N(=O)=O
-SPC4535 = IGNORE ;    //  O=N(=O)OC1C2OOC1(C=CC2(O)O)C(C)C
-SPC4536 = IGNORE ;    //  O=N(=O)OC1C2OOC1(C=CC2(O)[O])C(C)C
-SPC4537 = IGNORE ;    //  O=N(=O)OC1C2OOC1C(O)(O)C=C2
-SPC4538 = IGNORE ;    //  O=N(=O)OC1C2OOC1C([O])(O)C=C2
-SPC4539 = IGNORE ;    //  O=N(=O)OC1C=CC2(C)OOC1(C)C2(C)O
-SPC4540 = IGNORE ;    //  O=N(=O)OC1C=CC2(C)OOC1(C)C2O
-SPC4541 = IGNORE ;    //  O=N(=O)OC1C=CC2(C)OOC1C2O
-SPC4542 = IGNORE ;    //  O=N(=O)OC1C=CC2(OOC1C2O)C(C)C
-SPC4543 = IGNORE ;    //  O=N(=O)OC1C=CC2OOC1C2O
-SPC4544 = IGNORE ;    //  O=N(=O)OCC(=O)C(=O)C=O
-SPC4545 = IGNORE ;    //  O=N(=O)OCC(=O)C(C)(ON(=O)=O)C(=O)OON(=O)=O
-SPC4546 = IGNORE ;    //  O=N(=O)OCC(=O)C(O)C=O
-SPC4547 = IGNORE ;    //  O=N(=O)OCC(=O)C=C
-SPC4548 = IGNORE ;    //  O=N(=O)OCC(=O)C=O
-SPC4549 = IGNORE ;    //  O=N(=O)OCC(=O)COO
-SPC4550 = IGNORE ;    //  O=N(=O)OCC(=O)CO[O]
-SPC4551 = IGNORE ;    //  O=N(=O)OCC(=O)C[O]
-SPC4552 = IGNORE ;    //  O=N(=O)OCC(=O)OO
-SPC4553 = IGNORE ;    //  O=N(=O)OCC(=O)OON(=O)=O
-SPC4554 = IGNORE ;    //  O=N(=O)OCC(=O)O[O]
-SPC4555 = IGNORE ;    //  O=N(=O)OCC(O)C(C)(O)C(=O)OON(=O)=O
-SPC4556 = IGNORE ;    //  O=N(=O)OCC(O)C(C)(ON(=O)=O)C(=O)OON(=O)=O
-SPC4557 = IGNORE ;    //  O=N(=O)OCC(O)C(O)C=O
-SPC4558 = IGNORE ;    //  O=N(=O)OCC(O)C=C
-SPC4559 = IGNORE ;    //  O=N(=O)OCC(O)C=O
-SPC4560 = IGNORE ;    //  O=N(=O)OCC(OO)C(O)C=O
-SPC4561 = IGNORE ;    //  O=N(=O)OCC(OO)C=C
-SPC4562 = IGNORE ;    //  O=N(=O)OCC(O[O])C(O)C=O
-SPC4563 = IGNORE ;    //  O=N(=O)OCC(O[O])C=C
-SPC4564 = IGNORE ;    //  O=N(=O)OCC([O])C(O)C=O
-SPC4565 = IGNORE ;    //  O=N(=O)OCC([O])C=C
-SPC4566 = IGNORE ;    //  O=N(=O)OCC=CC(=O)OO
-SPC4567 = IGNORE ;    //  O=N(=O)OCC=CC(=O)OON(=O)=O
-SPC4568 = IGNORE ;    //  O=N(=O)OCC=CC(=O)O[O]
-SPC4569 = IGNORE ;    //  O=N(=O)OCC=CC=O
-SPC4570 = IGNORE ;    //  O=N(=O)OCC=CCON(=O)=O
-SPC4571 = IGNORE ;    //  O=N(=O)OCC=CCOO
-SPC4572 = IGNORE ;    //  O=N(=O)OCC=CCO[O]
-SPC4573 = IGNORE ;    //  O=N(=O)OCC=CC[O]
-SPC4574 = IGNORE ;    //  O=N(=O)OCC=O
-SPC4575 = IGNORE ;    //  O=N(=O)OCCC(=O)C(C)(C)C=O
-SPC4576 = IGNORE ;    //  O=N(=O)OCCC(=O)CC=O
-SPC4577 = IGNORE ;    //  O=N(=O)OCCOO
-SPC4578 = IGNORE ;    //  O=N(=O)OCCO[O]
-SPC4579 = IGNORE ;    //  O=N(=O)OCC[O]
-SPC4580 = IGNORE ;    //  O=N(=O)OCOC(=O)OC=O
-SPC4581 = IGNORE ;    //  O=N(=O)OCOC=O
-SPC4582 = IGNORE ;    //  O=N(=O)OOC(=O)C(=C(C)C(=O)C(O)C(=O)C)C
-SPC4583 = IGNORE ;    //  O=N(=O)OOC(=O)C(=C(C)C(=O)C)C
-SPC4584 = IGNORE ;    //  O=N(=O)OOC(=O)C(=C)C
-SPC4585 = IGNORE ;    //  O=N(=O)OOC(=O)C(=CC(=O)C(O)C(=O)C)C
-SPC4586 = IGNORE ;    //  O=N(=O)OOC(=O)C(=CC(=O)C)C
-SPC4587 = IGNORE ;    //  O=N(=O)OOC(=O)C(=O)C
-SPC4588 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)(C)C
-SPC4589 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)(C)C(=O)C
-SPC4590 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)(C)O
-SPC4591 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)(C)OC(=O)C
-SPC4592 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)(C)ON(=O)=O
-SPC4593 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)(O)C(=O)C
-SPC4594 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)(O)C(=O)C(=O)C
-SPC4595 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)(O)C1OC1
-SPC4596 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)(O)CON(=O)=O
-SPC4597 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)C
-SPC4598 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)C(=O)C
-SPC4599 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)C(=O)C(=O)C
-SPC4600 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)C(C)C
-SPC4601 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)C(C)O
-SPC4602 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)CC(=O)C
-SPC4603 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)O
-SPC4604 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)OC(=O)C
-SPC4605 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)OC(=O)C(=O)C
-SPC4606 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)OC(C)C
-SPC4607 = IGNORE ;    //  O=N(=O)OOC(=O)C(C)ON(=O)=O
-SPC4608 = IGNORE ;    //  O=N(=O)OOC(=O)C(CL)(CL)CL
-SPC4609 = IGNORE ;    //  O=N(=O)OOC(=O)C(CL)CL
-SPC4610 = IGNORE ;    //  O=N(=O)OOC(=O)C(O)(CL)CL
-SPC4611 = IGNORE ;    //  O=N(=O)OOC(=O)C(O)C(=O)C
-SPC4612 = IGNORE ;    //  O=N(=O)OOC(=O)C(O)C(=O)C(=O)C(C)C
-SPC4613 = IGNORE ;    //  O=N(=O)OOC(=O)C(O)C(=O)C(C)C
-SPC4614 = IGNORE ;    //  O=N(=O)OOC(=O)C(O)C(C)(C)O
-SPC4615 = IGNORE ;    //  O=N(=O)OOC(=O)C(O)C(C)C
-SPC4616 = IGNORE ;    //  O=N(=O)OOC(=O)C(O)C1(C)OC1
-SPC4617 = IGNORE ;    //  O=N(=O)OOC(=O)C(O)CL
-SPC4618 = IGNORE ;    //  O=N(=O)OOC(=O)C(ON(=O)=O)C(=O)C
-SPC4619 = IGNORE ;    //  O=N(=O)OOC(=O)C(ON(=O)=O)C(C)(C)O
-SPC4620 = IGNORE ;    //  O=N(=O)OOC(=O)C(ON(=O)=O)C(C)(O)CON(=O)=O
-SPC4621 = IGNORE ;    //  O=N(=O)OOC(=O)C(ON(=O)=O)C(C)C
-SPC4622 = IGNORE ;    //  O=N(=O)OOC(=O)C1(C)OC1(C)C=CC(=O)C
-SPC4623 = IGNORE ;    //  O=N(=O)OOC(=O)C1(C)OC1C(=CC(=O)C)C
-SPC4624 = IGNORE ;    //  O=N(=O)OOC(=O)C1(C)OC1C(=O)C
-SPC4625 = IGNORE ;    //  O=N(=O)OOC(=O)C1(C)OC1C=CC(=O)C
-SPC4626 = IGNORE ;    //  O=N(=O)OOC(=O)C1(CCC2CC1C2(C)C)ON(=O)=O
-SPC4627 = IGNORE ;    //  O=N(=O)OOC(=O)C1(O)CCC2CC1C2(C)C
-SPC4628 = IGNORE ;    //  O=N(=O)OOC(=O)C1C(=O)CCC(=O)C1(C)C
-SPC4629 = IGNORE ;    //  O=N(=O)OOC(=O)C1CC(C(=O)C)C1(C)C
-SPC4630 = IGNORE ;    //  O=N(=O)OOC(=O)C1CC(C(=O)O)C1(C)C
-SPC4631 = IGNORE ;    //  O=N(=O)OOC(=O)C1OC1(C)C(=O)C
-SPC4632 = IGNORE ;    //  O=N(=O)OOC(=O)C1OC1(C)C=CC(=O)C
-SPC4633 = IGNORE ;    //  O=N(=O)OOC(=O)C1OC1C=CC(=O)C
-SPC4634 = IGNORE ;    //  O=N(=O)OOC(=O)C1OC1C=CC(=O)C(C)C
-SPC4635 = IGNORE ;    //  O=N(=O)OOC(=O)C=C(C)C(=O)C
-SPC4636 = IGNORE ;    //  O=N(=O)OOC(=O)C=C(C)C(=O)C(O)C(=O)C
-SPC4637 = IGNORE ;    //  O=N(=O)OOC(=O)C=CC(=O)C
-SPC4638 = IGNORE ;    //  O=N(=O)OOC(=O)CC(=O)C(=O)C
-SPC4639 = IGNORE ;    //  O=N(=O)OOC(=O)CC(=O)C(C)(C)O
-SPC4640 = IGNORE ;    //  O=N(=O)OOC(=O)CC(C)(C)C
-SPC4641 = IGNORE ;    //  O=N(=O)OOC(=O)CC(C)(C)O
-SPC4642 = IGNORE ;    //  O=N(=O)OOC(=O)CC(C)C(=O)C
-SPC4643 = IGNORE ;    //  O=N(=O)OOC(=O)CC(O)C(=O)C
-SPC4644 = IGNORE ;    //  O=N(=O)OOC(=O)CC(O)C(C)C
-SPC4645 = IGNORE ;    //  O=N(=O)OOC(=O)CC1CC(C(=O)C)C1(C)C
-SPC4646 = IGNORE ;    //  O=N(=O)OOC(=O)CC1CC(C(=O)O)C1(C)C
-SPC4647 = IGNORE ;    //  O=N(=O)OOC(=O)c1cc(C)cc(C)c1
-SPC4648 = IGNORE ;    //  O=N(=O)OOC(=O)c1ccc(C)c(C)c1
-SPC4649 = IGNORE ;    //  O=N(=O)OOC(=O)c1cccc(C)c1
-SPC4650 = IGNORE ;    //  O=N(=O)OOC(=O)c1cccc(C)c1C
-SPC4651 = IGNORE ;    //  O=N(=O)OOC(=O)c1ccccc1
-SPC4652 = IGNORE ;    //  O=N(=O)OOC(=O)c1ccccc1C
-SPC4653 = IGNORE ;    //  OC
-SPC4654 = IGNORE ;    //  OC(=O)CCC1C(CC1(C)C)C(=C)CCC(=O)OO[N+](=O)[O-]
-SPC4655 = IGNORE ;    //  OC(=O)CCC1C(CC1(C)C)C(=C)CCO[N+](=O)[O-]
-SPC4656 = IGNORE ;    //  OC(=O)CCC1C(CC1(C)C)C(=O)CCC(=O)OO[N+](=O)[O-]
-SPC4657 = IGNORE ;    //  OC(=O)CCC1C(CC1(C)C)C(=O)CCO[N+](=O)[O-]
-SPC4658 = IGNORE ;    //  OC(=O)CL
-SPC4659 = IGNORE ;    //  OC(CL)(CL)C(=O)CL
-SPC4660 = IGNORE ;    //  OC(CL)(CL)C(=O)OO
-SPC4661 = IGNORE ;    //  OC(CL)(CL)C(=O)O[O]
-SPC4662 = IGNORE ;    //  OC(CL)(CL)C(CL)(CL)OO
-SPC4663 = IGNORE ;    //  OC(CL)(CL)C(CL)(CL)O[O]
-SPC4664 = IGNORE ;    //  OC(CL)(CL)C(CL)(CL)[O]
-SPC4665 = IGNORE ;    //  OC(CL)(CL)C(CL)OO
-SPC4666 = IGNORE ;    //  OC(CL)(CL)C(CL)O[O]
-SPC4667 = IGNORE ;    //  OC(CL)(CL)C(CL)[O]
-SPC4668 = IGNORE ;    //  OC(CL)(CL)C(O)(CL)CL
-SPC4669 = IGNORE ;    //  OC(CL)(CL)C(O)CL
-SPC4670 = IGNORE ;    //  OC(CL)(CL)C=O
-SPC4671 = IGNORE ;    //  OC(CL)(CL)CL
-SPC4672 = IGNORE ;    //  OC(CL)(CL)COO
-SPC4673 = IGNORE ;    //  OC(CL)(CL)CO[O]
-SPC4674 = IGNORE ;    //  OC(CL)(CL)C[O]
-SPC4675 = IGNORE ;    //  OC(CL)C(=O)CL
-SPC4676 = IGNORE ;    //  OC(CL)C(=O)O
-SPC4677 = IGNORE ;    //  OC(CL)C(=O)OO
-SPC4678 = IGNORE ;    //  OC(CL)C(=O)O[O]
-SPC4679 = IGNORE ;    //  OC(CL)C(CL)(CL)OO
-SPC4680 = IGNORE ;    //  OC(CL)C(CL)(CL)O[O]
-SPC4681 = IGNORE ;    //  OC(CL)C(CL)(CL)[O]
-SPC4682 = IGNORE ;    //  OC(CL)C(CL)OO
-SPC4683 = IGNORE ;    //  OC(CL)C(CL)O[O]
-SPC4684 = IGNORE ;    //  OC(CL)C(CL)[O]
-SPC4685 = IGNORE ;    //  OC(CL)C(O)CL
-SPC4686 = IGNORE ;    //  OC(CL)C=O
-SPC4687 = IGNORE ;    //  OC(CL)CL
-SPC4688 = IGNORE ;    //  OC(CL)CON(=O)=O
-SPC4689 = IGNORE ;    //  OC(CL)COO
-SPC4690 = IGNORE ;    //  OC(CL)CO[O]
-SPC4691 = IGNORE ;    //  OC(CL)C[O]
-SPC4692 = IGNORE ;    //  OC(O)COC=O
-SPC4693 = IGNORE ;    //  OC1(O)C=CC(C)(C2ON(=O)=O)OOC12C
-SPC4694 = IGNORE ;    //  OC1=C(C)C2(OOC(C)(C1([O])O)C2(C)O)N(=O)=O
-SPC4695 = IGNORE ;    //  OC1C(=O)C(=O)OC1
-SPC4696 = IGNORE ;    //  OC1C(=O)C(=O)OC1C(C)C
-SPC4697 = IGNORE ;    //  OC1C(=O)C(=O)OC1CC
-SPC4698 = IGNORE ;    //  OC1C(=O)C(=O)OC1CCC
-SPC4699 = IGNORE ;    //  OC1C(=O)C(C)=C(C)C(=O)C1(O)C
-SPC4700 = IGNORE ;    //  OC1C(=O)C(C)=C(C)C(=O)C1(OO)C
-SPC4701 = IGNORE ;    //  OC1C(=O)C(C)=C(C)C(=O)C1O
-SPC4702 = IGNORE ;    //  OC1C(=O)C(C)=CC(=O)C1(O)C
-SPC4703 = IGNORE ;    //  OC1C(=O)C(C)=CC(=O)C1(O)CC
-SPC4704 = IGNORE ;    //  OC1C(=O)C(C)=CC(=O)C1(OO)C
-SPC4705 = IGNORE ;    //  OC1C(=O)C(C)=CC(=O)C1(OO)CC
-SPC4706 = IGNORE ;    //  OC1C(=O)C(C)=CC(=O)C1(O[O])C
-SPC4707 = IGNORE ;    //  OC1C(=O)C(C)=CC(=O)C1([O])C
-SPC4708 = IGNORE ;    //  OC1C(=O)C=C(C(=O)C1O)C(C)C
-SPC4709 = IGNORE ;    //  OC1C(=O)C=C(C)C(=O)C1(O)C
-SPC4710 = IGNORE ;    //  OC1C(=O)C=C(C)C(=O)C1(OO)C
-SPC4711 = IGNORE ;    //  OC1C(=O)C=C(C)C(=O)C1(O[O])C
-SPC4712 = IGNORE ;    //  OC1C(=O)C=C(C)C(=O)C1([O])C
-SPC4713 = IGNORE ;    //  OC1C(=O)C=C(C)C(=O)C1O
-SPC4714 = IGNORE ;    //  OC1C(=O)C=C(CC)C(=O)C1(O)C
-SPC4715 = IGNORE ;    //  OC1C(=O)C=C(CC)C(=O)C1(OO)C
-SPC4716 = IGNORE ;    //  OC1C(=O)C=CC(=O)C1
-SPC4717 = IGNORE ;    //  OC1C(=O)C=CC(=O)C1=O
-SPC4718 = IGNORE ;    //  OC1C(=O)C=CC(=O)C1O
-SPC4719 = IGNORE ;    //  OC1C(=O)OC(=O)C1(O)C
-SPC4720 = IGNORE ;    //  OC1C(=O)OC(=O)C1(O)C(C)C
-SPC4721 = IGNORE ;    //  OC1C(=O)OC(=O)C1(O)CC
-SPC4722 = IGNORE ;    //  OC1C(=O)OC(=O)C1(O)CCC
-SPC4723 = IGNORE ;    //  OC1C(=O)OC(=O)C1(OO)C
-SPC4724 = IGNORE ;    //  OC1C(=O)OC(=O)C1(OO)C(C)C
-SPC4725 = IGNORE ;    //  OC1C(=O)OC(=O)C1(OO)CC
-SPC4726 = IGNORE ;    //  OC1C(=O)OC(=O)C1(OO)CCC
-SPC4727 = IGNORE ;    //  OC1C(=O)OC(=O)C1(O[O])C
-SPC4728 = IGNORE ;    //  OC1C(=O)OC(=O)C1(O[O])C(C)C
-SPC4729 = IGNORE ;    //  OC1C(=O)OC(=O)C1(O[O])CC
-SPC4730 = IGNORE ;    //  OC1C(=O)OC(=O)C1(O[O])CCC
-SPC4731 = IGNORE ;    //  OC1C(=O)OC(=O)C1([O])C
-SPC4732 = IGNORE ;    //  OC1C(=O)OC(=O)C1([O])C(C)C
-SPC4733 = IGNORE ;    //  OC1C(=O)OC(=O)C1([O])CC
-SPC4734 = IGNORE ;    //  OC1C(=O)OC(=O)C1([O])CCC
-SPC4735 = IGNORE ;    //  OC1C(=O)OC(=O)C1=O
-SPC4736 = IGNORE ;    //  OC1C(=O)OC(=O)C1O
-SPC4737 = IGNORE ;    //  OC1C(O)(C)C(=O)OC1C
-SPC4738 = IGNORE ;    //  OC1C(O)(C)C(=O)OC1CC
-SPC4739 = IGNORE ;    //  OC1C(O)C(=O)OC1
-SPC4740 = IGNORE ;    //  OC1C(O)C(=O)OC1C
-SPC4741 = IGNORE ;    //  OC1C(O)C(=O)OC1C(C)C
-SPC4742 = IGNORE ;    //  OC1C(O)C(=O)OC1CC
-SPC4743 = IGNORE ;    //  OC1C(O)C(=O)OC1CCC
-SPC4744 = IGNORE ;    //  OC1C(OO)(C)C(=O)OC1C
-SPC4745 = IGNORE ;    //  OC1C(OO)(C)C(=O)OC1CC
-SPC4746 = IGNORE ;    //  OC1C(OO)C(=O)C=CC1=O
-SPC4747 = IGNORE ;    //  OC1C(OO)C(=O)OC1
-SPC4748 = IGNORE ;    //  OC1C(OO)C(=O)OC1=O
-SPC4749 = IGNORE ;    //  OC1C(OO)C(=O)OC1C
-SPC4750 = IGNORE ;    //  OC1C(OO)C(=O)OC1C(C)C
-SPC4751 = IGNORE ;    //  OC1C(OO)C(=O)OC1CC
-SPC4752 = IGNORE ;    //  OC1C(OO)C(=O)OC1CCC
-SPC4753 = IGNORE ;    //  OC1C(O[O])(C)C(=O)OC1C
-SPC4754 = IGNORE ;    //  OC1C(O[O])(C)C(=O)OC1CC
-SPC4755 = IGNORE ;    //  OC1C(O[O])C(=O)OC1C
-SPC4756 = IGNORE ;    //  OC1C(O[O])C(=O)OC1C(C)C
-SPC4757 = IGNORE ;    //  OC1C(O[O])C(=O)OC1CC
-SPC4758 = IGNORE ;    //  OC1C(O[O])C(=O)OC1CCC
-SPC4759 = IGNORE ;    //  OC1C([O])(C)C(=O)OC1C
-SPC4760 = IGNORE ;    //  OC1C([O])(C)C(=O)OC1CC
-SPC4761 = IGNORE ;    //  OC1C([O])C(=O)OC1C
-SPC4762 = IGNORE ;    //  OC1C([O])C(=O)OC1C(C)C
-SPC4763 = IGNORE ;    //  OC1C([O])C(=O)OC1CC
-SPC4764 = IGNORE ;    //  OC1C([O])C(=O)OC1CCC
-SPC4765 = IGNORE ;    //  OC1C2(C)OOC1(C)C(O)(O)C(=C2)C
-SPC4766 = IGNORE ;    //  OC1C2(C)OOC1(C)C([O])(O)C(=C2)C
-SPC4767 = IGNORE ;    //  OC1C2OOC1(C)C=CC2(C)O
-SPC4768 = IGNORE ;    //  OC1C2OOC1(C)C=CC2(C)[O]
-SPC4769 = IGNORE ;    //  OC1C2OOC1(C)C=CC2(O)O
-SPC4770 = IGNORE ;    //  OC1C2OOC1(C)C=CC2([O])O
-SPC4771 = IGNORE ;    //  OC1C2OOC1C(O)(O)C=C2
-SPC4772 = IGNORE ;    //  OC1C2OOC1C([O])(O)C=C2
-SPC4773 = IGNORE ;    //  OC1C=CC2(C)OOC1(C)C2(C)O
-SPC4774 = IGNORE ;    //  OC1C=CC2(C)OOC1(C)C2O
-SPC4775 = IGNORE ;    //  OC1C=CC2(C)OOC1C2O
-SPC4776 = IGNORE ;    //  OC1C=CC2(OOC1C2O)C(C)C
-SPC4777 = IGNORE ;    //  OC1C=CC2OOC1C2O
-SPC4778 = IGNORE ;    //  OC1CC(=O)CC(=O)C1
-SPC4779 = IGNORE ;    //  OC1CC(=O)CC(O)C1(O)C
-SPC4780 = IGNORE ;    //  OC1CC(=O)CC(O)C1(ON(=O)=O)C
-SPC4781 = IGNORE ;    //  OC1CC(=O)CC(O)C1(OO)C
-SPC4782 = IGNORE ;    //  OC1CC(=O)CC(O)C1(O[O])C
-SPC4783 = IGNORE ;    //  OC1CC(=O)CC(O)C1([O])C
-SPC4784 = IGNORE ;    //  OC1CC(=O)CC=C1C
-SPC4785 = IGNORE ;    //  OC1CC(O)CC=C1C
-SPC4786 = IGNORE ;    //  OC1CC(ON(=O)=O)CC=C1C
-SPC4787 = IGNORE ;    //  OC1CC(OO)CC=C1C
-SPC4788 = IGNORE ;    //  OC1CC(O[O])CC=C1C
-SPC4789 = IGNORE ;    //  OC1CC([O])CC=C1C
-SPC4790 = IGNORE ;    //  OC1COC(=O)C1(O)C
-SPC4791 = IGNORE ;    //  OC1COC(=O)C1(OO)C
-SPC4792 = IGNORE ;    //  OC1COC(=O)C1(O[O])C
-SPC4793 = IGNORE ;    //  OC1COC(=O)C1([O])C
-SPC4794 = IGNORE ;    //  OC2(O)C=CC(C)(C1O)OOC12C
-SPC4795 = IGNORE ;    //  OC=C
-SPC4796 = IGNORE ;    //  OCBR
-SPC4797 = IGNORE ;    //  OCC(=CC(=O)OON(=O)=O)C
-SPC4798 = IGNORE ;    //  OCC(=O)C(=O)C(OO)CC=O
-SPC4799 = IGNORE ;    //  OCC(=O)C(=O)C(O[O])CC=O
-SPC4800 = IGNORE ;    //  OCC(=O)C(=O)C([O])CC=O
-SPC4801 = IGNORE ;    //  OCC(=O)C(=O)C=O
-SPC4802 = IGNORE ;    //  OCC(=O)C(=O)CC(=O)OO
-SPC4803 = IGNORE ;    //  OCC(=O)C(=O)CC(=O)OON(=O)=O
-SPC4804 = IGNORE ;    //  OCC(=O)C(=O)CC(=O)O[O]
-SPC4805 = IGNORE ;    //  OCC(=O)C(=O)CC(OO)CO
-SPC4806 = IGNORE ;    //  OCC(=O)C(=O)CC(O[O])CO
-SPC4807 = IGNORE ;    //  OCC(=O)C(=O)CC([O])CO
-SPC4808 = IGNORE ;    //  OCC(=O)C(=O)CC=O
-SPC4809 = IGNORE ;    //  OCC(=O)C(=O)CO
-SPC4810 = IGNORE ;    //  OCC(=O)C(=O)CON(=O)=O
-SPC4811 = IGNORE ;    //  OCC(=O)C(=O)COO
-SPC4812 = IGNORE ;    //  OCC(=O)C(=O)CO[O]
-SPC4813 = IGNORE ;    //  OCC(=O)C(=O)C[O]
-SPC4814 = IGNORE ;    //  OCC(=O)C(=O)O
-SPC4815 = IGNORE ;    //  OCC(=O)C(C)(C)C=O
-SPC4816 = IGNORE ;    //  OCC(=O)C(C)=C
-SPC4817 = IGNORE ;    //  OCC(=O)C(C=O)C(C)(C)C=O
-SPC4818 = IGNORE ;    //  OCC(=O)C(CO)=C
-SPC4819 = IGNORE ;    //  OCC(=O)C(O)(C)CON(=O)=O
-SPC4820 = IGNORE ;    //  OCC(=O)C(O)C(=O)OO
-SPC4821 = IGNORE ;    //  OCC(=O)C(O)C(=O)OON(=O)=O
-SPC4822 = IGNORE ;    //  OCC(=O)C(O)C(=O)O[O]
-SPC4823 = IGNORE ;    //  OCC(=O)C(O)C=O
-SPC4824 = IGNORE ;    //  OCC(=O)C(O)CON(=O)=O
-SPC4825 = IGNORE ;    //  OCC(=O)C(O)COO
-SPC4826 = IGNORE ;    //  OCC(=O)C(O)CO[O]
-SPC4827 = IGNORE ;    //  OCC(=O)C(O)C[O]
-SPC4828 = IGNORE ;    //  OCC(=O)C(ON(=O)=O)CO
-SPC4829 = IGNORE ;    //  OCC(=O)C(OO)(C)C=O
-SPC4830 = IGNORE ;    //  OCC(=O)C(OO)(CO)CO
-SPC4831 = IGNORE ;    //  OCC(=O)C(OO)CO
-SPC4832 = IGNORE ;    //  OCC(=O)C(O[O])(CO)CO
-SPC4833 = IGNORE ;    //  OCC(=O)C(O[O])CO
-SPC4834 = IGNORE ;    //  OCC(=O)C([O])(CO)CO
-SPC4835 = IGNORE ;    //  OCC(=O)C([O])CO
-SPC4836 = IGNORE ;    //  OCC(=O)C1CC(COO)C1(C)C
-SPC4837 = IGNORE ;    //  OCC(=O)C1CC(CO[O])C1(C)C
-SPC4838 = IGNORE ;    //  OCC(=O)C1CC(C[O])C1(C)C
-SPC4839 = IGNORE ;    //  OCC(=O)C=C
-SPC4840 = IGNORE ;    //  OCC(=O)C=C(CC)C(=O)CO.O=C1CCC(=O)C(=C1)C
-SPC4841 = IGNORE ;    //  OCC(=O)C=O
-SPC4842 = IGNORE ;    //  OCC(=O)CC=O
-SPC4843 = IGNORE ;    //  OCC(=O)CCC(C(=O)C)CC=O
-SPC4844 = IGNORE ;    //  OCC(=O)CCC(CC=O)C(C)=C
-SPC4845 = IGNORE ;    //  OCC(=O)CCC1C(CC1(C)C)C(=O)CCC=O
-SPC4846 = IGNORE ;    //  OCC(=O)CCC1C(CC1(C)C)C(CCC=O)=C
-SPC4847 = IGNORE ;    //  OCC(=O)CL
-SPC4848 = IGNORE ;    //  OCC(=O)CO
-SPC4849 = IGNORE ;    //  OCC(=O)O
-SPC4850 = IGNORE ;    //  OCC(=O)OO
-SPC4851 = IGNORE ;    //  OCC(=O)OON(=O)=O
-SPC4852 = IGNORE ;    //  OCC(=O)O[O]
-SPC4853 = IGNORE ;    //  OCC(C(=O)O)=C
-SPC4854 = IGNORE ;    //  OCC(C(=O)O)C(C)=C
-SPC4855 = IGNORE ;    //  OCC(C(=O)OO)=C
-SPC4856 = IGNORE ;    //  OCC(C(=O)OO)C(C)=C
-SPC4857 = IGNORE ;    //  OCC(C(=O)OON(=O)=O)=C
-SPC4858 = IGNORE ;    //  OCC(C=O)=C
-SPC4859 = IGNORE ;    //  OCC(C=O)C(C)=C
-SPC4860 = IGNORE ;    //  OCC(CCC(=O)O)(O[N+](=O)[O-])C1CC(C)(C)C1CCC(=O)C
-SPC4861 = IGNORE ;    //  OCC(CL)(CL)CL
-SPC4862 = IGNORE ;    //  OCC(CL)(CL)O[O]
-SPC4863 = IGNORE ;    //  OCC(CL)(CL)[O]
-SPC4864 = IGNORE ;    //  OCC(CL)CCL
-SPC4865 = IGNORE ;    //  OCC(CL)CL
-SPC4866 = IGNORE ;    //  OCC(CL)ON(=O)=O
-SPC4867 = IGNORE ;    //  OCC(CL)OO
-SPC4868 = IGNORE ;    //  OCC(CL)O[O]
-SPC4869 = IGNORE ;    //  OCC(CL)[O]
-SPC4870 = IGNORE ;    //  OCC(CO)C(C)=C
-SPC4871 = IGNORE ;    //  OCC(COO)C(C)=C
-SPC4872 = IGNORE ;    //  OCC(O)(CL)CL
-SPC4873 = IGNORE ;    //  OCC(O)(CO)C(OO)C=O
-SPC4874 = IGNORE ;    //  OCC(O)(CO)C(O[O])C=O
-SPC4875 = IGNORE ;    //  OCC(O)(CO)C([O])C=O
-SPC4876 = IGNORE ;    //  OCC(O)(CO)C=O
-SPC4877 = IGNORE ;    //  OCC(O)C(=O)CO
-SPC4878 = IGNORE ;    //  OCC(O)C(=O)CON(=O)=O
-SPC4879 = IGNORE ;    //  OCC(O)C(=O)O
-SPC4880 = IGNORE ;    //  OCC(O)C(=O)OO
-SPC4881 = IGNORE ;    //  OCC(O)C(=O)OON(=O)=O
-SPC4882 = IGNORE ;    //  OCC(O)C(=O)O[O]
-SPC4883 = IGNORE ;    //  OCC(O)C(=O)[O]
-SPC4884 = IGNORE ;    //  OCC(O)C(C)=C
-SPC4885 = IGNORE ;    //  OCC(O)C(CO)=C
-SPC4886 = IGNORE ;    //  OCC(O)C(O)(C)C=O
-SPC4887 = IGNORE ;    //  OCC(O)C(O)(C)CON(=O)=O
-SPC4888 = IGNORE ;    //  OCC(O)C(O)C=O
-SPC4889 = IGNORE ;    //  OCC(O)C(ON(=O)=O)(C)C(=O)O
-SPC4890 = IGNORE ;    //  OCC(O)C(ON(=O)=O)(C)C(=O)OO
-SPC4891 = IGNORE ;    //  OCC(O)C(ON(=O)=O)(C)C(=O)OON(=O)=O
-SPC4892 = IGNORE ;    //  OCC(O)C(ON(=O)=O)(C)C(=O)O[O]
-SPC4893 = IGNORE ;    //  OCC(O)C(ON(=O)=O)(C)C=O
-SPC4894 = IGNORE ;    //  OCC(O)C(OO)(C)C=O
-SPC4895 = IGNORE ;    //  OCC(O)C(OO)(CO)C=O
-SPC4896 = IGNORE ;    //  OCC(O)C(O[O])(C)C=O
-SPC4897 = IGNORE ;    //  OCC(O)C(O[O])(CO)C=O
-SPC4898 = IGNORE ;    //  OCC(O)C([O])(C)C=O
-SPC4899 = IGNORE ;    //  OCC(O)C([O])(CO)C=O
-SPC4900 = IGNORE ;    //  OCC(O)C=C
-SPC4901 = IGNORE ;    //  OCC(O)C=O
-SPC4902 = IGNORE ;    //  OCC(O)CC(OO)C=O
-SPC4903 = IGNORE ;    //  OCC(O)CC(O[O])C=O
-SPC4904 = IGNORE ;    //  OCC(O)CC([O])C=O
-SPC4905 = IGNORE ;    //  OCC(O)CC=O
-SPC4906 = IGNORE ;    //  OCC(O)CL
-SPC4907 = IGNORE ;    //  OCC(O)COO
-SPC4908 = IGNORE ;    //  OCC(O)CO[O]
-SPC4909 = IGNORE ;    //  OCC(O)C[O]
-SPC4910 = IGNORE ;    //  OCC(ON(=O)=O)C(=O)C=O
-SPC4911 = IGNORE ;    //  OCC(ON(=O)=O)C(=[O+][O-])C
-SPC4912 = IGNORE ;    //  OCC(ON(=O)=O)C(=[O+][O-])C*a
-SPC4913 = IGNORE ;    //  OCC(ON(=O)=O)C(C)=C
-SPC4914 = IGNORE ;    //  OCC(ON(=O)=O)C(CO)=C
-SPC4915 = IGNORE ;    //  OCC(ON(=O)=O)C(O)(C)C(=O)OO
-SPC4916 = IGNORE ;    //  OCC(ON(=O)=O)C(O)(C)C(=O)OON(=O)=O
-SPC4917 = IGNORE ;    //  OCC(ON(=O)=O)C(O)(C)C(=O)O[O]
-SPC4918 = IGNORE ;    //  OCC(ON(=O)=O)C(O)(C)C=O
-SPC4919 = IGNORE ;    //  OCC(ON(=O)=O)C(O)(C)CON(=O)=O
-SPC4920 = IGNORE ;    //  OCC(ON(=O)=O)C(O)(CO)C=O
-SPC4921 = IGNORE ;    //  OCC(ON(=O)=O)C(O)(CO)CO
-SPC4922 = IGNORE ;    //  OCC(ON(=O)=O)C(O)C=O
-SPC4923 = IGNORE ;    //  OCC(ON(=O)=O)C(ON(=O)=O)(C)C(=O)O
-SPC4924 = IGNORE ;    //  OCC(ON(=O)=O)C(ON(=O)=O)(C)C(=O)OO
-SPC4925 = IGNORE ;    //  OCC(ON(=O)=O)C(ON(=O)=O)(C)C(=O)OON(=O)=O
-SPC4926 = IGNORE ;    //  OCC(ON(=O)=O)C(ON(=O)=O)(C)C(=O)O[O]
-SPC4927 = IGNORE ;    //  OCC(ON(=O)=O)C(ON(=O)=O)(C)C=O
-SPC4928 = IGNORE ;    //  OCC(ON(=O)=O)C(ON(=O)=O)(CO)C=O
-SPC4929 = IGNORE ;    //  OCC(ON(=O)=O)C(ON(=O)=O)(CO)CO
-SPC4930 = IGNORE ;    //  OCC(ON(=O)=O)C(OO)(C)C(=O)OO
-SPC4931 = IGNORE ;    //  OCC(ON(=O)=O)C(OO)(C)C(=O)OON(=O)=O
-SPC4932 = IGNORE ;    //  OCC(ON(=O)=O)C(OO)(C)C(=O)O[O]
-SPC4933 = IGNORE ;    //  OCC(ON(=O)=O)C(OO)(C)C=O
-SPC4934 = IGNORE ;    //  OCC(ON(=O)=O)C(OO)(CO)C=O
-SPC4935 = IGNORE ;    //  OCC(ON(=O)=O)C(OO)(CO)CO
-SPC4936 = IGNORE ;    //  OCC(ON(=O)=O)C(O[O])(CO)CO
-SPC4937 = IGNORE ;    //  OCC(ON(=O)=O)C([O])(CO)CO
-SPC4938 = IGNORE ;    //  OCC(ON(=O)=O)C=C
-SPC4939 = IGNORE ;    //  OCC(OO)(CO)C=O
-SPC4940 = IGNORE ;    //  OCC(OO)C(=O)CON(=O)=O
-SPC4941 = IGNORE ;    //  OCC(OO)C(C)=C
-SPC4942 = IGNORE ;    //  OCC(OO)C(CO)=C
-SPC4943 = IGNORE ;    //  OCC(OO)C(O)(C)CON(=O)=O
-SPC4944 = IGNORE ;    //  OCC(OO)C(O)C=O
-SPC4945 = IGNORE ;    //  OCC(OO)C=C
-SPC4946 = IGNORE ;    //  OCC(OO)C=O
-SPC4947 = IGNORE ;    //  OCC(OO)CC(=O)C(=O)O
-SPC4948 = IGNORE ;    //  OCC(O[O])(CO)C=O
-SPC4949 = IGNORE ;    //  OCC(O[O])C(=O)CON(=O)=O
-SPC4950 = IGNORE ;    //  OCC(O[O])C(C)=C
-SPC4951 = IGNORE ;    //  OCC(O[O])C(CO)=C
-SPC4952 = IGNORE ;    //  OCC(O[O])C(O)(C)CON(=O)=O
-SPC4953 = IGNORE ;    //  OCC(O[O])C(O)C=O
-SPC4954 = IGNORE ;    //  OCC(O[O])C=C
-SPC4955 = IGNORE ;    //  OCC(O[O])C=O
-SPC4956 = IGNORE ;    //  OCC(O[O])CC(=O)C(=O)O
-SPC4957 = IGNORE ;    //  OCC([O])(CO)C=O
-SPC4958 = IGNORE ;    //  OCC([O])C(=O)CON(=O)=O
-SPC4959 = IGNORE ;    //  OCC([O])C(C)=C
-SPC4960 = IGNORE ;    //  OCC([O])C(CO)=C
-SPC4961 = IGNORE ;    //  OCC([O])C(O)(C)CON(=O)=O
-SPC4962 = IGNORE ;    //  OCC([O])C(O)C=O
-SPC4963 = IGNORE ;    //  OCC([O])C=C
-SPC4964 = IGNORE ;    //  OCC([O])C=O
-SPC4965 = IGNORE ;    //  OCC([O])CC(=O)C(=O)O
-SPC4966 = IGNORE ;    //  OCC1(CCC2OOC(C)(CCC3C1CC3(C)C)O2)O[N+](=O)[O-]
-SPC4967 = IGNORE ;    //  OCC1(CC\C=C(\C)/CCC2C1CC2(C)C)O[N+](=O)[O-]
-SPC4968 = IGNORE ;    //  OCC1(O)CCC2OOC(C)(CCC3C1CC3(C)C)O2
-SPC4969 = IGNORE ;    //  OCC1(O)CC\C=C(\C)/CCC2C1CC2(C)C
-SPC4970 = IGNORE ;    //  OCC1(OO)CCC2OOC(C)(CCC3C1CC3(C)C)O2
-SPC4971 = IGNORE ;    //  OCC1(OO)CC\C=C(\C)/CCC2C1CC2(C)C
-SPC4972 = IGNORE ;    //  OCC1(O[O])CCC2OOC(C)(CCC3C1CC3(C)C)O2
-SPC4973 = IGNORE ;    //  OCC1(O[O])CC\C=C(\C)/CCC2C1CC2(C)C
-SPC4974 = IGNORE ;    //  OCC1([O])CCC2OOC(C)(CCC3C1CC3(C)C)O2
-SPC4975 = IGNORE ;    //  OCC1([O])CC\C=C(\C)/CCC2C1CC2(C)C
-SPC4976 = IGNORE ;    //  OCC1CC(C(=O)O)C1(C)C
-SPC4977 = IGNORE ;    //  OCC1CC(O)(C(=O)O)C1(C)C
-SPC4978 = IGNORE ;    //  OCC1CC(OO)(C(=O)O)C1(C)C
-SPC4979 = IGNORE ;    //  OCC1CC(O[O])(C(=O)O)C1(C)C
-SPC4980 = IGNORE ;    //  OCC1CC([O])(C(=O)O)C1(C)C
-SPC4981 = IGNORE ;    //  OCC1OC1(CO)CO
-SPC4982 = IGNORE ;    //  OCC=C
-SPC4983 = IGNORE ;    //  OCC=C(C)C(=O)O
-SPC4984 = IGNORE ;    //  OCC=C(C)C(=O)OO
-SPC4985 = IGNORE ;    //  OCC=C(C)C(=O)OON(=O)=O
-SPC4986 = IGNORE ;    //  OCC=C(C)C(=O)O[O]
-SPC4987 = IGNORE ;    //  OCC=C(C)C=O
-SPC4988 = IGNORE ;    //  OCC=C(C)CON(=O)=O
-SPC4989 = IGNORE ;    //  OCC=C(C)COO
-SPC4990 = IGNORE ;    //  OCC=C(C)CO[O]
-SPC4991 = IGNORE ;    //  OCC=C(C)C[O]
-SPC4992 = IGNORE ;    //  OCC=CC(=O)O
-SPC4993 = IGNORE ;    //  OCC=CC(=O)OO
-SPC4994 = IGNORE ;    //  OCC=CC(=O)OON(=O)=O
-SPC4995 = IGNORE ;    //  OCC=CC(=O)O[O]
-SPC4996 = IGNORE ;    //  OCC=CC=O
-SPC4997 = IGNORE ;    //  OCC=CCO
-SPC4998 = IGNORE ;    //  OCC=CCON(=O)=O
-SPC4999 = IGNORE ;    //  OCC=CCOO
-SPC5000 = IGNORE ;    //  OCC=CCO[O]
-SPC5001 = IGNORE ;    //  OCC=CC[O]
-SPC5002 = IGNORE ;    //  OCC=O
-SPC5003 = IGNORE ;    //  OCCC(=C)C(=O)CC(C)(C)C(CC=O)O[N+](=O)[O-]
-SPC5004 = IGNORE ;    //  OCCC(=C)C(=O)CC(C)(C)C(CCC(=O)C)O[N+](=O)[O-]
-SPC5005 = IGNORE ;    //  OCCC(=C)C(=O)CC(C)(C)C(CCC(=O)O)O[N+](=O)[O-]
-SPC5006 = IGNORE ;    //  OCCC(=C)C(=O)CC(C)(C)O[N+](=O)[O-]
-SPC5007 = IGNORE ;    //  OCCC(=C)C1(OO[N+](=O)[O-])CC(C)(C)C1CCC(=O)O
-SPC5008 = IGNORE ;    //  OCCC(=C)C1(O[N+](=O)[O-])CC(C)(C)C1CC=O
-SPC5009 = IGNORE ;    //  OCCC(=C)C1(O[N+](=O)[O-])CC(C)(C)C1CCC(=O)C
-SPC5010 = IGNORE ;    //  OCCC(=O)C(=O)C=O
-SPC5011 = IGNORE ;    //  OCCC(=O)C(=O)CC(C)(C)C(=O)CC=O
-SPC5012 = IGNORE ;    //  OCCC(=O)C(=O)CC(C)(C)C(=O)CCC(=O)O
-SPC5013 = IGNORE ;    //  OCCC(=O)C(=O)CC(C)(C)C(CC=O)O[N+](=O)[O-]
-SPC5014 = IGNORE ;    //  OCCC(=O)C(=O)CC(C)(C)C(CCC(=O)C)O[N+](=O)[O-]
-SPC5015 = IGNORE ;    //  OCCC(=O)C(=O)CC(C)(C)C(CCC(=O)O)O[N+](=O)[O-]
-SPC5016 = IGNORE ;    //  OCCC(=O)C(=O)CC(C)(C)C(O)CC=O
-SPC5017 = IGNORE ;    //  OCCC(=O)C(=O)CC(C)(C)C(O)CCC(=O)O
-SPC5018 = IGNORE ;    //  OCCC(=O)C(=O)CC(C)(C)C(OO)CC=O
-SPC5019 = IGNORE ;    //  OCCC(=O)C(=O)CC(C)(C)C(OO)CCC(=O)O
-SPC5020 = IGNORE ;    //  OCCC(=O)C(=O)CC(C)(C)C(O[O])CC=O
-SPC5021 = IGNORE ;    //  OCCC(=O)C(=O)CC(C)(C)C(O[O])CCC(=O)O
-SPC5022 = IGNORE ;    //  OCCC(=O)C(=O)CC(C)(C)C([O])CC=O
-SPC5023 = IGNORE ;    //  OCCC(=O)C(=O)CC(C)(C)C([O])CCC(=O)O
-SPC5024 = IGNORE ;    //  OCCC(=O)C(=O)CC(C)(C)O[N+](=O)[O-]
-SPC5025 = IGNORE ;    //  OCCC(=O)C(=O)CO
-SPC5026 = IGNORE ;    //  OCCC(=O)C(=O)COO
-SPC5027 = IGNORE ;    //  OCCC(=O)C(=O)CO[O]
-SPC5028 = IGNORE ;    //  OCCC(=O)C(=O)C[O]
-SPC5029 = IGNORE ;    //  OCCC(=O)C(C)(C)C=O
-SPC5030 = IGNORE ;    //  OCCC(=O)C(C)(C)CC(=O)C(=O)CCC=O
-SPC5031 = IGNORE ;    //  OCCC(=O)C(C)(C)CC(=O)C(CCC=O)=C
-SPC5032 = IGNORE ;    //  OCCC(=O)C(C)=C
-SPC5033 = IGNORE ;    //  OCCC(=O)C(O)C=O
-SPC5034 = IGNORE ;    //  OCCC(=O)C(OO)C=O
-SPC5035 = IGNORE ;    //  OCCC(=O)C(O[O])C=O
-SPC5036 = IGNORE ;    //  OCCC(=O)C([O])C=O
-SPC5037 = IGNORE ;    //  OCCC(=O)C1(OO[N+](=O)[O-])CC(C)(C)C1CCC(=O)O
-SPC5038 = IGNORE ;    //  OCCC(=O)C1(O[N+](=O)[O-])CC(C)(C)C1CC=O
-SPC5039 = IGNORE ;    //  OCCC(=O)C=O
-SPC5040 = IGNORE ;    //  OCCC(=O)CC=O
-SPC5041 = IGNORE ;    //  OCCC(=O)CO
-SPC5042 = IGNORE ;    //  OCCC(=O)COO
-SPC5043 = IGNORE ;    //  OCCC(=O)CO[O]
-SPC5044 = IGNORE ;    //  OCCC(=O)C[O]
-SPC5045 = IGNORE ;    //  OCCC(=O)O
-SPC5046 = IGNORE ;    //  OCCC(=O)OO
-SPC5047 = IGNORE ;    //  OCCC(=O)OON(=O)=O
-SPC5048 = IGNORE ;    //  OCCC(=O)O[O]
-SPC5049 = IGNORE ;    //  OCCC(C(=O)C=O)=C
-SPC5050 = IGNORE ;    //  OCCC(C(=O)C=O)C(C)=C
-SPC5051 = IGNORE ;    //  OCCC(C(=O)CO)=C
-SPC5052 = IGNORE ;    //  OCCC(C(=O)COO)=C
-SPC5053 = IGNORE ;    //  OCCC(C(=O)O)=C
-SPC5054 = IGNORE ;    //  OCCC(C(=O)O)C(=O)C
-SPC5055 = IGNORE ;    //  OCCC(C(=O)O)C(C)=C
-SPC5056 = IGNORE ;    //  OCCC(C(=O)OO)=C
-SPC5057 = IGNORE ;    //  OCCC(C(=O)OO)C(=O)C
-SPC5058 = IGNORE ;    //  OCCC(C(=O)OO)C(C)=C
-SPC5059 = IGNORE ;    //  OCCC(C(=O)O[O])=C
-SPC5060 = IGNORE ;    //  OCCC(C(=O)O[O])C(=O)C
-SPC5061 = IGNORE ;    //  OCCC(C(O)C=O)C(C)=C
-SPC5062 = IGNORE ;    //  OCCC(C(OO)C=O)C(C)=C
-SPC5063 = IGNORE ;    //  OCCC(C(O[O])C=O)C(C)=C
-SPC5064 = IGNORE ;    //  OCCC(C([O])C=O)C(C)=C
-SPC5065 = IGNORE ;    //  OCCC(C)(C)C(=O)O
-SPC5066 = IGNORE ;    //  OCCC(C)(C)C(=O)OO
-SPC5067 = IGNORE ;    //  OCCC(C)(C)C(=O)OON(=O)=O
-SPC5068 = IGNORE ;    //  OCCC(C)(C)C(=O)O[O]
-SPC5069 = IGNORE ;    //  OCCC(C)(C)C=O
-SPC5070 = IGNORE ;    //  OCCC(C)(C)CON(=O)=O
-SPC5071 = IGNORE ;    //  OCCC(C)(C)COO
-SPC5072 = IGNORE ;    //  OCCC(C)(C)CO[O]
-SPC5073 = IGNORE ;    //  OCCC(C)(C)C[O]
-SPC5074 = IGNORE ;    //  OCCC(C)C(=O)O
-SPC5075 = IGNORE ;    //  OCCC(C)C(=O)OO
-SPC5076 = IGNORE ;    //  OCCC(C)C(=O)OON(=O)=O
-SPC5077 = IGNORE ;    //  OCCC(C)C(=O)O[O]
-SPC5078 = IGNORE ;    //  OCCC(C)C=O
-SPC5079 = IGNORE ;    //  OCCC(C=O)C(=O)C
-SPC5080 = IGNORE ;    //  OCCC(C=O)C(C)=C
-SPC5081 = IGNORE ;    //  OCCC(CC=O)C(C)=C
-SPC5082 = IGNORE ;    //  OCCC(O)(C)C(=O)OO
-SPC5083 = IGNORE ;    //  OCCC(O)(C)C(=O)OON(=O)=O
-SPC5084 = IGNORE ;    //  OCCC(O)(C)C(=O)O[O]
-SPC5085 = IGNORE ;    //  OCCC(O)(C)C=O
-SPC5086 = IGNORE ;    //  OCCC(O)(C)CON(=O)=O
-SPC5087 = IGNORE ;    //  OCCC(O)(C)COO
-SPC5088 = IGNORE ;    //  OCCC(O)(C)CO[O]
-SPC5089 = IGNORE ;    //  OCCC(O)(C)C[O]
-SPC5090 = IGNORE ;    //  OCCC(O)(C=O)C(=O)C
-SPC5091 = IGNORE ;    //  OCCC(O)C(=O)OO
-SPC5092 = IGNORE ;    //  OCCC(O)C(=O)OON(=O)=O
-SPC5093 = IGNORE ;    //  OCCC(O)C(=O)O[O]
-SPC5094 = IGNORE ;    //  OCCC(O)C(C)(C)CC(=O)C(=O)CCC=O
-SPC5095 = IGNORE ;    //  OCCC(O)C(C)(C)CC(=O)C(CCC=O)=C
-SPC5096 = IGNORE ;    //  OCCC(O)C(C)=C
-SPC5097 = IGNORE ;    //  OCCC(O)C=O
-SPC5098 = IGNORE ;    //  OCCC(O)CO
-SPC5099 = IGNORE ;    //  OCCC(O)CON(=O)=O
-SPC5100 = IGNORE ;    //  OCCC(O)COO
-SPC5101 = IGNORE ;    //  OCCC(O)CO[O]
-SPC5102 = IGNORE ;    //  OCCC(O)C[O]
-SPC5103 = IGNORE ;    //  OCCC(OO)(C=O)C(=O)C
-SPC5104 = IGNORE ;    //  OCCC(OO)C(C)(C)CC(=O)C(=O)CCC=O
-SPC5105 = IGNORE ;    //  OCCC(OO)C(C)(C)CC(=O)C(CCC=O)=C
-SPC5106 = IGNORE ;    //  OCCC(OO)C(C)=C
-SPC5107 = IGNORE ;    //  OCCC(O[O])(C=O)C(=O)C
-SPC5108 = IGNORE ;    //  OCCC(O[O])C(C)(C)CC(=O)C(=O)CCC=O
-SPC5109 = IGNORE ;    //  OCCC(O[O])C(C)(C)CC(=O)C(CCC=O)=C
-SPC5110 = IGNORE ;    //  OCCC(O[O])C(C)=C
-SPC5111 = IGNORE ;    //  OCCC([O])(C=O)C(=O)C
-SPC5112 = IGNORE ;    //  OCCC([O])C(C)(C)CC(=O)C(=O)CCC=O
-SPC5113 = IGNORE ;    //  OCCC([O])C(C)(C)CC(=O)C(CCC=O)=C
-SPC5114 = IGNORE ;    //  OCCC([O])C(C)=C
-SPC5115 = IGNORE ;    //  OCCC=O
-SPC5116 = IGNORE ;    //  OCCCC(=O)CC=O
-SPC5117 = IGNORE ;    //  OCCCC(=O)O
-SPC5118 = IGNORE ;    //  OCCCC(=O)OO
-SPC5119 = IGNORE ;    //  OCCCC(=O)OON(=O)=O
-SPC5120 = IGNORE ;    //  OCCCC(=O)O[O]
-SPC5121 = IGNORE ;    //  OCCCC(O)CC=O
-SPC5122 = IGNORE ;    //  OCCCC(ON(=O)=O)CC=O
-SPC5123 = IGNORE ;    //  OCCCC(OO)C=O
-SPC5124 = IGNORE ;    //  OCCCC(OO)CC=O
-SPC5125 = IGNORE ;    //  OCCCC(O[O])C=O
-SPC5126 = IGNORE ;    //  OCCCC(O[O])CC=O
-SPC5127 = IGNORE ;    //  OCCCC([O])C=O
-SPC5128 = IGNORE ;    //  OCCCC([O])CC=O
-SPC5129 = IGNORE ;    //  OCCCC=O
-SPC5130 = IGNORE ;    //  OCCCCCC=O
-SPC5131 = IGNORE ;    //  OCCCCO
-SPC5132 = IGNORE ;    //  OCCCCON(=O)=O
-SPC5133 = IGNORE ;    //  OCCCCOO
-SPC5134 = IGNORE ;    //  OCCCCO[O]
-SPC5135 = IGNORE ;    //  OCCCC[O]
-SPC5136 = IGNORE ;    //  OCCCL
-SPC5137 = IGNORE ;    //  OCCCO
-SPC5138 = IGNORE ;    //  OCCCON(=O)=O
-SPC5139 = IGNORE ;    //  OCCCOO
-SPC5140 = IGNORE ;    //  OCCCO[O]
-SPC5141 = IGNORE ;    //  OCCC[O]
-SPC5142 = IGNORE ;    //  OCCL
-SPC5143 = IGNORE ;    //  OCCO
-SPC5144 = IGNORE ;    //  OCCOC=O
-SPC5145 = IGNORE ;    //  OCCOCO
-SPC5146 = IGNORE ;    //  OCCOCON(=O)=O
-SPC5147 = IGNORE ;    //  OCCOCOO
-SPC5148 = IGNORE ;    //  OCCOCO[O]
-SPC5149 = IGNORE ;    //  OCCOC[O]
-SPC5150 = IGNORE ;    //  OCCON(=O)=O
-SPC5151 = IGNORE ;    //  OCCOO
-SPC5152 = IGNORE ;    //  OCCO[O]
-SPC5153 = IGNORE ;    //  OCC[O]
-SPC5154 = IGNORE ;    //  OCOC(=O)OC=O
-SPC5155 = IGNORE ;    //  OCOC=O
-SPC5156 = IGNORE ;    //  OCS(=O)(=O)C
-SPC5157 = IGNORE ;    //  OH
-SPC5158 = IGNORE ;    //  OOC(=O)C(C)(O)C(O)CON(=O)=O
-SPC5159 = IGNORE ;    //  OOC(=O)C(C)(ON(=O)=O)C(=O)CON(=O)=O
-SPC5160 = IGNORE ;    //  OOC(=O)C(C)(ON(=O)=O)C(O)CON(=O)=O
-SPC5161 = IGNORE ;    //  OOC(=O)C(C)(OO)C(O)CON(=O)=O
-SPC5162 = IGNORE ;    //  OOC(C)(C(O)CON(=O)=O)C(=O)OON(=O)=O
-SPC5163 = IGNORE ;    //  OOC(C)(C=O)C(O)CON(=O)=O
-SPC5164 = IGNORE ;    //  OOC(CL)(CL)CL
-SPC5165 = IGNORE ;    //  OOC(CL)CL
-SPC5166 = IGNORE ;    //  OOC(CL)CON(=O)=O
-SPC5167 = IGNORE ;    //  OOC1(C)C=CC2(C)OOC1(C)C2O
-SPC5168 = IGNORE ;    //  OOC1(C)C=CC2(C)OOC1C2O
-SPC5169 = IGNORE ;    //  OOC1(C)C=CC2(CC)OOC1C2O
-SPC5170 = IGNORE ;    //  OOC1(C)C=CC2OOC1(C)C2O
-SPC5171 = IGNORE ;    //  OOC1(C)CCC2C(CC2(C)C)C(=C)CCC1O
-SPC5172 = IGNORE ;    //  OOC1(C)CCC2C(CC2(C)C)C(=C)CCC1O[N+](=O)[O-]
-SPC5173 = IGNORE ;    //  OOC1(C)CCC2C(CC2(C)C)C(=O)CCC1O[N+](=O)[O-]
-SPC5174 = IGNORE ;    //  OOC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2(C)O)N(=O)=O
-SPC5175 = IGNORE ;    //  OOC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2(C)ON(=O)=O)N(=O)=O
-SPC5176 = IGNORE ;    //  OOC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2O)N(=O)=O
-SPC5177 = IGNORE ;    //  OOC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2O)O
-SPC5178 = IGNORE ;    //  OOC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2ON(=O)=O)N(=O)=O
-SPC5179 = IGNORE ;    //  OOC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2ON(=O)=O)O
-SPC5180 = IGNORE ;    //  OOC1(O)C(=C(C)C2(OOC1(C)C2(C)O)N(=O)=O)N(=O)=O
-SPC5181 = IGNORE ;    //  OOC1(O)C(=C(C)C2(OOC1(C)C2(C)O)N(=O)=O)O
-SPC5182 = IGNORE ;    //  OOC1(O)C(=C(C)C2(OOC1(C)C2(C)ON(=O)=O)N(=O)=O)N(=O)=O
-SPC5183 = IGNORE ;    //  OOC1(O)C(=C(C)C2(OOC1(C)C2(C)ON(=O)=O)N(=O)=O)O
-SPC5184 = IGNORE ;    //  OOC1(O)C(=C(C)C2(OOC1(C)C2O)N(=O)=O)N(=O)=O
-SPC5185 = IGNORE ;    //  OOC1(O)C(=C(C)C2(OOC1(C)C2O)N(=O)=O)O
-SPC5186 = IGNORE ;    //  OOC1(O)C(=C(C)C2(OOC1(C)C2ON(=O)=O)N(=O)=O)N(=O)=O
-SPC5187 = IGNORE ;    //  OOC1(O)C(=C(C)C2(OOC1(C)C2ON(=O)=O)N(=O)=O)O
-SPC5188 = IGNORE ;    //  OOC1(O)C(=C(C)C2(OOC1(CC)C2ON(=O)=O)N(=O)=O)O
-SPC5189 = IGNORE ;    //  OOC1(O)C(=C(C)C2OOC1(C)C2O)C
-SPC5190 = IGNORE ;    //  OOC1(O)C(=C(C)C2OOC1(C)C2ON(=O)=O)C
-SPC5191 = IGNORE ;    //  OOC1(O)C(=C(N(=O)=O)C2(C)OOC1(C)C2(C)O)O
-SPC5192 = IGNORE ;    //  OOC1(O)C(=C(N(=O)=O)C2(C)OOC1(C)C2(C)ON(=O)=O)O
-SPC5193 = IGNORE ;    //  OOC1(O)C(=C(N(=O)=O)C2(C)OOC1(C)C2O)O
-SPC5194 = IGNORE ;    //  OOC1(O)C(=C(N(=O)=O)C2(C)OOC1(C)C2ON(=O)=O)O
-SPC5195 = IGNORE ;    //  OOC1(O)C(=C(N(=O)=O)C2(OOC1(C)C2O)N(=O)=O)C
-SPC5196 = IGNORE ;    //  OOC1(O)C(=C(N(=O)=O)C2(OOC1(C)C2ON(=O)=O)N(=O)=O)C
-SPC5197 = IGNORE ;    //  OOC1(O)C(=C(N(=O)=O)C2OOC1(C(C)C)C2O)O
-SPC5198 = IGNORE ;    //  OOC1(O)C(=C(N(=O)=O)C2OOC1(C(C)C)C2ON(=O)=O)O
-SPC5199 = IGNORE ;    //  OOC1(O)C(=C(N(=O)=O)C2OOC1(C)C2O)O
-SPC5200 = IGNORE ;    //  OOC1(O)C(=C(N(=O)=O)C2OOC1(C)C2ON(=O)=O)O
-SPC5201 = IGNORE ;    //  OOC1(O)C(=C(N(=O)=O)C2OOC1(CC)C2O)O
-SPC5202 = IGNORE ;    //  OOC1(O)C(=CC2(C)OOC1(C)C2O)C
-SPC5203 = IGNORE ;    //  OOC1(O)C(=CC2(C)OOC1(C)C2ON(=O)=O)C
-SPC5204 = IGNORE ;    //  OOC1(O)C(=CC2(C)OOC1(N(=O)=O)C2O)C
-SPC5205 = IGNORE ;    //  OOC1(O)C(=CC2(C)OOC1C2O)N(=O)=O
-SPC5206 = IGNORE ;    //  OOC1(O)C(=CC2(OOC1(C(C)C)C2O)N(=O)=O)N(=O)=O
-SPC5207 = IGNORE ;    //  OOC1(O)C(=CC2(OOC1(C(C)C)C2ON(=O)=O)N(=O)=O)N(=O)=O
-SPC5208 = IGNORE ;    //  OOC1(O)C(=CC2(OOC1(C)C2O)N(=O)=O)N(=O)=O
-SPC5209 = IGNORE ;    //  OOC1(O)C(=CC2(OOC1(C)C2ON(=O)=O)N(=O)=O)N(=O)=O
-SPC5210 = IGNORE ;    //  OOC1(O)C(=CC2(OOC1(CC)C2ON(=O)=O)N(=O)=O)N(=O)=O
-SPC5211 = IGNORE ;    //  OOC1(O)C(=CC2(OOC1C2O)N(=O)=O)N(=O)=O
-SPC5212 = IGNORE ;    //  OOC1(O)C(=CC2(OOC1C2O)N(=O)=O)O
-SPC5213 = IGNORE ;    //  OOC1(O)C(=CC2(OOC1C2ON(=O)=O)N(=O)=O)N(=O)=O
-SPC5214 = IGNORE ;    //  OOC1(O)C(=CC2(OOC1C2ON(=O)=O)N(=O)=O)O
-SPC5215 = IGNORE ;    //  OOC1(O)C2OOC(C)(C2O)C(=C1C)C
-SPC5216 = IGNORE ;    //  OOC1(O)C2OOC(C)(C2ON(=O)=O)C(=C1C)C
-SPC5217 = IGNORE ;    //  OOC1(O)C=C(C)C2(C)OOC1(N(=O)=O)C2O
-SPC5218 = IGNORE ;    //  OOC1(O)C=C(C)C2(C)OOC1C2O
-SPC5219 = IGNORE ;    //  OOC1(O)C=C(C)C2(C)OOC1C2ON(=O)=O
-SPC5220 = IGNORE ;    //  OOC1(O)C=C(C)C2OOC1(C)C2O
-SPC5221 = IGNORE ;    //  OOC1(O)C=C(C)C2OOC1(C)C2ON(=O)=O
-SPC5222 = IGNORE ;    //  OOC1(O)C=C(C)C2OOC1(CC)C2O
-SPC5223 = IGNORE ;    //  OOC1(O)C=CC2(C)OOC1(C)C2O
-SPC5224 = IGNORE ;    //  OOC1(O)C=CC2(C)OOC1(C)C2ON(=O)=O
-SPC5225 = IGNORE ;    //  OOC1(O)C=CC2(C)OOC1C2O
-SPC5226 = IGNORE ;    //  OOC1(O)C=CC2(C)OOC1C2ON(=O)=O
-SPC5227 = IGNORE ;    //  OOC1(O)C=CC2(CC)OOC1C2O
-SPC5228 = IGNORE ;    //  OOC1(O)C=CC2(OOC1C2O)C(C)C
-SPC5229 = IGNORE ;    //  OOC1(O)C=CC2(OOC1C2ON(=O)=O)C(C)C
-SPC5230 = IGNORE ;    //  OOC1(O)C=CC2OOC1C2O
-SPC5231 = IGNORE ;    //  OOC1(O)C=CC2OOC1C2ON(=O)=O
-SPC5232 = IGNORE ;    //  OOC1C(=CC2(C)OOC1(C)C2O)C
-SPC5233 = IGNORE ;    //  OOC1C(=CC2(CC)OOC1(C)C2O)C
-SPC5234 = IGNORE ;    //  OOC1C(=CC2(CC)OOC1(C)C2O)CC
-SPC5235 = IGNORE ;    //  OOC1C=CC2(C)OOC1(C)C2(C)O
-SPC5236 = IGNORE ;    //  OOC1C=CC2(C)OOC1(C)C2O
-SPC5237 = IGNORE ;    //  OOC1C=CC2(C)OOC1(CC)C2O
-SPC5238 = IGNORE ;    //  OOC1C=CC2(C)OOC1C2O
-SPC5239 = IGNORE ;    //  OOC1C=CC2(CC)OOC1C2O
-SPC5240 = IGNORE ;    //  OOC1C=CC2(OOC1C2O)C(C)C
-SPC5241 = IGNORE ;    //  OOC1C=CC2OOC1C2O
-SPC5242 = IGNORE ;    //  OOC1CCC(=C)C2CC(C)(C)C2CCC1(C)O
-SPC5243 = IGNORE ;    //  OOC1OC1
-SPC5244 = IGNORE ;    //  OOCC(=O)C(=O)CC=O
-SPC5245 = IGNORE ;    //  OOCC(=O)C(=O)CCC=O
-SPC5246 = IGNORE ;    //  OOCC(=O)C(C)(C)C=O
-SPC5247 = IGNORE ;    //  OOCC(=O)C(C=O)C(C)(C)C=O
-SPC5248 = IGNORE ;    //  OOCC(=O)C=C
-SPC5249 = IGNORE ;    //  OOCC(=O)C=C(CC)C(=O)CO.O=C1CCC(=O)C(=C1)C
-SPC5250 = IGNORE ;    //  OOCC(=O)C=O
-SPC5251 = IGNORE ;    //  OOCC(=O)CC(=O)C=O
-SPC5252 = IGNORE ;    //  OOCC(=O)CC(=O)CC=O
-SPC5253 = IGNORE ;    //  OOCC(=O)CC=O
-SPC5254 = IGNORE ;    //  OOCC(=O)CCC(C(=O)C)CC=O
-SPC5255 = IGNORE ;    //  OOCC(=O)CCC(CC=O)C(C)=C
-SPC5256 = IGNORE ;    //  OOCC(=O)CCC1C(CC1(C)C)C(=O)CCC=O
-SPC5257 = IGNORE ;    //  OOCC(=O)CCC1C(CC1(C)C)C(CCC=O)=C
-SPC5258 = IGNORE ;    //  OOCC(=O)CCC=O
-SPC5259 = IGNORE ;    //  OOCC(=O)OC=O
-SPC5260 = IGNORE ;    //  OOCC(O)C=C
-SPC5261 = IGNORE ;    //  OOCC(O)C=O
-SPC5262 = IGNORE ;    //  OOCC(O)CCC=O
-SPC5263 = IGNORE ;    //  OOCC=O
-SPC5264 = IGNORE ;    //  OOCCC(=O)C(C)(C)C=O
-SPC5265 = IGNORE ;    //  OOCCC(=O)CC=O
-SPC5266 = IGNORE ;    //  OOCCC(CC=O)C(C)=C
-SPC5267 = IGNORE ;    //  OOCCC=O
-SPC5268 = IGNORE ;    //  OOCCCC(=O)CC=O
-SPC5269 = IGNORE ;    //  OOCCCCC=O
-SPC5270 = IGNORE ;    //  OOCCCCCC=O
-SPC5271 = IGNORE ;    //  OOCL.OCCCL
-SPC5272 = IGNORE ;    //  OOCOC(=O)C=O
-SPC5273 = IGNORE ;    //  OOCOC(=O)OC=O
-SPC5274 = IGNORE ;    //  OOCOC=O
-SPC5275 = IGNORE ;    //  OOCS(=O)(=O)C
-SPC5276 = IGNORE ;    //  OOS(=O)(=O)C
-SPC5277 = IGNORE ;    //  SO2
-SPC5278 = IGNORE ;    //  SULF
-SPC5279 = IGNORE ;    //  [O-]/[O+]=C(\CO)/C=O
-SPC5280 = IGNORE ;    //  [O-]/[O+]=C(\CO)/C=O*a
-SPC5281 = IGNORE ;    //  [O-][N+](=O)OC1(C)CCC2C(CC2(C)C)C(=C)CCC1O
-SPC5282 = IGNORE ;    //  [O-][N+](=O)OC1(C)CCC2C(CC2(C)C)C(=O)CCC1O
-SPC5283 = IGNORE ;    //  [O-][N+](=O)OC1CCC(=C)C2CC(C)(C)C2CCC1(C)O
-SPC5284 = IGNORE ;    //  [O-][N+](=O)OC1CCC(=C)C2CC(C)(C)C2CCC1(C)[O]
-SPC5285 = IGNORE ;    //  [O-][N+](=O)OC1CCC(=O)C2CC(C)(C)C2CCC1(C)O
-SPC5286 = IGNORE ;    //  [O-][N+](=O)OC1CCC(=O)C2CC(C)(C)C2CCC1(C)[O]
-SPC5287 = IGNORE ;    //  [O-][N+](=O)OOC(=O)C(=C)CCO
-SPC5288 = IGNORE ;    //  [O-][N+](=O)OOC(=O)C(C)(C)C(=O)C(=O)CC(=O)C
-SPC5289 = IGNORE ;    //  [O-][N+](=O)OOC(=O)CC(=O)OC
-SPC5290 = IGNORE ;    //  [O-][N+](=O)OOC(=O)CCC(=O)OC
-SPC5291 = IGNORE ;    //  [O-][N+](=O)OOS(=O)(=O)C
-SPC5292 = IGNORE ;    //  [O-][N+](=O)OOS(=O)C
-SPC5293 = IGNORE ;    //  [O-][O+]=C
-SPC5294 = IGNORE ;    //  [O-][O+]=C(C)C
-SPC5295 = IGNORE ;    //  [O-][O+]=C(C)C(=O)C
-SPC5296 = IGNORE ;    //  [O-][O+]=C(C)C(=O)C*a
-SPC5297 = IGNORE ;    //  [O-][O+]=C(C)C(=O)C*c
-SPC5298 = IGNORE ;    //  [O-][O+]=C(C)C*a
-SPC5299 = IGNORE ;    //  [O-][O+]=C(C)C*b
-SPC5300 = IGNORE ;    //  [O-][O+]=C(C)C*c
-SPC5301 = IGNORE ;    //  [O-][O+]=C(C)C=C
-SPC5302 = IGNORE ;    //  [O-][O+]=C(C)C=C*a
-SPC5303 = IGNORE ;    //  [O-][O+]=C(C)C=O
-SPC5304 = IGNORE ;    //  [O-][O+]=C(C)C=O*a
-SPC5305 = IGNORE ;    //  [O-][O+]=C(C)C=O*b
-SPC5306 = IGNORE ;    //  [O-][O+]=C(C)CC
-SPC5307 = IGNORE ;    //  [O-][O+]=C(C)CC*a
-SPC5308 = IGNORE ;    //  [O-][O+]=C(C)CO
-SPC5309 = IGNORE ;    //  [O-][O+]=C(C)CO*a
-SPC5310 = IGNORE ;    //  [O-][O+]=C(C)CON(=O)=O
-SPC5311 = IGNORE ;    //  [O-][O+]=C(C)CON(=O)=Oa
-SPC5312 = IGNORE ;    //  [O-][O+]=C(CCC(=O)O)C1CC(C)(C)C1CCC(=O)C
-SPC5313 = IGNORE ;    //  [O-][O+]=C(CCC(=O)O)C1CC(C)(C)C1CCC(=O)C*a
-SPC5314 = IGNORE ;    //  [O-][O+]=C(O)/C=C/C=C/C(=O)O
-SPC5315 = IGNORE ;    //  [O-][O+]=C(O)C(=C(C)/C=C(\C)/C(=O)O)C
-SPC5316 = IGNORE ;    //  [O-][O+]=C(O)C(=C(C)/C=C/C(=O)O)C
-SPC5317 = IGNORE ;    //  [O-][O+]=C(O)C(=C(C)/C=C/C(=O)O)CC
-SPC5318 = IGNORE ;    //  [O-][O+]=C(O)C(=C(C)C(=CC(=O)O)C)C
-SPC5319 = IGNORE ;    //  [O-][O+]=C(O)C(=C/C=C(\C)/C(=O)O)C
-SPC5320 = IGNORE ;    //  [O-][O+]=C(O)C(=C/C=C/C(=O)O)C
-SPC5321 = IGNORE ;    //  [O-][O+]=C(O)C(=C/C=C/C(=O)O)C(C)C
-SPC5322 = IGNORE ;    //  [O-][O+]=C(O)C(=C/C=C/C(=O)O)CC
-SPC5323 = IGNORE ;    //  [O-][O+]=C(O)C(=C/C=C/C(=O)O)CCC
-SPC5324 = IGNORE ;    //  [O-][O+]=C(O)C(=CC(=CC(=O)O)C)C
-SPC5325 = IGNORE ;    //  [O-][O+]=C*a
-SPC5326 = IGNORE ;    //  [O-][O+]=C*b
-SPC5327 = IGNORE ;    //  [O-][O+]=C*c
-SPC5328 = IGNORE ;    //  [O-][O+]=C*d
-SPC5329 = IGNORE ;    //  [O-][O+]=C*e
-SPC5330 = IGNORE ;    //  [O-][O+]=C*f
-SPC5331 = IGNORE ;    //  [O-][O+]=C*g
-SPC5332 = IGNORE ;    //  [O-][O+]=C1CCC2CC1C2(C)C
-SPC5333 = IGNORE ;    //  [O-][O+]=C1CCC2CC1C2(C)C*a
-SPC5334 = IGNORE ;    //  [O-][O+]=C1CCC2OOC(C)(CCC3C1CC3(C)C)O2
-SPC5335 = IGNORE ;    //  [O-][O+]=CC
-SPC5336 = IGNORE ;    //  [O-][O+]=CC(=C)C
-SPC5337 = IGNORE ;    //  [O-][O+]=CC(=C)C*a
-SPC5338 = IGNORE ;    //  [O-][O+]=CC(=O)C
-SPC5339 = IGNORE ;    //  [O-][O+]=CC(=O)C*a
-SPC5340 = IGNORE ;    //  [O-][O+]=CC(=O)C*b
-SPC5341 = IGNORE ;    //  [O-][O+]=CC(=O)C*c
-SPC5342 = IGNORE ;    //  [O-][O+]=CC(=O)CC
-SPC5343 = IGNORE ;    //  [O-][O+]=CC(=O)CC*b
-SPC5344 = IGNORE ;    //  [O-][O+]=CC(=O)CC*d
-SPC5345 = IGNORE ;    //  [O-][O+]=CC(=O)CCC
-SPC5346 = IGNORE ;    //  [O-][O+]=CC(=O)CCC*a
-SPC5347 = IGNORE ;    //  [O-][O+]=CC(=O)CCC*b
-SPC5348 = IGNORE ;    //  [O-][O+]=CC(=O)CO
-SPC5349 = IGNORE ;    //  [O-][O+]=CC(=O)CO*a
-SPC5350 = IGNORE ;    //  [O-][O+]=CC(=O)OCC=O
-SPC5351 = IGNORE ;    //  [O-][O+]=CC(=O)OCC=O*a
-SPC5352 = IGNORE ;    //  [O-][O+]=CC(C)(C)O
-SPC5353 = IGNORE ;    //  [O-][O+]=CC(C)(C)O*a
-SPC5354 = IGNORE ;    //  [O-][O+]=CC(C)(CO)ON(=O)=O
-SPC5355 = IGNORE ;    //  [O-][O+]=CC(C)(CO)ON(=O)=Oa
-SPC5356 = IGNORE ;    //  [O-][O+]=CC*a
-SPC5357 = IGNORE ;    //  [O-][O+]=CC*b
-SPC5358 = IGNORE ;    //  [O-][O+]=CC*c
-SPC5359 = IGNORE ;    //  [O-][O+]=CC=C
-SPC5360 = IGNORE ;    //  [O-][O+]=CC=C*a
-SPC5361 = IGNORE ;    //  [O-][O+]=CC=O
-SPC5362 = IGNORE ;    //  [O-][O+]=CC=O*a
-SPC5363 = IGNORE ;    //  [O-][O+]=CC=O*b
-SPC5364 = IGNORE ;    //  [O-][O+]=CC=O*c
-SPC5365 = IGNORE ;    //  [O-][O+]=CCC
-SPC5366 = IGNORE ;    //  [O-][O+]=CCC(=O)OC(=O)C
-SPC5367 = IGNORE ;    //  [O-][O+]=CCC(=O)OC(=O)C*a
-SPC5368 = IGNORE ;    //  [O-][O+]=CCC*a
-SPC5369 = IGNORE ;    //  [O-][O+]=CCC*b
-SPC5370 = IGNORE ;    //  [O-][O+]=CCC1CC(C(=O)C)C1(C)C
-SPC5371 = IGNORE ;    //  [O-][O+]=CCC1CC(C(=O)C)C1(C)C*b
-SPC5372 = IGNORE ;    //  [O-][O+]=CCCC
-SPC5373 = IGNORE ;    //  [O-][O+]=CCCC(=C)C1CC(C)(C)C1CCC(=O)C
-SPC5374 = IGNORE ;    //  [O-][O+]=CCCC(=C)C1CC(C)(C)C1CCC(=O)C*b
-SPC5375 = IGNORE ;    //  [O-][O+]=CCCC(=O)C1CC(C)(C)C1CCC(=O)C
-SPC5376 = IGNORE ;    //  [O-][O+]=CCCC(=O)C1CC(C)(C)C1CCC(=O)C*b
-SPC5377 = IGNORE ;    //  [O-][O+]=CCCC*a
-SPC5378 = IGNORE ;    //  [O-][O+]=CCCC*b
-SPC5379 = IGNORE ;    //  [O-][O+]=CCCCC
-SPC5380 = IGNORE ;    //  [O-][O+]=CCCCC*a
-SPC5381 = IGNORE ;    //  [O-][O+]=CCCON(=O)=O
-SPC5382 = IGNORE ;    //  [O-][O+]=CCCON(=O)=Oa
-SPC5383 = IGNORE ;    //  [O-][O+]=CCL
-SPC5384 = IGNORE ;    //  [O-][O+]=CCL*a
-SPC5385 = IGNORE ;    //  [O-][O+]=CCO
-SPC5386 = IGNORE ;    //  [O-][O+]=CCO*a
-SPC5387 = IGNORE ;    //  [O-][O+]=CCO*b
-SPC5388 = IGNORE ;    //  [O-][O+]=CCON(=O)=O
-SPC5389 = IGNORE ;    //  [O-][O+]=CCON(=O)=Oa
-SPC5390 = IGNORE ;    //  [O-][O+]=Cc1ccccc1
-SPC5391 = IGNORE ;    //  [O-][O+]=Cc1ccccc1*a
-SPC5392 = IGNORE ;    //  [O-][O+]CC(=O)C(C)C
-SPC5393 = IGNORE ;    //  [O-][O+]CC(=O)C(C)C*b
-SPC5394 = IGNORE ;    //  [O-][O+]CC(C)C
-SPC5395 = IGNORE ;    //  [O-][O+]CC(C)C*a
-SPC5396 = IGNORE ;    //  [OH].CC(=O)CCC(=O)C(C)(C)[O]
-SPC5397 = IGNORE ;    //  [O]C(CL)(CL)CL
-SPC5398 = IGNORE ;    //  [O]C(CL)CL
-SPC5399 = IGNORE ;    //  [O]C(CL)CON(=O)=O
-SPC5400 = IGNORE ;    //  [O]C1C=CC2(C)OOC1(C)C2(C)O
-SPC5401 = IGNORE ;    //  [O]C1C=CC2(C)OOC1(C)C2O
-SPC5402 = IGNORE ;    //  [O]C1C=CC2(C)OOC1C2O
-SPC5403 = IGNORE ;    //  [O]C1C=CC2(OOC1C2O)C(C)C
-SPC5404 = IGNORE ;    //  [O]C1C=CC2OOC1C2O
-SPC5405 = IGNORE ;    //  [O]CC(=O)C=C(CC)C(=O)CO.O=C1CCC(=O)C(=C1)C
-SPC5406 = IGNORE ;    //  [O]CS(=O)(=O)C
-SPC5407 = IGNORE ;    //  [O]OC(=O)C(C)(O)C(O)CON(=O)=O
-SPC5408 = IGNORE ;    //  [O]OC(=O)C(C)(ON(=O)=O)C(=O)CON(=O)=O
-SPC5409 = IGNORE ;    //  [O]OC(=O)C(C)(ON(=O)=O)C(O)CON(=O)=O
-SPC5410 = IGNORE ;    //  [O]OC(=O)C(C)(OO)C(O)CON(=O)=O
-SPC5411 = IGNORE ;    //  [O]OC(CL)(CL)CL
-SPC5412 = IGNORE ;    //  [O]OC(CL)CL
-SPC5413 = IGNORE ;    //  [O]OC(CL)CON(=O)=O
-SPC5414 = IGNORE ;    //  [O]OC1(C)C=CC2(C)OOC1(C)C2O
-SPC5415 = IGNORE ;    //  [O]OC1(C)C=CC2(C)OOC1C2O
-SPC5416 = IGNORE ;    //  [O]OC1(C)C=CC2(CC)OOC1C2O
-SPC5417 = IGNORE ;    //  [O]OC1(C)C=CC2OOC1(C)C2O
-SPC5418 = IGNORE ;    //  [O]OC1(C)CCC2C(CC2(C)C)C(=C)CCC1O
-SPC5419 = IGNORE ;    //  [O]OC1(C)CCC2C(CC2(C)C)C(=C)CCC1O[N+](=O)[O-]
-SPC5420 = IGNORE ;    //  [O]OC1(C)CCC2C(CC2(C)C)C(=O)CCC1O[N+](=O)[O-]
-SPC5421 = IGNORE ;    //  [O]OC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2(C)O)N(=O)=O
-SPC5422 = IGNORE ;    //  [O]OC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2(C)ON(=O)=O)N(=O)=O
-SPC5423 = IGNORE ;    //  [O]OC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2O)N(=O)=O
-SPC5424 = IGNORE ;    //  [O]OC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2O)O
-SPC5425 = IGNORE ;    //  [O]OC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2ON(=O)=O)N(=O)=O
-SPC5426 = IGNORE ;    //  [O]OC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2ON(=O)=O)O
-SPC5427 = IGNORE ;    //  [O]OC1(O)C(=C(C)C2(OOC1(C)C2(C)O)N(=O)=O)N(=O)=O
-SPC5428 = IGNORE ;    //  [O]OC1(O)C(=C(C)C2(OOC1(C)C2(C)O)N(=O)=O)O
-SPC5429 = IGNORE ;    //  [O]OC1(O)C(=C(C)C2(OOC1(C)C2(C)ON(=O)=O)N(=O)=O)N(=O)=O
-SPC5430 = IGNORE ;    //  [O]OC1(O)C(=C(C)C2(OOC1(C)C2(C)ON(=O)=O)N(=O)=O)O
-SPC5431 = IGNORE ;    //  [O]OC1(O)C(=C(C)C2(OOC1(C)C2O)N(=O)=O)N(=O)=O
-SPC5432 = IGNORE ;    //  [O]OC1(O)C(=C(C)C2(OOC1(C)C2O)N(=O)=O)O
-SPC5433 = IGNORE ;    //  [O]OC1(O)C(=C(C)C2(OOC1(C)C2ON(=O)=O)N(=O)=O)N(=O)=O
-SPC5434 = IGNORE ;    //  [O]OC1(O)C(=C(C)C2(OOC1(C)C2ON(=O)=O)N(=O)=O)O
-SPC5435 = IGNORE ;    //  [O]OC1(O)C(=C(C)C2(OOC1(CC)C2ON(=O)=O)N(=O)=O)O
-SPC5436 = IGNORE ;    //  [O]OC1(O)C(=C(C)C2OOC1(C)C2O)C
-SPC5437 = IGNORE ;    //  [O]OC1(O)C(=C(C)C2OOC1(C)C2ON(=O)=O)C
-SPC5438 = IGNORE ;    //  [O]OC1(O)C(=C(N(=O)=O)C2(C)OOC1(C)C2(C)O)O
-SPC5439 = IGNORE ;    //  [O]OC1(O)C(=C(N(=O)=O)C2(C)OOC1(C)C2(C)ON(=O)=O)O
-SPC5440 = IGNORE ;    //  [O]OC1(O)C(=C(N(=O)=O)C2(C)OOC1(C)C2O)O
-SPC5441 = IGNORE ;    //  [O]OC1(O)C(=C(N(=O)=O)C2(C)OOC1(C)C2ON(=O)=O)O
-SPC5442 = IGNORE ;    //  [O]OC1(O)C(=C(N(=O)=O)C2(OOC1(C)C2O)N(=O)=O)C
-SPC5443 = IGNORE ;    //  [O]OC1(O)C(=C(N(=O)=O)C2(OOC1(C)C2ON(=O)=O)N(=O)=O)C
-SPC5444 = IGNORE ;    //  [O]OC1(O)C(=C(N(=O)=O)C2OOC1(C(C)C)C2O)O
-SPC5445 = IGNORE ;    //  [O]OC1(O)C(=C(N(=O)=O)C2OOC1(C(C)C)C2ON(=O)=O)O
-SPC5446 = IGNORE ;    //  [O]OC1(O)C(=C(N(=O)=O)C2OOC1(C)C2O)O
-SPC5447 = IGNORE ;    //  [O]OC1(O)C(=C(N(=O)=O)C2OOC1(C)C2ON(=O)=O)O
-SPC5448 = IGNORE ;    //  [O]OC1(O)C(=C(N(=O)=O)C2OOC1(CC)C2O)O
-SPC5449 = IGNORE ;    //  [O]OC1(O)C(=CC2(C)OOC1(C)C2O)C
-SPC5450 = IGNORE ;    //  [O]OC1(O)C(=CC2(C)OOC1(C)C2ON(=O)=O)C
-SPC5451 = IGNORE ;    //  [O]OC1(O)C(=CC2(C)OOC1(N(=O)=O)C2O)C
-SPC5452 = IGNORE ;    //  [O]OC1(O)C(=CC2(C)OOC1C2O)N(=O)=O
-SPC5453 = IGNORE ;    //  [O]OC1(O)C(=CC2(OOC1(C(C)C)C2O)N(=O)=O)N(=O)=O
-SPC5454 = IGNORE ;    //  [O]OC1(O)C(=CC2(OOC1(C(C)C)C2ON(=O)=O)N(=O)=O)N(=O)=O
-SPC5455 = IGNORE ;    //  [O]OC1(O)C(=CC2(OOC1(C)C2O)N(=O)=O)N(=O)=O
-SPC5456 = IGNORE ;    //  [O]OC1(O)C(=CC2(OOC1(C)C2ON(=O)=O)N(=O)=O)N(=O)=O
-SPC5457 = IGNORE ;    //  [O]OC1(O)C(=CC2(OOC1(CC)C2ON(=O)=O)N(=O)=O)N(=O)=O
-SPC5458 = IGNORE ;    //  [O]OC1(O)C(=CC2(OOC1C2O)N(=O)=O)N(=O)=O
-SPC5459 = IGNORE ;    //  [O]OC1(O)C(=CC2(OOC1C2O)N(=O)=O)O
-SPC5460 = IGNORE ;    //  [O]OC1(O)C(=CC2(OOC1C2ON(=O)=O)N(=O)=O)N(=O)=O
-SPC5461 = IGNORE ;    //  [O]OC1(O)C(=CC2(OOC1C2ON(=O)=O)N(=O)=O)O
-SPC5462 = IGNORE ;    //  [O]OC1(O)C2OOC(C)(C2O)C(=C1C)C
-SPC5463 = IGNORE ;    //  [O]OC1(O)C2OOC(C)(C2ON(=O)=O)C(=C1C)C
-SPC5464 = IGNORE ;    //  [O]OC1(O)C=C(C)C2(C)OOC1(N(=O)=O)C2O
-SPC5465 = IGNORE ;    //  [O]OC1(O)C=C(C)C2(C)OOC1C2O
-SPC5466 = IGNORE ;    //  [O]OC1(O)C=C(C)C2(C)OOC1C2ON(=O)=O
-SPC5467 = IGNORE ;    //  [O]OC1(O)C=C(C)C2OOC1(C)C2O
-SPC5468 = IGNORE ;    //  [O]OC1(O)C=C(C)C2OOC1(C)C2ON(=O)=O
-SPC5469 = IGNORE ;    //  [O]OC1(O)C=C(C)C2OOC1(CC)C2O
-SPC5470 = IGNORE ;    //  [O]OC1(O)C=CC2(C)OOC1(C)C2O
-SPC5471 = IGNORE ;    //  [O]OC1(O)C=CC2(C)OOC1(C)C2ON(=O)=O
-SPC5472 = IGNORE ;    //  [O]OC1(O)C=CC2(C)OOC1C2O
-SPC5473 = IGNORE ;    //  [O]OC1(O)C=CC2(C)OOC1C2ON(=O)=O
-SPC5474 = IGNORE ;    //  [O]OC1(O)C=CC2(CC)OOC1C2O
-SPC5475 = IGNORE ;    //  [O]OC1(O)C=CC2(OOC1C2O)C(C)C
-SPC5476 = IGNORE ;    //  [O]OC1(O)C=CC2(OOC1C2ON(=O)=O)C(C)C
-SPC5477 = IGNORE ;    //  [O]OC1(O)C=CC2OOC1C2O
-SPC5478 = IGNORE ;    //  [O]OC1(O)C=CC2OOC1C2ON(=O)=O
-SPC5479 = IGNORE ;    //  [O]OC1C(=CC2(C)OOC1(C)C2O)C
-SPC5480 = IGNORE ;    //  [O]OC1C(=CC2(CC)OOC1(C)C2O)C
-SPC5481 = IGNORE ;    //  [O]OC1C(=CC2(CC)OOC1(C)C2O)CC
-SPC5482 = IGNORE ;    //  [O]OC1C=CC2(C)OOC1(C)C2(C)O
-SPC5483 = IGNORE ;    //  [O]OC1C=CC2(C)OOC1(C)C2O
-SPC5484 = IGNORE ;    //  [O]OC1C=CC2(C)OOC1(CC)C2O
-SPC5485 = IGNORE ;    //  [O]OC1C=CC2(C)OOC1C2O
-SPC5486 = IGNORE ;    //  [O]OC1C=CC2(CC)OOC1C2O
-SPC5487 = IGNORE ;    //  [O]OC1C=CC2(OOC1C2O)C(C)C
-SPC5488 = IGNORE ;    //  [O]OC1C=CC2OOC1C2O
-SPC5489 = IGNORE ;    //  [O]OC1CCC(=C)C2CC(C)(C)C2CCC1(C)O
-SPC5490 = IGNORE ;    //  [O]OCC(=O)C=C(CC)C(=O)CO.O=C1CCC(=O)C(=C1)C
-SPC5491 = IGNORE ;    //  [O]OCS(=O)(=O)C
-SPC5492 = IGNORE ;    //  [O]OS(=O)(=O)C
-SPC5493 = IGNORE ;    //  [O]OS(C)(C)O
-SPC5494 = IGNORE ;    //  [S](C)(C)O
-SPC5495 = IGNORE ;    //  c1c(C)c(N(=O)=O)c(O)c(O)c1C
-SPC5496 = IGNORE ;    //  c1c(C)c(N(=O)=O)c(O)c(O)c1CC
-SPC5497 = IGNORE ;    //  c1c(C)c(N(=O)=O)c(O)cc1C
-SPC5498 = IGNORE ;    //  c1c(C)c(N(=O)=O)c(O)cc1CC
-SPC5499 = IGNORE ;    //  c1c(C)c(O)c(C)cc1C
-SPC5500 = IGNORE ;    //  c1c(C)c(O)c(N(=O)=O)cc1C
-SPC5501 = IGNORE ;    //  c1c(C)c(O)c(O)cc1C
-SPC5502 = IGNORE ;    //  c1c(C)c(O)ccc1C
-SPC5503 = IGNORE ;    //  c1c(C)c(OO)c(N(=O)=O)cc1C
-SPC5504 = IGNORE ;    //  c1c(C)c(OO)c(O)cc1C
-SPC5505 = IGNORE ;    //  c1c(C)c(OO)ccc1C
-SPC5506 = IGNORE ;    //  c1c(C)c(O[O])c(N(=O)=O)cc1C
-SPC5507 = IGNORE ;    //  c1c(C)c(O[O])c(O)cc1C
-SPC5508 = IGNORE ;    //  c1c(C)c(O[O])ccc1C
-SPC5509 = IGNORE ;    //  c1c(C)c([O])c(C)cc1C
-SPC5510 = IGNORE ;    //  c1c(C)c([O])c(N(=O)=O)cc1C
-SPC5511 = IGNORE ;    //  c1c(C)c([O])c(O)cc1C
-SPC5512 = IGNORE ;    //  c1c(C)c([O])ccc1C
-SPC5513 = IGNORE ;    //  c1c(C)cc(C(=O)O)cc1C
-SPC5514 = IGNORE ;    //  c1c(C)cc(C(=O)OO)cc1C
-SPC5515 = IGNORE ;    //  c1c(C)cc(C(=O)OO)cc1CC
-SPC5516 = IGNORE ;    //  c1c(C)cc(C(=O)OON(=O)=O)cc1CC
-SPC5517 = IGNORE ;    //  c1c(C)cc(C(=O)O[O])cc1C
-SPC5518 = IGNORE ;    //  c1c(C)cc(C(=O)O[O])cc1CC
-SPC5519 = IGNORE ;    //  c1c(C)cc(C)c(O)c1CC
-SPC5520 = IGNORE ;    //  c1c(C)cc(C)c([O])c1CC
-SPC5521 = IGNORE ;    //  c1c(C)cc(C)cc1C
-SPC5522 = IGNORE ;    //  c1c(C)cc(C)cc1C(=O)C
-SPC5523 = IGNORE ;    //  c1c(C)cc(C)cc1C(=O)C=O
-SPC5524 = IGNORE ;    //  c1c(C)cc(C)cc1C(=O)CO
-SPC5525 = IGNORE ;    //  c1c(C)cc(C)cc1C(=O)COO
-SPC5526 = IGNORE ;    //  c1c(C)cc(C)cc1C(=O)CO[O]
-SPC5527 = IGNORE ;    //  c1c(C)cc(C)cc1C(=O)C[O]
-SPC5528 = IGNORE ;    //  c1c(C)cc(C)cc1C(O)C
-SPC5529 = IGNORE ;    //  c1c(C)cc(C)cc1C(ON(=O)=O)C
-SPC5530 = IGNORE ;    //  c1c(C)cc(C)cc1C(OO)C
-SPC5531 = IGNORE ;    //  c1c(C)cc(C)cc1C(O[O])C
-SPC5532 = IGNORE ;    //  c1c(C)cc(C)cc1C([O])C
-SPC5533 = IGNORE ;    //  c1c(C)cc(C)cc1CC
-SPC5534 = IGNORE ;    //  c1c(C)cc(C=O)cc1C
-SPC5535 = IGNORE ;    //  c1c(C)cc(CO)cc1C
-SPC5536 = IGNORE ;    //  c1c(C)cc(CON(=O)=O)cc1C
-SPC5537 = IGNORE ;    //  c1c(C)cc(COO)cc1C
-SPC5538 = IGNORE ;    //  c1c(C)cc(CO[O])cc1C
-SPC5539 = IGNORE ;    //  c1c(C)cc(C[O])cc1C
-SPC5540 = IGNORE ;    //  c1c(C)cc(N(=O)=O)c(O)c1CC
-SPC5541 = IGNORE ;    //  c1c(C)cc(O)c(O)c1CC
-SPC5542 = IGNORE ;    //  c1c(C)cc(OO)cc1C
-SPC5543 = IGNORE ;    //  c1c(C)cc(OO)cc1CC
-SPC5544 = IGNORE ;    //  c1c(C)cc(O[O])cc1C
-SPC5545 = IGNORE ;    //  c1c(C)cc(O[O])cc1CC
-SPC5546 = IGNORE ;    //  c1c(C)cc([O])cc1C
-SPC5547 = IGNORE ;    //  c1c(C)cc([O])cc1CC
-SPC5548 = IGNORE ;    //  c1c(C)ccc(OO)c1CC
-SPC5549 = IGNORE ;    //  c1c(C)ccc(O[O])c1CC
-SPC5550 = IGNORE ;    //  c1c(C)cccc1C
-SPC5551 = IGNORE ;    //  c1c(C)cccc1CC
-SPC5552 = IGNORE ;    //  c1c(N(=O)=O)c(C)c(N(=O)=O)c(O)c1C
-SPC5553 = IGNORE ;    //  c1c(N(=O)=O)c(C)c(N(=O)=O)c(O)c1CC
-SPC5554 = IGNORE ;    //  c1c(N(=O)=O)c(C)c(O)c(O)c1C
-SPC5555 = IGNORE ;    //  c1c(N(=O)=O)c(C)c(O)c(O)c1CC
-SPC5556 = IGNORE ;    //  c1c(N(=O)=O)c(O)c(C)c(N(=O)=O)c1C
-SPC5557 = IGNORE ;    //  c1c(N(=O)=O)c(O)c(C)c(N(=O)=O)c1CC
-SPC5558 = IGNORE ;    //  c1c(N(=O)=O)cc(N(=O)=O)c(O)c1C
-SPC5559 = IGNORE ;    //  c1c(N(=O)=O)cc(N(=O)=O)c(O)c1C(C)C
-SPC5560 = IGNORE ;    //  c1c(N(=O)=O)cc(N(=O)=O)c(O)c1CC
-SPC5561 = IGNORE ;    //  c1c(N(=O)=O)cc(N(=O)=O)c(O)c1CCC
-SPC5562 = IGNORE ;    //  c1c(O)c(N(=O)=O)cc(N(=O)=O)c1
-SPC5563 = IGNORE ;    //  c1c(O)c(O)cc(N(=O)=O)c1
-SPC5564 = IGNORE ;    //  c1cc(C)c(N(=O)=O)c(O)c1C
-SPC5565 = IGNORE ;    //  c1cc(C)c(N(=O)=O)c(O)c1CC
-SPC5566 = IGNORE ;    //  c1cc(C)c(N(=O)=O)c(OO)c1CC
-SPC5567 = IGNORE ;    //  c1cc(C)c(N(=O)=O)c(O[O])c1CC
-SPC5568 = IGNORE ;    //  c1cc(C)c(N(=O)=O)c([O])c1CC
-SPC5569 = IGNORE ;    //  c1cc(C)c(O)c(O)c1C
-SPC5570 = IGNORE ;    //  c1cc(C)c(O)c(O)c1CC
-SPC5571 = IGNORE ;    //  c1cc(C)c(O)c(OO)c1CC
-SPC5572 = IGNORE ;    //  c1cc(C)c(O)c(O[O])c1CC
-SPC5573 = IGNORE ;    //  c1cc(C)c(O)c([O])c1CC
-SPC5574 = IGNORE ;    //  c1cc(C)c(O)cc1C
-SPC5575 = IGNORE ;    //  c1cc(C)c(OO)c(N(=O)=O)c1C
-SPC5576 = IGNORE ;    //  c1cc(C)c(OO)c(O)c1C
-SPC5577 = IGNORE ;    //  c1cc(C)c(OO)cc1C
-SPC5578 = IGNORE ;    //  c1cc(C)c(O[O])c(N(=O)=O)c1C
-SPC5579 = IGNORE ;    //  c1cc(C)c(O[O])c(O)c1C
-SPC5580 = IGNORE ;    //  c1cc(C)c(O[O])cc1C
-SPC5581 = IGNORE ;    //  c1cc(C)c([O])c(N(=O)=O)c1C
-SPC5582 = IGNORE ;    //  c1cc(C)c([O])c(O)c1C
-SPC5583 = IGNORE ;    //  c1cc(C)c([O])cc1C
-SPC5584 = IGNORE ;    //  c1cc(C)cc(O)c1CC
-SPC5585 = IGNORE ;    //  c1cc(C)cc(OO)c1CC
-SPC5586 = IGNORE ;    //  c1cc(C)cc(O[O])c1CC
-SPC5587 = IGNORE ;    //  c1cc(C)cc([O])c1CC
-SPC5588 = IGNORE ;    //  c1cc(C)ccc1C
-SPC5589 = IGNORE ;    //  c1cc(C)ccc1CC
-SPC5590 = IGNORE ;    //  c1cc(N(=O)=O)c(O)c(O)c1C
-SPC5591 = IGNORE ;    //  c1cc(N(=O)=O)c(O)c(O)c1C(C)C
-SPC5592 = IGNORE ;    //  c1cc(N(=O)=O)c(O)c(O)c1CC
-SPC5593 = IGNORE ;    //  c1cc(N(=O)=O)c(O)c(O)c1CCC
-SPC5594 = IGNORE ;    //  c1cc(N(=O)=O)c(OO)cc1
-SPC5595 = IGNORE ;    //  c1cc(N(=O)=O)c(O[O])cc1
-SPC5596 = IGNORE ;    //  c1cc(N(=O)=O)c([O])cc1
-SPC5597 = IGNORE ;    //  c1cc(O)c(N(=O)=O)cc1
-SPC5598 = IGNORE ;    //  c1cc(O)c(N(=O)=O)cc1C
-SPC5599 = IGNORE ;    //  c1cc(O)c(O)cc1
-SPC5600 = IGNORE ;    //  c1cc(O)c(OO)cc1
-SPC5601 = IGNORE ;    //  c1cc(O)c(O[O])cc1
-SPC5602 = IGNORE ;    //  c1cc(O)c([O])cc1
-SPC5603 = IGNORE ;    //  c1cc(OO)ccc1C
-SPC5604 = IGNORE ;    //  c1cc(O[O])ccc1C
-SPC5605 = IGNORE ;    //  c1cc([O])ccc1C
-SPC5606 = IGNORE ;    //  c1ccc(C)c(O)c1CC
-SPC5607 = IGNORE ;    //  c1ccc(C)c([O])c1CC
-SPC5608 = IGNORE ;    //  c1ccc(N(=O)=O)c(O)c1C
-SPC5609 = IGNORE ;    //  c1ccc(N(=O)=O)c(O)c1C(C)C
-SPC5610 = IGNORE ;    //  c1ccc(N(=O)=O)c(O)c1CC
-SPC5611 = IGNORE ;    //  c1ccc(N(=O)=O)c(O)c1CCC
-SPC5612 = IGNORE ;    //  c1ccc(N(=O)=O)c(OO)c1C
-SPC5613 = IGNORE ;    //  c1ccc(N(=O)=O)c(OO)c1C(C)C
-SPC5614 = IGNORE ;    //  c1ccc(N(=O)=O)c(OO)c1CC
-SPC5615 = IGNORE ;    //  c1ccc(N(=O)=O)c(OO)c1CCC
-SPC5616 = IGNORE ;    //  c1ccc(N(=O)=O)c(O[O])c1C
-SPC5617 = IGNORE ;    //  c1ccc(N(=O)=O)c(O[O])c1C(C)C
-SPC5618 = IGNORE ;    //  c1ccc(N(=O)=O)c(O[O])c1CC
-SPC5619 = IGNORE ;    //  c1ccc(N(=O)=O)c(O[O])c1CCC
-SPC5620 = IGNORE ;    //  c1ccc(N(=O)=O)c([O])c1C
-SPC5621 = IGNORE ;    //  c1ccc(N(=O)=O)c([O])c1C(C)C
-SPC5622 = IGNORE ;    //  c1ccc(N(=O)=O)c([O])c1CC
-SPC5623 = IGNORE ;    //  c1ccc(N(=O)=O)c([O])c1CCC
-SPC5624 = IGNORE ;    //  c1ccc(O)c(O)c1C
-SPC5625 = IGNORE ;    //  c1ccc(O)c(O)c1C(C)C
-SPC5626 = IGNORE ;    //  c1ccc(O)c(O)c1CC
-SPC5627 = IGNORE ;    //  c1ccc(O)c(O)c1CCC
-SPC5628 = IGNORE ;    //  c1ccc(O)c(OO)c1C
-SPC5629 = IGNORE ;    //  c1ccc(O)c(OO)c1C(C)C
-SPC5630 = IGNORE ;    //  c1ccc(O)c(OO)c1CC
-SPC5631 = IGNORE ;    //  c1ccc(O)c(OO)c1CCC
-SPC5632 = IGNORE ;    //  c1ccc(O)c(O[O])c1C
-SPC5633 = IGNORE ;    //  c1ccc(O)c(O[O])c1C(C)C
-SPC5634 = IGNORE ;    //  c1ccc(O)c(O[O])c1CC
-SPC5635 = IGNORE ;    //  c1ccc(O)c(O[O])c1CCC
-SPC5636 = IGNORE ;    //  c1ccc(O)c([O])c1C
-SPC5637 = IGNORE ;    //  c1ccc(O)c([O])c1C(C)C
-SPC5638 = IGNORE ;    //  c1ccc(O)c([O])c1CC
-SPC5639 = IGNORE ;    //  c1ccc(O)c([O])c1CCC
-SPC5640 = IGNORE ;    //  c1ccc(O)cc1
-SPC5641 = IGNORE ;    //  c1ccc(OO)cc1
-SPC5642 = IGNORE ;    //  c1ccc(OO)cc1C
-SPC5643 = IGNORE ;    //  c1ccc(O[O])cc1
-SPC5644 = IGNORE ;    //  c1ccc(O[O])cc1C
-SPC5645 = IGNORE ;    //  c1ccc([O])cc1
-SPC5646 = IGNORE ;    //  c1ccc([O])cc1C
-SPC5647 = IGNORE ;    //  c1cccc(O)c1C
-SPC5648 = IGNORE ;    //  c1cccc(O)c1C(C)C
-SPC5649 = IGNORE ;    //  c1cccc(O)c1CC
-SPC5650 = IGNORE ;    //  c1cccc(O)c1CCC
-SPC5651 = IGNORE ;    //  c1cccc(OO)c1C
-SPC5652 = IGNORE ;    //  c1cccc(OO)c1C(C)C
-SPC5653 = IGNORE ;    //  c1cccc(OO)c1CC
-SPC5654 = IGNORE ;    //  c1cccc(OO)c1CCC
-SPC5655 = IGNORE ;    //  c1cccc(O[O])c1C
-SPC5656 = IGNORE ;    //  c1cccc(O[O])c1C(C)C
-SPC5657 = IGNORE ;    //  c1cccc(O[O])c1CC
-SPC5658 = IGNORE ;    //  c1cccc(O[O])c1CCC
-SPC5659 = IGNORE ;    //  c1cccc([O])c1C
-SPC5660 = IGNORE ;    //  c1cccc([O])c1C(C)C
-SPC5661 = IGNORE ;    //  c1cccc([O])c1CC
-SPC5662 = IGNORE ;    //  c1cccc([O])c1CCC
-SPC5663 = IGNORE ;    //  c1ccccc1
-SPC5664 = IGNORE ;    //  c1ccccc1C
-SPC5665 = IGNORE ;    //  c1ccccc1C(=O)C
-SPC5666 = IGNORE ;    //  c1ccccc1C(=O)C(=O)C
-SPC5667 = IGNORE ;    //  c1ccccc1C(=O)C(=O)COO
-SPC5668 = IGNORE ;    //  c1ccccc1C(=O)C(=O)CO[O]
-SPC5669 = IGNORE ;    //  c1ccccc1C(=O)C(=O)C[O]
-SPC5670 = IGNORE ;    //  c1ccccc1C(=O)C(O)C
-SPC5671 = IGNORE ;    //  c1ccccc1C(=O)C(OO)C
-SPC5672 = IGNORE ;    //  c1ccccc1C(=O)C(O[O])C
-SPC5673 = IGNORE ;    //  c1ccccc1C(=O)C([O])C
-SPC5674 = IGNORE ;    //  c1ccccc1C(=O)C=O
-SPC5675 = IGNORE ;    //  c1ccccc1C(=O)CC
-SPC5676 = IGNORE ;    //  c1ccccc1C(=O)CO
-SPC5677 = IGNORE ;    //  c1ccccc1C(=O)COO
-SPC5678 = IGNORE ;    //  c1ccccc1C(=O)CO[O]
-SPC5679 = IGNORE ;    //  c1ccccc1C(=O)C[O]
-SPC5680 = IGNORE ;    //  c1ccccc1C(=O)O
-SPC5681 = IGNORE ;    //  c1ccccc1C(=O)OO
-SPC5682 = IGNORE ;    //  c1ccccc1C(=O)O[O]
-SPC5683 = IGNORE ;    //  c1ccccc1C(C)C
-SPC5684 = IGNORE ;    //  c1ccccc1C(O)(C)C
-SPC5685 = IGNORE ;    //  c1ccccc1C(O)CC
-SPC5686 = IGNORE ;    //  c1ccccc1C(O)COO
-SPC5687 = IGNORE ;    //  c1ccccc1C(O)CO[O]
-SPC5688 = IGNORE ;    //  c1ccccc1C(O)C[O]
-SPC5689 = IGNORE ;    //  c1ccccc1C(ON(=O)=O)(C)C
-SPC5690 = IGNORE ;    //  c1ccccc1C(ON(=O)=O)CC
-SPC5691 = IGNORE ;    //  c1ccccc1C(OO)(C)C
-SPC5692 = IGNORE ;    //  c1ccccc1C(OO)CC
-SPC5693 = IGNORE ;    //  c1ccccc1C(OO)CON(=O)=O
-SPC5694 = IGNORE ;    //  c1ccccc1C(O[O])(C)C
-SPC5695 = IGNORE ;    //  c1ccccc1C(O[O])CC
-SPC5696 = IGNORE ;    //  c1ccccc1C(O[O])CON(=O)=O
-SPC5697 = IGNORE ;    //  c1ccccc1C([O])(C)C
-SPC5698 = IGNORE ;    //  c1ccccc1C([O])CC
-SPC5699 = IGNORE ;    //  c1ccccc1C([O])CON(=O)=O
-SPC5700 = IGNORE ;    //  c1ccccc1C=C
-SPC5701 = IGNORE ;    //  c1ccccc1C=O
-SPC5702 = IGNORE ;    //  c1ccccc1CC
-SPC5703 = IGNORE ;    //  c1ccccc1CC(=O)O
-SPC5704 = IGNORE ;    //  c1ccccc1CC(=O)OO
-SPC5705 = IGNORE ;    //  c1ccccc1CC(=O)OON(=O)=O
-SPC5706 = IGNORE ;    //  c1ccccc1CC(=O)O[O]
-SPC5707 = IGNORE ;    //  c1ccccc1CC=O
-SPC5708 = IGNORE ;    //  c1ccccc1CCC
-SPC5709 = IGNORE ;    //  c1ccccc1CCO
-SPC5710 = IGNORE ;    //  c1ccccc1CCON(=O)=O
-SPC5711 = IGNORE ;    //  c1ccccc1CCOO
-SPC5712 = IGNORE ;    //  c1ccccc1CCO[O]
-SPC5713 = IGNORE ;    //  c1ccccc1CC[O]
-SPC5714 = IGNORE ;    //  c1ccccc1CO
-SPC5715 = IGNORE ;    //  c1ccccc1CON(=O)=O
-SPC5716 = IGNORE ;    //  c1ccccc1COO
-SPC5717 = IGNORE ;    //  c1ccccc1CO[O]
-SPC5718 = IGNORE ;    //  c1ccccc1C[O]
-SPC5719 = IGNORE ;    //  cCC=CC
-SPC5720 = IGNORE ;    //  [H2O]
-SPC5721 = IGNORE ;    //  [O2]
+SPC1 = IGNORE ;    {BR}
+SPC2 = IGNORE ;    {BRCC(=O)O}
+SPC3 = IGNORE ;    {BRCC(=O)OO}
+SPC4 = IGNORE ;    {BRCC(=O)OON(=O)=O}
+SPC5 = IGNORE ;    {BRCC(=O)O[O]}
+SPC6 = IGNORE ;    {BRCC(BR)OO}
+SPC7 = IGNORE ;    {BRCC(BR)O[O]}
+SPC8 = IGNORE ;    {BRCC(BR)[O]}
+SPC9 = IGNORE ;    {BRCC(O)BR}
+SPC10 = IGNORE ;    {BRCC=O}
+SPC11 = IGNORE ;    {BRCCBR}
+SPC12 = IGNORE ;    {BRCOO}
+SPC13 = IGNORE ;    {BRCO[O]}
+SPC14 = IGNORE ;    {BRC[O]}
+SPC15 = IGNORE ;    {C}
+SPC16 = IGNORE ;    {C#C}
+SPC17 = IGNORE ;    {C(CC(C(=O)OO[N+](=O)[O-])C(C)=C)C(=O)C}
+SPC18 = IGNORE ;    {C(CC(C(=O)OO[N+](=O)[O-])C(C)=C)O}
+SPC19 = IGNORE ;    {C(CC(C(=O)OO[N+](=O)[O-])C(C)=O)=O}
+SPC20 = IGNORE ;    {C(CC(C(=O)OO[N+](=O)[O-])C(C)=O)C(=O)C}
+SPC21 = IGNORE ;    {C(CC(C(=O)OO[N+](=O)[O-])C(C)=O)O}
+SPC22 = IGNORE ;    {C(CC(C=O)C(C)(CO)O[N+](=O)[O-])O}
+SPC23 = IGNORE ;    {C(CC(C=O)C(C)(CO[N+](=O)[O-])O)O}
+SPC24 = IGNORE ;    {C(CC(C=O)C(C)(CO[N+](=O)[O-])OO)O}
+SPC25 = IGNORE ;    {C(CC(C=O)C(C)(CO[N+](=O)[O-])O[O])O}
+SPC26 = IGNORE ;    {C(CC(C=O)C(C)(CO[N+](=O)[O-])[O])O}
+SPC27 = IGNORE ;    {C(CC(C=O)[C](C)O[O])O}
+SPC28 = IGNORE ;    {C(CC(CC(=O)OO[N+](=O)[O-])C(C)=C)=O}
+SPC29 = IGNORE ;    {C(CC(CC(=O)OO[N+](=O)[O-])C(C)=C)C(=O)C}
+SPC30 = IGNORE ;    {C(CC(CC(=O)OO[N+](=O)[O-])C(C)=C)C(=O)O}
+SPC31 = IGNORE ;    {C(CC(CC(=O)OO[N+](=O)[O-])C(C)=O)=O}
+SPC32 = IGNORE ;    {C(CC(CC(=O)OO[N+](=O)[O-])C(C)=O)C(=O)O}
+SPC33 = IGNORE ;    {C(CC(CC(OO[N+](=O)[O-])=O)C(C)=O)C(=O)C}
+SPC34 = IGNORE ;    {C(CC(CC=O)C(C)(CO)O[N+](=O)[O-])=O}
+SPC35 = IGNORE ;    {C(CC(CC=O)C(C)(CO)O[N+](=O)[O-])C(C)=O}
+SPC36 = IGNORE ;    {C(CC(CC=O)C(C)(CO[N+](=O)[O-])O)=O}
+SPC37 = IGNORE ;    {C(CC(CC=O)C(C)(CO[N+](=O)[O-])O)C(C)=O}
+SPC38 = IGNORE ;    {C(CC(CC=O)C(C)(CO[N+](=O)[O-])OO)=O}
+SPC39 = IGNORE ;    {C(CC(CC=O)C(C)(CO[N+](=O)[O-])OO)C(C)=O}
+SPC40 = IGNORE ;    {C(CC(CC=O)C(C)(CO[N+](=O)[O-])O[O])=O}
+SPC41 = IGNORE ;    {C(CC(CC=O)C(C)(CO[N+](=O)[O-])O[O])C(C)=O}
+SPC42 = IGNORE ;    {C(CC(CC=O)C(C)(CO[N+](=O)[O-])[O])=O}
+SPC43 = IGNORE ;    {C(CC(CC=O)C(C)(CO[N+](=O)[O-])[O])C(C)=O}
+SPC44 = IGNORE ;    {C(CC(CC=O)C(C)=C)C(=O)OO[N+](=O)[O-]}
+SPC45 = IGNORE ;    {C(CC(CC=O)C(C)=C)O[N+](=O)[O-]}
+SPC46 = IGNORE ;    {C(CC(CC=O)C(C)=C)[C](C)O[O]}
+SPC47 = IGNORE ;    {C(CC(CC=O)C(C)=O)C(=O)OO[N+](=O)[O-]}
+SPC48 = IGNORE ;    {C(CC(CC=O)C(C)=O)O[N+](=O)[O-]}
+SPC49 = IGNORE ;    {C(CC(CC=O)C(C)=O)[C](C)O[O]}
+SPC50 = IGNORE ;    {C(CC(CC=O)[C](C)O[O])=O}
+SPC51 = IGNORE ;    {C(CC(CC=O)[C](C)O[O])C(C)=O}
+SPC52 = IGNORE ;    {C(CC(CO)C(C)(CO)O[N+](=O)[O-])=O}
+SPC53 = IGNORE ;    {C(CC(CO)C(C)(CO[N+](=O)[O-])O)=O}
+SPC54 = IGNORE ;    {C(CC(CO)C(C)(CO[N+](=O)[O-])OO)=O}
+SPC55 = IGNORE ;    {C(CC(CO)C(C)(CO[N+](=O)[O-])O[O])=O}
+SPC56 = IGNORE ;    {C(CC(CO)C(C)(CO[N+](=O)[O-])[O])=O}
+SPC57 = IGNORE ;    {C(CC(CO)C(C)=C)(=O)OO[N+](=O)[O-]}
+SPC58 = IGNORE ;    {C(CC(CO)C(C)=O)(=O)OO[N+](=O)[O-]}
+SPC59 = IGNORE ;    {C(CC(CO)[C](C)O[O])=O}
+SPC60 = IGNORE ;    {C(CC(CO[N+](=O)[O-])C(C)=C)=O}
+SPC61 = IGNORE ;    {C(CC(CO[N+](=O)[O-])C(C)=C)C(=O)C}
+SPC62 = IGNORE ;    {C(CC(CO[N+](=O)[O-])C(C)=C)C(=O)O}
+SPC63 = IGNORE ;    {C(CC(CO[N+](=O)[O-])C(C)=O)=O}
+SPC64 = IGNORE ;    {C(CC(CO[N+](=O)[O-])C(C)=O)C(=O)C}
+SPC65 = IGNORE ;    {C(CC(CO[N+](=O)[O-])C(C)=O)C(=O)O}
+SPC66 = IGNORE ;    {C(CC(C[CH]O[O])C(C)=C)C(C)=O}
+SPC67 = IGNORE ;    {C(CC(C[CH]O[O])C(C)=C)C(C)=O*b}
+SPC68 = IGNORE ;    {C(CC(C[CH]O[O])C(C)=O)C(C)=O}
+SPC69 = IGNORE ;    {C(CC(C[CH]O[O])C(C)=O)C(C)=O*b}
+SPC70 = IGNORE ;    {C(CC(O[N+](=O)[O-])C(C)=C)O}
+SPC71 = IGNORE ;    {C(O[N+](=O)[O-])C(CO)C(C)=C}
+SPC72 = IGNORE ;    {C(O[N+](=O)[O-])C(CO)C(C)=O}
+SPC73 = IGNORE ;    {C/C1=C/CCC(=C)C2CC(C)(C)C2CC\1}
+SPC74 = IGNORE ;    {C/C1=C/CCC(=O)C2CC(C)(C)C2CC\1}
+SPC75 = IGNORE ;    {C/C=C/C(=O)O}
+SPC76 = IGNORE ;    {C12CC(C1(C)C)CC(=O)C2(O)C}
+SPC77 = IGNORE ;    {C12CC(C1(C)C)CC(=O)C2(ON(=O)=O)C}
+SPC78 = IGNORE ;    {C12CC(C1(C)C)CC(O)C2(O)C}
+SPC79 = IGNORE ;    {C12CC(C1(C)C)CC(O)C2(ON(=O)=O)C}
+SPC80 = IGNORE ;    {C12CC(C1(C)C)CC(O)C2(OO)C}
+SPC81 = IGNORE ;    {C12CC(C1(C)C)CC(O)C2(O[O])C}
+SPC82 = IGNORE ;    {C12CC(C1(C)C)CC(O)C2([O])C}
+SPC83 = IGNORE ;    {C12CC(C1(C)C)CC(ON(=O)=O)C2(O)C}
+SPC84 = IGNORE ;    {C12CC(C1(C)C)CC(ON(=O)=O)C2(OO)C}
+SPC85 = IGNORE ;    {C12CC(C1(C)C)CC(ON(=O)=O)C2(O[O])C}
+SPC86 = IGNORE ;    {C12CC(C1(C)C)CC(ON(=O)=O)C2([O])C}
+SPC87 = IGNORE ;    {C12CC(C1(C)C)CC(OO)C2(O)C}
+SPC88 = IGNORE ;    {C12CC(C1(C)C)CC(OO)C2(ON(=O)=O)C}
+SPC89 = IGNORE ;    {C12CC(C1(C)C)CC(O[O])C2(O)C}
+SPC90 = IGNORE ;    {C12CC(C1(C)C)CC(O[O])C2(ON(=O)=O)C}
+SPC91 = IGNORE ;    {C12CC(C1(C)C)CC([O])C2(O)C}
+SPC92 = IGNORE ;    {C12CC(C1(C)C)CC([O])C2(ON(=O)=O)C}
+SPC93 = IGNORE ;    {C12CC(C1(C)C)CC=C2C}
+SPC94 = IGNORE ;    {C12CC(OO)(C1(C)C)CC(=O)C2(ON(=O)=O)C}
+SPC95 = IGNORE ;    {C12CC(O[O])(C1(C)C)CC(=O)C2(ON(=O)=O)C}
+SPC96 = IGNORE ;    {C12CC([O])(C1(C)C)CC(=O)C2(ON(=O)=O)C}
+SPC97 = IGNORE ;    {C1C(=O)C(=O)C(C)(C)C(=O)C1}
+SPC98 = IGNORE ;    {C1C(=O)C(=O)CC(OO)C1}
+SPC99 = IGNORE ;    {C1C(=O)C(=O)CC(O[O])C1}
+SPC100 = IGNORE ;    {C1C(=O)C(=O)CC([O])C1}
+SPC101 = IGNORE ;    {C1C(=O)C(O)C(C)(C)C(=O)C1}
+SPC102 = IGNORE ;    {C1C(=O)C(OO)C(C)(C)C(=O)C1}
+SPC103 = IGNORE ;    {C1C(=O)C(O[O])C(C)(C)C(=O)C1}
+SPC104 = IGNORE ;    {C1C(=O)C([O])C(C)(C)C(=O)C1}
+SPC105 = IGNORE ;    {C1C(=O)CC(=O)C(=O)C1}
+SPC106 = IGNORE ;    {C1C(=O)CC(=O)CC1=O}
+SPC107 = IGNORE ;    {C1C(=O)CC(O)C(=O)C1}
+SPC108 = IGNORE ;    {C1C(=O)CC(ON(=O)=O)CC1}
+SPC109 = IGNORE ;    {C1C(=O)CC(OO)C(=O)C1}
+SPC110 = IGNORE ;    {C1C(=O)CC(OO)CC1}
+SPC111 = IGNORE ;    {C1C(=O)CC(OO)CC1=O}
+SPC112 = IGNORE ;    {C1C(=O)CC(O[O])C(=O)C1}
+SPC113 = IGNORE ;    {C1C(=O)CC(O[O])CC1}
+SPC114 = IGNORE ;    {C1C(=O)CC(O[O])CC1=O}
+SPC115 = IGNORE ;    {C1C(=O)CC([O])C(=O)C1}
+SPC116 = IGNORE ;    {C1C(=O)CC([O])CC1}
+SPC117 = IGNORE ;    {C1C(=O)CC([O])CC1=O}
+SPC118 = IGNORE ;    {C1C(=O)CCC(=O)C1C(O)(C)C}
+SPC119 = IGNORE ;    {C1C(=O)CCC(=O)C1C(ON(=O)=O)(C)C}
+SPC120 = IGNORE ;    {C1C(=O)CCC(=O)C1C(OO)(C)C}
+SPC121 = IGNORE ;    {C1C(=O)CCC(=O)C1C(O[O])(C)C}
+SPC122 = IGNORE ;    {C1C(=O)CCC(=O)C1C([O])(C)C}
+SPC123 = IGNORE ;    {C1C(O)C(C)=CCC1C(O)(C)C}
+SPC124 = IGNORE ;    {C1C(O)C(C)=CCC1C(ON(=O)=O)(C)C}
+SPC125 = IGNORE ;    {C1C(O)C(C)=CCC1C(OO)(C)C}
+SPC126 = IGNORE ;    {C1C(O)C(C)=CCC1C(O[O])(C)C}
+SPC127 = IGNORE ;    {C1C(O)C(C)=CCC1C([O])(C)C}
+SPC128 = IGNORE ;    {C1C(O)CC(=O)CC1}
+SPC129 = IGNORE ;    {C1C(O[O])O1}
+SPC130 = IGNORE ;    {C1CC(=O)C(=O)CC1}
+SPC131 = IGNORE ;    {C1CC(=O)CC(=O)C1}
+SPC132 = IGNORE ;    {C1CC(C)=CCC1C(=O)C}
+SPC133 = IGNORE ;    {C1CC(C)=CCC1C(C)=C}
+SPC134 = IGNORE ;    {C1CC(C)=CCC1C(O)(C)CO}
+SPC135 = IGNORE ;    {C1CC(C)=CCC1C(OO)(C)CO}
+SPC136 = IGNORE ;    {C1CC(C)=CCC1C(O[O])(C)CO}
+SPC137 = IGNORE ;    {C1CC(C)=CCC1C([O])(C)CO}
+SPC138 = IGNORE ;    {C1CC(CC(C1(C)O)O[N+](=O)[O-])C(C)=C}
+SPC139 = IGNORE ;    {C1CC(CC(C1(C)O)O[N+](=O)[O-])C(C)=O}
+SPC140 = IGNORE ;    {C1CC(CC(C1(C)OO)O[N+](=O)[O-])C(C)=C}
+SPC141 = IGNORE ;    {C1CC(CC(C1(C)OO)O[N+](=O)[O-])C(C)=O}
+SPC142 = IGNORE ;    {C1CC(CC(C1(C)O[N+](=O)[O-])O)C(C)=C}
+SPC143 = IGNORE ;    {C1CC(CC(C1(C)O[N+](=O)[O-])O)C(C)=O}
+SPC144 = IGNORE ;    {C1CC(CC(C1(C)O[O])O[N+](=O)[O-])C(C)=C}
+SPC145 = IGNORE ;    {C1CC(CC(C1(C)O[O])O[N+](=O)[O-])C(C)=O}
+SPC146 = IGNORE ;    {C1CC(CC(C1(C)[O])O[N+](=O)[O-])C(C)=C}
+SPC147 = IGNORE ;    {C1CC(CC(C1(C)[O])O[N+](=O)[O-])C(C)=O}
+SPC148 = IGNORE ;    {C1CC(CC=C1C)C(C)(O[N+](=O)[O-])CO}
+SPC149 = IGNORE ;    {C1CC(O)(C)C(=O)CC1C(=O)C}
+SPC150 = IGNORE ;    {C1CC(O)(C)C(=O)CC1C(C)=C}
+SPC151 = IGNORE ;    {C1CC(O)(C)C(O)CC1C(=O)C}
+SPC152 = IGNORE ;    {C1CC(O)(C)C(O)CC1C(C)=C}
+SPC153 = IGNORE ;    {C1CC(O)(C)C(OO)CC1C(=O)C}
+SPC154 = IGNORE ;    {C1CC(O)(C)C(OO)CC1C(C)=C}
+SPC155 = IGNORE ;    {C1CC(O)(C)C(O[O])CC1C(=O)C}
+SPC156 = IGNORE ;    {C1CC(O)(C)C(O[O])CC1C(C)=C}
+SPC157 = IGNORE ;    {C1CC(O)(C)C([O])CC1C(=O)C}
+SPC158 = IGNORE ;    {C1CC(O)(C)C([O])CC1C(C)=C}
+SPC159 = IGNORE ;    {C1CC(O)C(=O)CC1}
+SPC160 = IGNORE ;    {C1CC(O)C(O)CC1}
+SPC161 = IGNORE ;    {C1CC(O)C(ON(=O)=O)CC1}
+SPC162 = IGNORE ;    {C1CC(O)C(OO)CC1}
+SPC163 = IGNORE ;    {C1CC(O)C(O[O])CC1}
+SPC164 = IGNORE ;    {C1CC(O)C([O])CC1}
+SPC165 = IGNORE ;    {C1CC(OO)(C)C(O)CC1C(=O)C}
+SPC166 = IGNORE ;    {C1CC(OO)(C)C(O)CC1C(C)=C}
+SPC167 = IGNORE ;    {C1CC(O[O])(C)C(O)CC1C(=O)C}
+SPC168 = IGNORE ;    {C1CC(O[O])(C)C(O)CC1C(C)=C}
+SPC169 = IGNORE ;    {C1CC([O])(C)C(O)CC1C(=O)C}
+SPC170 = IGNORE ;    {C1CC([O])(C)C(O)CC1C(C)=C}
+SPC171 = IGNORE ;    {C1CCC(=O)CC1}
+SPC172 = IGNORE ;    {C1CCC(O)CC1}
+SPC173 = IGNORE ;    {C1CCC(ON(=O)=O)CC1}
+SPC174 = IGNORE ;    {C1CCC(OO)CC1}
+SPC175 = IGNORE ;    {C1CCC(O[O])CC1}
+SPC176 = IGNORE ;    {C1CCC([O])CC1}
+SPC177 = IGNORE ;    {C1CCCCC1}
+SPC178 = IGNORE ;    {C1OC(=O)C(C)=C1C}
+SPC179 = IGNORE ;    {C1OC(=O)C(O[O])C1O}
+SPC180 = IGNORE ;    {C1OC(=O)C([O])C1O}
+SPC181 = IGNORE ;    {C1OC1}
+SPC182 = IGNORE ;    {C1OC1(C)C(O)C(=O)OO}
+SPC183 = IGNORE ;    {C1OC1(C)C(O)C(=O)O[O]}
+SPC184 = IGNORE ;    {C1OC1(C)C(O)C=O}
+SPC185 = IGNORE ;    {C1OC1(C)C(O)CO}
+SPC186 = IGNORE ;    {C1OC1C(O)(C)C(=O)OO}
+SPC187 = IGNORE ;    {C1OC1C(O)(C)C(=O)O[O]}
+SPC188 = IGNORE ;    {C1OC1C(O)(C)C=O}
+SPC189 = IGNORE ;    {C1OC1C(O)(C)CO}
+SPC190 = IGNORE ;    {C=C}
+SPC191 = IGNORE ;    {C=C(C)C(=O)O[O]}
+SPC192 = IGNORE ;    {C=C(C)C(C(=O)O[O])CCO}
+SPC193 = IGNORE ;    {C=C(C)C(CC=O)CC(=O)O[O]}
+SPC194 = IGNORE ;    {C=C(C)C(CC=O)CCC(=O)CO[O]}
+SPC195 = IGNORE ;    {C=C(C)C(CC=O)CCC(=O)C[O]}
+SPC196 = IGNORE ;    {C=C(C)C(CC=O)CCC(=O)O[O]}
+SPC197 = IGNORE ;    {C=C(C)C(CC=O)CCC(=O)[O]}
+SPC198 = IGNORE ;    {C=C(C)C(CC=O)CCO[O]}
+SPC199 = IGNORE ;    {C=C(C)C(CC=O)CC[O]}
+SPC200 = IGNORE ;    {C=C(C)C(CO)C(=O)O[O]}
+SPC201 = IGNORE ;    {C=C(C)C(CO)CC(=O)O[O]}
+SPC202 = IGNORE ;    {C=C(C)C(CO)CO[O]}
+SPC203 = IGNORE ;    {C=C(C)C(CO)C[O]}
+SPC204 = IGNORE ;    {C=C(C)C(CO[O])CC=O}
+SPC205 = IGNORE ;    {C=C(C)C(C[O])CC=O}
+SPC206 = IGNORE ;    {C=C(CCC=O)C(CC1(C)C)C1CCC(=O)CO[O]}
+SPC207 = IGNORE ;    {C=C(CCC=O)C(CC1(C)C)C1CCC(=O)C[O]}
+SPC208 = IGNORE ;    {C=C(CCC=O)C(CC1(C)C)C1CCC(=O)O[O]}
+SPC209 = IGNORE ;    {C=C(CCC=O)C(CC1(C)C)C1CCC(=O)[O]}
+SPC210 = IGNORE ;    {C=C(CCC=O)C(CC1(C)C)C1CCO[O]}
+SPC211 = IGNORE ;    {C=C(CCC=O)C(CC1(C)C)C1CC[O]}
+SPC212 = IGNORE ;    {C=C(CCO)C(=O)CO[O]}
+SPC213 = IGNORE ;    {C=C(CCO)C(=O)C[O]}
+SPC214 = IGNORE ;    {C=C(CO)C(=O)O[O]}
+SPC215 = IGNORE ;    {C=C1CCC(=O)C(C)(O)CCC2C1CC2(C)C}
+SPC216 = IGNORE ;    {C=C1CCC(O)C(C)(O)CCC2C1CC2(C)C}
+SPC217 = IGNORE ;    {C=C1CCC(O)C(C)([O])CCC2C1CC2(C)C}
+SPC218 = IGNORE ;    {C=C1CCC([O])C(C)(O)CCC2C1CC2(C)C}
+SPC219 = IGNORE ;    {C=C1CCC2OOC(C)(CCC3C1CC3(C)C)O2}
+SPC220 = IGNORE ;    {C=CC(=O)CO[O]}
+SPC221 = IGNORE ;    {C=CC(=O)C[O]}
+SPC222 = IGNORE ;    {C=CC(=O)O[O]}
+SPC223 = IGNORE ;    {C=CC(C)=C}
+SPC224 = IGNORE ;    {C=CC(O)C(=O)O[O]}
+SPC225 = IGNORE ;    {C=CC(O)CO[O]}
+SPC226 = IGNORE ;    {C=CC(O)C[O]}
+SPC227 = IGNORE ;    {C=CC=C}
+SPC228 = IGNORE ;    {C=O}
+SPC229 = IGNORE ;    {CBR}
+SPC230 = IGNORE ;    {CC}
+SPC231 = IGNORE ;    {CC(=O)C}
+SPC232 = IGNORE ;    {CC(=O)C(=O)C}
+SPC233 = IGNORE ;    {CC(=O)C(=O)C(=O)C}
+SPC234 = IGNORE ;    {CC(=O)C(=O)C(=O)C(OO)C}
+SPC235 = IGNORE ;    {CC(=O)C(=O)C(=O)C(O[O])C}
+SPC236 = IGNORE ;    {CC(=O)C(=O)C(=O)C([O])C}
+SPC237 = IGNORE ;    {CC(=O)C(=O)C(=O)C=O}
+SPC238 = IGNORE ;    {CC(=O)C(=O)C(=O)COO}
+SPC239 = IGNORE ;    {CC(=O)C(=O)C(=O)CO[O]}
+SPC240 = IGNORE ;    {CC(=O)C(=O)C(=O)C[O]}
+SPC241 = IGNORE ;    {CC(=O)C(=O)C(C)=C(C)C(=O)C=O}
+SPC242 = IGNORE ;    {CC(=O)C(=O)C(C)=CC(=O)C=O}
+SPC243 = IGNORE ;    {CC(=O)C(=O)C(C)C}
+SPC244 = IGNORE ;    {CC(=O)C(=O)C(C)C(=O)C}
+SPC245 = IGNORE ;    {CC(=O)C(=O)C(C)C(=O)OO}
+SPC246 = IGNORE ;    {CC(=O)C(=O)C(C)C(=O)O[O]}
+SPC247 = IGNORE ;    {CC(=O)C(=O)C(C)C=O}
+SPC248 = IGNORE ;    {CC(=O)C(=O)C(C)CO}
+SPC249 = IGNORE ;    {CC(=O)C(=O)C(CC)=CC(=O)C=O}
+SPC250 = IGNORE ;    {CC(=O)C(=O)C(CC)=CC(=O)OO}
+SPC251 = IGNORE ;    {CC(=O)C(=O)C(CC)=CC(=O)OON(=O)=O}
+SPC252 = IGNORE ;    {CC(=O)C(=O)C(CC)=CC(=O)O[O]}
+SPC253 = IGNORE ;    {CC(=O)C(=O)C(O)(C)C}
+SPC254 = IGNORE ;    {CC(=O)C(=O)C(O)(C)C(=O)OO}
+SPC255 = IGNORE ;    {CC(=O)C(=O)C(O)(C)C(=O)O[O]}
+SPC256 = IGNORE ;    {CC(=O)C(=O)C(O)(C)C=O}
+SPC257 = IGNORE ;    {CC(=O)C(=O)C(O)(C)COO}
+SPC258 = IGNORE ;    {CC(=O)C(=O)C(O)(C)CO[O]}
+SPC259 = IGNORE ;    {CC(=O)C(=O)C(O)(C)C[O]}
+SPC260 = IGNORE ;    {CC(=O)C(=O)C(O)C1(C)OC1C=O}
+SPC261 = IGNORE ;    {CC(=O)C(=O)C(O)C1OC1(C)C=O}
+SPC262 = IGNORE ;    {CC(=O)C(=O)C(O)C1OC1C=O}
+SPC263 = IGNORE ;    {CC(=O)C(=O)C(O)C=O}
+SPC264 = IGNORE ;    {CC(=O)C(=O)C(OO)(C)C}
+SPC265 = IGNORE ;    {CC(=O)C(=O)C(OO)(C)C(=O)C}
+SPC266 = IGNORE ;    {CC(=O)C(=O)C(OO)C}
+SPC267 = IGNORE ;    {CC(=O)C(=O)C(OO)C(=O)C}
+SPC268 = IGNORE ;    {CC(=O)C(=O)C(O[O])(C)C}
+SPC269 = IGNORE ;    {CC(=O)C(=O)C(O[O])(C)C(=O)C}
+SPC270 = IGNORE ;    {CC(=O)C(=O)C(O[O])C}
+SPC271 = IGNORE ;    {CC(=O)C(=O)C(O[O])C(=O)C}
+SPC272 = IGNORE ;    {CC(=O)C(=O)C([O])(C)C}
+SPC273 = IGNORE ;    {CC(=O)C(=O)C([O])(C)C(=O)C}
+SPC274 = IGNORE ;    {CC(=O)C(=O)C([O])C}
+SPC275 = IGNORE ;    {CC(=O)C(=O)C([O])C(=O)C}
+SPC276 = IGNORE ;    {CC(=O)C(=O)C=C(C(=O)OO)CC}
+SPC277 = IGNORE ;    {CC(=O)C(=O)C=C(C(=O)OON(=O)=O)CC}
+SPC278 = IGNORE ;    {CC(=O)C(=O)C=C(C(=O)O[O])CC}
+SPC279 = IGNORE ;    {CC(=O)C(=O)C=C(C)C(=O)C=O}
+SPC280 = IGNORE ;    {CC(=O)C(=O)C=C(CC)C(=O)C=O}
+SPC281 = IGNORE ;    {CC(=O)C(=O)C=CC(=O)C}
+SPC282 = IGNORE ;    {CC(=O)C(=O)C=O}
+SPC283 = IGNORE ;    {CC(=O)C(=O)CC(=O)C(OO)C}
+SPC284 = IGNORE ;    {CC(=O)C(=O)CC(=O)C(O[O])C}
+SPC285 = IGNORE ;    {CC(=O)C(=O)CC(=O)C([O])C}
+SPC286 = IGNORE ;    {CC(=O)C(=O)CC(=O)C=O}
+SPC287 = IGNORE ;    {CC(=O)C(=O)CC(=O)CC(=O)OO}
+SPC288 = IGNORE ;    {CC(=O)C(=O)CC(=O)CC(=O)OON(=O)=O}
+SPC289 = IGNORE ;    {CC(=O)C(=O)CC(=O)CC(=O)O[O]}
+SPC290 = IGNORE ;    {CC(=O)C(=O)CC(=O)CC=O}
+SPC291 = IGNORE ;    {CC(=O)C(=O)CC(=O)CO}
+SPC292 = IGNORE ;    {CC(=O)C(=O)CC(=O)COO}
+SPC293 = IGNORE ;    {CC(=O)C(=O)CC(=O)CO[O]}
+SPC294 = IGNORE ;    {CC(=O)C(=O)CC(=O)C[O]}
+SPC295 = IGNORE ;    {CC(=O)C(=O)CC(=O)OO}
+SPC296 = IGNORE ;    {CC(=O)C(=O)CC(=O)O[O]}
+SPC297 = IGNORE ;    {CC(=O)C(=O)CC(C(=O)C)CC=O}
+SPC298 = IGNORE ;    {CC(=O)C(=O)CC(C(O)(C)C)CC=O}
+SPC299 = IGNORE ;    {CC(=O)C(=O)CC(C(ON(=O)=O)(C)C)CC=O}
+SPC300 = IGNORE ;    {CC(=O)C(=O)CC(C(OO)(C)C)CC=O}
+SPC301 = IGNORE ;    {CC(=O)C(=O)CC(C(O[O])(C)C)CC=O}
+SPC302 = IGNORE ;    {CC(=O)C(=O)CC(C([O])(C)C)CC=O}
+SPC303 = IGNORE ;    {CC(=O)C(=O)CC(CC=O)C(C)=C}
+SPC304 = IGNORE ;    {CC(=O)C(=O)CC(CO)C(=O)C}
+SPC305 = IGNORE ;    {CC(=O)C(=O)CC(CO)C(C)=C}
+SPC306 = IGNORE ;    {CC(=O)C(=O)CC(CO)C(OO)(C)CO}
+SPC307 = IGNORE ;    {CC(=O)C(=O)CC(CO)C(O[O])(C)CO}
+SPC308 = IGNORE ;    {CC(=O)C(=O)CC(CO)C([O])(C)CO}
+SPC309 = IGNORE ;    {CC(=O)C(=O)CC(O)(C)C}
+SPC310 = IGNORE ;    {CC(=O)C(=O)CC(O)CC=O}
+SPC311 = IGNORE ;    {CC(=O)C(=O)CC(O)CO}
+SPC312 = IGNORE ;    {CC(=O)C(=O)CC(ON(=O)=O)CC=O}
+SPC313 = IGNORE ;    {CC(=O)C(=O)CC(ON(=O)=O)CO}
+SPC314 = IGNORE ;    {CC(=O)C(=O)CC(OO)(CO)C(=O)C}
+SPC315 = IGNORE ;    {CC(=O)C(=O)CC(OO)C}
+SPC316 = IGNORE ;    {CC(=O)C(=O)CC(OO)CC=O}
+SPC317 = IGNORE ;    {CC(=O)C(=O)CC(OO)CO}
+SPC318 = IGNORE ;    {CC(=O)C(=O)CC(O[O])(CO)C(=O)C}
+SPC319 = IGNORE ;    {CC(=O)C(=O)CC(O[O])C}
+SPC320 = IGNORE ;    {CC(=O)C(=O)CC(O[O])CC=O}
+SPC321 = IGNORE ;    {CC(=O)C(=O)CC(O[O])CO}
+SPC322 = IGNORE ;    {CC(=O)C(=O)CC([O])(CO)C(=O)C}
+SPC323 = IGNORE ;    {CC(=O)C(=O)CC([O])C}
+SPC324 = IGNORE ;    {CC(=O)C(=O)CC([O])CC=O}
+SPC325 = IGNORE ;    {CC(=O)C(=O)CC([O])CO}
+SPC326 = IGNORE ;    {CC(=O)C(=O)CC1C(CC1(C)C)C(=O)CCC=O}
+SPC327 = IGNORE ;    {CC(=O)C(=O)CC1C(CC1(C)C)C(CCC=O)=C}
+SPC328 = IGNORE ;    {CC(=O)C(=O)CC=O}
+SPC329 = IGNORE ;    {CC(=O)C(=O)CCO}
+SPC330 = IGNORE ;    {CC(=O)C(=O)CO}
+SPC331 = IGNORE ;    {CC(=O)C(=O)CON(=O)=O}
+SPC332 = IGNORE ;    {CC(=O)C(=O)COO}
+SPC333 = IGNORE ;    {CC(=O)C(=O)CO[O]}
+SPC334 = IGNORE ;    {CC(=O)C(=O)C[O]}
+SPC335 = IGNORE ;    {CC(=O)C(=O)O}
+SPC336 = IGNORE ;    {CC(=O)C(=O)OC}
+SPC337 = IGNORE ;    {CC(=O)C(=O)OC(=O)C}
+SPC338 = IGNORE ;    {CC(=O)C(=O)OC(=O)C(=O)C}
+SPC339 = IGNORE ;    {CC(=O)C(=O)OC(=O)C(=O)COO}
+SPC340 = IGNORE ;    {CC(=O)C(=O)OC(=O)C(=O)CO[O]}
+SPC341 = IGNORE ;    {CC(=O)C(=O)OC(=O)C(=O)C[O]}
+SPC342 = IGNORE ;    {CC(=O)C(=O)OC(=O)C(O[O])C}
+SPC343 = IGNORE ;    {CC(=O)C(=O)OC(=O)C([O])C}
+SPC344 = IGNORE ;    {CC(=O)C(=O)OC(C(=O)O)CC}
+SPC345 = IGNORE ;    {CC(=O)C(=O)OC(C(=O)OO)CC}
+SPC346 = IGNORE ;    {CC(=O)C(=O)OC(C(=O)OON(=O)=O)CC}
+SPC347 = IGNORE ;    {CC(=O)C(=O)OC(C(=O)O[O])CC}
+SPC348 = IGNORE ;    {CC(=O)C(=O)OC(C)C(=O)C}
+SPC349 = IGNORE ;    {CC(=O)C(=O)OC(C)C(=O)O}
+SPC350 = IGNORE ;    {CC(=O)C(=O)OC(C)C(=O)OO}
+SPC351 = IGNORE ;    {CC(=O)C(=O)OC(C)C(=O)O[O]}
+SPC352 = IGNORE ;    {CC(=O)C(=O)OC(C)C=O}
+SPC353 = IGNORE ;    {CC(=O)C(=O)OC(C=O)CC}
+SPC354 = IGNORE ;    {CC(=O)C(=O)OC(O)(C)C(=O)C}
+SPC355 = IGNORE ;    {CC(=O)C(=O)OC(OO)(C)C(=O)C}
+SPC356 = IGNORE ;    {CC(=O)C(=O)OC(O[O])(C)C(=O)C}
+SPC357 = IGNORE ;    {CC(=O)C(=O)OC(O[O])C}
+SPC358 = IGNORE ;    {CC(=O)C(=O)OC(O[O])C(=O)C}
+SPC359 = IGNORE ;    {CC(=O)C(=O)OC(O[O])CC}
+SPC360 = IGNORE ;    {CC(=O)C(=O)OC(O[O])CCC}
+SPC361 = IGNORE ;    {CC(=O)C(=O)OC([O])(C)C(=O)C}
+SPC362 = IGNORE ;    {CC(=O)C(=O)OC([O])C}
+SPC363 = IGNORE ;    {CC(=O)C(=O)OC([O])C(=O)C}
+SPC364 = IGNORE ;    {CC(=O)C(=O)OC([O])CC}
+SPC365 = IGNORE ;    {CC(=O)C(=O)OC([O])CCC}
+SPC366 = IGNORE ;    {CC(=O)C(=O)OC=O}
+SPC367 = IGNORE ;    {CC(=O)C(=O)OCC(=O)O}
+SPC368 = IGNORE ;    {CC(=O)C(=O)OCC(=O)OO}
+SPC369 = IGNORE ;    {CC(=O)C(=O)OCC(=O)OON(=O)=O}
+SPC370 = IGNORE ;    {CC(=O)C(=O)OCC(=O)O[O]}
+SPC371 = IGNORE ;    {CC(=O)C(=O)OCC=O}
+SPC372 = IGNORE ;    {CC(=O)C(=O)OCOO}
+SPC373 = IGNORE ;    {CC(=O)C(=O)OCO[O]}
+SPC374 = IGNORE ;    {CC(=O)C(=O)OC[O]}
+SPC375 = IGNORE ;    {CC(=O)C(=O)OO}
+SPC376 = IGNORE ;    {CC(=O)C(=O)O[O]}
+SPC377 = IGNORE ;    {CC(=O)C(C(=O)OO)CC=O}
+SPC378 = IGNORE ;    {CC(=O)C(C(O)(C)C)CC(=O)CC=O}
+SPC379 = IGNORE ;    {CC(=O)C(C(ON(=O)=O)(C)C)CC(=O)CC=O}
+SPC380 = IGNORE ;    {CC(=O)C(C(OO)(C)C)CC(=O)CC=O}
+SPC381 = IGNORE ;    {CC(=O)C(C(OO)(C)C)CC=O}
+SPC382 = IGNORE ;    {CC(=O)C(C(O[O])(C)C)CC(=O)CC=O}
+SPC383 = IGNORE ;    {CC(=O)C(C(O[O])(C)C)CC=O}
+SPC384 = IGNORE ;    {CC(=O)C(C([O])(C)C)CC(=O)CC=O}
+SPC385 = IGNORE ;    {CC(=O)C(C([O])(C)C)CC=O}
+SPC386 = IGNORE ;    {CC(=O)C(C)(C)C}
+SPC387 = IGNORE ;    {CC(=O)C(C)(C)C(=O)O}
+SPC388 = IGNORE ;    {CC(=O)C(C)(C)C(=O)OO}
+SPC389 = IGNORE ;    {CC(=O)C(C)(C)C(=O)O[O]}
+SPC390 = IGNORE ;    {CC(=O)C(C)(C)C=O}
+SPC391 = IGNORE ;    {CC(=O)C(C)(C)CO}
+SPC392 = IGNORE ;    {CC(=O)C(C)(C)CON(=O)=O}
+SPC393 = IGNORE ;    {CC(=O)C(C)(C)COO}
+SPC394 = IGNORE ;    {CC(=O)C(C)(C)CO[O]}
+SPC395 = IGNORE ;    {CC(=O)C(C)(C)C[O]}
+SPC396 = IGNORE ;    {CC(=O)C(C)=C(C)C(=O)O}
+SPC397 = IGNORE ;    {CC(=O)C(C)=C(C)C(=O)OO}
+SPC398 = IGNORE ;    {CC(=O)C(C)=C(C)C(=O)O[O]}
+SPC399 = IGNORE ;    {CC(=O)C(C)=C(C)C(=O)[O]}
+SPC400 = IGNORE ;    {CC(=O)C(C)=C(C)C=O}
+SPC401 = IGNORE ;    {CC(=O)C(C)=CC(=O)O}
+SPC402 = IGNORE ;    {CC(=O)C(C)=CC(=O)OO}
+SPC403 = IGNORE ;    {CC(=O)C(C)=CC(=O)O[O]}
+SPC404 = IGNORE ;    {CC(=O)C(C)=CC(=O)[O]}
+SPC405 = IGNORE ;    {CC(=O)C(C)=CC=O}
+SPC406 = IGNORE ;    {CC(=O)C(C)C}
+SPC407 = IGNORE ;    {CC(=O)C(C)C(=O)C}
+SPC408 = IGNORE ;    {CC(=O)C(C)C(=O)C=O}
+SPC409 = IGNORE ;    {CC(=O)C(C)C(=O)CO}
+SPC410 = IGNORE ;    {CC(=O)C(C)C(=O)O}
+SPC411 = IGNORE ;    {CC(=O)C(C)C(=O)OO}
+SPC412 = IGNORE ;    {CC(=O)C(C)C(=O)O[O]}
+SPC413 = IGNORE ;    {CC(=O)C(C)C(O)CO}
+SPC414 = IGNORE ;    {CC(=O)C(C)C(ON(=O)=O)CO}
+SPC415 = IGNORE ;    {CC(=O)C(C)C(OO)CO}
+SPC416 = IGNORE ;    {CC(=O)C(C)C(O[O])CO}
+SPC417 = IGNORE ;    {CC(=O)C(C)C([O])CO}
+SPC418 = IGNORE ;    {CC(=O)C(C)C=O}
+SPC419 = IGNORE ;    {CC(=O)C(C)CC(=O)O}
+SPC420 = IGNORE ;    {CC(=O)C(C)CC(=O)OO}
+SPC421 = IGNORE ;    {CC(=O)C(C)CC(=O)O[O]}
+SPC422 = IGNORE ;    {CC(=O)C(C)CC=O}
+SPC423 = IGNORE ;    {CC(=O)C(C)CCO}
+SPC424 = IGNORE ;    {CC(=O)C(C)CO}
+SPC425 = IGNORE ;    {CC(=O)C(C)CON(=O)=O}
+SPC426 = IGNORE ;    {CC(=O)C(C)COO}
+SPC427 = IGNORE ;    {CC(=O)C(C)CO[O]}
+SPC428 = IGNORE ;    {CC(=O)C(C)C[O]}
+SPC429 = IGNORE ;    {CC(=O)C(C)OC(=O)C=O}
+SPC430 = IGNORE ;    {CC(=O)C(C1(C)C)CC1CC(=O)O}
+SPC431 = IGNORE ;    {CC(=O)C(C1(C)C)CC1CC(=O)OO}
+SPC432 = IGNORE ;    {CC(=O)C(C1(C)C)CC1CC(=O)O[O]}
+SPC433 = IGNORE ;    {CC(=O)C(C1(C)C)CC1CC=O}
+SPC434 = IGNORE ;    {CC(=O)C(C=O)CC=O}
+SPC435 = IGNORE ;    {CC(=O)C(CC(=O)O)CC=O}
+SPC436 = IGNORE ;    {CC(=O)C(CC(=O)O)CCC(=O)O}
+SPC437 = IGNORE ;    {CC(=O)C(CC(=O)OO)CC=O}
+SPC438 = IGNORE ;    {CC(=O)C(CC=O)CC(=O)O[O]}
+SPC439 = IGNORE ;    {CC(=O)C(CC=O)CC=O}
+SPC440 = IGNORE ;    {CC(=O)C(CC=O)CCC(=O)C=O}
+SPC441 = IGNORE ;    {CC(=O)C(CC=O)CCC(=O)CO[O]}
+SPC442 = IGNORE ;    {CC(=O)C(CC=O)CCC(=O)C[O]}
+SPC443 = IGNORE ;    {CC(=O)C(CC=O)CCC(=O)O[O]}
+SPC444 = IGNORE ;    {CC(=O)C(CC=O)CCC(=O)[O]}
+SPC445 = IGNORE ;    {CC(=O)C(CC=O)CCO[O]}
+SPC446 = IGNORE ;    {CC(=O)C(CC=O)CC[O]}
+SPC447 = IGNORE ;    {CC(=O)C(CCO)C(=O)C=O}
+SPC448 = IGNORE ;    {CC(=O)C(CCO)C(O)C=O}
+SPC449 = IGNORE ;    {CC(=O)C(CCO)C(OO)C=O}
+SPC450 = IGNORE ;    {CC(=O)C(CCO)C(O[O])C=O}
+SPC451 = IGNORE ;    {CC(=O)C(CCO)C([O])C=O}
+SPC452 = IGNORE ;    {CC(=O)C(CCO)CC=O}
+SPC453 = IGNORE ;    {CC(=O)C(CCOO)CC=O}
+SPC454 = IGNORE ;    {CC(=O)C(CL)OO}
+SPC455 = IGNORE ;    {CC(=O)C(CL)O[O]}
+SPC456 = IGNORE ;    {CC(=O)C(CL)[O]}
+SPC457 = IGNORE ;    {CC(=O)C(CO)C(=O)O}
+SPC458 = IGNORE ;    {CC(=O)C(CO)C(=O)OO}
+SPC459 = IGNORE ;    {CC(=O)C(CO)C(=O)O[O]}
+SPC460 = IGNORE ;    {CC(=O)C(CO)C=O}
+SPC461 = IGNORE ;    {CC(=O)C(CO)CC(=O)C(=O)O}
+SPC462 = IGNORE ;    {CC(=O)C(CO)CC(=O)O}
+SPC463 = IGNORE ;    {CC(=O)C(CO)CC(=O)OO}
+SPC464 = IGNORE ;    {CC(=O)C(CO)CC(=O)O[O]}
+SPC465 = IGNORE ;    {CC(=O)C(CO)CC(O)C(=O)O}
+SPC466 = IGNORE ;    {CC(=O)C(CO)CC(OO)C(=O)O}
+SPC467 = IGNORE ;    {CC(=O)C(CO)CC(O[O])C(=O)O}
+SPC468 = IGNORE ;    {CC(=O)C(CO)CC([O])C(=O)O}
+SPC469 = IGNORE ;    {CC(=O)C(CO)CC=O}
+SPC470 = IGNORE ;    {CC(=O)C(CO)CCC(=O)O}
+SPC471 = IGNORE ;    {CC(=O)C(CO)CO}
+SPC472 = IGNORE ;    {CC(=O)C(CO)COO}
+SPC473 = IGNORE ;    {CC(=O)C(CO)CO[O]}
+SPC474 = IGNORE ;    {CC(=O)C(CO)C[O]}
+SPC475 = IGNORE ;    {CC(=O)C(COO)CC=O}
+SPC476 = IGNORE ;    {CC(=O)C(N(=O)=O)=C(C)C(=O)O}
+SPC477 = IGNORE ;    {CC(=O)C(O)(C)C}
+SPC478 = IGNORE ;    {CC(=O)C(O)(C)C(=O)C}
+SPC479 = IGNORE ;    {CC(=O)C(O)(C)C(=O)OO}
+SPC480 = IGNORE ;    {CC(=O)C(O)(C)C(=O)O[O]}
+SPC481 = IGNORE ;    {CC(=O)C(O)(C)C(O)(C)C=O}
+SPC482 = IGNORE ;    {CC(=O)C(O)(C)C(O)C=O}
+SPC483 = IGNORE ;    {CC(=O)C(O)(C)C(OO)CO}
+SPC484 = IGNORE ;    {CC(=O)C(O)(C)C(O[O])CO}
+SPC485 = IGNORE ;    {CC(=O)C(O)(C)C([O])CO}
+SPC486 = IGNORE ;    {CC(=O)C(O)(C)C=CC=O}
+SPC487 = IGNORE ;    {CC(=O)C(O)(C)C=O}
+SPC488 = IGNORE ;    {CC(=O)C(O)(C)CCO}
+SPC489 = IGNORE ;    {CC(=O)C(O)(C1(C)C)CC1CC=O}
+SPC490 = IGNORE ;    {CC(=O)C(O)(C1(C)C)CC1CO}
+SPC491 = IGNORE ;    {CC(=O)C(O)(CC=O)CC=O}
+SPC492 = IGNORE ;    {CC(=O)C(O)(CO)C=O}
+SPC493 = IGNORE ;    {CC(=O)C(O)(CO)CC=O}
+SPC494 = IGNORE ;    {CC(=O)C(O)C(=O)C}
+SPC495 = IGNORE ;    {CC(=O)C(O)C(=O)C(=O)C}
+SPC496 = IGNORE ;    {CC(=O)C(O)C(=O)C(C)=C(C)C(=O)OO}
+SPC497 = IGNORE ;    {CC(=O)C(O)C(=O)C(C)=C(C)C(=O)O[O]}
+SPC498 = IGNORE ;    {CC(=O)C(O)C(=O)C(C)=CC(=O)OO}
+SPC499 = IGNORE ;    {CC(=O)C(O)C(=O)C(C)=CC(=O)O[O]}
+SPC500 = IGNORE ;    {CC(=O)C(O)C(=O)C1(C)OC1(C)C=O}
+SPC501 = IGNORE ;    {CC(=O)C(O)C(=O)C1OC1(C)C(=O)C}
+SPC502 = IGNORE ;    {CC(=O)C(O)C(=O)C=C(C(=O)OO)CC}
+SPC503 = IGNORE ;    {CC(=O)C(O)C(=O)C=C(C(=O)OON(=O)=O)CC}
+SPC504 = IGNORE ;    {CC(=O)C(O)C(=O)C=C(C(=O)O[O])CC}
+SPC505 = IGNORE ;    {CC(=O)C(O)C(=O)C=C(C)C(=O)OO}
+SPC506 = IGNORE ;    {CC(=O)C(O)C(=O)C=C(C)C(=O)O[O]}
+SPC507 = IGNORE ;    {CC(=O)C(O)C(=O)C=O}
+SPC508 = IGNORE ;    {CC(=O)C(O)C(=O)OO}
+SPC509 = IGNORE ;    {CC(=O)C(O)C(=O)O[O]}
+SPC510 = IGNORE ;    {CC(=O)C(O)C(C)=CC(=O)C}
+SPC511 = IGNORE ;    {CC(=O)C(O)C(C)=CC(=O)CC}
+SPC512 = IGNORE ;    {CC(=O)C(O)C(C)C}
+SPC513 = IGNORE ;    {CC(=O)C(O)C(C)C(=O)C}
+SPC514 = IGNORE ;    {CC(=O)C(O)C(O)(C)C}
+SPC515 = IGNORE ;    {CC(=O)C(O)C(O)(C)C(=O)C}
+SPC516 = IGNORE ;    {CC(=O)C(O)C(O)(C)C1OC1(C)C=O}
+SPC517 = IGNORE ;    {CC(=O)C(O)C(O)(C)C=O}
+SPC518 = IGNORE ;    {CC(=O)C(O)C(O)C(=O)C}
+SPC519 = IGNORE ;    {CC(=O)C(O)C(O)C1(C)OC1(C)C=O}
+SPC520 = IGNORE ;    {CC(=O)C(O)C(O)C1(C)OC1C=O}
+SPC521 = IGNORE ;    {CC(=O)C(O)C(O)C1OC1(C)C(=O)C}
+SPC522 = IGNORE ;    {CC(=O)C(O)C(O)C1OC1(C)C=O}
+SPC523 = IGNORE ;    {CC(=O)C(O)C(O)C1OC1C=O}
+SPC524 = IGNORE ;    {CC(=O)C(O)C(O)C=O}
+SPC525 = IGNORE ;    {CC(=O)C(O)C(ON(=O)=O)(C)C1OC1(C)C=O}
+SPC526 = IGNORE ;    {CC(=O)C(O)C(ON(=O)=O)C1(C)OC1(C)C=O}
+SPC527 = IGNORE ;    {CC(=O)C(O)C(ON(=O)=O)C1OC1(C)C(=O)C}
+SPC528 = IGNORE ;    {CC(=O)C(O)C(OO)(C)C(=O)C}
+SPC529 = IGNORE ;    {CC(=O)C(O)C(OO)(C)C1OC1(C)C=O}
+SPC530 = IGNORE ;    {CC(=O)C(O)C(OO)(C)C=O}
+SPC531 = IGNORE ;    {CC(=O)C(O)C(OO)C(=O)C}
+SPC532 = IGNORE ;    {CC(=O)C(O)C(OO)C1(C)OC1(C)C=O}
+SPC533 = IGNORE ;    {CC(=O)C(O)C(OO)C1OC1(C)C(=O)C}
+SPC534 = IGNORE ;    {CC(=O)C(O)C(O[O])(C)C(=O)C}
+SPC535 = IGNORE ;    {CC(=O)C(O)C(O[O])(C)C1OC1(C)C=O}
+SPC536 = IGNORE ;    {CC(=O)C(O)C(O[O])(C)C=O}
+SPC537 = IGNORE ;    {CC(=O)C(O)C(O[O])C(=O)C}
+SPC538 = IGNORE ;    {CC(=O)C(O)C(O[O])C1(C)OC1(C)C=O}
+SPC539 = IGNORE ;    {CC(=O)C(O)C(O[O])C1OC1(C)C(=O)C}
+SPC540 = IGNORE ;    {CC(=O)C(O)C([O])(C)C(=O)C}
+SPC541 = IGNORE ;    {CC(=O)C(O)C([O])(C)C1OC1(C)C=O}
+SPC542 = IGNORE ;    {CC(=O)C(O)C([O])(C)C=O}
+SPC543 = IGNORE ;    {CC(=O)C(O)C([O])C(=O)C}
+SPC544 = IGNORE ;    {CC(=O)C(O)C([O])C1(C)OC1(C)C=O}
+SPC545 = IGNORE ;    {CC(=O)C(O)C([O])C1OC1(C)C(=O)C}
+SPC546 = IGNORE ;    {CC(=O)C(O)C=CC(=O)C}
+SPC547 = IGNORE ;    {CC(=O)C(O)C=CC(=O)CC}
+SPC548 = IGNORE ;    {CC(=O)C(O)C=O}
+SPC549 = IGNORE ;    {CC(=O)C(O)CC(=O)C=O}
+SPC550 = IGNORE ;    {CC(=O)C(O)CC(=O)CC(=O)O}
+SPC551 = IGNORE ;    {CC(=O)C(O)CC(=O)CC(=O)OO}
+SPC552 = IGNORE ;    {CC(=O)C(O)CC(=O)CC(=O)OON(=O)=O}
+SPC553 = IGNORE ;    {CC(=O)C(O)CC(=O)CC(=O)O[O]}
+SPC554 = IGNORE ;    {CC(=O)C(O)CC(=O)CC=O}
+SPC555 = IGNORE ;    {CC(=O)C(O)CC(=O)CO}
+SPC556 = IGNORE ;    {CC(=O)C(O)CC(=O)COO}
+SPC557 = IGNORE ;    {CC(=O)C(O)CC(=O)CO[O]}
+SPC558 = IGNORE ;    {CC(=O)C(O)CC(=O)C[O]}
+SPC559 = IGNORE ;    {CC(=O)C(O)CC(=O)O}
+SPC560 = IGNORE ;    {CC(=O)C(O)CC(=O)OO}
+SPC561 = IGNORE ;    {CC(=O)C(O)CC(=O)O[O]}
+SPC562 = IGNORE ;    {CC(=O)C(O)CC(C(=O)C)CC=O}
+SPC563 = IGNORE ;    {CC(=O)C(O)CC(CC=O)C(C)=C}
+SPC564 = IGNORE ;    {CC(=O)C(O)CC(CO)C(=O)C}
+SPC565 = IGNORE ;    {CC(=O)C(O)CC(CO)C(C)=C}
+SPC566 = IGNORE ;    {CC(=O)C(O)CC(O)(C)C}
+SPC567 = IGNORE ;    {CC(=O)C(O)CC1C(CC1(C)C)C(=O)CCC=O}
+SPC568 = IGNORE ;    {CC(=O)C(O)CC1C(CC1(C)C)C(CCC=O)=C}
+SPC569 = IGNORE ;    {CC(=O)C(O)CCO}
+SPC570 = IGNORE ;    {CC(=O)C(O)CO}
+SPC571 = IGNORE ;    {CC(=O)C(O)CON(=O)=O}
+SPC572 = IGNORE ;    {CC(=O)C(O)COO}
+SPC573 = IGNORE ;    {CC(=O)C(O)CO[O]}
+SPC574 = IGNORE ;    {CC(=O)C(O)C[O]}
+SPC575 = IGNORE ;    {CC(=O)C(O)OC}
+SPC576 = IGNORE ;    {CC(=O)C(O)OC(=O)C}
+SPC577 = IGNORE ;    {CC(=O)C(O)OC(=O)C(=O)C}
+SPC578 = IGNORE ;    {CC(=O)C(ON(=O)=O)(C)C}
+SPC579 = IGNORE ;    {CC(=O)C(ON(=O)=O)(C)C=O}
+SPC580 = IGNORE ;    {CC(=O)C(ON(=O)=O)(C)COO}
+SPC581 = IGNORE ;    {CC(=O)C(ON(=O)=O)(C)CO[O]}
+SPC582 = IGNORE ;    {CC(=O)C(ON(=O)=O)(C)C[O]}
+SPC583 = IGNORE ;    {CC(=O)C(ON(=O)=O)C}
+SPC584 = IGNORE ;    {CC(=O)C(ON(=O)=O)C(=O)C}
+SPC585 = IGNORE ;    {CC(=O)C(ON(=O)=O)C(=O)OO}
+SPC586 = IGNORE ;    {CC(=O)C(ON(=O)=O)C(=O)O[O]}
+SPC587 = IGNORE ;    {CC(=O)C(ON(=O)=O)C(O)C1(C)OC1C=O}
+SPC588 = IGNORE ;    {CC(=O)C(ON(=O)=O)C(O)C1OC1(C)C=O}
+SPC589 = IGNORE ;    {CC(=O)C(ON(=O)=O)C(O)C1OC1C=O}
+SPC590 = IGNORE ;    {CC(=O)C(ON(=O)=O)C(OO)C}
+SPC591 = IGNORE ;    {CC(=O)C(ON(=O)=O)C(OO)CC}
+SPC592 = IGNORE ;    {CC(=O)C(ON(=O)=O)C(O[O])C}
+SPC593 = IGNORE ;    {CC(=O)C(ON(=O)=O)C(O[O])CC}
+SPC594 = IGNORE ;    {CC(=O)C(ON(=O)=O)C([O])C}
+SPC595 = IGNORE ;    {CC(=O)C(ON(=O)=O)C([O])CC}
+SPC596 = IGNORE ;    {CC(=O)C(ON(=O)=O)C=O}
+SPC597 = IGNORE ;    {CC(=O)C(ON(=O)=O)CO}
+SPC598 = IGNORE ;    {CC(=O)C(OO)(C)C}
+SPC599 = IGNORE ;    {CC(=O)C(OO)(C)C(=O)C}
+SPC600 = IGNORE ;    {CC(=O)C(OO)(C)C(O)(C)C=O}
+SPC601 = IGNORE ;    {CC(=O)C(OO)(C)C(O)C=O}
+SPC602 = IGNORE ;    {CC(=O)C(OO)(C)C=CC=O}
+SPC603 = IGNORE ;    {CC(=O)C(OO)(C)C=O}
+SPC604 = IGNORE ;    {CC(=O)C(OO)(C1(C)C)CC1CC=O}
+SPC605 = IGNORE ;    {CC(=O)C(OO)(C1(C)C)CC1CO}
+SPC606 = IGNORE ;    {CC(=O)C(OO)(CC=O)CC=O}
+SPC607 = IGNORE ;    {CC(=O)C(OO)(CO)C=O}
+SPC608 = IGNORE ;    {CC(=O)C(OO)(CO)CC=O}
+SPC609 = IGNORE ;    {CC(=O)C(OO)C}
+SPC610 = IGNORE ;    {CC(=O)C(OO)C(=O)C}
+SPC611 = IGNORE ;    {CC(=O)C(OO)C(C)=CC(=O)C}
+SPC612 = IGNORE ;    {CC(=O)C(OO)C(C)=CC(=O)CC}
+SPC613 = IGNORE ;    {CC(=O)C(OO)C(C)C}
+SPC614 = IGNORE ;    {CC(=O)C(OO)C(C)C(=O)C}
+SPC615 = IGNORE ;    {CC(=O)C(OO)C(O)(C)C}
+SPC616 = IGNORE ;    {CC(=O)C(OO)C(O)C1(C)OC1C=O}
+SPC617 = IGNORE ;    {CC(=O)C(OO)C(O)C1OC1(C)C=O}
+SPC618 = IGNORE ;    {CC(=O)C(OO)C(O)C1OC1C=O}
+SPC619 = IGNORE ;    {CC(=O)C(OO)C(O)C=O}
+SPC620 = IGNORE ;    {CC(=O)C(OO)C=CC(=O)C}
+SPC621 = IGNORE ;    {CC(=O)C(OO)C=CC(=O)CC}
+SPC622 = IGNORE ;    {CC(=O)C(OO)C=O}
+SPC623 = IGNORE ;    {CC(=O)C(OO)CC(=O)CC=O}
+SPC624 = IGNORE ;    {CC(=O)C(OO)CC(C(=O)C)CC=O}
+SPC625 = IGNORE ;    {CC(=O)C(OO)CC(CC=O)C(C)=C}
+SPC626 = IGNORE ;    {CC(=O)C(OO)CC(CO)C(=O)C}
+SPC627 = IGNORE ;    {CC(=O)C(OO)CC(CO)C(C)=C}
+SPC628 = IGNORE ;    {CC(=O)C(OO)CC(O)(C)C}
+SPC629 = IGNORE ;    {CC(=O)C(OO)CC1C(CC1(C)C)C(=O)CCC=O}
+SPC630 = IGNORE ;    {CC(=O)C(OO)CC1C(CC1(C)C)C(CCC=O)=C}
+SPC631 = IGNORE ;    {CC(=O)C(OO)CC=O}
+SPC632 = IGNORE ;    {CC(=O)C(OO)CCO}
+SPC633 = IGNORE ;    {CC(=O)C(OO)CO}
+SPC634 = IGNORE ;    {CC(=O)C(OO)OC}
+SPC635 = IGNORE ;    {CC(=O)C(OO)OC(=O)C}
+SPC636 = IGNORE ;    {CC(=O)C(OO)OC(=O)C(=O)C}
+SPC637 = IGNORE ;    {CC(=O)C(OO)OC=O}
+SPC638 = IGNORE ;    {CC(=O)C(O[O])(C)C}
+SPC639 = IGNORE ;    {CC(=O)C(O[O])(C)C(=O)C}
+SPC640 = IGNORE ;    {CC(=O)C(O[O])(C)C(O)(C)C=O}
+SPC641 = IGNORE ;    {CC(=O)C(O[O])(C)C(O)C=O}
+SPC642 = IGNORE ;    {CC(=O)C(O[O])(C)C=CC=O}
+SPC643 = IGNORE ;    {CC(=O)C(O[O])(C)C=O}
+SPC644 = IGNORE ;    {CC(=O)C(O[O])(C1(C)C)CC1CC=O}
+SPC645 = IGNORE ;    {CC(=O)C(O[O])(C1(C)C)CC1CO}
+SPC646 = IGNORE ;    {CC(=O)C(O[O])(CC=O)CC=O}
+SPC647 = IGNORE ;    {CC(=O)C(O[O])(CO)C=O}
+SPC648 = IGNORE ;    {CC(=O)C(O[O])(CO)CC=O}
+SPC649 = IGNORE ;    {CC(=O)C(O[O])C}
+SPC650 = IGNORE ;    {CC(=O)C(O[O])C(=O)C}
+SPC651 = IGNORE ;    {CC(=O)C(O[O])C(C)=CC(=O)C}
+SPC652 = IGNORE ;    {CC(=O)C(O[O])C(C)=CC(=O)CC}
+SPC653 = IGNORE ;    {CC(=O)C(O[O])C(C)C}
+SPC654 = IGNORE ;    {CC(=O)C(O[O])C(C)C(=O)C}
+SPC655 = IGNORE ;    {CC(=O)C(O[O])C(O)(C)C}
+SPC656 = IGNORE ;    {CC(=O)C(O[O])C(O)C1(C)OC1C=O}
+SPC657 = IGNORE ;    {CC(=O)C(O[O])C(O)C1OC1(C)C=O}
+SPC658 = IGNORE ;    {CC(=O)C(O[O])C(O)C1OC1C=O}
+SPC659 = IGNORE ;    {CC(=O)C(O[O])C(O)C=O}
+SPC660 = IGNORE ;    {CC(=O)C(O[O])C=O}
+SPC661 = IGNORE ;    {CC(=O)C(O[O])CC(=O)CC=O}
+SPC662 = IGNORE ;    {CC(=O)C(O[O])CC(C(=O)C)CC=O}
+SPC663 = IGNORE ;    {CC(=O)C(O[O])CC(CC=O)C(C)=C}
+SPC664 = IGNORE ;    {CC(=O)C(O[O])CC(CO)C(=O)C}
+SPC665 = IGNORE ;    {CC(=O)C(O[O])CC(CO)C(C)=C}
+SPC666 = IGNORE ;    {CC(=O)C(O[O])CC(O)(C)C}
+SPC667 = IGNORE ;    {CC(=O)C(O[O])CC1C(CC1(C)C)C(=O)CCC=O}
+SPC668 = IGNORE ;    {CC(=O)C(O[O])CC1C(CC1(C)C)C(CCC=O)=C}
+SPC669 = IGNORE ;    {CC(=O)C(O[O])CC=O}
+SPC670 = IGNORE ;    {CC(=O)C(O[O])CCO}
+SPC671 = IGNORE ;    {CC(=O)C(O[O])CO}
+SPC672 = IGNORE ;    {CC(=O)C(O[O])OC=O}
+SPC673 = IGNORE ;    {CC(=O)C([O])(C)C}
+SPC674 = IGNORE ;    {CC(=O)C([O])(C)C(=O)C}
+SPC675 = IGNORE ;    {CC(=O)C([O])(C)C(O)(C)C=O}
+SPC676 = IGNORE ;    {CC(=O)C([O])(C)C(O)C=O}
+SPC677 = IGNORE ;    {CC(=O)C([O])(C)C=CC=O}
+SPC678 = IGNORE ;    {CC(=O)C([O])(C)C=O}
+SPC679 = IGNORE ;    {CC(=O)C([O])(C1(C)C)CC1CC=O}
+SPC680 = IGNORE ;    {CC(=O)C([O])(C1(C)C)CC1CO}
+SPC681 = IGNORE ;    {CC(=O)C([O])(CC=O)CC=O}
+SPC682 = IGNORE ;    {CC(=O)C([O])(CO)C=O}
+SPC683 = IGNORE ;    {CC(=O)C([O])(CO)CC=O}
+SPC684 = IGNORE ;    {CC(=O)C([O])C}
+SPC685 = IGNORE ;    {CC(=O)C([O])C(=O)C}
+SPC686 = IGNORE ;    {CC(=O)C([O])C(C)=CC(=O)C}
+SPC687 = IGNORE ;    {CC(=O)C([O])C(C)C}
+SPC688 = IGNORE ;    {CC(=O)C([O])C(C)C(=O)C}
+SPC689 = IGNORE ;    {CC(=O)C([O])C(O)(C)C}
+SPC690 = IGNORE ;    {CC(=O)C([O])C(O)C1(C)OC1C=O}
+SPC691 = IGNORE ;    {CC(=O)C([O])C(O)C1OC1(C)C=O}
+SPC692 = IGNORE ;    {CC(=O)C([O])C(O)C1OC1C=O}
+SPC693 = IGNORE ;    {CC(=O)C([O])C(O)C=O}
+SPC694 = IGNORE ;    {CC(=O)C([O])C=O}
+SPC695 = IGNORE ;    {CC(=O)C([O])CC(=O)CC=O}
+SPC696 = IGNORE ;    {CC(=O)C([O])CC(C(=O)C)CC=O}
+SPC697 = IGNORE ;    {CC(=O)C([O])CC(CC=O)C(C)=C}
+SPC698 = IGNORE ;    {CC(=O)C([O])CC(CO)C(=O)C}
+SPC699 = IGNORE ;    {CC(=O)C([O])CC(CO)C(C)=C}
+SPC700 = IGNORE ;    {CC(=O)C([O])CC(O)(C)C}
+SPC701 = IGNORE ;    {CC(=O)C([O])CC1C(CC1(C)C)C(=O)CCC=O}
+SPC702 = IGNORE ;    {CC(=O)C([O])CC1C(CC1(C)C)C(CCC=O)=C}
+SPC703 = IGNORE ;    {CC(=O)C([O])CC=O}
+SPC704 = IGNORE ;    {CC(=O)C([O])CCO}
+SPC705 = IGNORE ;    {CC(=O)C([O])CO}
+SPC706 = IGNORE ;    {CC(=O)C([O])OC=O}
+SPC707 = IGNORE ;    {CC(=O)C1(C)OC1C(=O)O}
+SPC708 = IGNORE ;    {CC(=O)C1(C)OC1C(=O)OO}
+SPC709 = IGNORE ;    {CC(=O)C1(C)OC1C(=O)O[O]}
+SPC710 = IGNORE ;    {CC(=O)C1(C)OC1C=O}
+SPC711 = IGNORE ;    {CC(=O)C1CC(C(=O)OO)C1(C)C}
+SPC712 = IGNORE ;    {CC(=O)C1CC(C(=O)O[O])C1(C)C}
+SPC713 = IGNORE ;    {CC(=O)C1CC(C=O)C1(C)C}
+SPC714 = IGNORE ;    {CC(=O)C1CC(CO)C1(C)C}
+SPC715 = IGNORE ;    {CC(=O)C1CC(CON(=O)=O)C1(C)C}
+SPC716 = IGNORE ;    {CC(=O)C1CC(COO)C1(C)C}
+SPC717 = IGNORE ;    {CC(=O)C1CC(CO[O])C1(C)C}
+SPC718 = IGNORE ;    {CC(=O)C1CC(C[O])C1(C)C}
+SPC719 = IGNORE ;    {CC(=O)C1CC(O)(C1(C)C)CC=O}
+SPC720 = IGNORE ;    {CC(=O)C1CC(ON(=O)=O)(C1(C)C)CC=O}
+SPC721 = IGNORE ;    {CC(=O)C1CC(OO)(C1(C)C)CC=O}
+SPC722 = IGNORE ;    {CC(=O)C1CC(OO)C1(C)C}
+SPC723 = IGNORE ;    {CC(=O)C1CC(O[O])(C1(C)C)CC=O}
+SPC724 = IGNORE ;    {CC(=O)C1CC(O[O])C1(C)C}
+SPC725 = IGNORE ;    {CC(=O)C1CC([O])(C1(C)C)CC=O}
+SPC726 = IGNORE ;    {CC(=O)C1CC([O])C1(C)C}
+SPC727 = IGNORE ;    {CC(=O)C1OC1(C(=O)O)CC}
+SPC728 = IGNORE ;    {CC(=O)C1OC1(C(=O)OO)CC}
+SPC729 = IGNORE ;    {CC(=O)C1OC1(C(=O)OON(=O)=O)CC}
+SPC730 = IGNORE ;    {CC(=O)C1OC1(C(=O)O[O])CC}
+SPC731 = IGNORE ;    {CC(=O)C1OC1(C)C(=O)O}
+SPC732 = IGNORE ;    {CC(=O)C1OC1(C)C(=O)OO}
+SPC733 = IGNORE ;    {CC(=O)C1OC1(C)C(=O)O[O]}
+SPC734 = IGNORE ;    {CC(=O)C1OC1(C)C=O}
+SPC735 = IGNORE ;    {CC(=O)C1OC1(C=O)CC}
+SPC736 = IGNORE ;    {CC(=O)C=C}
+SPC737 = IGNORE ;    {CC(=O)C=C(C)C(=O)C}
+SPC738 = IGNORE ;    {CC(=O)C=C(C)C(=O)C(=O)C}
+SPC739 = IGNORE ;    {CC(=O)C=C(C)C(=O)O}
+SPC740 = IGNORE ;    {CC(=O)C=C(C)C(=O)OO}
+SPC741 = IGNORE ;    {CC(=O)C=C(C)C(=O)O[O]}
+SPC742 = IGNORE ;    {CC(=O)C=C(C)C(=O)[O]}
+SPC743 = IGNORE ;    {CC(=O)C=C(C)C1OC1(C)C(=O)O}
+SPC744 = IGNORE ;    {CC(=O)C=C(C)C1OC1(C)C(=O)OO}
+SPC745 = IGNORE ;    {CC(=O)C=C(C)C1OC1(C)C(=O)O[O]}
+SPC746 = IGNORE ;    {CC(=O)C=C(C)C1OC1(C)C=O}
+SPC747 = IGNORE ;    {CC(=O)C=C(C)C=O}
+SPC748 = IGNORE ;    {CC(=O)C=CC(=O)C}
+SPC749 = IGNORE ;    {CC(=O)C=CC(=O)C=O}
+SPC750 = IGNORE ;    {CC(=O)C=CC(=O)O}
+SPC751 = IGNORE ;    {CC(=O)C=CC(=O)OO}
+SPC752 = IGNORE ;    {CC(=O)C=CC(=O)O[O]}
+SPC753 = IGNORE ;    {CC(=O)C=CC(=O)[O]}
+SPC754 = IGNORE ;    {CC(=O)C=CC(O)(C)C(=O)C}
+SPC755 = IGNORE ;    {CC(=O)C=CC(O)(C)C=O}
+SPC756 = IGNORE ;    {CC(=O)C=CC(O)C=O}
+SPC757 = IGNORE ;    {CC(=O)C=CC(OO)(C)C(=O)C}
+SPC758 = IGNORE ;    {CC(=O)C=CC(OO)(C)C=O}
+SPC759 = IGNORE ;    {CC(=O)C=CC(OO)C=O}
+SPC760 = IGNORE ;    {CC(=O)C=CC(O[O])(C)C(=O)C}
+SPC761 = IGNORE ;    {CC(=O)C=CC(O[O])(C)C=O}
+SPC762 = IGNORE ;    {CC(=O)C=CC(O[O])C(=O)C}
+SPC763 = IGNORE ;    {CC(=O)C=CC(O[O])C=O}
+SPC764 = IGNORE ;    {CC(=O)C=CC([O])(C)C(=O)C}
+SPC765 = IGNORE ;    {CC(=O)C=CC([O])(C)C=O}
+SPC766 = IGNORE ;    {CC(=O)C=CC([O])C(=O)C}
+SPC767 = IGNORE ;    {CC(=O)C=CC([O])C=O}
+SPC768 = IGNORE ;    {CC(=O)C=CC1(C)OC1(C)C(=O)O}
+SPC769 = IGNORE ;    {CC(=O)C=CC1(C)OC1(C)C(=O)OO}
+SPC770 = IGNORE ;    {CC(=O)C=CC1(C)OC1(C)C(=O)O[O]}
+SPC771 = IGNORE ;    {CC(=O)C=CC1(C)OC1(C)C=O}
+SPC772 = IGNORE ;    {CC(=O)C=CC1(C)OC1C(=O)O}
+SPC773 = IGNORE ;    {CC(=O)C=CC1(C)OC1C(=O)OO}
+SPC774 = IGNORE ;    {CC(=O)C=CC1(C)OC1C(=O)O[O]}
+SPC775 = IGNORE ;    {CC(=O)C=CC1(C)OC1C=O}
+SPC776 = IGNORE ;    {CC(=O)C=CC1OC1(C)C(=O)C}
+SPC777 = IGNORE ;    {CC(=O)C=CC1OC1(C)C(=O)O}
+SPC778 = IGNORE ;    {CC(=O)C=CC1OC1(C)C(=O)OO}
+SPC779 = IGNORE ;    {CC(=O)C=CC1OC1(C)C(=O)O[O]}
+SPC780 = IGNORE ;    {CC(=O)C=CC1OC1(C)C=O}
+SPC781 = IGNORE ;    {CC(=O)C=CC1OC1C(=O)O}
+SPC782 = IGNORE ;    {CC(=O)C=CC1OC1C(=O)OO}
+SPC783 = IGNORE ;    {CC(=O)C=CC1OC1C(=O)O[O]}
+SPC784 = IGNORE ;    {CC(=O)C=CC1OC1C=O}
+SPC785 = IGNORE ;    {CC(=O)C=CC=O}
+SPC786 = IGNORE ;    {CC(=O)C=O}
+SPC787 = IGNORE ;    {CC(=O)CC(=O)C}
+SPC788 = IGNORE ;    {CC(=O)CC(=O)C(=O)C}
+SPC789 = IGNORE ;    {CC(=O)CC(=O)C(=O)C(C)(C)C(=O)OO}
+SPC790 = IGNORE ;    {CC(=O)CC(=O)C(=O)C(C)(C)C(=O)O[O]}
+SPC791 = IGNORE ;    {CC(=O)CC(=O)C(=O)C(C)(C)C=O}
+SPC792 = IGNORE ;    {CC(=O)CC(=O)C(=O)C(C)(C)CO}
+SPC793 = IGNORE ;    {CC(=O)CC(=O)C(=O)C(OO)(C)C}
+SPC794 = IGNORE ;    {CC(=O)CC(=O)C(=O)C(OO)C}
+SPC795 = IGNORE ;    {CC(=O)CC(=O)C(=O)C(O[O])(C)C}
+SPC796 = IGNORE ;    {CC(=O)CC(=O)C(=O)C(O[O])C}
+SPC797 = IGNORE ;    {CC(=O)CC(=O)C(=O)C([O])(C)C}
+SPC798 = IGNORE ;    {CC(=O)CC(=O)C(=O)C([O])C}
+SPC799 = IGNORE ;    {CC(=O)CC(=O)C(O)(C)C}
+SPC800 = IGNORE ;    {CC(=O)CC(=O)C(O)(C)COO}
+SPC801 = IGNORE ;    {CC(=O)CC(=O)C(O)(C)CO[O]}
+SPC802 = IGNORE ;    {CC(=O)CC(=O)C(O)(C)C[O]}
+SPC803 = IGNORE ;    {CC(=O)CC(=O)C(ON(=O)=O)C}
+SPC804 = IGNORE ;    {CC(=O)CC(=O)C(OO)C}
+SPC805 = IGNORE ;    {CC(=O)CC(=O)C(O[O])C}
+SPC806 = IGNORE ;    {CC(=O)CC(=O)C([O])C}
+SPC807 = IGNORE ;    {CC(=O)CC(=O)C=O}
+SPC808 = IGNORE ;    {CC(=O)CC(=O)CO}
+SPC809 = IGNORE ;    {CC(=O)CC(=O)CON(=O)=O}
+SPC810 = IGNORE ;    {CC(=O)CC(=O)C[O]}
+SPC811 = IGNORE ;    {CC(=O)CC(=O)OC(=O)C}
+SPC812 = IGNORE ;    {CC(=O)CC(=O)OO}
+SPC813 = IGNORE ;    {CC(=O)CC(=O)OON(=O)=O}
+SPC814 = IGNORE ;    {CC(=O)CC(=O)O[O]}
+SPC815 = IGNORE ;    {CC(=O)CC(C)C}
+SPC816 = IGNORE ;    {CC(=O)CC(C)C(=O)C}
+SPC817 = IGNORE ;    {CC(=O)CC(C)C(=O)O}
+SPC818 = IGNORE ;    {CC(=O)CC(C)C(=O)OO}
+SPC819 = IGNORE ;    {CC(=O)CC(C)C(=O)O[O]}
+SPC820 = IGNORE ;    {CC(=O)CC(C)C=O}
+SPC821 = IGNORE ;    {CC(=O)CC(C)CC}
+SPC822 = IGNORE ;    {CC(=O)CC(C)CO}
+SPC823 = IGNORE ;    {CC(=O)CC(O)(C)C}
+SPC824 = IGNORE ;    {CC(=O)CC(O)(C)C(=O)C}
+SPC825 = IGNORE ;    {CC(=O)CC(O)(C)C=O}
+SPC826 = IGNORE ;    {CC(=O)CC(O)(C)CO}
+SPC827 = IGNORE ;    {CC(=O)CC(O)(C)CON(=O)=O}
+SPC828 = IGNORE ;    {CC(=O)CC(O)(C)COO}
+SPC829 = IGNORE ;    {CC(=O)CC(O)(C)CO[O]}
+SPC830 = IGNORE ;    {CC(=O)CC(O)(C)C[O]}
+SPC831 = IGNORE ;    {CC(=O)CC(O)C(=O)C}
+SPC832 = IGNORE ;    {CC(=O)CC(O)C(=O)C(C)(C)CO}
+SPC833 = IGNORE ;    {CC(=O)CC(O)C(O)(C)C}
+SPC834 = IGNORE ;    {CC(=O)CC(O)CO}
+SPC835 = IGNORE ;    {CC(=O)CC(O)OC(=O)C}
+SPC836 = IGNORE ;    {CC(=O)CC(ON(=O)=O)(C)C}
+SPC837 = IGNORE ;    {CC(=O)CC(ON(=O)=O)(C)CO}
+SPC838 = IGNORE ;    {CC(=O)CC(ON(=O)=O)C}
+SPC839 = IGNORE ;    {CC(=O)CC(ON(=O)=O)C(O)(C)C}
+SPC840 = IGNORE ;    {CC(=O)CC(ON(=O)=O)CC}
+SPC841 = IGNORE ;    {CC(=O)CC(ON(=O)=O)CO}
+SPC842 = IGNORE ;    {CC(=O)CC(ON(=O)=O)OC(=O)C}
+SPC843 = IGNORE ;    {CC(=O)CC(OO)(C)C}
+SPC844 = IGNORE ;    {CC(=O)CC(OO)(C)C(=O)C}
+SPC845 = IGNORE ;    {CC(=O)CC(OO)(C)C=O}
+SPC846 = IGNORE ;    {CC(=O)CC(OO)(C)CC}
+SPC847 = IGNORE ;    {CC(=O)CC(OO)(C)CO}
+SPC848 = IGNORE ;    {CC(=O)CC(OO)C}
+SPC849 = IGNORE ;    {CC(=O)CC(OO)C(=O)C}
+SPC850 = IGNORE ;    {CC(=O)CC(OO)C(=O)C(=O)C}
+SPC851 = IGNORE ;    {CC(=O)CC(OO)C(=O)C(C)(C)CO}
+SPC852 = IGNORE ;    {CC(=O)CC(OO)C(C)C}
+SPC853 = IGNORE ;    {CC(=O)CC(OO)C(O)(C)C}
+SPC854 = IGNORE ;    {CC(=O)CC(OO)CC}
+SPC855 = IGNORE ;    {CC(=O)CC(OO)CO}
+SPC856 = IGNORE ;    {CC(=O)CC(OO)OC(=O)C}
+SPC857 = IGNORE ;    {CC(=O)CC(O[O])(C)C}
+SPC858 = IGNORE ;    {CC(=O)CC(O[O])(C)C(=O)C}
+SPC859 = IGNORE ;    {CC(=O)CC(O[O])(C)C=O}
+SPC860 = IGNORE ;    {CC(=O)CC(O[O])(C)CC}
+SPC861 = IGNORE ;    {CC(=O)CC(O[O])(C)CO}
+SPC862 = IGNORE ;    {CC(=O)CC(O[O])C}
+SPC863 = IGNORE ;    {CC(=O)CC(O[O])C(=O)C}
+SPC864 = IGNORE ;    {CC(=O)CC(O[O])C(=O)C(=O)C}
+SPC865 = IGNORE ;    {CC(=O)CC(O[O])C(=O)C(C)(C)CO}
+SPC866 = IGNORE ;    {CC(=O)CC(O[O])C(C)C}
+SPC867 = IGNORE ;    {CC(=O)CC(O[O])C(O)(C)C}
+SPC868 = IGNORE ;    {CC(=O)CC(O[O])CC}
+SPC869 = IGNORE ;    {CC(=O)CC(O[O])CO}
+SPC870 = IGNORE ;    {CC(=O)CC(O[O])OC(=O)C}
+SPC871 = IGNORE ;    {CC(=O)CC([O])(C)C}
+SPC872 = IGNORE ;    {CC(=O)CC([O])(C)C(=O)C}
+SPC873 = IGNORE ;    {CC(=O)CC([O])(C)C=O}
+SPC874 = IGNORE ;    {CC(=O)CC([O])(C)CC}
+SPC875 = IGNORE ;    {CC(=O)CC([O])(C)CO}
+SPC876 = IGNORE ;    {CC(=O)CC([O])C}
+SPC877 = IGNORE ;    {CC(=O)CC([O])C(=O)C}
+SPC878 = IGNORE ;    {CC(=O)CC([O])C(=O)C(=O)C}
+SPC879 = IGNORE ;    {CC(=O)CC([O])C(=O)C(C)(C)CO}
+SPC880 = IGNORE ;    {CC(=O)CC([O])C(C)C}
+SPC881 = IGNORE ;    {CC(=O)CC([O])C(O)(C)C}
+SPC882 = IGNORE ;    {CC(=O)CC([O])CC}
+SPC883 = IGNORE ;    {CC(=O)CC([O])CO}
+SPC884 = IGNORE ;    {CC(=O)CC([O])OC(=O)C}
+SPC885 = IGNORE ;    {CC(=O)CC=O}
+SPC886 = IGNORE ;    {CC(=O)CCC(=O)C}
+SPC887 = IGNORE ;    {CC(=O)CCC(=O)C(=O)C}
+SPC888 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)C(=O)C(=O)C(=O)C(OO)CO}
+SPC889 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)C(=O)C(=O)C(=O)C(O[O])CO}
+SPC890 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)C(=O)C(=O)C(=O)C([O])CO}
+SPC891 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)C(=O)C(=O)C(=O)CCO}
+SPC892 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)C(=O)O}
+SPC893 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)C(=O)OO}
+SPC894 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)C(=O)OO[N+](=O)[O-]}
+SPC895 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)C(=O)O[O]}
+SPC896 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)C(O)C(=O)C(=O)CCO}
+SPC897 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)C(OO)C(=O)C(=O)CCO}
+SPC898 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)C(O[O])C(=O)C(=O)CCO}
+SPC899 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)C([O])C(=O)C(=O)CCO}
+SPC900 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)C=O}
+SPC901 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)CC(=O)C(=O)CCO}
+SPC902 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)CC(=O)C(CCO)=C}
+SPC903 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)CC(=O)C(O)(CO)CCO}
+SPC904 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)CC(=O)C(OO)(CO)CCO}
+SPC905 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)CC(=O)C(O[O])(CO)CCO}
+SPC906 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)CC(=O)C([O])(CO)CCO}
+SPC907 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)CC(=O)O}
+SPC908 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)CC(=O)OO}
+SPC909 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)CC(=O)OO[N+](=O)[O-]}
+SPC910 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)CC(=O)O[O]}
+SPC911 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)CC=O}
+SPC912 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)CO}
+SPC913 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)COO}
+SPC914 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)CO[N+](=O)[O-]}
+SPC915 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)CO[O]}
+SPC916 = IGNORE ;    {CC(=O)CCC(=O)C(C)(C)C[O]}
+SPC917 = IGNORE ;    {CC(=O)CCC(=O)C(C)=C}
+SPC918 = IGNORE ;    {CC(=O)CCC(=O)C(O)(C)C}
+SPC919 = IGNORE ;    {CC(=O)CCC(=O)C(OO)(C)C}
+SPC920 = IGNORE ;    {CC(=O)CCC(=O)C(OO)(C)CO}
+SPC921 = IGNORE ;    {CC(=O)CCC(=O)C(O[O])(C)CO}
+SPC922 = IGNORE ;    {CC(=O)CCC(=O)C([O])(C)C}
+SPC923 = IGNORE ;    {CC(=O)CCC(=O)C([O])(C)CO}
+SPC924 = IGNORE ;    {CC(=O)CCC(=O)C=O}
+SPC925 = IGNORE ;    {CC(=O)CCC(=O)CC(=O)O}
+SPC926 = IGNORE ;    {CC(=O)CCC(=O)CC(=O)OO}
+SPC927 = IGNORE ;    {CC(=O)CCC(=O)CC(=O)O[O]}
+SPC928 = IGNORE ;    {CC(=O)CCC(=O)CC=O}
+SPC929 = IGNORE ;    {CC(=O)CCC(=O)CO}
+SPC930 = IGNORE ;    {CC(=O)CCC(=O)COO}
+SPC931 = IGNORE ;    {CC(=O)CCC(=O)C[O]}
+SPC932 = IGNORE ;    {CC(=O)CCC(=O)O}
+SPC933 = IGNORE ;    {CC(=O)CCC(=O)OO}
+SPC934 = IGNORE ;    {CC(=O)CCC(=O)OON(=O)=O}
+SPC935 = IGNORE ;    {CC(=O)CCC(=O)O[O]}
+SPC936 = IGNORE ;    {CC(=O)CCC(C(=O)C)CC(=O)O}
+SPC937 = IGNORE ;    {CC(=O)CCC(C(=O)C)CC(=O)OO}
+SPC938 = IGNORE ;    {CC(=O)CCC(C(=O)C)CC(=O)O[O]}
+SPC939 = IGNORE ;    {CC(=O)CCC(C(=O)C)CC=O}
+SPC940 = IGNORE ;    {CC(=O)CCC(C(=O)OO)C(=O)C}
+SPC941 = IGNORE ;    {CC(=O)CCC(C(=O)OO)C(C)=C}
+SPC942 = IGNORE ;    {CC(=O)CCC(C(=O)O[O])C(=O)C}
+SPC943 = IGNORE ;    {CC(=O)CCC(C(=O)O[O])C(C)=C}
+SPC944 = IGNORE ;    {CC(=O)CCC(C(O)(C)CO)CC=O}
+SPC945 = IGNORE ;    {CC(=O)CCC(C(OO)(C)CO)CC=O}
+SPC946 = IGNORE ;    {CC(=O)CCC(C(O[O])(C)CO)CC=O}
+SPC947 = IGNORE ;    {CC(=O)CCC(C([O])(C)CO)CC=O}
+SPC948 = IGNORE ;    {CC(=O)CCC(C)C}
+SPC949 = IGNORE ;    {CC(=O)CCC(C=O)C(=O)C}
+SPC950 = IGNORE ;    {CC(=O)CCC(C=O)C(C)=C}
+SPC951 = IGNORE ;    {CC(=O)CCC(CC(=O)O)C(C)=C}
+SPC952 = IGNORE ;    {CC(=O)CCC(CC(=O)OO)C(C)=C}
+SPC953 = IGNORE ;    {CC(=O)CCC(CC(=O)O[O])C(C)=C}
+SPC954 = IGNORE ;    {CC(=O)CCC(CC=O)C(C)=C}
+SPC955 = IGNORE ;    {CC(=O)CCC(CO)C(=O)C}
+SPC956 = IGNORE ;    {CC(=O)CCC(CO)C(C)=C}
+SPC957 = IGNORE ;    {CC(=O)CCC(COO)C(=O)C}
+SPC958 = IGNORE ;    {CC(=O)CCC(COO)C(C)=C}
+SPC959 = IGNORE ;    {CC(=O)CCC(CO[O])C(=O)C}
+SPC960 = IGNORE ;    {CC(=O)CCC(CO[O])C(C)=C}
+SPC961 = IGNORE ;    {CC(=O)CCC(C[O])C(=O)C}
+SPC962 = IGNORE ;    {CC(=O)CCC(C[O])C(C)=C}
+SPC963 = IGNORE ;    {CC(=O)CCC(O)(C(=O)C)CC=O}
+SPC964 = IGNORE ;    {CC(=O)CCC(O)(C)C}
+SPC965 = IGNORE ;    {CC(=O)CCC(O)C(C)(C)CC(=O)C(=O)CCO}
+SPC966 = IGNORE ;    {CC(=O)CCC(O)C(C)(C)CC(=O)C(CCO)=C}
+SPC967 = IGNORE ;    {CC(=O)CCC(O)C(C)(C)CC=O}
+SPC968 = IGNORE ;    {CC(=O)CCC(ON(=O)=O)C}
+SPC969 = IGNORE ;    {CC(=O)CCC(OO)(C(=O)C)CC=O}
+SPC970 = IGNORE ;    {CC(=O)CCC(OO)C}
+SPC971 = IGNORE ;    {CC(=O)CCC(OO)C(=O)C}
+SPC972 = IGNORE ;    {CC(=O)CCC(OO)C(C)(C)CC(=O)C(=O)CCO}
+SPC973 = IGNORE ;    {CC(=O)CCC(OO)C(C)(C)CC(=O)C(CCO)=C}
+SPC974 = IGNORE ;    {CC(=O)CCC(OO)C(C)(C)CC=O}
+SPC975 = IGNORE ;    {CC(=O)CCC(OO)C(C)=C}
+SPC976 = IGNORE ;    {CC(=O)CCC(O[O])(C(=O)C)CC=O}
+SPC977 = IGNORE ;    {CC(=O)CCC(O[O])C}
+SPC978 = IGNORE ;    {CC(=O)CCC(O[O])C(=O)C}
+SPC979 = IGNORE ;    {CC(=O)CCC(O[O])C(C)(C)CC(=O)C(=O)CCO}
+SPC980 = IGNORE ;    {CC(=O)CCC(O[O])C(C)(C)CC(=O)C(CCO)=C}
+SPC981 = IGNORE ;    {CC(=O)CCC(O[O])C(C)(C)CC=O}
+SPC982 = IGNORE ;    {CC(=O)CCC(O[O])C(C)=C}
+SPC983 = IGNORE ;    {CC(=O)CCC([O])(C(=O)C)CC=O}
+SPC984 = IGNORE ;    {CC(=O)CCC([O])C}
+SPC985 = IGNORE ;    {CC(=O)CCC([O])C(=O)C}
+SPC986 = IGNORE ;    {CC(=O)CCC([O])C(C)(C)CC(=O)C(=O)CCO}
+SPC987 = IGNORE ;    {CC(=O)CCC([O])C(C)(C)CC(=O)C(CCO)=C}
+SPC988 = IGNORE ;    {CC(=O)CCC([O])C(C)(C)CC=O}
+SPC989 = IGNORE ;    {CC(=O)CCC([O])C(C)=C}
+SPC990 = IGNORE ;    {CC(=O)CCC1C(=O)CC1(C)C}
+SPC991 = IGNORE ;    {CC(=O)CCC1C(C(=O)O)CC1(C)C}
+SPC992 = IGNORE ;    {CC(=O)CCC1C(C(=O)OO)CC1(C)C}
+SPC993 = IGNORE ;    {CC(=O)CCC1C(C(=O)O[O])CC1(C)C}
+SPC994 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=C)CCC(=O)OO[N+](=O)[O-]}
+SPC995 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=C)CCO[N+](=O)[O-]}
+SPC996 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)C(=O)CC(=O)O}
+SPC997 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)C(=O)CC=O}
+SPC998 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)C(O)CC(=O)O}
+SPC999 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)C(O)CC=O}
+SPC1000 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)C(OO)CC(=O)O}
+SPC1001 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)C(OO)CC=O}
+SPC1002 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)C(O[O])CC(=O)O}
+SPC1003 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)C(O[O])CC=O}
+SPC1004 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)C([O])CC(=O)O}
+SPC1005 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)C([O])CC=O}
+SPC1006 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)CC(=O)C=O}
+SPC1007 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)CC(O)C=O}
+SPC1008 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)CC(OO)C=O}
+SPC1009 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)CC(O[O])C=O}
+SPC1010 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)CC([O])C=O}
+SPC1011 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)CC=O}
+SPC1012 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)CCC(=O)O}
+SPC1013 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)CCC(=O)OO}
+SPC1014 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)CCC(=O)OO[N+](=O)[O-]}
+SPC1015 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)CCC(=O)O[O]}
+SPC1016 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)CCC=O}
+SPC1017 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)CCO}
+SPC1018 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)CCOO}
+SPC1019 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)CCO[N+](=O)[O-]}
+SPC1020 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)CCO[O]}
+SPC1021 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)CC[O]}
+SPC1022 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(=O)OO[N+](=O)[O-]}
+SPC1023 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(CC(=O)C=O)=C}
+SPC1024 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(CC(O)C=O)=C}
+SPC1025 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(CC(OO)C=O)=C}
+SPC1026 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(CC(O[O])C=O)=C}
+SPC1027 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(CC([O])C=O)=C}
+SPC1028 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(CC=O)=C}
+SPC1029 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(CCC(=O)O)=C}
+SPC1030 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(CCC(=O)OO)=C}
+SPC1031 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(CCC(=O)O[O])=C}
+SPC1032 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(CCC=O)=C}
+SPC1033 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(CCO)=C}
+SPC1034 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(CCOO)=C}
+SPC1035 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(CCO[O])=C}
+SPC1036 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(CC[O])=C}
+SPC1037 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(O)(CO)CCC(=O)O}
+SPC1038 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(O)(CO)CCC=O}
+SPC1039 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(OO)(CO)CC=O}
+SPC1040 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(OO)(CO)CCC(=O)O}
+SPC1041 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(OO)(CO)CCC=O}
+SPC1042 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(O[O])(CO)CC=O}
+SPC1043 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(O[O])(CO)CCC(=O)O}
+SPC1044 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C(O[O])(CO)CCC=O}
+SPC1045 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C([O])(CO)CC=O}
+SPC1046 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C([O])(CO)CCC(=O)O}
+SPC1047 = IGNORE ;    {CC(=O)CCC1C(CC1(C)C)C([O])(CO)CCC=O}
+SPC1048 = IGNORE ;    {CC(=O)CCC1C(O)(CC1(C)C)C(=O)CCO}
+SPC1049 = IGNORE ;    {CC(=O)CCC1C(O)(CC1(C)C)C(CCO)=C}
+SPC1050 = IGNORE ;    {CC(=O)CCC1C(O)CC1(C)C}
+SPC1051 = IGNORE ;    {CC(=O)CCC1C(OO)(CC1(C)C)C(=O)CCO}
+SPC1052 = IGNORE ;    {CC(=O)CCC1C(OO)(CC1(C)C)C(CCO)=C}
+SPC1053 = IGNORE ;    {CC(=O)CCC1C(OO)CC1(C)C}
+SPC1054 = IGNORE ;    {CC(=O)CCC1C(O[N+](=O)[O-])CC1(C)C}
+SPC1055 = IGNORE ;    {CC(=O)CCC1C(O[O])(CC1(C)C)C(=O)CCO}
+SPC1056 = IGNORE ;    {CC(=O)CCC1C(O[O])(CC1(C)C)C(CCO)=C}
+SPC1057 = IGNORE ;    {CC(=O)CCC1C(O[O])CC1(C)C}
+SPC1058 = IGNORE ;    {CC(=O)CCC1C([O])(CC1(C)C)C(=O)CCO}
+SPC1059 = IGNORE ;    {CC(=O)CCC1C([O])(CC1(C)C)C(CCO)=C}
+SPC1060 = IGNORE ;    {CC(=O)CCC1C([O])CC1(C)C}
+SPC1061 = IGNORE ;    {CC(=O)CCC=O}
+SPC1062 = IGNORE ;    {CC(=O)CCCO}
+SPC1063 = IGNORE ;    {CC(=O)CCL}
+SPC1064 = IGNORE ;    {CC(=O)CCO}
+SPC1065 = IGNORE ;    {CC(=O)CCOC(=O)C}
+SPC1066 = IGNORE ;    {CC(=O)CCON(=O)=O}
+SPC1067 = IGNORE ;    {CC(=O)CCOO}
+SPC1068 = IGNORE ;    {CC(=O)CCO[O]}
+SPC1069 = IGNORE ;    {CC(=O)CC[O]}
+SPC1070 = IGNORE ;    {CC(=O)CL}
+SPC1071 = IGNORE ;    {CC(=O)CO}
+SPC1072 = IGNORE ;    {CC(=O)COC}
+SPC1073 = IGNORE ;    {CC(=O)COC(=O)C}
+SPC1074 = IGNORE ;    {CC(=O)COC(=O)C(=O)C}
+SPC1075 = IGNORE ;    {CC(=O)COC(=O)CC(O[O])C}
+SPC1076 = IGNORE ;    {CC(=O)COC(=O)CC([O])C}
+SPC1077 = IGNORE ;    {CC(=O)COC(=O)COO}
+SPC1078 = IGNORE ;    {CC(=O)COC(=O)CO[O]}
+SPC1079 = IGNORE ;    {CC(=O)COC(=O)C[O]}
+SPC1080 = IGNORE ;    {CC(=O)COC(O[O])CCC}
+SPC1081 = IGNORE ;    {CC(=O)COC([O])CCC}
+SPC1082 = IGNORE ;    {CC(=O)COC=O}
+SPC1083 = IGNORE ;    {CC(=O)CON(=O)=O}
+SPC1084 = IGNORE ;    {CC(=O)COO}
+SPC1085 = IGNORE ;    {CC(=O)CO[O]}
+SPC1086 = IGNORE ;    {CC(=O)C[O]}
+SPC1087 = IGNORE ;    {CC(=O)O}
+SPC1088 = IGNORE ;    {CC(=O)OC}
+SPC1089 = IGNORE ;    {CC(=O)OC(=O)C}
+SPC1090 = IGNORE ;    {CC(=O)OC(=O)C(=O)C(O[O])C}
+SPC1091 = IGNORE ;    {CC(=O)OC(=O)C(=O)C([O])C}
+SPC1092 = IGNORE ;    {CC(=O)OC(=O)C(=O)COO}
+SPC1093 = IGNORE ;    {CC(=O)OC(=O)C(=O)CO[O]}
+SPC1094 = IGNORE ;    {CC(=O)OC(=O)C(=O)C[O]}
+SPC1095 = IGNORE ;    {CC(=O)OC(=O)CC(=O)COO}
+SPC1096 = IGNORE ;    {CC(=O)OC(=O)CC(=O)CO[O]}
+SPC1097 = IGNORE ;    {CC(=O)OC(=O)CC(=O)C[O]}
+SPC1098 = IGNORE ;    {CC(=O)OC(=O)CC(=O)O}
+SPC1099 = IGNORE ;    {CC(=O)OC(=O)CC(=O)OO}
+SPC1100 = IGNORE ;    {CC(=O)OC(=O)CC(=O)OON(=O)=O}
+SPC1101 = IGNORE ;    {CC(=O)OC(=O)CC(=O)O[O]}
+SPC1102 = IGNORE ;    {CC(=O)OC(=O)CC(O[O])C}
+SPC1103 = IGNORE ;    {CC(=O)OC(=O)CC([O])C}
+SPC1104 = IGNORE ;    {CC(=O)OC(=O)CC=O}
+SPC1105 = IGNORE ;    {CC(=O)OC(=O)CCOO}
+SPC1106 = IGNORE ;    {CC(=O)OC(=O)CCO[O]}
+SPC1107 = IGNORE ;    {CC(=O)OC(=O)CC[O]}
+SPC1108 = IGNORE ;    {CC(=O)OC(=O)COO}
+SPC1109 = IGNORE ;    {CC(=O)OC(=O)CO[O]}
+SPC1110 = IGNORE ;    {CC(=O)OC(=O)C[O]}
+SPC1111 = IGNORE ;    {CC(=O)OC(C)(C)C}
+SPC1112 = IGNORE ;    {CC(=O)OC(C)(C)C(=O)OO}
+SPC1113 = IGNORE ;    {CC(=O)OC(C)(C)C(=O)O[O]}
+SPC1114 = IGNORE ;    {CC(=O)OC(C)(C)C=O}
+SPC1115 = IGNORE ;    {CC(=O)OC(C)(C)CO}
+SPC1116 = IGNORE ;    {CC(=O)OC(C)(C)CON(=O)=O}
+SPC1117 = IGNORE ;    {CC(=O)OC(C)(C)COO}
+SPC1118 = IGNORE ;    {CC(=O)OC(C)(C)CO[O]}
+SPC1119 = IGNORE ;    {CC(=O)OC(C)(C)C[O]}
+SPC1120 = IGNORE ;    {CC(=O)OC(C)C}
+SPC1121 = IGNORE ;    {CC(=O)OC(C)C(=O)C}
+SPC1122 = IGNORE ;    {CC(=O)OC(C)C(=O)O}
+SPC1123 = IGNORE ;    {CC(=O)OC(C)C(=O)OO}
+SPC1124 = IGNORE ;    {CC(=O)OC(C)C(=O)O[O]}
+SPC1125 = IGNORE ;    {CC(=O)OC(C)C=O}
+SPC1126 = IGNORE ;    {CC(=O)OC(C)CC}
+SPC1127 = IGNORE ;    {CC(=O)OC(C)CO}
+SPC1128 = IGNORE ;    {CC(=O)OC(C)CON(=O)=O}
+SPC1129 = IGNORE ;    {CC(=O)OC(C)COO}
+SPC1130 = IGNORE ;    {CC(=O)OC(C)CO[O]}
+SPC1131 = IGNORE ;    {CC(=O)OC(C)C[O]}
+SPC1132 = IGNORE ;    {CC(=O)OC(O)(C)C}
+SPC1133 = IGNORE ;    {CC(=O)OC(O)(C)C(=O)C}
+SPC1134 = IGNORE ;    {CC(=O)OC(O)(C)CC}
+SPC1135 = IGNORE ;    {CC(=O)OC(O)COO}
+SPC1136 = IGNORE ;    {CC(=O)OC(O)CO[O]}
+SPC1137 = IGNORE ;    {CC(=O)OC(O)C[O]}
+SPC1138 = IGNORE ;    {CC(=O)OC(ON(=O)=O)(C)C}
+SPC1139 = IGNORE ;    {CC(=O)OC(ON(=O)=O)(C)CC}
+SPC1140 = IGNORE ;    {CC(=O)OC(OO)(C)C}
+SPC1141 = IGNORE ;    {CC(=O)OC(OO)(C)C(=O)C}
+SPC1142 = IGNORE ;    {CC(=O)OC(OO)(C)CC}
+SPC1143 = IGNORE ;    {CC(=O)OC(O[O])(C)C}
+SPC1144 = IGNORE ;    {CC(=O)OC(O[O])(C)C(=O)C}
+SPC1145 = IGNORE ;    {CC(=O)OC(O[O])(C)CC}
+SPC1146 = IGNORE ;    {CC(=O)OC(O[O])C}
+SPC1147 = IGNORE ;    {CC(=O)OC(O[O])C(=O)C}
+SPC1148 = IGNORE ;    {CC(=O)OC(O[O])CC}
+SPC1149 = IGNORE ;    {CC(=O)OC([O])(C)C}
+SPC1150 = IGNORE ;    {CC(=O)OC([O])(C)C(=O)C}
+SPC1151 = IGNORE ;    {CC(=O)OC([O])(C)CC}
+SPC1152 = IGNORE ;    {CC(=O)OC([O])C}
+SPC1153 = IGNORE ;    {CC(=O)OC([O])C(=O)C}
+SPC1154 = IGNORE ;    {CC(=O)OC([O])CC}
+SPC1155 = IGNORE ;    {CC(=O)OC=O}
+SPC1156 = IGNORE ;    {CC(=O)OCC(=O)OO}
+SPC1157 = IGNORE ;    {CC(=O)OCC(=O)OON(=O)=O}
+SPC1158 = IGNORE ;    {CC(=O)OCC(=O)O[O]}
+SPC1159 = IGNORE ;    {CC(=O)OCC(O[O])C}
+SPC1160 = IGNORE ;    {CC(=O)OCC(O[O])CC}
+SPC1161 = IGNORE ;    {CC(=O)OCC([O])C}
+SPC1162 = IGNORE ;    {CC(=O)OCC([O])CC}
+SPC1163 = IGNORE ;    {CC(=O)OCC=O}
+SPC1164 = IGNORE ;    {CC(=O)OCCC(=O)O}
+SPC1165 = IGNORE ;    {CC(=O)OCCC(=O)OO}
+SPC1166 = IGNORE ;    {CC(=O)OCCC(=O)OON(=O)=O}
+SPC1167 = IGNORE ;    {CC(=O)OCCC(=O)O[O]}
+SPC1168 = IGNORE ;    {CC(=O)OCCC(O[O])C}
+SPC1169 = IGNORE ;    {CC(=O)OCCC([O])C}
+SPC1170 = IGNORE ;    {CC(=O)OCCC=O}
+SPC1171 = IGNORE ;    {CC(=O)OCCCO}
+SPC1172 = IGNORE ;    {CC(=O)OCCCON(=O)=O}
+SPC1173 = IGNORE ;    {CC(=O)OCCCOO}
+SPC1174 = IGNORE ;    {CC(=O)OCCCO[O]}
+SPC1175 = IGNORE ;    {CC(=O)OCCC[O]}
+SPC1176 = IGNORE ;    {CC(=O)OCCO}
+SPC1177 = IGNORE ;    {CC(=O)OCCON(=O)=O}
+SPC1178 = IGNORE ;    {CC(=O)OCCOO}
+SPC1179 = IGNORE ;    {CC(=O)OCCO[O]}
+SPC1180 = IGNORE ;    {CC(=O)OCC[O]}
+SPC1181 = IGNORE ;    {CC(=O)OCO}
+SPC1182 = IGNORE ;    {CC(=O)OCON(=O)=O}
+SPC1183 = IGNORE ;    {CC(=O)OCOO}
+SPC1184 = IGNORE ;    {CC(=O)OCO[O]}
+SPC1185 = IGNORE ;    {CC(=O)OC[O]}
+SPC1186 = IGNORE ;    {CC(=O)OO}
+SPC1187 = IGNORE ;    {CC(=O)OON(=O)=O}
+SPC1188 = IGNORE ;    {CC(=O)O[O]}
+SPC1189 = IGNORE ;    {CC(=O)c(c1)cc(C)cc1CC}
+SPC1190 = IGNORE ;    {CC(C(=O)O)(C)C(=O)CC=O}
+SPC1191 = IGNORE ;    {CC(C(=O)O)(C)C=O}
+SPC1192 = IGNORE ;    {CC(C(=O)O)(C)OC=O}
+SPC1193 = IGNORE ;    {CC(C(=O)O)=C}
+SPC1194 = IGNORE ;    {CC(C(=O)O)=C(C)C=O}
+SPC1195 = IGNORE ;    {CC(C(=O)O)=C(N(=O)=O)C=O}
+SPC1196 = IGNORE ;    {CC(C(=O)O)=CC=O}
+SPC1197 = IGNORE ;    {CC(C(=O)O)C=O}
+SPC1198 = IGNORE ;    {CC(C(=O)OO)(C)C(=O)CC=O}
+SPC1199 = IGNORE ;    {CC(C(=O)OO)(C)OC=O}
+SPC1200 = IGNORE ;    {CC(C(=O)OO)=C}
+SPC1201 = IGNORE ;    {CC(C(=O)OO)=C(C)C(=O)C(O)C=O}
+SPC1202 = IGNORE ;    {CC(C(=O)OO)=C(C)C(=O)C=O}
+SPC1203 = IGNORE ;    {CC(C(=O)OO)=C(CC)C(=O)C(O)C=O}
+SPC1204 = IGNORE ;    {CC(C(=O)OO)=C(CC)C(=O)C=O}
+SPC1205 = IGNORE ;    {CC(C(=O)OO)=CC(=O)C=O}
+SPC1206 = IGNORE ;    {CC(C(=O)OO)=CC=O}
+SPC1207 = IGNORE ;    {CC(C(=O)OO)C=O}
+SPC1208 = IGNORE ;    {CC(C(=O)OON(=O)=O)(C)C(=O)CC=O}
+SPC1209 = IGNORE ;    {CC(C(=O)OON(=O)=O)(C)C=O}
+SPC1210 = IGNORE ;    {CC(C(=O)OON(=O)=O)(C)OC=O}
+SPC1211 = IGNORE ;    {CC(C(=O)OON(=O)=O)=C(C)C(=O)C(O)C=O}
+SPC1212 = IGNORE ;    {CC(C(=O)OON(=O)=O)=C(C)C(=O)C=O}
+SPC1213 = IGNORE ;    {CC(C(=O)OON(=O)=O)=C(CC)C(=O)C(O)C=O}
+SPC1214 = IGNORE ;    {CC(C(=O)OON(=O)=O)=C(CC)C(=O)C=O}
+SPC1215 = IGNORE ;    {CC(C(=O)OON(=O)=O)=CC(=O)C=O}
+SPC1216 = IGNORE ;    {CC(C(=O)OON(=O)=O)=CC=O}
+SPC1217 = IGNORE ;    {CC(C(=O)OON(=O)=O)C=O}
+SPC1218 = IGNORE ;    {CC(C)(C(=O)OO)C=O}
+SPC1219 = IGNORE ;    {CC(C)(C)C}
+SPC1220 = IGNORE ;    {CC(C)(C)C(=O)OO}
+SPC1221 = IGNORE ;    {CC(C)(C)C(=O)O[O]}
+SPC1222 = IGNORE ;    {CC(C)(C)C=O}
+SPC1223 = IGNORE ;    {CC(C)(C)CC(=O)OO}
+SPC1224 = IGNORE ;    {CC(C)(C)CC(=O)O[O]}
+SPC1225 = IGNORE ;    {CC(C)(C)CC=O}
+SPC1226 = IGNORE ;    {CC(C)(C)CCO}
+SPC1227 = IGNORE ;    {CC(C)(C)CCON(=O)=O}
+SPC1228 = IGNORE ;    {CC(C)(C)CCOO}
+SPC1229 = IGNORE ;    {CC(C)(C)CCO[O]}
+SPC1230 = IGNORE ;    {CC(C)(C)CC[O]}
+SPC1231 = IGNORE ;    {CC(C)(C)CO}
+SPC1232 = IGNORE ;    {CC(C)(C)CON(=O)=O}
+SPC1233 = IGNORE ;    {CC(C)(C)COO}
+SPC1234 = IGNORE ;    {CC(C)(C)CO[O]}
+SPC1235 = IGNORE ;    {CC(C)(C)C[O]}
+SPC1236 = IGNORE ;    {CC(C)(C)OC(=O)C=O}
+SPC1237 = IGNORE ;    {CC(C)(C)OC(=O)CO}
+SPC1238 = IGNORE ;    {CC(C)(C)OC(=O)COO}
+SPC1239 = IGNORE ;    {CC(C)(C)OC(=O)CO[O]}
+SPC1240 = IGNORE ;    {CC(C)(C)OC(=O)C[O]}
+SPC1241 = IGNORE ;    {CC(C)(C)OC=O}
+SPC1242 = IGNORE ;    {CC(C)(C)OCC(=O)OO}
+SPC1243 = IGNORE ;    {CC(C)(C)OCC(=O)OON(=O)=O}
+SPC1244 = IGNORE ;    {CC(C)(C)OCC(=O)O[O]}
+SPC1245 = IGNORE ;    {CC(C)(C)OCC=O}
+SPC1246 = IGNORE ;    {CC(C)(C)OCCO}
+SPC1247 = IGNORE ;    {CC(C)(C)OCCON(=O)=O}
+SPC1248 = IGNORE ;    {CC(C)(C)OCCOO}
+SPC1249 = IGNORE ;    {CC(C)(C)OCCO[O]}
+SPC1250 = IGNORE ;    {CC(C)(C)OCC[O]}
+SPC1251 = IGNORE ;    {CC(C)(C)OCO}
+SPC1252 = IGNORE ;    {CC(C)(C)OCON(=O)=O}
+SPC1253 = IGNORE ;    {CC(C)(C)OCOO}
+SPC1254 = IGNORE ;    {CC(C)(C)OCO[O]}
+SPC1255 = IGNORE ;    {CC(C)(C)OC[O]}
+SPC1256 = IGNORE ;    {CC(C)(C=O)C=O}
+SPC1257 = IGNORE ;    {CC(C)(CO)C(=O)O}
+SPC1258 = IGNORE ;    {CC(C)(CO)C(=O)OON(=O)=O}
+SPC1259 = IGNORE ;    {CC(C)(CO)C=O}
+SPC1260 = IGNORE ;    {CC(C)(CO)CC(=O)O}
+SPC1261 = IGNORE ;    {CC(C)(CO)CC(=O)OON(=O)=O}
+SPC1262 = IGNORE ;    {CC(C)(CO)CCON(=O)=O}
+SPC1263 = IGNORE ;    {CC(C)(CO)CO}
+SPC1264 = IGNORE ;    {CC(C)(CO)CON(=O)=O}
+SPC1265 = IGNORE ;    {CC(C)(CO)C[O]}
+SPC1266 = IGNORE ;    {CC(C)(COO)OC=O}
+SPC1267 = IGNORE ;    {CC(C)=C}
+SPC1268 = IGNORE ;    {CC(C)=C(C)C}
+SPC1269 = IGNORE ;    {CC(C)C}
+SPC1270 = IGNORE ;    {CC(C)C(=O)C(=O)C(O)C(=O)OO}
+SPC1271 = IGNORE ;    {CC(C)C(=O)C(=O)C(O)C(=O)O[O]}
+SPC1272 = IGNORE ;    {CC(C)C(=O)C(=O)C(O)C1OC1C=O}
+SPC1273 = IGNORE ;    {CC(C)C(=O)C(=O)C(O)C=O}
+SPC1274 = IGNORE ;    {CC(C)C(=O)C(=O)C=O}
+SPC1275 = IGNORE ;    {CC(C)C(=O)C(=O)O}
+SPC1276 = IGNORE ;    {CC(C)C(=O)C(O)C(=O)OO}
+SPC1277 = IGNORE ;    {CC(C)C(=O)C(O)C(=O)O[O]}
+SPC1278 = IGNORE ;    {CC(C)C(=O)C(O)C(O)C1OC1C=O}
+SPC1279 = IGNORE ;    {CC(C)C(=O)C(O)C(O)C=O}
+SPC1280 = IGNORE ;    {CC(C)C(=O)C(O)C=O}
+SPC1281 = IGNORE ;    {CC(C)C(=O)C(ON(=O)=O)C(O)C1OC1C=O}
+SPC1282 = IGNORE ;    {CC(C)C(=O)C(OO)C(O)C(=O)C=O}
+SPC1283 = IGNORE ;    {CC(C)C(=O)C(OO)C(O)C1OC1C=O}
+SPC1284 = IGNORE ;    {CC(C)C(=O)C(OO)C(O)C=O}
+SPC1285 = IGNORE ;    {CC(C)C(=O)C(O[O])C(O)C(=O)C=O}
+SPC1286 = IGNORE ;    {CC(C)C(=O)C(O[O])C(O)C1OC1C=O}
+SPC1287 = IGNORE ;    {CC(C)C(=O)C(O[O])C(O)C=O}
+SPC1288 = IGNORE ;    {CC(C)C(=O)C([O])C(O)C(=O)C=O}
+SPC1289 = IGNORE ;    {CC(C)C(=O)C([O])C(O)C1OC1C=O}
+SPC1290 = IGNORE ;    {CC(C)C(=O)C([O])C(O)C=O}
+SPC1291 = IGNORE ;    {CC(C)C(=O)C=CC(=O)C=O}
+SPC1292 = IGNORE ;    {CC(C)C(=O)C=CC(=O)O}
+SPC1293 = IGNORE ;    {CC(C)C(=O)C=CC(=O)OO}
+SPC1294 = IGNORE ;    {CC(C)C(=O)C=CC(=O)OON(=O)=O}
+SPC1295 = IGNORE ;    {CC(C)C(=O)C=CC(=O)O[O]}
+SPC1296 = IGNORE ;    {CC(C)C(=O)C=CC(=O)[O]}
+SPC1297 = IGNORE ;    {CC(C)C(=O)C=CC(O)C=O}
+SPC1298 = IGNORE ;    {CC(C)C(=O)C=CC(OO)C=O}
+SPC1299 = IGNORE ;    {CC(C)C(=O)C=CC(O[O])C=O}
+SPC1300 = IGNORE ;    {CC(C)C(=O)C=CC([O])C=O}
+SPC1301 = IGNORE ;    {CC(C)C(=O)C=CC1OC1C(=O)O}
+SPC1302 = IGNORE ;    {CC(C)C(=O)C=CC1OC1C(=O)OO}
+SPC1303 = IGNORE ;    {CC(C)C(=O)C=CC1OC1C(=O)O[O]}
+SPC1304 = IGNORE ;    {CC(C)C(=O)C=CC1OC1C=O}
+SPC1305 = IGNORE ;    {CC(C)C(=O)C=CC=O}
+SPC1306 = IGNORE ;    {CC(C)C(=O)C=O}
+SPC1307 = IGNORE ;    {CC(C)C(=O)CO}
+SPC1308 = IGNORE ;    {CC(C)C(=O)CON(=O)=O}
+SPC1309 = IGNORE ;    {CC(C)C(=O)C[O]}
+SPC1310 = IGNORE ;    {CC(C)C(=O)O}
+SPC1311 = IGNORE ;    {CC(C)C(=O)OO}
+SPC1312 = IGNORE ;    {CC(C)C(=O)O[O]}
+SPC1313 = IGNORE ;    {CC(C)C(C(=O)C=O)=CC(=O)C=O}
+SPC1314 = IGNORE ;    {CC(C)C(C(=O)O)=C(N(=O)=O)C=O}
+SPC1315 = IGNORE ;    {CC(C)C(C(=O)O)=CC=O}
+SPC1316 = IGNORE ;    {CC(C)C(C(=O)OO)=CC(=O)C=O}
+SPC1317 = IGNORE ;    {CC(C)C(C(=O)OON(=O)=O)=CC(=O)C=O}
+SPC1318 = IGNORE ;    {CC(C)C(C(=O)O[O])=CC(=O)C=O}
+SPC1319 = IGNORE ;    {CC(C)C(C(=O)[O])=C(N(=O)=O)C=O}
+SPC1320 = IGNORE ;    {CC(C)C(C)C}
+SPC1321 = IGNORE ;    {CC(C)C(C)C(=O)O}
+SPC1322 = IGNORE ;    {CC(C)C(C)C(=O)OO}
+SPC1323 = IGNORE ;    {CC(C)C(C)C(=O)O[O]}
+SPC1324 = IGNORE ;    {CC(C)C(C)C=O}
+SPC1325 = IGNORE ;    {CC(C)C(C)CO}
+SPC1326 = IGNORE ;    {CC(C)C(C)CON(=O)=O}
+SPC1327 = IGNORE ;    {CC(C)C(C)COO}
+SPC1328 = IGNORE ;    {CC(C)C(C)CO[O]}
+SPC1329 = IGNORE ;    {CC(C)C(C)C[O]}
+SPC1330 = IGNORE ;    {CC(C)C(C=O)OC(=O)C=O}
+SPC1331 = IGNORE ;    {CC(C)C(O)C(=O)OO}
+SPC1332 = IGNORE ;    {CC(C)C(O)C(=O)O[O]}
+SPC1333 = IGNORE ;    {CC(C)C(O)C=O}
+SPC1334 = IGNORE ;    {CC(C)C(O)CC(=O)COO}
+SPC1335 = IGNORE ;    {CC(C)C(O)CC(=O)CO[O]}
+SPC1336 = IGNORE ;    {CC(C)C(O)CC(=O)C[O]}
+SPC1337 = IGNORE ;    {CC(C)C(O)CC(=O)OO}
+SPC1338 = IGNORE ;    {CC(C)C(O)CC(=O)O[O]}
+SPC1339 = IGNORE ;    {CC(C)C(O)CO}
+SPC1340 = IGNORE ;    {CC(C)C(O)CON(=O)=O}
+SPC1341 = IGNORE ;    {CC(C)C(O)COO}
+SPC1342 = IGNORE ;    {CC(C)C(O)CO[O]}
+SPC1343 = IGNORE ;    {CC(C)C(O)C[O]}
+SPC1344 = IGNORE ;    {CC(C)C(ON(=O)=O)C(=O)O}
+SPC1345 = IGNORE ;    {CC(C)C(ON(=O)=O)C(=O)OO}
+SPC1346 = IGNORE ;    {CC(C)C(ON(=O)=O)C(=O)O[O]}
+SPC1347 = IGNORE ;    {CC(C)C(ON(=O)=O)C=O}
+SPC1348 = IGNORE ;    {CC(C)C(ON(=O)=O)CO}
+SPC1349 = IGNORE ;    {CC(C)C(ON(=O)=O)COO}
+SPC1350 = IGNORE ;    {CC(C)C(ON(=O)=O)CO[O]}
+SPC1351 = IGNORE ;    {CC(C)C(ON(=O)=O)C[O]}
+SPC1352 = IGNORE ;    {CC(C)C(OO)C=O}
+SPC1353 = IGNORE ;    {CC(C)C(OO)CO}
+SPC1354 = IGNORE ;    {CC(C)C(OO)CON(=O)=O}
+SPC1355 = IGNORE ;    {CC(C)C(O[O])C=O}
+SPC1356 = IGNORE ;    {CC(C)C(O[O])CO}
+SPC1357 = IGNORE ;    {CC(C)C(O[O])CON(=O)=O}
+SPC1358 = IGNORE ;    {CC(C)C([O])C=O}
+SPC1359 = IGNORE ;    {CC(C)C([O])CO}
+SPC1360 = IGNORE ;    {CC(C)C([O])CON(=O)=O}
+SPC1361 = IGNORE ;    {CC(C)C12OOC(C2O)C(O)(O)C=C1}
+SPC1362 = IGNORE ;    {CC(C)C12OOC(C2O)C([O])(O)C=C1}
+SPC1363 = IGNORE ;    {CC(C)C=C}
+SPC1364 = IGNORE ;    {CC(C)C=O}
+SPC1365 = IGNORE ;    {CC(C)CC(=O)O}
+SPC1366 = IGNORE ;    {CC(C)CC(=O)OO}
+SPC1367 = IGNORE ;    {CC(C)CC(=O)OON(=O)=O}
+SPC1368 = IGNORE ;    {CC(C)CC(=O)O[O]}
+SPC1369 = IGNORE ;    {CC(C)CC=O}
+SPC1370 = IGNORE ;    {CC(C)CCO}
+SPC1371 = IGNORE ;    {CC(C)CO}
+SPC1372 = IGNORE ;    {CC(C)CON(=O)=O}
+SPC1373 = IGNORE ;    {CC(C)COO}
+SPC1374 = IGNORE ;    {CC(C)CO[O]}
+SPC1375 = IGNORE ;    {CC(C)C[O]}
+SPC1376 = IGNORE ;    {CC(C)OC(C)C}
+SPC1377 = IGNORE ;    {CC(C)OC(C)C(=O)OO}
+SPC1378 = IGNORE ;    {CC(C)OC(C)C(=O)O[O]}
+SPC1379 = IGNORE ;    {CC(C)OC(C)C=O}
+SPC1380 = IGNORE ;    {CC(C)OC(C)CO}
+SPC1381 = IGNORE ;    {CC(C)OC(C)CON(=O)=O}
+SPC1382 = IGNORE ;    {CC(C)OC(C)COO}
+SPC1383 = IGNORE ;    {CC(C)OC(C)CO[O]}
+SPC1384 = IGNORE ;    {CC(C)OC(C)C[O]}
+SPC1385 = IGNORE ;    {CC(C)OC=O}
+SPC1386 = IGNORE ;    {CC(C=O)(C)C(=O)C=O}
+SPC1387 = IGNORE ;    {CC(C=O)(C)C(=O)CC(=O)O[O]}
+SPC1388 = IGNORE ;    {CC(C=O)(C)C(=O)CC=O}
+SPC1389 = IGNORE ;    {CC(C=O)(C)C(=O)CCC(=O)O[O]}
+SPC1390 = IGNORE ;    {CC(C=O)(C)C(=O)CCO[O]}
+SPC1391 = IGNORE ;    {CC(C=O)(C)C(=O)CC[O]}
+SPC1392 = IGNORE ;    {CC(C=O)(C)C(=O)CO[O]}
+SPC1393 = IGNORE ;    {CC(C=O)(C)C(=O)C[O]}
+SPC1394 = IGNORE ;    {CC(C=O)(C)C(=O)O[O]}
+SPC1395 = IGNORE ;    {CC(C=O)(C)C(C=O)C(=O)C=O}
+SPC1396 = IGNORE ;    {CC(C=O)(C)C(C=O)C(=O)CC(=O)O[O]}
+SPC1397 = IGNORE ;    {CC(C=O)(C)C(C=O)C(=O)CO[O]}
+SPC1398 = IGNORE ;    {CC(C=O)(C)C(C=O)C(=O)C[O]}
+SPC1399 = IGNORE ;    {CC(C=O)(C)C(C=O)C(=O)O[O]}
+SPC1400 = IGNORE ;    {CC(C=O)(C)C(O)C=O}
+SPC1401 = IGNORE ;    {CC(C=O)(C)C(OO)C=O}
+SPC1402 = IGNORE ;    {CC(C=O)(C)C(O[O])C=O}
+SPC1403 = IGNORE ;    {CC(C=O)(C)C([O])C=O}
+SPC1404 = IGNORE ;    {CC(C=O)(C)OC=O}
+SPC1405 = IGNORE ;    {CC(C=O)=C}
+SPC1406 = IGNORE ;    {CC(C=O)=CC(=O)O[O]}
+SPC1407 = IGNORE ;    {CC(C=O)=CC(=O)[O]}
+SPC1408 = IGNORE ;    {CC(C=O)=CC=O}
+SPC1409 = IGNORE ;    {CC(C=O)C(=O)O[O]}
+SPC1410 = IGNORE ;    {CC(C=O)C=O}
+SPC1411 = IGNORE ;    {CC(C=O)CO[O]}
+SPC1412 = IGNORE ;    {CC(C=O)C[O]}
+SPC1413 = IGNORE ;    {CC(CCC(CC(=O)OO[N+](=O)[O-])=O)=O}
+SPC1414 = IGNORE ;    {CC(CCC(C[O])=O)=O.[OH]}
+SPC1415 = IGNORE ;    {CC(CL)(CL)CL}
+SPC1416 = IGNORE ;    {CC(CL)(CL)OO}
+SPC1417 = IGNORE ;    {CC(CL)(CL)O[O]}
+SPC1418 = IGNORE ;    {CC(CL)(CL)[O]}
+SPC1419 = IGNORE ;    {CC(CL)(OO)C(=O)CL}
+SPC1420 = IGNORE ;    {CC(CL)(OO)CCL}
+SPC1421 = IGNORE ;    {CC(CL)(O[O])C(=O)CL}
+SPC1422 = IGNORE ;    {CC(CL)(O[O])CCL}
+SPC1423 = IGNORE ;    {CC(CL)([O])C(=O)CL}
+SPC1424 = IGNORE ;    {CC(CL)([O])CCL}
+SPC1425 = IGNORE ;    {CC(CL)C(=O)CL}
+SPC1426 = IGNORE ;    {CC(CL)C(CL)OO}
+SPC1427 = IGNORE ;    {CC(CL)C(CL)O[O]}
+SPC1428 = IGNORE ;    {CC(CL)C(CL)[O]}
+SPC1429 = IGNORE ;    {CC(CL)C(O)CL}
+SPC1430 = IGNORE ;    {CC(CL)CCL}
+SPC1431 = IGNORE ;    {CC(CL)CL}
+SPC1432 = IGNORE ;    {CC(CL)OO}
+SPC1433 = IGNORE ;    {CC(CL)O[O]}
+SPC1434 = IGNORE ;    {CC(CL)[O]}
+SPC1435 = IGNORE ;    {CC(CO)(C)C(=O)C=O}
+SPC1436 = IGNORE ;    {CC(CO)(C)C(=O)CO}
+SPC1437 = IGNORE ;    {CC(CO)(C)C(=O)COO}
+SPC1438 = IGNORE ;    {CC(CO)(C)C(=O)CO[O]}
+SPC1439 = IGNORE ;    {CC(CO)(C)C(=O)C[O]}
+SPC1440 = IGNORE ;    {CC(CO)(C)C(=O)OO}
+SPC1441 = IGNORE ;    {CC(CO)(C)C(=O)O[O]}
+SPC1442 = IGNORE ;    {CC(CO)(C)CC(=O)OO}
+SPC1443 = IGNORE ;    {CC(CO)(C)CC(=O)O[O]}
+SPC1444 = IGNORE ;    {CC(CO)(C)CC=O}
+SPC1445 = IGNORE ;    {CC(CO)(C)CCO}
+SPC1446 = IGNORE ;    {CC(CO)(C)CCOO}
+SPC1447 = IGNORE ;    {CC(CO)(C)CCO[O]}
+SPC1448 = IGNORE ;    {CC(CO)(C)CC[O]}
+SPC1449 = IGNORE ;    {CC(CO)(C)COO}
+SPC1450 = IGNORE ;    {CC(CO)(C)CO[O]}
+SPC1451 = IGNORE ;    {CC(CO)(C)OC=O}
+SPC1452 = IGNORE ;    {CC(CO)=CC(=O)O}
+SPC1453 = IGNORE ;    {CC(CO)=CC(=O)OO}
+SPC1454 = IGNORE ;    {CC(CO)=CC(=O)O[O]}
+SPC1455 = IGNORE ;    {CC(CO)=CC=O}
+SPC1456 = IGNORE ;    {CC(CO)=CCO}
+SPC1457 = IGNORE ;    {CC(CO)=CCON(=O)=O}
+SPC1458 = IGNORE ;    {CC(CO)=CCOO}
+SPC1459 = IGNORE ;    {CC(CO)=CCO[O]}
+SPC1460 = IGNORE ;    {CC(CO)=CC[O]}
+SPC1461 = IGNORE ;    {CC(CO)C(=O)C=O}
+SPC1462 = IGNORE ;    {CC(CO)C(=O)CO}
+SPC1463 = IGNORE ;    {CC(CO)C(=O)COO}
+SPC1464 = IGNORE ;    {CC(CO)C(=O)CO[O]}
+SPC1465 = IGNORE ;    {CC(CO)C(=O)C[O]}
+SPC1466 = IGNORE ;    {CC(CO)C(=O)O}
+SPC1467 = IGNORE ;    {CC(CO)C(=O)OO}
+SPC1468 = IGNORE ;    {CC(CO)C(=O)OON(=O)=O}
+SPC1469 = IGNORE ;    {CC(CO)C(=O)O[O]}
+SPC1470 = IGNORE ;    {CC(CO)C(C)C(=O)O}
+SPC1471 = IGNORE ;    {CC(CO)C(C)C(=O)OO}
+SPC1472 = IGNORE ;    {CC(CO)C(C)C(=O)OON(=O)=O}
+SPC1473 = IGNORE ;    {CC(CO)C(C)C(=O)O[O]}
+SPC1474 = IGNORE ;    {CC(CO)C(C)C=O}
+SPC1475 = IGNORE ;    {CC(CO)C(C)CO}
+SPC1476 = IGNORE ;    {CC(CO)C(C)CON(=O)=O}
+SPC1477 = IGNORE ;    {CC(CO)C(C)COO}
+SPC1478 = IGNORE ;    {CC(CO)C(C)CO[O]}
+SPC1479 = IGNORE ;    {CC(CO)C(C)C[O]}
+SPC1480 = IGNORE ;    {CC(CO)C(O)C(=O)OO}
+SPC1481 = IGNORE ;    {CC(CO)C(O)C(=O)OON(=O)=O}
+SPC1482 = IGNORE ;    {CC(CO)C(O)C(=O)O[O]}
+SPC1483 = IGNORE ;    {CC(CO)C(O)C=O}
+SPC1484 = IGNORE ;    {CC(CO)C(O)CO}
+SPC1485 = IGNORE ;    {CC(CO)C(O)COO}
+SPC1486 = IGNORE ;    {CC(CO)C(O)CO[O]}
+SPC1487 = IGNORE ;    {CC(CO)C(O)C[O]}
+SPC1488 = IGNORE ;    {CC(CO)C(O)ON(=O)=O}
+SPC1489 = IGNORE ;    {CC(CO)C=O}
+SPC1490 = IGNORE ;    {CC(CO)CC(=O)OO}
+SPC1491 = IGNORE ;    {CC(CO)CC(=O)OON(=O)=O}
+SPC1492 = IGNORE ;    {CC(CO)CC(=O)O[O]}
+SPC1493 = IGNORE ;    {CC(CO)CC=O}
+SPC1494 = IGNORE ;    {CC(CO)CCO}
+SPC1495 = IGNORE ;    {CC(CO)CCON(=O)=O}
+SPC1496 = IGNORE ;    {CC(CO)CCOO}
+SPC1497 = IGNORE ;    {CC(CO)CCO[O]}
+SPC1498 = IGNORE ;    {CC(CO)CC[O]}
+SPC1499 = IGNORE ;    {CC(CO)CO}
+SPC1500 = IGNORE ;    {CC(CO)CON(=O)=O}
+SPC1501 = IGNORE ;    {CC(CO)COO}
+SPC1502 = IGNORE ;    {CC(CO)CO[O]}
+SPC1503 = IGNORE ;    {CC(CO)C[O]}
+SPC1504 = IGNORE ;    {CC(CON(=O)=O)(C)OC=O}
+SPC1505 = IGNORE ;    {CC(CON(=O)=O)=CC(=O)OO}
+SPC1506 = IGNORE ;    {CC(CON(=O)=O)=CC(=O)OON(=O)=O}
+SPC1507 = IGNORE ;    {CC(CON(=O)=O)=CC(=O)O[O]}
+SPC1508 = IGNORE ;    {CC(CON(=O)=O)=CC=O}
+SPC1509 = IGNORE ;    {CC(CON(=O)=O)=CCON(=O)=O}
+SPC1510 = IGNORE ;    {CC(CON(=O)=O)=CCOO}
+SPC1511 = IGNORE ;    {CC(CON(=O)=O)=CCO[O]}
+SPC1512 = IGNORE ;    {CC(CON(=O)=O)=CC[O]}
+SPC1513 = IGNORE ;    {CC(CON(=O)=O)C=O}
+SPC1514 = IGNORE ;    {CC(COO)C=O}
+SPC1515 = IGNORE ;    {CC(O)(C(=O)O)C(O)CON(=O)=O}
+SPC1516 = IGNORE ;    {CC(O)(C(=O)O)C=O}
+SPC1517 = IGNORE ;    {CC(O)(C(=O)O)CON(=O)=O}
+SPC1518 = IGNORE ;    {CC(O)(C(=O)OO)C=O}
+SPC1519 = IGNORE ;    {CC(O)(C(=O)OON(=O)=O)C=O}
+SPC1520 = IGNORE ;    {CC(O)(C)C}
+SPC1521 = IGNORE ;    {CC(O)(C)C(=O)C=O}
+SPC1522 = IGNORE ;    {CC(O)(C)C(=O)CC(=O)OO}
+SPC1523 = IGNORE ;    {CC(O)(C)C(=O)CC(=O)O[O]}
+SPC1524 = IGNORE ;    {CC(O)(C)C(=O)CC=O}
+SPC1525 = IGNORE ;    {CC(O)(C)C(=O)CO}
+SPC1526 = IGNORE ;    {CC(O)(C)C(=O)CON(=O)=O}
+SPC1527 = IGNORE ;    {CC(O)(C)C(=O)COO}
+SPC1528 = IGNORE ;    {CC(O)(C)C(=O)CO[O]}
+SPC1529 = IGNORE ;    {CC(O)(C)C(=O)C[O]}
+SPC1530 = IGNORE ;    {CC(O)(C)C(=O)O}
+SPC1531 = IGNORE ;    {CC(O)(C)C(=O)OO}
+SPC1532 = IGNORE ;    {CC(O)(C)C(=O)O[O]}
+SPC1533 = IGNORE ;    {CC(O)(C)C(C)C}
+SPC1534 = IGNORE ;    {CC(O)(C)C(C=O)C(=O)CCC=O}
+SPC1535 = IGNORE ;    {CC(O)(C)C(CC=O)C(=O)CC=O}
+SPC1536 = IGNORE ;    {CC(O)(C)C(CC=O)CC=O}
+SPC1537 = IGNORE ;    {CC(O)(C)C(CO)CC(=O)C(=O)C}
+SPC1538 = IGNORE ;    {CC(O)(C)C(CO)CC(=O)C(=O)O}
+SPC1539 = IGNORE ;    {CC(O)(C)C(O)(C)C}
+SPC1540 = IGNORE ;    {CC(O)(C)C(O)C(=O)OO}
+SPC1541 = IGNORE ;    {CC(O)(C)C(O)C(=O)O[O]}
+SPC1542 = IGNORE ;    {CC(O)(C)C(O)C=O}
+SPC1543 = IGNORE ;    {CC(O)(C)C(O)CC=O}
+SPC1544 = IGNORE ;    {CC(O)(C)C(O)CO}
+SPC1545 = IGNORE ;    {CC(O)(C)C(O)CON(=O)=O}
+SPC1546 = IGNORE ;    {CC(O)(C)C(O)COO}
+SPC1547 = IGNORE ;    {CC(O)(C)C(O)CO[O]}
+SPC1548 = IGNORE ;    {CC(O)(C)C(O)C[O]}
+SPC1549 = IGNORE ;    {CC(O)(C)C(ON(=O)=O)C(=O)OO}
+SPC1550 = IGNORE ;    {CC(O)(C)C(ON(=O)=O)C(=O)O[O]}
+SPC1551 = IGNORE ;    {CC(O)(C)C(ON(=O)=O)C=O}
+SPC1552 = IGNORE ;    {CC(O)(C)C(ON(=O)=O)CC=O}
+SPC1553 = IGNORE ;    {CC(O)(C)C(ON(=O)=O)CO}
+SPC1554 = IGNORE ;    {CC(O)(C)C(ON(=O)=O)COO}
+SPC1555 = IGNORE ;    {CC(O)(C)C(ON(=O)=O)CO[O]}
+SPC1556 = IGNORE ;    {CC(O)(C)C(ON(=O)=O)C[O]}
+SPC1557 = IGNORE ;    {CC(O)(C)C(OO)CC=O}
+SPC1558 = IGNORE ;    {CC(O)(C)C(OO)CO}
+SPC1559 = IGNORE ;    {CC(O)(C)C(OO)CON(=O)=O}
+SPC1560 = IGNORE ;    {CC(O)(C)C(O[O])CC=O}
+SPC1561 = IGNORE ;    {CC(O)(C)C(O[O])CO}
+SPC1562 = IGNORE ;    {CC(O)(C)C(O[O])CON(=O)=O}
+SPC1563 = IGNORE ;    {CC(O)(C)C([O])(C)C}
+SPC1564 = IGNORE ;    {CC(O)(C)C([O])CC=O}
+SPC1565 = IGNORE ;    {CC(O)(C)C([O])CO}
+SPC1566 = IGNORE ;    {CC(O)(C)C([O])CON(=O)=O}
+SPC1567 = IGNORE ;    {CC(O)(C)C1CC=C(CO)CC1}
+SPC1568 = IGNORE ;    {CC(O)(C)C=C}
+SPC1569 = IGNORE ;    {CC(O)(C)C=O}
+SPC1570 = IGNORE ;    {CC(O)(C)CC(=O)C(=O)CCC=O}
+SPC1571 = IGNORE ;    {CC(O)(C)CC(=O)C(=O)CCO}
+SPC1572 = IGNORE ;    {CC(O)(C)CC(=O)C(CCC=O)=C}
+SPC1573 = IGNORE ;    {CC(O)(C)CC(=O)C(CCO)=C}
+SPC1574 = IGNORE ;    {CC(O)(C)CC(=O)C=O}
+SPC1575 = IGNORE ;    {CC(O)(C)CC(=O)CO}
+SPC1576 = IGNORE ;    {CC(O)(C)CC(=O)COO}
+SPC1577 = IGNORE ;    {CC(O)(C)CC(=O)CO[O]}
+SPC1578 = IGNORE ;    {CC(O)(C)CC(=O)C[O]}
+SPC1579 = IGNORE ;    {CC(O)(C)CC(=O)OO}
+SPC1580 = IGNORE ;    {CC(O)(C)CC(=O)O[O]}
+SPC1581 = IGNORE ;    {CC(O)(C)CC=O}
+SPC1582 = IGNORE ;    {CC(O)(C)CCC(=O)O}
+SPC1583 = IGNORE ;    {CC(O)(C)CCC(=O)OO}
+SPC1584 = IGNORE ;    {CC(O)(C)CCC(=O)OON(=O)=O}
+SPC1585 = IGNORE ;    {CC(O)(C)CCC(=O)O[O]}
+SPC1586 = IGNORE ;    {CC(O)(C)CCC=O}
+SPC1587 = IGNORE ;    {CC(O)(C)CCCO}
+SPC1588 = IGNORE ;    {CC(O)(C)CCCON(=O)=O}
+SPC1589 = IGNORE ;    {CC(O)(C)CCCOO}
+SPC1590 = IGNORE ;    {CC(O)(C)CCCO[O]}
+SPC1591 = IGNORE ;    {CC(O)(C)CCC[O]}
+SPC1592 = IGNORE ;    {CC(O)(C)CCO}
+SPC1593 = IGNORE ;    {CC(O)(C)CCON(=O)=O}
+SPC1594 = IGNORE ;    {CC(O)(C)CCOO}
+SPC1595 = IGNORE ;    {CC(O)(C)CCO[O]}
+SPC1596 = IGNORE ;    {CC(O)(C)CC[O]}
+SPC1597 = IGNORE ;    {CC(O)(C)CO}
+SPC1598 = IGNORE ;    {CC(O)(C)CON(=O)=O}
+SPC1599 = IGNORE ;    {CC(O)(C)COO}
+SPC1600 = IGNORE ;    {CC(O)(C)CO[O]}
+SPC1601 = IGNORE ;    {CC(O)(C)C[O]}
+SPC1602 = IGNORE ;    {CC(O)(C)OC(C)C}
+SPC1603 = IGNORE ;    {CC(O)(C)OC=O}
+SPC1604 = IGNORE ;    {CC(O)(C=O)C(=O)O[O]}
+SPC1605 = IGNORE ;    {CC(O)(C=O)C(O)C=O}
+SPC1606 = IGNORE ;    {CC(O)(C=O)C=O}
+SPC1607 = IGNORE ;    {CC(O)(C=O)CO[O]}
+SPC1608 = IGNORE ;    {CC(O)(C=O)C[O]}
+SPC1609 = IGNORE ;    {CC(O)(CL)CCL}
+SPC1610 = IGNORE ;    {CC(O)(CL)CL}
+SPC1611 = IGNORE ;    {CC(O)(CO)C(=O)CCO}
+SPC1612 = IGNORE ;    {CC(O)(CO)C(C=O)CCO}
+SPC1613 = IGNORE ;    {CC(O)(CO)C(CC=O)CC=O}
+SPC1614 = IGNORE ;    {CC(O)(CO)C(CO)C=O}
+SPC1615 = IGNORE ;    {CC(O)(CO)C(CO)CC=O}
+SPC1616 = IGNORE ;    {CC(O)(CO)C(O)C=O}
+SPC1617 = IGNORE ;    {CC(O)(CO)C(O)CON(=O)=O}
+SPC1618 = IGNORE ;    {CC(O)(CO)C(ON(=O)=O)CO}
+SPC1619 = IGNORE ;    {CC(O)(CO)C(OO)C=O}
+SPC1620 = IGNORE ;    {CC(O)(CO)C(O[O])C=O}
+SPC1621 = IGNORE ;    {CC(O)(CO)C([O])C=O}
+SPC1622 = IGNORE ;    {CC(O)(CO)C=C}
+SPC1623 = IGNORE ;    {CC(O)(CO)C=O}
+SPC1624 = IGNORE ;    {CC(O)(CO)CCO}
+SPC1625 = IGNORE ;    {CC(O)(CON(=O)=O)C(=O)C=O}
+SPC1626 = IGNORE ;    {CC(O)(CON(=O)=O)C(=O)O[O]}
+SPC1627 = IGNORE ;    {CC(O)(CON(=O)=O)C(O)C=O}
+SPC1628 = IGNORE ;    {CC(O)(CON(=O)=O)C(ON(=O)=O)C(=O)OO}
+SPC1629 = IGNORE ;    {CC(O)(CON(=O)=O)C(ON(=O)=O)C(=O)O[O]}
+SPC1630 = IGNORE ;    {CC(O)(CON(=O)=O)C(ON(=O)=O)C=O}
+SPC1631 = IGNORE ;    {CC(O)(CON(=O)=O)C=O}
+SPC1632 = IGNORE ;    {CC(O)(COO)C=O}
+SPC1633 = IGNORE ;    {CC(O)C}
+SPC1634 = IGNORE ;    {CC(O)C(=O)C}
+SPC1635 = IGNORE ;    {CC(O)C(=O)C(C)CO}
+SPC1636 = IGNORE ;    {CC(O)C(=O)C=O}
+SPC1637 = IGNORE ;    {CC(O)C(=O)CC}
+SPC1638 = IGNORE ;    {CC(O)C(=O)CC(=O)C}
+SPC1639 = IGNORE ;    {CC(O)C(=O)CC(=O)CC}
+SPC1640 = IGNORE ;    {CC(O)C(=O)CCO}
+SPC1641 = IGNORE ;    {CC(O)C(=O)CON(=O)=O}
+SPC1642 = IGNORE ;    {CC(O)C(=O)C[O]}
+SPC1643 = IGNORE ;    {CC(O)C(=O)OC}
+SPC1644 = IGNORE ;    {CC(O)C(=O)OC(O[O])CCC}
+SPC1645 = IGNORE ;    {CC(O)C(=O)OC([O])CCC}
+SPC1646 = IGNORE ;    {CC(O)C(=O)OO}
+SPC1647 = IGNORE ;    {CC(O)C(=O)O[O]}
+SPC1648 = IGNORE ;    {CC(O)C(C)(C)C}
+SPC1649 = IGNORE ;    {CC(O)C(C)C}
+SPC1650 = IGNORE ;    {CC(O)C(C)C(=O)C}
+SPC1651 = IGNORE ;    {CC(O)C(C)C(=O)C=O}
+SPC1652 = IGNORE ;    {CC(O)C(C)C(=O)CO}
+SPC1653 = IGNORE ;    {CC(O)C(C)C(=O)COO}
+SPC1654 = IGNORE ;    {CC(O)C(C)C(=O)CO[O]}
+SPC1655 = IGNORE ;    {CC(O)C(C)C(=O)C[O]}
+SPC1656 = IGNORE ;    {CC(O)C(C)C(=O)O}
+SPC1657 = IGNORE ;    {CC(O)C(C)C(=O)OO}
+SPC1658 = IGNORE ;    {CC(O)C(C)C(=O)O[O]}
+SPC1659 = IGNORE ;    {CC(O)C(C)C=O}
+SPC1660 = IGNORE ;    {CC(O)C(C)CC}
+SPC1661 = IGNORE ;    {CC(O)C(C)CC(=O)C}
+SPC1662 = IGNORE ;    {CC(O)C(C)CC(=O)O}
+SPC1663 = IGNORE ;    {CC(O)C(C)CC(=O)OO}
+SPC1664 = IGNORE ;    {CC(O)C(C)CC(=O)OON(=O)=O}
+SPC1665 = IGNORE ;    {CC(O)C(C)CC(=O)O[O]}
+SPC1666 = IGNORE ;    {CC(O)C(C)CC=O}
+SPC1667 = IGNORE ;    {CC(O)C(C)CCO}
+SPC1668 = IGNORE ;    {CC(O)C(C)CCON(=O)=O}
+SPC1669 = IGNORE ;    {CC(O)C(C)CCOO}
+SPC1670 = IGNORE ;    {CC(O)C(C)CCO[O]}
+SPC1671 = IGNORE ;    {CC(O)C(C)CC[O]}
+SPC1672 = IGNORE ;    {CC(O)C(C)CO}
+SPC1673 = IGNORE ;    {CC(O)C(C)CON(=O)=O}
+SPC1674 = IGNORE ;    {CC(O)C(C)COO}
+SPC1675 = IGNORE ;    {CC(O)C(C)CO[O]}
+SPC1676 = IGNORE ;    {CC(O)C(C)C[O]}
+SPC1677 = IGNORE ;    {CC(O)C(C)OC(=O)C}
+SPC1678 = IGNORE ;    {CC(O)C(O)(C)C}
+SPC1679 = IGNORE ;    {CC(O)C(O)(C)CC(=O)C}
+SPC1680 = IGNORE ;    {CC(O)C(O)(C)CC=O}
+SPC1681 = IGNORE ;    {CC(O)C(O)(C)CCO}
+SPC1682 = IGNORE ;    {CC(O)C(O)C}
+SPC1683 = IGNORE ;    {CC(O)C(O)C=O}
+SPC1684 = IGNORE ;    {CC(O)C(O)CC(=O)C}
+SPC1685 = IGNORE ;    {CC(O)C(O)CC(=O)CC}
+SPC1686 = IGNORE ;    {CC(O)C(O)CCO}
+SPC1687 = IGNORE ;    {CC(O)C(O)OC}
+SPC1688 = IGNORE ;    {CC(O)C(O)OCCCC}
+SPC1689 = IGNORE ;    {CC(O)C(ON(=O)=O)(C)C}
+SPC1690 = IGNORE ;    {CC(O)C(ON(=O)=O)(C)CC(=O)C}
+SPC1691 = IGNORE ;    {CC(O)C(ON(=O)=O)(C)CC=O}
+SPC1692 = IGNORE ;    {CC(O)C(ON(=O)=O)C}
+SPC1693 = IGNORE ;    {CC(O)C(ON(=O)=O)C=O}
+SPC1694 = IGNORE ;    {CC(O)C(ON(=O)=O)CC}
+SPC1695 = IGNORE ;    {CC(O)C(ON(=O)=O)CC(=O)C}
+SPC1696 = IGNORE ;    {CC(O)C(ON(=O)=O)OC}
+SPC1697 = IGNORE ;    {CC(O)C(ON(=O)=O)OCCCC}
+SPC1698 = IGNORE ;    {CC(O)C(OO)(C)C}
+SPC1699 = IGNORE ;    {CC(O)C(OO)(C)CC(=O)C}
+SPC1700 = IGNORE ;    {CC(O)C(OO)(C)CC=O}
+SPC1701 = IGNORE ;    {CC(O)C(OO)C}
+SPC1702 = IGNORE ;    {CC(O)C(OO)C=O}
+SPC1703 = IGNORE ;    {CC(O)C(OO)CC}
+SPC1704 = IGNORE ;    {CC(O)C(OO)CC(=O)C}
+SPC1705 = IGNORE ;    {CC(O)C(OO)OC}
+SPC1706 = IGNORE ;    {CC(O)C(OO)OCCCC}
+SPC1707 = IGNORE ;    {CC(O)C(O[O])(C)C}
+SPC1708 = IGNORE ;    {CC(O)C(O[O])(C)CC(=O)C}
+SPC1709 = IGNORE ;    {CC(O)C(O[O])(C)CC=O}
+SPC1710 = IGNORE ;    {CC(O)C(O[O])C}
+SPC1711 = IGNORE ;    {CC(O)C(O[O])C=O}
+SPC1712 = IGNORE ;    {CC(O)C(O[O])CC}
+SPC1713 = IGNORE ;    {CC(O)C(O[O])CC(=O)C}
+SPC1714 = IGNORE ;    {CC(O)C(O[O])OC}
+SPC1715 = IGNORE ;    {CC(O)C([O])(C)C}
+SPC1716 = IGNORE ;    {CC(O)C([O])(C)CC(=O)C}
+SPC1717 = IGNORE ;    {CC(O)C([O])(C)CC=O}
+SPC1718 = IGNORE ;    {CC(O)C([O])C}
+SPC1719 = IGNORE ;    {CC(O)C([O])C=O}
+SPC1720 = IGNORE ;    {CC(O)C([O])CC}
+SPC1721 = IGNORE ;    {CC(O)C([O])CC(=O)C}
+SPC1722 = IGNORE ;    {CC(O)C([O])OC}
+SPC1723 = IGNORE ;    {CC(O)C=O}
+SPC1724 = IGNORE ;    {CC(O)CC(=O)C}
+SPC1725 = IGNORE ;    {CC(O)CC(=O)C(=O)C}
+SPC1726 = IGNORE ;    {CC(O)CC(=O)C(O)C}
+SPC1727 = IGNORE ;    {CC(O)CC(=O)C(ON(=O)=O)C}
+SPC1728 = IGNORE ;    {CC(O)CC(=O)C(OO)C}
+SPC1729 = IGNORE ;    {CC(O)CC(=O)C(O[O])C}
+SPC1730 = IGNORE ;    {CC(O)CC(=O)C([O])C}
+SPC1731 = IGNORE ;    {CC(O)CC(=O)C=O}
+SPC1732 = IGNORE ;    {CC(O)CC(=O)CC}
+SPC1733 = IGNORE ;    {CC(O)CC(=O)CO}
+SPC1734 = IGNORE ;    {CC(O)CC(=O)CON(=O)=O}
+SPC1735 = IGNORE ;    {CC(O)CC(=O)COO}
+SPC1736 = IGNORE ;    {CC(O)CC(=O)CO[O]}
+SPC1737 = IGNORE ;    {CC(O)CC(=O)C[O]}
+SPC1738 = IGNORE ;    {CC(O)CC(=O)O}
+SPC1739 = IGNORE ;    {CC(O)CC(=O)OO}
+SPC1740 = IGNORE ;    {CC(O)CC(=O)OON(=O)=O}
+SPC1741 = IGNORE ;    {CC(O)CC(=O)O[O]}
+SPC1742 = IGNORE ;    {CC(O)CC(C)C}
+SPC1743 = IGNORE ;    {CC(O)CC(C)C(=O)C}
+SPC1744 = IGNORE ;    {CC(O)CC(C)C(=O)O}
+SPC1745 = IGNORE ;    {CC(O)CC(C)C(=O)OO}
+SPC1746 = IGNORE ;    {CC(O)CC(C)C(=O)OON(=O)=O}
+SPC1747 = IGNORE ;    {CC(O)CC(C)C(=O)O[O]}
+SPC1748 = IGNORE ;    {CC(O)CC(C)C(O)C}
+SPC1749 = IGNORE ;    {CC(O)CC(C)C(ON(=O)=O)C}
+SPC1750 = IGNORE ;    {CC(O)CC(C)C(OO)C}
+SPC1751 = IGNORE ;    {CC(O)CC(C)C(O[O])C}
+SPC1752 = IGNORE ;    {CC(O)CC(C)C([O])C}
+SPC1753 = IGNORE ;    {CC(O)CC(C)C=O}
+SPC1754 = IGNORE ;    {CC(O)CC(C)CC}
+SPC1755 = IGNORE ;    {CC(O)CC(C)CO}
+SPC1756 = IGNORE ;    {CC(O)CC(C)CON(=O)=O}
+SPC1757 = IGNORE ;    {CC(O)CC(C)COO}
+SPC1758 = IGNORE ;    {CC(O)CC(C)CO[O]}
+SPC1759 = IGNORE ;    {CC(O)CC(C)C[O]}
+SPC1760 = IGNORE ;    {CC(O)CC(O)C}
+SPC1761 = IGNORE ;    {CC(O)CC(O)C(=O)OO}
+SPC1762 = IGNORE ;    {CC(O)CC(O)C(=O)OON(=O)=O}
+SPC1763 = IGNORE ;    {CC(O)CC(O)C(=O)O[O]}
+SPC1764 = IGNORE ;    {CC(O)CC(O)C=O}
+SPC1765 = IGNORE ;    {CC(O)CC(O)CO}
+SPC1766 = IGNORE ;    {CC(O)CC(O)CON(=O)=O}
+SPC1767 = IGNORE ;    {CC(O)CC(O)COO}
+SPC1768 = IGNORE ;    {CC(O)CC(O)CO[O]}
+SPC1769 = IGNORE ;    {CC(O)CC(O)C[O]}
+SPC1770 = IGNORE ;    {CC(O)CC(ON(=O)=O)C}
+SPC1771 = IGNORE ;    {CC(O)CC(OO)C}
+SPC1772 = IGNORE ;    {CC(O)CC(O[O])C}
+SPC1773 = IGNORE ;    {CC(O)CC([O])C}
+SPC1774 = IGNORE ;    {CC(O)CC=O}
+SPC1775 = IGNORE ;    {CC(O)CCC(=O)C}
+SPC1776 = IGNORE ;    {CC(O)CCC(=O)CC}
+SPC1777 = IGNORE ;    {CC(O)CCC(=O)O}
+SPC1778 = IGNORE ;    {CC(O)CCC(=O)OO}
+SPC1779 = IGNORE ;    {CC(O)CCC(=O)OON(=O)=O}
+SPC1780 = IGNORE ;    {CC(O)CCC(=O)O[O]}
+SPC1781 = IGNORE ;    {CC(O)CCC(C)C}
+SPC1782 = IGNORE ;    {CC(O)CCC(O)(C)C}
+SPC1783 = IGNORE ;    {CC(O)CCC(O)C}
+SPC1784 = IGNORE ;    {CC(O)CCC(ON(=O)=O)(C)C}
+SPC1785 = IGNORE ;    {CC(O)CCC(ON(=O)=O)C}
+SPC1786 = IGNORE ;    {CC(O)CCC(OO)(C)C}
+SPC1787 = IGNORE ;    {CC(O)CCC(OO)C}
+SPC1788 = IGNORE ;    {CC(O)CCC(O[O])(C)C}
+SPC1789 = IGNORE ;    {CC(O)CCC(O[O])C}
+SPC1790 = IGNORE ;    {CC(O)CCC([O])(C)C}
+SPC1791 = IGNORE ;    {CC(O)CCC([O])C}
+SPC1792 = IGNORE ;    {CC(O)CCC=O}
+SPC1793 = IGNORE ;    {CC(O)CCCO}
+SPC1794 = IGNORE ;    {CC(O)CCCON(=O)=O}
+SPC1795 = IGNORE ;    {CC(O)CCCOO}
+SPC1796 = IGNORE ;    {CC(O)CCCO[O]}
+SPC1797 = IGNORE ;    {CC(O)CCC[O]}
+SPC1798 = IGNORE ;    {CC(O)CCO}
+SPC1799 = IGNORE ;    {CC(O)CCOC(=O)C}
+SPC1800 = IGNORE ;    {CC(O)CCON(=O)=O}
+SPC1801 = IGNORE ;    {CC(O)CCOO}
+SPC1802 = IGNORE ;    {CC(O)CCO[O]}
+SPC1803 = IGNORE ;    {CC(O)CC[O]}
+SPC1804 = IGNORE ;    {CC(O)CL}
+SPC1805 = IGNORE ;    {CC(O)CO}
+SPC1806 = IGNORE ;    {CC(O)COC}
+SPC1807 = IGNORE ;    {CC(O)COC(=O)C}
+SPC1808 = IGNORE ;    {CC(O)COC(=O)CCC}
+SPC1809 = IGNORE ;    {CC(O)COC(O[O])CCC}
+SPC1810 = IGNORE ;    {CC(O)COC([O])CCC}
+SPC1811 = IGNORE ;    {CC(O)COC=O}
+SPC1812 = IGNORE ;    {CC(O)COCO}
+SPC1813 = IGNORE ;    {CC(O)COCON(=O)=O}
+SPC1814 = IGNORE ;    {CC(O)COCOO}
+SPC1815 = IGNORE ;    {CC(O)COCO[O]}
+SPC1816 = IGNORE ;    {CC(O)COC[O]}
+SPC1817 = IGNORE ;    {CC(O)CON(=O)=O}
+SPC1818 = IGNORE ;    {CC(O)COO}
+SPC1819 = IGNORE ;    {CC(O)CO[O]}
+SPC1820 = IGNORE ;    {CC(O)C[O]}
+SPC1821 = IGNORE ;    {CC(O)OC(=O)C}
+SPC1822 = IGNORE ;    {CC(O)OC(=O)C(=O)C}
+SPC1823 = IGNORE ;    {CC(O)OC(C)(C)C}
+SPC1824 = IGNORE ;    {CC(O)OC(C)C}
+SPC1825 = IGNORE ;    {CC(O)OC=O}
+SPC1826 = IGNORE ;    {CC(O)OCC}
+SPC1827 = IGNORE ;    {CC(O)OCCO}
+SPC1828 = IGNORE ;    {CC(O)c(c1)cc(C)cc1CC}
+SPC1829 = IGNORE ;    {CC(ON(=O)=O)(C(=O)O)C(=O)CON(=O)=O}
+SPC1830 = IGNORE ;    {CC(ON(=O)=O)(C(=O)O)C(O)C=O}
+SPC1831 = IGNORE ;    {CC(ON(=O)=O)(C(=O)O)C(O)CON(=O)=O}
+SPC1832 = IGNORE ;    {CC(ON(=O)=O)(C(=O)O)C=O}
+SPC1833 = IGNORE ;    {CC(ON(=O)=O)(C(=O)OO)C(=O)CC(=O)C=O}
+SPC1834 = IGNORE ;    {CC(ON(=O)=O)(C(=O)OO)C(O)C=O}
+SPC1835 = IGNORE ;    {CC(ON(=O)=O)(C(=O)OO)C=O}
+SPC1836 = IGNORE ;    {CC(ON(=O)=O)(C(=O)OON(=O)=O)C(=O)CC(=O)C=O}
+SPC1837 = IGNORE ;    {CC(ON(=O)=O)(C(=O)OON(=O)=O)C(O)C=O}
+SPC1838 = IGNORE ;    {CC(ON(=O)=O)(C(=O)OON(=O)=O)C=O}
+SPC1839 = IGNORE ;    {CC(ON(=O)=O)(C)C}
+SPC1840 = IGNORE ;    {CC(ON(=O)=O)(C)C(=O)O}
+SPC1841 = IGNORE ;    {CC(ON(=O)=O)(C)C(=O)OO}
+SPC1842 = IGNORE ;    {CC(ON(=O)=O)(C)C(=O)O[O]}
+SPC1843 = IGNORE ;    {CC(ON(=O)=O)(C)C(C)C}
+SPC1844 = IGNORE ;    {CC(ON(=O)=O)(C)C(C=O)C(=O)CCC=O}
+SPC1845 = IGNORE ;    {CC(ON(=O)=O)(C)C(CC=O)C(=O)CC=O}
+SPC1846 = IGNORE ;    {CC(ON(=O)=O)(C)C(CC=O)CC=O}
+SPC1847 = IGNORE ;    {CC(ON(=O)=O)(C)C(CO)CC(=O)C(=O)C}
+SPC1848 = IGNORE ;    {CC(ON(=O)=O)(C)C(CO)CC(=O)C(=O)O}
+SPC1849 = IGNORE ;    {CC(ON(=O)=O)(C)C(O)(C)C}
+SPC1850 = IGNORE ;    {CC(ON(=O)=O)(C)C(OO)(C)C}
+SPC1851 = IGNORE ;    {CC(ON(=O)=O)(C)C(O[O])(C)C}
+SPC1852 = IGNORE ;    {CC(ON(=O)=O)(C)C([O])(C)C}
+SPC1853 = IGNORE ;    {CC(ON(=O)=O)(C)C1CC=C(CO)CC1}
+SPC1854 = IGNORE ;    {CC(ON(=O)=O)(C)C=O}
+SPC1855 = IGNORE ;    {CC(ON(=O)=O)(C)CC=O}
+SPC1856 = IGNORE ;    {CC(ON(=O)=O)(C)CCO}
+SPC1857 = IGNORE ;    {CC(ON(=O)=O)(C)CO}
+SPC1858 = IGNORE ;    {CC(ON(=O)=O)(C)COO}
+SPC1859 = IGNORE ;    {CC(ON(=O)=O)(C)CO[O]}
+SPC1860 = IGNORE ;    {CC(ON(=O)=O)(C)C[O]}
+SPC1861 = IGNORE ;    {CC(ON(=O)=O)(C)OC(C)C}
+SPC1862 = IGNORE ;    {CC(ON(=O)=O)(C)OC=O}
+SPC1863 = IGNORE ;    {CC(ON(=O)=O)(C=O)C(=O)O[O]}
+SPC1864 = IGNORE ;    {CC(ON(=O)=O)(C=O)C(O)C(=O)O[O]}
+SPC1865 = IGNORE ;    {CC(ON(=O)=O)(C=O)C(O)C=O}
+SPC1866 = IGNORE ;    {CC(ON(=O)=O)(C=O)C=O}
+SPC1867 = IGNORE ;    {CC(ON(=O)=O)(CO)C(=O)C=O}
+SPC1868 = IGNORE ;    {CC(ON(=O)=O)(CO)C(=O)CO}
+SPC1869 = IGNORE ;    {CC(ON(=O)=O)(CO)C(=O)CON(=O)=O}
+SPC1870 = IGNORE ;    {CC(ON(=O)=O)(CO)C(=O)O}
+SPC1871 = IGNORE ;    {CC(ON(=O)=O)(CO)C(=O)OO}
+SPC1872 = IGNORE ;    {CC(ON(=O)=O)(CO)C(=O)OON(=O)=O}
+SPC1873 = IGNORE ;    {CC(ON(=O)=O)(CO)C(=O)O[O]}
+SPC1874 = IGNORE ;    {CC(ON(=O)=O)(CO)C(O)C(=O)O}
+SPC1875 = IGNORE ;    {CC(ON(=O)=O)(CO)C(O)C(=O)OO}
+SPC1876 = IGNORE ;    {CC(ON(=O)=O)(CO)C(O)C(=O)OON(=O)=O}
+SPC1877 = IGNORE ;    {CC(ON(=O)=O)(CO)C(O)C(=O)O[O]}
+SPC1878 = IGNORE ;    {CC(ON(=O)=O)(CO)C(O)C=O}
+SPC1879 = IGNORE ;    {CC(ON(=O)=O)(CO)C(O)CO}
+SPC1880 = IGNORE ;    {CC(ON(=O)=O)(CO)C(O)CON(=O)=O}
+SPC1881 = IGNORE ;    {CC(ON(=O)=O)(CO)C(O)COO}
+SPC1882 = IGNORE ;    {CC(ON(=O)=O)(CO)C(O)CO[O]}
+SPC1883 = IGNORE ;    {CC(ON(=O)=O)(CO)C(O)C[O]}
+SPC1884 = IGNORE ;    {CC(ON(=O)=O)(CO)C(ON(=O)=O)C(=O)O}
+SPC1885 = IGNORE ;    {CC(ON(=O)=O)(CO)C(ON(=O)=O)C(=O)OO}
+SPC1886 = IGNORE ;    {CC(ON(=O)=O)(CO)C(ON(=O)=O)C(=O)OON(=O)=O}
+SPC1887 = IGNORE ;    {CC(ON(=O)=O)(CO)C(ON(=O)=O)C(=O)O[O]}
+SPC1888 = IGNORE ;    {CC(ON(=O)=O)(CO)C(ON(=O)=O)C=O}
+SPC1889 = IGNORE ;    {CC(ON(=O)=O)(CO)C(ON(=O)=O)CO}
+SPC1890 = IGNORE ;    {CC(ON(=O)=O)(CO)C(OO)C(=O)O}
+SPC1891 = IGNORE ;    {CC(ON(=O)=O)(CO)C(OO)C(=O)OO}
+SPC1892 = IGNORE ;    {CC(ON(=O)=O)(CO)C(OO)C(=O)OON(=O)=O}
+SPC1893 = IGNORE ;    {CC(ON(=O)=O)(CO)C(OO)C(=O)O[O]}
+SPC1894 = IGNORE ;    {CC(ON(=O)=O)(CO)C(OO)C=O}
+SPC1895 = IGNORE ;    {CC(ON(=O)=O)(CO)C(OO)CO}
+SPC1896 = IGNORE ;    {CC(ON(=O)=O)(CO)C(O[O])CO}
+SPC1897 = IGNORE ;    {CC(ON(=O)=O)(CO)C([O])CO}
+SPC1898 = IGNORE ;    {CC(ON(=O)=O)(CO)C=C}
+SPC1899 = IGNORE ;    {CC(ON(=O)=O)(CO)C=O}
+SPC1900 = IGNORE ;    {CC(ON(=O)=O)C}
+SPC1901 = IGNORE ;    {CC(ON(=O)=O)C(=O)C(OO)C}
+SPC1902 = IGNORE ;    {CC(ON(=O)=O)C(=O)C(O[O])C}
+SPC1903 = IGNORE ;    {CC(ON(=O)=O)C(=O)C([O])C}
+SPC1904 = IGNORE ;    {CC(ON(=O)=O)C(=O)CC(OO)C}
+SPC1905 = IGNORE ;    {CC(ON(=O)=O)C(=O)CC(O[O])C}
+SPC1906 = IGNORE ;    {CC(ON(=O)=O)C(=O)CC([O])C}
+SPC1907 = IGNORE ;    {CC(ON(=O)=O)C(=O)O}
+SPC1908 = IGNORE ;    {CC(ON(=O)=O)C(=O)OO}
+SPC1909 = IGNORE ;    {CC(ON(=O)=O)C(=O)O[O]}
+SPC1910 = IGNORE ;    {CC(ON(=O)=O)C(C)(C)C}
+SPC1911 = IGNORE ;    {CC(ON(=O)=O)C(C)C}
+SPC1912 = IGNORE ;    {CC(ON(=O)=O)C(C)C(=O)C}
+SPC1913 = IGNORE ;    {CC(ON(=O)=O)C(C)CC}
+SPC1914 = IGNORE ;    {CC(ON(=O)=O)C(C)CCO}
+SPC1915 = IGNORE ;    {CC(ON(=O)=O)C(C)CO}
+SPC1916 = IGNORE ;    {CC(ON(=O)=O)C(C)OC(=O)C}
+SPC1917 = IGNORE ;    {CC(ON(=O)=O)C(O)(C)C}
+SPC1918 = IGNORE ;    {CC(ON(=O)=O)C(O)(C)CCO}
+SPC1919 = IGNORE ;    {CC(ON(=O)=O)C(O)C=O}
+SPC1920 = IGNORE ;    {CC(ON(=O)=O)C(O)CCO}
+SPC1921 = IGNORE ;    {CC(ON(=O)=O)C(OO)(C)C}
+SPC1922 = IGNORE ;    {CC(ON(=O)=O)C(OO)C}
+SPC1923 = IGNORE ;    {CC(ON(=O)=O)C(OO)C=O}
+SPC1924 = IGNORE ;    {CC(ON(=O)=O)C(OO)CC}
+SPC1925 = IGNORE ;    {CC(ON(=O)=O)C(OO)CCC}
+SPC1926 = IGNORE ;    {CC(ON(=O)=O)C(O[O])(C)C}
+SPC1927 = IGNORE ;    {CC(ON(=O)=O)C(O[O])C}
+SPC1928 = IGNORE ;    {CC(ON(=O)=O)C(O[O])C=O}
+SPC1929 = IGNORE ;    {CC(ON(=O)=O)C(O[O])CC}
+SPC1930 = IGNORE ;    {CC(ON(=O)=O)C(O[O])CCC}
+SPC1931 = IGNORE ;    {CC(ON(=O)=O)C([O])(C)C}
+SPC1932 = IGNORE ;    {CC(ON(=O)=O)C([O])C}
+SPC1933 = IGNORE ;    {CC(ON(=O)=O)C([O])C=O}
+SPC1934 = IGNORE ;    {CC(ON(=O)=O)C([O])CC}
+SPC1935 = IGNORE ;    {CC(ON(=O)=O)C([O])CCC}
+SPC1936 = IGNORE ;    {CC(ON(=O)=O)C=O}
+SPC1937 = IGNORE ;    {CC(ON(=O)=O)CC(C)C}
+SPC1938 = IGNORE ;    {CC(ON(=O)=O)CC(C)CC}
+SPC1939 = IGNORE ;    {CC(ON(=O)=O)CC(C)CO}
+SPC1940 = IGNORE ;    {CC(ON(=O)=O)CC=O}
+SPC1941 = IGNORE ;    {CC(ON(=O)=O)CCC(C)C}
+SPC1942 = IGNORE ;    {CC(ON(=O)=O)CCC(O)(C)C}
+SPC1943 = IGNORE ;    {CC(ON(=O)=O)CCCO}
+SPC1944 = IGNORE ;    {CC(ON(=O)=O)CCO}
+SPC1945 = IGNORE ;    {CC(ON(=O)=O)CCOC(=O)C}
+SPC1946 = IGNORE ;    {CC(ON(=O)=O)CO}
+SPC1947 = IGNORE ;    {CC(ON(=O)=O)COC(=O)C}
+SPC1948 = IGNORE ;    {CC(ON(=O)=O)COO}
+SPC1949 = IGNORE ;    {CC(ON(=O)=O)CO[O]}
+SPC1950 = IGNORE ;    {CC(ON(=O)=O)C[O]}
+SPC1951 = IGNORE ;    {CC(ON(=O)=O)OC(=O)C}
+SPC1952 = IGNORE ;    {CC(ON(=O)=O)OC(C)(C)C}
+SPC1953 = IGNORE ;    {CC(ON(=O)=O)OC(C)C}
+SPC1954 = IGNORE ;    {CC(ON(=O)=O)OC=O}
+SPC1955 = IGNORE ;    {CC(ON(=O)=O)OCC}
+SPC1956 = IGNORE ;    {CC(ON(=O)=O)OCCO}
+SPC1957 = IGNORE ;    {CC(ON(=O)=O)c(c1)cc(C)cc1CC}
+SPC1958 = IGNORE ;    {CC(OO)(C(=O)O)C(O)CON(=O)=O}
+SPC1959 = IGNORE ;    {CC(OO)(C)C}
+SPC1960 = IGNORE ;    {CC(OO)(C)C(=O)CC=O}
+SPC1961 = IGNORE ;    {CC(OO)(C)C(=O)CON(=O)=O}
+SPC1962 = IGNORE ;    {CC(OO)(C)C(C(=O)O)CC=O}
+SPC1963 = IGNORE ;    {CC(OO)(C)C(C)C}
+SPC1964 = IGNORE ;    {CC(OO)(C)C(C=O)C(=O)CCC=O}
+SPC1965 = IGNORE ;    {CC(OO)(C)C(CC=O)C(=O)CC=O}
+SPC1966 = IGNORE ;    {CC(OO)(C)C(CC=O)CC=O}
+SPC1967 = IGNORE ;    {CC(OO)(C)C(CO)CC(=O)C(=O)C}
+SPC1968 = IGNORE ;    {CC(OO)(C)C(CO)CC(=O)C(=O)CO}
+SPC1969 = IGNORE ;    {CC(OO)(C)C(CO)CC(=O)C(=O)O}
+SPC1970 = IGNORE ;    {CC(OO)(C)C(O)(C)C}
+SPC1971 = IGNORE ;    {CC(OO)(C)C1CC=C(CO)CC1}
+SPC1972 = IGNORE ;    {CC(OO)(C)C=O}
+SPC1973 = IGNORE ;    {CC(OO)(C)CC(=O)C(=O)CCC=O}
+SPC1974 = IGNORE ;    {CC(OO)(C)CC(=O)C(=O)CCO}
+SPC1975 = IGNORE ;    {CC(OO)(C)CC(=O)C(CCC=O)=C}
+SPC1976 = IGNORE ;    {CC(OO)(C)CC(=O)C(CCO)=C}
+SPC1977 = IGNORE ;    {CC(OO)(C)CC=O}
+SPC1978 = IGNORE ;    {CC(OO)(C)CCO}
+SPC1979 = IGNORE ;    {CC(OO)(C)CO}
+SPC1980 = IGNORE ;    {CC(OO)(C)CON(=O)=O}
+SPC1981 = IGNORE ;    {CC(OO)(C)OC(C)C}
+SPC1982 = IGNORE ;    {CC(OO)(C)OC=O}
+SPC1983 = IGNORE ;    {CC(OO)(C=O)C(O)C=O}
+SPC1984 = IGNORE ;    {CC(OO)(C=O)C=O}
+SPC1985 = IGNORE ;    {CC(OO)(CO)C(=O)CCO}
+SPC1986 = IGNORE ;    {CC(OO)(CO)C(=O)CO}
+SPC1987 = IGNORE ;    {CC(OO)(CO)C(C=O)CCC(=O)C}
+SPC1988 = IGNORE ;    {CC(OO)(CO)C(C=O)CCO}
+SPC1989 = IGNORE ;    {CC(OO)(CO)C(CC=O)CC=O}
+SPC1990 = IGNORE ;    {CC(OO)(CO)C(CO)C=O}
+SPC1991 = IGNORE ;    {CC(OO)(CO)C(CO)CC=O}
+SPC1992 = IGNORE ;    {CC(OO)(CO)C(O)C=O}
+SPC1993 = IGNORE ;    {CC(OO)(CO)C(O)CON(=O)=O}
+SPC1994 = IGNORE ;    {CC(OO)(CO)C(ON(=O)=O)CO}
+SPC1995 = IGNORE ;    {CC(OO)(CO)C=C}
+SPC1996 = IGNORE ;    {CC(OO)(CO)C=O}
+SPC1997 = IGNORE ;    {CC(OO)(CON(=O)=O)C(O)C=O}
+SPC1998 = IGNORE ;    {CC(OO)C}
+SPC1999 = IGNORE ;    {CC(OO)C(=O)C(=O)OC(=O)C}
+SPC2000 = IGNORE ;    {CC(OO)C(=O)C(C)CO}
+SPC2001 = IGNORE ;    {CC(OO)C(=O)CCO}
+SPC2002 = IGNORE ;    {CC(OO)C(=O)CON(=O)=O}
+SPC2003 = IGNORE ;    {CC(OO)C(=O)OC(=O)C(=O)C}
+SPC2004 = IGNORE ;    {CC(OO)C(C)(C)C}
+SPC2005 = IGNORE ;    {CC(OO)C(C)C}
+SPC2006 = IGNORE ;    {CC(OO)C(C)C(=O)C}
+SPC2007 = IGNORE ;    {CC(OO)C(C)CC}
+SPC2008 = IGNORE ;    {CC(OO)C(C)CCO}
+SPC2009 = IGNORE ;    {CC(OO)C(C)CO}
+SPC2010 = IGNORE ;    {CC(OO)C(C)OC(=O)C}
+SPC2011 = IGNORE ;    {CC(OO)C(O)(C)C}
+SPC2012 = IGNORE ;    {CC(OO)C(O)(C)CCO}
+SPC2013 = IGNORE ;    {CC(OO)C(O)C=O}
+SPC2014 = IGNORE ;    {CC(OO)C(O)CCO}
+SPC2015 = IGNORE ;    {CC(OO)C(ON(=O)=O)(C)C}
+SPC2016 = IGNORE ;    {CC(OO)C(ON(=O)=O)C=O}
+SPC2017 = IGNORE ;    {CC(OO)C=O}
+SPC2018 = IGNORE ;    {CC(OO)CC(=O)CO}
+SPC2019 = IGNORE ;    {CC(OO)CC(=O)CON(=O)=O}
+SPC2020 = IGNORE ;    {CC(OO)CC(=O)OC(=O)C}
+SPC2021 = IGNORE ;    {CC(OO)CC(=O)OC=O}
+SPC2022 = IGNORE ;    {CC(OO)CC(=O)OCC(=O)C}
+SPC2023 = IGNORE ;    {CC(OO)CC(C)C}
+SPC2024 = IGNORE ;    {CC(OO)CC(C)CC}
+SPC2025 = IGNORE ;    {CC(OO)CC(C)CO}
+SPC2026 = IGNORE ;    {CC(OO)CC=O}
+SPC2027 = IGNORE ;    {CC(OO)CCC(C)C}
+SPC2028 = IGNORE ;    {CC(OO)CCC(O)(C)C}
+SPC2029 = IGNORE ;    {CC(OO)CCCO}
+SPC2030 = IGNORE ;    {CC(OO)CCO}
+SPC2031 = IGNORE ;    {CC(OO)CCOC(=O)C}
+SPC2032 = IGNORE ;    {CC(OO)CO}
+SPC2033 = IGNORE ;    {CC(OO)COC(=O)C}
+SPC2034 = IGNORE ;    {CC(OO)CON(=O)=O}
+SPC2035 = IGNORE ;    {CC(OO)OC(=O)C}
+SPC2036 = IGNORE ;    {CC(OO)OC(=O)C(=O)C}
+SPC2037 = IGNORE ;    {CC(OO)OC(=O)CO}
+SPC2038 = IGNORE ;    {CC(OO)OC(C)(C)C}
+SPC2039 = IGNORE ;    {CC(OO)OC(C)C}
+SPC2040 = IGNORE ;    {CC(OO)OC=O}
+SPC2041 = IGNORE ;    {CC(OO)OCC}
+SPC2042 = IGNORE ;    {CC(OO)OCCO}
+SPC2043 = IGNORE ;    {CC(OO)c(c1)cc(C)cc1CC}
+SPC2044 = IGNORE ;    {CC(O[O])(C)C}
+SPC2045 = IGNORE ;    {CC(O[O])(C)C(=O)CC=O}
+SPC2046 = IGNORE ;    {CC(O[O])(C)C(=O)CON(=O)=O}
+SPC2047 = IGNORE ;    {CC(O[O])(C)C(C(=O)O)CC=O}
+SPC2048 = IGNORE ;    {CC(O[O])(C)C(C)C}
+SPC2049 = IGNORE ;    {CC(O[O])(C)C(C=O)C(=O)CCC=O}
+SPC2050 = IGNORE ;    {CC(O[O])(C)C(CC=O)C(=O)CC=O}
+SPC2051 = IGNORE ;    {CC(O[O])(C)C(CC=O)CC=O}
+SPC2052 = IGNORE ;    {CC(O[O])(C)C(CO)CC(=O)C(=O)C}
+SPC2053 = IGNORE ;    {CC(O[O])(C)C(CO)CC(=O)C(=O)CO}
+SPC2054 = IGNORE ;    {CC(O[O])(C)C(CO)CC(=O)C(=O)O}
+SPC2055 = IGNORE ;    {CC(O[O])(C)C(O)(C)C}
+SPC2056 = IGNORE ;    {CC(O[O])(C)C1CC=C(CO)CC1}
+SPC2057 = IGNORE ;    {CC(O[O])(C)C=O}
+SPC2058 = IGNORE ;    {CC(O[O])(C)CC(=O)C(=O)CCC=O}
+SPC2059 = IGNORE ;    {CC(O[O])(C)CC(=O)C(=O)CCO}
+SPC2060 = IGNORE ;    {CC(O[O])(C)CC(=O)C(CCC=O)=C}
+SPC2061 = IGNORE ;    {CC(O[O])(C)CC(=O)C(CCO)=C}
+SPC2062 = IGNORE ;    {CC(O[O])(C)CC=O}
+SPC2063 = IGNORE ;    {CC(O[O])(C)CCO}
+SPC2064 = IGNORE ;    {CC(O[O])(C)CO}
+SPC2065 = IGNORE ;    {CC(O[O])(C)CON(=O)=O}
+SPC2066 = IGNORE ;    {CC(O[O])(C)OC(C)C}
+SPC2067 = IGNORE ;    {CC(O[O])(C)OC=O}
+SPC2068 = IGNORE ;    {CC(O[O])(C=O)C(O)C=O}
+SPC2069 = IGNORE ;    {CC(O[O])(C=O)C=O}
+SPC2070 = IGNORE ;    {CC(O[O])(CO)C(=O)CCO}
+SPC2071 = IGNORE ;    {CC(O[O])(CO)C(=O)CO}
+SPC2072 = IGNORE ;    {CC(O[O])(CO)C(C=O)CCC(=O)C}
+SPC2073 = IGNORE ;    {CC(O[O])(CO)C(C=O)CCO}
+SPC2074 = IGNORE ;    {CC(O[O])(CO)C(CC=O)CC=O}
+SPC2075 = IGNORE ;    {CC(O[O])(CO)C(CO)C=O}
+SPC2076 = IGNORE ;    {CC(O[O])(CO)C(CO)CC=O}
+SPC2077 = IGNORE ;    {CC(O[O])(CO)C(O)C=O}
+SPC2078 = IGNORE ;    {CC(O[O])(CO)C(O)CON(=O)=O}
+SPC2079 = IGNORE ;    {CC(O[O])(CO)C(ON(=O)=O)CO}
+SPC2080 = IGNORE ;    {CC(O[O])(CO)C=C}
+SPC2081 = IGNORE ;    {CC(O[O])(CO)C=O}
+SPC2082 = IGNORE ;    {CC(O[O])(CON(=O)=O)C(O)C=O}
+SPC2083 = IGNORE ;    {CC(O[O])=C}
+SPC2084 = IGNORE ;    {CC(O[O])C}
+SPC2085 = IGNORE ;    {CC(O[O])C(=O)C(C)CO}
+SPC2086 = IGNORE ;    {CC(O[O])C(=O)CCO}
+SPC2087 = IGNORE ;    {CC(O[O])C(=O)CON(=O)=O}
+SPC2088 = IGNORE ;    {CC(O[O])C(C)(C)C}
+SPC2089 = IGNORE ;    {CC(O[O])C(C)C}
+SPC2090 = IGNORE ;    {CC(O[O])C(C)C(=O)C}
+SPC2091 = IGNORE ;    {CC(O[O])C(C)CC}
+SPC2092 = IGNORE ;    {CC(O[O])C(C)CCO}
+SPC2093 = IGNORE ;    {CC(O[O])C(C)CO}
+SPC2094 = IGNORE ;    {CC(O[O])C(C)OC(=O)C}
+SPC2095 = IGNORE ;    {CC(O[O])C(O)(C)C}
+SPC2096 = IGNORE ;    {CC(O[O])C(O)(C)CCO}
+SPC2097 = IGNORE ;    {CC(O[O])C(O)C=O}
+SPC2098 = IGNORE ;    {CC(O[O])C(O)CCO}
+SPC2099 = IGNORE ;    {CC(O[O])C(ON(=O)=O)(C)C}
+SPC2100 = IGNORE ;    {CC(O[O])C(ON(=O)=O)C=O}
+SPC2101 = IGNORE ;    {CC(O[O])C=O}
+SPC2102 = IGNORE ;    {CC(O[O])CC(=O)CO}
+SPC2103 = IGNORE ;    {CC(O[O])CC(=O)CON(=O)=O}
+SPC2104 = IGNORE ;    {CC(O[O])CC(=O)OC=O}
+SPC2105 = IGNORE ;    {CC(O[O])CC(C)C}
+SPC2106 = IGNORE ;    {CC(O[O])CC(C)CC}
+SPC2107 = IGNORE ;    {CC(O[O])CC(C)CO}
+SPC2108 = IGNORE ;    {CC(O[O])CC=O}
+SPC2109 = IGNORE ;    {CC(O[O])CCC(C)C}
+SPC2110 = IGNORE ;    {CC(O[O])CCC(O)(C)C}
+SPC2111 = IGNORE ;    {CC(O[O])CCCO}
+SPC2112 = IGNORE ;    {CC(O[O])CCO}
+SPC2113 = IGNORE ;    {CC(O[O])CO}
+SPC2114 = IGNORE ;    {CC(O[O])CON(=O)=O}
+SPC2115 = IGNORE ;    {CC(O[O])OC(=O)CO}
+SPC2116 = IGNORE ;    {CC(O[O])OC(C)(C)C}
+SPC2117 = IGNORE ;    {CC(O[O])OC(C)C}
+SPC2118 = IGNORE ;    {CC(O[O])OC=O}
+SPC2119 = IGNORE ;    {CC(O[O])OCCO}
+SPC2120 = IGNORE ;    {CC(O[O])c(c1)cc(C)cc1CC}
+SPC2121 = IGNORE ;    {CC([O])(C)C}
+SPC2122 = IGNORE ;    {CC([O])(C)C(=O)CC=O}
+SPC2123 = IGNORE ;    {CC([O])(C)C(=O)CON(=O)=O}
+SPC2124 = IGNORE ;    {CC([O])(C)C(C(=O)O)CC=O}
+SPC2125 = IGNORE ;    {CC([O])(C)C(C)C}
+SPC2126 = IGNORE ;    {CC([O])(C)C(C=O)C(=O)CCC=O}
+SPC2127 = IGNORE ;    {CC([O])(C)C(CC=O)C(=O)CC=O}
+SPC2128 = IGNORE ;    {CC([O])(C)C(CC=O)CC=O}
+SPC2129 = IGNORE ;    {CC([O])(C)C(CO)CC(=O)C(=O)C}
+SPC2130 = IGNORE ;    {CC([O])(C)C(CO)CC(=O)C(=O)CO}
+SPC2131 = IGNORE ;    {CC([O])(C)C(CO)CC(=O)C(=O)O}
+SPC2132 = IGNORE ;    {CC([O])(C)C1CC=C(CO)CC1}
+SPC2133 = IGNORE ;    {CC([O])(C)C=O}
+SPC2134 = IGNORE ;    {CC([O])(C)CC(=O)C(=O)CCC=O}
+SPC2135 = IGNORE ;    {CC([O])(C)CC(=O)C(=O)CCO}
+SPC2136 = IGNORE ;    {CC([O])(C)CC(=O)C(CCC=O)=C}
+SPC2137 = IGNORE ;    {CC([O])(C)CC(=O)C(CCO)=C}
+SPC2138 = IGNORE ;    {CC([O])(C)CC=O}
+SPC2139 = IGNORE ;    {CC([O])(C)CCO}
+SPC2140 = IGNORE ;    {CC([O])(C)CO}
+SPC2141 = IGNORE ;    {CC([O])(C)CON(=O)=O}
+SPC2142 = IGNORE ;    {CC([O])(C)OC(C)C}
+SPC2143 = IGNORE ;    {CC([O])(C)OC=O}
+SPC2144 = IGNORE ;    {CC([O])(C=O)C(O)C=O}
+SPC2145 = IGNORE ;    {CC([O])(C=O)C=O}
+SPC2146 = IGNORE ;    {CC([O])(CO)C(=O)CCO}
+SPC2147 = IGNORE ;    {CC([O])(CO)C(=O)CO}
+SPC2148 = IGNORE ;    {CC([O])(CO)C(C=O)CCC(=O)C}
+SPC2149 = IGNORE ;    {CC([O])(CO)C(C=O)CCO}
+SPC2150 = IGNORE ;    {CC([O])(CO)C(CC=O)CC=O}
+SPC2151 = IGNORE ;    {CC([O])(CO)C(CO)C=O}
+SPC2152 = IGNORE ;    {CC([O])(CO)C(CO)CC=O}
+SPC2153 = IGNORE ;    {CC([O])(CO)C(O)C=O}
+SPC2154 = IGNORE ;    {CC([O])(CO)C(O)CON(=O)=O}
+SPC2155 = IGNORE ;    {CC([O])(CO)C(ON(=O)=O)CO}
+SPC2156 = IGNORE ;    {CC([O])(CO)C=C}
+SPC2157 = IGNORE ;    {CC([O])(CO)C=O}
+SPC2158 = IGNORE ;    {CC([O])(CON(=O)=O)C(O)C=O}
+SPC2159 = IGNORE ;    {CC([O])C}
+SPC2160 = IGNORE ;    {CC([O])C(=O)C(C)CO}
+SPC2161 = IGNORE ;    {CC([O])C(=O)CCO}
+SPC2162 = IGNORE ;    {CC([O])C(=O)CON(=O)=O}
+SPC2163 = IGNORE ;    {CC([O])C(C)(C)C}
+SPC2164 = IGNORE ;    {CC([O])C(C)C}
+SPC2165 = IGNORE ;    {CC([O])C(C)C(=O)C}
+SPC2166 = IGNORE ;    {CC([O])C(C)CC}
+SPC2167 = IGNORE ;    {CC([O])C(C)CCO}
+SPC2168 = IGNORE ;    {CC([O])C(C)CO}
+SPC2169 = IGNORE ;    {CC([O])C(C)OC(=O)C}
+SPC2170 = IGNORE ;    {CC([O])C(O)(C)C}
+SPC2171 = IGNORE ;    {CC([O])C(O)(C)CCO}
+SPC2172 = IGNORE ;    {CC([O])C(O)C=O}
+SPC2173 = IGNORE ;    {CC([O])C(O)CCO}
+SPC2174 = IGNORE ;    {CC([O])C(ON(=O)=O)(C)C}
+SPC2175 = IGNORE ;    {CC([O])C(ON(=O)=O)C=O}
+SPC2176 = IGNORE ;    {CC([O])C=O}
+SPC2177 = IGNORE ;    {CC([O])CC(=O)CO}
+SPC2178 = IGNORE ;    {CC([O])CC(=O)CON(=O)=O}
+SPC2179 = IGNORE ;    {CC([O])CC(=O)OC=O}
+SPC2180 = IGNORE ;    {CC([O])CC(C)C}
+SPC2181 = IGNORE ;    {CC([O])CC(C)CC}
+SPC2182 = IGNORE ;    {CC([O])CC(C)CO}
+SPC2183 = IGNORE ;    {CC([O])CC=O}
+SPC2184 = IGNORE ;    {CC([O])CCC(C)C}
+SPC2185 = IGNORE ;    {CC([O])CCC(O)(C)C}
+SPC2186 = IGNORE ;    {CC([O])CCCO}
+SPC2187 = IGNORE ;    {CC([O])CCO}
+SPC2188 = IGNORE ;    {CC([O])CO}
+SPC2189 = IGNORE ;    {CC([O])CON(=O)=O}
+SPC2190 = IGNORE ;    {CC([O])OC(=O)CO}
+SPC2191 = IGNORE ;    {CC([O])OC(C)(C)C}
+SPC2192 = IGNORE ;    {CC([O])OC(C)C}
+SPC2193 = IGNORE ;    {CC([O])OC=O}
+SPC2194 = IGNORE ;    {CC([O])OCCO}
+SPC2195 = IGNORE ;    {CC([O])c(c1)cc(C)cc1CC}
+SPC2196 = IGNORE ;    {CC/C=C\C}
+SPC2197 = IGNORE ;    {CC1(C(=O)O)OC1(C)C=CC=O}
+SPC2198 = IGNORE ;    {CC1(C(=O)O)OC1(C)C=O}
+SPC2199 = IGNORE ;    {CC1(C(=O)O)OC1(C=O)CC}
+SPC2200 = IGNORE ;    {CC1(C(=O)OO)OC1(C)C=CC=O}
+SPC2201 = IGNORE ;    {CC1(C(=O)OO)OC1(C)C=O}
+SPC2202 = IGNORE ;    {CC1(C(=O)OO)OC1(C=O)CC}
+SPC2203 = IGNORE ;    {CC1(C(=O)OON(=O)=O)OC1(C)C=CC=O}
+SPC2204 = IGNORE ;    {CC1(C(=O)OON(=O)=O)OC1(C)C=O}
+SPC2205 = IGNORE ;    {CC1(C(=O)OON(=O)=O)OC1(C=O)CC}
+SPC2206 = IGNORE ;    {CC1(C)C(=O)C(=O)CC(=O)C1C=O}
+SPC2207 = IGNORE ;    {CC1(C)C(=O)CCC(=O)C1C(=O)O}
+SPC2208 = IGNORE ;    {CC1(C)C(=O)CCC(=O)C1C(=O)OO}
+SPC2209 = IGNORE ;    {CC1(C)C(=O)CCC(=O)C1C(=O)O[O]}
+SPC2210 = IGNORE ;    {CC1(C)C(=O)CCC(=O)C1C=O}
+SPC2211 = IGNORE ;    {CC1(C)C(C(=O)C12)C(=O)CC2}
+SPC2212 = IGNORE ;    {CC1(C)C(C(=O)C=O)CC1CC=O}
+SPC2213 = IGNORE ;    {CC1(C)C(C(=O)CO)CC1CC(=O)O}
+SPC2214 = IGNORE ;    {CC1(C)C(C(=O)CO)CC1CC(=O)OO}
+SPC2215 = IGNORE ;    {CC1(C)C(C(=O)CO)CC1CC(=O)OON(=O)=O}
+SPC2216 = IGNORE ;    {CC1(C)C(C(=O)CO)CC1CC(=O)O[O]}
+SPC2217 = IGNORE ;    {CC1(C)C(C(=O)CO)CC1CC=O}
+SPC2218 = IGNORE ;    {CC1(C)C(C(=O)COO)CC1CC=O}
+SPC2219 = IGNORE ;    {CC1(C)C(C(=O)O)CC1C(=O)O}
+SPC2220 = IGNORE ;    {CC1(C)C(C(=O)O)CC1CC(=O)O}
+SPC2221 = IGNORE ;    {CC1(C)C(C(=O)O)CC1CC(=O)OO}
+SPC2222 = IGNORE ;    {CC1(C)C(C(=O)O)CC1CC(=O)O[O]}
+SPC2223 = IGNORE ;    {CC1(C)C(C(=O)O)CC1CC=O}
+SPC2224 = IGNORE ;    {CC1(C)C(C(=O)OO)CC1CC=O}
+SPC2225 = IGNORE ;    {CC1(C)C(C(=O)OON(=O)=O)CC1CC=O}
+SPC2226 = IGNORE ;    {CC1(C)C(C(O)C12)C(=O)CC2}
+SPC2227 = IGNORE ;    {CC1(C)C(C(ON(=O)=O)C12)C(=O)CC2}
+SPC2228 = IGNORE ;    {CC1(C)C(C(ON(=O)=O)C12)C(=O)CC2=O}
+SPC2229 = IGNORE ;    {CC1(C)C(C(OO)C12)C(=O)CC2}
+SPC2230 = IGNORE ;    {CC1(C)C(C(OO)C12)C(=O)CC2=O}
+SPC2231 = IGNORE ;    {CC1(C)C(C(O[O])C12)C(=O)CC2}
+SPC2232 = IGNORE ;    {CC1(C)C(C(O[O])C12)C(=O)CC2=O}
+SPC2233 = IGNORE ;    {CC1(C)C(C([O])C12)C(=O)CC2}
+SPC2234 = IGNORE ;    {CC1(C)C(C([O])C12)C(=O)CC2=O}
+SPC2235 = IGNORE ;    {CC1(C)C(C2)C(=O)C(=O)CC12}
+SPC2236 = IGNORE ;    {CC1(C)C(C2)C(=O)C(O)CC12}
+SPC2237 = IGNORE ;    {CC1(C)C(C2)C(=O)C(OO)CC12}
+SPC2238 = IGNORE ;    {CC1(C)C(C2)C(=O)C(O[O])CC12}
+SPC2239 = IGNORE ;    {CC1(C)C(C2)C(=O)C([O])CC12}
+SPC2240 = IGNORE ;    {CC1(C)C(C2)C(=O)CC(=O)C12}
+SPC2241 = IGNORE ;    {CC1(C)C(C2)C(=O)CC(O)C12}
+SPC2242 = IGNORE ;    {CC1(C)C(C2)C(=O)CC12}
+SPC2243 = IGNORE ;    {CC1(C)C(C2)C(=O)CCC12}
+SPC2244 = IGNORE ;    {CC1(C)C(C2)C(O)CC12}
+SPC2245 = IGNORE ;    {CC1(C)C(C2)C(ON(=O)=O)CC(=O)C12}
+SPC2246 = IGNORE ;    {CC1(C)C(C2)C(ON(=O)=O)CC12}
+SPC2247 = IGNORE ;    {CC1(C)C(C2)C(OO)CC(=O)C12}
+SPC2248 = IGNORE ;    {CC1(C)C(C2)C(OO)CC12}
+SPC2249 = IGNORE ;    {CC1(C)C(C2)C(O[O])CC(=O)C12}
+SPC2250 = IGNORE ;    {CC1(C)C(C2)C(O[O])CC12}
+SPC2251 = IGNORE ;    {CC1(C)C(C2)C([O])CC(=O)C12}
+SPC2252 = IGNORE ;    {CC1(C)C(C2)C([O])CC12}
+SPC2253 = IGNORE ;    {CC1(C)C(C2)CCC12}
+SPC2254 = IGNORE ;    {CC1(C)C(C2=O)C(=O)CC(=O)C12}
+SPC2255 = IGNORE ;    {CC1(C)C(C2O)C(=O)CC(=O)C12}
+SPC2256 = IGNORE ;    {CC1(C)C(CC12)CCC2(O)C(=O)OO}
+SPC2257 = IGNORE ;    {CC1(C)C(CC12)CCC2(O)C(=O)O[O]}
+SPC2258 = IGNORE ;    {CC1(C)C(CC12)CCC2(O)C=O}
+SPC2259 = IGNORE ;    {CC1(C)C(CC12)CCC2(O)CO}
+SPC2260 = IGNORE ;    {CC1(C)C(CC12)CCC2(O)CON(=O)=O}
+SPC2261 = IGNORE ;    {CC1(C)C(CC12)CCC2(O)COO}
+SPC2262 = IGNORE ;    {CC1(C)C(CC12)CCC2(O)CO[O]}
+SPC2263 = IGNORE ;    {CC1(C)C(CC12)CCC2(O)C[O]}
+SPC2264 = IGNORE ;    {CC1(C)C(CC12)CCC2(ON(=O)=O)C(=O)OO}
+SPC2265 = IGNORE ;    {CC1(C)C(CC12)CCC2(ON(=O)=O)C(=O)O[O]}
+SPC2266 = IGNORE ;    {CC1(C)C(CC12)CCC2(ON(=O)=O)C=O}
+SPC2267 = IGNORE ;    {CC1(C)C(CC12)CCC2(ON(=O)=O)CO}
+SPC2268 = IGNORE ;    {CC1(C)C(CC12)CCC2(ON(=O)=O)COO}
+SPC2269 = IGNORE ;    {CC1(C)C(CC12)CCC2(ON(=O)=O)CO[O]}
+SPC2270 = IGNORE ;    {CC1(C)C(CC12)CCC2(ON(=O)=O)C[O]}
+SPC2271 = IGNORE ;    {CC1(C)C(CC12)CCC2(OO)CO}
+SPC2272 = IGNORE ;    {CC1(C)C(CC12)CCC2(OO)CON(=O)=O}
+SPC2273 = IGNORE ;    {CC1(C)C(CC12)CCC2(O[O])CO}
+SPC2274 = IGNORE ;    {CC1(C)C(CC12)CCC2(O[O])CON(=O)=O}
+SPC2275 = IGNORE ;    {CC1(C)C(CC12)CCC2([O])CO}
+SPC2276 = IGNORE ;    {CC1(C)C(CC12)CCC2([O])CON(=O)=O}
+SPC2277 = IGNORE ;    {CC1(C)C(CC12)CCC2=C}
+SPC2278 = IGNORE ;    {CC1(C)C(O)(C2)CCC(=O)C12}
+SPC2279 = IGNORE ;    {CC1(C)C(O)C(=O)CC(=O)C1C=O}
+SPC2280 = IGNORE ;    {CC1(C)C(O)CC1C(=O)CC=O}
+SPC2281 = IGNORE ;    {CC1(C)C(O)CC1CC=O}
+SPC2282 = IGNORE ;    {CC1(C)C(O)CCC(=O)C1C=O}
+SPC2283 = IGNORE ;    {CC1(C)C(ON(=O)=O)(C2)CCC(=O)C12}
+SPC2284 = IGNORE ;    {CC1(C)C(ON(=O)=O)CC1C(=O)CC=O}
+SPC2285 = IGNORE ;    {CC1(C)C(ON(=O)=O)CC1CC=O}
+SPC2286 = IGNORE ;    {CC1(C)C(ON(=O)=O)CCC(=O)C1C=O}
+SPC2287 = IGNORE ;    {CC1(C)C(OO)(C(=O)CO)CC1CO}
+SPC2288 = IGNORE ;    {CC1(C)C(OO)(C2)CCC(=O)C12}
+SPC2289 = IGNORE ;    {CC1(C)C(OO)C(=O)CC(=O)C1C=O}
+SPC2290 = IGNORE ;    {CC1(C)C(OO)CC1C(=O)CC=O}
+SPC2291 = IGNORE ;    {CC1(C)C(OO)CC1C(=O)O}
+SPC2292 = IGNORE ;    {CC1(C)C(OO)CC1CC=O}
+SPC2293 = IGNORE ;    {CC1(C)C(OO)CCC(=O)C1C=O}
+SPC2294 = IGNORE ;    {CC1(C)C(O[O])(C(=O)CO)CC1CO}
+SPC2295 = IGNORE ;    {CC1(C)C(O[O])(C2)CCC(=O)C12}
+SPC2296 = IGNORE ;    {CC1(C)C(O[O])C(=O)CC(=O)C1C=O}
+SPC2297 = IGNORE ;    {CC1(C)C(O[O])CC1C(=O)CC=O}
+SPC2298 = IGNORE ;    {CC1(C)C(O[O])CC1C(=O)O}
+SPC2299 = IGNORE ;    {CC1(C)C(O[O])CC1CC=O}
+SPC2300 = IGNORE ;    {CC1(C)C(O[O])CCC(=O)C1C=O}
+SPC2301 = IGNORE ;    {CC1(C)C([O])(C(=O)CO)CC1CO}
+SPC2302 = IGNORE ;    {CC1(C)C([O])(C2)CCC(=O)C12}
+SPC2303 = IGNORE ;    {CC1(C)C([O])C(=O)CC(=O)C1C=O}
+SPC2304 = IGNORE ;    {CC1(C)C([O])CC1C(=O)CC=O}
+SPC2305 = IGNORE ;    {CC1(C)C([O])CC1C(=O)O}
+SPC2306 = IGNORE ;    {CC1(C)C([O])CC1CC=O}
+SPC2307 = IGNORE ;    {CC1(C)C([O])CCC(=O)C1C=O}
+SPC2308 = IGNORE ;    {CC1(C)CC(=O)C1CC=O}
+SPC2309 = IGNORE ;    {CC1(C)CC(C(=O)CCO)C1CC=O}
+SPC2310 = IGNORE ;    {CC1(C)CC(C(=O)CCO)C1CCC(=O)O}
+SPC2311 = IGNORE ;    {CC1(C)CC(C(=O)CCOO)C1CC=O}
+SPC2312 = IGNORE ;    {CC1(C)CC(C(=O)O)C1CC=O}
+SPC2313 = IGNORE ;    {CC1(C)CC(C(=O)OO)C1CC=O}
+SPC2314 = IGNORE ;    {CC1(C)CC(C(=O)O[O])C1CC=O}
+SPC2315 = IGNORE ;    {CC1(C)CC(C1CC=O)C(=O)C(=O)CC=O}
+SPC2316 = IGNORE ;    {CC1(C)CC(C1CC=O)C(=O)C(O)CC=O}
+SPC2317 = IGNORE ;    {CC1(C)CC(C1CC=O)C(=O)C(OO)CC=O}
+SPC2318 = IGNORE ;    {CC1(C)CC(C1CC=O)C(=O)C(O[O])CC=O}
+SPC2319 = IGNORE ;    {CC1(C)CC(C1CC=O)C(=O)C([O])CC=O}
+SPC2320 = IGNORE ;    {CC1(C)CC(C1CC=O)C(=O)CC=O}
+SPC2321 = IGNORE ;    {CC1(C)CC(C1CC=O)C(=O)CCC(=O)O[O]}
+SPC2322 = IGNORE ;    {CC1(C)CC(C1CC=O)C(=O)CCC=O}
+SPC2323 = IGNORE ;    {CC1(C)CC(C1CC=O)C(=O)CCO[O]}
+SPC2324 = IGNORE ;    {CC1(C)CC(C1CC=O)C(=O)CC[O]}
+SPC2325 = IGNORE ;    {CC1(C)CC(C1CC=O)C(CC=O)=C}
+SPC2326 = IGNORE ;    {CC1(C)CC(C1CC=O)C(CCC(=O)O)=C}
+SPC2327 = IGNORE ;    {CC1(C)CC(C1CC=O)C(CCC(=O)OO)=C}
+SPC2328 = IGNORE ;    {CC1(C)CC(C1CC=O)C(CCC(=O)O[O])=C}
+SPC2329 = IGNORE ;    {CC1(C)CC(C1CC=O)C(CCC=O)=C}
+SPC2330 = IGNORE ;    {CC1(C)CC(C1CC=O)C(CCO)=C}
+SPC2331 = IGNORE ;    {CC1(C)CC(C1CC=O)C(CCOO)=C}
+SPC2332 = IGNORE ;    {CC1(C)CC(C1CC=O)C(CCO[O])=C}
+SPC2333 = IGNORE ;    {CC1(C)CC(C1CC=O)C(CC[O])=C}
+SPC2334 = IGNORE ;    {CC1(C)CC(C1CC=O)C(O)(CO)CCC=O}
+SPC2335 = IGNORE ;    {CC1(C)CC(C1CC=O)C(OO)(CO)CCC=O}
+SPC2336 = IGNORE ;    {CC1(C)CC(C1CC=O)C(O[O])(CO)CCC=O}
+SPC2337 = IGNORE ;    {CC1(C)CC(C1CC=O)C([O])(CO)CCC=O}
+SPC2338 = IGNORE ;    {CC1(C)CC(C1CCO)C(=O)CCC=O}
+SPC2339 = IGNORE ;    {CC1(C)CC(C1CCO)C(CCC=O)=C}
+SPC2340 = IGNORE ;    {CC1(C)CC(C1CCOO)C(=O)CCC=O}
+SPC2341 = IGNORE ;    {CC1(C)CC(C1CCOO)C(CCC=O)=C}
+SPC2342 = IGNORE ;    {CC1(C)CC(O)(C(=O)CCO)C1CC=O}
+SPC2343 = IGNORE ;    {CC1(C)CC(O)(C(=O)CCO)C1CCC(=O)O}
+SPC2344 = IGNORE ;    {CC1(C)CC(O)(C1CC=O)C(CCO)=C}
+SPC2345 = IGNORE ;    {CC1(C)CC(O)(C1CCO)C(=O)CCC=O}
+SPC2346 = IGNORE ;    {CC1(C)CC(O)(C1CCO)C(CCC=O)=C}
+SPC2347 = IGNORE ;    {CC1(C)CC(O)C1CC=O}
+SPC2348 = IGNORE ;    {CC1(C)CC(OO)(C(=O)CCO)C1CC=O}
+SPC2349 = IGNORE ;    {CC1(C)CC(OO)(C(=O)CCO)C1CCC(=O)O}
+SPC2350 = IGNORE ;    {CC1(C)CC(OO)(C1CC=O)C(CCO)=C}
+SPC2351 = IGNORE ;    {CC1(C)CC(OO)(C1CCO)C(=O)CCC=O}
+SPC2352 = IGNORE ;    {CC1(C)CC(OO)(C1CCO)C(CCC=O)=C}
+SPC2353 = IGNORE ;    {CC1(C)CC(OO)C1CC=O}
+SPC2354 = IGNORE ;    {CC1(C)CC(O[O])(C(=O)CCO)C1CC=O}
+SPC2355 = IGNORE ;    {CC1(C)CC(O[O])(C(=O)CCO)C1CCC(=O)O}
+SPC2356 = IGNORE ;    {CC1(C)CC(O[O])(C1CC=O)C(CCO)=C}
+SPC2357 = IGNORE ;    {CC1(C)CC(O[O])(C1CCO)C(=O)CCC=O}
+SPC2358 = IGNORE ;    {CC1(C)CC(O[O])(C1CCO)C(CCC=O)=C}
+SPC2359 = IGNORE ;    {CC1(C)CC(O[O])C1CC=O}
+SPC2360 = IGNORE ;    {CC1(C)CC([O])(C(=O)CCO)C1CC=O}
+SPC2361 = IGNORE ;    {CC1(C)CC([O])(C(=O)CCO)C1CCC(=O)O}
+SPC2362 = IGNORE ;    {CC1(C)CC([O])(C1CC=O)C(CCO)=C}
+SPC2363 = IGNORE ;    {CC1(C)CC([O])(C1CCO)C(=O)CCC=O}
+SPC2364 = IGNORE ;    {CC1(C)CC([O])(C1CCO)C(CCC=O)=C}
+SPC2365 = IGNORE ;    {CC1(C)CC([O])C1CC=O}
+SPC2366 = IGNORE ;    {CC1(C)CC2C(=O)CCC(O)C(OO)(C)CCC12}
+SPC2367 = IGNORE ;    {CC1(C)CC2C(=O)CCC(O)C(O[O])(C)CCC12}
+SPC2368 = IGNORE ;    {CC1(C)CC2C(=O)CCC(OO)C(O)(C)CCC12}
+SPC2369 = IGNORE ;    {CC1(C)CC2C(=O)CCC(O[O])C(O)(C)CCC12}
+SPC2370 = IGNORE ;    {CC1(C=O)OC1(C)C(=O)O[O]}
+SPC2371 = IGNORE ;    {CC1(C=O)OC1(C)C(O)C(=O)C=O}
+SPC2372 = IGNORE ;    {CC1(C=O)OC1(C)C(O)C(O)C=O}
+SPC2373 = IGNORE ;    {CC1(C=O)OC1(C)C(O)C(ON(=O)=O)C=O}
+SPC2374 = IGNORE ;    {CC1(C=O)OC1(C)C(O)C(OO)C=O}
+SPC2375 = IGNORE ;    {CC1(C=O)OC1(C)C(O)C(O[O])C=O}
+SPC2376 = IGNORE ;    {CC1(C=O)OC1(C)C(O)C([O])C=O}
+SPC2377 = IGNORE ;    {CC1(C=O)OC1(C)C=CC=O}
+SPC2378 = IGNORE ;    {CC1(C=O)OC1(C)C=O}
+SPC2379 = IGNORE ;    {CC1(C=O)OC1C(=O)O[O]}
+SPC2380 = IGNORE ;    {CC1(C=O)OC1C=O}
+SPC2381 = IGNORE ;    {CC1(CO)OC1CO}
+SPC2382 = IGNORE ;    {CC1(O)C(=O)OC(=O)C1(O)C}
+SPC2383 = IGNORE ;    {CC1(O)C(=O)OC(=O)C1([O])C}
+SPC2384 = IGNORE ;    {CC1(O)C(O)C(=O)OC1C}
+SPC2385 = IGNORE ;    {CC1(O)C=CC(C)(C2O)OOC12C}
+SPC2386 = IGNORE ;    {CC1(O)C=CC(C2O)OOC12C}
+SPC2387 = IGNORE ;    {CC1(O)COC(=O)C1(O)C}
+SPC2388 = IGNORE ;    {CC1(O)COC(=O)C1(OO)C}
+SPC2389 = IGNORE ;    {CC1(O)COC(=O)C1(O[O])C}
+SPC2390 = IGNORE ;    {CC1(O)COC(=O)C1([O])C}
+SPC2391 = IGNORE ;    {CC1(ON(=O)=O)C(=O)CC(=O)CC1C(OO)(C)C}
+SPC2392 = IGNORE ;    {CC1(ON(=O)=O)C(=O)CC(=O)CC1C(O[O])(C)C}
+SPC2393 = IGNORE ;    {CC1(ON(=O)=O)C(=O)CC(=O)CC1C([O])(C)C}
+SPC2394 = IGNORE ;    {CC1(ON(=O)=O)C(=O)OC(=O)C1(OO)C}
+SPC2395 = IGNORE ;    {CC1(ON(=O)=O)C(=O)OC(=O)C1(O[O])C}
+SPC2396 = IGNORE ;    {CC1(ON(=O)=O)C(=O)OC(=O)C1([O])C}
+SPC2397 = IGNORE ;    {CC1(ON(=O)=O)C(OO)(C)C(=O)OC1C}
+SPC2398 = IGNORE ;    {CC1(ON(=O)=O)C(O[O])(C)C(=O)OC1C}
+SPC2399 = IGNORE ;    {CC1(ON(=O)=O)C([O])(C)C(=O)OC1C}
+SPC2400 = IGNORE ;    {CC1(ON(=O)=O)COC(=O)C1(OO)C}
+SPC2401 = IGNORE ;    {CC1(ON(=O)=O)COC(=O)C1(O[O])C}
+SPC2402 = IGNORE ;    {CC1(ON(=O)=O)COC(=O)C1([O])C}
+SPC2403 = IGNORE ;    {CC1(OO)C(=O)OC(=O)C1(O)C}
+SPC2404 = IGNORE ;    {CC1(OO)C(O)C(=O)OC1C}
+SPC2405 = IGNORE ;    {CC1(OO)C(ON(=O)=O)C(=O)C=C(C1=O)CC}
+SPC2406 = IGNORE ;    {CC1(OO)C(ON(=O)=O)C(=O)OC1C}
+SPC2407 = IGNORE ;    {CC1(O[O])C(=O)OC(=O)C1(O)C}
+SPC2408 = IGNORE ;    {CC1(O[O])C(O)C(=O)OC1C}
+SPC2409 = IGNORE ;    {CC1(O[O])C(ON(=O)=O)C(=O)OC1C}
+SPC2410 = IGNORE ;    {CC1([O])C(O)C(=O)OC1C}
+SPC2411 = IGNORE ;    {CC1([O])C(ON(=O)=O)C(=O)OC1C}
+SPC2412 = IGNORE ;    {CC1([O])C=CC(C)(C2O)OOC12C}
+SPC2413 = IGNORE ;    {CC1([O])C=CC(C2O)OOC12C}
+SPC2414 = IGNORE ;    {CC1=C(C)C(O)(O)C2(C)OOC1C2O}
+SPC2415 = IGNORE ;    {CC1=C(C)C([O])(O)C2(C)OOC1C2O}
+SPC2416 = IGNORE ;    {CC1=C(C)C2(C)OOC(C2O)C1(O)O}
+SPC2417 = IGNORE ;    {CC1=C(C)C2(C)OOC(C2O)C1([O])O}
+SPC2418 = IGNORE ;    {CC1=C(O)C([O])(O)C2(OOC1(C)C2O)N(=O)=O}
+SPC2419 = IGNORE ;    {CC1=CC(O)(O)C2(C)OOC1C2O}
+SPC2420 = IGNORE ;    {CC1=CC(O)(O)C2OOC1(C)C2O}
+SPC2421 = IGNORE ;    {CC1=CC([O])(O)C2(C)OOC1C2O}
+SPC2422 = IGNORE ;    {CC1=CC([O])(O)C2(OOC1(C)C2O)N(=O)=O}
+SPC2423 = IGNORE ;    {CC1=CC([O])(O)C2OOC1(C)C2O}
+SPC2424 = IGNORE ;    {CC1=CC2(C)OOC(C)(C1=O)C2O}
+SPC2425 = IGNORE ;    {CC1=CC2(C)OOC(C)(C1O)C2O}
+SPC2426 = IGNORE ;    {CC1=CC2(C)OOC(C)(C1[O])C2O}
+SPC2427 = IGNORE ;    {CC1OC(=O)C(C)=C1C}
+SPC2428 = IGNORE ;    {CC1OC(=O)C(O)(C)C1(O)C}
+SPC2429 = IGNORE ;    {CC1OC(=O)C(OO)(C)C1(O)C}
+SPC2430 = IGNORE ;    {CC1OC(=O)C(O[O])(C)C1(O)C}
+SPC2431 = IGNORE ;    {CC1OC(=O)C([O])(C)C1(O)C}
+SPC2432 = IGNORE ;    {CC1OC(=O)C=C1C}
+SPC2433 = IGNORE ;    {CC=C}
+SPC2434 = IGNORE ;    {CC=C(C)C}
+SPC2435 = IGNORE ;    {CC=CC}
+SPC2436 = IGNORE ;    {CC=CC(=O)OO}
+SPC2437 = IGNORE ;    {CC=CC(=O)OON(=O)=O}
+SPC2438 = IGNORE ;    {CC=CC(=O)O[O]}
+SPC2439 = IGNORE ;    {CC=CC=O}
+SPC2440 = IGNORE ;    {CC=O}
+SPC2441 = IGNORE ;    {CCC}
+SPC2442 = IGNORE ;    {CCC(=C/C=C(\C)/C(=O)O)C(=[O+][O-])O}
+SPC2443 = IGNORE ;    {CCC(=CC(=CC(=O)O)C)C(=[O+][O-])O}
+SPC2444 = IGNORE ;    {CCC(=O)C}
+SPC2445 = IGNORE ;    {CCC(=O)C(=O)C}
+SPC2446 = IGNORE ;    {CCC(=O)C(=O)C(=O)C}
+SPC2447 = IGNORE ;    {CCC(=O)C(=O)C(=O)C(=O)OO}
+SPC2448 = IGNORE ;    {CCC(=O)C(=O)C(=O)C(=O)OON(=O)=O}
+SPC2449 = IGNORE ;    {CCC(=O)C(=O)C(=O)C(=O)O[O]}
+SPC2450 = IGNORE ;    {CCC(=O)C(=O)C(=O)C=O}
+SPC2451 = IGNORE ;    {CCC(=O)C(=O)C(O)C1(C)OC1C=O}
+SPC2452 = IGNORE ;    {CCC(=O)C(=O)C(O)C1OC1(C)C=O}
+SPC2453 = IGNORE ;    {CCC(=O)C(=O)C(O)C1OC1C=O}
+SPC2454 = IGNORE ;    {CCC(=O)C(=O)C(O)C=O}
+SPC2455 = IGNORE ;    {CCC(=O)C(=O)C(OO)C}
+SPC2456 = IGNORE ;    {CCC(=O)C(=O)C(OO)C(=O)CC}
+SPC2457 = IGNORE ;    {CCC(=O)C(=O)C(O[O])C}
+SPC2458 = IGNORE ;    {CCC(=O)C(=O)C(O[O])C(=O)CC}
+SPC2459 = IGNORE ;    {CCC(=O)C(=O)C([O])C}
+SPC2460 = IGNORE ;    {CCC(=O)C(=O)C([O])C(=O)CC}
+SPC2461 = IGNORE ;    {CCC(=O)C(=O)C=O}
+SPC2462 = IGNORE ;    {CCC(=O)C(=O)CC}
+SPC2463 = IGNORE ;    {CCC(=O)C(=O)CC(=O)C}
+SPC2464 = IGNORE ;    {CCC(=O)C(=O)CC(=O)OO}
+SPC2465 = IGNORE ;    {CCC(=O)C(=O)CC(=O)OON(=O)=O}
+SPC2466 = IGNORE ;    {CCC(=O)C(=O)CC(=O)O[O]}
+SPC2467 = IGNORE ;    {CCC(=O)C(=O)CC=O}
+SPC2468 = IGNORE ;    {CCC(=O)C(=O)CCO}
+SPC2469 = IGNORE ;    {CCC(=O)C(=O)COO}
+SPC2470 = IGNORE ;    {CCC(=O)C(=O)CO[O]}
+SPC2471 = IGNORE ;    {CCC(=O)C(=O)C[O]}
+SPC2472 = IGNORE ;    {CCC(=O)C(=O)O}
+SPC2473 = IGNORE ;    {CCC(=O)C(=O)OC(=O)C}
+SPC2474 = IGNORE ;    {CCC(=O)C(C)=CC(=O)O}
+SPC2475 = IGNORE ;    {CCC(=O)C(C)C}
+SPC2476 = IGNORE ;    {CCC(=O)C(C)C(=O)OO}
+SPC2477 = IGNORE ;    {CCC(=O)C(C)C(=O)OON(=O)=O}
+SPC2478 = IGNORE ;    {CCC(=O)C(C)C(=O)O[O]}
+SPC2479 = IGNORE ;    {CCC(=O)C(C)C=O}
+SPC2480 = IGNORE ;    {CCC(=O)C(C)CO}
+SPC2481 = IGNORE ;    {CCC(=O)C(C)CON(=O)=O}
+SPC2482 = IGNORE ;    {CCC(=O)C(C)COO}
+SPC2483 = IGNORE ;    {CCC(=O)C(C)CO[O]}
+SPC2484 = IGNORE ;    {CCC(=O)C(C)C[O]}
+SPC2485 = IGNORE ;    {CCC(=O)C(O)(C)C}
+SPC2486 = IGNORE ;    {CCC(=O)C(O)(C)C=CC=O}
+SPC2487 = IGNORE ;    {CCC(=O)C(O)C(=O)C}
+SPC2488 = IGNORE ;    {CCC(=O)C(O)C(=O)C(=O)C}
+SPC2489 = IGNORE ;    {CCC(=O)C(O)C(=O)C(C)=CC(=O)OO}
+SPC2490 = IGNORE ;    {CCC(=O)C(O)C(=O)C(C)=CC(=O)OON(=O)=O}
+SPC2491 = IGNORE ;    {CCC(=O)C(O)C(=O)C(C)=CC(=O)O[O]}
+SPC2492 = IGNORE ;    {CCC(=O)C(O)C(=O)OO}
+SPC2493 = IGNORE ;    {CCC(=O)C(O)C(=O)OON(=O)=O}
+SPC2494 = IGNORE ;    {CCC(=O)C(O)C(=O)O[O]}
+SPC2495 = IGNORE ;    {CCC(=O)C(O)C(C)=CC(=O)CC}
+SPC2496 = IGNORE ;    {CCC(=O)C(O)C(O)(C)C1OC1(C)C=O}
+SPC2497 = IGNORE ;    {CCC(=O)C(O)C(O)(C)C1OC1(C=O)CC}
+SPC2498 = IGNORE ;    {CCC(=O)C(O)C(O)(C)C=O}
+SPC2499 = IGNORE ;    {CCC(=O)C(O)C(O)C(=O)C}
+SPC2500 = IGNORE ;    {CCC(=O)C(O)C(O)C1(C)OC1C=O}
+SPC2501 = IGNORE ;    {CCC(=O)C(O)C(O)C1OC1(C)C=O}
+SPC2502 = IGNORE ;    {CCC(=O)C(O)C(O)C1OC1C=O}
+SPC2503 = IGNORE ;    {CCC(=O)C(O)C(O)C=O}
+SPC2504 = IGNORE ;    {CCC(=O)C(O)C(ON(=O)=O)(C)C1OC1(C)C=O}
+SPC2505 = IGNORE ;    {CCC(=O)C(O)C(ON(=O)=O)(C)C1OC1(C=O)CC}
+SPC2506 = IGNORE ;    {CCC(=O)C(O)C(OO)(C)C1OC1(C)C=O}
+SPC2507 = IGNORE ;    {CCC(=O)C(O)C(OO)(C)C1OC1(C=O)CC}
+SPC2508 = IGNORE ;    {CCC(=O)C(O)C(OO)(C)C=O}
+SPC2509 = IGNORE ;    {CCC(=O)C(O)C(OO)C(=O)C}
+SPC2510 = IGNORE ;    {CCC(=O)C(O)C(O[O])(C)C1OC1(C)C=O}
+SPC2511 = IGNORE ;    {CCC(=O)C(O)C(O[O])(C)C1OC1(C=O)CC}
+SPC2512 = IGNORE ;    {CCC(=O)C(O)C(O[O])(C)C=O}
+SPC2513 = IGNORE ;    {CCC(=O)C(O)C(O[O])C(=O)C}
+SPC2514 = IGNORE ;    {CCC(=O)C(O)C([O])(C)C1OC1(C)C=O}
+SPC2515 = IGNORE ;    {CCC(=O)C(O)C([O])(C)C1OC1(C=O)CC}
+SPC2516 = IGNORE ;    {CCC(=O)C(O)C([O])(C)C=O}
+SPC2517 = IGNORE ;    {CCC(=O)C(O)C([O])C(=O)C}
+SPC2518 = IGNORE ;    {CCC(=O)C(O)C=O}
+SPC2519 = IGNORE ;    {CCC(=O)C(O)CC(=O)C}
+SPC2520 = IGNORE ;    {CCC(=O)C(O)OC(=O)C}
+SPC2521 = IGNORE ;    {CCC(=O)C(ON(=O)=O)C}
+SPC2522 = IGNORE ;    {CCC(=O)C(ON(=O)=O)C(=O)C}
+SPC2523 = IGNORE ;    {CCC(=O)C(ON(=O)=O)C(O)C1(C)OC1C=O}
+SPC2524 = IGNORE ;    {CCC(=O)C(ON(=O)=O)C(O)C1OC1(C)C=O}
+SPC2525 = IGNORE ;    {CCC(=O)C(ON(=O)=O)C(O)C1OC1C=O}
+SPC2526 = IGNORE ;    {CCC(=O)C(OO)(C)C}
+SPC2527 = IGNORE ;    {CCC(=O)C(OO)(C)C=CC=O}
+SPC2528 = IGNORE ;    {CCC(=O)C(OO)C}
+SPC2529 = IGNORE ;    {CCC(=O)C(OO)C(=O)C}
+SPC2530 = IGNORE ;    {CCC(=O)C(OO)C(C)=CC(=O)CC}
+SPC2531 = IGNORE ;    {CCC(=O)C(OO)C(O)C(=O)C=O}
+SPC2532 = IGNORE ;    {CCC(=O)C(OO)C(O)C1(C)OC1C=O}
+SPC2533 = IGNORE ;    {CCC(=O)C(OO)C(O)C1OC1(C)C=O}
+SPC2534 = IGNORE ;    {CCC(=O)C(OO)C(O)C1OC1C=O}
+SPC2535 = IGNORE ;    {CCC(=O)C(OO)C(O)C=O}
+SPC2536 = IGNORE ;    {CCC(=O)C(OO)CC}
+SPC2537 = IGNORE ;    {CCC(=O)C(OO)CC(=O)C}
+SPC2538 = IGNORE ;    {CCC(=O)C(OO)OC(=O)C}
+SPC2539 = IGNORE ;    {CCC(=O)C(O[O])(C)C}
+SPC2540 = IGNORE ;    {CCC(=O)C(O[O])(C)C=CC=O}
+SPC2541 = IGNORE ;    {CCC(=O)C(O[O])C}
+SPC2542 = IGNORE ;    {CCC(=O)C(O[O])C(=O)C}
+SPC2543 = IGNORE ;    {CCC(=O)C(O[O])C(C)=CC(=O)CC}
+SPC2544 = IGNORE ;    {CCC(=O)C(O[O])C(O)C(=O)C=O}
+SPC2545 = IGNORE ;    {CCC(=O)C(O[O])C(O)C1(C)OC1C=O}
+SPC2546 = IGNORE ;    {CCC(=O)C(O[O])C(O)C1OC1(C)C=O}
+SPC2547 = IGNORE ;    {CCC(=O)C(O[O])C(O)C1OC1C=O}
+SPC2548 = IGNORE ;    {CCC(=O)C(O[O])C(O)C=O}
+SPC2549 = IGNORE ;    {CCC(=O)C(O[O])CC}
+SPC2550 = IGNORE ;    {CCC(=O)C(O[O])CC(=O)C}
+SPC2551 = IGNORE ;    {CCC(=O)C(O[O])OC(=O)C}
+SPC2552 = IGNORE ;    {CCC(=O)C([O])(C)C}
+SPC2553 = IGNORE ;    {CCC(=O)C([O])(C)C=CC=O}
+SPC2554 = IGNORE ;    {CCC(=O)C([O])C}
+SPC2555 = IGNORE ;    {CCC(=O)C([O])C(=O)C}
+SPC2556 = IGNORE ;    {CCC(=O)C([O])C(C)=CC(=O)CC}
+SPC2557 = IGNORE ;    {CCC(=O)C([O])C(O)C(=O)C=O}
+SPC2558 = IGNORE ;    {CCC(=O)C([O])C(O)C1(C)OC1C=O}
+SPC2559 = IGNORE ;    {CCC(=O)C([O])C(O)C1OC1(C)C=O}
+SPC2560 = IGNORE ;    {CCC(=O)C([O])C(O)C1OC1C=O}
+SPC2561 = IGNORE ;    {CCC(=O)C([O])C(O)C=O}
+SPC2562 = IGNORE ;    {CCC(=O)C([O])CC}
+SPC2563 = IGNORE ;    {CCC(=O)C([O])CC(=O)C}
+SPC2564 = IGNORE ;    {CCC(=O)C([O])OC(=O)C}
+SPC2565 = IGNORE ;    {CCC(=O)C=C(C(=O)OO)CC}
+SPC2566 = IGNORE ;    {CCC(=O)C=C(C(=O)OON(=O)=O)CC}
+SPC2567 = IGNORE ;    {CCC(=O)C=C(C(=O)O[O])CC}
+SPC2568 = IGNORE ;    {CCC(=O)C=C(C)C(=O)C(=O)C}
+SPC2569 = IGNORE ;    {CCC(=O)C=C(C)C(=O)C(=O)CC}
+SPC2570 = IGNORE ;    {CCC(=O)C=C(C)C(=O)O}
+SPC2571 = IGNORE ;    {CCC(=O)C=C(C)C(=O)OO}
+SPC2572 = IGNORE ;    {CCC(=O)C=C(C)C(=O)OON(=O)=O}
+SPC2573 = IGNORE ;    {CCC(=O)C=C(C)C(=O)O[O]}
+SPC2574 = IGNORE ;    {CCC(=O)C=C(C)C(=O)[O]}
+SPC2575 = IGNORE ;    {CCC(=O)C=C(C)C([O])C(=O)C}
+SPC2576 = IGNORE ;    {CCC(=O)C=C(C)C1OC1(C(=O)O)CC}
+SPC2577 = IGNORE ;    {CCC(=O)C=C(C)C1OC1(C(=O)OO)CC}
+SPC2578 = IGNORE ;    {CCC(=O)C=C(C)C1OC1(C(=O)OON(=O)=O)CC}
+SPC2579 = IGNORE ;    {CCC(=O)C=C(C)C1OC1(C(=O)O[O])CC}
+SPC2580 = IGNORE ;    {CCC(=O)C=C(C)C1OC1(C)C(=O)O}
+SPC2581 = IGNORE ;    {CCC(=O)C=C(C)C1OC1(C)C(=O)OO}
+SPC2582 = IGNORE ;    {CCC(=O)C=C(C)C1OC1(C)C(=O)OON(=O)=O}
+SPC2583 = IGNORE ;    {CCC(=O)C=C(C)C1OC1(C)C(=O)O[O]}
+SPC2584 = IGNORE ;    {CCC(=O)C=C(C)C1OC1(C)C=O}
+SPC2585 = IGNORE ;    {CCC(=O)C=C(C)C1OC1(C=O)CC}
+SPC2586 = IGNORE ;    {CCC(=O)C=C(C)C=O}
+SPC2587 = IGNORE ;    {CCC(=O)C=CC(=O)C}
+SPC2588 = IGNORE ;    {CCC(=O)C=CC(=O)C(=O)C}
+SPC2589 = IGNORE ;    {CCC(=O)C=CC(=O)C=O}
+SPC2590 = IGNORE ;    {CCC(=O)C=CC(=O)O}
+SPC2591 = IGNORE ;    {CCC(=O)C=CC(=O)OO}
+SPC2592 = IGNORE ;    {CCC(=O)C=CC(=O)OON(=O)=O}
+SPC2593 = IGNORE ;    {CCC(=O)C=CC(=O)O[O]}
+SPC2594 = IGNORE ;    {CCC(=O)C=CC(=O)[O]}
+SPC2595 = IGNORE ;    {CCC(=O)C=CC(O)(C)C=O}
+SPC2596 = IGNORE ;    {CCC(=O)C=CC(O)C=O}
+SPC2597 = IGNORE ;    {CCC(=O)C=CC(OO)(C)C=O}
+SPC2598 = IGNORE ;    {CCC(=O)C=CC(OO)C=O}
+SPC2599 = IGNORE ;    {CCC(=O)C=CC(O[O])(C)C=O}
+SPC2600 = IGNORE ;    {CCC(=O)C=CC(O[O])C(=O)C}
+SPC2601 = IGNORE ;    {CCC(=O)C=CC(O[O])C=O}
+SPC2602 = IGNORE ;    {CCC(=O)C=CC([O])(C)C=O}
+SPC2603 = IGNORE ;    {CCC(=O)C=CC([O])C(=O)C}
+SPC2604 = IGNORE ;    {CCC(=O)C=CC([O])C=O}
+SPC2605 = IGNORE ;    {CCC(=O)C=CC1(C)OC1C(=O)O}
+SPC2606 = IGNORE ;    {CCC(=O)C=CC1(C)OC1C(=O)OO}
+SPC2607 = IGNORE ;    {CCC(=O)C=CC1(C)OC1C(=O)OON(=O)=O}
+SPC2608 = IGNORE ;    {CCC(=O)C=CC1(C)OC1C(=O)O[O]}
+SPC2609 = IGNORE ;    {CCC(=O)C=CC1(C)OC1C=O}
+SPC2610 = IGNORE ;    {CCC(=O)C=CC1OC1(C)C(=O)O}
+SPC2611 = IGNORE ;    {CCC(=O)C=CC1OC1(C)C(=O)OO}
+SPC2612 = IGNORE ;    {CCC(=O)C=CC1OC1(C)C(=O)OON(=O)=O}
+SPC2613 = IGNORE ;    {CCC(=O)C=CC1OC1(C)C(=O)O[O]}
+SPC2614 = IGNORE ;    {CCC(=O)C=CC1OC1(C)C=O}
+SPC2615 = IGNORE ;    {CCC(=O)C=CC1OC1C(=O)O}
+SPC2616 = IGNORE ;    {CCC(=O)C=CC1OC1C(=O)OO}
+SPC2617 = IGNORE ;    {CCC(=O)C=CC1OC1C(=O)OON(=O)=O}
+SPC2618 = IGNORE ;    {CCC(=O)C=CC1OC1C(=O)O[O]}
+SPC2619 = IGNORE ;    {CCC(=O)C=CC1OC1C=O}
+SPC2620 = IGNORE ;    {CCC(=O)C=CC=O}
+SPC2621 = IGNORE ;    {CCC(=O)C=O}
+SPC2622 = IGNORE ;    {CCC(=O)CC}
+SPC2623 = IGNORE ;    {CCC(=O)CC(=O)C}
+SPC2624 = IGNORE ;    {CCC(=O)CC(=O)C(=O)C}
+SPC2625 = IGNORE ;    {CCC(=O)CC(=O)C(=O)CC}
+SPC2626 = IGNORE ;    {CCC(=O)CC(=O)C=O}
+SPC2627 = IGNORE ;    {CCC(=O)CC(=O)CO}
+SPC2628 = IGNORE ;    {CCC(=O)CC(=O)CON(=O)=O}
+SPC2629 = IGNORE ;    {CCC(=O)CC(=O)O}
+SPC2630 = IGNORE ;    {CCC(=O)CC(=O)OO}
+SPC2631 = IGNORE ;    {CCC(=O)CC(=O)OON(=O)=O}
+SPC2632 = IGNORE ;    {CCC(=O)CC(=O)O[O]}
+SPC2633 = IGNORE ;    {CCC(=O)CC(O)C(=O)C}
+SPC2634 = IGNORE ;    {CCC(=O)CC(O)C(=O)CC}
+SPC2635 = IGNORE ;    {CCC(=O)CC(O)CO}
+SPC2636 = IGNORE ;    {CCC(=O)CC(ON(=O)=O)C}
+SPC2637 = IGNORE ;    {CCC(=O)CC(ON(=O)=O)C(O)C}
+SPC2638 = IGNORE ;    {CCC(=O)CC(ON(=O)=O)CO}
+SPC2639 = IGNORE ;    {CCC(=O)CC(OO)C}
+SPC2640 = IGNORE ;    {CCC(=O)CC(OO)C(=O)C}
+SPC2641 = IGNORE ;    {CCC(=O)CC(OO)C(=O)CC}
+SPC2642 = IGNORE ;    {CCC(=O)CC(OO)C(O)C}
+SPC2643 = IGNORE ;    {CCC(=O)CC(OO)CC}
+SPC2644 = IGNORE ;    {CCC(=O)CC(OO)CCC}
+SPC2645 = IGNORE ;    {CCC(=O)CC(OO)CO}
+SPC2646 = IGNORE ;    {CCC(=O)CC(O[O])C}
+SPC2647 = IGNORE ;    {CCC(=O)CC(O[O])C(=O)C}
+SPC2648 = IGNORE ;    {CCC(=O)CC(O[O])C(=O)CC}
+SPC2649 = IGNORE ;    {CCC(=O)CC(O[O])C(O)C}
+SPC2650 = IGNORE ;    {CCC(=O)CC(O[O])CC}
+SPC2651 = IGNORE ;    {CCC(=O)CC(O[O])CCC}
+SPC2652 = IGNORE ;    {CCC(=O)CC(O[O])CO}
+SPC2653 = IGNORE ;    {CCC(=O)CC([O])C}
+SPC2654 = IGNORE ;    {CCC(=O)CC([O])C(=O)C}
+SPC2655 = IGNORE ;    {CCC(=O)CC([O])C(=O)CC}
+SPC2656 = IGNORE ;    {CCC(=O)CC([O])C(O)C}
+SPC2657 = IGNORE ;    {CCC(=O)CC([O])CC}
+SPC2658 = IGNORE ;    {CCC(=O)CC([O])CCC}
+SPC2659 = IGNORE ;    {CCC(=O)CC([O])CO}
+SPC2660 = IGNORE ;    {CCC(=O)CC=O}
+SPC2661 = IGNORE ;    {CCC(=O)CCC(=O)C}
+SPC2662 = IGNORE ;    {CCC(=O)CCC(=O)CC}
+SPC2663 = IGNORE ;    {CCC(=O)CCC(=O)O}
+SPC2664 = IGNORE ;    {CCC(=O)CCC(=O)OO}
+SPC2665 = IGNORE ;    {CCC(=O)CCC(=O)OON(=O)=O}
+SPC2666 = IGNORE ;    {CCC(=O)CCC(=O)O[O]}
+SPC2667 = IGNORE ;    {CCC(=O)CCC=O}
+SPC2668 = IGNORE ;    {CCC(=O)CCCO}
+SPC2669 = IGNORE ;    {CCC(=O)CCCON(=O)=O}
+SPC2670 = IGNORE ;    {CCC(=O)CCO}
+SPC2671 = IGNORE ;    {CCC(=O)CCON(=O)=O}
+SPC2672 = IGNORE ;    {CCC(=O)CCOO}
+SPC2673 = IGNORE ;    {CCC(=O)CCO[O]}
+SPC2674 = IGNORE ;    {CCC(=O)CC[O]}
+SPC2675 = IGNORE ;    {CCC(=O)CO}
+SPC2676 = IGNORE ;    {CCC(=O)COC(=O)C}
+SPC2677 = IGNORE ;    {CCC(=O)CON(=O)=O}
+SPC2678 = IGNORE ;    {CCC(=O)COO}
+SPC2679 = IGNORE ;    {CCC(=O)CO[O]}
+SPC2680 = IGNORE ;    {CCC(=O)C[O]}
+SPC2681 = IGNORE ;    {CCC(=O)O}
+SPC2682 = IGNORE ;    {CCC(=O)OC(=O)C}
+SPC2683 = IGNORE ;    {CCC(=O)OC(=O)C(=O)C}
+SPC2684 = IGNORE ;    {CCC(=O)OO}
+SPC2685 = IGNORE ;    {CCC(=O)OON(=O)=O}
+SPC2686 = IGNORE ;    {CCC(=O)O[O]}
+SPC2687 = IGNORE ;    {CCC(C(=O)C=O)=C(C)C(=O)C=O}
+SPC2688 = IGNORE ;    {CCC(C(=O)C=O)=C(C)C(=O)O[O]}
+SPC2689 = IGNORE ;    {CCC(C(=O)C=O)=CC(=O)C=O}
+SPC2690 = IGNORE ;    {CCC(C(=O)O)=C(N(=O)=O)C=O}
+SPC2691 = IGNORE ;    {CCC(C(=O)O)=CC=O}
+SPC2692 = IGNORE ;    {CCC(C(=O)OO)=CC(=O)C=O}
+SPC2693 = IGNORE ;    {CCC(C(=O)OON(=O)=O)=CC(=O)C=O}
+SPC2694 = IGNORE ;    {CCC(C)(C)C}
+SPC2695 = IGNORE ;    {CCC(C)(C)C(=O)O}
+SPC2696 = IGNORE ;    {CCC(C)(C)C(=O)OO}
+SPC2697 = IGNORE ;    {CCC(C)(C)C(=O)OON(=O)=O}
+SPC2698 = IGNORE ;    {CCC(C)(C)C(=O)O[O]}
+SPC2699 = IGNORE ;    {CCC(C)(C)C=O}
+SPC2700 = IGNORE ;    {CCC(C)(C)CO}
+SPC2701 = IGNORE ;    {CCC(C)(C)CON(=O)=O}
+SPC2702 = IGNORE ;    {CCC(C)(C)COO}
+SPC2703 = IGNORE ;    {CCC(C)(C)CO[O]}
+SPC2704 = IGNORE ;    {CCC(C)(C)C[O]}
+SPC2705 = IGNORE ;    {CCC(C)=C}
+SPC2706 = IGNORE ;    {CCC(C)C}
+SPC2707 = IGNORE ;    {CCC(C)C(=O)C}
+SPC2708 = IGNORE ;    {CCC(C)C(=O)O}
+SPC2709 = IGNORE ;    {CCC(C)C(=O)OO}
+SPC2710 = IGNORE ;    {CCC(C)C(=O)OON(=O)=O}
+SPC2711 = IGNORE ;    {CCC(C)C(=O)O[O]}
+SPC2712 = IGNORE ;    {CCC(C)C=O}
+SPC2713 = IGNORE ;    {CCC(C)CC}
+SPC2714 = IGNORE ;    {CCC(C)CC(=O)OO}
+SPC2715 = IGNORE ;    {CCC(C)CC(=O)OON(=O)=O}
+SPC2716 = IGNORE ;    {CCC(C)CC(=O)O[O]}
+SPC2717 = IGNORE ;    {CCC(C)CC=O}
+SPC2718 = IGNORE ;    {CCC(C)CCO}
+SPC2719 = IGNORE ;    {CCC(C)CCON(=O)=O}
+SPC2720 = IGNORE ;    {CCC(C)CCOO}
+SPC2721 = IGNORE ;    {CCC(C)CCO[O]}
+SPC2722 = IGNORE ;    {CCC(C)CC[O]}
+SPC2723 = IGNORE ;    {CCC(C)CO}
+SPC2724 = IGNORE ;    {CCC(C)CON(=O)=O}
+SPC2725 = IGNORE ;    {CCC(C)COO}
+SPC2726 = IGNORE ;    {CCC(C)CO[O]}
+SPC2727 = IGNORE ;    {CCC(C)C[O]}
+SPC2728 = IGNORE ;    {CCC(C=O)OC(=O)C=O}
+SPC2729 = IGNORE ;    {CCC(O)(C)C}
+SPC2730 = IGNORE ;    {CCC(O)(C)C(=O)C}
+SPC2731 = IGNORE ;    {CCC(O)(C)C(=O)OO}
+SPC2732 = IGNORE ;    {CCC(O)(C)C(=O)OON(=O)=O}
+SPC2733 = IGNORE ;    {CCC(O)(C)C(=O)O[O]}
+SPC2734 = IGNORE ;    {CCC(O)(C)C=O}
+SPC2735 = IGNORE ;    {CCC(O)(C)CC}
+SPC2736 = IGNORE ;    {CCC(O)(C)CC(=O)COO}
+SPC2737 = IGNORE ;    {CCC(O)(C)CC(=O)CO[O]}
+SPC2738 = IGNORE ;    {CCC(O)(C)CC(=O)C[O]}
+SPC2739 = IGNORE ;    {CCC(O)(C)CC(=O)OO}
+SPC2740 = IGNORE ;    {CCC(O)(C)CC(=O)OON(=O)=O}
+SPC2741 = IGNORE ;    {CCC(O)(C)CC(=O)O[O]}
+SPC2742 = IGNORE ;    {CCC(O)(C)CC=O}
+SPC2743 = IGNORE ;    {CCC(O)(C)CCC(=O)O}
+SPC2744 = IGNORE ;    {CCC(O)(C)CCC(=O)OO}
+SPC2745 = IGNORE ;    {CCC(O)(C)CCC(=O)OON(=O)=O}
+SPC2746 = IGNORE ;    {CCC(O)(C)CCC(=O)O[O]}
+SPC2747 = IGNORE ;    {CCC(O)(C)CCC=O}
+SPC2748 = IGNORE ;    {CCC(O)(C)CCCO}
+SPC2749 = IGNORE ;    {CCC(O)(C)CCCON(=O)=O}
+SPC2750 = IGNORE ;    {CCC(O)(C)CCCOO}
+SPC2751 = IGNORE ;    {CCC(O)(C)CCCO[O]}
+SPC2752 = IGNORE ;    {CCC(O)(C)CCC[O]}
+SPC2753 = IGNORE ;    {CCC(O)(C)CCO}
+SPC2754 = IGNORE ;    {CCC(O)(C)CCON(=O)=O}
+SPC2755 = IGNORE ;    {CCC(O)(C)CCOO}
+SPC2756 = IGNORE ;    {CCC(O)(C)CCO[O]}
+SPC2757 = IGNORE ;    {CCC(O)(C)CC[O]}
+SPC2758 = IGNORE ;    {CCC(O)(C)CO}
+SPC2759 = IGNORE ;    {CCC(O)(C)CON(=O)=O}
+SPC2760 = IGNORE ;    {CCC(O)(C)COO}
+SPC2761 = IGNORE ;    {CCC(O)(C)CO[O]}
+SPC2762 = IGNORE ;    {CCC(O)(C)C[O]}
+SPC2763 = IGNORE ;    {CCC(O)(C=O)C=O}
+SPC2764 = IGNORE ;    {CCC(O)C}
+SPC2765 = IGNORE ;    {CCC(O)C(=O)C}
+SPC2766 = IGNORE ;    {CCC(O)C(=O)CC}
+SPC2767 = IGNORE ;    {CCC(O)C(=O)CC(=O)CC}
+SPC2768 = IGNORE ;    {CCC(O)C(=O)CCO}
+SPC2769 = IGNORE ;    {CCC(O)C(=O)OO}
+SPC2770 = IGNORE ;    {CCC(O)C(=O)OON(=O)=O}
+SPC2771 = IGNORE ;    {CCC(O)C(=O)O[O]}
+SPC2772 = IGNORE ;    {CCC(O)C(C)C}
+SPC2773 = IGNORE ;    {CCC(O)C(O)C}
+SPC2774 = IGNORE ;    {CCC(O)C(O)CC(=O)CC}
+SPC2775 = IGNORE ;    {CCC(O)C(ON(=O)=O)C}
+SPC2776 = IGNORE ;    {CCC(O)C(ON(=O)=O)C(=O)C}
+SPC2777 = IGNORE ;    {CCC(O)C(ON(=O)=O)CC(=O)CC}
+SPC2778 = IGNORE ;    {CCC(O)C(OO)C}
+SPC2779 = IGNORE ;    {CCC(O)C(OO)CC(=O)CC}
+SPC2780 = IGNORE ;    {CCC(O)C(O[O])C}
+SPC2781 = IGNORE ;    {CCC(O)C(O[O])CC(=O)CC}
+SPC2782 = IGNORE ;    {CCC(O)C([O])C}
+SPC2783 = IGNORE ;    {CCC(O)C([O])CC(=O)CC}
+SPC2784 = IGNORE ;    {CCC(O)C=O}
+SPC2785 = IGNORE ;    {CCC(O)CC}
+SPC2786 = IGNORE ;    {CCC(O)CC(=O)C}
+SPC2787 = IGNORE ;    {CCC(O)CC(=O)C(OO)C}
+SPC2788 = IGNORE ;    {CCC(O)CC(=O)C(O[O])C}
+SPC2789 = IGNORE ;    {CCC(O)CC(=O)C([O])C}
+SPC2790 = IGNORE ;    {CCC(O)CC(=O)C=O}
+SPC2791 = IGNORE ;    {CCC(O)CC(=O)CO}
+SPC2792 = IGNORE ;    {CCC(O)CC(=O)CON(=O)=O}
+SPC2793 = IGNORE ;    {CCC(O)CC(=O)COO}
+SPC2794 = IGNORE ;    {CCC(O)CC(=O)CO[O]}
+SPC2795 = IGNORE ;    {CCC(O)CC(=O)C[O]}
+SPC2796 = IGNORE ;    {CCC(O)CC(=O)OO}
+SPC2797 = IGNORE ;    {CCC(O)CC(=O)OON(=O)=O}
+SPC2798 = IGNORE ;    {CCC(O)CC(=O)O[O]}
+SPC2799 = IGNORE ;    {CCC(O)CC=O}
+SPC2800 = IGNORE ;    {CCC(O)CCC(=O)C}
+SPC2801 = IGNORE ;    {CCC(O)CCC(=O)CC}
+SPC2802 = IGNORE ;    {CCC(O)CCC(=O)O}
+SPC2803 = IGNORE ;    {CCC(O)CCC(=O)OO}
+SPC2804 = IGNORE ;    {CCC(O)CCC(=O)OON(=O)=O}
+SPC2805 = IGNORE ;    {CCC(O)CCC(=O)O[O]}
+SPC2806 = IGNORE ;    {CCC(O)CCC(O)C}
+SPC2807 = IGNORE ;    {CCC(O)CCC(O)CC}
+SPC2808 = IGNORE ;    {CCC(O)CCC(ON(=O)=O)C}
+SPC2809 = IGNORE ;    {CCC(O)CCC(ON(=O)=O)CC}
+SPC2810 = IGNORE ;    {CCC(O)CCC(ON(=O)=O)CCC}
+SPC2811 = IGNORE ;    {CCC(O)CCC(ON(=O)=O)CCCC}
+SPC2812 = IGNORE ;    {CCC(O)CCC(ON(=O)=O)CCCCC}
+SPC2813 = IGNORE ;    {CCC(O)CCC(OO)C}
+SPC2814 = IGNORE ;    {CCC(O)CCC(OO)CC}
+SPC2815 = IGNORE ;    {CCC(O)CCC(OO)CCC}
+SPC2816 = IGNORE ;    {CCC(O)CCC(OO)CCCC}
+SPC2817 = IGNORE ;    {CCC(O)CCC(OO)CCCCC}
+SPC2818 = IGNORE ;    {CCC(O)CCC(O[O])C}
+SPC2819 = IGNORE ;    {CCC(O)CCC(O[O])CC}
+SPC2820 = IGNORE ;    {CCC(O)CCC(O[O])CCC}
+SPC2821 = IGNORE ;    {CCC(O)CCC(O[O])CCCC}
+SPC2822 = IGNORE ;    {CCC(O)CCC(O[O])CCCCC}
+SPC2823 = IGNORE ;    {CCC(O)CCC([O])C}
+SPC2824 = IGNORE ;    {CCC(O)CCC([O])CC}
+SPC2825 = IGNORE ;    {CCC(O)CCC([O])CCC}
+SPC2826 = IGNORE ;    {CCC(O)CCC([O])CCCC}
+SPC2827 = IGNORE ;    {CCC(O)CCC([O])CCCCC}
+SPC2828 = IGNORE ;    {CCC(O)CCC=O}
+SPC2829 = IGNORE ;    {CCC(O)CCCO}
+SPC2830 = IGNORE ;    {CCC(O)CCCON(=O)=O}
+SPC2831 = IGNORE ;    {CCC(O)CCCOO}
+SPC2832 = IGNORE ;    {CCC(O)CCCO[O]}
+SPC2833 = IGNORE ;    {CCC(O)CCC[O]}
+SPC2834 = IGNORE ;    {CCC(O)CCO}
+SPC2835 = IGNORE ;    {CCC(O)CCON(=O)=O}
+SPC2836 = IGNORE ;    {CCC(O)CCOO}
+SPC2837 = IGNORE ;    {CCC(O)CCO[O]}
+SPC2838 = IGNORE ;    {CCC(O)CC[O]}
+SPC2839 = IGNORE ;    {CCC(O)CO}
+SPC2840 = IGNORE ;    {CCC(O)COC(=O)C}
+SPC2841 = IGNORE ;    {CCC(O)CON(=O)=O}
+SPC2842 = IGNORE ;    {CCC(O)COO}
+SPC2843 = IGNORE ;    {CCC(O)CO[O]}
+SPC2844 = IGNORE ;    {CCC(O)C[O]}
+SPC2845 = IGNORE ;    {CCC(O)OC(=O)C}
+SPC2846 = IGNORE ;    {CCC(O)OC(=O)C(=O)C}
+SPC2847 = IGNORE ;    {CCC(ON(=O)=O)(C)C}
+SPC2848 = IGNORE ;    {CCC(ON(=O)=O)(C)C(=O)O}
+SPC2849 = IGNORE ;    {CCC(ON(=O)=O)(C)C(=O)OO}
+SPC2850 = IGNORE ;    {CCC(ON(=O)=O)(C)C(=O)OON(=O)=O}
+SPC2851 = IGNORE ;    {CCC(ON(=O)=O)(C)C(=O)O[O]}
+SPC2852 = IGNORE ;    {CCC(ON(=O)=O)(C)C=O}
+SPC2853 = IGNORE ;    {CCC(ON(=O)=O)(C)CC}
+SPC2854 = IGNORE ;    {CCC(ON(=O)=O)(C)CO}
+SPC2855 = IGNORE ;    {CCC(ON(=O)=O)(C)COO}
+SPC2856 = IGNORE ;    {CCC(ON(=O)=O)(C)CO[O]}
+SPC2857 = IGNORE ;    {CCC(ON(=O)=O)(C)C[O]}
+SPC2858 = IGNORE ;    {CCC(ON(=O)=O)C}
+SPC2859 = IGNORE ;    {CCC(ON(=O)=O)C(=O)C}
+SPC2860 = IGNORE ;    {CCC(ON(=O)=O)C(C)C}
+SPC2861 = IGNORE ;    {CCC(ON(=O)=O)C(OO)C}
+SPC2862 = IGNORE ;    {CCC(ON(=O)=O)C(O[O])C}
+SPC2863 = IGNORE ;    {CCC(ON(=O)=O)C([O])C}
+SPC2864 = IGNORE ;    {CCC(ON(=O)=O)C=O}
+SPC2865 = IGNORE ;    {CCC(ON(=O)=O)CC}
+SPC2866 = IGNORE ;    {CCC(ON(=O)=O)CC=O}
+SPC2867 = IGNORE ;    {CCC(ON(=O)=O)CCCO}
+SPC2868 = IGNORE ;    {CCC(ON(=O)=O)CO}
+SPC2869 = IGNORE ;    {CCC(ON(=O)=O)COC(=O)C}
+SPC2870 = IGNORE ;    {CCC(ON(=O)=O)COO}
+SPC2871 = IGNORE ;    {CCC(ON(=O)=O)CO[O]}
+SPC2872 = IGNORE ;    {CCC(ON(=O)=O)C[O]}
+SPC2873 = IGNORE ;    {CCC(ON(=O)=O)OC(=O)C}
+SPC2874 = IGNORE ;    {CCC(OO)(C)C}
+SPC2875 = IGNORE ;    {CCC(OO)(C)C(=O)C}
+SPC2876 = IGNORE ;    {CCC(OO)(C)CC}
+SPC2877 = IGNORE ;    {CCC(OO)(C)CO}
+SPC2878 = IGNORE ;    {CCC(OO)(C)CON(=O)=O}
+SPC2879 = IGNORE ;    {CCC(OO)(C=O)C(=O)C}
+SPC2880 = IGNORE ;    {CCC(OO)(C=O)C=O}
+SPC2881 = IGNORE ;    {CCC(OO)C}
+SPC2882 = IGNORE ;    {CCC(OO)C(=O)C}
+SPC2883 = IGNORE ;    {CCC(OO)C(=O)CCO}
+SPC2884 = IGNORE ;    {CCC(OO)C(C)C}
+SPC2885 = IGNORE ;    {CCC(OO)C=O}
+SPC2886 = IGNORE ;    {CCC(OO)CC}
+SPC2887 = IGNORE ;    {CCC(OO)CC(=O)CO}
+SPC2888 = IGNORE ;    {CCC(OO)CC(=O)CON(=O)=O}
+SPC2889 = IGNORE ;    {CCC(OO)CC=O}
+SPC2890 = IGNORE ;    {CCC(OO)CCCO}
+SPC2891 = IGNORE ;    {CCC(OO)CO}
+SPC2892 = IGNORE ;    {CCC(OO)COC(=O)C}
+SPC2893 = IGNORE ;    {CCC(OO)CON(=O)=O}
+SPC2894 = IGNORE ;    {CCC(OO)OC(=O)C}
+SPC2895 = IGNORE ;    {CCC(OO)OC(=O)C(=O)C}
+SPC2896 = IGNORE ;    {CCC(O[O])(C)C}
+SPC2897 = IGNORE ;    {CCC(O[O])(C)C(=O)C}
+SPC2898 = IGNORE ;    {CCC(O[O])(C)CC}
+SPC2899 = IGNORE ;    {CCC(O[O])(C)CO}
+SPC2900 = IGNORE ;    {CCC(O[O])(C)CON(=O)=O}
+SPC2901 = IGNORE ;    {CCC(O[O])(C=O)C(=O)C}
+SPC2902 = IGNORE ;    {CCC(O[O])(C=O)C=O}
+SPC2903 = IGNORE ;    {CCC(O[O])C}
+SPC2904 = IGNORE ;    {CCC(O[O])C(=O)C}
+SPC2905 = IGNORE ;    {CCC(O[O])C(=O)CCO}
+SPC2906 = IGNORE ;    {CCC(O[O])C(C)C}
+SPC2907 = IGNORE ;    {CCC(O[O])C=O}
+SPC2908 = IGNORE ;    {CCC(O[O])CC}
+SPC2909 = IGNORE ;    {CCC(O[O])CC(=O)CO}
+SPC2910 = IGNORE ;    {CCC(O[O])CC(=O)CON(=O)=O}
+SPC2911 = IGNORE ;    {CCC(O[O])CC=O}
+SPC2912 = IGNORE ;    {CCC(O[O])CCCO}
+SPC2913 = IGNORE ;    {CCC(O[O])CO}
+SPC2914 = IGNORE ;    {CCC(O[O])CON(=O)=O}
+SPC2915 = IGNORE ;    {CCC([O])(C)C}
+SPC2916 = IGNORE ;    {CCC([O])(C)C(=O)C}
+SPC2917 = IGNORE ;    {CCC([O])(C)C=O}
+SPC2918 = IGNORE ;    {CCC([O])(C)CC}
+SPC2919 = IGNORE ;    {CCC([O])(C)CO}
+SPC2920 = IGNORE ;    {CCC([O])(C)CON(=O)=O}
+SPC2921 = IGNORE ;    {CCC([O])(C=O)C(=O)C}
+SPC2922 = IGNORE ;    {CCC([O])(C=O)C=O}
+SPC2923 = IGNORE ;    {CCC([O])C}
+SPC2924 = IGNORE ;    {CCC([O])C(=O)C}
+SPC2925 = IGNORE ;    {CCC([O])C(=O)CCO}
+SPC2926 = IGNORE ;    {CCC([O])C(C)C}
+SPC2927 = IGNORE ;    {CCC([O])C=O}
+SPC2928 = IGNORE ;    {CCC([O])CC}
+SPC2929 = IGNORE ;    {CCC([O])CC(=O)CO}
+SPC2930 = IGNORE ;    {CCC([O])CC(=O)CON(=O)=O}
+SPC2931 = IGNORE ;    {CCC([O])CC=O}
+SPC2932 = IGNORE ;    {CCC([O])CCCO}
+SPC2933 = IGNORE ;    {CCC([O])CO}
+SPC2934 = IGNORE ;    {CCC([O])CON(=O)=O}
+SPC2935 = IGNORE ;    {CCC/C=C\C}
+SPC2936 = IGNORE ;    {CCC1(C(=O)O)OC1(C)C=CC=O}
+SPC2937 = IGNORE ;    {CCC1(C(=O)OO)OC1(C)C=CC=O}
+SPC2938 = IGNORE ;    {CCC1(C(=O)OON(=O)=O)OC1(C)C=CC=O}
+SPC2939 = IGNORE ;    {CCC1(C=CC2OOC1(C)C2O)ON(=O)=O}
+SPC2940 = IGNORE ;    {CCC1(C=O)OC1(C)C(=O)O[O]}
+SPC2941 = IGNORE ;    {CCC1(C=O)OC1(C)C(O)C(=O)C=O}
+SPC2942 = IGNORE ;    {CCC1(C=O)OC1(C)C(O)C(O)C=O}
+SPC2943 = IGNORE ;    {CCC1(C=O)OC1(C)C(O)C(ON(=O)=O)C=O}
+SPC2944 = IGNORE ;    {CCC1(C=O)OC1(C)C(O)C(OO)C=O}
+SPC2945 = IGNORE ;    {CCC1(C=O)OC1(C)C(O)C(O[O])C=O}
+SPC2946 = IGNORE ;    {CCC1(C=O)OC1(C)C(O)C([O])C=O}
+SPC2947 = IGNORE ;    {CCC1(C=O)OC1(C)C=CC=O}
+SPC2948 = IGNORE ;    {CCC1(C=O)OC1(C)C=O}
+SPC2949 = IGNORE ;    {CCC1(O)C=CC2OOC1(C)C2O}
+SPC2950 = IGNORE ;    {CCC1(OO)C=CC2OOC1(C)C2O}
+SPC2951 = IGNORE ;    {CCC1(O[O])C=CC2OOC1(C)C2O}
+SPC2952 = IGNORE ;    {CCC1([O])C=CC2OOC1(C)C2O}
+SPC2953 = IGNORE ;    {CCC12C=CC(O)(O)C(C)(OO1)C2O}
+SPC2954 = IGNORE ;    {CCC12C=CC(O)(O)C(C)(OO1)C2ON(=O)=O}
+SPC2955 = IGNORE ;    {CCC12C=CC(O)(OO)C(C)(OO1)C2O}
+SPC2956 = IGNORE ;    {CCC12C=CC(O)(O[O])C(C)(OO1)C2O}
+SPC2957 = IGNORE ;    {CCC12C=CC(O)([O])C(C)(OO1)C2ON(=O)=O}
+SPC2958 = IGNORE ;    {CCC12C=CC(ON(=O)=O)C(OO1)C2O}
+SPC2959 = IGNORE ;    {CCC12C=CC([O])(O)C(C)(OO1)C2O}
+SPC2960 = IGNORE ;    {CCC12OOC(C(=C(O)C2(O)OO)N(=O)=O)C1ON(=O)=O}
+SPC2961 = IGNORE ;    {CCC12OOC(C(=C(O)C2(O)O[O])N(=O)=O)C1ON(=O)=O}
+SPC2962 = IGNORE ;    {CCC12OOC(C(=C(O)C2([O])O)N(=O)=O)C1O}
+SPC2963 = IGNORE ;    {CCC12OOC(C(=C(O)C2([O])O)N(=O)=O)C1ON(=O)=O}
+SPC2964 = IGNORE ;    {CCC12OOC(C(=CC2(O)O)C)C1O}
+SPC2965 = IGNORE ;    {CCC12OOC(C(=CC2(O)O)C)C1ON(=O)=O}
+SPC2966 = IGNORE ;    {CCC12OOC(C(=CC2(O)OO)C)C1ON(=O)=O}
+SPC2967 = IGNORE ;    {CCC12OOC(C(=CC2(O)O[O])C)C1ON(=O)=O}
+SPC2968 = IGNORE ;    {CCC12OOC(C(=CC2(O)[O])C)C1ON(=O)=O}
+SPC2969 = IGNORE ;    {CCC12OOC(C(=CC2([O])O)C)C1O}
+SPC2970 = IGNORE ;    {CCC12OOC(C(=O)C=C1)C2O}
+SPC2971 = IGNORE ;    {CCC12OOC(C(O)C=C1)C2O}
+SPC2972 = IGNORE ;    {CCC12OOC(C([O])C=C1)C2O}
+SPC2973 = IGNORE ;    {CCC12OOC(C)(C(=C(O)C2(O)OO)N(=O)=O)C1O}
+SPC2974 = IGNORE ;    {CCC12OOC(C)(C(=C(O)C2(O)OO)N(=O)=O)C1ON(=O)=O}
+SPC2975 = IGNORE ;    {CCC12OOC(C)(C(=C(O)C2(O)O[O])N(=O)=O)C1O}
+SPC2976 = IGNORE ;    {CCC12OOC(C)(C(=C(O)C2(O)O[O])N(=O)=O)C1ON(=O)=O}
+SPC2977 = IGNORE ;    {CCC12OOC(C)(C(=C(O)C2(O)[O])N(=O)=O)C1O}
+SPC2978 = IGNORE ;    {CCC12OOC(C)(C(=C(O)C2([O])O)N(=O)=O)C1ON(=O)=O}
+SPC2979 = IGNORE ;    {CCC12OOC(C)(C(=O)C(=C1)C)C2O}
+SPC2980 = IGNORE ;    {CCC12OOC(C)(C(O)C(=C1)C)C2O}
+SPC2981 = IGNORE ;    {CCC12OOC(C)(C(ON(=O)=O)C(=C1)C)C2O}
+SPC2982 = IGNORE ;    {CCC12OOC(C)(C([O])C(=C1)C)C2O}
+SPC2983 = IGNORE ;    {CCC12OOC(C)(C2ON(=O)=O)C(O)(OO)C=C1}
+SPC2984 = IGNORE ;    {CCC12OOC(C)(C2ON(=O)=O)C(O)(O[O])C=C1}
+SPC2985 = IGNORE ;    {CCC12OOC(C)(C=C(C)C2(O)O)C1O}
+SPC2986 = IGNORE ;    {CCC12OOC(C)(C=C(C)C2(O)O)C1ON(=O)=O}
+SPC2987 = IGNORE ;    {CCC12OOC(C)(C=C(C)C2(O)OO)C1O}
+SPC2988 = IGNORE ;    {CCC12OOC(C)(C=C(C)C2(O)OO)C1ON(=O)=O}
+SPC2989 = IGNORE ;    {CCC12OOC(C)(C=C(C)C2(O)O[O])C1O}
+SPC2990 = IGNORE ;    {CCC12OOC(C)(C=C(C)C2(O)O[O])C1ON(=O)=O}
+SPC2991 = IGNORE ;    {CCC12OOC(C)(C=C(C)C2(O)[O])C1ON(=O)=O}
+SPC2992 = IGNORE ;    {CCC12OOC(C)(C=C(C)C2([O])O)C1O}
+SPC2993 = IGNORE ;    {CCC12OOC(C)(C=CC1=O)C2O}
+SPC2994 = IGNORE ;    {CCC12OOC(C)(C=CC1O)C2O}
+SPC2995 = IGNORE ;    {CCC12OOC(C)(C=CC1ON(=O)=O)C2O}
+SPC2996 = IGNORE ;    {CCC12OOC(C)(C=CC1[O])C2O}
+SPC2997 = IGNORE ;    {CCC12OOC(C2O)C(C)(C=C1)ON(=O)=O}
+SPC2998 = IGNORE ;    {CCC12OOC(C2O)C(C)(O)C=C1}
+SPC2999 = IGNORE ;    {CCC12OOC(C2O)C(C)([O])C=C1}
+SPC3000 = IGNORE ;    {CCC12OOC(C2O)C(O)(O)C=C1}
+SPC3001 = IGNORE ;    {CCC12OOC(C2O)C(O)(O)C=C1C}
+SPC3002 = IGNORE ;    {CCC12OOC(C2O)C(O)(OO)C=C1C}
+SPC3003 = IGNORE ;    {CCC12OOC(C2O)C(O)(O[O])C=C1C}
+SPC3004 = IGNORE ;    {CCC12OOC(C2O)C([O])(O)C=C1}
+SPC3005 = IGNORE ;    {CCC12OOC(C2O)C([O])(O)C=C1C}
+SPC3006 = IGNORE ;    {CCC12OOC(C2ON(=O)=O)C(O)(O)C=C1}
+SPC3007 = IGNORE ;    {CCC12OOC(C2ON(=O)=O)C(O)(OO)C=C1}
+SPC3008 = IGNORE ;    {CCC12OOC(C2ON(=O)=O)C(O)(O[O])C=C1}
+SPC3009 = IGNORE ;    {CCC12OOC(C2ON(=O)=O)C([O])(O)C=C1}
+SPC3010 = IGNORE ;    {CCC12OOC(C=C(N(=O)=O)C2(O)OO)(N(=O)=O)C1O}
+SPC3011 = IGNORE ;    {CCC12OOC(C=C(N(=O)=O)C2(O)O[O])(N(=O)=O)C1O}
+SPC3012 = IGNORE ;    {CCC12OOC(C=C(N(=O)=O)C2([O])O)(N(=O)=O)C1O}
+SPC3013 = IGNORE ;    {CCC12OOC(C=C(N(=O)=O)C2([O])O)(N(=O)=O)C1ON(=O)=O}
+SPC3014 = IGNORE ;    {CCC12OOC(CC)(C2O)C(O)(O)C(=C1)C}
+SPC3015 = IGNORE ;    {CCC12OOC(CC)(C2O)C([O])(O)C(=C1)C}
+SPC3016 = IGNORE ;    {CCC12OOC(CC)(C2ON(=O)=O)C(O)(O)C(=C1)C}
+SPC3017 = IGNORE ;    {CCC12OOC(CC)(C2ON(=O)=O)C(O)(OO)C(=C1)C}
+SPC3018 = IGNORE ;    {CCC12OOC(CC)(C2ON(=O)=O)C(O)(O[O])C(=C1)C}
+SPC3019 = IGNORE ;    {CCC12OOC(CC)(C2ON(=O)=O)C(O)([O])C(=C1)C}
+SPC3020 = IGNORE ;    {CCC12OOC(CC)(C=C(C)C2(O)OO)C1O}
+SPC3021 = IGNORE ;    {CCC12OOC(CC)(C=C(C)C2(O)O[O])C1O}
+SPC3022 = IGNORE ;    {CCC12OOC(N(=O)=O)(C(=C(N(=O)=O)C2(O)OO)C)C1O}
+SPC3023 = IGNORE ;    {CCC12OOC(N(=O)=O)(C(=C(N(=O)=O)C2(O)OO)C)C1ON(=O)=O}
+SPC3024 = IGNORE ;    {CCC12OOC(N(=O)=O)(C(=C(N(=O)=O)C2(O)O[O])C)C1O}
+SPC3025 = IGNORE ;    {CCC12OOC(N(=O)=O)(C(=C(N(=O)=O)C2(O)O[O])C)C1ON(=O)=O}
+SPC3026 = IGNORE ;    {CCC12OOC(N(=O)=O)(C(=C(N(=O)=O)C2([O])O)C)C1O}
+SPC3027 = IGNORE ;    {CCC12OOC(N(=O)=O)(C(=C(N(=O)=O)C2([O])O)C)C1ON(=O)=O}
+SPC3028 = IGNORE ;    {CCC12OOC(N(=O)=O)(C(=C(O)C2(O)OO)C)C1O}
+SPC3029 = IGNORE ;    {CCC12OOC(N(=O)=O)(C(=C(O)C2(O)O[O])C)C1O}
+SPC3030 = IGNORE ;    {CCC12OOC(N(=O)=O)(C(=C(O)C2([O])O)C)C1O}
+SPC3031 = IGNORE ;    {CCC12OOC(N(=O)=O)(C(=C(O)C2([O])O)C)C1ON(=O)=O}
+SPC3032 = IGNORE ;    {CCC12OOC(N(=O)=O)(C2O)C(O)(OO)C(=C1C)N(=O)=O}
+SPC3033 = IGNORE ;    {CCC12OOC(N(=O)=O)(C2O)C(O)(O[O])C(=C1C)N(=O)=O}
+SPC3034 = IGNORE ;    {CCC12OOC(N(=O)=O)(C2O)C([O])(O)C(=C1C)N(=O)=O}
+SPC3035 = IGNORE ;    {CCC12OOC(N(=O)=O)(C2ON(=O)=O)C(O)(OO)C(=C1C)N(=O)=O}
+SPC3036 = IGNORE ;    {CCC12OOC(N(=O)=O)(C2ON(=O)=O)C(O)(O[O])C(=C1C)N(=O)=O}
+SPC3037 = IGNORE ;    {CCC12OOC(N(=O)=O)(C2ON(=O)=O)C([O])(O)C(=C1C)N(=O)=O}
+SPC3038 = IGNORE ;    {CCC1=C(C)C2OOC(C2ON(=O)=O)C1(O)O}
+SPC3039 = IGNORE ;    {CCC1=C(C)C2OOC(C2ON(=O)=O)C1(O)OO}
+SPC3040 = IGNORE ;    {CCC1=C(C)C2OOC(C2ON(=O)=O)C1(O)O[O]}
+SPC3041 = IGNORE ;    {CCC1=C(C)C2OOC(C2ON(=O)=O)C1(O)[O]}
+SPC3042 = IGNORE ;    {CCC1=C(N(=O)=O)C2(OOC(C)(C2O)C1(O)OO)N(=O)=O}
+SPC3043 = IGNORE ;    {CCC1=C(N(=O)=O)C2(OOC(C)(C2O)C1(O)O[O])N(=O)=O}
+SPC3044 = IGNORE ;    {CCC1=C(N(=O)=O)C2(OOC(C)(C2O)C1([O])O)N(=O)=O}
+SPC3045 = IGNORE ;    {CCC1=C(N(=O)=O)C2(OOC(C)(C2ON(=O)=O)C1(O)OO)N(=O)=O}
+SPC3046 = IGNORE ;    {CCC1=C(N(=O)=O)C2(OOC(C)(C2ON(=O)=O)C1(O)O[O])N(=O)=O}
+SPC3047 = IGNORE ;    {CCC1=C(N(=O)=O)C2(OOC(C)(C2ON(=O)=O)C1([O])O)N(=O)=O}
+SPC3048 = IGNORE ;    {CCC1=C(O)C(O)(OO)C2(OOC1(C)C2O)N(=O)=O}
+SPC3049 = IGNORE ;    {CCC1=C(O)C(O)(OO)C2(OOC1(C)C2ON(=O)=O)N(=O)=O}
+SPC3050 = IGNORE ;    {CCC1=C(O)C(O)(O[O])C2(OOC1(C)C2O)N(=O)=O}
+SPC3051 = IGNORE ;    {CCC1=C(O)C(O)(O[O])C2(OOC1(C)C2ON(=O)=O)N(=O)=O}
+SPC3052 = IGNORE ;    {CCC1=C(O)C([O])(O)C2(OOC1(C)C2O)N(=O)=O}
+SPC3053 = IGNORE ;    {CCC1=C(O)C([O])(O)C2(OOC1(C)C2ON(=O)=O)N(=O)=O}
+SPC3054 = IGNORE ;    {CCC1=CC(O)(OO)C2(OOC1C2(C)O)N(=O)=O}
+SPC3055 = IGNORE ;    {CCC1=CC(O)(O[O])C2(OOC1C2(C)O)N(=O)=O}
+SPC3056 = IGNORE ;    {CCC1=CC([O])(O)C2(OOC1C2(C)O)N(=O)=O}
+SPC3057 = IGNORE ;    {CCC1=CC2(CC)OOC(C)(C1=O)C2O}
+SPC3058 = IGNORE ;    {CCC1=CC2(CC)OOC(C)(C1O)C2O}
+SPC3059 = IGNORE ;    {CCC1=CC2(CC)OOC(C)(C1ON(=O)=O)C2O}
+SPC3060 = IGNORE ;    {CCC1=CC2(CC)OOC(C)(C1[O])C2O}
+SPC3061 = IGNORE ;    {CCC1OC(=O)C(C)(OO)C1ON(=O)=O}
+SPC3062 = IGNORE ;    {CCC=C}
+SPC3063 = IGNORE ;    {CCC=O}
+SPC3064 = IGNORE ;    {CCCC}
+SPC3065 = IGNORE ;    {CCCC(=CC(=O)C=O)C(=O)CO.O=C1CCC(=O)C(=C1)C}
+SPC3066 = IGNORE ;    {CCCC(=CC(=O)CO)C(=O)CO.O=C1CCC(=O)C(=C1)C}
+SPC3067 = IGNORE ;    {CCCC(=CC(=O)COO)C(=O)CO.O=C1CCC(=O)C(=C1)C}
+SPC3068 = IGNORE ;    {CCCC(=CC(=O)CO[O])C(=O)CO.O=C1CCC(=O)C(=C1)C}
+SPC3069 = IGNORE ;    {CCCC(=CC(=O)C[O])C(=O)CO.O=C1CCC(=O)C(=C1)C}
+SPC3070 = IGNORE ;    {CCCC(=O)C}
+SPC3071 = IGNORE ;    {CCCC(=O)C(=O)C}
+SPC3072 = IGNORE ;    {CCCC(=O)C(=O)C(O)C(=O)OO}
+SPC3073 = IGNORE ;    {CCCC(=O)C(=O)C(O)C(=O)OON(=O)=O}
+SPC3074 = IGNORE ;    {CCCC(=O)C(=O)C(O)C(=O)O[O]}
+SPC3075 = IGNORE ;    {CCCC(=O)C(=O)C(O)C1OC1C=O}
+SPC3076 = IGNORE ;    {CCCC(=O)C(=O)C(O)C=O}
+SPC3077 = IGNORE ;    {CCCC(=O)C(=O)C(OO)C(=O)CC}
+SPC3078 = IGNORE ;    {CCCC(=O)C(=O)C(O[O])C(=O)CC}
+SPC3079 = IGNORE ;    {CCCC(=O)C(=O)C([O])C(=O)CC}
+SPC3080 = IGNORE ;    {CCCC(=O)C(=O)C=O}
+SPC3081 = IGNORE ;    {CCCC(=O)C(=O)CC(=O)CC}
+SPC3082 = IGNORE ;    {CCCC(=O)C(=O)O}
+SPC3083 = IGNORE ;    {CCCC(=O)C(O)C}
+SPC3084 = IGNORE ;    {CCCC(=O)C(O)C(=O)OO}
+SPC3085 = IGNORE ;    {CCCC(=O)C(O)C(=O)OON(=O)=O}
+SPC3086 = IGNORE ;    {CCCC(=O)C(O)C(=O)O[O]}
+SPC3087 = IGNORE ;    {CCCC(=O)C(O)C(O)C1OC1C=O}
+SPC3088 = IGNORE ;    {CCCC(=O)C(O)C(O)C=O}
+SPC3089 = IGNORE ;    {CCCC(=O)C(O)C=O}
+SPC3090 = IGNORE ;    {CCCC(=O)C(O)CC(=O)CC}
+SPC3091 = IGNORE ;    {CCCC(=O)C(ON(=O)=O)C}
+SPC3092 = IGNORE ;    {CCCC(=O)C(ON(=O)=O)C(O)C1OC1C=O}
+SPC3093 = IGNORE ;    {CCCC(=O)C(OO)C}
+SPC3094 = IGNORE ;    {CCCC(=O)C(OO)C(O)C(=O)C=O}
+SPC3095 = IGNORE ;    {CCCC(=O)C(OO)C(O)C1OC1C=O}
+SPC3096 = IGNORE ;    {CCCC(=O)C(OO)C(O)C=O}
+SPC3097 = IGNORE ;    {CCCC(=O)C(OO)CC(=O)CC}
+SPC3098 = IGNORE ;    {CCCC(=O)C(O[O])C}
+SPC3099 = IGNORE ;    {CCCC(=O)C(O[O])C(O)C(=O)C=O}
+SPC3100 = IGNORE ;    {CCCC(=O)C(O[O])C(O)C1OC1C=O}
+SPC3101 = IGNORE ;    {CCCC(=O)C(O[O])C(O)C=O}
+SPC3102 = IGNORE ;    {CCCC(=O)C(O[O])CC(=O)CC}
+SPC3103 = IGNORE ;    {CCCC(=O)C([O])C}
+SPC3104 = IGNORE ;    {CCCC(=O)C([O])C(O)C(=O)C=O}
+SPC3105 = IGNORE ;    {CCCC(=O)C([O])C(O)C1OC1C=O}
+SPC3106 = IGNORE ;    {CCCC(=O)C([O])C(O)C=O}
+SPC3107 = IGNORE ;    {CCCC(=O)C([O])CC(=O)CC}
+SPC3108 = IGNORE ;    {CCCC(=O)C=CC(=O)C=O}
+SPC3109 = IGNORE ;    {CCCC(=O)C=CC(=O)O}
+SPC3110 = IGNORE ;    {CCCC(=O)C=CC(=O)OO}
+SPC3111 = IGNORE ;    {CCCC(=O)C=CC(=O)OON(=O)=O}
+SPC3112 = IGNORE ;    {CCCC(=O)C=CC(=O)O[O]}
+SPC3113 = IGNORE ;    {CCCC(=O)C=CC(=O)[O]}
+SPC3114 = IGNORE ;    {CCCC(=O)C=CC(O)C=O}
+SPC3115 = IGNORE ;    {CCCC(=O)C=CC(OO)C=O}
+SPC3116 = IGNORE ;    {CCCC(=O)C=CC(O[O])C=O}
+SPC3117 = IGNORE ;    {CCCC(=O)C=CC([O])C=O}
+SPC3118 = IGNORE ;    {CCCC(=O)C=CC1OC1C(=O)O}
+SPC3119 = IGNORE ;    {CCCC(=O)C=CC1OC1C(=O)OO}
+SPC3120 = IGNORE ;    {CCCC(=O)C=CC1OC1C(=O)OON(=O)=O}
+SPC3121 = IGNORE ;    {CCCC(=O)C=CC1OC1C(=O)O[O]}
+SPC3122 = IGNORE ;    {CCCC(=O)C=CC1OC1C=O}
+SPC3123 = IGNORE ;    {CCCC(=O)C=CC=O}
+SPC3124 = IGNORE ;    {CCCC(=O)C=O}
+SPC3125 = IGNORE ;    {CCCC(=O)CC}
+SPC3126 = IGNORE ;    {CCCC(=O)CC(=O)OO}
+SPC3127 = IGNORE ;    {CCCC(=O)CC(=O)OON(=O)=O}
+SPC3128 = IGNORE ;    {CCCC(=O)CC(=O)O[O]}
+SPC3129 = IGNORE ;    {CCCC(=O)CC=O}
+SPC3130 = IGNORE ;    {CCCC(=O)CCC(=O)CC}
+SPC3131 = IGNORE ;    {CCCC(=O)CCO}
+SPC3132 = IGNORE ;    {CCCC(=O)CCOO}
+SPC3133 = IGNORE ;    {CCCC(=O)CCO[O]}
+SPC3134 = IGNORE ;    {CCCC(=O)CC[O]}
+SPC3135 = IGNORE ;    {CCCC(=O)CO}
+SPC3136 = IGNORE ;    {CCCC(=O)CON(=O)=O}
+SPC3137 = IGNORE ;    {CCCC(=O)COO}
+SPC3138 = IGNORE ;    {CCCC(=O)CO[O]}
+SPC3139 = IGNORE ;    {CCCC(=O)C[O]}
+SPC3140 = IGNORE ;    {CCCC(=O)O}
+SPC3141 = IGNORE ;    {CCCC(=O)OC(=O)C}
+SPC3142 = IGNORE ;    {CCCC(=O)OC=O}
+SPC3143 = IGNORE ;    {CCCC(=O)OCC(=O)C}
+SPC3144 = IGNORE ;    {CCCC(=O)OCC(=O)OO}
+SPC3145 = IGNORE ;    {CCCC(=O)OCC(=O)OON(=O)=O}
+SPC3146 = IGNORE ;    {CCCC(=O)OCC(=O)O[O]}
+SPC3147 = IGNORE ;    {CCCC(=O)OCC=O}
+SPC3148 = IGNORE ;    {CCCC(=O)OCCO}
+SPC3149 = IGNORE ;    {CCCC(=O)OCOO}
+SPC3150 = IGNORE ;    {CCCC(=O)OCO[O]}
+SPC3151 = IGNORE ;    {CCCC(=O)OC[O]}
+SPC3152 = IGNORE ;    {CCCC(=O)OO}
+SPC3153 = IGNORE ;    {CCCC(=O)OON(=O)=O}
+SPC3154 = IGNORE ;    {CCCC(=O)O[O]}
+SPC3155 = IGNORE ;    {CCCC(C(=O)C(O)C=O)=CC(=O)O[O]}
+SPC3156 = IGNORE ;    {CCCC(C(=O)C=O)=CC(=O)C=O}
+SPC3157 = IGNORE ;    {CCCC(C(=O)O)=C(N(=O)=O)C=O}
+SPC3158 = IGNORE ;    {CCCC(C(=O)O)=CC=O}
+SPC3159 = IGNORE ;    {CCCC(C(=O)OO)=CC(=O)C=O}
+SPC3160 = IGNORE ;    {CCCC(C(=O)OON(=O)=O)=CC(=O)C=O}
+SPC3161 = IGNORE ;    {CCCC(C(=O)O[O])=CC(=O)C=O}
+SPC3162 = IGNORE ;    {CCCC(C)C}
+SPC3163 = IGNORE ;    {CCCC(C)C(=O)OO}
+SPC3164 = IGNORE ;    {CCCC(C)C(=O)OON(=O)=O}
+SPC3165 = IGNORE ;    {CCCC(C)C(=O)O[O]}
+SPC3166 = IGNORE ;    {CCCC(C)C=O}
+SPC3167 = IGNORE ;    {CCCC(C)CC}
+SPC3168 = IGNORE ;    {CCCC(C)CO}
+SPC3169 = IGNORE ;    {CCCC(C)CON(=O)=O}
+SPC3170 = IGNORE ;    {CCCC(C)COO}
+SPC3171 = IGNORE ;    {CCCC(C)CO[O]}
+SPC3172 = IGNORE ;    {CCCC(C)C[O]}
+SPC3173 = IGNORE ;    {CCCC(C=O)OC(=O)C=O}
+SPC3174 = IGNORE ;    {CCCC(O)(C)C}
+SPC3175 = IGNORE ;    {CCCC(O)(C)CC}
+SPC3176 = IGNORE ;    {CCCC(O)C}
+SPC3177 = IGNORE ;    {CCCC(O)C(=O)C}
+SPC3178 = IGNORE ;    {CCCC(O)C(=O)CC(=O)CC}
+SPC3179 = IGNORE ;    {CCCC(O)C(=O)OO}
+SPC3180 = IGNORE ;    {CCCC(O)C(=O)OON(=O)=O}
+SPC3181 = IGNORE ;    {CCCC(O)C(=O)O[O]}
+SPC3182 = IGNORE ;    {CCCC(O)C(O)C}
+SPC3183 = IGNORE ;    {CCCC(O)C(O)CC(=O)CC}
+SPC3184 = IGNORE ;    {CCCC(O)C(ON(=O)=O)C}
+SPC3185 = IGNORE ;    {CCCC(O)C(ON(=O)=O)CC(=O)CC}
+SPC3186 = IGNORE ;    {CCCC(O)C(OO)C}
+SPC3187 = IGNORE ;    {CCCC(O)C(OO)CC(=O)CC}
+SPC3188 = IGNORE ;    {CCCC(O)C(O[O])C}
+SPC3189 = IGNORE ;    {CCCC(O)C(O[O])CC(=O)CC}
+SPC3190 = IGNORE ;    {CCCC(O)C([O])C}
+SPC3191 = IGNORE ;    {CCCC(O)C([O])CC(=O)CC}
+SPC3192 = IGNORE ;    {CCCC(O)C=O}
+SPC3193 = IGNORE ;    {CCCC(O)CC}
+SPC3194 = IGNORE ;    {CCCC(O)CC(=O)C(OO)C}
+SPC3195 = IGNORE ;    {CCCC(O)CC(=O)C(O[O])C}
+SPC3196 = IGNORE ;    {CCCC(O)CC(=O)C([O])C}
+SPC3197 = IGNORE ;    {CCCC(O)CC(=O)OO}
+SPC3198 = IGNORE ;    {CCCC(O)CC(=O)OON(=O)=O}
+SPC3199 = IGNORE ;    {CCCC(O)CC(=O)O[O]}
+SPC3200 = IGNORE ;    {CCCC(O)CCC(=O)CC}
+SPC3201 = IGNORE ;    {CCCC(O)CCC(O)CC}
+SPC3202 = IGNORE ;    {CCCC(O)CO}
+SPC3203 = IGNORE ;    {CCCC(O)CON(=O)=O}
+SPC3204 = IGNORE ;    {CCCC(O)COO}
+SPC3205 = IGNORE ;    {CCCC(O)CO[O]}
+SPC3206 = IGNORE ;    {CCCC(O)C[O]}
+SPC3207 = IGNORE ;    {CCCC(O)OC(=O)C}
+SPC3208 = IGNORE ;    {CCCC(O)OC=O}
+SPC3209 = IGNORE ;    {CCCC(O)OCC(=O)C}
+SPC3210 = IGNORE ;    {CCCC(O)OCC(O)C}
+SPC3211 = IGNORE ;    {CCCC(O)OCCO}
+SPC3212 = IGNORE ;    {CCCC(ON(=O)=O)(C)C}
+SPC3213 = IGNORE ;    {CCCC(ON(=O)=O)(C)CC}
+SPC3214 = IGNORE ;    {CCCC(ON(=O)=O)C}
+SPC3215 = IGNORE ;    {CCCC(ON(=O)=O)C(=O)C}
+SPC3216 = IGNORE ;    {CCCC(ON(=O)=O)C(=O)O}
+SPC3217 = IGNORE ;    {CCCC(ON(=O)=O)C(=O)OO}
+SPC3218 = IGNORE ;    {CCCC(ON(=O)=O)C(=O)OON(=O)=O}
+SPC3219 = IGNORE ;    {CCCC(ON(=O)=O)C(=O)O[O]}
+SPC3220 = IGNORE ;    {CCCC(ON(=O)=O)C(O)C}
+SPC3221 = IGNORE ;    {CCCC(ON(=O)=O)C(OO)C}
+SPC3222 = IGNORE ;    {CCCC(ON(=O)=O)C(O[O])C}
+SPC3223 = IGNORE ;    {CCCC(ON(=O)=O)C([O])C}
+SPC3224 = IGNORE ;    {CCCC(ON(=O)=O)C=O}
+SPC3225 = IGNORE ;    {CCCC(ON(=O)=O)CC}
+SPC3226 = IGNORE ;    {CCCC(ON(=O)=O)CO}
+SPC3227 = IGNORE ;    {CCCC(ON(=O)=O)COO}
+SPC3228 = IGNORE ;    {CCCC(ON(=O)=O)CO[O]}
+SPC3229 = IGNORE ;    {CCCC(ON(=O)=O)C[O]}
+SPC3230 = IGNORE ;    {CCCC(ON(=O)=O)OC(=O)C}
+SPC3231 = IGNORE ;    {CCCC(ON(=O)=O)OCC(=O)C}
+SPC3232 = IGNORE ;    {CCCC(ON(=O)=O)OCC(O)C}
+SPC3233 = IGNORE ;    {CCCC(ON(=O)=O)OCCO}
+SPC3234 = IGNORE ;    {CCCC(OO)(C)C}
+SPC3235 = IGNORE ;    {CCCC(OO)(C)CC}
+SPC3236 = IGNORE ;    {CCCC(OO)C}
+SPC3237 = IGNORE ;    {CCCC(OO)C(=O)C}
+SPC3238 = IGNORE ;    {CCCC(OO)C(O)C}
+SPC3239 = IGNORE ;    {CCCC(OO)C=O}
+SPC3240 = IGNORE ;    {CCCC(OO)CC}
+SPC3241 = IGNORE ;    {CCCC(OO)CO}
+SPC3242 = IGNORE ;    {CCCC(OO)CON(=O)=O}
+SPC3243 = IGNORE ;    {CCCC(OO)OC(=O)C}
+SPC3244 = IGNORE ;    {CCCC(OO)OC(=O)C(=O)C}
+SPC3245 = IGNORE ;    {CCCC(OO)OC(=O)C(O)C}
+SPC3246 = IGNORE ;    {CCCC(OO)OC(=O)C=O}
+SPC3247 = IGNORE ;    {CCCC(OO)OC=O}
+SPC3248 = IGNORE ;    {CCCC(OO)OCC(=O)C}
+SPC3249 = IGNORE ;    {CCCC(OO)OCC(O)C}
+SPC3250 = IGNORE ;    {CCCC(OO)OCCO}
+SPC3251 = IGNORE ;    {CCCC(O[O])(C)C}
+SPC3252 = IGNORE ;    {CCCC(O[O])(C)CC}
+SPC3253 = IGNORE ;    {CCCC(O[O])C}
+SPC3254 = IGNORE ;    {CCCC(O[O])C(=O)C}
+SPC3255 = IGNORE ;    {CCCC(O[O])C(O)C}
+SPC3256 = IGNORE ;    {CCCC(O[O])C=O}
+SPC3257 = IGNORE ;    {CCCC(O[O])CC}
+SPC3258 = IGNORE ;    {CCCC(O[O])CO}
+SPC3259 = IGNORE ;    {CCCC(O[O])CON(=O)=O}
+SPC3260 = IGNORE ;    {CCCC(O[O])OC(=O)C}
+SPC3261 = IGNORE ;    {CCCC(O[O])OC(=O)C=O}
+SPC3262 = IGNORE ;    {CCCC(O[O])OC=O}
+SPC3263 = IGNORE ;    {CCCC(O[O])OCCO}
+SPC3264 = IGNORE ;    {CCCC([O])(C)C}
+SPC3265 = IGNORE ;    {CCCC([O])(C)CC}
+SPC3266 = IGNORE ;    {CCCC([O])C}
+SPC3267 = IGNORE ;    {CCCC([O])C(=O)C}
+SPC3268 = IGNORE ;    {CCCC([O])C(O)C}
+SPC3269 = IGNORE ;    {CCCC([O])C=O}
+SPC3270 = IGNORE ;    {CCCC([O])CC}
+SPC3271 = IGNORE ;    {CCCC([O])CO}
+SPC3272 = IGNORE ;    {CCCC([O])CON(=O)=O}
+SPC3273 = IGNORE ;    {CCCC([O])OC(=O)C}
+SPC3274 = IGNORE ;    {CCCC([O])OC(=O)C=O}
+SPC3275 = IGNORE ;    {CCCC([O])OC=O}
+SPC3276 = IGNORE ;    {CCCC([O])OCCO}
+SPC3277 = IGNORE ;    {CCCC12C=CC(ON(=O)=O)C(OO1)C2O}
+SPC3278 = IGNORE ;    {CCCC12OOC(C(=C(O)C2(O)OO)N(=O)=O)C1O}
+SPC3279 = IGNORE ;    {CCCC12OOC(C(=C(O)C2(O)OO)N(=O)=O)C1ON(=O)=O}
+SPC3280 = IGNORE ;    {CCCC12OOC(C(=C(O)C2(O)O[O])N(=O)=O)C1O}
+SPC3281 = IGNORE ;    {CCCC12OOC(C(=C(O)C2(O)O[O])N(=O)=O)C1ON(=O)=O}
+SPC3282 = IGNORE ;    {CCCC12OOC(C(=C(O)C2(O)[O])N(=O)=O)C1O}
+SPC3283 = IGNORE ;    {CCCC12OOC(C(=C(O)C2([O])O)N(=O)=O)C1ON(=O)=O}
+SPC3284 = IGNORE ;    {CCCC12OOC(C(OO)C=C1)C2O}
+SPC3285 = IGNORE ;    {CCCC12OOC(C(O[O])C=C1)C2O}
+SPC3286 = IGNORE ;    {CCCC12OOC(C2O)C(=O)C=C1}
+SPC3287 = IGNORE ;    {CCCC12OOC(C2O)C(O)(O)C=C1}
+SPC3288 = IGNORE ;    {CCCC12OOC(C2O)C(O)(OO)C=C1}
+SPC3289 = IGNORE ;    {CCCC12OOC(C2O)C(O)(O[O])C=C1}
+SPC3290 = IGNORE ;    {CCCC12OOC(C2O)C(O)C=C1}
+SPC3291 = IGNORE ;    {CCCC12OOC(C2O)C([O])(O)C=C1}
+SPC3292 = IGNORE ;    {CCCC12OOC(C2O)C([O])C=C1}
+SPC3293 = IGNORE ;    {CCCC12OOC(C2ON(=O)=O)C(O)(O)C=C1}
+SPC3294 = IGNORE ;    {CCCC12OOC(C2ON(=O)=O)C(O)(OO)C=C1}
+SPC3295 = IGNORE ;    {CCCC12OOC(C2ON(=O)=O)C(O)(O[O])C=C1}
+SPC3296 = IGNORE ;    {CCCC12OOC(C2ON(=O)=O)C(O)([O])C=C1}
+SPC3297 = IGNORE ;    {CCCC12OOC(C=C(N(=O)=O)C2(O)OO)(N(=O)=O)C1O}
+SPC3298 = IGNORE ;    {CCCC12OOC(C=C(N(=O)=O)C2(O)OO)(N(=O)=O)C1ON(=O)=O}
+SPC3299 = IGNORE ;    {CCCC12OOC(C=C(N(=O)=O)C2(O)O[O])(N(=O)=O)C1O}
+SPC3300 = IGNORE ;    {CCCC12OOC(C=C(N(=O)=O)C2(O)O[O])(N(=O)=O)C1ON(=O)=O}
+SPC3301 = IGNORE ;    {CCCC12OOC(C=C(N(=O)=O)C2([O])O)(N(=O)=O)C1O}
+SPC3302 = IGNORE ;    {CCCC12OOC(C=C(N(=O)=O)C2([O])O)(N(=O)=O)C1ON(=O)=O}
+SPC3303 = IGNORE ;    {CCCC=C}
+SPC3304 = IGNORE ;    {CCCC=O}
+SPC3305 = IGNORE ;    {CCCCC}
+SPC3306 = IGNORE ;    {CCCCC(=O)C}
+SPC3307 = IGNORE ;    {CCCCC(=O)C(=O)C(OO)C(=O)CC}
+SPC3308 = IGNORE ;    {CCCCC(=O)C(=O)C(O[O])C(=O)CC}
+SPC3309 = IGNORE ;    {CCCCC(=O)C(=O)C([O])C(=O)CC}
+SPC3310 = IGNORE ;    {CCCCC(=O)C(=O)CC(=O)CC}
+SPC3311 = IGNORE ;    {CCCCC(=O)C(O)CC(=O)CC}
+SPC3312 = IGNORE ;    {CCCCC(=O)C(OO)CC(=O)CC}
+SPC3313 = IGNORE ;    {CCCCC(=O)C(O[O])CC(=O)CC}
+SPC3314 = IGNORE ;    {CCCCC(=O)C([O])CC(=O)CC}
+SPC3315 = IGNORE ;    {CCCCC(=O)CC}
+SPC3316 = IGNORE ;    {CCCCC(=O)CCC(=O)CC}
+SPC3317 = IGNORE ;    {CCCCC(=O)CO}
+SPC3318 = IGNORE ;    {CCCCC(=O)CON(=O)=O}
+SPC3319 = IGNORE ;    {CCCCC(=O)O}
+SPC3320 = IGNORE ;    {CCCCC(=O)OO}
+SPC3321 = IGNORE ;    {CCCCC(=O)OON(=O)=O}
+SPC3322 = IGNORE ;    {CCCCC(=O)O[O]}
+SPC3323 = IGNORE ;    {CCCCC(C)C}
+SPC3324 = IGNORE ;    {CCCCC(O)(C)C}
+SPC3325 = IGNORE ;    {CCCCC(O)C}
+SPC3326 = IGNORE ;    {CCCCC(O)C(=O)CC(=O)CC}
+SPC3327 = IGNORE ;    {CCCCC(O)C(=O)OO}
+SPC3328 = IGNORE ;    {CCCCC(O)C(=O)OON(=O)=O}
+SPC3329 = IGNORE ;    {CCCCC(O)C(=O)O[O]}
+SPC3330 = IGNORE ;    {CCCCC(O)C(O)CC(=O)CC}
+SPC3331 = IGNORE ;    {CCCCC(O)C(ON(=O)=O)CC(=O)CC}
+SPC3332 = IGNORE ;    {CCCCC(O)C(OO)CC(=O)CC}
+SPC3333 = IGNORE ;    {CCCCC(O)C(O[O])CC(=O)CC}
+SPC3334 = IGNORE ;    {CCCCC(O)C([O])CC(=O)CC}
+SPC3335 = IGNORE ;    {CCCCC(O)C=O}
+SPC3336 = IGNORE ;    {CCCCC(O)CC}
+SPC3337 = IGNORE ;    {CCCCC(O)CC(=O)C(OO)C}
+SPC3338 = IGNORE ;    {CCCCC(O)CC(=O)C(O[O])C}
+SPC3339 = IGNORE ;    {CCCCC(O)CC(=O)C([O])C}
+SPC3340 = IGNORE ;    {CCCCC(O)CC(=O)OO}
+SPC3341 = IGNORE ;    {CCCCC(O)CC(=O)OON(=O)=O}
+SPC3342 = IGNORE ;    {CCCCC(O)CC(=O)O[O]}
+SPC3343 = IGNORE ;    {CCCCC(O)CCC(=O)CC}
+SPC3344 = IGNORE ;    {CCCCC(O)CCC(O)CC}
+SPC3345 = IGNORE ;    {CCCCC(O)CO}
+SPC3346 = IGNORE ;    {CCCCC(O)CON(=O)=O}
+SPC3347 = IGNORE ;    {CCCCC(O)COO}
+SPC3348 = IGNORE ;    {CCCCC(O)CO[O]}
+SPC3349 = IGNORE ;    {CCCCC(O)C[O]}
+SPC3350 = IGNORE ;    {CCCCC(ON(=O)=O)(C)C}
+SPC3351 = IGNORE ;    {CCCCC(ON(=O)=O)C}
+SPC3352 = IGNORE ;    {CCCCC(ON(=O)=O)C(=O)O}
+SPC3353 = IGNORE ;    {CCCCC(ON(=O)=O)C(=O)OO}
+SPC3354 = IGNORE ;    {CCCCC(ON(=O)=O)C(=O)OON(=O)=O}
+SPC3355 = IGNORE ;    {CCCCC(ON(=O)=O)C(=O)O[O]}
+SPC3356 = IGNORE ;    {CCCCC(ON(=O)=O)C=O}
+SPC3357 = IGNORE ;    {CCCCC(ON(=O)=O)CC}
+SPC3358 = IGNORE ;    {CCCCC(ON(=O)=O)CO}
+SPC3359 = IGNORE ;    {CCCCC(ON(=O)=O)COO}
+SPC3360 = IGNORE ;    {CCCCC(ON(=O)=O)CO[O]}
+SPC3361 = IGNORE ;    {CCCCC(ON(=O)=O)C[O]}
+SPC3362 = IGNORE ;    {CCCCC(OO)(C)C}
+SPC3363 = IGNORE ;    {CCCCC(OO)C}
+SPC3364 = IGNORE ;    {CCCCC(OO)CC}
+SPC3365 = IGNORE ;    {CCCCC(OO)CC(=O)CC}
+SPC3366 = IGNORE ;    {CCCCC(OO)CO}
+SPC3367 = IGNORE ;    {CCCCC(OO)CON(=O)=O}
+SPC3368 = IGNORE ;    {CCCCC(O[O])(C)C}
+SPC3369 = IGNORE ;    {CCCCC(O[O])C}
+SPC3370 = IGNORE ;    {CCCCC(O[O])CC}
+SPC3371 = IGNORE ;    {CCCCC(O[O])CC(=O)CC}
+SPC3372 = IGNORE ;    {CCCCC(O[O])CO}
+SPC3373 = IGNORE ;    {CCCCC(O[O])CON(=O)=O}
+SPC3374 = IGNORE ;    {CCCCC([O])(C)C}
+SPC3375 = IGNORE ;    {CCCCC([O])C}
+SPC3376 = IGNORE ;    {CCCCC([O])CC}
+SPC3377 = IGNORE ;    {CCCCC([O])CC(=O)CC}
+SPC3378 = IGNORE ;    {CCCCC([O])CO}
+SPC3379 = IGNORE ;    {CCCCC([O])CON(=O)=O}
+SPC3380 = IGNORE ;    {CCCCC=C}
+SPC3381 = IGNORE ;    {CCCCC=O}
+SPC3382 = IGNORE ;    {CCCCCC}
+SPC3383 = IGNORE ;    {CCCCCC(=O)C(=O)C(OO)C(=O)CC}
+SPC3384 = IGNORE ;    {CCCCCC(=O)C(=O)C(O[O])C(=O)CC}
+SPC3385 = IGNORE ;    {CCCCCC(=O)C(=O)C([O])C(=O)CC}
+SPC3386 = IGNORE ;    {CCCCCC(=O)C(=O)CC(=O)CC}
+SPC3387 = IGNORE ;    {CCCCCC(=O)C(O)CC(=O)CC}
+SPC3388 = IGNORE ;    {CCCCCC(=O)C(OO)CC(=O)CC}
+SPC3389 = IGNORE ;    {CCCCCC(=O)C(O[O])CC(=O)CC}
+SPC3390 = IGNORE ;    {CCCCCC(=O)C([O])CC(=O)CC}
+SPC3391 = IGNORE ;    {CCCCCC(=O)CC}
+SPC3392 = IGNORE ;    {CCCCCC(=O)CCC(=O)CC}
+SPC3393 = IGNORE ;    {CCCCCC(=O)OO}
+SPC3394 = IGNORE ;    {CCCCCC(=O)OON(=O)=O}
+SPC3395 = IGNORE ;    {CCCCCC(=O)O[O]}
+SPC3396 = IGNORE ;    {CCCCCC(O)C(=O)CC(=O)CC}
+SPC3397 = IGNORE ;    {CCCCCC(O)C(O)CC(=O)CC}
+SPC3398 = IGNORE ;    {CCCCCC(O)C(ON(=O)=O)CC(=O)CC}
+SPC3399 = IGNORE ;    {CCCCCC(O)C(OO)CC(=O)CC}
+SPC3400 = IGNORE ;    {CCCCCC(O)C(O[O])CC(=O)CC}
+SPC3401 = IGNORE ;    {CCCCCC(O)C([O])CC(=O)CC}
+SPC3402 = IGNORE ;    {CCCCCC(O)CC}
+SPC3403 = IGNORE ;    {CCCCCC(O)CC(=O)C(OO)C}
+SPC3404 = IGNORE ;    {CCCCCC(O)CC(=O)C(O[O])C}
+SPC3405 = IGNORE ;    {CCCCCC(O)CC(=O)C([O])C}
+SPC3406 = IGNORE ;    {CCCCCC(O)CC(=O)OO}
+SPC3407 = IGNORE ;    {CCCCCC(O)CC(=O)OON(=O)=O}
+SPC3408 = IGNORE ;    {CCCCCC(O)CC(=O)O[O]}
+SPC3409 = IGNORE ;    {CCCCCC(O)CCC(=O)CC}
+SPC3410 = IGNORE ;    {CCCCCC(O)CCC(O)CC}
+SPC3411 = IGNORE ;    {CCCCCC(O)COO}
+SPC3412 = IGNORE ;    {CCCCCC(O)CO[O]}
+SPC3413 = IGNORE ;    {CCCCCC(O)C[O]}
+SPC3414 = IGNORE ;    {CCCCCC(ON(=O)=O)CC}
+SPC3415 = IGNORE ;    {CCCCCC(OO)CC}
+SPC3416 = IGNORE ;    {CCCCCC(OO)CC(=O)CC}
+SPC3417 = IGNORE ;    {CCCCCC(O[O])CC}
+SPC3418 = IGNORE ;    {CCCCCC(O[O])CC(=O)CC}
+SPC3419 = IGNORE ;    {CCCCCC([O])CC}
+SPC3420 = IGNORE ;    {CCCCCC([O])CC(=O)CC}
+SPC3421 = IGNORE ;    {CCCCCC=O}
+SPC3422 = IGNORE ;    {CCCCCCC}
+SPC3423 = IGNORE ;    {CCCCCCC(=O)C(=O)C(OO)C(=O)CC}
+SPC3424 = IGNORE ;    {CCCCCCC(=O)C(=O)C(O[O])C(=O)CC}
+SPC3425 = IGNORE ;    {CCCCCCC(=O)C(=O)C([O])C(=O)CC}
+SPC3426 = IGNORE ;    {CCCCCCC(=O)C(=O)CC(=O)CC}
+SPC3427 = IGNORE ;    {CCCCCCC(=O)C(O)CC(=O)CC}
+SPC3428 = IGNORE ;    {CCCCCCC(=O)C(OO)CC(=O)CC}
+SPC3429 = IGNORE ;    {CCCCCCC(=O)C(O[O])CC(=O)CC}
+SPC3430 = IGNORE ;    {CCCCCCC(=O)C([O])CC(=O)CC}
+SPC3431 = IGNORE ;    {CCCCCCC(=O)CC}
+SPC3432 = IGNORE ;    {CCCCCCC(=O)CCC(=O)CC}
+SPC3433 = IGNORE ;    {CCCCCCC(=O)O}
+SPC3434 = IGNORE ;    {CCCCCCC(=O)OO}
+SPC3435 = IGNORE ;    {CCCCCCC(=O)OON(=O)=O}
+SPC3436 = IGNORE ;    {CCCCCCC(=O)O[O]}
+SPC3437 = IGNORE ;    {CCCCCCC(O)C(=O)CC(=O)CC}
+SPC3438 = IGNORE ;    {CCCCCCC(O)C(O)CC(=O)CC}
+SPC3439 = IGNORE ;    {CCCCCCC(O)C(ON(=O)=O)CC(=O)CC}
+SPC3440 = IGNORE ;    {CCCCCCC(O)C(OO)CC(=O)CC}
+SPC3441 = IGNORE ;    {CCCCCCC(O)C(O[O])CC(=O)CC}
+SPC3442 = IGNORE ;    {CCCCCCC(O)C([O])CC(=O)CC}
+SPC3443 = IGNORE ;    {CCCCCCC(O)CC}
+SPC3444 = IGNORE ;    {CCCCCCC(O)CC(=O)C(OO)C}
+SPC3445 = IGNORE ;    {CCCCCCC(O)CC(=O)C(O[O])C}
+SPC3446 = IGNORE ;    {CCCCCCC(O)CC(=O)C([O])C}
+SPC3447 = IGNORE ;    {CCCCCCC(O)CC(=O)OO}
+SPC3448 = IGNORE ;    {CCCCCCC(O)CC(=O)OON(=O)=O}
+SPC3449 = IGNORE ;    {CCCCCCC(O)CC(=O)O[O]}
+SPC3450 = IGNORE ;    {CCCCCCC(O)CCC(=O)CC}
+SPC3451 = IGNORE ;    {CCCCCCC(O)CCC(O)CC}
+SPC3452 = IGNORE ;    {CCCCCCC(O)COO}
+SPC3453 = IGNORE ;    {CCCCCCC(O)CO[O]}
+SPC3454 = IGNORE ;    {CCCCCCC(O)C[O]}
+SPC3455 = IGNORE ;    {CCCCCCC(ON(=O)=O)CC}
+SPC3456 = IGNORE ;    {CCCCCCC(ON(=O)=O)CCC(O)CC}
+SPC3457 = IGNORE ;    {CCCCCCC(OO)CC}
+SPC3458 = IGNORE ;    {CCCCCCC(OO)CC(=O)CC}
+SPC3459 = IGNORE ;    {CCCCCCC(OO)CCC(O)CC}
+SPC3460 = IGNORE ;    {CCCCCCC(O[O])CC}
+SPC3461 = IGNORE ;    {CCCCCCC(O[O])CC(=O)CC}
+SPC3462 = IGNORE ;    {CCCCCCC(O[O])CCC(O)CC}
+SPC3463 = IGNORE ;    {CCCCCCC([O])CC}
+SPC3464 = IGNORE ;    {CCCCCCC([O])CC(=O)CC}
+SPC3465 = IGNORE ;    {CCCCCCC([O])CCC(O)CC}
+SPC3466 = IGNORE ;    {CCCCCCC=O}
+SPC3467 = IGNORE ;    {CCCCCCCC}
+SPC3468 = IGNORE ;    {CCCCCCCC(=O)CC}
+SPC3469 = IGNORE ;    {CCCCCCCC(O)CC}
+SPC3470 = IGNORE ;    {CCCCCCCC(O)CC(=O)C(OO)C}
+SPC3471 = IGNORE ;    {CCCCCCCC(O)CC(=O)C(O[O])C}
+SPC3472 = IGNORE ;    {CCCCCCCC(O)CC(=O)C([O])C}
+SPC3473 = IGNORE ;    {CCCCCCCC(O)CC(=O)OO}
+SPC3474 = IGNORE ;    {CCCCCCCC(O)CC(=O)OON(=O)=O}
+SPC3475 = IGNORE ;    {CCCCCCCC(O)CC(=O)O[O]}
+SPC3476 = IGNORE ;    {CCCCCCCC(O)COO}
+SPC3477 = IGNORE ;    {CCCCCCCC(O)CO[O]}
+SPC3478 = IGNORE ;    {CCCCCCCC(O)C[O]}
+SPC3479 = IGNORE ;    {CCCCCCCC(ON(=O)=O)CC}
+SPC3480 = IGNORE ;    {CCCCCCCC(OO)CC}
+SPC3481 = IGNORE ;    {CCCCCCCC(OO)CC(=O)CC}
+SPC3482 = IGNORE ;    {CCCCCCCC(O[O])CC}
+SPC3483 = IGNORE ;    {CCCCCCCC(O[O])CC(=O)CC}
+SPC3484 = IGNORE ;    {CCCCCCCC([O])CC}
+SPC3485 = IGNORE ;    {CCCCCCCC([O])CC(=O)CC}
+SPC3486 = IGNORE ;    {CCCCCCCCC}
+SPC3487 = IGNORE ;    {CCCCCCCCC(=O)CC}
+SPC3488 = IGNORE ;    {CCCCCCCCC(O)CC}
+SPC3489 = IGNORE ;    {CCCCCCCCC(ON(=O)=O)CC}
+SPC3490 = IGNORE ;    {CCCCCCCCC(OO)CC}
+SPC3491 = IGNORE ;    {CCCCCCCCC(O[O])CC}
+SPC3492 = IGNORE ;    {CCCCCCCCC([O])CC}
+SPC3493 = IGNORE ;    {CCCCCCCCCC}
+SPC3494 = IGNORE ;    {CCCCCCCCCC(=O)CC}
+SPC3495 = IGNORE ;    {CCCCCCCCCC(O)CC}
+SPC3496 = IGNORE ;    {CCCCCCCCCC(ON(=O)=O)CC}
+SPC3497 = IGNORE ;    {CCCCCCCCCC(OO)CC}
+SPC3498 = IGNORE ;    {CCCCCCCCCC(O[O])CC}
+SPC3499 = IGNORE ;    {CCCCCCCCCC([O])CC}
+SPC3500 = IGNORE ;    {CCCCCCCCCCC}
+SPC3501 = IGNORE ;    {CCCCCCCCCCCC}
+SPC3502 = IGNORE ;    {CCCCCCO}
+SPC3503 = IGNORE ;    {CCCCCCON(=O)=O}
+SPC3504 = IGNORE ;    {CCCCCCOO}
+SPC3505 = IGNORE ;    {CCCCCCO[O]}
+SPC3506 = IGNORE ;    {CCCCCC[O]}
+SPC3507 = IGNORE ;    {CCCCCO}
+SPC3508 = IGNORE ;    {CCCCCON(=O)=O}
+SPC3509 = IGNORE ;    {CCCCCOO}
+SPC3510 = IGNORE ;    {CCCCCO[O]}
+SPC3511 = IGNORE ;    {CCCCC[O]}
+SPC3512 = IGNORE ;    {CCCCO}
+SPC3513 = IGNORE ;    {CCCCOC(=O)C}
+SPC3514 = IGNORE ;    {CCCCOC(=O)C(=O)C}
+SPC3515 = IGNORE ;    {CCCCOC(=O)C(O)C}
+SPC3516 = IGNORE ;    {CCCCOC(=O)C=O}
+SPC3517 = IGNORE ;    {CCCCOC(=O)CO}
+SPC3518 = IGNORE ;    {CCCCOC(O)C(=O)C}
+SPC3519 = IGNORE ;    {CCCCOC(O)CO}
+SPC3520 = IGNORE ;    {CCCCOC(ON(=O)=O)CO}
+SPC3521 = IGNORE ;    {CCCCOC(OO)C(=O)C}
+SPC3522 = IGNORE ;    {CCCCOC(OO)CO}
+SPC3523 = IGNORE ;    {CCCCOC(O[O])C(=O)C}
+SPC3524 = IGNORE ;    {CCCCOC(O[O])C(O)C}
+SPC3525 = IGNORE ;    {CCCCOC(O[O])CO}
+SPC3526 = IGNORE ;    {CCCCOC([O])C(=O)C}
+SPC3527 = IGNORE ;    {CCCCOC([O])C(O)C}
+SPC3528 = IGNORE ;    {CCCCOC([O])CO}
+SPC3529 = IGNORE ;    {CCCCOC=O}
+SPC3530 = IGNORE ;    {CCCCOCC(=O)C}
+SPC3531 = IGNORE ;    {CCCCOCC(=O)O}
+SPC3532 = IGNORE ;    {CCCCOCC(=O)OO}
+SPC3533 = IGNORE ;    {CCCCOCC(=O)OON(=O)=O}
+SPC3534 = IGNORE ;    {CCCCOCC(=O)O[O]}
+SPC3535 = IGNORE ;    {CCCCOCC(O)C}
+SPC3536 = IGNORE ;    {CCCCOCC=O}
+SPC3537 = IGNORE ;    {CCCCOCCO}
+SPC3538 = IGNORE ;    {CCCCOCO}
+SPC3539 = IGNORE ;    {CCCCOCOO}
+SPC3540 = IGNORE ;    {CCCCOCO[O]}
+SPC3541 = IGNORE ;    {CCCCOC[O]}
+SPC3542 = IGNORE ;    {CCCCON(=O)=O}
+SPC3543 = IGNORE ;    {CCCCOO}
+SPC3544 = IGNORE ;    {CCCCO[O]}
+SPC3545 = IGNORE ;    {CCCC[O]}
+SPC3546 = IGNORE ;    {CCCL}
+SPC3547 = IGNORE ;    {CCCO}
+SPC3548 = IGNORE ;    {CCCOC(=O)C}
+SPC3549 = IGNORE ;    {CCCON(=O)=O}
+SPC3550 = IGNORE ;    {CCCOO}
+SPC3551 = IGNORE ;    {CCCO[O]}
+SPC3552 = IGNORE ;    {CCC[O]}
+SPC3553 = IGNORE ;    {CCC\C=C\C}
+SPC3554 = IGNORE ;    {CCL}
+SPC3555 = IGNORE ;    {CCO}
+SPC3556 = IGNORE ;    {CCOC(=O)C}
+SPC3557 = IGNORE ;    {CCOC(=O)C=O}
+SPC3558 = IGNORE ;    {CCOC(=O)CO}
+SPC3559 = IGNORE ;    {CCOC(=O)COO}
+SPC3560 = IGNORE ;    {CCOC(=O)CO[O]}
+SPC3561 = IGNORE ;    {CCOC(=O)C[O]}
+SPC3562 = IGNORE ;    {CCOC(C)(C)C}
+SPC3563 = IGNORE ;    {CCOC(C)(C)C(=O)OO}
+SPC3564 = IGNORE ;    {CCOC(C)(C)C(=O)OON(=O)=O}
+SPC3565 = IGNORE ;    {CCOC(C)(C)C(=O)O[O]}
+SPC3566 = IGNORE ;    {CCOC(C)(C)C=O}
+SPC3567 = IGNORE ;    {CCOC(C)(C)CO}
+SPC3568 = IGNORE ;    {CCOC(C)(C)CON(=O)=O}
+SPC3569 = IGNORE ;    {CCOC(C)(C)COO}
+SPC3570 = IGNORE ;    {CCOC(C)(C)CO[O]}
+SPC3571 = IGNORE ;    {CCOC(C)(C)C[O]}
+SPC3572 = IGNORE ;    {CCOC(O)(C)C}
+SPC3573 = IGNORE ;    {CCOC(O)CO}
+SPC3574 = IGNORE ;    {CCOC(ON(=O)=O)CO}
+SPC3575 = IGNORE ;    {CCOC(OO)(C)C}
+SPC3576 = IGNORE ;    {CCOC(OO)CO}
+SPC3577 = IGNORE ;    {CCOC(O[O])(C)C}
+SPC3578 = IGNORE ;    {CCOC(O[O])C}
+SPC3579 = IGNORE ;    {CCOC(O[O])CO}
+SPC3580 = IGNORE ;    {CCOC([O])(C)C}
+SPC3581 = IGNORE ;    {CCOC([O])C}
+SPC3582 = IGNORE ;    {CCOC([O])CO}
+SPC3583 = IGNORE ;    {CCOC=O}
+SPC3584 = IGNORE ;    {CCOCC}
+SPC3585 = IGNORE ;    {CCOCC(=O)O}
+SPC3586 = IGNORE ;    {CCOCC(=O)OO}
+SPC3587 = IGNORE ;    {CCOCC(=O)OON(=O)=O}
+SPC3588 = IGNORE ;    {CCOCC(=O)O[O]}
+SPC3589 = IGNORE ;    {CCOCC=O}
+SPC3590 = IGNORE ;    {CCOCCO}
+SPC3591 = IGNORE ;    {CCOCCON(=O)=O}
+SPC3592 = IGNORE ;    {CCOCCOO}
+SPC3593 = IGNORE ;    {CCOCCO[O]}
+SPC3594 = IGNORE ;    {CCOCC[O]}
+SPC3595 = IGNORE ;    {CCOCN(=O)=O}
+SPC3596 = IGNORE ;    {CCOCO}
+SPC3597 = IGNORE ;    {CCOCOO}
+SPC3598 = IGNORE ;    {CCOCO[O]}
+SPC3599 = IGNORE ;    {CCOC[O]}
+SPC3600 = IGNORE ;    {CCON(=O)=O}
+SPC3601 = IGNORE ;    {CCOO}
+SPC3602 = IGNORE ;    {CCO[O]}
+SPC3603 = IGNORE ;    {CC[O]}
+SPC3604 = IGNORE ;    {CC\C=C\C}
+SPC3605 = IGNORE ;    {CCc(c1)c(O)c(C)cc1CC}
+SPC3606 = IGNORE ;    {CCc(c1)c(OO)c(O)cc1C}
+SPC3607 = IGNORE ;    {CCc(c1)c(O[O])c(O)cc1C}
+SPC3608 = IGNORE ;    {CCc(c1)c([O])c(C)cc1CC}
+SPC3609 = IGNORE ;    {CCc(c1)c([O])c(O)cc1C}
+SPC3610 = IGNORE ;    {CCc(c1)cc(C)cc1CC}
+SPC3611 = IGNORE ;    {CCc1c(O)c(N(=O)=O)cc(N(=O)=O)c1C}
+SPC3612 = IGNORE ;    {CCc1c(O)c(N(=O)=O)ccc1C}
+SPC3613 = IGNORE ;    {CCc1c(O)c(O)c(N(=O)=O)cc1C}
+SPC3614 = IGNORE ;    {CCc1cc(C)cc(c1)C(=O)C=O}
+SPC3615 = IGNORE ;    {CCc1cc(C)cc(c1)C(=O)CO}
+SPC3616 = IGNORE ;    {CCc1cc(C)cc(c1)C(=O)COO}
+SPC3617 = IGNORE ;    {CCc1cc(C)cc(c1)C(=O)CO[O]}
+SPC3618 = IGNORE ;    {CCc1cc(C)cc(c1)C(=O)C[O]}
+SPC3619 = IGNORE ;    {CL}
+SPC3620 = IGNORE ;    {CL/C=C/CL}
+SPC3621 = IGNORE ;    {CL/C=C\CL}
+SPC3622 = IGNORE ;    {CLC(CL)(CL)C(=O)OO}
+SPC3623 = IGNORE ;    {CLC(CL)(CL)C(=O)O[O]}
+SPC3624 = IGNORE ;    {CLC(CL)(CL)C=O}
+SPC3625 = IGNORE ;    {CLC(CL)(CL)COO}
+SPC3626 = IGNORE ;    {CLC(CL)(CL)CO[O]}
+SPC3627 = IGNORE ;    {CLC(CL)(CL)C[O]}
+SPC3628 = IGNORE ;    {CLC(CL)=C}
+SPC3629 = IGNORE ;    {CLC(CL)=C(CL)CL}
+SPC3630 = IGNORE ;    {CLC(CL)=CCL}
+SPC3631 = IGNORE ;    {CLC(CL)C(=O)CL}
+SPC3632 = IGNORE ;    {CLC(CL)C(=O)O}
+SPC3633 = IGNORE ;    {CLC(CL)C(=O)OO}
+SPC3634 = IGNORE ;    {CLC(CL)C(=O)O[O]}
+SPC3635 = IGNORE ;    {CLC(CL)C(CL)(CL)OO}
+SPC3636 = IGNORE ;    {CLC(CL)C(CL)(CL)O[O]}
+SPC3637 = IGNORE ;    {CLC(CL)C(CL)(CL)[O]}
+SPC3638 = IGNORE ;    {CLC(CL)C(CL)CL}
+SPC3639 = IGNORE ;    {CLC(CL)C(CL)OO}
+SPC3640 = IGNORE ;    {CLC(CL)C(CL)O[O]}
+SPC3641 = IGNORE ;    {CLC(CL)C(CL)[O]}
+SPC3642 = IGNORE ;    {CLC(CL)C(O)(CL)CL}
+SPC3643 = IGNORE ;    {CLC(CL)C(O)CL}
+SPC3644 = IGNORE ;    {CLC(CL)C=O}
+SPC3645 = IGNORE ;    {CLC(CL)CCL}
+SPC3646 = IGNORE ;    {CLC(CL)CL}
+SPC3647 = IGNORE ;    {CLC(CL)COO}
+SPC3648 = IGNORE ;    {CLC(CL)CO[O]}
+SPC3649 = IGNORE ;    {CLC(CL)C[O]}
+SPC3650 = IGNORE ;    {CLC(ON(=O)=O)C=O}
+SPC3651 = IGNORE ;    {CLC(ON(=O)=O)COO}
+SPC3652 = IGNORE ;    {CLC(ON(=O)=O)CO[O]}
+SPC3653 = IGNORE ;    {CLC(ON(=O)=O)C[O]}
+SPC3654 = IGNORE ;    {CLC=C}
+SPC3655 = IGNORE ;    {CLCC(=O)CL}
+SPC3656 = IGNORE ;    {CLCC(=O)O}
+SPC3657 = IGNORE ;    {CLCC(=O)OO}
+SPC3658 = IGNORE ;    {CLCC(=O)OON(=O)=O}
+SPC3659 = IGNORE ;    {CLCC(=O)O[O]}
+SPC3660 = IGNORE ;    {CLCC(CL)(CL)OO}
+SPC3661 = IGNORE ;    {CLCC(CL)(CL)O[O]}
+SPC3662 = IGNORE ;    {CLCC(CL)(CL)[O]}
+SPC3663 = IGNORE ;    {CLCC(CL)C(=O)O}
+SPC3664 = IGNORE ;    {CLCC(CL)C(=O)OO}
+SPC3665 = IGNORE ;    {CLCC(CL)C(=O)OON(=O)=O}
+SPC3666 = IGNORE ;    {CLCC(CL)C(=O)O[O]}
+SPC3667 = IGNORE ;    {CLCC(CL)C=O}
+SPC3668 = IGNORE ;    {CLCC(CL)COO}
+SPC3669 = IGNORE ;    {CLCC(CL)CO[O]}
+SPC3670 = IGNORE ;    {CLCC(CL)C[O]}
+SPC3671 = IGNORE ;    {CLCC(CL)OO}
+SPC3672 = IGNORE ;    {CLCC(CL)O[O]}
+SPC3673 = IGNORE ;    {CLCC(CL)[O]}
+SPC3674 = IGNORE ;    {CLCC(O)(CL)CL}
+SPC3675 = IGNORE ;    {CLCC(O)CL}
+SPC3676 = IGNORE ;    {CLCC=O}
+SPC3677 = IGNORE ;    {CLCCCL}
+SPC3678 = IGNORE ;    {CLCCL}
+SPC3679 = IGNORE ;    {CLCCOO}
+SPC3680 = IGNORE ;    {CLCCO[O]}
+SPC3681 = IGNORE ;    {CLCC[O]}
+SPC3682 = IGNORE ;    {CLCOO}
+SPC3683 = IGNORE ;    {CLCO[O]}
+SPC3684 = IGNORE ;    {CLC[O]}
+SPC3685 = IGNORE ;    {CO}
+SPC3686 = IGNORE ;    {COC}
+SPC3687 = IGNORE ;    {COC(=O)C=O}
+SPC3688 = IGNORE ;    {COC(=O)CC(=O)OO}
+SPC3689 = IGNORE ;    {COC(=O)CC(=O)O[O]}
+SPC3690 = IGNORE ;    {COC(=O)CC=O}
+SPC3691 = IGNORE ;    {COC(=O)CCC(=O)C(C)(C)CC=O}
+SPC3692 = IGNORE ;    {COC(=O)CCC(=O)OO}
+SPC3693 = IGNORE ;    {COC(=O)CCC(=O)O[O]}
+SPC3694 = IGNORE ;    {COC(=O)CCC(O)C(C)(C)CC=O}
+SPC3695 = IGNORE ;    {COC(=O)CCC(OO)C(C)(C)CC=O}
+SPC3696 = IGNORE ;    {COC(=O)CCC(O[O])C(C)(C)CC=O}
+SPC3697 = IGNORE ;    {COC(=O)CCC([O])C(C)(C)CC=O}
+SPC3698 = IGNORE ;    {COC(=O)CCC1C(=O)CC1(C)C}
+SPC3699 = IGNORE ;    {COC(=O)CCC1C(C(=O)O)CC1(C)C}
+SPC3700 = IGNORE ;    {COC(=O)CCC1C(C(=O)OO)CC1(C)C}
+SPC3701 = IGNORE ;    {COC(=O)CCC1C(C(=O)O[O])CC1(C)C}
+SPC3702 = IGNORE ;    {COC(=O)CCC1C(CC1(C)C)C(=O)C(=O)CC=O}
+SPC3703 = IGNORE ;    {COC(=O)CCC1C(CC1(C)C)C(=O)C(O)CC=O}
+SPC3704 = IGNORE ;    {COC(=O)CCC1C(CC1(C)C)C(=O)C(OO)CC=O}
+SPC3705 = IGNORE ;    {COC(=O)CCC1C(CC1(C)C)C(=O)C(O[O])CC=O}
+SPC3706 = IGNORE ;    {COC(=O)CCC1C(CC1(C)C)C(=O)C([O])CC=O}
+SPC3707 = IGNORE ;    {COC(=O)CCC1C(CC1(C)C)C(=O)CCC=O}
+SPC3708 = IGNORE ;    {COC(=O)CCC1C(CC1(C)C)C(=O)OO[N+](=O)[O-]}
+SPC3709 = IGNORE ;    {COC(=O)CCC1C(CC1(C)C)C(CCC=O)=C}
+SPC3710 = IGNORE ;    {COC(=O)CCC1C(CC1(C)C)C(O)(CO)CCC=O}
+SPC3711 = IGNORE ;    {COC(=O)CCC1C(CC1(C)C)C(OO)(CO)CCC=O}
+SPC3712 = IGNORE ;    {COC(=O)CCC1C(CC1(C)C)C(O[O])(CO)CCC=O}
+SPC3713 = IGNORE ;    {COC(=O)CCC1C(CC1(C)C)C([O])(CO)CCC=O}
+SPC3714 = IGNORE ;    {COC(=O)CCC1C(O)CC1(C)C}
+SPC3715 = IGNORE ;    {COC(=O)CCC1C(OO)CC1(C)C}
+SPC3716 = IGNORE ;    {COC(=O)CCC1C(O[N+](=O)[O-])CC1(C)C}
+SPC3717 = IGNORE ;    {COC(=O)CCC1C(O[O])CC1(C)C}
+SPC3718 = IGNORE ;    {COC(=O)CCC1C([O])CC1(C)C}
+SPC3719 = IGNORE ;    {COC(=O)CCC=O}
+SPC3720 = IGNORE ;    {COC(=O)CCOO}
+SPC3721 = IGNORE ;    {COC(=O)CCO[O]}
+SPC3722 = IGNORE ;    {COC(=O)CC[O]}
+SPC3723 = IGNORE ;    {COC(=O)CO}
+SPC3724 = IGNORE ;    {COC(=O)COO}
+SPC3725 = IGNORE ;    {COC(=O)CO[O]}
+SPC3726 = IGNORE ;    {COC(=O)C[O]}
+SPC3727 = IGNORE ;    {COC(=O)OC}
+SPC3728 = IGNORE ;    {COC(=O)OC=O}
+SPC3729 = IGNORE ;    {COC(=O)OCO}
+SPC3730 = IGNORE ;    {COC(=O)OCON(=O)=O}
+SPC3731 = IGNORE ;    {COC(=O)OCOO}
+SPC3732 = IGNORE ;    {COC(=O)OCO[O]}
+SPC3733 = IGNORE ;    {COC(=O)OC[O]}
+SPC3734 = IGNORE ;    {COC(C)(C)C}
+SPC3735 = IGNORE ;    {COC(C)(C)C(=O)O}
+SPC3736 = IGNORE ;    {COC(C)(C)C(=O)OO}
+SPC3737 = IGNORE ;    {COC(C)(C)C(=O)OON(=O)=O}
+SPC3738 = IGNORE ;    {COC(C)(C)C(=O)O[O]}
+SPC3739 = IGNORE ;    {COC(C)(C)C=O}
+SPC3740 = IGNORE ;    {COC(C)(C)CO}
+SPC3741 = IGNORE ;    {COC(C)(C)CON(=O)=O}
+SPC3742 = IGNORE ;    {COC(C)(C)COO}
+SPC3743 = IGNORE ;    {COC(C)(C)CO[O]}
+SPC3744 = IGNORE ;    {COC(C)(C)C[O]}
+SPC3745 = IGNORE ;    {COC(O)(C)C}
+SPC3746 = IGNORE ;    {COC(O)CO}
+SPC3747 = IGNORE ;    {COC(O)OC}
+SPC3748 = IGNORE ;    {COC(O)OC=O}
+SPC3749 = IGNORE ;    {COC(ON(=O)=O)CO}
+SPC3750 = IGNORE ;    {COC(ON(=O)=O)OC}
+SPC3751 = IGNORE ;    {COC(ON(=O)=O)OC=O}
+SPC3752 = IGNORE ;    {COC(OO)(C)C}
+SPC3753 = IGNORE ;    {COC(OO)CO}
+SPC3754 = IGNORE ;    {COC(OO)OC}
+SPC3755 = IGNORE ;    {COC(OO)OC=O}
+SPC3756 = IGNORE ;    {COC(O[O])(C)C}
+SPC3757 = IGNORE ;    {COC(O[O])C(=O)C}
+SPC3758 = IGNORE ;    {COC(O[O])CO}
+SPC3759 = IGNORE ;    {COC(O[O])OC}
+SPC3760 = IGNORE ;    {COC(O[O])OC=O}
+SPC3761 = IGNORE ;    {COC([O])(C)C}
+SPC3762 = IGNORE ;    {COC([O])C(=O)C}
+SPC3763 = IGNORE ;    {COC([O])CO}
+SPC3764 = IGNORE ;    {COC([O])OC}
+SPC3765 = IGNORE ;    {COC([O])OC=O}
+SPC3766 = IGNORE ;    {COC=O}
+SPC3767 = IGNORE ;    {COCC(=O)O}
+SPC3768 = IGNORE ;    {COCC(=O)OO}
+SPC3769 = IGNORE ;    {COCC(=O)OON(=O)=O}
+SPC3770 = IGNORE ;    {COCC(=O)O[O]}
+SPC3771 = IGNORE ;    {COCC=O}
+SPC3772 = IGNORE ;    {COCCO}
+SPC3773 = IGNORE ;    {COCO}
+SPC3774 = IGNORE ;    {COCOC}
+SPC3775 = IGNORE ;    {COCOC=O}
+SPC3776 = IGNORE ;    {COCOCO}
+SPC3777 = IGNORE ;    {COCOCON(=O)=O}
+SPC3778 = IGNORE ;    {COCOCOO}
+SPC3779 = IGNORE ;    {COCOCO[O]}
+SPC3780 = IGNORE ;    {COCOC[O]}
+SPC3781 = IGNORE ;    {COCON(=O)=O}
+SPC3782 = IGNORE ;    {COCOO}
+SPC3783 = IGNORE ;    {COCO[O]}
+SPC3784 = IGNORE ;    {COC[O]}
+SPC3785 = IGNORE ;    {CON(=O)=O}
+SPC3786 = IGNORE ;    {COO}
+SPC3787 = IGNORE ;    {COON(=O)=O}
+SPC3788 = IGNORE ;    {CO[O]}
+SPC3789 = IGNORE ;    {CS(=O)(=O)C}
+SPC3790 = IGNORE ;    {CS(=O)(=O)O}
+SPC3791 = IGNORE ;    {CS(=O)(=O)[O]}
+SPC3792 = IGNORE ;    {CS(=O)C}
+SPC3793 = IGNORE ;    {CS(=O)O}
+SPC3794 = IGNORE ;    {CS(=O)OO}
+SPC3795 = IGNORE ;    {CS(=O)O[O]}
+SPC3796 = IGNORE ;    {CSC}
+SPC3797 = IGNORE ;    {CSC=O}
+SPC3798 = IGNORE ;    {CSCO}
+SPC3799 = IGNORE ;    {CSCOO}
+SPC3800 = IGNORE ;    {CSCO[O]}
+SPC3801 = IGNORE ;    {CSC[O]}
+SPC3802 = IGNORE ;    {CSO[O]}
+SPC3803 = IGNORE ;    {CS[O]}
+SPC3804 = IGNORE ;    {C[O]}
+SPC3805 = IGNORE ;    {C[S]}
+SPC3806 = IGNORE ;    {C[S](=O)=O}
+SPC3807 = IGNORE ;    {Cc1c(N(=O)=O)c(N(=O)=O)c(C)c(O)c1C}
+SPC3808 = IGNORE ;    {Cc1c(N(=O)=O)cc(C)c(O)c1C}
+SPC3809 = IGNORE ;    {Cc1c(N(=O)=O)cc(C)c(OO)c1C}
+SPC3810 = IGNORE ;    {Cc1c(N(=O)=O)cc(C)c(O[O])c1C}
+SPC3811 = IGNORE ;    {Cc1c(N(=O)=O)cc(C)c([O])c1C}
+SPC3812 = IGNORE ;    {Cc1c(O)c(C)ccc1C}
+SPC3813 = IGNORE ;    {Cc1c(O)c(N(=O)=O)c(N(=O)=O)c(C)c1C}
+SPC3814 = IGNORE ;    {Cc1c(O)c(N(=O)=O)cc(N(=O)=O)c1C}
+SPC3815 = IGNORE ;    {Cc1c(O)c(N(=O)=O)ccc1C}
+SPC3816 = IGNORE ;    {Cc1c(O)c(O)c(C)c(N(=O)=O)c1C}
+SPC3817 = IGNORE ;    {Cc1c(O)c(O)c(C)cc1C}
+SPC3818 = IGNORE ;    {Cc1c(O)c(O)c(N(=O)=O)c(C)c1C}
+SPC3819 = IGNORE ;    {Cc1c(O)c(O)c(N(=O)=O)cc1C}
+SPC3820 = IGNORE ;    {Cc1c(OO)c(O)c(C)cc1C}
+SPC3821 = IGNORE ;    {Cc1c(OO)cc(C)cc1C}
+SPC3822 = IGNORE ;    {Cc1c(O[O])c(O)c(C)cc1C}
+SPC3823 = IGNORE ;    {Cc1c(O[O])cc(C)cc1C}
+SPC3824 = IGNORE ;    {Cc1c([O])c(C)ccc1C}
+SPC3825 = IGNORE ;    {Cc1c([O])c(O)c(C)cc1C}
+SPC3826 = IGNORE ;    {Cc1cc(N(=O)=O)c(O)c(C)c1C}
+SPC3827 = IGNORE ;    {Cc1cc(N(=O)=O)c(OO)c(C)c1C}
+SPC3828 = IGNORE ;    {Cc1cc(N(=O)=O)c(OO)c(c1)CC}
+SPC3829 = IGNORE ;    {Cc1cc(N(=O)=O)c(O[O])c(C)c1C}
+SPC3830 = IGNORE ;    {Cc1cc(N(=O)=O)c(O[O])c(c1)CC}
+SPC3831 = IGNORE ;    {Cc1cc(N(=O)=O)c([O])c(C)c1C}
+SPC3832 = IGNORE ;    {Cc1cc(N(=O)=O)c([O])c(c1)CC}
+SPC3833 = IGNORE ;    {Cc1cc(O)c(N(=O)=O)cc1C}
+SPC3834 = IGNORE ;    {Cc1cc(O)c(O)c(C)c1C}
+SPC3835 = IGNORE ;    {Cc1cc(O)c(OO)c(C)c1C}
+SPC3836 = IGNORE ;    {Cc1cc(O)c(O[O])c(C)c1C}
+SPC3837 = IGNORE ;    {Cc1cc(O)c([O])c(C)c1C}
+SPC3838 = IGNORE ;    {Cc1ccc(C(=O)O)cc1}
+SPC3839 = IGNORE ;    {Cc1ccc(C(=O)O)cc1C}
+SPC3840 = IGNORE ;    {Cc1ccc(C(=O)OO)cc1}
+SPC3841 = IGNORE ;    {Cc1ccc(C(=O)OO)cc1C}
+SPC3842 = IGNORE ;    {Cc1ccc(C(=O)OON(=O)=O)cc1}
+SPC3843 = IGNORE ;    {Cc1ccc(C(=O)O[O])cc1}
+SPC3844 = IGNORE ;    {Cc1ccc(C(=O)O[O])cc1C}
+SPC3845 = IGNORE ;    {Cc1ccc(C)cc1C}
+SPC3846 = IGNORE ;    {Cc1ccc(C=O)cc1}
+SPC3847 = IGNORE ;    {Cc1ccc(C=O)cc1C}
+SPC3848 = IGNORE ;    {Cc1ccc(CO)cc1}
+SPC3849 = IGNORE ;    {Cc1ccc(CO)cc1C}
+SPC3850 = IGNORE ;    {Cc1ccc(CON(=O)=O)cc1}
+SPC3851 = IGNORE ;    {Cc1ccc(CON(=O)=O)cc1C}
+SPC3852 = IGNORE ;    {Cc1ccc(COO)cc1}
+SPC3853 = IGNORE ;    {Cc1ccc(COO)cc1C}
+SPC3854 = IGNORE ;    {Cc1ccc(CO[O])cc1}
+SPC3855 = IGNORE ;    {Cc1ccc(CO[O])cc1C}
+SPC3856 = IGNORE ;    {Cc1ccc(C[O])cc1}
+SPC3857 = IGNORE ;    {Cc1ccc(C[O])cc1C}
+SPC3858 = IGNORE ;    {Cc1ccc(N(=O)=O)c(OO)c1C}
+SPC3859 = IGNORE ;    {Cc1ccc(N(=O)=O)c(OO)c1CC}
+SPC3860 = IGNORE ;    {Cc1ccc(N(=O)=O)c(O[O])c1C}
+SPC3861 = IGNORE ;    {Cc1ccc(N(=O)=O)c(O[O])c1CC}
+SPC3862 = IGNORE ;    {Cc1ccc(N(=O)=O)c([O])c1C}
+SPC3863 = IGNORE ;    {Cc1ccc(N(=O)=O)c([O])c1CC}
+SPC3864 = IGNORE ;    {Cc1ccc(O)c(C)c1C}
+SPC3865 = IGNORE ;    {Cc1ccc(O)c(O)c1C}
+SPC3866 = IGNORE ;    {Cc1ccc(O)c(O)c1CC}
+SPC3867 = IGNORE ;    {Cc1ccc(O)c(OO)c1C}
+SPC3868 = IGNORE ;    {Cc1ccc(O)c(OO)c1CC}
+SPC3869 = IGNORE ;    {Cc1ccc(O)c(O[O])c1C}
+SPC3870 = IGNORE ;    {Cc1ccc(O)c(O[O])c1CC}
+SPC3871 = IGNORE ;    {Cc1ccc(O)c([O])c1C}
+SPC3872 = IGNORE ;    {Cc1ccc(O)c([O])c1CC}
+SPC3873 = IGNORE ;    {Cc1ccc(OO)c(C)c1C}
+SPC3874 = IGNORE ;    {Cc1ccc(OO)cc1C}
+SPC3875 = IGNORE ;    {Cc1ccc(O[O])c(C)c1C}
+SPC3876 = IGNORE ;    {Cc1ccc(O[O])cc1C}
+SPC3877 = IGNORE ;    {Cc1ccc([O])c(C)c1C}
+SPC3878 = IGNORE ;    {Cc1ccc([O])cc1C}
+SPC3879 = IGNORE ;    {Cc1cccc(C(=O)O)c1C}
+SPC3880 = IGNORE ;    {Cc1cccc(C(=O)OO)c1C}
+SPC3881 = IGNORE ;    {Cc1cccc(C(=O)O[O])c1C}
+SPC3882 = IGNORE ;    {Cc1cccc(C)c1C}
+SPC3883 = IGNORE ;    {Cc1cccc(C=O)c1C}
+SPC3884 = IGNORE ;    {Cc1cccc(CO)c1C}
+SPC3885 = IGNORE ;    {Cc1cccc(CON(=O)=O)c1C}
+SPC3886 = IGNORE ;    {Cc1cccc(COO)c1C}
+SPC3887 = IGNORE ;    {Cc1cccc(CO[O])c1C}
+SPC3888 = IGNORE ;    {Cc1cccc(C[O])c1C}
+SPC3889 = IGNORE ;    {Cc1cccc(O)c1C}
+SPC3890 = IGNORE ;    {Cc1cccc(O)c1CC}
+SPC3891 = IGNORE ;    {Cc1cccc(OO)c1C}
+SPC3892 = IGNORE ;    {Cc1cccc(OO)c1CC}
+SPC3893 = IGNORE ;    {Cc1cccc(O[O])c1C}
+SPC3894 = IGNORE ;    {Cc1cccc(O[O])c1CC}
+SPC3895 = IGNORE ;    {Cc1cccc([O])c1C}
+SPC3896 = IGNORE ;    {Cc1cccc([O])c1CC}
+SPC3897 = IGNORE ;    {Cc1cccc(c1)C(=O)O}
+SPC3898 = IGNORE ;    {Cc1cccc(c1)C(=O)OO}
+SPC3899 = IGNORE ;    {Cc1cccc(c1)C(=O)O[O]}
+SPC3900 = IGNORE ;    {Cc1cccc(c1)C=O}
+SPC3901 = IGNORE ;    {Cc1cccc(c1)CO}
+SPC3902 = IGNORE ;    {Cc1cccc(c1)CON(=O)=O}
+SPC3903 = IGNORE ;    {Cc1cccc(c1)COO}
+SPC3904 = IGNORE ;    {Cc1cccc(c1)CO[O]}
+SPC3905 = IGNORE ;    {Cc1cccc(c1)C[O]}
+SPC3906 = IGNORE ;    {Cc1ccccc1C}
+SPC3907 = IGNORE ;    {Cc1ccccc1C(=O)C}
+SPC3908 = IGNORE ;    {Cc1ccccc1C(=O)C=O}
+SPC3909 = IGNORE ;    {Cc1ccccc1C(=O)CO}
+SPC3910 = IGNORE ;    {Cc1ccccc1C(=O)COO}
+SPC3911 = IGNORE ;    {Cc1ccccc1C(=O)CO[O]}
+SPC3912 = IGNORE ;    {Cc1ccccc1C(=O)C[O]}
+SPC3913 = IGNORE ;    {Cc1ccccc1C(=O)O}
+SPC3914 = IGNORE ;    {Cc1ccccc1C(=O)OO}
+SPC3915 = IGNORE ;    {Cc1ccccc1C(=O)O[O]}
+SPC3916 = IGNORE ;    {Cc1ccccc1C(O)C}
+SPC3917 = IGNORE ;    {Cc1ccccc1C(ON(=O)=O)C}
+SPC3918 = IGNORE ;    {Cc1ccccc1C(OO)C}
+SPC3919 = IGNORE ;    {Cc1ccccc1C(O[O])C}
+SPC3920 = IGNORE ;    {Cc1ccccc1C([O])C}
+SPC3921 = IGNORE ;    {Cc1ccccc1C=O}
+SPC3922 = IGNORE ;    {Cc1ccccc1CC}
+SPC3923 = IGNORE ;    {Cc1ccccc1CO}
+SPC3924 = IGNORE ;    {Cc1ccccc1CON(=O)=O}
+SPC3925 = IGNORE ;    {Cc1ccccc1COO}
+SPC3926 = IGNORE ;    {Cc1ccccc1CO[O]}
+SPC3927 = IGNORE ;    {Cc1ccccc1C[O]}
+SPC3928 = IGNORE ;    {H2}
+SPC3929 = IGNORE ;    {H2O2}
+SPC3930 = IGNORE ;    {HCL}
+SPC3931 = IGNORE ;    {HNO3}
+SPC3932 = IGNORE ;    {HNO4}
+SPC3933 = IGNORE ;    {HO2}
+SPC3934 = IGNORE ;    {HOCL}
+SPC3935 = IGNORE ;    {HONO}
+SPC3936 = IGNORE ;    {HSO3}
+SPC3937 = IGNORE ;    {N2O5}
+SPC3938 = IGNORE ;    {NO}
+SPC3939 = IGNORE ;    {NO2}
+SPC3940 = IGNORE ;    {NO3}
+SPC3941 = IGNORE ;    {O.[O]C(=O)CCC(=O)C1CC(C)(C)C1CCC(=O)O}
+SPC3942 = IGNORE ;    {O1C(=O)C=CC1}
+SPC3943 = IGNORE ;    {O1C(=O)C=CC1=O}
+SPC3944 = IGNORE ;    {O1C(=O)C=CC1C}
+SPC3945 = IGNORE ;    {O1C(=O)C=CC1C(C)C}
+SPC3946 = IGNORE ;    {O1C(=O)C=CC1CC}
+SPC3947 = IGNORE ;    {O1C(=O)C=CC1CCC}
+SPC3948 = IGNORE ;    {O1D}
+SPC3949 = IGNORE ;    {O2OC(C)(C1O)C(O)([O])C=CC12C}
+SPC3950 = IGNORE ;    {O2OC(C)(C1ON(=O)=O)C(O)([O])C=CC12C}
+SPC3951 = IGNORE ;    {O3}
+SPC3952 = IGNORE ;    {O3PX}
+SPC3953 = IGNORE ;    {O=C(C(CO)C(C)=C)OO[N+](=O)[O-]}
+SPC3954 = IGNORE ;    {O=C(C(CO)C(C)=O)OO[N+](=O)[O-]}
+SPC3955 = IGNORE ;    {O=C(CL)C(=O)CL}
+SPC3956 = IGNORE ;    {O=C(CL)C(CL)(CL)OO}
+SPC3957 = IGNORE ;    {O=C(CL)C(CL)(CL)O[O]}
+SPC3958 = IGNORE ;    {O=C(CL)C(CL)(CL)[O]}
+SPC3959 = IGNORE ;    {O=C(CL)C(CL)OO}
+SPC3960 = IGNORE ;    {O=C(CL)C(CL)O[O]}
+SPC3961 = IGNORE ;    {O=C(CL)C(CL)[O]}
+SPC3962 = IGNORE ;    {O=C(CL)C=O}
+SPC3963 = IGNORE ;    {O=C(CL)CL}
+SPC3964 = IGNORE ;    {O=C(CL)CON(=O)=O}
+SPC3965 = IGNORE ;    {O=C(CL)COO}
+SPC3966 = IGNORE ;    {O=C(CL)CO[O]}
+SPC3967 = IGNORE ;    {O=C(CL)C[O]}
+SPC3968 = IGNORE ;    {O=C(O)C(=O)CC(CO)C(C)=C}
+SPC3969 = IGNORE ;    {O=C(O)C(=O)CC=O}
+SPC3970 = IGNORE ;    {O=C(O)C(=O)OCC=O}
+SPC3971 = IGNORE ;    {O=C(O)C(C=O)C(C)(C)C=O}
+SPC3972 = IGNORE ;    {O=C(O)C(O)C(ON(=O)=O)(C)C=O}
+SPC3973 = IGNORE ;    {O=C(O)C(O)CC(CO)C(C)=C}
+SPC3974 = IGNORE ;    {O=C(O)C(ON(=O)=O)C(O)(C)CON(=O)=O}
+SPC3975 = IGNORE ;    {O=C(O)C(OO)CC(CO)C(C)=C}
+SPC3976 = IGNORE ;    {O=C(O)C(OO)CC=O}
+SPC3977 = IGNORE ;    {O=C(O)C(O[O])CC(CO)C(C)=C}
+SPC3978 = IGNORE ;    {O=C(O)C(O[O])CC=O}
+SPC3979 = IGNORE ;    {O=C(O)C([O])CC(CO)C(C)=C}
+SPC3980 = IGNORE ;    {O=C(O)C([O])CC=O}
+SPC3981 = IGNORE ;    {O=C(O)C1CC(C(=O)OO)C1(C)C}
+SPC3982 = IGNORE ;    {O=C(O)C1CC(C(=O)O[O])C1(C)C}
+SPC3983 = IGNORE ;    {O=C(O)C1CC(C=O)C1(C)C}
+SPC3984 = IGNORE ;    {O=C(O)C1CC(CON(=O)=O)C1(C)C}
+SPC3985 = IGNORE ;    {O=C(O)C1CC(COO)C1(C)C}
+SPC3986 = IGNORE ;    {O=C(O)C1CC(CO[O])C1(C)C}
+SPC3987 = IGNORE ;    {O=C(O)C1CC(C[O])C1(C)C}
+SPC3988 = IGNORE ;    {O=C(O)C1OC1(C)C=O}
+SPC3989 = IGNORE ;    {O=C(O)C1OC1C=CC=O}
+SPC3990 = IGNORE ;    {O=C(O)C1OC1C=O}
+SPC3991 = IGNORE ;    {O=C(O)C=C}
+SPC3992 = IGNORE ;    {O=C(O)C=C(C)C=O}
+SPC3993 = IGNORE ;    {O=C(O)C=C(C)CON(=O)=O}
+SPC3994 = IGNORE ;    {O=C(O)C=C(C=O)CC}
+SPC3995 = IGNORE ;    {O=C(O)C=C(N(=O)=O)C=O}
+SPC3996 = IGNORE ;    {O=C(O)C=CC=O}
+SPC3997 = IGNORE ;    {O=C(O)C=CCON(=O)=O}
+SPC3998 = IGNORE ;    {O=C(O)C=O}
+SPC3999 = IGNORE ;    {O=C(O)CC(=O)C(C)(C)C=O}
+SPC4000 = IGNORE ;    {O=C(O)CC(=O)C(C=O)C(C)(C)C=O}
+SPC4001 = IGNORE ;    {O=C(O)CC(=O)CCC=O}
+SPC4002 = IGNORE ;    {O=C(O)CC(CC=O)C(C)=C}
+SPC4003 = IGNORE ;    {O=C(O)CC(CO)C(C)=C}
+SPC4004 = IGNORE ;    {O=C(O)CC(O)CCC=O}
+SPC4005 = IGNORE ;    {O=C(O)CC=O}
+SPC4006 = IGNORE ;    {O=C(O)CCC(=O)C(C)(C)C=O}
+SPC4007 = IGNORE ;    {O=C(O)CCC(=O)C(C)(C)CC(=O)C(CCO)=C}
+SPC4008 = IGNORE ;    {O=C(O)CCC(=O)C(CC1(C)C)C1CC=O}
+SPC4009 = IGNORE ;    {O=C(O)CCC(=O)CC=O}
+SPC4010 = IGNORE ;    {O=C(O)CCC(C(=O)C)CC(=O)OO}
+SPC4011 = IGNORE ;    {O=C(O)CCC(C(=O)C)CC(=O)O[O]}
+SPC4012 = IGNORE ;    {O=C(O)CCC(C(=O)C)CC=O}
+SPC4013 = IGNORE ;    {O=C(O)CCC(C=O)C(=O)C}
+SPC4014 = IGNORE ;    {O=C(O)CCC(C=O)C(C)=C}
+SPC4015 = IGNORE ;    {O=C(O)CCC(CC(=O)O)C(C)=C}
+SPC4016 = IGNORE ;    {O=C(O)CCC(CC(=O)OO)C(C)=C}
+SPC4017 = IGNORE ;    {O=C(O)CCC(CC(=O)O[O])C(C)=C}
+SPC4018 = IGNORE ;    {O=C(O)CCC(CC=O)C(C)=C}
+SPC4019 = IGNORE ;    {O=C(O)CCC(CO)C(C)=C}
+SPC4020 = IGNORE ;    {O=C(O)CCC(COO)C(=O)C}
+SPC4021 = IGNORE ;    {O=C(O)CCC(COO)C(C)=C}
+SPC4022 = IGNORE ;    {O=C(O)CCC(CO[O])C(=O)C}
+SPC4023 = IGNORE ;    {O=C(O)CCC(CO[O])C(C)=C}
+SPC4024 = IGNORE ;    {O=C(O)CCC(C[O])C(=O)C}
+SPC4025 = IGNORE ;    {O=C(O)CCC(C[O])C(C)=C}
+SPC4026 = IGNORE ;    {O=C(O)CCC(O)C(C)(C)CC(=O)C(CCO)=C}
+SPC4027 = IGNORE ;    {O=C(O)CCC(OO)C(C)(C)CC(=O)C(CCO)=C}
+SPC4028 = IGNORE ;    {O=C(O)CCC(O[O])C(C)(C)CC(=O)C(CCO)=C}
+SPC4029 = IGNORE ;    {O=C(O)CCC([O])C(C)(C)CC(=O)C(CCO)=C}
+SPC4030 = IGNORE ;    {O=C(O)CCC1C(CC1(C)C)C(=O)CC=O}
+SPC4031 = IGNORE ;    {O=C(O)CCC1C(CC1(C)C)C(=O)CCC(=O)O}
+SPC4032 = IGNORE ;    {O=C(O)CCC1C(CC1(C)C)C(=O)CCC(=O)OO}
+SPC4033 = IGNORE ;    {O=C(O)CCC1C(CC1(C)C)C(=O)CCC=O}
+SPC4034 = IGNORE ;    {O=C(O)CCC1C(CC1(C)C)C(=O)CCOO}
+SPC4035 = IGNORE ;    {O=C(O)CCC1C(CC1(C)C)C(=O)CCO[O]}
+SPC4036 = IGNORE ;    {O=C(O)CCC1C(CC1(C)C)C(=O)CC[O]}
+SPC4037 = IGNORE ;    {O=C(O)CCC1C(CC1(C)C)C(CC=O)=C}
+SPC4038 = IGNORE ;    {O=C(O)CCC1C(CC1(C)C)C(CCC(=O)O)=C}
+SPC4039 = IGNORE ;    {O=C(O)CCC1C(CC1(C)C)C(CCC(=O)OO)=C}
+SPC4040 = IGNORE ;    {O=C(O)CCC1C(CC1(C)C)C(CCC(=O)O[O])=C}
+SPC4041 = IGNORE ;    {O=C(O)CCC1C(CC1(C)C)C(CCC=O)=C}
+SPC4042 = IGNORE ;    {O=C(O)CCC1C(CC1(C)C)C(CCO)=C}
+SPC4043 = IGNORE ;    {O=C(O)CCC1C(CC1(C)C)C(CCOO)=C}
+SPC4044 = IGNORE ;    {O=C(O)CCC1C(CC1(C)C)C(CCO[O])=C}
+SPC4045 = IGNORE ;    {O=C(O)CCC1C(CC1(C)C)C(CC[O])=C}
+SPC4046 = IGNORE ;    {O=C(O)CCC1C(O)(CC1(C)C)C(CCO)=C}
+SPC4047 = IGNORE ;    {O=C(O)CCC1C(OO)(CC1(C)C)C(CCO)=C}
+SPC4048 = IGNORE ;    {O=C(O)CCC1C(O[O])(CC1(C)C)C(CCO)=C}
+SPC4049 = IGNORE ;    {O=C(O)CCC1C([O])(CC1(C)C)C(CCO)=C}
+SPC4050 = IGNORE ;    {O=C(O)CCC=O}
+SPC4051 = IGNORE ;    {O=C(O)CON(=O)=O}
+SPC4052 = IGNORE ;    {O=C(OO)C(C=O)C(C)(C)C=O}
+SPC4053 = IGNORE ;    {O=C(OO)C(O)C(ON(=O)=O)(C)C=O}
+SPC4054 = IGNORE ;    {O=C(OO)C(O)C=C}
+SPC4055 = IGNORE ;    {O=C(OO)C(O)C=O}
+SPC4056 = IGNORE ;    {O=C(OO)C1OC1(C)C=O}
+SPC4057 = IGNORE ;    {O=C(OO)C1OC1C=CC=O}
+SPC4058 = IGNORE ;    {O=C(OO)C1OC1C=O}
+SPC4059 = IGNORE ;    {O=C(OO)C=C}
+SPC4060 = IGNORE ;    {O=C(OO)C=C(C(C)C)C(=O)C(O)C=O}
+SPC4061 = IGNORE ;    {O=C(OO)C=C(C)C(=O)C(O)C=O}
+SPC4062 = IGNORE ;    {O=C(OO)C=C(C)C(=O)C=O}
+SPC4063 = IGNORE ;    {O=C(OO)C=C(C)C=O}
+SPC4064 = IGNORE ;    {O=C(OO)C=C(CC)C(=O)C(O)C=O}
+SPC4065 = IGNORE ;    {O=C(OO)C=C(CCC)C(=O)C(O)C=O}
+SPC4066 = IGNORE ;    {O=C(OO)C=CC(=O)C(O)C=O}
+SPC4067 = IGNORE ;    {O=C(OO)C=CC(=O)C=O}
+SPC4068 = IGNORE ;    {O=C(OO)C=CC=O}
+SPC4069 = IGNORE ;    {O=C(OO)C=O}
+SPC4070 = IGNORE ;    {O=C(OO)CC(=O)C(=O)CC=O}
+SPC4071 = IGNORE ;    {O=C(OO)CC(=O)C(C)(C)C=O}
+SPC4072 = IGNORE ;    {O=C(OO)CC(=O)C(C=O)C(C)(C)C=O}
+SPC4073 = IGNORE ;    {O=C(OO)CC(=O)C=O}
+SPC4074 = IGNORE ;    {O=C(OO)CC(=O)CC(=O)C=O}
+SPC4075 = IGNORE ;    {O=C(OO)CC(=O)CC=O}
+SPC4076 = IGNORE ;    {O=C(OO)CC(=O)CCC=O}
+SPC4077 = IGNORE ;    {O=C(OO)CC(CC=O)C(C)=C}
+SPC4078 = IGNORE ;    {O=C(OO)CC(CO)C(C)=C}
+SPC4079 = IGNORE ;    {O=C(OO)CC(O)CCC=O}
+SPC4080 = IGNORE ;    {O=C(OO)CC=O}
+SPC4081 = IGNORE ;    {O=C(OO)CCC(=O)C(C)(C)C=O}
+SPC4082 = IGNORE ;    {O=C(OO)CCC(=O)C(CC1(C)C)C1CC=O}
+SPC4083 = IGNORE ;    {O=C(OO)CCC(=O)CC=O}
+SPC4084 = IGNORE ;    {O=C(OO)CCC(C(=O)C)CC=O}
+SPC4085 = IGNORE ;    {O=C(OO)CCC(CC=O)C(C)=C}
+SPC4086 = IGNORE ;    {O=C(OO)CCC1C(CC1(C)C)C(=O)CCC=O}
+SPC4087 = IGNORE ;    {O=C(OO)CCC1C(CC1(C)C)C(CCC=O)=C}
+SPC4088 = IGNORE ;    {O=C(OO)CCC=O}
+SPC4089 = IGNORE ;    {O=C(OO)CCCCC=O}
+SPC4090 = IGNORE ;    {O=C(OO)COC=O}
+SPC4091 = IGNORE ;    {O=C(OON(=O)=O)C(C=O)C(C)(C)C=O}
+SPC4092 = IGNORE ;    {O=C(OON(=O)=O)C(O)C(ON(=O)=O)(C)C=O}
+SPC4093 = IGNORE ;    {O=C(OON(=O)=O)C(O)C=C}
+SPC4094 = IGNORE ;    {O=C(OON(=O)=O)C(O)C=O}
+SPC4095 = IGNORE ;    {O=C(OON(=O)=O)C1OC1(C)C=O}
+SPC4096 = IGNORE ;    {O=C(OON(=O)=O)C1OC1C=CC=O}
+SPC4097 = IGNORE ;    {O=C(OON(=O)=O)C1OC1C=O}
+SPC4098 = IGNORE ;    {O=C(OON(=O)=O)C=C}
+SPC4099 = IGNORE ;    {O=C(OON(=O)=O)C=C(C(C)C)C(=O)C(O)C=O}
+SPC4100 = IGNORE ;    {O=C(OON(=O)=O)C=C(C)C(=O)C(O)C=O}
+SPC4101 = IGNORE ;    {O=C(OON(=O)=O)C=C(C)C(=O)C=O}
+SPC4102 = IGNORE ;    {O=C(OON(=O)=O)C=C(C)C=O}
+SPC4103 = IGNORE ;    {O=C(OON(=O)=O)C=C(CC)C(=O)C(O)C=O}
+SPC4104 = IGNORE ;    {O=C(OON(=O)=O)C=C(CCC)C(=O)C(O)C=O}
+SPC4105 = IGNORE ;    {O=C(OON(=O)=O)C=CC(=O)C(O)C=O}
+SPC4106 = IGNORE ;    {O=C(OON(=O)=O)C=CC(=O)C=O}
+SPC4107 = IGNORE ;    {O=C(OON(=O)=O)C=CC=O}
+SPC4108 = IGNORE ;    {O=C(OON(=O)=O)C=O}
+SPC4109 = IGNORE ;    {O=C(OON(=O)=O)CC(=O)C(=O)CC=O}
+SPC4110 = IGNORE ;    {O=C(OON(=O)=O)CC(=O)C(C)(C)C=O}
+SPC4111 = IGNORE ;    {O=C(OON(=O)=O)CC(=O)C(C=O)C(C)(C)C=O}
+SPC4112 = IGNORE ;    {O=C(OON(=O)=O)CC(=O)C=O}
+SPC4113 = IGNORE ;    {O=C(OON(=O)=O)CC(=O)CC(=O)C=O}
+SPC4114 = IGNORE ;    {O=C(OON(=O)=O)CC(=O)CC=O}
+SPC4115 = IGNORE ;    {O=C(OON(=O)=O)CC(=O)CCC=O}
+SPC4116 = IGNORE ;    {O=C(OON(=O)=O)CC(O)CCC=O}
+SPC4117 = IGNORE ;    {O=C(OON(=O)=O)CC=O}
+SPC4118 = IGNORE ;    {O=C(OON(=O)=O)CCC(=O)C(C)(C)C=O}
+SPC4119 = IGNORE ;    {O=C(OON(=O)=O)CCC(=O)CC=O}
+SPC4120 = IGNORE ;    {O=C(OON(=O)=O)CCC=O}
+SPC4121 = IGNORE ;    {O=C(OON(=O)=O)CCCCC=O}
+SPC4122 = IGNORE ;    {O=C(OON(=O)=O)COC=O}
+SPC4123 = IGNORE ;    {O=C1C(C)=C(C)C(=O)C(ON(=O)=O)C1(OO)C}
+SPC4124 = IGNORE ;    {O=C1C(C)=CC(=O)C(C)=C1C}
+SPC4125 = IGNORE ;    {O=C1C(C)=CC(=O)C(ON(=O)=O)C1(OO)C}
+SPC4126 = IGNORE ;    {O=C1C(C)=CC(=O)C=C1C}
+SPC4127 = IGNORE ;    {O=C1C(C)=CC(=O)C=C1CC}
+SPC4128 = IGNORE ;    {O=C1C(O)C(=O)C(=O)C(C)=C1C}
+SPC4129 = IGNORE ;    {O=C1C(O)C(=O)C(=O)C(C)=C1CC}
+SPC4130 = IGNORE ;    {O=C1C(O)C(=O)C(=O)C=C1C}
+SPC4131 = IGNORE ;    {O=C1C(O)C(=O)C(=O)C=C1C(C)C}
+SPC4132 = IGNORE ;    {O=C1C(O)C(O)C(=O)C(C)=C1CC}
+SPC4133 = IGNORE ;    {O=C1C(O)C(OO)C(=O)C(C)=C1C}
+SPC4134 = IGNORE ;    {O=C1C(O)C(OO)C(=O)C(C)=C1CC}
+SPC4135 = IGNORE ;    {O=C1C(O)C(OO)C(=O)C=C1C}
+SPC4136 = IGNORE ;    {O=C1C(O)C(OO)C(=O)C=C1C(C)C}
+SPC4137 = IGNORE ;    {O=C1C(O)C(O[O])(CC)C(=O)C=C1C}
+SPC4138 = IGNORE ;    {O=C1C(O)C(O[O])C(=O)C(C)=C1C}
+SPC4139 = IGNORE ;    {O=C1C(O)C(O[O])C(=O)C(C)=C1CC}
+SPC4140 = IGNORE ;    {O=C1C(O)C(O[O])C(=O)C=C1C}
+SPC4141 = IGNORE ;    {O=C1C(O)C(O[O])C(=O)C=C1C(C)C}
+SPC4142 = IGNORE ;    {O=C1C(O)C([O])(CC)C(=O)C=C1C}
+SPC4143 = IGNORE ;    {O=C1C(O)C([O])C(=O)C(C)=C1C}
+SPC4144 = IGNORE ;    {O=C1C(O)C([O])C(=O)C(C)=C1CC}
+SPC4145 = IGNORE ;    {O=C1C(O)C([O])C(=O)C=C1C}
+SPC4146 = IGNORE ;    {O=C1C(O)C([O])C(=O)C=C1C(C)C}
+SPC4147 = IGNORE ;    {O=C1C(ON(=O)=O)C(=O)OC1}
+SPC4148 = IGNORE ;    {O=C1C(ON(=O)=O)C(=O)OC1C(C)C}
+SPC4149 = IGNORE ;    {O=C1C(ON(=O)=O)C(=O)OC1CC}
+SPC4150 = IGNORE ;    {O=C1C(ON(=O)=O)C(=O)OC1CCC}
+SPC4151 = IGNORE ;    {O=C1C(ON(=O)=O)C(OO)(C)C(=O)C=C1C}
+SPC4152 = IGNORE ;    {O=C1C(ON(=O)=O)C(OO)C(=O)C(C)=C1C}
+SPC4153 = IGNORE ;    {O=C1C(ON(=O)=O)C(OO)C(=O)C(C)=C1CC}
+SPC4154 = IGNORE ;    {O=C1C(ON(=O)=O)C(OO)C(=O)C=C1C}
+SPC4155 = IGNORE ;    {O=C1C(ON(=O)=O)C(OO)C(=O)C=C1C(C)C}
+SPC4156 = IGNORE ;    {O=C1C(ON(=O)=O)C(OO)C(=O)C=C1CC}
+SPC4157 = IGNORE ;    {O=C1C(ON(=O)=O)C(OO)C(=O)C=C1CCC}
+SPC4158 = IGNORE ;    {O=C1C(ON(=O)=O)C(O[O])(C)C(=O)C=C1C}
+SPC4159 = IGNORE ;    {O=C1C(ON(=O)=O)C(O[O])(C)C(=O)C=C1CC}
+SPC4160 = IGNORE ;    {O=C1C(ON(=O)=O)C(O[O])C(=O)C(C)=C1C}
+SPC4161 = IGNORE ;    {O=C1C(ON(=O)=O)C(O[O])C(=O)C(C)=C1CC}
+SPC4162 = IGNORE ;    {O=C1C(ON(=O)=O)C(O[O])C(=O)C=C1C}
+SPC4163 = IGNORE ;    {O=C1C(ON(=O)=O)C(O[O])C(=O)C=C1C(C)C}
+SPC4164 = IGNORE ;    {O=C1C(ON(=O)=O)C(O[O])C(=O)C=C1CC}
+SPC4165 = IGNORE ;    {O=C1C(ON(=O)=O)C(O[O])C(=O)C=C1CCC}
+SPC4166 = IGNORE ;    {O=C1C(ON(=O)=O)C([O])(C)C(=O)C=C1C}
+SPC4167 = IGNORE ;    {O=C1C(ON(=O)=O)C([O])(C)C(=O)C=C1CC}
+SPC4168 = IGNORE ;    {O=C1C(ON(=O)=O)C([O])C(=O)C(C)=C1C}
+SPC4169 = IGNORE ;    {O=C1C(ON(=O)=O)C([O])C(=O)C(C)=C1CC}
+SPC4170 = IGNORE ;    {O=C1C(ON(=O)=O)C([O])C(=O)C=C1C}
+SPC4171 = IGNORE ;    {O=C1C(ON(=O)=O)C([O])C(=O)C=C1C(C)C}
+SPC4172 = IGNORE ;    {O=C1C(ON(=O)=O)C([O])C(=O)C=C1CC}
+SPC4173 = IGNORE ;    {O=C1C(ON(=O)=O)C([O])C(=O)C=C1CCC}
+SPC4174 = IGNORE ;    {O=C1C(O[O])(C)C(O)C(=O)C(C)=C1C}
+SPC4175 = IGNORE ;    {O=C1C(O[O])(C)C(O)C(=O)C=C1CC}
+SPC4176 = IGNORE ;    {O=C1C(O[O])(C)C(ON(=O)=O)C(=O)C(C)=C1C}
+SPC4177 = IGNORE ;    {O=C1C(O[O])(C)C(ON(=O)=O)C(=O)C=C1C}
+SPC4178 = IGNORE ;    {O=C1C(O[O])(C)C(ON(=O)=O)C(=O)C=C1CC}
+SPC4179 = IGNORE ;    {O=C1C([O])(C)C(O)C(=O)C(C)=C1C}
+SPC4180 = IGNORE ;    {O=C1C([O])(C)C(O)C(=O)C=C1CC}
+SPC4181 = IGNORE ;    {O=C1C([O])(C)C(ON(=O)=O)C(=O)C(C)=C1C}
+SPC4182 = IGNORE ;    {O=C1C([O])(C)C(ON(=O)=O)C(=O)C=C1C}
+SPC4183 = IGNORE ;    {O=C1C([O])(C)C(ON(=O)=O)C(=O)C=C1CC}
+SPC4184 = IGNORE ;    {O=C1C=C(C)C(=O)C=C1C}
+SPC4185 = IGNORE ;    {O=C1C=C(C)C(=O)C=C1CC}
+SPC4186 = IGNORE ;    {O=C1C=C(CC)C(=O)C(ON(=O)=O)C1(OO)C}
+SPC4187 = IGNORE ;    {O=C1C=CC(=O)C(C)=C1C}
+SPC4188 = IGNORE ;    {O=C1C=CC(=O)C(C)=C1CC}
+SPC4189 = IGNORE ;    {O=C1C=CC(=O)C(O[O])C1O}
+SPC4190 = IGNORE ;    {O=C1C=CC(=O)C(O[O])C1ON(=O)=O}
+SPC4191 = IGNORE ;    {O=C1C=CC(=O)C([O])C1O}
+SPC4192 = IGNORE ;    {O=C1C=CC(=O)C([O])C1ON(=O)=O}
+SPC4193 = IGNORE ;    {O=C1C=CC(=O)C=C1C}
+SPC4194 = IGNORE ;    {O=C1C=CC(=O)C=C1C(C)C}
+SPC4195 = IGNORE ;    {O=C1C=CC(=O)C=C1CC}
+SPC4196 = IGNORE ;    {O=C1C=CC(=O)C=C1CCC}
+SPC4197 = IGNORE ;    {O=C1C=CC2(C)OOC1(C)C2(C)O}
+SPC4198 = IGNORE ;    {O=C1C=CC2(C)OOC1(C)C2O}
+SPC4199 = IGNORE ;    {O=C1C=CC2(C)OOC1C2O}
+SPC4200 = IGNORE ;    {O=C1C=CC2(OOC1C2O)C(C)C}
+SPC4201 = IGNORE ;    {O=C1C=CC2OOC1(C)C2O}
+SPC4202 = IGNORE ;    {O=C1C=CC2OOC1C2O}
+SPC4203 = IGNORE ;    {O=C1CC(=O)C(OO)C(=O)C1}
+SPC4204 = IGNORE ;    {O=C1CC(=O)C(OO)C(=O)C1(ON(=O)=O)C}
+SPC4205 = IGNORE ;    {O=C1CC(=O)C(O[O])C(=O)C1}
+SPC4206 = IGNORE ;    {O=C1CC(=O)C(O[O])C(=O)C1(ON(=O)=O)C}
+SPC4207 = IGNORE ;    {O=C1CC(=O)C([O])C(=O)C1}
+SPC4208 = IGNORE ;    {O=C1CC(=O)C([O])C(=O)C1(ON(=O)=O)C}
+SPC4209 = IGNORE ;    {O=C1CC(=O)CC(=O)C1(ON(=O)=O)C}
+SPC4210 = IGNORE ;    {O=C1CC(=O)CC(OO)C1(ON(=O)=O)C}
+SPC4211 = IGNORE ;    {O=C1CC(=O)CC(O[O])C1(ON(=O)=O)C}
+SPC4212 = IGNORE ;    {O=C1CC(=O)CC([O])C1(ON(=O)=O)C}
+SPC4213 = IGNORE ;    {O=C1CCC(=O)C(C)(O)CCC2C1CC2(C)C}
+SPC4214 = IGNORE ;    {O=C1CCC(O)C(C)(O)CCC2C1CC2(C)C}
+SPC4215 = IGNORE ;    {O=C1CCC(O)C(C)([O])CCC2C1CC2(C)C}
+SPC4216 = IGNORE ;    {O=C1CCC([O])C(C)(O)CCC2C1CC2(C)C}
+SPC4217 = IGNORE ;    {O=C1CCC2OOC(C)(CCC3C1CC3(C)C)O2}
+SPC4218 = IGNORE ;    {O=C1OC(=O)C(C)=C1C}
+SPC4219 = IGNORE ;    {O=C1OC(=O)C(O[O])C1O}
+SPC4220 = IGNORE ;    {O=C1OC(=O)C([O])C1O}
+SPC4221 = IGNORE ;    {O=C1OC(=O)C=C1C}
+SPC4222 = IGNORE ;    {O=C1OC(=O)C=C1C(C)C}
+SPC4223 = IGNORE ;    {O=C1OC(=O)C=C1CC}
+SPC4224 = IGNORE ;    {O=C1OC(=O)C=C1CCC}
+SPC4225 = IGNORE ;    {O=C1OC(C)C(ON(=O)=O)C1(OO)C}
+SPC4226 = IGNORE ;    {O=C1OC(C)C(ON(=O)=O)C1(O[O])C}
+SPC4227 = IGNORE ;    {O=C1OC(C)C(ON(=O)=O)C1([O])C}
+SPC4228 = IGNORE ;    {O=C1OC(C)C=C1C}
+SPC4229 = IGNORE ;    {O=C1OC(CC)C(ON(=O)=O)C1(O[O])C}
+SPC4230 = IGNORE ;    {O=C1OC(CC)C(ON(=O)=O)C1([O])C}
+SPC4231 = IGNORE ;    {O=C1OC(CC)C=C1C}
+SPC4232 = IGNORE ;    {O=C1OCC(ON(=O)=O)C1(OO)C}
+SPC4233 = IGNORE ;    {O=C1OCC(ON(=O)=O)C1(O[O])C}
+SPC4234 = IGNORE ;    {O=C1OCC(ON(=O)=O)C1([O])C}
+SPC4235 = IGNORE ;    {O=C1OCC=CC1}
+SPC4236 = IGNORE ;    {O=CBR}
+SPC4237 = IGNORE ;    {O=CC(=O)C(=O)C=O}
+SPC4238 = IGNORE ;    {O=CC(=O)C(C)=C(C)C(=O)C=O}
+SPC4239 = IGNORE ;    {O=CC(=O)C(C)=C(C)C(=O)O[O]}
+SPC4240 = IGNORE ;    {O=CC(=O)C(C)=CC(=O)O[O]}
+SPC4241 = IGNORE ;    {O=CC(=O)C=C}
+SPC4242 = IGNORE ;    {O=CC(=O)C=C(C(=O)O[O])CC}
+SPC4243 = IGNORE ;    {O=CC(=O)C=C(C)C(=O)C=O}
+SPC4244 = IGNORE ;    {O=CC(=O)C=C(C)C(=O)O[O]}
+SPC4245 = IGNORE ;    {O=CC(=O)C=C(CC)C(=O)CO.O=C1CCC(=O)C(=C1)C}
+SPC4246 = IGNORE ;    {O=CC(=O)C=CC(=O)C=O}
+SPC4247 = IGNORE ;    {O=CC(=O)C=CC(=O)O[O]}
+SPC4248 = IGNORE ;    {O=CC(=O)C=CC=O}
+SPC4249 = IGNORE ;    {O=CC(=O)C=O}
+SPC4250 = IGNORE ;    {O=CC(=O)CC(=O)C(ON(=O)=O)(C)C(=O)O[O]}
+SPC4251 = IGNORE ;    {O=CC(=O)CC(=O)CC(=O)O[O]}
+SPC4252 = IGNORE ;    {O=CC(=O)CC(=O)CO[O]}
+SPC4253 = IGNORE ;    {O=CC(=O)CC(=O)C[O]}
+SPC4254 = IGNORE ;    {O=CC(=O)CC(=O)O[O]}
+SPC4255 = IGNORE ;    {O=CC(=O)CCC(CC=O)C(C)=C}
+SPC4256 = IGNORE ;    {O=CC(=O)CCC1C(CC1(C)C)C(=O)CCC=O}
+SPC4257 = IGNORE ;    {O=CC(=O)CCC1C(CC1(C)C)C(CCC=O)=C}
+SPC4258 = IGNORE ;    {O=CC(=O)CO[O]}
+SPC4259 = IGNORE ;    {O=CC(=O)C[O]}
+SPC4260 = IGNORE ;    {O=CC(=O)OCO[O]}
+SPC4261 = IGNORE ;    {O=CC(=O)OC[O]}
+SPC4262 = IGNORE ;    {O=CC(=O)O[O]}
+SPC4263 = IGNORE ;    {O=CC(C)(O)C(O)CON(=O)=O}
+SPC4264 = IGNORE ;    {O=CC(C)(ON(=O)=O)C(=O)CON(=O)=O}
+SPC4265 = IGNORE ;    {O=CC(C)(ON(=O)=O)C(O)CON(=O)=O}
+SPC4266 = IGNORE ;    {O=CC(CO)C(C)(CO)O[N+](=O)[O-]}
+SPC4267 = IGNORE ;    {O=CC(CO)C(C)(CO[N+](=O)[O-])O}
+SPC4268 = IGNORE ;    {O=CC(CO)C(C)(CO[N+](=O)[O-])OO}
+SPC4269 = IGNORE ;    {O=CC(CO)C(C)(CO[N+](=O)[O-])O[O]}
+SPC4270 = IGNORE ;    {O=CC(CO)C(C)(CO[N+](=O)[O-])[O]}
+SPC4271 = IGNORE ;    {O=CC(CO)[C](C)O[O]}
+SPC4272 = IGNORE ;    {O=CC(N(=O)=O)=C(C(=O)[O])CC}
+SPC4273 = IGNORE ;    {O=CC(N(=O)=O)=C(C(=O)[O])CCC}
+SPC4274 = IGNORE ;    {O=CC(N(=O)=O)=C(C)C(=O)[O]}
+SPC4275 = IGNORE ;    {O=CC(N(=O)=O)=CC(=O)[O]}
+SPC4276 = IGNORE ;    {O=CC(O)C(=O)C(C(C)C)=CC(=O)O[O]}
+SPC4277 = IGNORE ;    {O=CC(O)C(=O)C(C)=C(C)C(=O)O[O]}
+SPC4278 = IGNORE ;    {O=CC(O)C(=O)C(C)=CC(=O)O[O]}
+SPC4279 = IGNORE ;    {O=CC(O)C(=O)C(CC)=C(C)C(=O)O[O]}
+SPC4280 = IGNORE ;    {O=CC(O)C(=O)C(CC)=CC(=O)O[O]}
+SPC4281 = IGNORE ;    {O=CC(O)C(=O)C1OC1C=O}
+SPC4282 = IGNORE ;    {O=CC(O)C(=O)C=CC(=O)O[O]}
+SPC4283 = IGNORE ;    {O=CC(O)C(=O)C=O}
+SPC4284 = IGNORE ;    {O=CC(O)C(=O)O[O]}
+SPC4285 = IGNORE ;    {O=CC(O)C(O)C1OC1C=O}
+SPC4286 = IGNORE ;    {O=CC(O)C(O)C=O}
+SPC4287 = IGNORE ;    {O=CC(O)C(ON(=O)=O)(C)C(=O)O[O]}
+SPC4288 = IGNORE ;    {O=CC(O)C(ON(=O)=O)C1OC1C=O}
+SPC4289 = IGNORE ;    {O=CC(O)C(OO)C1OC1C=O}
+SPC4290 = IGNORE ;    {O=CC(O)C(OO)C=O}
+SPC4291 = IGNORE ;    {O=CC(O)C(O[O])C=O}
+SPC4292 = IGNORE ;    {O=CC(O)C([O])C=O}
+SPC4293 = IGNORE ;    {O=CC(O)C=C}
+SPC4294 = IGNORE ;    {O=CC(O)C=CC=O}
+SPC4295 = IGNORE ;    {O=CC(O)C=O}
+SPC4296 = IGNORE ;    {O=CC(O)CO[O]}
+SPC4297 = IGNORE ;    {O=CC(O)C[O]}
+SPC4298 = IGNORE ;    {O=CC(OO)C=CC=O}
+SPC4299 = IGNORE ;    {O=CC(OO)C=O}
+SPC4300 = IGNORE ;    {O=CC(O[O])C=O}
+SPC4301 = IGNORE ;    {O=CC([O])C=O}
+SPC4302 = IGNORE ;    {O=CC1OC1C(=O)O[O]}
+SPC4303 = IGNORE ;    {O=CC1OC1C(O[O])C(O)C=O}
+SPC4304 = IGNORE ;    {O=CC1OC1C([O])C(O)C=O}
+SPC4305 = IGNORE ;    {O=CC1OC1C=CC=O}
+SPC4306 = IGNORE ;    {O=CC1OC1C=O}
+SPC4307 = IGNORE ;    {O=CC=C}
+SPC4308 = IGNORE ;    {O=CC=C(C)C(=O)O[O]}
+SPC4309 = IGNORE ;    {O=CC=C(C)C(=O)[O]}
+SPC4310 = IGNORE ;    {O=CC=CC(=O)O[O]}
+SPC4311 = IGNORE ;    {O=CC=CC(=O)[O]}
+SPC4312 = IGNORE ;    {O=CC=CC(O[O])C=O}
+SPC4313 = IGNORE ;    {O=CC=CC([O])C=O}
+SPC4314 = IGNORE ;    {O=CC=CC1(C)OC1(C(=O)O[O])CC}
+SPC4315 = IGNORE ;    {O=CC=CC1(C)OC1(C)C(=O)O[O]}
+SPC4316 = IGNORE ;    {O=CC=CC1OC1C(=O)O[O]}
+SPC4317 = IGNORE ;    {O=CC=CC=O}
+SPC4318 = IGNORE ;    {O=CC=O}
+SPC4319 = IGNORE ;    {O=CCC(=O)C(=O)C=O}
+SPC4320 = IGNORE ;    {O=CCC(=O)C(=O)CC(=O)O[O]}
+SPC4321 = IGNORE ;    {O=CCC(=O)C(=O)CC=O}
+SPC4322 = IGNORE ;    {O=CCC(=O)C(=O)CO[O]}
+SPC4323 = IGNORE ;    {O=CCC(=O)C(=O)C[O]}
+SPC4324 = IGNORE ;    {O=CCC(=O)C(C)(C)C(=O)O[O]}
+SPC4325 = IGNORE ;    {O=CCC(=O)C(C)(C)CC(=O)C(CCO)=C}
+SPC4326 = IGNORE ;    {O=CCC(=O)C(C)(C)CC=O}
+SPC4327 = IGNORE ;    {O=CCC(=O)C(OO)CC=O}
+SPC4328 = IGNORE ;    {O=CCC(=O)C(O[O])CC=O}
+SPC4329 = IGNORE ;    {O=CCC(=O)C([O])CC=O}
+SPC4330 = IGNORE ;    {O=CCC(=O)C=O}
+SPC4331 = IGNORE ;    {O=CCC(=O)CC(=O)CO[O]}
+SPC4332 = IGNORE ;    {O=CCC(=O)CC(=O)C[O]}
+SPC4333 = IGNORE ;    {O=CCC(=O)CC(=O)O[O]}
+SPC4334 = IGNORE ;    {O=CCC(=O)CC=O}
+SPC4335 = IGNORE ;    {O=CCC(=O)CCC(=O)O[O]}
+SPC4336 = IGNORE ;    {O=CCC(=O)CCCO[O]}
+SPC4337 = IGNORE ;    {O=CCC(=O)CCC[O]}
+SPC4338 = IGNORE ;    {O=CCC(=O)CCO[O]}
+SPC4339 = IGNORE ;    {O=CCC(=O)CC[O]}
+SPC4340 = IGNORE ;    {O=CCC(=O)CO[O]}
+SPC4341 = IGNORE ;    {O=CCC(=O)C[O]}
+SPC4342 = IGNORE ;    {O=CCC(=O)O[O]}
+SPC4343 = IGNORE ;    {O=CCC(C(=O)O[O])C(=O)C}
+SPC4344 = IGNORE ;    {O=CCC(C)(C)C(CCC(=O)C)O[N+](=O)[O-]}
+SPC4345 = IGNORE ;    {O=CCC(C)(C)C(CCC(=O)OC)O[N+](=O)[O-]}
+SPC4346 = IGNORE ;    {O=CCC(CC=O)C(C)=C}
+SPC4347 = IGNORE ;    {O=CCC(CO)C(C)=C}
+SPC4348 = IGNORE ;    {O=CCC(COO)C(C)=C}
+SPC4349 = IGNORE ;    {O=CCC(CO[O])C(=O)C}
+SPC4350 = IGNORE ;    {O=CCC(C[O])C(=O)C}
+SPC4351 = IGNORE ;    {O=CCC(O)C(=O)CC=O}
+SPC4352 = IGNORE ;    {O=CCC(O)C(C)(C)CC(=O)C(CCO)=C}
+SPC4353 = IGNORE ;    {O=CCC(O)C(C)(C)CC=O}
+SPC4354 = IGNORE ;    {O=CCC(O)CC=O}
+SPC4355 = IGNORE ;    {O=CCC(ON(=O)=O)CC=O}
+SPC4356 = IGNORE ;    {O=CCC(OO)C(C)(C)CC(=O)C(CCO)=C}
+SPC4357 = IGNORE ;    {O=CCC(OO)C(C)(C)CC=O}
+SPC4358 = IGNORE ;    {O=CCC(OO)CC=O}
+SPC4359 = IGNORE ;    {O=CCC(O[N+](=O)[O-])C(C)(C)CC=O}
+SPC4360 = IGNORE ;    {O=CCC(O[O])C(C)(C)CC(=O)C(CCO)=C}
+SPC4361 = IGNORE ;    {O=CCC(O[O])C(C)(C)CC=O}
+SPC4362 = IGNORE ;    {O=CCC(O[O])CC=O}
+SPC4363 = IGNORE ;    {O=CCC([O])C(C)(C)CC(=O)C(CCO)=C}
+SPC4364 = IGNORE ;    {O=CCC([O])C(C)(C)CC=O}
+SPC4365 = IGNORE ;    {O=CCC([O])CC=O}
+SPC4366 = IGNORE ;    {O=CCC1C(CC1(C)C)C(=C)CCC(=O)OO[N+](=O)[O-]}
+SPC4367 = IGNORE ;    {O=CCC1C(CC1(C)C)C(=C)CCO[N+](=O)[O-]}
+SPC4368 = IGNORE ;    {O=CCC1C(CC1(C)C)C(=O)CCC(=O)OO[N+](=O)[O-]}
+SPC4369 = IGNORE ;    {O=CCC1C(CC1(C)C)C(=O)CCO[N+](=O)[O-]}
+SPC4370 = IGNORE ;    {O=CCC1C(CC1(C)C)C(=O)OO[N+](=O)[O-]}
+SPC4371 = IGNORE ;    {O=CCC1C(O[N+](=O)[O-])CC1(C)C}
+SPC4372 = IGNORE ;    {O=CCC1CC(C(=O)O[O])C1(C)C}
+SPC4373 = IGNORE ;    {O=CCC1CC(C(=O)[O])C1(C)C}
+SPC4374 = IGNORE ;    {O=CCC1CC(C(=[O+][O-])C)C1(C)C}
+SPC4375 = IGNORE ;    {O=CCC1CC(C1(C)C)C(=O)CO[O]}
+SPC4376 = IGNORE ;    {O=CCC1CC(C1(C)C)C(=O)C[O]}
+SPC4377 = IGNORE ;    {O=CCC=O}
+SPC4378 = IGNORE ;    {O=CCCC(=C)C(=O)CC(C)(C)C(CCO)O[N+](=O)[O-]}
+SPC4379 = IGNORE ;    {O=CCCC(=C)C(=O)CC(C)(C)O[N+](=O)[O-]}
+SPC4380 = IGNORE ;    {O=CCCC(=C)C(=O)OO[N+](=O)[O-]}
+SPC4381 = IGNORE ;    {O=CCCC(=C)C1(O[N+](=O)[O-])CC(C)(C)C1CCO}
+SPC4382 = IGNORE ;    {O=CCCC(=C)C1CC(C)(C)C1CCC(=O)OO[N+](=O)[O-]}
+SPC4383 = IGNORE ;    {O=CCCC(=C)C1CC(C)(C)C1CCC(=[O+][O-])C}
+SPC4384 = IGNORE ;    {O=CCCC(=C)C1CC(C)(C)C1CCC(=[O+][O-])C*a}
+SPC4385 = IGNORE ;    {O=CCCC(=C)C1CC(C)(C)C1CCO[N+](=O)[O-]}
+SPC4386 = IGNORE ;    {O=CCCC(=O)C(=O)C=O}
+SPC4387 = IGNORE ;    {O=CCCC(=O)C(=O)CC(C)(C)C(CCO)O[N+](=O)[O-]}
+SPC4388 = IGNORE ;    {O=CCCC(=O)C(=O)CC(C)(C)O[N+](=O)[O-]}
+SPC4389 = IGNORE ;    {O=CCCC(=O)C(=O)CO[O]}
+SPC4390 = IGNORE ;    {O=CCCC(=O)C(=O)C[O]}
+SPC4391 = IGNORE ;    {O=CCCC(=O)C(CC1(C)C)C1CCC(=O)CO[O]}
+SPC4392 = IGNORE ;    {O=CCCC(=O)C(CC1(C)C)C1CCC(=O)C[O]}
+SPC4393 = IGNORE ;    {O=CCCC(=O)C(CC1(C)C)C1CCC(=O)O[O]}
+SPC4394 = IGNORE ;    {O=CCCC(=O)C(CC1(C)C)C1CCC(=O)[O]}
+SPC4395 = IGNORE ;    {O=CCCC(=O)C(CC1(C)C)C1CCO[O]}
+SPC4396 = IGNORE ;    {O=CCCC(=O)C(CC1(C)C)C1CC[O]}
+SPC4397 = IGNORE ;    {O=CCCC(=O)C(O)C=O}
+SPC4398 = IGNORE ;    {O=CCCC(=O)C(OO)C=O}
+SPC4399 = IGNORE ;    {O=CCCC(=O)C(O[O])C=O}
+SPC4400 = IGNORE ;    {O=CCCC(=O)C([O])C=O}
+SPC4401 = IGNORE ;    {O=CCCC(=O)C1CC(C)(C)C1CCC(=O)OO[N+](=O)[O-]}
+SPC4402 = IGNORE ;    {O=CCCC(=O)C1CC(C)(C)C1CCC(=[O+][O-])C}
+SPC4403 = IGNORE ;    {O=CCCC(=O)C1CC(C)(C)C1CCC(=[O+][O-])C*a}
+SPC4404 = IGNORE ;    {O=CCCC(=O)C1CC(C)(C)C1CCO[N+](=O)[O-]}
+SPC4405 = IGNORE ;    {O=CCCC(=O)C=O}
+SPC4406 = IGNORE ;    {O=CCCC(=O)CC(=O)O[O]}
+SPC4407 = IGNORE ;    {O=CCCC(=O)CC=O}
+SPC4408 = IGNORE ;    {O=CCCC(=O)CO[O]}
+SPC4409 = IGNORE ;    {O=CCCC(=O)C[O]}
+SPC4410 = IGNORE ;    {O=CCCC(=O)O[O]}
+SPC4411 = IGNORE ;    {O=CCCC(=[O+][O-])C1CC(C)(C)C1CC=O}
+SPC4412 = IGNORE ;    {O=CCCC(=[O+][O-])C1CC(C)(C)C1CC=O*a}
+SPC4413 = IGNORE ;    {O=CCCC(=[O+][O-])C1CC(C)(C)C1CCC(=O)C}
+SPC4414 = IGNORE ;    {O=CCCC(=[O+][O-])C1CC(C)(C)C1CCC(=O)C*a}
+SPC4415 = IGNORE ;    {O=CCCC(=[O+][O-])C1CC(C)(C)C1CCC(=O)OC}
+SPC4416 = IGNORE ;    {O=CCCC(=[O+][O-])C1CC(C)(C)C1CCC(=O)OC*a}
+SPC4417 = IGNORE ;    {O=CCCC(C(=O)C=O)=C}
+SPC4418 = IGNORE ;    {O=CCCC(C(=O)CO)=C}
+SPC4419 = IGNORE ;    {O=CCCC(C(=O)COO)=C}
+SPC4420 = IGNORE ;    {O=CCCC(C(=O)CO[O])=C}
+SPC4421 = IGNORE ;    {O=CCCC(C(=O)C[O])=C}
+SPC4422 = IGNORE ;    {O=CCCC(C(=O)O)=C}
+SPC4423 = IGNORE ;    {O=CCCC(C(=O)OO)=C}
+SPC4424 = IGNORE ;    {O=CCCC(C(=O)O[O])=C}
+SPC4425 = IGNORE ;    {O=CCCC(CO)(O[N+](=O)[O-])C1CC(C)(C)C1CC=O}
+SPC4426 = IGNORE ;    {O=CCCC(CO)(O[N+](=O)[O-])C1CC(C)(C)C1CCC(=O)C}
+SPC4427 = IGNORE ;    {O=CCCC(CO)(O[N+](=O)[O-])C1CC(C)(C)C1CCC(=O)OC}
+SPC4428 = IGNORE ;    {O=CCCC(O)(CO[N+](=O)[O-])C1CC(C)(C)C1CC=O}
+SPC4429 = IGNORE ;    {O=CCCC(O)(CO[N+](=O)[O-])C1CC(C)(C)C1CCC(=O)C}
+SPC4430 = IGNORE ;    {O=CCCC(O)CC(=O)O[O]}
+SPC4431 = IGNORE ;    {O=CCCC(O)CC=O}
+SPC4432 = IGNORE ;    {O=CCCC(O)CO[O]}
+SPC4433 = IGNORE ;    {O=CCCC(O)C[O]}
+SPC4434 = IGNORE ;    {O=CCCC(OO)(CO[N+](=O)[O-])C1CC(C)(C)C1CC=O}
+SPC4435 = IGNORE ;    {O=CCCC(OO)(CO[N+](=O)[O-])C1CC(C)(C)C1CCC(=O)C}
+SPC4436 = IGNORE ;    {O=CCCC(OO)CC=O}
+SPC4437 = IGNORE ;    {O=CCCC(O[O])(CO[N+](=O)[O-])C1CC(C)(C)C1CC=O}
+SPC4438 = IGNORE ;    {O=CCCC(O[O])(CO[N+](=O)[O-])C1CC(C)(C)C1CCC(=O)C}
+SPC4439 = IGNORE ;    {O=CCCC(O[O])CC=O}
+SPC4440 = IGNORE ;    {O=CCCC([O])(CO[N+](=O)[O-])C1CC(C)(C)C1CC=O}
+SPC4441 = IGNORE ;    {O=CCCC([O])(CO[N+](=O)[O-])C1CC(C)(C)C1CCC(=O)C}
+SPC4442 = IGNORE ;    {O=CCCC([O])CC=O}
+SPC4443 = IGNORE ;    {O=CCCCCC(=O)O[O]}
+SPC4444 = IGNORE ;    {O=CCCCCC=O}
+SPC4445 = IGNORE ;    {O=CCCCCCON(=O)=O}
+SPC4446 = IGNORE ;    {O=CCCCCCO[O]}
+SPC4447 = IGNORE ;    {O=CCCCCC[O]}
+SPC4448 = IGNORE ;    {O=CCCCCO[O]}
+SPC4449 = IGNORE ;    {O=CCCCC[O]}
+SPC4450 = IGNORE ;    {O=CCCO[O]}
+SPC4451 = IGNORE ;    {O=CCC[O]}
+SPC4452 = IGNORE ;    {O=CCL}
+SPC4453 = IGNORE ;    {O=CCOC(=O)C=O}
+SPC4454 = IGNORE ;    {O=CCOC=O}
+SPC4455 = IGNORE ;    {O=CCO[O]}
+SPC4456 = IGNORE ;    {O=CC[O]}
+SPC4457 = IGNORE ;    {O=CO}
+SPC4458 = IGNORE ;    {O=COC(=O)CO[O]}
+SPC4459 = IGNORE ;    {O=COC(=O)C[O]}
+SPC4460 = IGNORE ;    {O=COC(=O)OC=O}
+SPC4461 = IGNORE ;    {O=COC(=O)OCO[O]}
+SPC4462 = IGNORE ;    {O=COC(=O)OC[O]}
+SPC4463 = IGNORE ;    {O=COC(C)(C)C(=O)O[O]}
+SPC4464 = IGNORE ;    {O=COC(C)(C)CO[O]}
+SPC4465 = IGNORE ;    {O=COC(C)(C)C[O]}
+SPC4466 = IGNORE ;    {O=COC=O}
+SPC4467 = IGNORE ;    {O=COCC(=O)O[O]}
+SPC4468 = IGNORE ;    {O=COCO[O]}
+SPC4469 = IGNORE ;    {O=COC[O]}
+SPC4470 = IGNORE ;    {O=CS(=O)(=O)C}
+SPC4471 = IGNORE ;    {O=N(=O)C12OOC(C)(C2O)C([O])(O)C(=C1C)O}
+SPC4472 = IGNORE ;    {O=N(=O)C12OOC(C)(C=C(C)C2([O])O)C1O}
+SPC4473 = IGNORE ;    {O=N(=O)C12OOC(C2O)C(O)([O])C(=C1)O}
+SPC4474 = IGNORE ;    {O=N(=O)C1=C(C)C([O])(O)C2(C)OOC1(N(=O)=O)C2O}
+SPC4475 = IGNORE ;    {O=N(=O)C1=C(C)C2(C)OOC(N(=O)=O)(C1([O])O)C2(C)O}
+SPC4476 = IGNORE ;    {O=N(=O)C1=C(C)C2(C)OOC(N(=O)=O)(C2O)C1([O])O}
+SPC4477 = IGNORE ;    {O=N(=O)C1=C(C)C2(OOC(C)(C1([O])O)C2(C)O)N(=O)=O}
+SPC4478 = IGNORE ;    {O=N(=O)C1=C(C)C2(OOC(C)(C2O)C1([O])O)N(=O)=O}
+SPC4479 = IGNORE ;    {O=N(=O)C1=C(O)C(O)([O])C2(C)OOC1C2O}
+SPC4480 = IGNORE ;    {O=N(=O)C1=C(O)C(O)([O])C2(OOC1C2O)C(C)C}
+SPC4481 = IGNORE ;    {O=N(=O)C1=C(O)C([O])(O)C2(C)OOC1(C)C2(C)O}
+SPC4482 = IGNORE ;    {O=N(=O)C1=C(O)C([O])(O)C2(C)OOC1(C)C2O}
+SPC4483 = IGNORE ;    {O=N(=O)C1=CC2(C)OOC(C2O)C1([O])O}
+SPC4484 = IGNORE ;    {O=N(=O)C1=CC2(OOC(C(C)C)(C2O)C1([O])O)N(=O)=O}
+SPC4485 = IGNORE ;    {O=N(=O)C1=CC2(OOC(C)(C2O)C1([O])O)N(=O)=O}
+SPC4486 = IGNORE ;    {O=N(=O)C1=CC2(OOC(C2O)C1([O])O)N(=O)=O}
+SPC4487 = IGNORE ;    {O=N(=O)OC1(C)C2(C)OOC1(C)C([O])(O)C(=C2N(=O)=O)O}
+SPC4488 = IGNORE ;    {O=N(=O)OC1(C)C2(C)OOC1(N(=O)=O)C([O])(O)C(=C2C)N(=O)=O}
+SPC4489 = IGNORE ;    {O=N(=O)OC1(C)C2(OOC1(C)C([O])(O)C(=C2C)N(=O)=O)N(=O)=O}
+SPC4490 = IGNORE ;    {O=N(=O)OC1(C)C2(OOC1(C)C([O])(O)C(=C2C)O)N(=O)=O}
+SPC4491 = IGNORE ;    {O=N(=O)OC1(C)C=CC2(C)OOC1(C)C2O}
+SPC4492 = IGNORE ;    {O=N(=O)OC1(C)C=CC2(C)OOC1C2O}
+SPC4493 = IGNORE ;    {O=N(=O)OC1(C)C=CC2OOC1(C)C2O}
+SPC4494 = IGNORE ;    {O=N(=O)OC1C(=CC2(C)OOC1(C)C2O)C}
+SPC4495 = IGNORE ;    {O=N(=O)OC1C(OO)C(=O)C=CC1=O}
+SPC4496 = IGNORE ;    {O=N(=O)OC1C(OO)C(=O)OC1}
+SPC4497 = IGNORE ;    {O=N(=O)OC1C(OO)C(=O)OC1C}
+SPC4498 = IGNORE ;    {O=N(=O)OC1C(OO)C(=O)OC1C(C)C}
+SPC4499 = IGNORE ;    {O=N(=O)OC1C(OO)C(=O)OC1CC}
+SPC4500 = IGNORE ;    {O=N(=O)OC1C(OO)C(=O)OC1CCC}
+SPC4501 = IGNORE ;    {O=N(=O)OC1C(O[O])C(=O)OC1}
+SPC4502 = IGNORE ;    {O=N(=O)OC1C(O[O])C(=O)OC1C}
+SPC4503 = IGNORE ;    {O=N(=O)OC1C(O[O])C(=O)OC1C(C)C}
+SPC4504 = IGNORE ;    {O=N(=O)OC1C(O[O])C(=O)OC1CC}
+SPC4505 = IGNORE ;    {O=N(=O)OC1C(O[O])C(=O)OC1CCC}
+SPC4506 = IGNORE ;    {O=N(=O)OC1C([O])C(=O)OC1}
+SPC4507 = IGNORE ;    {O=N(=O)OC1C([O])C(=O)OC1C}
+SPC4508 = IGNORE ;    {O=N(=O)OC1C([O])C(=O)OC1C(C)C}
+SPC4509 = IGNORE ;    {O=N(=O)OC1C([O])C(=O)OC1CC}
+SPC4510 = IGNORE ;    {O=N(=O)OC1C([O])C(=O)OC1CCC}
+SPC4511 = IGNORE ;    {O=N(=O)OC1C2(C)OOC1(C)C(O)(O)C(=C2)C}
+SPC4512 = IGNORE ;    {O=N(=O)OC1C2(C)OOC1(C)C(O)([O])C(=C2)C}
+SPC4513 = IGNORE ;    {O=N(=O)OC1C2(C)OOC1(C)C([O])(O)C(=C2N(=O)=O)O}
+SPC4514 = IGNORE ;    {O=N(=O)OC1C2(C)OOC1(N(=O)=O)C([O])(O)C(=C2C)N(=O)=O}
+SPC4515 = IGNORE ;    {O=N(=O)OC1C2(C)OOC1(N(=O)=O)C([O])(O)C(=C2C)O}
+SPC4516 = IGNORE ;    {O=N(=O)OC1C2(OOC1(C(C)C)C([O])(O)C(=C2)N(=O)=O)N(=O)=O}
+SPC4517 = IGNORE ;    {O=N(=O)OC1C2(OOC1(C)C([O])(O)C(=C2)N(=O)=O)N(=O)=O}
+SPC4518 = IGNORE ;    {O=N(=O)OC1C2(OOC1(C)C([O])(O)C(=C2C)N(=O)=O)N(=O)=O}
+SPC4519 = IGNORE ;    {O=N(=O)OC1C2(OOC1(C)C([O])(O)C(=C2C)O)N(=O)=O}
+SPC4520 = IGNORE ;    {O=N(=O)OC1C2(OOC1(C)C([O])(O)C(=C2N(=O)=O)C)N(=O)=O}
+SPC4521 = IGNORE ;    {O=N(=O)OC1C2OOC1(C(C)C)C([O])(O)C(=C2N(=O)=O)O}
+SPC4522 = IGNORE ;    {O=N(=O)OC1C2OOC1(C)C(=C(C)C2(O)O)C}
+SPC4523 = IGNORE ;    {O=N(=O)OC1C2OOC1(C)C(=C(C)C2([O])O)C}
+SPC4524 = IGNORE ;    {O=N(=O)OC1C2OOC1(C)C(=CC2(O)O)C}
+SPC4525 = IGNORE ;    {O=N(=O)OC1C2OOC1(C)C(=CC2([O])O)C}
+SPC4526 = IGNORE ;    {O=N(=O)OC1C2OOC1(C)C(O)(O)C(=C2C)C}
+SPC4527 = IGNORE ;    {O=N(=O)OC1C2OOC1(C)C(O)(O)C=C2C}
+SPC4528 = IGNORE ;    {O=N(=O)OC1C2OOC1(C)C(O)([O])C(=C2C)C}
+SPC4529 = IGNORE ;    {O=N(=O)OC1C2OOC1(C)C([O])(O)C(=C2N(=O)=O)O}
+SPC4530 = IGNORE ;    {O=N(=O)OC1C2OOC1(C)C([O])(O)C=C2C}
+SPC4531 = IGNORE ;    {O=N(=O)OC1C2OOC1(C)C=CC2(O)O}
+SPC4532 = IGNORE ;    {O=N(=O)OC1C2OOC1(C)C=CC2([O])O}
+SPC4533 = IGNORE ;    {O=N(=O)OC1C2OOC1(C=C(N(=O)=O)C2([O])O)N(=O)=O}
+SPC4534 = IGNORE ;    {O=N(=O)OC1C2OOC1(C=C(O)C2([O])O)N(=O)=O}
+SPC4535 = IGNORE ;    {O=N(=O)OC1C2OOC1(C=CC2(O)O)C(C)C}
+SPC4536 = IGNORE ;    {O=N(=O)OC1C2OOC1(C=CC2(O)[O])C(C)C}
+SPC4537 = IGNORE ;    {O=N(=O)OC1C2OOC1C(O)(O)C=C2}
+SPC4538 = IGNORE ;    {O=N(=O)OC1C2OOC1C([O])(O)C=C2}
+SPC4539 = IGNORE ;    {O=N(=O)OC1C=CC2(C)OOC1(C)C2(C)O}
+SPC4540 = IGNORE ;    {O=N(=O)OC1C=CC2(C)OOC1(C)C2O}
+SPC4541 = IGNORE ;    {O=N(=O)OC1C=CC2(C)OOC1C2O}
+SPC4542 = IGNORE ;    {O=N(=O)OC1C=CC2(OOC1C2O)C(C)C}
+SPC4543 = IGNORE ;    {O=N(=O)OC1C=CC2OOC1C2O}
+SPC4544 = IGNORE ;    {O=N(=O)OCC(=O)C(=O)C=O}
+SPC4545 = IGNORE ;    {O=N(=O)OCC(=O)C(C)(ON(=O)=O)C(=O)OON(=O)=O}
+SPC4546 = IGNORE ;    {O=N(=O)OCC(=O)C(O)C=O}
+SPC4547 = IGNORE ;    {O=N(=O)OCC(=O)C=C}
+SPC4548 = IGNORE ;    {O=N(=O)OCC(=O)C=O}
+SPC4549 = IGNORE ;    {O=N(=O)OCC(=O)COO}
+SPC4550 = IGNORE ;    {O=N(=O)OCC(=O)CO[O]}
+SPC4551 = IGNORE ;    {O=N(=O)OCC(=O)C[O]}
+SPC4552 = IGNORE ;    {O=N(=O)OCC(=O)OO}
+SPC4553 = IGNORE ;    {O=N(=O)OCC(=O)OON(=O)=O}
+SPC4554 = IGNORE ;    {O=N(=O)OCC(=O)O[O]}
+SPC4555 = IGNORE ;    {O=N(=O)OCC(O)C(C)(O)C(=O)OON(=O)=O}
+SPC4556 = IGNORE ;    {O=N(=O)OCC(O)C(C)(ON(=O)=O)C(=O)OON(=O)=O}
+SPC4557 = IGNORE ;    {O=N(=O)OCC(O)C(O)C=O}
+SPC4558 = IGNORE ;    {O=N(=O)OCC(O)C=C}
+SPC4559 = IGNORE ;    {O=N(=O)OCC(O)C=O}
+SPC4560 = IGNORE ;    {O=N(=O)OCC(OO)C(O)C=O}
+SPC4561 = IGNORE ;    {O=N(=O)OCC(OO)C=C}
+SPC4562 = IGNORE ;    {O=N(=O)OCC(O[O])C(O)C=O}
+SPC4563 = IGNORE ;    {O=N(=O)OCC(O[O])C=C}
+SPC4564 = IGNORE ;    {O=N(=O)OCC([O])C(O)C=O}
+SPC4565 = IGNORE ;    {O=N(=O)OCC([O])C=C}
+SPC4566 = IGNORE ;    {O=N(=O)OCC=CC(=O)OO}
+SPC4567 = IGNORE ;    {O=N(=O)OCC=CC(=O)OON(=O)=O}
+SPC4568 = IGNORE ;    {O=N(=O)OCC=CC(=O)O[O]}
+SPC4569 = IGNORE ;    {O=N(=O)OCC=CC=O}
+SPC4570 = IGNORE ;    {O=N(=O)OCC=CCON(=O)=O}
+SPC4571 = IGNORE ;    {O=N(=O)OCC=CCOO}
+SPC4572 = IGNORE ;    {O=N(=O)OCC=CCO[O]}
+SPC4573 = IGNORE ;    {O=N(=O)OCC=CC[O]}
+SPC4574 = IGNORE ;    {O=N(=O)OCC=O}
+SPC4575 = IGNORE ;    {O=N(=O)OCCC(=O)C(C)(C)C=O}
+SPC4576 = IGNORE ;    {O=N(=O)OCCC(=O)CC=O}
+SPC4577 = IGNORE ;    {O=N(=O)OCCOO}
+SPC4578 = IGNORE ;    {O=N(=O)OCCO[O]}
+SPC4579 = IGNORE ;    {O=N(=O)OCC[O]}
+SPC4580 = IGNORE ;    {O=N(=O)OCOC(=O)OC=O}
+SPC4581 = IGNORE ;    {O=N(=O)OCOC=O}
+SPC4582 = IGNORE ;    {O=N(=O)OOC(=O)C(=C(C)C(=O)C(O)C(=O)C)C}
+SPC4583 = IGNORE ;    {O=N(=O)OOC(=O)C(=C(C)C(=O)C)C}
+SPC4584 = IGNORE ;    {O=N(=O)OOC(=O)C(=C)C}
+SPC4585 = IGNORE ;    {O=N(=O)OOC(=O)C(=CC(=O)C(O)C(=O)C)C}
+SPC4586 = IGNORE ;    {O=N(=O)OOC(=O)C(=CC(=O)C)C}
+SPC4587 = IGNORE ;    {O=N(=O)OOC(=O)C(=O)C}
+SPC4588 = IGNORE ;    {O=N(=O)OOC(=O)C(C)(C)C}
+SPC4589 = IGNORE ;    {O=N(=O)OOC(=O)C(C)(C)C(=O)C}
+SPC4590 = IGNORE ;    {O=N(=O)OOC(=O)C(C)(C)O}
+SPC4591 = IGNORE ;    {O=N(=O)OOC(=O)C(C)(C)OC(=O)C}
+SPC4592 = IGNORE ;    {O=N(=O)OOC(=O)C(C)(C)ON(=O)=O}
+SPC4593 = IGNORE ;    {O=N(=O)OOC(=O)C(C)(O)C(=O)C}
+SPC4594 = IGNORE ;    {O=N(=O)OOC(=O)C(C)(O)C(=O)C(=O)C}
+SPC4595 = IGNORE ;    {O=N(=O)OOC(=O)C(C)(O)C1OC1}
+SPC4596 = IGNORE ;    {O=N(=O)OOC(=O)C(C)(O)CON(=O)=O}
+SPC4597 = IGNORE ;    {O=N(=O)OOC(=O)C(C)C}
+SPC4598 = IGNORE ;    {O=N(=O)OOC(=O)C(C)C(=O)C}
+SPC4599 = IGNORE ;    {O=N(=O)OOC(=O)C(C)C(=O)C(=O)C}
+SPC4600 = IGNORE ;    {O=N(=O)OOC(=O)C(C)C(C)C}
+SPC4601 = IGNORE ;    {O=N(=O)OOC(=O)C(C)C(C)O}
+SPC4602 = IGNORE ;    {O=N(=O)OOC(=O)C(C)CC(=O)C}
+SPC4603 = IGNORE ;    {O=N(=O)OOC(=O)C(C)O}
+SPC4604 = IGNORE ;    {O=N(=O)OOC(=O)C(C)OC(=O)C}
+SPC4605 = IGNORE ;    {O=N(=O)OOC(=O)C(C)OC(=O)C(=O)C}
+SPC4606 = IGNORE ;    {O=N(=O)OOC(=O)C(C)OC(C)C}
+SPC4607 = IGNORE ;    {O=N(=O)OOC(=O)C(C)ON(=O)=O}
+SPC4608 = IGNORE ;    {O=N(=O)OOC(=O)C(CL)(CL)CL}
+SPC4609 = IGNORE ;    {O=N(=O)OOC(=O)C(CL)CL}
+SPC4610 = IGNORE ;    {O=N(=O)OOC(=O)C(O)(CL)CL}
+SPC4611 = IGNORE ;    {O=N(=O)OOC(=O)C(O)C(=O)C}
+SPC4612 = IGNORE ;    {O=N(=O)OOC(=O)C(O)C(=O)C(=O)C(C)C}
+SPC4613 = IGNORE ;    {O=N(=O)OOC(=O)C(O)C(=O)C(C)C}
+SPC4614 = IGNORE ;    {O=N(=O)OOC(=O)C(O)C(C)(C)O}
+SPC4615 = IGNORE ;    {O=N(=O)OOC(=O)C(O)C(C)C}
+SPC4616 = IGNORE ;    {O=N(=O)OOC(=O)C(O)C1(C)OC1}
+SPC4617 = IGNORE ;    {O=N(=O)OOC(=O)C(O)CL}
+SPC4618 = IGNORE ;    {O=N(=O)OOC(=O)C(ON(=O)=O)C(=O)C}
+SPC4619 = IGNORE ;    {O=N(=O)OOC(=O)C(ON(=O)=O)C(C)(C)O}
+SPC4620 = IGNORE ;    {O=N(=O)OOC(=O)C(ON(=O)=O)C(C)(O)CON(=O)=O}
+SPC4621 = IGNORE ;    {O=N(=O)OOC(=O)C(ON(=O)=O)C(C)C}
+SPC4622 = IGNORE ;    {O=N(=O)OOC(=O)C1(C)OC1(C)C=CC(=O)C}
+SPC4623 = IGNORE ;    {O=N(=O)OOC(=O)C1(C)OC1C(=CC(=O)C)C}
+SPC4624 = IGNORE ;    {O=N(=O)OOC(=O)C1(C)OC1C(=O)C}
+SPC4625 = IGNORE ;    {O=N(=O)OOC(=O)C1(C)OC1C=CC(=O)C}
+SPC4626 = IGNORE ;    {O=N(=O)OOC(=O)C1(CCC2CC1C2(C)C)ON(=O)=O}
+SPC4627 = IGNORE ;    {O=N(=O)OOC(=O)C1(O)CCC2CC1C2(C)C}
+SPC4628 = IGNORE ;    {O=N(=O)OOC(=O)C1C(=O)CCC(=O)C1(C)C}
+SPC4629 = IGNORE ;    {O=N(=O)OOC(=O)C1CC(C(=O)C)C1(C)C}
+SPC4630 = IGNORE ;    {O=N(=O)OOC(=O)C1CC(C(=O)O)C1(C)C}
+SPC4631 = IGNORE ;    {O=N(=O)OOC(=O)C1OC1(C)C(=O)C}
+SPC4632 = IGNORE ;    {O=N(=O)OOC(=O)C1OC1(C)C=CC(=O)C}
+SPC4633 = IGNORE ;    {O=N(=O)OOC(=O)C1OC1C=CC(=O)C}
+SPC4634 = IGNORE ;    {O=N(=O)OOC(=O)C1OC1C=CC(=O)C(C)C}
+SPC4635 = IGNORE ;    {O=N(=O)OOC(=O)C=C(C)C(=O)C}
+SPC4636 = IGNORE ;    {O=N(=O)OOC(=O)C=C(C)C(=O)C(O)C(=O)C}
+SPC4637 = IGNORE ;    {O=N(=O)OOC(=O)C=CC(=O)C}
+SPC4638 = IGNORE ;    {O=N(=O)OOC(=O)CC(=O)C(=O)C}
+SPC4639 = IGNORE ;    {O=N(=O)OOC(=O)CC(=O)C(C)(C)O}
+SPC4640 = IGNORE ;    {O=N(=O)OOC(=O)CC(C)(C)C}
+SPC4641 = IGNORE ;    {O=N(=O)OOC(=O)CC(C)(C)O}
+SPC4642 = IGNORE ;    {O=N(=O)OOC(=O)CC(C)C(=O)C}
+SPC4643 = IGNORE ;    {O=N(=O)OOC(=O)CC(O)C(=O)C}
+SPC4644 = IGNORE ;    {O=N(=O)OOC(=O)CC(O)C(C)C}
+SPC4645 = IGNORE ;    {O=N(=O)OOC(=O)CC1CC(C(=O)C)C1(C)C}
+SPC4646 = IGNORE ;    {O=N(=O)OOC(=O)CC1CC(C(=O)O)C1(C)C}
+SPC4647 = IGNORE ;    {O=N(=O)OOC(=O)c1cc(C)cc(C)c1}
+SPC4648 = IGNORE ;    {O=N(=O)OOC(=O)c1ccc(C)c(C)c1}
+SPC4649 = IGNORE ;    {O=N(=O)OOC(=O)c1cccc(C)c1}
+SPC4650 = IGNORE ;    {O=N(=O)OOC(=O)c1cccc(C)c1C}
+SPC4651 = IGNORE ;    {O=N(=O)OOC(=O)c1ccccc1}
+SPC4652 = IGNORE ;    {O=N(=O)OOC(=O)c1ccccc1C}
+SPC4653 = IGNORE ;    {OC}
+SPC4654 = IGNORE ;    {OC(=O)CCC1C(CC1(C)C)C(=C)CCC(=O)OO[N+](=O)[O-]}
+SPC4655 = IGNORE ;    {OC(=O)CCC1C(CC1(C)C)C(=C)CCO[N+](=O)[O-]}
+SPC4656 = IGNORE ;    {OC(=O)CCC1C(CC1(C)C)C(=O)CCC(=O)OO[N+](=O)[O-]}
+SPC4657 = IGNORE ;    {OC(=O)CCC1C(CC1(C)C)C(=O)CCO[N+](=O)[O-]}
+SPC4658 = IGNORE ;    {OC(=O)CL}
+SPC4659 = IGNORE ;    {OC(CL)(CL)C(=O)CL}
+SPC4660 = IGNORE ;    {OC(CL)(CL)C(=O)OO}
+SPC4661 = IGNORE ;    {OC(CL)(CL)C(=O)O[O]}
+SPC4662 = IGNORE ;    {OC(CL)(CL)C(CL)(CL)OO}
+SPC4663 = IGNORE ;    {OC(CL)(CL)C(CL)(CL)O[O]}
+SPC4664 = IGNORE ;    {OC(CL)(CL)C(CL)(CL)[O]}
+SPC4665 = IGNORE ;    {OC(CL)(CL)C(CL)OO}
+SPC4666 = IGNORE ;    {OC(CL)(CL)C(CL)O[O]}
+SPC4667 = IGNORE ;    {OC(CL)(CL)C(CL)[O]}
+SPC4668 = IGNORE ;    {OC(CL)(CL)C(O)(CL)CL}
+SPC4669 = IGNORE ;    {OC(CL)(CL)C(O)CL}
+SPC4670 = IGNORE ;    {OC(CL)(CL)C=O}
+SPC4671 = IGNORE ;    {OC(CL)(CL)CL}
+SPC4672 = IGNORE ;    {OC(CL)(CL)COO}
+SPC4673 = IGNORE ;    {OC(CL)(CL)CO[O]}
+SPC4674 = IGNORE ;    {OC(CL)(CL)C[O]}
+SPC4675 = IGNORE ;    {OC(CL)C(=O)CL}
+SPC4676 = IGNORE ;    {OC(CL)C(=O)O}
+SPC4677 = IGNORE ;    {OC(CL)C(=O)OO}
+SPC4678 = IGNORE ;    {OC(CL)C(=O)O[O]}
+SPC4679 = IGNORE ;    {OC(CL)C(CL)(CL)OO}
+SPC4680 = IGNORE ;    {OC(CL)C(CL)(CL)O[O]}
+SPC4681 = IGNORE ;    {OC(CL)C(CL)(CL)[O]}
+SPC4682 = IGNORE ;    {OC(CL)C(CL)OO}
+SPC4683 = IGNORE ;    {OC(CL)C(CL)O[O]}
+SPC4684 = IGNORE ;    {OC(CL)C(CL)[O]}
+SPC4685 = IGNORE ;    {OC(CL)C(O)CL}
+SPC4686 = IGNORE ;    {OC(CL)C=O}
+SPC4687 = IGNORE ;    {OC(CL)CL}
+SPC4688 = IGNORE ;    {OC(CL)CON(=O)=O}
+SPC4689 = IGNORE ;    {OC(CL)COO}
+SPC4690 = IGNORE ;    {OC(CL)CO[O]}
+SPC4691 = IGNORE ;    {OC(CL)C[O]}
+SPC4692 = IGNORE ;    {OC(O)COC=O}
+SPC4693 = IGNORE ;    {OC1(O)C=CC(C)(C2ON(=O)=O)OOC12C}
+SPC4694 = IGNORE ;    {OC1=C(C)C2(OOC(C)(C1([O])O)C2(C)O)N(=O)=O}
+SPC4695 = IGNORE ;    {OC1C(=O)C(=O)OC1}
+SPC4696 = IGNORE ;    {OC1C(=O)C(=O)OC1C(C)C}
+SPC4697 = IGNORE ;    {OC1C(=O)C(=O)OC1CC}
+SPC4698 = IGNORE ;    {OC1C(=O)C(=O)OC1CCC}
+SPC4699 = IGNORE ;    {OC1C(=O)C(C)=C(C)C(=O)C1(O)C}
+SPC4700 = IGNORE ;    {OC1C(=O)C(C)=C(C)C(=O)C1(OO)C}
+SPC4701 = IGNORE ;    {OC1C(=O)C(C)=C(C)C(=O)C1O}
+SPC4702 = IGNORE ;    {OC1C(=O)C(C)=CC(=O)C1(O)C}
+SPC4703 = IGNORE ;    {OC1C(=O)C(C)=CC(=O)C1(O)CC}
+SPC4704 = IGNORE ;    {OC1C(=O)C(C)=CC(=O)C1(OO)C}
+SPC4705 = IGNORE ;    {OC1C(=O)C(C)=CC(=O)C1(OO)CC}
+SPC4706 = IGNORE ;    {OC1C(=O)C(C)=CC(=O)C1(O[O])C}
+SPC4707 = IGNORE ;    {OC1C(=O)C(C)=CC(=O)C1([O])C}
+SPC4708 = IGNORE ;    {OC1C(=O)C=C(C(=O)C1O)C(C)C}
+SPC4709 = IGNORE ;    {OC1C(=O)C=C(C)C(=O)C1(O)C}
+SPC4710 = IGNORE ;    {OC1C(=O)C=C(C)C(=O)C1(OO)C}
+SPC4711 = IGNORE ;    {OC1C(=O)C=C(C)C(=O)C1(O[O])C}
+SPC4712 = IGNORE ;    {OC1C(=O)C=C(C)C(=O)C1([O])C}
+SPC4713 = IGNORE ;    {OC1C(=O)C=C(C)C(=O)C1O}
+SPC4714 = IGNORE ;    {OC1C(=O)C=C(CC)C(=O)C1(O)C}
+SPC4715 = IGNORE ;    {OC1C(=O)C=C(CC)C(=O)C1(OO)C}
+SPC4716 = IGNORE ;    {OC1C(=O)C=CC(=O)C1}
+SPC4717 = IGNORE ;    {OC1C(=O)C=CC(=O)C1=O}
+SPC4718 = IGNORE ;    {OC1C(=O)C=CC(=O)C1O}
+SPC4719 = IGNORE ;    {OC1C(=O)OC(=O)C1(O)C}
+SPC4720 = IGNORE ;    {OC1C(=O)OC(=O)C1(O)C(C)C}
+SPC4721 = IGNORE ;    {OC1C(=O)OC(=O)C1(O)CC}
+SPC4722 = IGNORE ;    {OC1C(=O)OC(=O)C1(O)CCC}
+SPC4723 = IGNORE ;    {OC1C(=O)OC(=O)C1(OO)C}
+SPC4724 = IGNORE ;    {OC1C(=O)OC(=O)C1(OO)C(C)C}
+SPC4725 = IGNORE ;    {OC1C(=O)OC(=O)C1(OO)CC}
+SPC4726 = IGNORE ;    {OC1C(=O)OC(=O)C1(OO)CCC}
+SPC4727 = IGNORE ;    {OC1C(=O)OC(=O)C1(O[O])C}
+SPC4728 = IGNORE ;    {OC1C(=O)OC(=O)C1(O[O])C(C)C}
+SPC4729 = IGNORE ;    {OC1C(=O)OC(=O)C1(O[O])CC}
+SPC4730 = IGNORE ;    {OC1C(=O)OC(=O)C1(O[O])CCC}
+SPC4731 = IGNORE ;    {OC1C(=O)OC(=O)C1([O])C}
+SPC4732 = IGNORE ;    {OC1C(=O)OC(=O)C1([O])C(C)C}
+SPC4733 = IGNORE ;    {OC1C(=O)OC(=O)C1([O])CC}
+SPC4734 = IGNORE ;    {OC1C(=O)OC(=O)C1([O])CCC}
+SPC4735 = IGNORE ;    {OC1C(=O)OC(=O)C1=O}
+SPC4736 = IGNORE ;    {OC1C(=O)OC(=O)C1O}
+SPC4737 = IGNORE ;    {OC1C(O)(C)C(=O)OC1C}
+SPC4738 = IGNORE ;    {OC1C(O)(C)C(=O)OC1CC}
+SPC4739 = IGNORE ;    {OC1C(O)C(=O)OC1}
+SPC4740 = IGNORE ;    {OC1C(O)C(=O)OC1C}
+SPC4741 = IGNORE ;    {OC1C(O)C(=O)OC1C(C)C}
+SPC4742 = IGNORE ;    {OC1C(O)C(=O)OC1CC}
+SPC4743 = IGNORE ;    {OC1C(O)C(=O)OC1CCC}
+SPC4744 = IGNORE ;    {OC1C(OO)(C)C(=O)OC1C}
+SPC4745 = IGNORE ;    {OC1C(OO)(C)C(=O)OC1CC}
+SPC4746 = IGNORE ;    {OC1C(OO)C(=O)C=CC1=O}
+SPC4747 = IGNORE ;    {OC1C(OO)C(=O)OC1}
+SPC4748 = IGNORE ;    {OC1C(OO)C(=O)OC1=O}
+SPC4749 = IGNORE ;    {OC1C(OO)C(=O)OC1C}
+SPC4750 = IGNORE ;    {OC1C(OO)C(=O)OC1C(C)C}
+SPC4751 = IGNORE ;    {OC1C(OO)C(=O)OC1CC}
+SPC4752 = IGNORE ;    {OC1C(OO)C(=O)OC1CCC}
+SPC4753 = IGNORE ;    {OC1C(O[O])(C)C(=O)OC1C}
+SPC4754 = IGNORE ;    {OC1C(O[O])(C)C(=O)OC1CC}
+SPC4755 = IGNORE ;    {OC1C(O[O])C(=O)OC1C}
+SPC4756 = IGNORE ;    {OC1C(O[O])C(=O)OC1C(C)C}
+SPC4757 = IGNORE ;    {OC1C(O[O])C(=O)OC1CC}
+SPC4758 = IGNORE ;    {OC1C(O[O])C(=O)OC1CCC}
+SPC4759 = IGNORE ;    {OC1C([O])(C)C(=O)OC1C}
+SPC4760 = IGNORE ;    {OC1C([O])(C)C(=O)OC1CC}
+SPC4761 = IGNORE ;    {OC1C([O])C(=O)OC1C}
+SPC4762 = IGNORE ;    {OC1C([O])C(=O)OC1C(C)C}
+SPC4763 = IGNORE ;    {OC1C([O])C(=O)OC1CC}
+SPC4764 = IGNORE ;    {OC1C([O])C(=O)OC1CCC}
+SPC4765 = IGNORE ;    {OC1C2(C)OOC1(C)C(O)(O)C(=C2)C}
+SPC4766 = IGNORE ;    {OC1C2(C)OOC1(C)C([O])(O)C(=C2)C}
+SPC4767 = IGNORE ;    {OC1C2OOC1(C)C=CC2(C)O}
+SPC4768 = IGNORE ;    {OC1C2OOC1(C)C=CC2(C)[O]}
+SPC4769 = IGNORE ;    {OC1C2OOC1(C)C=CC2(O)O}
+SPC4770 = IGNORE ;    {OC1C2OOC1(C)C=CC2([O])O}
+SPC4771 = IGNORE ;    {OC1C2OOC1C(O)(O)C=C2}
+SPC4772 = IGNORE ;    {OC1C2OOC1C([O])(O)C=C2}
+SPC4773 = IGNORE ;    {OC1C=CC2(C)OOC1(C)C2(C)O}
+SPC4774 = IGNORE ;    {OC1C=CC2(C)OOC1(C)C2O}
+SPC4775 = IGNORE ;    {OC1C=CC2(C)OOC1C2O}
+SPC4776 = IGNORE ;    {OC1C=CC2(OOC1C2O)C(C)C}
+SPC4777 = IGNORE ;    {OC1C=CC2OOC1C2O}
+SPC4778 = IGNORE ;    {OC1CC(=O)CC(=O)C1}
+SPC4779 = IGNORE ;    {OC1CC(=O)CC(O)C1(O)C}
+SPC4780 = IGNORE ;    {OC1CC(=O)CC(O)C1(ON(=O)=O)C}
+SPC4781 = IGNORE ;    {OC1CC(=O)CC(O)C1(OO)C}
+SPC4782 = IGNORE ;    {OC1CC(=O)CC(O)C1(O[O])C}
+SPC4783 = IGNORE ;    {OC1CC(=O)CC(O)C1([O])C}
+SPC4784 = IGNORE ;    {OC1CC(=O)CC=C1C}
+SPC4785 = IGNORE ;    {OC1CC(O)CC=C1C}
+SPC4786 = IGNORE ;    {OC1CC(ON(=O)=O)CC=C1C}
+SPC4787 = IGNORE ;    {OC1CC(OO)CC=C1C}
+SPC4788 = IGNORE ;    {OC1CC(O[O])CC=C1C}
+SPC4789 = IGNORE ;    {OC1CC([O])CC=C1C}
+SPC4790 = IGNORE ;    {OC1COC(=O)C1(O)C}
+SPC4791 = IGNORE ;    {OC1COC(=O)C1(OO)C}
+SPC4792 = IGNORE ;    {OC1COC(=O)C1(O[O])C}
+SPC4793 = IGNORE ;    {OC1COC(=O)C1([O])C}
+SPC4794 = IGNORE ;    {OC2(O)C=CC(C)(C1O)OOC12C}
+SPC4795 = IGNORE ;    {OC=C}
+SPC4796 = IGNORE ;    {OCBR}
+SPC4797 = IGNORE ;    {OCC(=CC(=O)OON(=O)=O)C}
+SPC4798 = IGNORE ;    {OCC(=O)C(=O)C(OO)CC=O}
+SPC4799 = IGNORE ;    {OCC(=O)C(=O)C(O[O])CC=O}
+SPC4800 = IGNORE ;    {OCC(=O)C(=O)C([O])CC=O}
+SPC4801 = IGNORE ;    {OCC(=O)C(=O)C=O}
+SPC4802 = IGNORE ;    {OCC(=O)C(=O)CC(=O)OO}
+SPC4803 = IGNORE ;    {OCC(=O)C(=O)CC(=O)OON(=O)=O}
+SPC4804 = IGNORE ;    {OCC(=O)C(=O)CC(=O)O[O]}
+SPC4805 = IGNORE ;    {OCC(=O)C(=O)CC(OO)CO}
+SPC4806 = IGNORE ;    {OCC(=O)C(=O)CC(O[O])CO}
+SPC4807 = IGNORE ;    {OCC(=O)C(=O)CC([O])CO}
+SPC4808 = IGNORE ;    {OCC(=O)C(=O)CC=O}
+SPC4809 = IGNORE ;    {OCC(=O)C(=O)CO}
+SPC4810 = IGNORE ;    {OCC(=O)C(=O)CON(=O)=O}
+SPC4811 = IGNORE ;    {OCC(=O)C(=O)COO}
+SPC4812 = IGNORE ;    {OCC(=O)C(=O)CO[O]}
+SPC4813 = IGNORE ;    {OCC(=O)C(=O)C[O]}
+SPC4814 = IGNORE ;    {OCC(=O)C(=O)O}
+SPC4815 = IGNORE ;    {OCC(=O)C(C)(C)C=O}
+SPC4816 = IGNORE ;    {OCC(=O)C(C)=C}
+SPC4817 = IGNORE ;    {OCC(=O)C(C=O)C(C)(C)C=O}
+SPC4818 = IGNORE ;    {OCC(=O)C(CO)=C}
+SPC4819 = IGNORE ;    {OCC(=O)C(O)(C)CON(=O)=O}
+SPC4820 = IGNORE ;    {OCC(=O)C(O)C(=O)OO}
+SPC4821 = IGNORE ;    {OCC(=O)C(O)C(=O)OON(=O)=O}
+SPC4822 = IGNORE ;    {OCC(=O)C(O)C(=O)O[O]}
+SPC4823 = IGNORE ;    {OCC(=O)C(O)C=O}
+SPC4824 = IGNORE ;    {OCC(=O)C(O)CON(=O)=O}
+SPC4825 = IGNORE ;    {OCC(=O)C(O)COO}
+SPC4826 = IGNORE ;    {OCC(=O)C(O)CO[O]}
+SPC4827 = IGNORE ;    {OCC(=O)C(O)C[O]}
+SPC4828 = IGNORE ;    {OCC(=O)C(ON(=O)=O)CO}
+SPC4829 = IGNORE ;    {OCC(=O)C(OO)(C)C=O}
+SPC4830 = IGNORE ;    {OCC(=O)C(OO)(CO)CO}
+SPC4831 = IGNORE ;    {OCC(=O)C(OO)CO}
+SPC4832 = IGNORE ;    {OCC(=O)C(O[O])(CO)CO}
+SPC4833 = IGNORE ;    {OCC(=O)C(O[O])CO}
+SPC4834 = IGNORE ;    {OCC(=O)C([O])(CO)CO}
+SPC4835 = IGNORE ;    {OCC(=O)C([O])CO}
+SPC4836 = IGNORE ;    {OCC(=O)C1CC(COO)C1(C)C}
+SPC4837 = IGNORE ;    {OCC(=O)C1CC(CO[O])C1(C)C}
+SPC4838 = IGNORE ;    {OCC(=O)C1CC(C[O])C1(C)C}
+SPC4839 = IGNORE ;    {OCC(=O)C=C}
+SPC4840 = IGNORE ;    {OCC(=O)C=C(CC)C(=O)CO.O=C1CCC(=O)C(=C1)C}
+SPC4841 = IGNORE ;    {OCC(=O)C=O}
+SPC4842 = IGNORE ;    {OCC(=O)CC=O}
+SPC4843 = IGNORE ;    {OCC(=O)CCC(C(=O)C)CC=O}
+SPC4844 = IGNORE ;    {OCC(=O)CCC(CC=O)C(C)=C}
+SPC4845 = IGNORE ;    {OCC(=O)CCC1C(CC1(C)C)C(=O)CCC=O}
+SPC4846 = IGNORE ;    {OCC(=O)CCC1C(CC1(C)C)C(CCC=O)=C}
+SPC4847 = IGNORE ;    {OCC(=O)CL}
+SPC4848 = IGNORE ;    {OCC(=O)CO}
+SPC4849 = IGNORE ;    {OCC(=O)O}
+SPC4850 = IGNORE ;    {OCC(=O)OO}
+SPC4851 = IGNORE ;    {OCC(=O)OON(=O)=O}
+SPC4852 = IGNORE ;    {OCC(=O)O[O]}
+SPC4853 = IGNORE ;    {OCC(C(=O)O)=C}
+SPC4854 = IGNORE ;    {OCC(C(=O)O)C(C)=C}
+SPC4855 = IGNORE ;    {OCC(C(=O)OO)=C}
+SPC4856 = IGNORE ;    {OCC(C(=O)OO)C(C)=C}
+SPC4857 = IGNORE ;    {OCC(C(=O)OON(=O)=O)=C}
+SPC4858 = IGNORE ;    {OCC(C=O)=C}
+SPC4859 = IGNORE ;    {OCC(C=O)C(C)=C}
+SPC4860 = IGNORE ;    {OCC(CCC(=O)O)(O[N+](=O)[O-])C1CC(C)(C)C1CCC(=O)C}
+SPC4861 = IGNORE ;    {OCC(CL)(CL)CL}
+SPC4862 = IGNORE ;    {OCC(CL)(CL)O[O]}
+SPC4863 = IGNORE ;    {OCC(CL)(CL)[O]}
+SPC4864 = IGNORE ;    {OCC(CL)CCL}
+SPC4865 = IGNORE ;    {OCC(CL)CL}
+SPC4866 = IGNORE ;    {OCC(CL)ON(=O)=O}
+SPC4867 = IGNORE ;    {OCC(CL)OO}
+SPC4868 = IGNORE ;    {OCC(CL)O[O]}
+SPC4869 = IGNORE ;    {OCC(CL)[O]}
+SPC4870 = IGNORE ;    {OCC(CO)C(C)=C}
+SPC4871 = IGNORE ;    {OCC(COO)C(C)=C}
+SPC4872 = IGNORE ;    {OCC(O)(CL)CL}
+SPC4873 = IGNORE ;    {OCC(O)(CO)C(OO)C=O}
+SPC4874 = IGNORE ;    {OCC(O)(CO)C(O[O])C=O}
+SPC4875 = IGNORE ;    {OCC(O)(CO)C([O])C=O}
+SPC4876 = IGNORE ;    {OCC(O)(CO)C=O}
+SPC4877 = IGNORE ;    {OCC(O)C(=O)CO}
+SPC4878 = IGNORE ;    {OCC(O)C(=O)CON(=O)=O}
+SPC4879 = IGNORE ;    {OCC(O)C(=O)O}
+SPC4880 = IGNORE ;    {OCC(O)C(=O)OO}
+SPC4881 = IGNORE ;    {OCC(O)C(=O)OON(=O)=O}
+SPC4882 = IGNORE ;    {OCC(O)C(=O)O[O]}
+SPC4883 = IGNORE ;    {OCC(O)C(=O)[O]}
+SPC4884 = IGNORE ;    {OCC(O)C(C)=C}
+SPC4885 = IGNORE ;    {OCC(O)C(CO)=C}
+SPC4886 = IGNORE ;    {OCC(O)C(O)(C)C=O}
+SPC4887 = IGNORE ;    {OCC(O)C(O)(C)CON(=O)=O}
+SPC4888 = IGNORE ;    {OCC(O)C(O)C=O}
+SPC4889 = IGNORE ;    {OCC(O)C(ON(=O)=O)(C)C(=O)O}
+SPC4890 = IGNORE ;    {OCC(O)C(ON(=O)=O)(C)C(=O)OO}
+SPC4891 = IGNORE ;    {OCC(O)C(ON(=O)=O)(C)C(=O)OON(=O)=O}
+SPC4892 = IGNORE ;    {OCC(O)C(ON(=O)=O)(C)C(=O)O[O]}
+SPC4893 = IGNORE ;    {OCC(O)C(ON(=O)=O)(C)C=O}
+SPC4894 = IGNORE ;    {OCC(O)C(OO)(C)C=O}
+SPC4895 = IGNORE ;    {OCC(O)C(OO)(CO)C=O}
+SPC4896 = IGNORE ;    {OCC(O)C(O[O])(C)C=O}
+SPC4897 = IGNORE ;    {OCC(O)C(O[O])(CO)C=O}
+SPC4898 = IGNORE ;    {OCC(O)C([O])(C)C=O}
+SPC4899 = IGNORE ;    {OCC(O)C([O])(CO)C=O}
+SPC4900 = IGNORE ;    {OCC(O)C=C}
+SPC4901 = IGNORE ;    {OCC(O)C=O}
+SPC4902 = IGNORE ;    {OCC(O)CC(OO)C=O}
+SPC4903 = IGNORE ;    {OCC(O)CC(O[O])C=O}
+SPC4904 = IGNORE ;    {OCC(O)CC([O])C=O}
+SPC4905 = IGNORE ;    {OCC(O)CC=O}
+SPC4906 = IGNORE ;    {OCC(O)CL}
+SPC4907 = IGNORE ;    {OCC(O)COO}
+SPC4908 = IGNORE ;    {OCC(O)CO[O]}
+SPC4909 = IGNORE ;    {OCC(O)C[O]}
+SPC4910 = IGNORE ;    {OCC(ON(=O)=O)C(=O)C=O}
+SPC4911 = IGNORE ;    {OCC(ON(=O)=O)C(=[O+][O-])C}
+SPC4912 = IGNORE ;    {OCC(ON(=O)=O)C(=[O+][O-])C*a}
+SPC4913 = IGNORE ;    {OCC(ON(=O)=O)C(C)=C}
+SPC4914 = IGNORE ;    {OCC(ON(=O)=O)C(CO)=C}
+SPC4915 = IGNORE ;    {OCC(ON(=O)=O)C(O)(C)C(=O)OO}
+SPC4916 = IGNORE ;    {OCC(ON(=O)=O)C(O)(C)C(=O)OON(=O)=O}
+SPC4917 = IGNORE ;    {OCC(ON(=O)=O)C(O)(C)C(=O)O[O]}
+SPC4918 = IGNORE ;    {OCC(ON(=O)=O)C(O)(C)C=O}
+SPC4919 = IGNORE ;    {OCC(ON(=O)=O)C(O)(C)CON(=O)=O}
+SPC4920 = IGNORE ;    {OCC(ON(=O)=O)C(O)(CO)C=O}
+SPC4921 = IGNORE ;    {OCC(ON(=O)=O)C(O)(CO)CO}
+SPC4922 = IGNORE ;    {OCC(ON(=O)=O)C(O)C=O}
+SPC4923 = IGNORE ;    {OCC(ON(=O)=O)C(ON(=O)=O)(C)C(=O)O}
+SPC4924 = IGNORE ;    {OCC(ON(=O)=O)C(ON(=O)=O)(C)C(=O)OO}
+SPC4925 = IGNORE ;    {OCC(ON(=O)=O)C(ON(=O)=O)(C)C(=O)OON(=O)=O}
+SPC4926 = IGNORE ;    {OCC(ON(=O)=O)C(ON(=O)=O)(C)C(=O)O[O]}
+SPC4927 = IGNORE ;    {OCC(ON(=O)=O)C(ON(=O)=O)(C)C=O}
+SPC4928 = IGNORE ;    {OCC(ON(=O)=O)C(ON(=O)=O)(CO)C=O}
+SPC4929 = IGNORE ;    {OCC(ON(=O)=O)C(ON(=O)=O)(CO)CO}
+SPC4930 = IGNORE ;    {OCC(ON(=O)=O)C(OO)(C)C(=O)OO}
+SPC4931 = IGNORE ;    {OCC(ON(=O)=O)C(OO)(C)C(=O)OON(=O)=O}
+SPC4932 = IGNORE ;    {OCC(ON(=O)=O)C(OO)(C)C(=O)O[O]}
+SPC4933 = IGNORE ;    {OCC(ON(=O)=O)C(OO)(C)C=O}
+SPC4934 = IGNORE ;    {OCC(ON(=O)=O)C(OO)(CO)C=O}
+SPC4935 = IGNORE ;    {OCC(ON(=O)=O)C(OO)(CO)CO}
+SPC4936 = IGNORE ;    {OCC(ON(=O)=O)C(O[O])(CO)CO}
+SPC4937 = IGNORE ;    {OCC(ON(=O)=O)C([O])(CO)CO}
+SPC4938 = IGNORE ;    {OCC(ON(=O)=O)C=C}
+SPC4939 = IGNORE ;    {OCC(OO)(CO)C=O}
+SPC4940 = IGNORE ;    {OCC(OO)C(=O)CON(=O)=O}
+SPC4941 = IGNORE ;    {OCC(OO)C(C)=C}
+SPC4942 = IGNORE ;    {OCC(OO)C(CO)=C}
+SPC4943 = IGNORE ;    {OCC(OO)C(O)(C)CON(=O)=O}
+SPC4944 = IGNORE ;    {OCC(OO)C(O)C=O}
+SPC4945 = IGNORE ;    {OCC(OO)C=C}
+SPC4946 = IGNORE ;    {OCC(OO)C=O}
+SPC4947 = IGNORE ;    {OCC(OO)CC(=O)C(=O)O}
+SPC4948 = IGNORE ;    {OCC(O[O])(CO)C=O}
+SPC4949 = IGNORE ;    {OCC(O[O])C(=O)CON(=O)=O}
+SPC4950 = IGNORE ;    {OCC(O[O])C(C)=C}
+SPC4951 = IGNORE ;    {OCC(O[O])C(CO)=C}
+SPC4952 = IGNORE ;    {OCC(O[O])C(O)(C)CON(=O)=O}
+SPC4953 = IGNORE ;    {OCC(O[O])C(O)C=O}
+SPC4954 = IGNORE ;    {OCC(O[O])C=C}
+SPC4955 = IGNORE ;    {OCC(O[O])C=O}
+SPC4956 = IGNORE ;    {OCC(O[O])CC(=O)C(=O)O}
+SPC4957 = IGNORE ;    {OCC([O])(CO)C=O}
+SPC4958 = IGNORE ;    {OCC([O])C(=O)CON(=O)=O}
+SPC4959 = IGNORE ;    {OCC([O])C(C)=C}
+SPC4960 = IGNORE ;    {OCC([O])C(CO)=C}
+SPC4961 = IGNORE ;    {OCC([O])C(O)(C)CON(=O)=O}
+SPC4962 = IGNORE ;    {OCC([O])C(O)C=O}
+SPC4963 = IGNORE ;    {OCC([O])C=C}
+SPC4964 = IGNORE ;    {OCC([O])C=O}
+SPC4965 = IGNORE ;    {OCC([O])CC(=O)C(=O)O}
+SPC4966 = IGNORE ;    {OCC1(CCC2OOC(C)(CCC3C1CC3(C)C)O2)O[N+](=O)[O-]}
+SPC4967 = IGNORE ;    {OCC1(CC\C=C(\C)/CCC2C1CC2(C)C)O[N+](=O)[O-]}
+SPC4968 = IGNORE ;    {OCC1(O)CCC2OOC(C)(CCC3C1CC3(C)C)O2}
+SPC4969 = IGNORE ;    {OCC1(O)CC\C=C(\C)/CCC2C1CC2(C)C}
+SPC4970 = IGNORE ;    {OCC1(OO)CCC2OOC(C)(CCC3C1CC3(C)C)O2}
+SPC4971 = IGNORE ;    {OCC1(OO)CC\C=C(\C)/CCC2C1CC2(C)C}
+SPC4972 = IGNORE ;    {OCC1(O[O])CCC2OOC(C)(CCC3C1CC3(C)C)O2}
+SPC4973 = IGNORE ;    {OCC1(O[O])CC\C=C(\C)/CCC2C1CC2(C)C}
+SPC4974 = IGNORE ;    {OCC1([O])CCC2OOC(C)(CCC3C1CC3(C)C)O2}
+SPC4975 = IGNORE ;    {OCC1([O])CC\C=C(\C)/CCC2C1CC2(C)C}
+SPC4976 = IGNORE ;    {OCC1CC(C(=O)O)C1(C)C}
+SPC4977 = IGNORE ;    {OCC1CC(O)(C(=O)O)C1(C)C}
+SPC4978 = IGNORE ;    {OCC1CC(OO)(C(=O)O)C1(C)C}
+SPC4979 = IGNORE ;    {OCC1CC(O[O])(C(=O)O)C1(C)C}
+SPC4980 = IGNORE ;    {OCC1CC([O])(C(=O)O)C1(C)C}
+SPC4981 = IGNORE ;    {OCC1OC1(CO)CO}
+SPC4982 = IGNORE ;    {OCC=C}
+SPC4983 = IGNORE ;    {OCC=C(C)C(=O)O}
+SPC4984 = IGNORE ;    {OCC=C(C)C(=O)OO}
+SPC4985 = IGNORE ;    {OCC=C(C)C(=O)OON(=O)=O}
+SPC4986 = IGNORE ;    {OCC=C(C)C(=O)O[O]}
+SPC4987 = IGNORE ;    {OCC=C(C)C=O}
+SPC4988 = IGNORE ;    {OCC=C(C)CON(=O)=O}
+SPC4989 = IGNORE ;    {OCC=C(C)COO}
+SPC4990 = IGNORE ;    {OCC=C(C)CO[O]}
+SPC4991 = IGNORE ;    {OCC=C(C)C[O]}
+SPC4992 = IGNORE ;    {OCC=CC(=O)O}
+SPC4993 = IGNORE ;    {OCC=CC(=O)OO}
+SPC4994 = IGNORE ;    {OCC=CC(=O)OON(=O)=O}
+SPC4995 = IGNORE ;    {OCC=CC(=O)O[O]}
+SPC4996 = IGNORE ;    {OCC=CC=O}
+SPC4997 = IGNORE ;    {OCC=CCO}
+SPC4998 = IGNORE ;    {OCC=CCON(=O)=O}
+SPC4999 = IGNORE ;    {OCC=CCOO}
+SPC5000 = IGNORE ;    {OCC=CCO[O]}
+SPC5001 = IGNORE ;    {OCC=CC[O]}
+SPC5002 = IGNORE ;    {OCC=O}
+SPC5003 = IGNORE ;    {OCCC(=C)C(=O)CC(C)(C)C(CC=O)O[N+](=O)[O-]}
+SPC5004 = IGNORE ;    {OCCC(=C)C(=O)CC(C)(C)C(CCC(=O)C)O[N+](=O)[O-]}
+SPC5005 = IGNORE ;    {OCCC(=C)C(=O)CC(C)(C)C(CCC(=O)O)O[N+](=O)[O-]}
+SPC5006 = IGNORE ;    {OCCC(=C)C(=O)CC(C)(C)O[N+](=O)[O-]}
+SPC5007 = IGNORE ;    {OCCC(=C)C1(OO[N+](=O)[O-])CC(C)(C)C1CCC(=O)O}
+SPC5008 = IGNORE ;    {OCCC(=C)C1(O[N+](=O)[O-])CC(C)(C)C1CC=O}
+SPC5009 = IGNORE ;    {OCCC(=C)C1(O[N+](=O)[O-])CC(C)(C)C1CCC(=O)C}
+SPC5010 = IGNORE ;    {OCCC(=O)C(=O)C=O}
+SPC5011 = IGNORE ;    {OCCC(=O)C(=O)CC(C)(C)C(=O)CC=O}
+SPC5012 = IGNORE ;    {OCCC(=O)C(=O)CC(C)(C)C(=O)CCC(=O)O}
+SPC5013 = IGNORE ;    {OCCC(=O)C(=O)CC(C)(C)C(CC=O)O[N+](=O)[O-]}
+SPC5014 = IGNORE ;    {OCCC(=O)C(=O)CC(C)(C)C(CCC(=O)C)O[N+](=O)[O-]}
+SPC5015 = IGNORE ;    {OCCC(=O)C(=O)CC(C)(C)C(CCC(=O)O)O[N+](=O)[O-]}
+SPC5016 = IGNORE ;    {OCCC(=O)C(=O)CC(C)(C)C(O)CC=O}
+SPC5017 = IGNORE ;    {OCCC(=O)C(=O)CC(C)(C)C(O)CCC(=O)O}
+SPC5018 = IGNORE ;    {OCCC(=O)C(=O)CC(C)(C)C(OO)CC=O}
+SPC5019 = IGNORE ;    {OCCC(=O)C(=O)CC(C)(C)C(OO)CCC(=O)O}
+SPC5020 = IGNORE ;    {OCCC(=O)C(=O)CC(C)(C)C(O[O])CC=O}
+SPC5021 = IGNORE ;    {OCCC(=O)C(=O)CC(C)(C)C(O[O])CCC(=O)O}
+SPC5022 = IGNORE ;    {OCCC(=O)C(=O)CC(C)(C)C([O])CC=O}
+SPC5023 = IGNORE ;    {OCCC(=O)C(=O)CC(C)(C)C([O])CCC(=O)O}
+SPC5024 = IGNORE ;    {OCCC(=O)C(=O)CC(C)(C)O[N+](=O)[O-]}
+SPC5025 = IGNORE ;    {OCCC(=O)C(=O)CO}
+SPC5026 = IGNORE ;    {OCCC(=O)C(=O)COO}
+SPC5027 = IGNORE ;    {OCCC(=O)C(=O)CO[O]}
+SPC5028 = IGNORE ;    {OCCC(=O)C(=O)C[O]}
+SPC5029 = IGNORE ;    {OCCC(=O)C(C)(C)C=O}
+SPC5030 = IGNORE ;    {OCCC(=O)C(C)(C)CC(=O)C(=O)CCC=O}
+SPC5031 = IGNORE ;    {OCCC(=O)C(C)(C)CC(=O)C(CCC=O)=C}
+SPC5032 = IGNORE ;    {OCCC(=O)C(C)=C}
+SPC5033 = IGNORE ;    {OCCC(=O)C(O)C=O}
+SPC5034 = IGNORE ;    {OCCC(=O)C(OO)C=O}
+SPC5035 = IGNORE ;    {OCCC(=O)C(O[O])C=O}
+SPC5036 = IGNORE ;    {OCCC(=O)C([O])C=O}
+SPC5037 = IGNORE ;    {OCCC(=O)C1(OO[N+](=O)[O-])CC(C)(C)C1CCC(=O)O}
+SPC5038 = IGNORE ;    {OCCC(=O)C1(O[N+](=O)[O-])CC(C)(C)C1CC=O}
+SPC5039 = IGNORE ;    {OCCC(=O)C=O}
+SPC5040 = IGNORE ;    {OCCC(=O)CC=O}
+SPC5041 = IGNORE ;    {OCCC(=O)CO}
+SPC5042 = IGNORE ;    {OCCC(=O)COO}
+SPC5043 = IGNORE ;    {OCCC(=O)CO[O]}
+SPC5044 = IGNORE ;    {OCCC(=O)C[O]}
+SPC5045 = IGNORE ;    {OCCC(=O)O}
+SPC5046 = IGNORE ;    {OCCC(=O)OO}
+SPC5047 = IGNORE ;    {OCCC(=O)OON(=O)=O}
+SPC5048 = IGNORE ;    {OCCC(=O)O[O]}
+SPC5049 = IGNORE ;    {OCCC(C(=O)C=O)=C}
+SPC5050 = IGNORE ;    {OCCC(C(=O)C=O)C(C)=C}
+SPC5051 = IGNORE ;    {OCCC(C(=O)CO)=C}
+SPC5052 = IGNORE ;    {OCCC(C(=O)COO)=C}
+SPC5053 = IGNORE ;    {OCCC(C(=O)O)=C}
+SPC5054 = IGNORE ;    {OCCC(C(=O)O)C(=O)C}
+SPC5055 = IGNORE ;    {OCCC(C(=O)O)C(C)=C}
+SPC5056 = IGNORE ;    {OCCC(C(=O)OO)=C}
+SPC5057 = IGNORE ;    {OCCC(C(=O)OO)C(=O)C}
+SPC5058 = IGNORE ;    {OCCC(C(=O)OO)C(C)=C}
+SPC5059 = IGNORE ;    {OCCC(C(=O)O[O])=C}
+SPC5060 = IGNORE ;    {OCCC(C(=O)O[O])C(=O)C}
+SPC5061 = IGNORE ;    {OCCC(C(O)C=O)C(C)=C}
+SPC5062 = IGNORE ;    {OCCC(C(OO)C=O)C(C)=C}
+SPC5063 = IGNORE ;    {OCCC(C(O[O])C=O)C(C)=C}
+SPC5064 = IGNORE ;    {OCCC(C([O])C=O)C(C)=C}
+SPC5065 = IGNORE ;    {OCCC(C)(C)C(=O)O}
+SPC5066 = IGNORE ;    {OCCC(C)(C)C(=O)OO}
+SPC5067 = IGNORE ;    {OCCC(C)(C)C(=O)OON(=O)=O}
+SPC5068 = IGNORE ;    {OCCC(C)(C)C(=O)O[O]}
+SPC5069 = IGNORE ;    {OCCC(C)(C)C=O}
+SPC5070 = IGNORE ;    {OCCC(C)(C)CON(=O)=O}
+SPC5071 = IGNORE ;    {OCCC(C)(C)COO}
+SPC5072 = IGNORE ;    {OCCC(C)(C)CO[O]}
+SPC5073 = IGNORE ;    {OCCC(C)(C)C[O]}
+SPC5074 = IGNORE ;    {OCCC(C)C(=O)O}
+SPC5075 = IGNORE ;    {OCCC(C)C(=O)OO}
+SPC5076 = IGNORE ;    {OCCC(C)C(=O)OON(=O)=O}
+SPC5077 = IGNORE ;    {OCCC(C)C(=O)O[O]}
+SPC5078 = IGNORE ;    {OCCC(C)C=O}
+SPC5079 = IGNORE ;    {OCCC(C=O)C(=O)C}
+SPC5080 = IGNORE ;    {OCCC(C=O)C(C)=C}
+SPC5081 = IGNORE ;    {OCCC(CC=O)C(C)=C}
+SPC5082 = IGNORE ;    {OCCC(O)(C)C(=O)OO}
+SPC5083 = IGNORE ;    {OCCC(O)(C)C(=O)OON(=O)=O}
+SPC5084 = IGNORE ;    {OCCC(O)(C)C(=O)O[O]}
+SPC5085 = IGNORE ;    {OCCC(O)(C)C=O}
+SPC5086 = IGNORE ;    {OCCC(O)(C)CON(=O)=O}
+SPC5087 = IGNORE ;    {OCCC(O)(C)COO}
+SPC5088 = IGNORE ;    {OCCC(O)(C)CO[O]}
+SPC5089 = IGNORE ;    {OCCC(O)(C)C[O]}
+SPC5090 = IGNORE ;    {OCCC(O)(C=O)C(=O)C}
+SPC5091 = IGNORE ;    {OCCC(O)C(=O)OO}
+SPC5092 = IGNORE ;    {OCCC(O)C(=O)OON(=O)=O}
+SPC5093 = IGNORE ;    {OCCC(O)C(=O)O[O]}
+SPC5094 = IGNORE ;    {OCCC(O)C(C)(C)CC(=O)C(=O)CCC=O}
+SPC5095 = IGNORE ;    {OCCC(O)C(C)(C)CC(=O)C(CCC=O)=C}
+SPC5096 = IGNORE ;    {OCCC(O)C(C)=C}
+SPC5097 = IGNORE ;    {OCCC(O)C=O}
+SPC5098 = IGNORE ;    {OCCC(O)CO}
+SPC5099 = IGNORE ;    {OCCC(O)CON(=O)=O}
+SPC5100 = IGNORE ;    {OCCC(O)COO}
+SPC5101 = IGNORE ;    {OCCC(O)CO[O]}
+SPC5102 = IGNORE ;    {OCCC(O)C[O]}
+SPC5103 = IGNORE ;    {OCCC(OO)(C=O)C(=O)C}
+SPC5104 = IGNORE ;    {OCCC(OO)C(C)(C)CC(=O)C(=O)CCC=O}
+SPC5105 = IGNORE ;    {OCCC(OO)C(C)(C)CC(=O)C(CCC=O)=C}
+SPC5106 = IGNORE ;    {OCCC(OO)C(C)=C}
+SPC5107 = IGNORE ;    {OCCC(O[O])(C=O)C(=O)C}
+SPC5108 = IGNORE ;    {OCCC(O[O])C(C)(C)CC(=O)C(=O)CCC=O}
+SPC5109 = IGNORE ;    {OCCC(O[O])C(C)(C)CC(=O)C(CCC=O)=C}
+SPC5110 = IGNORE ;    {OCCC(O[O])C(C)=C}
+SPC5111 = IGNORE ;    {OCCC([O])(C=O)C(=O)C}
+SPC5112 = IGNORE ;    {OCCC([O])C(C)(C)CC(=O)C(=O)CCC=O}
+SPC5113 = IGNORE ;    {OCCC([O])C(C)(C)CC(=O)C(CCC=O)=C}
+SPC5114 = IGNORE ;    {OCCC([O])C(C)=C}
+SPC5115 = IGNORE ;    {OCCC=O}
+SPC5116 = IGNORE ;    {OCCCC(=O)CC=O}
+SPC5117 = IGNORE ;    {OCCCC(=O)O}
+SPC5118 = IGNORE ;    {OCCCC(=O)OO}
+SPC5119 = IGNORE ;    {OCCCC(=O)OON(=O)=O}
+SPC5120 = IGNORE ;    {OCCCC(=O)O[O]}
+SPC5121 = IGNORE ;    {OCCCC(O)CC=O}
+SPC5122 = IGNORE ;    {OCCCC(ON(=O)=O)CC=O}
+SPC5123 = IGNORE ;    {OCCCC(OO)C=O}
+SPC5124 = IGNORE ;    {OCCCC(OO)CC=O}
+SPC5125 = IGNORE ;    {OCCCC(O[O])C=O}
+SPC5126 = IGNORE ;    {OCCCC(O[O])CC=O}
+SPC5127 = IGNORE ;    {OCCCC([O])C=O}
+SPC5128 = IGNORE ;    {OCCCC([O])CC=O}
+SPC5129 = IGNORE ;    {OCCCC=O}
+SPC5130 = IGNORE ;    {OCCCCCC=O}
+SPC5131 = IGNORE ;    {OCCCCO}
+SPC5132 = IGNORE ;    {OCCCCON(=O)=O}
+SPC5133 = IGNORE ;    {OCCCCOO}
+SPC5134 = IGNORE ;    {OCCCCO[O]}
+SPC5135 = IGNORE ;    {OCCCC[O]}
+SPC5136 = IGNORE ;    {OCCCL}
+SPC5137 = IGNORE ;    {OCCCO}
+SPC5138 = IGNORE ;    {OCCCON(=O)=O}
+SPC5139 = IGNORE ;    {OCCCOO}
+SPC5140 = IGNORE ;    {OCCCO[O]}
+SPC5141 = IGNORE ;    {OCCC[O]}
+SPC5142 = IGNORE ;    {OCCL}
+SPC5143 = IGNORE ;    {OCCO}
+SPC5144 = IGNORE ;    {OCCOC=O}
+SPC5145 = IGNORE ;    {OCCOCO}
+SPC5146 = IGNORE ;    {OCCOCON(=O)=O}
+SPC5147 = IGNORE ;    {OCCOCOO}
+SPC5148 = IGNORE ;    {OCCOCO[O]}
+SPC5149 = IGNORE ;    {OCCOC[O]}
+SPC5150 = IGNORE ;    {OCCON(=O)=O}
+SPC5151 = IGNORE ;    {OCCOO}
+SPC5152 = IGNORE ;    {OCCO[O]}
+SPC5153 = IGNORE ;    {OCC[O]}
+SPC5154 = IGNORE ;    {OCOC(=O)OC=O}
+SPC5155 = IGNORE ;    {OCOC=O}
+SPC5156 = IGNORE ;    {OCS(=O)(=O)C}
+SPC5157 = IGNORE ;    {OH}
+SPC5158 = IGNORE ;    {OOC(=O)C(C)(O)C(O)CON(=O)=O}
+SPC5159 = IGNORE ;    {OOC(=O)C(C)(ON(=O)=O)C(=O)CON(=O)=O}
+SPC5160 = IGNORE ;    {OOC(=O)C(C)(ON(=O)=O)C(O)CON(=O)=O}
+SPC5161 = IGNORE ;    {OOC(=O)C(C)(OO)C(O)CON(=O)=O}
+SPC5162 = IGNORE ;    {OOC(C)(C(O)CON(=O)=O)C(=O)OON(=O)=O}
+SPC5163 = IGNORE ;    {OOC(C)(C=O)C(O)CON(=O)=O}
+SPC5164 = IGNORE ;    {OOC(CL)(CL)CL}
+SPC5165 = IGNORE ;    {OOC(CL)CL}
+SPC5166 = IGNORE ;    {OOC(CL)CON(=O)=O}
+SPC5167 = IGNORE ;    {OOC1(C)C=CC2(C)OOC1(C)C2O}
+SPC5168 = IGNORE ;    {OOC1(C)C=CC2(C)OOC1C2O}
+SPC5169 = IGNORE ;    {OOC1(C)C=CC2(CC)OOC1C2O}
+SPC5170 = IGNORE ;    {OOC1(C)C=CC2OOC1(C)C2O}
+SPC5171 = IGNORE ;    {OOC1(C)CCC2C(CC2(C)C)C(=C)CCC1O}
+SPC5172 = IGNORE ;    {OOC1(C)CCC2C(CC2(C)C)C(=C)CCC1O[N+](=O)[O-]}
+SPC5173 = IGNORE ;    {OOC1(C)CCC2C(CC2(C)C)C(=O)CCC1O[N+](=O)[O-]}
+SPC5174 = IGNORE ;    {OOC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2(C)O)N(=O)=O}
+SPC5175 = IGNORE ;    {OOC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2(C)ON(=O)=O)N(=O)=O}
+SPC5176 = IGNORE ;    {OOC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2O)N(=O)=O}
+SPC5177 = IGNORE ;    {OOC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2O)O}
+SPC5178 = IGNORE ;    {OOC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2ON(=O)=O)N(=O)=O}
+SPC5179 = IGNORE ;    {OOC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2ON(=O)=O)O}
+SPC5180 = IGNORE ;    {OOC1(O)C(=C(C)C2(OOC1(C)C2(C)O)N(=O)=O)N(=O)=O}
+SPC5181 = IGNORE ;    {OOC1(O)C(=C(C)C2(OOC1(C)C2(C)O)N(=O)=O)O}
+SPC5182 = IGNORE ;    {OOC1(O)C(=C(C)C2(OOC1(C)C2(C)ON(=O)=O)N(=O)=O)N(=O)=O}
+SPC5183 = IGNORE ;    {OOC1(O)C(=C(C)C2(OOC1(C)C2(C)ON(=O)=O)N(=O)=O)O}
+SPC5184 = IGNORE ;    {OOC1(O)C(=C(C)C2(OOC1(C)C2O)N(=O)=O)N(=O)=O}
+SPC5185 = IGNORE ;    {OOC1(O)C(=C(C)C2(OOC1(C)C2O)N(=O)=O)O}
+SPC5186 = IGNORE ;    {OOC1(O)C(=C(C)C2(OOC1(C)C2ON(=O)=O)N(=O)=O)N(=O)=O}
+SPC5187 = IGNORE ;    {OOC1(O)C(=C(C)C2(OOC1(C)C2ON(=O)=O)N(=O)=O)O}
+SPC5188 = IGNORE ;    {OOC1(O)C(=C(C)C2(OOC1(CC)C2ON(=O)=O)N(=O)=O)O}
+SPC5189 = IGNORE ;    {OOC1(O)C(=C(C)C2OOC1(C)C2O)C}
+SPC5190 = IGNORE ;    {OOC1(O)C(=C(C)C2OOC1(C)C2ON(=O)=O)C}
+SPC5191 = IGNORE ;    {OOC1(O)C(=C(N(=O)=O)C2(C)OOC1(C)C2(C)O)O}
+SPC5192 = IGNORE ;    {OOC1(O)C(=C(N(=O)=O)C2(C)OOC1(C)C2(C)ON(=O)=O)O}
+SPC5193 = IGNORE ;    {OOC1(O)C(=C(N(=O)=O)C2(C)OOC1(C)C2O)O}
+SPC5194 = IGNORE ;    {OOC1(O)C(=C(N(=O)=O)C2(C)OOC1(C)C2ON(=O)=O)O}
+SPC5195 = IGNORE ;    {OOC1(O)C(=C(N(=O)=O)C2(OOC1(C)C2O)N(=O)=O)C}
+SPC5196 = IGNORE ;    {OOC1(O)C(=C(N(=O)=O)C2(OOC1(C)C2ON(=O)=O)N(=O)=O)C}
+SPC5197 = IGNORE ;    {OOC1(O)C(=C(N(=O)=O)C2OOC1(C(C)C)C2O)O}
+SPC5198 = IGNORE ;    {OOC1(O)C(=C(N(=O)=O)C2OOC1(C(C)C)C2ON(=O)=O)O}
+SPC5199 = IGNORE ;    {OOC1(O)C(=C(N(=O)=O)C2OOC1(C)C2O)O}
+SPC5200 = IGNORE ;    {OOC1(O)C(=C(N(=O)=O)C2OOC1(C)C2ON(=O)=O)O}
+SPC5201 = IGNORE ;    {OOC1(O)C(=C(N(=O)=O)C2OOC1(CC)C2O)O}
+SPC5202 = IGNORE ;    {OOC1(O)C(=CC2(C)OOC1(C)C2O)C}
+SPC5203 = IGNORE ;    {OOC1(O)C(=CC2(C)OOC1(C)C2ON(=O)=O)C}
+SPC5204 = IGNORE ;    {OOC1(O)C(=CC2(C)OOC1(N(=O)=O)C2O)C}
+SPC5205 = IGNORE ;    {OOC1(O)C(=CC2(C)OOC1C2O)N(=O)=O}
+SPC5206 = IGNORE ;    {OOC1(O)C(=CC2(OOC1(C(C)C)C2O)N(=O)=O)N(=O)=O}
+SPC5207 = IGNORE ;    {OOC1(O)C(=CC2(OOC1(C(C)C)C2ON(=O)=O)N(=O)=O)N(=O)=O}
+SPC5208 = IGNORE ;    {OOC1(O)C(=CC2(OOC1(C)C2O)N(=O)=O)N(=O)=O}
+SPC5209 = IGNORE ;    {OOC1(O)C(=CC2(OOC1(C)C2ON(=O)=O)N(=O)=O)N(=O)=O}
+SPC5210 = IGNORE ;    {OOC1(O)C(=CC2(OOC1(CC)C2ON(=O)=O)N(=O)=O)N(=O)=O}
+SPC5211 = IGNORE ;    {OOC1(O)C(=CC2(OOC1C2O)N(=O)=O)N(=O)=O}
+SPC5212 = IGNORE ;    {OOC1(O)C(=CC2(OOC1C2O)N(=O)=O)O}
+SPC5213 = IGNORE ;    {OOC1(O)C(=CC2(OOC1C2ON(=O)=O)N(=O)=O)N(=O)=O}
+SPC5214 = IGNORE ;    {OOC1(O)C(=CC2(OOC1C2ON(=O)=O)N(=O)=O)O}
+SPC5215 = IGNORE ;    {OOC1(O)C2OOC(C)(C2O)C(=C1C)C}
+SPC5216 = IGNORE ;    {OOC1(O)C2OOC(C)(C2ON(=O)=O)C(=C1C)C}
+SPC5217 = IGNORE ;    {OOC1(O)C=C(C)C2(C)OOC1(N(=O)=O)C2O}
+SPC5218 = IGNORE ;    {OOC1(O)C=C(C)C2(C)OOC1C2O}
+SPC5219 = IGNORE ;    {OOC1(O)C=C(C)C2(C)OOC1C2ON(=O)=O}
+SPC5220 = IGNORE ;    {OOC1(O)C=C(C)C2OOC1(C)C2O}
+SPC5221 = IGNORE ;    {OOC1(O)C=C(C)C2OOC1(C)C2ON(=O)=O}
+SPC5222 = IGNORE ;    {OOC1(O)C=C(C)C2OOC1(CC)C2O}
+SPC5223 = IGNORE ;    {OOC1(O)C=CC2(C)OOC1(C)C2O}
+SPC5224 = IGNORE ;    {OOC1(O)C=CC2(C)OOC1(C)C2ON(=O)=O}
+SPC5225 = IGNORE ;    {OOC1(O)C=CC2(C)OOC1C2O}
+SPC5226 = IGNORE ;    {OOC1(O)C=CC2(C)OOC1C2ON(=O)=O}
+SPC5227 = IGNORE ;    {OOC1(O)C=CC2(CC)OOC1C2O}
+SPC5228 = IGNORE ;    {OOC1(O)C=CC2(OOC1C2O)C(C)C}
+SPC5229 = IGNORE ;    {OOC1(O)C=CC2(OOC1C2ON(=O)=O)C(C)C}
+SPC5230 = IGNORE ;    {OOC1(O)C=CC2OOC1C2O}
+SPC5231 = IGNORE ;    {OOC1(O)C=CC2OOC1C2ON(=O)=O}
+SPC5232 = IGNORE ;    {OOC1C(=CC2(C)OOC1(C)C2O)C}
+SPC5233 = IGNORE ;    {OOC1C(=CC2(CC)OOC1(C)C2O)C}
+SPC5234 = IGNORE ;    {OOC1C(=CC2(CC)OOC1(C)C2O)CC}
+SPC5235 = IGNORE ;    {OOC1C=CC2(C)OOC1(C)C2(C)O}
+SPC5236 = IGNORE ;    {OOC1C=CC2(C)OOC1(C)C2O}
+SPC5237 = IGNORE ;    {OOC1C=CC2(C)OOC1(CC)C2O}
+SPC5238 = IGNORE ;    {OOC1C=CC2(C)OOC1C2O}
+SPC5239 = IGNORE ;    {OOC1C=CC2(CC)OOC1C2O}
+SPC5240 = IGNORE ;    {OOC1C=CC2(OOC1C2O)C(C)C}
+SPC5241 = IGNORE ;    {OOC1C=CC2OOC1C2O}
+SPC5242 = IGNORE ;    {OOC1CCC(=C)C2CC(C)(C)C2CCC1(C)O}
+SPC5243 = IGNORE ;    {OOC1OC1}
+SPC5244 = IGNORE ;    {OOCC(=O)C(=O)CC=O}
+SPC5245 = IGNORE ;    {OOCC(=O)C(=O)CCC=O}
+SPC5246 = IGNORE ;    {OOCC(=O)C(C)(C)C=O}
+SPC5247 = IGNORE ;    {OOCC(=O)C(C=O)C(C)(C)C=O}
+SPC5248 = IGNORE ;    {OOCC(=O)C=C}
+SPC5249 = IGNORE ;    {OOCC(=O)C=C(CC)C(=O)CO.O=C1CCC(=O)C(=C1)C}
+SPC5250 = IGNORE ;    {OOCC(=O)C=O}
+SPC5251 = IGNORE ;    {OOCC(=O)CC(=O)C=O}
+SPC5252 = IGNORE ;    {OOCC(=O)CC(=O)CC=O}
+SPC5253 = IGNORE ;    {OOCC(=O)CC=O}
+SPC5254 = IGNORE ;    {OOCC(=O)CCC(C(=O)C)CC=O}
+SPC5255 = IGNORE ;    {OOCC(=O)CCC(CC=O)C(C)=C}
+SPC5256 = IGNORE ;    {OOCC(=O)CCC1C(CC1(C)C)C(=O)CCC=O}
+SPC5257 = IGNORE ;    {OOCC(=O)CCC1C(CC1(C)C)C(CCC=O)=C}
+SPC5258 = IGNORE ;    {OOCC(=O)CCC=O}
+SPC5259 = IGNORE ;    {OOCC(=O)OC=O}
+SPC5260 = IGNORE ;    {OOCC(O)C=C}
+SPC5261 = IGNORE ;    {OOCC(O)C=O}
+SPC5262 = IGNORE ;    {OOCC(O)CCC=O}
+SPC5263 = IGNORE ;    {OOCC=O}
+SPC5264 = IGNORE ;    {OOCCC(=O)C(C)(C)C=O}
+SPC5265 = IGNORE ;    {OOCCC(=O)CC=O}
+SPC5266 = IGNORE ;    {OOCCC(CC=O)C(C)=C}
+SPC5267 = IGNORE ;    {OOCCC=O}
+SPC5268 = IGNORE ;    {OOCCCC(=O)CC=O}
+SPC5269 = IGNORE ;    {OOCCCCC=O}
+SPC5270 = IGNORE ;    {OOCCCCCC=O}
+SPC5271 = IGNORE ;    {OOCL.OCCCL}
+SPC5272 = IGNORE ;    {OOCOC(=O)C=O}
+SPC5273 = IGNORE ;    {OOCOC(=O)OC=O}
+SPC5274 = IGNORE ;    {OOCOC=O}
+SPC5275 = IGNORE ;    {OOCS(=O)(=O)C}
+SPC5276 = IGNORE ;    {OOS(=O)(=O)C}
+SPC5277 = IGNORE ;    {SO2}
+SPC5278 = IGNORE ;    {SULF}
+SPC5279 = IGNORE ;    {[O-]/[O+]=C(\CO)/C=O}
+SPC5280 = IGNORE ;    {[O-]/[O+]=C(\CO)/C=O*a}
+SPC5281 = IGNORE ;    {[O-][N+](=O)OC1(C)CCC2C(CC2(C)C)C(=C)CCC1O}
+SPC5282 = IGNORE ;    {[O-][N+](=O)OC1(C)CCC2C(CC2(C)C)C(=O)CCC1O}
+SPC5283 = IGNORE ;    {[O-][N+](=O)OC1CCC(=C)C2CC(C)(C)C2CCC1(C)O}
+SPC5284 = IGNORE ;    {[O-][N+](=O)OC1CCC(=C)C2CC(C)(C)C2CCC1(C)[O]}
+SPC5285 = IGNORE ;    {[O-][N+](=O)OC1CCC(=O)C2CC(C)(C)C2CCC1(C)O}
+SPC5286 = IGNORE ;    {[O-][N+](=O)OC1CCC(=O)C2CC(C)(C)C2CCC1(C)[O]}
+SPC5287 = IGNORE ;    {[O-][N+](=O)OOC(=O)C(=C)CCO}
+SPC5288 = IGNORE ;    {[O-][N+](=O)OOC(=O)C(C)(C)C(=O)C(=O)CC(=O)C}
+SPC5289 = IGNORE ;    {[O-][N+](=O)OOC(=O)CC(=O)OC}
+SPC5290 = IGNORE ;    {[O-][N+](=O)OOC(=O)CCC(=O)OC}
+SPC5291 = IGNORE ;    {[O-][N+](=O)OOS(=O)(=O)C}
+SPC5292 = IGNORE ;    {[O-][N+](=O)OOS(=O)C}
+SPC5293 = IGNORE ;    {[O-][O+]=C}
+SPC5294 = IGNORE ;    {[O-][O+]=C(C)C}
+SPC5295 = IGNORE ;    {[O-][O+]=C(C)C(=O)C}
+SPC5296 = IGNORE ;    {[O-][O+]=C(C)C(=O)C*a}
+SPC5297 = IGNORE ;    {[O-][O+]=C(C)C(=O)C*c}
+SPC5298 = IGNORE ;    {[O-][O+]=C(C)C*a}
+SPC5299 = IGNORE ;    {[O-][O+]=C(C)C*b}
+SPC5300 = IGNORE ;    {[O-][O+]=C(C)C*c}
+SPC5301 = IGNORE ;    {[O-][O+]=C(C)C=C}
+SPC5302 = IGNORE ;    {[O-][O+]=C(C)C=C*a}
+SPC5303 = IGNORE ;    {[O-][O+]=C(C)C=O}
+SPC5304 = IGNORE ;    {[O-][O+]=C(C)C=O*a}
+SPC5305 = IGNORE ;    {[O-][O+]=C(C)C=O*b}
+SPC5306 = IGNORE ;    {[O-][O+]=C(C)CC}
+SPC5307 = IGNORE ;    {[O-][O+]=C(C)CC*a}
+SPC5308 = IGNORE ;    {[O-][O+]=C(C)CO}
+SPC5309 = IGNORE ;    {[O-][O+]=C(C)CO*a}
+SPC5310 = IGNORE ;    {[O-][O+]=C(C)CON(=O)=O}
+SPC5311 = IGNORE ;    {[O-][O+]=C(C)CON(=O)=Oa}
+SPC5312 = IGNORE ;    {[O-][O+]=C(CCC(=O)O)C1CC(C)(C)C1CCC(=O)C}
+SPC5313 = IGNORE ;    {[O-][O+]=C(CCC(=O)O)C1CC(C)(C)C1CCC(=O)C*a}
+SPC5314 = IGNORE ;    {[O-][O+]=C(O)/C=C/C=C/C(=O)O}
+SPC5315 = IGNORE ;    {[O-][O+]=C(O)C(=C(C)/C=C(\C)/C(=O)O)C}
+SPC5316 = IGNORE ;    {[O-][O+]=C(O)C(=C(C)/C=C/C(=O)O)C}
+SPC5317 = IGNORE ;    {[O-][O+]=C(O)C(=C(C)/C=C/C(=O)O)CC}
+SPC5318 = IGNORE ;    {[O-][O+]=C(O)C(=C(C)C(=CC(=O)O)C)C}
+SPC5319 = IGNORE ;    {[O-][O+]=C(O)C(=C/C=C(\C)/C(=O)O)C}
+SPC5320 = IGNORE ;    {[O-][O+]=C(O)C(=C/C=C/C(=O)O)C}
+SPC5321 = IGNORE ;    {[O-][O+]=C(O)C(=C/C=C/C(=O)O)C(C)C}
+SPC5322 = IGNORE ;    {[O-][O+]=C(O)C(=C/C=C/C(=O)O)CC}
+SPC5323 = IGNORE ;    {[O-][O+]=C(O)C(=C/C=C/C(=O)O)CCC}
+SPC5324 = IGNORE ;    {[O-][O+]=C(O)C(=CC(=CC(=O)O)C)C}
+SPC5325 = IGNORE ;    {[O-][O+]=C*a}
+SPC5326 = IGNORE ;    {[O-][O+]=C*b}
+SPC5327 = IGNORE ;    {[O-][O+]=C*c}
+SPC5328 = IGNORE ;    {[O-][O+]=C*d}
+SPC5329 = IGNORE ;    {[O-][O+]=C*e}
+SPC5330 = IGNORE ;    {[O-][O+]=C*f}
+SPC5331 = IGNORE ;    {[O-][O+]=C*g}
+SPC5332 = IGNORE ;    {[O-][O+]=C1CCC2CC1C2(C)C}
+SPC5333 = IGNORE ;    {[O-][O+]=C1CCC2CC1C2(C)C*a}
+SPC5334 = IGNORE ;    {[O-][O+]=C1CCC2OOC(C)(CCC3C1CC3(C)C)O2}
+SPC5335 = IGNORE ;    {[O-][O+]=CC}
+SPC5336 = IGNORE ;    {[O-][O+]=CC(=C)C}
+SPC5337 = IGNORE ;    {[O-][O+]=CC(=C)C*a}
+SPC5338 = IGNORE ;    {[O-][O+]=CC(=O)C}
+SPC5339 = IGNORE ;    {[O-][O+]=CC(=O)C*a}
+SPC5340 = IGNORE ;    {[O-][O+]=CC(=O)C*b}
+SPC5341 = IGNORE ;    {[O-][O+]=CC(=O)C*c}
+SPC5342 = IGNORE ;    {[O-][O+]=CC(=O)CC}
+SPC5343 = IGNORE ;    {[O-][O+]=CC(=O)CC*b}
+SPC5344 = IGNORE ;    {[O-][O+]=CC(=O)CC*d}
+SPC5345 = IGNORE ;    {[O-][O+]=CC(=O)CCC}
+SPC5346 = IGNORE ;    {[O-][O+]=CC(=O)CCC*a}
+SPC5347 = IGNORE ;    {[O-][O+]=CC(=O)CCC*b}
+SPC5348 = IGNORE ;    {[O-][O+]=CC(=O)CO}
+SPC5349 = IGNORE ;    {[O-][O+]=CC(=O)CO*a}
+SPC5350 = IGNORE ;    {[O-][O+]=CC(=O)OCC=O}
+SPC5351 = IGNORE ;    {[O-][O+]=CC(=O)OCC=O*a}
+SPC5352 = IGNORE ;    {[O-][O+]=CC(C)(C)O}
+SPC5353 = IGNORE ;    {[O-][O+]=CC(C)(C)O*a}
+SPC5354 = IGNORE ;    {[O-][O+]=CC(C)(CO)ON(=O)=O}
+SPC5355 = IGNORE ;    {[O-][O+]=CC(C)(CO)ON(=O)=Oa}
+SPC5356 = IGNORE ;    {[O-][O+]=CC*a}
+SPC5357 = IGNORE ;    {[O-][O+]=CC*b}
+SPC5358 = IGNORE ;    {[O-][O+]=CC*c}
+SPC5359 = IGNORE ;    {[O-][O+]=CC=C}
+SPC5360 = IGNORE ;    {[O-][O+]=CC=C*a}
+SPC5361 = IGNORE ;    {[O-][O+]=CC=O}
+SPC5362 = IGNORE ;    {[O-][O+]=CC=O*a}
+SPC5363 = IGNORE ;    {[O-][O+]=CC=O*b}
+SPC5364 = IGNORE ;    {[O-][O+]=CC=O*c}
+SPC5365 = IGNORE ;    {[O-][O+]=CCC}
+SPC5366 = IGNORE ;    {[O-][O+]=CCC(=O)OC(=O)C}
+SPC5367 = IGNORE ;    {[O-][O+]=CCC(=O)OC(=O)C*a}
+SPC5368 = IGNORE ;    {[O-][O+]=CCC*a}
+SPC5369 = IGNORE ;    {[O-][O+]=CCC*b}
+SPC5370 = IGNORE ;    {[O-][O+]=CCC1CC(C(=O)C)C1(C)C}
+SPC5371 = IGNORE ;    {[O-][O+]=CCC1CC(C(=O)C)C1(C)C*b}
+SPC5372 = IGNORE ;    {[O-][O+]=CCCC}
+SPC5373 = IGNORE ;    {[O-][O+]=CCCC(=C)C1CC(C)(C)C1CCC(=O)C}
+SPC5374 = IGNORE ;    {[O-][O+]=CCCC(=C)C1CC(C)(C)C1CCC(=O)C*b}
+SPC5375 = IGNORE ;    {[O-][O+]=CCCC(=O)C1CC(C)(C)C1CCC(=O)C}
+SPC5376 = IGNORE ;    {[O-][O+]=CCCC(=O)C1CC(C)(C)C1CCC(=O)C*b}
+SPC5377 = IGNORE ;    {[O-][O+]=CCCC*a}
+SPC5378 = IGNORE ;    {[O-][O+]=CCCC*b}
+SPC5379 = IGNORE ;    {[O-][O+]=CCCCC}
+SPC5380 = IGNORE ;    {[O-][O+]=CCCCC*a}
+SPC5381 = IGNORE ;    {[O-][O+]=CCCON(=O)=O}
+SPC5382 = IGNORE ;    {[O-][O+]=CCCON(=O)=Oa}
+SPC5383 = IGNORE ;    {[O-][O+]=CCL}
+SPC5384 = IGNORE ;    {[O-][O+]=CCL*a}
+SPC5385 = IGNORE ;    {[O-][O+]=CCO}
+SPC5386 = IGNORE ;    {[O-][O+]=CCO*a}
+SPC5387 = IGNORE ;    {[O-][O+]=CCO*b}
+SPC5388 = IGNORE ;    {[O-][O+]=CCON(=O)=O}
+SPC5389 = IGNORE ;    {[O-][O+]=CCON(=O)=Oa}
+SPC5390 = IGNORE ;    {[O-][O+]=Cc1ccccc1}
+SPC5391 = IGNORE ;    {[O-][O+]=Cc1ccccc1*a}
+SPC5392 = IGNORE ;    {[O-][O+]CC(=O)C(C)C}
+SPC5393 = IGNORE ;    {[O-][O+]CC(=O)C(C)C*b}
+SPC5394 = IGNORE ;    {[O-][O+]CC(C)C}
+SPC5395 = IGNORE ;    {[O-][O+]CC(C)C*a}
+SPC5396 = IGNORE ;    {[OH].CC(=O)CCC(=O)C(C)(C)[O]}
+SPC5397 = IGNORE ;    {[O]C(CL)(CL)CL}
+SPC5398 = IGNORE ;    {[O]C(CL)CL}
+SPC5399 = IGNORE ;    {[O]C(CL)CON(=O)=O}
+SPC5400 = IGNORE ;    {[O]C1C=CC2(C)OOC1(C)C2(C)O}
+SPC5401 = IGNORE ;    {[O]C1C=CC2(C)OOC1(C)C2O}
+SPC5402 = IGNORE ;    {[O]C1C=CC2(C)OOC1C2O}
+SPC5403 = IGNORE ;    {[O]C1C=CC2(OOC1C2O)C(C)C}
+SPC5404 = IGNORE ;    {[O]C1C=CC2OOC1C2O}
+SPC5405 = IGNORE ;    {[O]CC(=O)C=C(CC)C(=O)CO.O=C1CCC(=O)C(=C1)C}
+SPC5406 = IGNORE ;    {[O]CS(=O)(=O)C}
+SPC5407 = IGNORE ;    {[O]OC(=O)C(C)(O)C(O)CON(=O)=O}
+SPC5408 = IGNORE ;    {[O]OC(=O)C(C)(ON(=O)=O)C(=O)CON(=O)=O}
+SPC5409 = IGNORE ;    {[O]OC(=O)C(C)(ON(=O)=O)C(O)CON(=O)=O}
+SPC5410 = IGNORE ;    {[O]OC(=O)C(C)(OO)C(O)CON(=O)=O}
+SPC5411 = IGNORE ;    {[O]OC(CL)(CL)CL}
+SPC5412 = IGNORE ;    {[O]OC(CL)CL}
+SPC5413 = IGNORE ;    {[O]OC(CL)CON(=O)=O}
+SPC5414 = IGNORE ;    {[O]OC1(C)C=CC2(C)OOC1(C)C2O}
+SPC5415 = IGNORE ;    {[O]OC1(C)C=CC2(C)OOC1C2O}
+SPC5416 = IGNORE ;    {[O]OC1(C)C=CC2(CC)OOC1C2O}
+SPC5417 = IGNORE ;    {[O]OC1(C)C=CC2OOC1(C)C2O}
+SPC5418 = IGNORE ;    {[O]OC1(C)CCC2C(CC2(C)C)C(=C)CCC1O}
+SPC5419 = IGNORE ;    {[O]OC1(C)CCC2C(CC2(C)C)C(=C)CCC1O[N+](=O)[O-]}
+SPC5420 = IGNORE ;    {[O]OC1(C)CCC2C(CC2(C)C)C(=O)CCC1O[N+](=O)[O-]}
+SPC5421 = IGNORE ;    {[O]OC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2(C)O)N(=O)=O}
+SPC5422 = IGNORE ;    {[O]OC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2(C)ON(=O)=O)N(=O)=O}
+SPC5423 = IGNORE ;    {[O]OC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2O)N(=O)=O}
+SPC5424 = IGNORE ;    {[O]OC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2O)O}
+SPC5425 = IGNORE ;    {[O]OC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2ON(=O)=O)N(=O)=O}
+SPC5426 = IGNORE ;    {[O]OC1(O)C(=C(C)C2(C)OOC1(N(=O)=O)C2ON(=O)=O)O}
+SPC5427 = IGNORE ;    {[O]OC1(O)C(=C(C)C2(OOC1(C)C2(C)O)N(=O)=O)N(=O)=O}
+SPC5428 = IGNORE ;    {[O]OC1(O)C(=C(C)C2(OOC1(C)C2(C)O)N(=O)=O)O}
+SPC5429 = IGNORE ;    {[O]OC1(O)C(=C(C)C2(OOC1(C)C2(C)ON(=O)=O)N(=O)=O)N(=O)=O}
+SPC5430 = IGNORE ;    {[O]OC1(O)C(=C(C)C2(OOC1(C)C2(C)ON(=O)=O)N(=O)=O)O}
+SPC5431 = IGNORE ;    {[O]OC1(O)C(=C(C)C2(OOC1(C)C2O)N(=O)=O)N(=O)=O}
+SPC5432 = IGNORE ;    {[O]OC1(O)C(=C(C)C2(OOC1(C)C2O)N(=O)=O)O}
+SPC5433 = IGNORE ;    {[O]OC1(O)C(=C(C)C2(OOC1(C)C2ON(=O)=O)N(=O)=O)N(=O)=O}
+SPC5434 = IGNORE ;    {[O]OC1(O)C(=C(C)C2(OOC1(C)C2ON(=O)=O)N(=O)=O)O}
+SPC5435 = IGNORE ;    {[O]OC1(O)C(=C(C)C2(OOC1(CC)C2ON(=O)=O)N(=O)=O)O}
+SPC5436 = IGNORE ;    {[O]OC1(O)C(=C(C)C2OOC1(C)C2O)C}
+SPC5437 = IGNORE ;    {[O]OC1(O)C(=C(C)C2OOC1(C)C2ON(=O)=O)C}
+SPC5438 = IGNORE ;    {[O]OC1(O)C(=C(N(=O)=O)C2(C)OOC1(C)C2(C)O)O}
+SPC5439 = IGNORE ;    {[O]OC1(O)C(=C(N(=O)=O)C2(C)OOC1(C)C2(C)ON(=O)=O)O}
+SPC5440 = IGNORE ;    {[O]OC1(O)C(=C(N(=O)=O)C2(C)OOC1(C)C2O)O}
+SPC5441 = IGNORE ;    {[O]OC1(O)C(=C(N(=O)=O)C2(C)OOC1(C)C2ON(=O)=O)O}
+SPC5442 = IGNORE ;    {[O]OC1(O)C(=C(N(=O)=O)C2(OOC1(C)C2O)N(=O)=O)C}
+SPC5443 = IGNORE ;    {[O]OC1(O)C(=C(N(=O)=O)C2(OOC1(C)C2ON(=O)=O)N(=O)=O)C}
+SPC5444 = IGNORE ;    {[O]OC1(O)C(=C(N(=O)=O)C2OOC1(C(C)C)C2O)O}
+SPC5445 = IGNORE ;    {[O]OC1(O)C(=C(N(=O)=O)C2OOC1(C(C)C)C2ON(=O)=O)O}
+SPC5446 = IGNORE ;    {[O]OC1(O)C(=C(N(=O)=O)C2OOC1(C)C2O)O}
+SPC5447 = IGNORE ;    {[O]OC1(O)C(=C(N(=O)=O)C2OOC1(C)C2ON(=O)=O)O}
+SPC5448 = IGNORE ;    {[O]OC1(O)C(=C(N(=O)=O)C2OOC1(CC)C2O)O}
+SPC5449 = IGNORE ;    {[O]OC1(O)C(=CC2(C)OOC1(C)C2O)C}
+SPC5450 = IGNORE ;    {[O]OC1(O)C(=CC2(C)OOC1(C)C2ON(=O)=O)C}
+SPC5451 = IGNORE ;    {[O]OC1(O)C(=CC2(C)OOC1(N(=O)=O)C2O)C}
+SPC5452 = IGNORE ;    {[O]OC1(O)C(=CC2(C)OOC1C2O)N(=O)=O}
+SPC5453 = IGNORE ;    {[O]OC1(O)C(=CC2(OOC1(C(C)C)C2O)N(=O)=O)N(=O)=O}
+SPC5454 = IGNORE ;    {[O]OC1(O)C(=CC2(OOC1(C(C)C)C2ON(=O)=O)N(=O)=O)N(=O)=O}
+SPC5455 = IGNORE ;    {[O]OC1(O)C(=CC2(OOC1(C)C2O)N(=O)=O)N(=O)=O}
+SPC5456 = IGNORE ;    {[O]OC1(O)C(=CC2(OOC1(C)C2ON(=O)=O)N(=O)=O)N(=O)=O}
+SPC5457 = IGNORE ;    {[O]OC1(O)C(=CC2(OOC1(CC)C2ON(=O)=O)N(=O)=O)N(=O)=O}
+SPC5458 = IGNORE ;    {[O]OC1(O)C(=CC2(OOC1C2O)N(=O)=O)N(=O)=O}
+SPC5459 = IGNORE ;    {[O]OC1(O)C(=CC2(OOC1C2O)N(=O)=O)O}
+SPC5460 = IGNORE ;    {[O]OC1(O)C(=CC2(OOC1C2ON(=O)=O)N(=O)=O)N(=O)=O}
+SPC5461 = IGNORE ;    {[O]OC1(O)C(=CC2(OOC1C2ON(=O)=O)N(=O)=O)O}
+SPC5462 = IGNORE ;    {[O]OC1(O)C2OOC(C)(C2O)C(=C1C)C}
+SPC5463 = IGNORE ;    {[O]OC1(O)C2OOC(C)(C2ON(=O)=O)C(=C1C)C}
+SPC5464 = IGNORE ;    {[O]OC1(O)C=C(C)C2(C)OOC1(N(=O)=O)C2O}
+SPC5465 = IGNORE ;    {[O]OC1(O)C=C(C)C2(C)OOC1C2O}
+SPC5466 = IGNORE ;    {[O]OC1(O)C=C(C)C2(C)OOC1C2ON(=O)=O}
+SPC5467 = IGNORE ;    {[O]OC1(O)C=C(C)C2OOC1(C)C2O}
+SPC5468 = IGNORE ;    {[O]OC1(O)C=C(C)C2OOC1(C)C2ON(=O)=O}
+SPC5469 = IGNORE ;    {[O]OC1(O)C=C(C)C2OOC1(CC)C2O}
+SPC5470 = IGNORE ;    {[O]OC1(O)C=CC2(C)OOC1(C)C2O}
+SPC5471 = IGNORE ;    {[O]OC1(O)C=CC2(C)OOC1(C)C2ON(=O)=O}
+SPC5472 = IGNORE ;    {[O]OC1(O)C=CC2(C)OOC1C2O}
+SPC5473 = IGNORE ;    {[O]OC1(O)C=CC2(C)OOC1C2ON(=O)=O}
+SPC5474 = IGNORE ;    {[O]OC1(O)C=CC2(CC)OOC1C2O}
+SPC5475 = IGNORE ;    {[O]OC1(O)C=CC2(OOC1C2O)C(C)C}
+SPC5476 = IGNORE ;    {[O]OC1(O)C=CC2(OOC1C2ON(=O)=O)C(C)C}
+SPC5477 = IGNORE ;    {[O]OC1(O)C=CC2OOC1C2O}
+SPC5478 = IGNORE ;    {[O]OC1(O)C=CC2OOC1C2ON(=O)=O}
+SPC5479 = IGNORE ;    {[O]OC1C(=CC2(C)OOC1(C)C2O)C}
+SPC5480 = IGNORE ;    {[O]OC1C(=CC2(CC)OOC1(C)C2O)C}
+SPC5481 = IGNORE ;    {[O]OC1C(=CC2(CC)OOC1(C)C2O)CC}
+SPC5482 = IGNORE ;    {[O]OC1C=CC2(C)OOC1(C)C2(C)O}
+SPC5483 = IGNORE ;    {[O]OC1C=CC2(C)OOC1(C)C2O}
+SPC5484 = IGNORE ;    {[O]OC1C=CC2(C)OOC1(CC)C2O}
+SPC5485 = IGNORE ;    {[O]OC1C=CC2(C)OOC1C2O}
+SPC5486 = IGNORE ;    {[O]OC1C=CC2(CC)OOC1C2O}
+SPC5487 = IGNORE ;    {[O]OC1C=CC2(OOC1C2O)C(C)C}
+SPC5488 = IGNORE ;    {[O]OC1C=CC2OOC1C2O}
+SPC5489 = IGNORE ;    {[O]OC1CCC(=C)C2CC(C)(C)C2CCC1(C)O}
+SPC5490 = IGNORE ;    {[O]OCC(=O)C=C(CC)C(=O)CO.O=C1CCC(=O)C(=C1)C}
+SPC5491 = IGNORE ;    {[O]OCS(=O)(=O)C}
+SPC5492 = IGNORE ;    {[O]OS(=O)(=O)C}
+SPC5493 = IGNORE ;    {[O]OS(C)(C)O}
+SPC5494 = IGNORE ;    {[S](C)(C)O}
+SPC5495 = IGNORE ;    {c1c(C)c(N(=O)=O)c(O)c(O)c1C}
+SPC5496 = IGNORE ;    {c1c(C)c(N(=O)=O)c(O)c(O)c1CC}
+SPC5497 = IGNORE ;    {c1c(C)c(N(=O)=O)c(O)cc1C}
+SPC5498 = IGNORE ;    {c1c(C)c(N(=O)=O)c(O)cc1CC}
+SPC5499 = IGNORE ;    {c1c(C)c(O)c(C)cc1C}
+SPC5500 = IGNORE ;    {c1c(C)c(O)c(N(=O)=O)cc1C}
+SPC5501 = IGNORE ;    {c1c(C)c(O)c(O)cc1C}
+SPC5502 = IGNORE ;    {c1c(C)c(O)ccc1C}
+SPC5503 = IGNORE ;    {c1c(C)c(OO)c(N(=O)=O)cc1C}
+SPC5504 = IGNORE ;    {c1c(C)c(OO)c(O)cc1C}
+SPC5505 = IGNORE ;    {c1c(C)c(OO)ccc1C}
+SPC5506 = IGNORE ;    {c1c(C)c(O[O])c(N(=O)=O)cc1C}
+SPC5507 = IGNORE ;    {c1c(C)c(O[O])c(O)cc1C}
+SPC5508 = IGNORE ;    {c1c(C)c(O[O])ccc1C}
+SPC5509 = IGNORE ;    {c1c(C)c([O])c(C)cc1C}
+SPC5510 = IGNORE ;    {c1c(C)c([O])c(N(=O)=O)cc1C}
+SPC5511 = IGNORE ;    {c1c(C)c([O])c(O)cc1C}
+SPC5512 = IGNORE ;    {c1c(C)c([O])ccc1C}
+SPC5513 = IGNORE ;    {c1c(C)cc(C(=O)O)cc1C}
+SPC5514 = IGNORE ;    {c1c(C)cc(C(=O)OO)cc1C}
+SPC5515 = IGNORE ;    {c1c(C)cc(C(=O)OO)cc1CC}
+SPC5516 = IGNORE ;    {c1c(C)cc(C(=O)OON(=O)=O)cc1CC}
+SPC5517 = IGNORE ;    {c1c(C)cc(C(=O)O[O])cc1C}
+SPC5518 = IGNORE ;    {c1c(C)cc(C(=O)O[O])cc1CC}
+SPC5519 = IGNORE ;    {c1c(C)cc(C)c(O)c1CC}
+SPC5520 = IGNORE ;    {c1c(C)cc(C)c([O])c1CC}
+SPC5521 = IGNORE ;    {c1c(C)cc(C)cc1C}
+SPC5522 = IGNORE ;    {c1c(C)cc(C)cc1C(=O)C}
+SPC5523 = IGNORE ;    {c1c(C)cc(C)cc1C(=O)C=O}
+SPC5524 = IGNORE ;    {c1c(C)cc(C)cc1C(=O)CO}
+SPC5525 = IGNORE ;    {c1c(C)cc(C)cc1C(=O)COO}
+SPC5526 = IGNORE ;    {c1c(C)cc(C)cc1C(=O)CO[O]}
+SPC5527 = IGNORE ;    {c1c(C)cc(C)cc1C(=O)C[O]}
+SPC5528 = IGNORE ;    {c1c(C)cc(C)cc1C(O)C}
+SPC5529 = IGNORE ;    {c1c(C)cc(C)cc1C(ON(=O)=O)C}
+SPC5530 = IGNORE ;    {c1c(C)cc(C)cc1C(OO)C}
+SPC5531 = IGNORE ;    {c1c(C)cc(C)cc1C(O[O])C}
+SPC5532 = IGNORE ;    {c1c(C)cc(C)cc1C([O])C}
+SPC5533 = IGNORE ;    {c1c(C)cc(C)cc1CC}
+SPC5534 = IGNORE ;    {c1c(C)cc(C=O)cc1C}
+SPC5535 = IGNORE ;    {c1c(C)cc(CO)cc1C}
+SPC5536 = IGNORE ;    {c1c(C)cc(CON(=O)=O)cc1C}
+SPC5537 = IGNORE ;    {c1c(C)cc(COO)cc1C}
+SPC5538 = IGNORE ;    {c1c(C)cc(CO[O])cc1C}
+SPC5539 = IGNORE ;    {c1c(C)cc(C[O])cc1C}
+SPC5540 = IGNORE ;    {c1c(C)cc(N(=O)=O)c(O)c1CC}
+SPC5541 = IGNORE ;    {c1c(C)cc(O)c(O)c1CC}
+SPC5542 = IGNORE ;    {c1c(C)cc(OO)cc1C}
+SPC5543 = IGNORE ;    {c1c(C)cc(OO)cc1CC}
+SPC5544 = IGNORE ;    {c1c(C)cc(O[O])cc1C}
+SPC5545 = IGNORE ;    {c1c(C)cc(O[O])cc1CC}
+SPC5546 = IGNORE ;    {c1c(C)cc([O])cc1C}
+SPC5547 = IGNORE ;    {c1c(C)cc([O])cc1CC}
+SPC5548 = IGNORE ;    {c1c(C)ccc(OO)c1CC}
+SPC5549 = IGNORE ;    {c1c(C)ccc(O[O])c1CC}
+SPC5550 = IGNORE ;    {c1c(C)cccc1C}
+SPC5551 = IGNORE ;    {c1c(C)cccc1CC}
+SPC5552 = IGNORE ;    {c1c(N(=O)=O)c(C)c(N(=O)=O)c(O)c1C}
+SPC5553 = IGNORE ;    {c1c(N(=O)=O)c(C)c(N(=O)=O)c(O)c1CC}
+SPC5554 = IGNORE ;    {c1c(N(=O)=O)c(C)c(O)c(O)c1C}
+SPC5555 = IGNORE ;    {c1c(N(=O)=O)c(C)c(O)c(O)c1CC}
+SPC5556 = IGNORE ;    {c1c(N(=O)=O)c(O)c(C)c(N(=O)=O)c1C}
+SPC5557 = IGNORE ;    {c1c(N(=O)=O)c(O)c(C)c(N(=O)=O)c1CC}
+SPC5558 = IGNORE ;    {c1c(N(=O)=O)cc(N(=O)=O)c(O)c1C}
+SPC5559 = IGNORE ;    {c1c(N(=O)=O)cc(N(=O)=O)c(O)c1C(C)C}
+SPC5560 = IGNORE ;    {c1c(N(=O)=O)cc(N(=O)=O)c(O)c1CC}
+SPC5561 = IGNORE ;    {c1c(N(=O)=O)cc(N(=O)=O)c(O)c1CCC}
+SPC5562 = IGNORE ;    {c1c(O)c(N(=O)=O)cc(N(=O)=O)c1}
+SPC5563 = IGNORE ;    {c1c(O)c(O)cc(N(=O)=O)c1}
+SPC5564 = IGNORE ;    {c1cc(C)c(N(=O)=O)c(O)c1C}
+SPC5565 = IGNORE ;    {c1cc(C)c(N(=O)=O)c(O)c1CC}
+SPC5566 = IGNORE ;    {c1cc(C)c(N(=O)=O)c(OO)c1CC}
+SPC5567 = IGNORE ;    {c1cc(C)c(N(=O)=O)c(O[O])c1CC}
+SPC5568 = IGNORE ;    {c1cc(C)c(N(=O)=O)c([O])c1CC}
+SPC5569 = IGNORE ;    {c1cc(C)c(O)c(O)c1C}
+SPC5570 = IGNORE ;    {c1cc(C)c(O)c(O)c1CC}
+SPC5571 = IGNORE ;    {c1cc(C)c(O)c(OO)c1CC}
+SPC5572 = IGNORE ;    {c1cc(C)c(O)c(O[O])c1CC}
+SPC5573 = IGNORE ;    {c1cc(C)c(O)c([O])c1CC}
+SPC5574 = IGNORE ;    {c1cc(C)c(O)cc1C}
+SPC5575 = IGNORE ;    {c1cc(C)c(OO)c(N(=O)=O)c1C}
+SPC5576 = IGNORE ;    {c1cc(C)c(OO)c(O)c1C}
+SPC5577 = IGNORE ;    {c1cc(C)c(OO)cc1C}
+SPC5578 = IGNORE ;    {c1cc(C)c(O[O])c(N(=O)=O)c1C}
+SPC5579 = IGNORE ;    {c1cc(C)c(O[O])c(O)c1C}
+SPC5580 = IGNORE ;    {c1cc(C)c(O[O])cc1C}
+SPC5581 = IGNORE ;    {c1cc(C)c([O])c(N(=O)=O)c1C}
+SPC5582 = IGNORE ;    {c1cc(C)c([O])c(O)c1C}
+SPC5583 = IGNORE ;    {c1cc(C)c([O])cc1C}
+SPC5584 = IGNORE ;    {c1cc(C)cc(O)c1CC}
+SPC5585 = IGNORE ;    {c1cc(C)cc(OO)c1CC}
+SPC5586 = IGNORE ;    {c1cc(C)cc(O[O])c1CC}
+SPC5587 = IGNORE ;    {c1cc(C)cc([O])c1CC}
+SPC5588 = IGNORE ;    {c1cc(C)ccc1C}
+SPC5589 = IGNORE ;    {c1cc(C)ccc1CC}
+SPC5590 = IGNORE ;    {c1cc(N(=O)=O)c(O)c(O)c1C}
+SPC5591 = IGNORE ;    {c1cc(N(=O)=O)c(O)c(O)c1C(C)C}
+SPC5592 = IGNORE ;    {c1cc(N(=O)=O)c(O)c(O)c1CC}
+SPC5593 = IGNORE ;    {c1cc(N(=O)=O)c(O)c(O)c1CCC}
+SPC5594 = IGNORE ;    {c1cc(N(=O)=O)c(OO)cc1}
+SPC5595 = IGNORE ;    {c1cc(N(=O)=O)c(O[O])cc1}
+SPC5596 = IGNORE ;    {c1cc(N(=O)=O)c([O])cc1}
+SPC5597 = IGNORE ;    {c1cc(O)c(N(=O)=O)cc1}
+SPC5598 = IGNORE ;    {c1cc(O)c(N(=O)=O)cc1C}
+SPC5599 = IGNORE ;    {c1cc(O)c(O)cc1}
+SPC5600 = IGNORE ;    {c1cc(O)c(OO)cc1}
+SPC5601 = IGNORE ;    {c1cc(O)c(O[O])cc1}
+SPC5602 = IGNORE ;    {c1cc(O)c([O])cc1}
+SPC5603 = IGNORE ;    {c1cc(OO)ccc1C}
+SPC5604 = IGNORE ;    {c1cc(O[O])ccc1C}
+SPC5605 = IGNORE ;    {c1cc([O])ccc1C}
+SPC5606 = IGNORE ;    {c1ccc(C)c(O)c1CC}
+SPC5607 = IGNORE ;    {c1ccc(C)c([O])c1CC}
+SPC5608 = IGNORE ;    {c1ccc(N(=O)=O)c(O)c1C}
+SPC5609 = IGNORE ;    {c1ccc(N(=O)=O)c(O)c1C(C)C}
+SPC5610 = IGNORE ;    {c1ccc(N(=O)=O)c(O)c1CC}
+SPC5611 = IGNORE ;    {c1ccc(N(=O)=O)c(O)c1CCC}
+SPC5612 = IGNORE ;    {c1ccc(N(=O)=O)c(OO)c1C}
+SPC5613 = IGNORE ;    {c1ccc(N(=O)=O)c(OO)c1C(C)C}
+SPC5614 = IGNORE ;    {c1ccc(N(=O)=O)c(OO)c1CC}
+SPC5615 = IGNORE ;    {c1ccc(N(=O)=O)c(OO)c1CCC}
+SPC5616 = IGNORE ;    {c1ccc(N(=O)=O)c(O[O])c1C}
+SPC5617 = IGNORE ;    {c1ccc(N(=O)=O)c(O[O])c1C(C)C}
+SPC5618 = IGNORE ;    {c1ccc(N(=O)=O)c(O[O])c1CC}
+SPC5619 = IGNORE ;    {c1ccc(N(=O)=O)c(O[O])c1CCC}
+SPC5620 = IGNORE ;    {c1ccc(N(=O)=O)c([O])c1C}
+SPC5621 = IGNORE ;    {c1ccc(N(=O)=O)c([O])c1C(C)C}
+SPC5622 = IGNORE ;    {c1ccc(N(=O)=O)c([O])c1CC}
+SPC5623 = IGNORE ;    {c1ccc(N(=O)=O)c([O])c1CCC}
+SPC5624 = IGNORE ;    {c1ccc(O)c(O)c1C}
+SPC5625 = IGNORE ;    {c1ccc(O)c(O)c1C(C)C}
+SPC5626 = IGNORE ;    {c1ccc(O)c(O)c1CC}
+SPC5627 = IGNORE ;    {c1ccc(O)c(O)c1CCC}
+SPC5628 = IGNORE ;    {c1ccc(O)c(OO)c1C}
+SPC5629 = IGNORE ;    {c1ccc(O)c(OO)c1C(C)C}
+SPC5630 = IGNORE ;    {c1ccc(O)c(OO)c1CC}
+SPC5631 = IGNORE ;    {c1ccc(O)c(OO)c1CCC}
+SPC5632 = IGNORE ;    {c1ccc(O)c(O[O])c1C}
+SPC5633 = IGNORE ;    {c1ccc(O)c(O[O])c1C(C)C}
+SPC5634 = IGNORE ;    {c1ccc(O)c(O[O])c1CC}
+SPC5635 = IGNORE ;    {c1ccc(O)c(O[O])c1CCC}
+SPC5636 = IGNORE ;    {c1ccc(O)c([O])c1C}
+SPC5637 = IGNORE ;    {c1ccc(O)c([O])c1C(C)C}
+SPC5638 = IGNORE ;    {c1ccc(O)c([O])c1CC}
+SPC5639 = IGNORE ;    {c1ccc(O)c([O])c1CCC}
+SPC5640 = IGNORE ;    {c1ccc(O)cc1}
+SPC5641 = IGNORE ;    {c1ccc(OO)cc1}
+SPC5642 = IGNORE ;    {c1ccc(OO)cc1C}
+SPC5643 = IGNORE ;    {c1ccc(O[O])cc1}
+SPC5644 = IGNORE ;    {c1ccc(O[O])cc1C}
+SPC5645 = IGNORE ;    {c1ccc([O])cc1}
+SPC5646 = IGNORE ;    {c1ccc([O])cc1C}
+SPC5647 = IGNORE ;    {c1cccc(O)c1C}
+SPC5648 = IGNORE ;    {c1cccc(O)c1C(C)C}
+SPC5649 = IGNORE ;    {c1cccc(O)c1CC}
+SPC5650 = IGNORE ;    {c1cccc(O)c1CCC}
+SPC5651 = IGNORE ;    {c1cccc(OO)c1C}
+SPC5652 = IGNORE ;    {c1cccc(OO)c1C(C)C}
+SPC5653 = IGNORE ;    {c1cccc(OO)c1CC}
+SPC5654 = IGNORE ;    {c1cccc(OO)c1CCC}
+SPC5655 = IGNORE ;    {c1cccc(O[O])c1C}
+SPC5656 = IGNORE ;    {c1cccc(O[O])c1C(C)C}
+SPC5657 = IGNORE ;    {c1cccc(O[O])c1CC}
+SPC5658 = IGNORE ;    {c1cccc(O[O])c1CCC}
+SPC5659 = IGNORE ;    {c1cccc([O])c1C}
+SPC5660 = IGNORE ;    {c1cccc([O])c1C(C)C}
+SPC5661 = IGNORE ;    {c1cccc([O])c1CC}
+SPC5662 = IGNORE ;    {c1cccc([O])c1CCC}
+SPC5663 = IGNORE ;    {c1ccccc1}
+SPC5664 = IGNORE ;    {c1ccccc1C}
+SPC5665 = IGNORE ;    {c1ccccc1C(=O)C}
+SPC5666 = IGNORE ;    {c1ccccc1C(=O)C(=O)C}
+SPC5667 = IGNORE ;    {c1ccccc1C(=O)C(=O)COO}
+SPC5668 = IGNORE ;    {c1ccccc1C(=O)C(=O)CO[O]}
+SPC5669 = IGNORE ;    {c1ccccc1C(=O)C(=O)C[O]}
+SPC5670 = IGNORE ;    {c1ccccc1C(=O)C(O)C}
+SPC5671 = IGNORE ;    {c1ccccc1C(=O)C(OO)C}
+SPC5672 = IGNORE ;    {c1ccccc1C(=O)C(O[O])C}
+SPC5673 = IGNORE ;    {c1ccccc1C(=O)C([O])C}
+SPC5674 = IGNORE ;    {c1ccccc1C(=O)C=O}
+SPC5675 = IGNORE ;    {c1ccccc1C(=O)CC}
+SPC5676 = IGNORE ;    {c1ccccc1C(=O)CO}
+SPC5677 = IGNORE ;    {c1ccccc1C(=O)COO}
+SPC5678 = IGNORE ;    {c1ccccc1C(=O)CO[O]}
+SPC5679 = IGNORE ;    {c1ccccc1C(=O)C[O]}
+SPC5680 = IGNORE ;    {c1ccccc1C(=O)O}
+SPC5681 = IGNORE ;    {c1ccccc1C(=O)OO}
+SPC5682 = IGNORE ;    {c1ccccc1C(=O)O[O]}
+SPC5683 = IGNORE ;    {c1ccccc1C(C)C}
+SPC5684 = IGNORE ;    {c1ccccc1C(O)(C)C}
+SPC5685 = IGNORE ;    {c1ccccc1C(O)CC}
+SPC5686 = IGNORE ;    {c1ccccc1C(O)COO}
+SPC5687 = IGNORE ;    {c1ccccc1C(O)CO[O]}
+SPC5688 = IGNORE ;    {c1ccccc1C(O)C[O]}
+SPC5689 = IGNORE ;    {c1ccccc1C(ON(=O)=O)(C)C}
+SPC5690 = IGNORE ;    {c1ccccc1C(ON(=O)=O)CC}
+SPC5691 = IGNORE ;    {c1ccccc1C(OO)(C)C}
+SPC5692 = IGNORE ;    {c1ccccc1C(OO)CC}
+SPC5693 = IGNORE ;    {c1ccccc1C(OO)CON(=O)=O}
+SPC5694 = IGNORE ;    {c1ccccc1C(O[O])(C)C}
+SPC5695 = IGNORE ;    {c1ccccc1C(O[O])CC}
+SPC5696 = IGNORE ;    {c1ccccc1C(O[O])CON(=O)=O}
+SPC5697 = IGNORE ;    {c1ccccc1C([O])(C)C}
+SPC5698 = IGNORE ;    {c1ccccc1C([O])CC}
+SPC5699 = IGNORE ;    {c1ccccc1C([O])CON(=O)=O}
+SPC5700 = IGNORE ;    {c1ccccc1C=C}
+SPC5701 = IGNORE ;    {c1ccccc1C=O}
+SPC5702 = IGNORE ;    {c1ccccc1CC}
+SPC5703 = IGNORE ;    {c1ccccc1CC(=O)O}
+SPC5704 = IGNORE ;    {c1ccccc1CC(=O)OO}
+SPC5705 = IGNORE ;    {c1ccccc1CC(=O)OON(=O)=O}
+SPC5706 = IGNORE ;    {c1ccccc1CC(=O)O[O]}
+SPC5707 = IGNORE ;    {c1ccccc1CC=O}
+SPC5708 = IGNORE ;    {c1ccccc1CCC}
+SPC5709 = IGNORE ;    {c1ccccc1CCO}
+SPC5710 = IGNORE ;    {c1ccccc1CCON(=O)=O}
+SPC5711 = IGNORE ;    {c1ccccc1CCOO}
+SPC5712 = IGNORE ;    {c1ccccc1CCO[O]}
+SPC5713 = IGNORE ;    {c1ccccc1CC[O]}
+SPC5714 = IGNORE ;    {c1ccccc1CO}
+SPC5715 = IGNORE ;    {c1ccccc1CON(=O)=O}
+SPC5716 = IGNORE ;    {c1ccccc1COO}
+SPC5717 = IGNORE ;    {c1ccccc1CO[O]}
+SPC5718 = IGNORE ;    {c1ccccc1C[O]}
+SPC5719 = IGNORE ;    {cCC=CC}
+SPC5720 = IGNORE ;    {[H2O]}
+SPC5721 = IGNORE ;    {[O2]}

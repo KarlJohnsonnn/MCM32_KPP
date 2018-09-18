@@ -13,7 +13,7 @@
 !        R. Sander, Max-Planck Institute for Chemistry, Mainz, Germany
 ! 
 ! File                 : mcm_32_Parameters.f90
-! Time                 : Mon Aug 27 18:55:50 2018
+! Time                 : Sat Sep 15 19:57:21 2018
 ! Working directory    : /vols/fs1/work/schimmel/Code/kpp-2.2.3
 ! Equation file        : mcm_32.kpp
 ! Output root filename : mcm_32
@@ -50,9 +50,9 @@ MODULE mcm_32_Parameters
 ! CNVAR - (NVAR+1) Number of elements in compressed row format
   INTEGER, PARAMETER :: CNVAR = 5722 
 ! NLOOKAT - Number of species to look at
-  INTEGER, PARAMETER :: NLOOKAT = 5721 
+  INTEGER, PARAMETER :: NLOOKAT = 0 
 ! NMONITOR - Number of species to monitor
-  INTEGER, PARAMETER :: NMONITOR = 8 
+  INTEGER, PARAMETER :: NMONITOR = 26 
 ! NMASS - Number of atoms to check mass balance
   INTEGER, PARAMETER :: NMASS = 1 
 

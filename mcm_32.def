@@ -1,50 +1,622 @@
-//#include mcm_32.spc
-//#include mcm_32.eqn
- 
+#MONITOR            {Screen Output}
 
-#LOOKATALL                     {File Output}
+SPC3933;    {HO2}
+SPC3938;    {NO}
+SPC3939;    {NO2}
+SPC3940;    {NO3}
+SPC3951;    {O3}
+SPC3930;    {HCL}
+SPC5157;    {OH}
+SPC3948;    {O1D}
+SPC5277;    {SO2}
+SPC5278;    {SULF}
+SPC5663;    {c1ccccc1}
+SPC5664;    {c1ccccc1C}
+SPC5640;    {c1ccc(O)cc1}
+SPC5599;    {c1cc(O)c(O)cc1}
+SPC5647;    {c1cccc(O)c1C}
+SPC5624;    {c1ccc(O)c(O)c1C}
+SPC5714;    {c1ccccc1CO}
+SPC5701;    {c1ccccc1C=O}
+SPC5680;    {c1ccccc1C(=O)O}
+SPC5597;    {c1cc(O)c(N(=O)=O)cc1}
+SPC5608;    {c1ccc(N(=O)=O)c(O)c1C}
+SPC4193;    {O=C1C=CC(=O)C=C1C}
+SPC5562;    {c1c(O)c(N(=O)=O)cc(N(=O)=O)c1}
+SPC5558;    {c1c(N(=O)=O)cc(N(=O)=O)c(O)c1C}
+SPC5563;    {c1c(O)c(O)cc(N(=O)=O)c1}
+SPC5590;    {c1cc(N(=O)=O)c(O)c(O)c1C}
 
-#MONITOR SPC3933;SPC3938;SPC3939;SPC3940;SPC3951;SPC3930;SPC5157;SPC3948;SPC5277;SPC5278;SPC5663;SPC5664;SPC5640;SPC5599;SPC5647;SPC5624;SPC5714;SPC5701;SPC5680;SPC5597;SPC5608;SPC4193;SPC5562;SPC5558;SPC5563;SPC5590;
+#INITVALUES             {Initial Values}
+  CFACTOR = 1.0    ;              {Conversion Factor} 
 
-//SPC3933;    {HO2}
-//SPC3938;    {NO}
-//SPC3939;    {NO2}
-//SPC3940;    {NO3}
-//SPC3951;    {O3}
-//SPC3930;    {HCL}
-//SPC5157;    {OH}
-//SPC3948;    {O1D}
-//SPC5277;    {SO2}
-//SPC5278;    {SULF}
-//SPC5663;    {c1ccccc1}
-//SPC5664;    {c1ccccc1C}
-//SPC5640;    {c1ccc(O)cc1}
-//SPC5599;    {c1cc(O)c(O)cc1}
-//SPC5647;    {c1cccc(O)c1C}
-//SPC5624;    {c1ccc(O)c(O)c1C}
-//SPC5714;    {c1ccccc1CO}
-//SPC5701;    {c1ccccc1C=O}
-//SPC5680;    {c1ccccc1C(=O)O}
-//SPC5597;    {c1cc(O)c(N(=O)=O)cc1}
-//SPC5608;    {c1ccc(N(=O)=O)c(O)c1C}
-//SPC4193;    {O=C1C=CC(=O)C=C1C}
-//SPC5562;    {c1c(O)c(N(=O)=O)cc(N(=O)=O)c1}
-//SPC5558;    {c1c(N(=O)=O)cc(N(=O)=O)c(O)c1C}
-//SPC5563;    {c1c(O)c(O)cc(N(=O)=O)c1}
-//SPC5590;    {c1cc(N(=O)=O)c(O)c(O)c1C}
-
+#INLINE F90_RATES
 
 
-#INITVALUES                    {Initial Values}
- 
-CFACTOR = 1.0    ;              {Conversion Factor} 
- 
+   ! zenith angle time dependent function: Zenith (see supplement section 3)
+
+  REAL(kind=dp) FUNCTION Zenith(Time)
+    !-----------------------------------------------------------------------!
+    ! Input:
+    !   - Time
+    REAL(dp) :: Time
+    !-----------------------------------------------------------------------!
+    ! Output:
+    !   - sun angle Zenith
+    !-----------------------------------------------------------------------!
+    ! Temporary variables:
+    !INTEGER :: IDAT
+    REAL(dp) :: LBGMT, LZGMT
+    REAL(dp) :: ML
+    !
+    REAL(dp) :: GMT
+    REAL(dp) :: RLT, RPHI
+    !
+    INTEGER  :: IIYEAR, IYEAR, IMTH, IDAY, IIY, NYEARS, LEAP, NOLEAP
+    REAL(dp) :: YREF,YR
+    !
+    INTEGER  :: I, IJ, JD, IJD, IN
+    REAL(dp) :: D, RML, W, WR, EC, EPSI, PEPSI, YT, CW, SW, SSW  &
+    &         , EYT, FEQT1, FEQT2, FEQT3, FEQT4, FEQT5, FEQT6 &
+    &         , FEQT7, FEQT, EQT
+    !
+    REAL(dp) :: REQT, RA, RRA, TAB, RDECL, DECL, ZPT, CSZ, ZR    &
+    &         , CAZ, RAZ, AZIMUTH
+
+    REAL(dp), PARAMETER :: Pi   = 4.0_dp*ATAN(1.0_dp)
+    REAL(dp), PARAMETER :: rlat = 45.0_dp
+    REAL(dp), PARAMETER :: rlon = 0.0_dp
+    INTEGER,  PARAMETER :: idate= 010621
+    REAL(dp), PARAMETER :: DR   = Pi / 180.d0
+    !
+    INTEGER :: IMN(12)
+    DATA IMN/31,28,31,30,31,30,31,31,30,31,30,31/
+    !
+    !----------------------------------------------------------------------!
+    !
+    ! set GMT
+    GMT = Time / 3600.0_dp
+    !
+    !  convert to radians
+    RLT = rlat*DR
+    RPHI = rlon*DR
+    !
+    !  parse date
+    IIYEAR = iDate/10000
+    IYEAR = 19*100 + IIYEAR
+    IF (IIYEAR <= 50) IYEAR = IYEAR + 100
+    IMTH = (iDate - IIYEAR*10000)/100
+    IDAY = iDate - IIYEAR*10000 - IMTH*100
+    !
+    !  identify and correct leap years
+    IIY = (IIYEAR/4)*4
+    IF(IIY.EQ.IIYEAR) IMN(2) = 29
+    !
+    !  count days from Dec.31,1973 to Jan 1, YEAR, then add to 2,442,047.5
+    YREF =  2442047.5_dp
+    NYEARS = IYEAR - 1974
+    LEAP = (NYEARS+1)/4
+    IF(NYEARS.LE.-1) LEAP = (NYEARS-2)/4
+    NOLEAP = NYEARS - LEAP
+    YR = YREF + 365.0_dp*NOLEAP + 366.0_dp*LEAP
+    !
+    IJD = 0
+    IN = IMTH - 1
+    IF(IN.EQ.0) GO TO 40
+    DO 30 I=1,IN
+    IJD = IJD + IMN(I)
+    30   CONTINUE
+    IJD = IJD + IDAY
+    GO TO 50
+    40   IJD = IDAY
+    50   IJ = IYEAR - 1973
+    !
+    !      print julian days current "ijd"
+    JD = IJD + (YR - YREF)
+    D = JD + GMT/24.0_dp
+    !
+    !      calc geom mean longitude
+    ML = 279.2801988_dp + .9856473354_dp*D + 2.267e-13_dp*D*D
+    RML = ML*DR
+    !
+    !      calc equation of time in sec
+    !      w = mean long of perigee
+    !      e = eccentricity
+    !      epsi = mean obliquity of ecliptic
+    W = 282.4932328_dp + 4.70684e-5_dp*D + 3.39e-13_dp*D*D
+    WR = W*DR
+    EC = 1.6720041e-2_dp - 1.1444e-9_dp*D - 9.4e-17_dp*D*D
+    EPSI = 23.44266511_dp - 3.5626e-7_dp*D - 1.23e-15_dp*D*D
+    PEPSI = EPSI*DR
+    YT = (TAN(PEPSI/2.0_dp))**2
+    CW = COS(WR)
+    SW = SIN(WR)
+    SSW = SIN(2.0_dp*WR)
+    EYT = 2.0_dp*EC*YT
+    FEQT1 = SIN(RML)*(-EYT*CW - 2.0_dp*EC*CW)
+    FEQT2 = COS(RML)*(2.0_dp*EC*SW - EYT*SW)
+    FEQT3 = SIN(2.0_dp*RML)*(YT - (5.0_dp*EC*EC/4.0_dp)*(CW*CW-SW*SW))
+    FEQT4 = COS(2.0_dp*RML)*(5.0_dp*EC**2*SSW/4.0_dp)
+    FEQT5 = SIN(3.0_dp*RML)*(EYT*CW)
+    FEQT6 = COS(3.0_dp*RML)*(-EYT*SW)
+    FEQT7 = -SIN(4.0_dp*RML)*(YT*YT/2.0_dp)
+    FEQT = FEQT1 + FEQT2 + FEQT3 + FEQT4 + FEQT5 + FEQT6 + FEQT7
+    EQT = FEQT*13751.0_dp
+    !
+    !   convert eq of time from sec to deg
+    REQT = EQT/240.0_dp
+    !
+    !   calc right ascension in rads
+    RA = ML - REQT
+    RRA = RA*DR
+    !
+    !   calc declination in rads, deg
+    TAB = 0.43360_dp*SIN(RRA)
+    RDECL = ATAN(TAB)
+    DECL = RDECL/DR
+    !
+    !   calc local 3600.0_dp angle
+    LBGMT = 12.0_dp - EQT/3600.0_dp + rlon*24.0_dp/360.0_dp
+    LZGMT = 15.0_dp*(GMT - LBGMT)
+    ZPT = LZGMT*DR
+    CSZ = SIN(RLT)*SIN(RDECL) + COS(RLT)*COS(RDECL)*COS(ZPT)
+    ZR = ACOS(CSZ)
+    !
+    !   calc local solar azimuth
+    CAZ = (SIN(RDECL) - SIN(RLT)*COS(ZR))/(COS(RLT)*SIN(ZR))
+    RAZ = ACOS(CAZ)
+    AZIMUTH = RAZ/DR
+    !
+    !--- set Zenith Angle
+    Zenith =  1.745329252e-02_dp * ZR/DR
+  END FUNCTION Zenith
+
+
+  ! rate function: k_PHOTOMCM (see supplement section 3)
+
+
+  REAL(kind=dp) FUNCTION k_PHOTOMCM(K1,K2,K3,chi)
+    REAL(dp), INTENT(IN) :: K1,K2,K3,chi
+    REAL(dp) :: ChiZmcm, yChiZmcm
+    REAL(dp), PARAMETER :: dust=1.0
+    REAL(dp), PARAMETER :: PiHalf = 2.0_dp*ATAN(1.0_dp)
+
+    IF ( chi < PiHalf ) THEN
+      ChiZmcm  = EXP(-1.0d0*K3/COS(chi))
+      yChiZmcm = chi ** K2
+      k_PHOTOMCM = Dust*K1*yChiZmcm*ChiZmcm
+    END IF
+
+  END FUNCTION k_PHOTOMCM
+
+
+   ! rate function: k_SPEC2MCM (see supplement section 3)
+
+   REAL(kind=dp) FUNCTION k_SPEC2MCM(K1,K2,K3,temp)
+     ! special rate function for S(IV) + H2O2
+     REAL(dp), INTENT(IN) :: K1,K2,K3,temp
+
+     k_SPEC2MCM = K1 * (TEMP/300.0d0)**K2 * EXP(K3/temp)
+   END FUNCTION k_SPEC2MCM
+
+    ! rate function: k_SPEC3 (see supplement section 3)
+    ! special rate function for S(IV) + H2O2
+
+   REAL(kind=dp) FUNCTION k_SPEC3(K1,K2,K3,K4,K5,K6,temp,M)
+     REAL(kind=dp) :: k
+     REAL(dp), INTENT(IN) :: K1,K2,K3,K4,K5,K6,temp,M
+     REAL(dp) :: k1s,k2s,k3s
+
+     k1s = K1*EXP(K2/temp)
+     k2s = K3*EXP(K4/temp)
+     k3s = K5*EXP(K6/temp)*M
+     k_SPEC3 = k1s+k3s/(1.0d0+k3s/k2s)
+   END FUNCTION k_SPEC3
+
+
+   ! rate function: k_SPEC3MCM (see supplement section 3)
+
+
+   REAL(kind=dp) FUNCTION k_SPEC3MCM(K1,K2,temp,M)
+     ! special rate function for S(IV) + H2O2
+     REAL(dp), INTENT(IN) :: K1,K2,temp,M
+
+     k_SPEC3MCM = K1 * (1.0d0 + M/K2)
+   END FUNCTION k_SPEC3MCM
+
+
+   ! rate function: k_SPEC4MCM (see supplement section 3)
+
+   REAL(kind=dp) FUNCTION k_SPEC4MCM(K1,K2,K3,K4,H2O,temp)
+     ! special rate function for S(IV) + H2O2
+     REAL(dp), INTENT(IN) :: K1,K2,K3,K4,H2O,temp
+
+     k_SPEC4MCM = K1*(1.0d0+K2*EXP(K3/temp)*H2O)*EXP(K4/temp)
+   END FUNCTION k_SPEC4MCM
+
+
+
+
+   ! rate function: k_SPEC5MCM (see supplement section 3)
+
+    REAL(kind=dp) FUNCTION k_SPEC5MCM(K1,K2,K3,K4,K5,K6,temp,M)
+     ! special rate function for S(IV) + H2O2
+     REAL(dp), INTENT(IN) :: K1,K2,K3,K4,,temp,M
+     REAL(dp) :: k1s,k2s
+
+     k1s = K1*M*0.21d0*EXP(K2/temp)
+     k2s = K3*M*0.21d0*EXP(K4/temp)
+     k_SPEC5MCM = k1s*(1.0d0-k2s)
+   END FUNCTION k_SPEC5MCM
+
+
+   ! rate function: k_SPEC6MCM (see supplement section 3)
+
+
+   REAL(kind=dp) FUNCTION k_SPEC6MCM(K1,K2,K3,K4,temp)
+     ! special rate function for S(IV) + H2O2
+     REAL(dp), INTENT(IN) :: K1,K2,K3,K4,K5,K6,temp
+     REAL(dp) :: k1s,k2s
+
+     k1s = K1*EXP(K2/temp)
+     k2s = K3*EXP(K4/temp)
+     k_SPEC6MCM = k1s*(1.0d0-k2s)
+   END FUNCTION k_SPEC6MCM
+
+
+   ! rate function: k_SPEC7MCM (see supplement section 3)
+
+   REAL(kind=dp) FUNCTION k_SPEC7MCM(K1,K2,K3,K4,K5,K6,temp)
+     ! special rate function for S(IV) + H2O2
+     REAL(dp), INTENT(IN) :: K1,K2,K3,K4,K5,K6,temp
+     REAL(dp) :: k1s,k2s
+
+     k1s = K1*EXP(K2/temp)
+     k2s = K3*EXP(K4/temp)
+     k_SPEC7MCM = k1s*(K5-K6/(1.0d0+k2s))
+   END FUNCTION k_SPEC7MCM
+
+
+   ! rate function: k_TROEMCM (see supplement section 3)
+
+
+   REAL(kind=dp) FUNCTION k_TROEMCM(K1,K2,K3,K4,K5,K6,K7,K8,K9,K10,temp,M)
+     ! special rate function for S(IV) + H2O2
+     REAL(dp), INTENT(IN) :: K1,K2,K3,K4,K5,K6,K7,K8,K9,K10,temp,M
+     REAL(dp) :: k1s,k2s,k3s,Fc
+
+     k1s = K1 * (temp*1.0d0/298.15D0)**K2 * EXP(K3/temp) * M
+     k2s = K4 * (temp*1.0d0/298.15D0)**K5 * EXP(K6/temp)
+     Fc = K7 * EXP(K8/temp) + K9 * EXP(temp/K10)
+     k3s = LOG10(k1s/k2s)/(0.75d0-1.27d0*LOG10(Fc))
+     k_TROEMCM = k1s/(1.0d0+k1s/k2s) * Fc**(1.0d0/(1.0d0+k3s*k3s))
+  END FUNCTION k_TROEMCM
+
+
+
+#ENDINLINE
+
+#INLINE F90_RCONST
+  REAL(dp) :: M, N2, O2, RO2, H2O
+  ! variables
+  REAL(dp), PARAMETER     :: PiHalf = 2.0_dp*ATAN(1.0_dp)
+  REAL(dp)                ::  chi
+
+
+  N2 =   0.19600000D+20
+  O2 =   0.51000000D+19
+  M  = N2 + O2
+  H2O =   0.51000000D+18
+
+
+  ! --- Update photo reactions "J(.)" ---
+  chi = Zenith(TIME)
+  RO2 = &
+    C(ind_SPC5) + C(ind_SPC7) + C(ind_SPC13) + C(ind_SPC25) + &
+    C(ind_SPC27) + C(ind_SPC40) + C(ind_SPC41) + C(ind_SPC46) + &
+    C(ind_SPC49) + C(ind_SPC50) + C(ind_SPC51) + C(ind_SPC55) + &
+    C(ind_SPC59) + C(ind_SPC66) + C(ind_SPC67) + C(ind_SPC68) + &
+    C(ind_SPC69) + C(ind_SPC81) + C(ind_SPC85) + C(ind_SPC89) + &
+    C(ind_SPC90) + C(ind_SPC95) + C(ind_SPC99) + C(ind_SPC103) + &
+    C(ind_SPC112) + C(ind_SPC113) + C(ind_SPC114) + C(ind_SPC121) + &
+    C(ind_SPC126) + C(ind_SPC129) + C(ind_SPC136) + C(ind_SPC144) + &
+    C(ind_SPC145) + C(ind_SPC155) + C(ind_SPC156) + C(ind_SPC163) + &
+    C(ind_SPC167) + C(ind_SPC168) + C(ind_SPC175) + C(ind_SPC179) + &
+    C(ind_SPC183) + C(ind_SPC187) + C(ind_SPC191) + C(ind_SPC192) + &
+    C(ind_SPC193) + C(ind_SPC194) + C(ind_SPC196) + C(ind_SPC198) + &
+    C(ind_SPC200) + C(ind_SPC201) + C(ind_SPC202) + C(ind_SPC204) + &
+    C(ind_SPC206) + C(ind_SPC208) + C(ind_SPC210) + C(ind_SPC212) + &
+    C(ind_SPC214) + C(ind_SPC220) + C(ind_SPC222) + C(ind_SPC224) + &
+    C(ind_SPC225) + C(ind_SPC235) + C(ind_SPC239) + C(ind_SPC246) + &
+    C(ind_SPC252) + C(ind_SPC255) + C(ind_SPC258) + C(ind_SPC268) + &
+    C(ind_SPC269) + C(ind_SPC270) + C(ind_SPC271) + C(ind_SPC278) + &
+    C(ind_SPC284) + C(ind_SPC289) + C(ind_SPC293) + C(ind_SPC296) + &
+    C(ind_SPC301) + C(ind_SPC307) + C(ind_SPC318) + C(ind_SPC319) + &
+    C(ind_SPC320) + C(ind_SPC321) + C(ind_SPC333) + C(ind_SPC340) + &
+    C(ind_SPC342) + C(ind_SPC347) + C(ind_SPC351) + C(ind_SPC356) + &
+    C(ind_SPC357) + C(ind_SPC358) + C(ind_SPC359) + C(ind_SPC360) + &
+    C(ind_SPC370) + C(ind_SPC373) + C(ind_SPC376) + C(ind_SPC382) + &
+    C(ind_SPC383) + C(ind_SPC389) + C(ind_SPC394) + C(ind_SPC398) + &
+    C(ind_SPC403) + C(ind_SPC412) + C(ind_SPC416) + C(ind_SPC421) + &
+    C(ind_SPC427) + C(ind_SPC432) + C(ind_SPC438) + C(ind_SPC441) + &
+    C(ind_SPC443) + C(ind_SPC445) + C(ind_SPC450) + C(ind_SPC455) + &
+    C(ind_SPC459) + C(ind_SPC464) + C(ind_SPC467) + C(ind_SPC473) + &
+    C(ind_SPC480) + C(ind_SPC484) + C(ind_SPC497) + C(ind_SPC499) + &
+    C(ind_SPC504) + C(ind_SPC506) + C(ind_SPC509) + C(ind_SPC534) + &
+    C(ind_SPC535) + C(ind_SPC536) + C(ind_SPC537) + C(ind_SPC538) + &
+    C(ind_SPC539) + C(ind_SPC553) + C(ind_SPC557) + C(ind_SPC561) + &
+    C(ind_SPC573) + C(ind_SPC581) + C(ind_SPC586) + C(ind_SPC592) + &
+    C(ind_SPC593) + C(ind_SPC638) + C(ind_SPC639) + C(ind_SPC640) + &
+    C(ind_SPC641) + C(ind_SPC642) + C(ind_SPC643) + C(ind_SPC644) + &
+    C(ind_SPC645) + C(ind_SPC646) + C(ind_SPC647) + C(ind_SPC648) + &
+    C(ind_SPC649) + C(ind_SPC650) + C(ind_SPC651) + C(ind_SPC652) + &
+    C(ind_SPC653) + C(ind_SPC654) + C(ind_SPC655) + C(ind_SPC656) + &
+    C(ind_SPC657) + C(ind_SPC658) + C(ind_SPC659) + C(ind_SPC660) + &
+    C(ind_SPC661) + C(ind_SPC662) + C(ind_SPC663) + C(ind_SPC664) + &
+    C(ind_SPC665) + C(ind_SPC666) + C(ind_SPC667) + C(ind_SPC668) + &
+    C(ind_SPC669) + C(ind_SPC670) + C(ind_SPC671) + C(ind_SPC672) + &
+    C(ind_SPC709) + C(ind_SPC712) + C(ind_SPC717) + C(ind_SPC723) + &
+    C(ind_SPC724) + C(ind_SPC730) + C(ind_SPC733) + C(ind_SPC741) + &
+    C(ind_SPC745) + C(ind_SPC752) + C(ind_SPC760) + C(ind_SPC761) + &
+    C(ind_SPC762) + C(ind_SPC763) + C(ind_SPC770) + C(ind_SPC774) + &
+    C(ind_SPC779) + C(ind_SPC783) + C(ind_SPC790) + C(ind_SPC795) + &
+    C(ind_SPC796) + C(ind_SPC801) + C(ind_SPC805) + C(ind_SPC814) + &
+    C(ind_SPC819) + C(ind_SPC829) + C(ind_SPC857) + C(ind_SPC858) + &
+    C(ind_SPC859) + C(ind_SPC860) + C(ind_SPC861) + C(ind_SPC862) + &
+    C(ind_SPC863) + C(ind_SPC864) + C(ind_SPC865) + C(ind_SPC866) + &
+    C(ind_SPC867) + C(ind_SPC868) + C(ind_SPC869) + C(ind_SPC870) + &
+    C(ind_SPC889) + C(ind_SPC895) + C(ind_SPC898) + C(ind_SPC905) + &
+    C(ind_SPC910) + C(ind_SPC915) + C(ind_SPC921) + C(ind_SPC927) + &
+    C(ind_SPC935) + C(ind_SPC938) + C(ind_SPC942) + C(ind_SPC943) + &
+    C(ind_SPC946) + C(ind_SPC953) + C(ind_SPC959) + C(ind_SPC960) + &
+    C(ind_SPC976) + C(ind_SPC977) + C(ind_SPC978) + C(ind_SPC979) + &
+    C(ind_SPC980) + C(ind_SPC981) + C(ind_SPC982) + C(ind_SPC993) + &
+    C(ind_SPC1002) + C(ind_SPC1003) + C(ind_SPC1009) + C(ind_SPC1015) + &
+    C(ind_SPC1020) + C(ind_SPC1026) + C(ind_SPC1031) + C(ind_SPC1035) + &
+    C(ind_SPC1042) + C(ind_SPC1043) + C(ind_SPC1044) + C(ind_SPC1055) + &
+    C(ind_SPC1056) + C(ind_SPC1057) + C(ind_SPC1068) + C(ind_SPC1075) + &
+    C(ind_SPC1078) + C(ind_SPC1080) + C(ind_SPC1085) + C(ind_SPC1090) + &
+    C(ind_SPC1093) + C(ind_SPC1096) + C(ind_SPC1101) + C(ind_SPC1102) + &
+    C(ind_SPC1106) + C(ind_SPC1109) + C(ind_SPC1113) + C(ind_SPC1118) + &
+    C(ind_SPC1124) + C(ind_SPC1130) + C(ind_SPC1136) + C(ind_SPC1143) + &
+    C(ind_SPC1144) + C(ind_SPC1145) + C(ind_SPC1146) + C(ind_SPC1147) + &
+    C(ind_SPC1148) + C(ind_SPC1158) + C(ind_SPC1159) + C(ind_SPC1160) + &
+    C(ind_SPC1167) + C(ind_SPC1168) + C(ind_SPC1174) + C(ind_SPC1179) + &
+    C(ind_SPC1184) + C(ind_SPC1188) + C(ind_SPC1221) + C(ind_SPC1224) + &
+    C(ind_SPC1229) + C(ind_SPC1234) + C(ind_SPC1239) + C(ind_SPC1244) + &
+    C(ind_SPC1249) + C(ind_SPC1254) + C(ind_SPC1271) + C(ind_SPC1277) + &
+    C(ind_SPC1285) + C(ind_SPC1286) + C(ind_SPC1287) + C(ind_SPC1295) + &
+    C(ind_SPC1299) + C(ind_SPC1303) + C(ind_SPC1312) + C(ind_SPC1318) + &
+    C(ind_SPC1323) + C(ind_SPC1328) + C(ind_SPC1332) + C(ind_SPC1335) + &
+    C(ind_SPC1338) + C(ind_SPC1342) + C(ind_SPC1346) + C(ind_SPC1350) + &
+    C(ind_SPC1355) + C(ind_SPC1356) + C(ind_SPC1368) + C(ind_SPC1374) + &
+    C(ind_SPC1378) + C(ind_SPC1383) + C(ind_SPC1387) + C(ind_SPC1389) + &
+    C(ind_SPC1390) + C(ind_SPC1392) + C(ind_SPC1394) + C(ind_SPC1396) + &
+    C(ind_SPC1397) + C(ind_SPC1399) + C(ind_SPC1402) + C(ind_SPC1406) + &
+    C(ind_SPC1409) + C(ind_SPC1411) + C(ind_SPC1417) + C(ind_SPC1421) + &
+    C(ind_SPC1422) + C(ind_SPC1427) + C(ind_SPC1433) + C(ind_SPC1438) + &
+    C(ind_SPC1441) + C(ind_SPC1443) + C(ind_SPC1447) + C(ind_SPC1450) + &
+    C(ind_SPC1454) + C(ind_SPC1459) + C(ind_SPC1464) + C(ind_SPC1469) + &
+    C(ind_SPC1473) + C(ind_SPC1478) + C(ind_SPC1482) + C(ind_SPC1486) + &
+    C(ind_SPC1492) + C(ind_SPC1497) + C(ind_SPC1502) + C(ind_SPC1507) + &
+    C(ind_SPC1511) + C(ind_SPC1523) + C(ind_SPC1528) + C(ind_SPC1532) + &
+    C(ind_SPC1541) + C(ind_SPC1547) + C(ind_SPC1550) + C(ind_SPC1555) + &
+    C(ind_SPC1560) + C(ind_SPC1561) + C(ind_SPC1577) + C(ind_SPC1580) + &
+    C(ind_SPC1585) + C(ind_SPC1590) + C(ind_SPC1595) + C(ind_SPC1600) + &
+    C(ind_SPC1604) + C(ind_SPC1607) + C(ind_SPC1620) + C(ind_SPC1626) + &
+    C(ind_SPC1629) + C(ind_SPC1644) + C(ind_SPC1647) + C(ind_SPC1654) + &
+    C(ind_SPC1658) + C(ind_SPC1665) + C(ind_SPC1670) + C(ind_SPC1675) + &
+    C(ind_SPC1707) + C(ind_SPC1708) + C(ind_SPC1709) + C(ind_SPC1710) + &
+    C(ind_SPC1711) + C(ind_SPC1712) + C(ind_SPC1713) + C(ind_SPC1714) + &
+    C(ind_SPC1729) + C(ind_SPC1736) + C(ind_SPC1741) + C(ind_SPC1747) + &
+    C(ind_SPC1751) + C(ind_SPC1758) + C(ind_SPC1763) + C(ind_SPC1768) + &
+    C(ind_SPC1772) + C(ind_SPC1780) + C(ind_SPC1788) + C(ind_SPC1789) + &
+    C(ind_SPC1796) + C(ind_SPC1802) + C(ind_SPC1809) + C(ind_SPC1815) + &
+    C(ind_SPC1819) + C(ind_SPC1842) + C(ind_SPC1851) + C(ind_SPC1859) + &
+    C(ind_SPC1863) + C(ind_SPC1864) + C(ind_SPC1873) + C(ind_SPC1877) + &
+    C(ind_SPC1882) + C(ind_SPC1887) + C(ind_SPC1893) + C(ind_SPC1896) + &
+    C(ind_SPC1902) + C(ind_SPC1905) + C(ind_SPC1909) + C(ind_SPC1926) + &
+    C(ind_SPC1927) + C(ind_SPC1928) + C(ind_SPC1929) + C(ind_SPC1930) + &
+    C(ind_SPC1949) + C(ind_SPC2044) + C(ind_SPC2045) + C(ind_SPC2047) + &
+    C(ind_SPC2048) + C(ind_SPC2049) + C(ind_SPC2050) + C(ind_SPC2051) + &
+    C(ind_SPC2052) + C(ind_SPC2053) + C(ind_SPC2054) + C(ind_SPC2055) + &
+    C(ind_SPC2056) + C(ind_SPC2057) + C(ind_SPC2058) + C(ind_SPC2059) + &
+    C(ind_SPC2060) + C(ind_SPC2061) + C(ind_SPC2062) + C(ind_SPC2063) + &
+    C(ind_SPC2064) + C(ind_SPC2066) + C(ind_SPC2067) + C(ind_SPC2068) + &
+    C(ind_SPC2069) + C(ind_SPC2070) + C(ind_SPC2071) + C(ind_SPC2072) + &
+    C(ind_SPC2073) + C(ind_SPC2074) + C(ind_SPC2075) + C(ind_SPC2076) + &
+    C(ind_SPC2077) + C(ind_SPC2079) + C(ind_SPC2080) + C(ind_SPC2081) + &
+    C(ind_SPC2082) + C(ind_SPC2083) + C(ind_SPC2084) + C(ind_SPC2085) + &
+    C(ind_SPC2086) + C(ind_SPC2088) + C(ind_SPC2089) + C(ind_SPC2090) + &
+    C(ind_SPC2091) + C(ind_SPC2092) + C(ind_SPC2093) + C(ind_SPC2094) + &
+    C(ind_SPC2095) + C(ind_SPC2096) + C(ind_SPC2097) + C(ind_SPC2098) + &
+    C(ind_SPC2099) + C(ind_SPC2100) + C(ind_SPC2101) + C(ind_SPC2102) + &
+    C(ind_SPC2104) + C(ind_SPC2105) + C(ind_SPC2106) + C(ind_SPC2107) + &
+    C(ind_SPC2108) + C(ind_SPC2109) + C(ind_SPC2110) + C(ind_SPC2111) + &
+    C(ind_SPC2112) + C(ind_SPC2113) + C(ind_SPC2115) + C(ind_SPC2116) + &
+    C(ind_SPC2117) + C(ind_SPC2118) + C(ind_SPC2119) + C(ind_SPC2120) + &
+    C(ind_SPC2209) + C(ind_SPC2216) + C(ind_SPC2222) + C(ind_SPC2231) + &
+    C(ind_SPC2232) + C(ind_SPC2238) + C(ind_SPC2249) + C(ind_SPC2250) + &
+    C(ind_SPC2257) + C(ind_SPC2262) + C(ind_SPC2265) + C(ind_SPC2269) + &
+    C(ind_SPC2273) + C(ind_SPC2294) + C(ind_SPC2295) + C(ind_SPC2296) + &
+    C(ind_SPC2297) + C(ind_SPC2298) + C(ind_SPC2299) + C(ind_SPC2300) + &
+    C(ind_SPC2314) + C(ind_SPC2318) + C(ind_SPC2321) + C(ind_SPC2323) + &
+    C(ind_SPC2328) + C(ind_SPC2332) + C(ind_SPC2336) + C(ind_SPC2354) + &
+    C(ind_SPC2355) + C(ind_SPC2356) + C(ind_SPC2357) + C(ind_SPC2358) + &
+    C(ind_SPC2359) + C(ind_SPC2367) + C(ind_SPC2369) + C(ind_SPC2370) + &
+    C(ind_SPC2375) + C(ind_SPC2379) + C(ind_SPC2389) + C(ind_SPC2392) + &
+    C(ind_SPC2395) + C(ind_SPC2398) + C(ind_SPC2401) + C(ind_SPC2407) + &
+    C(ind_SPC2408) + C(ind_SPC2409) + C(ind_SPC2430) + C(ind_SPC2438) + &
+    C(ind_SPC2449) + C(ind_SPC2457) + C(ind_SPC2458) + C(ind_SPC2466) + &
+    C(ind_SPC2470) + C(ind_SPC2478) + C(ind_SPC2483) + C(ind_SPC2491) + &
+    C(ind_SPC2494) + C(ind_SPC2510) + C(ind_SPC2511) + C(ind_SPC2512) + &
+    C(ind_SPC2513) + C(ind_SPC2539) + C(ind_SPC2540) + C(ind_SPC2541) + &
+    C(ind_SPC2542) + C(ind_SPC2543) + C(ind_SPC2544) + C(ind_SPC2545) + &
+    C(ind_SPC2546) + C(ind_SPC2547) + C(ind_SPC2548) + C(ind_SPC2549) + &
+    C(ind_SPC2550) + C(ind_SPC2551) + C(ind_SPC2567) + C(ind_SPC2573) + &
+    C(ind_SPC2579) + C(ind_SPC2583) + C(ind_SPC2593) + C(ind_SPC2599) + &
+    C(ind_SPC2600) + C(ind_SPC2601) + C(ind_SPC2608) + C(ind_SPC2613) + &
+    C(ind_SPC2618) + C(ind_SPC2632) + C(ind_SPC2646) + C(ind_SPC2647) + &
+    C(ind_SPC2648) + C(ind_SPC2649) + C(ind_SPC2650) + C(ind_SPC2651) + &
+    C(ind_SPC2652) + C(ind_SPC2666) + C(ind_SPC2673) + C(ind_SPC2679) + &
+    C(ind_SPC2686) + C(ind_SPC2688) + C(ind_SPC2698) + C(ind_SPC2703) + &
+    C(ind_SPC2711) + C(ind_SPC2716) + C(ind_SPC2721) + C(ind_SPC2726) + &
+    C(ind_SPC2733) + C(ind_SPC2737) + C(ind_SPC2741) + C(ind_SPC2746) + &
+    C(ind_SPC2751) + C(ind_SPC2756) + C(ind_SPC2761) + C(ind_SPC2771) + &
+    C(ind_SPC2780) + C(ind_SPC2781) + C(ind_SPC2788) + C(ind_SPC2794) + &
+    C(ind_SPC2798) + C(ind_SPC2805) + C(ind_SPC2818) + C(ind_SPC2819) + &
+    C(ind_SPC2820) + C(ind_SPC2821) + C(ind_SPC2822) + C(ind_SPC2832) + &
+    C(ind_SPC2837) + C(ind_SPC2843) + C(ind_SPC2851) + C(ind_SPC2856) + &
+    C(ind_SPC2862) + C(ind_SPC2871) + C(ind_SPC2896) + C(ind_SPC2897) + &
+    C(ind_SPC2898) + C(ind_SPC2899) + C(ind_SPC2901) + C(ind_SPC2902) + &
+    C(ind_SPC2903) + C(ind_SPC2904) + C(ind_SPC2905) + C(ind_SPC2906) + &
+    C(ind_SPC2907) + C(ind_SPC2908) + C(ind_SPC2909) + C(ind_SPC2911) + &
+    C(ind_SPC2912) + C(ind_SPC2913) + C(ind_SPC2940) + C(ind_SPC2945) + &
+    C(ind_SPC2951) + C(ind_SPC2956) + C(ind_SPC2961) + C(ind_SPC2967) + &
+    C(ind_SPC2975) + C(ind_SPC2976) + C(ind_SPC2984) + C(ind_SPC2989) + &
+    C(ind_SPC2990) + C(ind_SPC3003) + C(ind_SPC3008) + C(ind_SPC3011) + &
+    C(ind_SPC3018) + C(ind_SPC3021) + C(ind_SPC3024) + C(ind_SPC3025) + &
+    C(ind_SPC3029) + C(ind_SPC3033) + C(ind_SPC3036) + C(ind_SPC3040) + &
+    C(ind_SPC3043) + C(ind_SPC3046) + C(ind_SPC3050) + C(ind_SPC3051) + &
+    C(ind_SPC3055) + C(ind_SPC3068) + C(ind_SPC3074) + C(ind_SPC3078) + &
+    C(ind_SPC3086) + C(ind_SPC3098) + C(ind_SPC3099) + C(ind_SPC3100) + &
+    C(ind_SPC3101) + C(ind_SPC3102) + C(ind_SPC3112) + C(ind_SPC3116) + &
+    C(ind_SPC3121) + C(ind_SPC3128) + C(ind_SPC3133) + C(ind_SPC3138) + &
+    C(ind_SPC3146) + C(ind_SPC3150) + C(ind_SPC3154) + C(ind_SPC3155) + &
+    C(ind_SPC3161) + C(ind_SPC3165) + C(ind_SPC3171) + C(ind_SPC3181) + &
+    C(ind_SPC3188) + C(ind_SPC3189) + C(ind_SPC3195) + C(ind_SPC3199) + &
+    C(ind_SPC3205) + C(ind_SPC3219) + C(ind_SPC3222) + C(ind_SPC3228) + &
+    C(ind_SPC3251) + C(ind_SPC3252) + C(ind_SPC3253) + C(ind_SPC3254) + &
+    C(ind_SPC3255) + C(ind_SPC3256) + C(ind_SPC3257) + C(ind_SPC3258) + &
+    C(ind_SPC3260) + C(ind_SPC3261) + C(ind_SPC3262) + C(ind_SPC3263) + &
+    C(ind_SPC3280) + C(ind_SPC3281) + C(ind_SPC3285) + C(ind_SPC3289) + &
+    C(ind_SPC3295) + C(ind_SPC3299) + C(ind_SPC3300) + C(ind_SPC3308) + &
+    C(ind_SPC3313) + C(ind_SPC3322) + C(ind_SPC3329) + C(ind_SPC3333) + &
+    C(ind_SPC3338) + C(ind_SPC3342) + C(ind_SPC3348) + C(ind_SPC3355) + &
+    C(ind_SPC3360) + C(ind_SPC3368) + C(ind_SPC3369) + C(ind_SPC3370) + &
+    C(ind_SPC3371) + C(ind_SPC3372) + C(ind_SPC3384) + C(ind_SPC3389) + &
+    C(ind_SPC3395) + C(ind_SPC3400) + C(ind_SPC3404) + C(ind_SPC3408) + &
+    C(ind_SPC3412) + C(ind_SPC3417) + C(ind_SPC3418) + C(ind_SPC3424) + &
+    C(ind_SPC3429) + C(ind_SPC3436) + C(ind_SPC3441) + C(ind_SPC3445) + &
+    C(ind_SPC3449) + C(ind_SPC3453) + C(ind_SPC3460) + C(ind_SPC3461) + &
+    C(ind_SPC3462) + C(ind_SPC3471) + C(ind_SPC3475) + C(ind_SPC3477) + &
+    C(ind_SPC3482) + C(ind_SPC3483) + C(ind_SPC3491) + C(ind_SPC3498) + &
+    C(ind_SPC3505) + C(ind_SPC3510) + C(ind_SPC3523) + C(ind_SPC3524) + &
+    C(ind_SPC3525) + C(ind_SPC3534) + C(ind_SPC3540) + C(ind_SPC3544) + &
+    C(ind_SPC3551) + C(ind_SPC3560) + C(ind_SPC3565) + C(ind_SPC3570) + &
+    C(ind_SPC3577) + C(ind_SPC3578) + C(ind_SPC3579) + C(ind_SPC3588) + &
+    C(ind_SPC3593) + C(ind_SPC3598) + C(ind_SPC3602) + C(ind_SPC3607) + &
+    C(ind_SPC3617) + C(ind_SPC3623) + C(ind_SPC3626) + C(ind_SPC3634) + &
+    C(ind_SPC3636) + C(ind_SPC3640) + C(ind_SPC3648) + C(ind_SPC3652) + &
+    C(ind_SPC3659) + C(ind_SPC3661) + C(ind_SPC3666) + C(ind_SPC3669) + &
+    C(ind_SPC3672) + C(ind_SPC3680) + C(ind_SPC3683) + C(ind_SPC3689) + &
+    C(ind_SPC3693) + C(ind_SPC3696) + C(ind_SPC3701) + C(ind_SPC3705) + &
+    C(ind_SPC3712) + C(ind_SPC3717) + C(ind_SPC3721) + C(ind_SPC3725) + &
+    C(ind_SPC3732) + C(ind_SPC3738) + C(ind_SPC3743) + C(ind_SPC3756) + &
+    C(ind_SPC3757) + C(ind_SPC3758) + C(ind_SPC3759) + C(ind_SPC3760) + &
+    C(ind_SPC3770) + C(ind_SPC3779) + C(ind_SPC3783) + C(ind_SPC3788) + &
+    C(ind_SPC3795) + C(ind_SPC3800) + C(ind_SPC3802) + C(ind_SPC3810) + &
+    C(ind_SPC3822) + C(ind_SPC3823) + C(ind_SPC3829) + C(ind_SPC3830) + &
+    C(ind_SPC3836) + C(ind_SPC3843) + C(ind_SPC3844) + C(ind_SPC3854) + &
+    C(ind_SPC3855) + C(ind_SPC3860) + C(ind_SPC3861) + C(ind_SPC3869) + &
+    C(ind_SPC3870) + C(ind_SPC3875) + C(ind_SPC3876) + C(ind_SPC3881) + &
+    C(ind_SPC3887) + C(ind_SPC3893) + C(ind_SPC3894) + C(ind_SPC3899) + &
+    C(ind_SPC3904) + C(ind_SPC3911) + C(ind_SPC3915) + C(ind_SPC3919) + &
+    C(ind_SPC3926) + C(ind_SPC3957) + C(ind_SPC3960) + C(ind_SPC3966) + &
+    C(ind_SPC3977) + C(ind_SPC3978) + C(ind_SPC3982) + C(ind_SPC3986) + &
+    C(ind_SPC4011) + C(ind_SPC4017) + C(ind_SPC4022) + C(ind_SPC4023) + &
+    C(ind_SPC4028) + C(ind_SPC4035) + C(ind_SPC4040) + C(ind_SPC4044) + &
+    C(ind_SPC4048) + C(ind_SPC4137) + C(ind_SPC4138) + C(ind_SPC4139) + &
+    C(ind_SPC4140) + C(ind_SPC4141) + C(ind_SPC4158) + C(ind_SPC4159) + &
+    C(ind_SPC4160) + C(ind_SPC4161) + C(ind_SPC4162) + C(ind_SPC4163) + &
+    C(ind_SPC4164) + C(ind_SPC4165) + C(ind_SPC4174) + C(ind_SPC4175) + &
+    C(ind_SPC4176) + C(ind_SPC4177) + C(ind_SPC4178) + C(ind_SPC4189) + &
+    C(ind_SPC4205) + C(ind_SPC4206) + C(ind_SPC4211) + C(ind_SPC4219) + &
+    C(ind_SPC4226) + C(ind_SPC4229) + C(ind_SPC4233) + C(ind_SPC4239) + &
+    C(ind_SPC4240) + C(ind_SPC4242) + C(ind_SPC4244) + C(ind_SPC4247) + &
+    C(ind_SPC4250) + C(ind_SPC4251) + C(ind_SPC4252) + C(ind_SPC4254) + &
+    C(ind_SPC4258) + C(ind_SPC4260) + C(ind_SPC4262) + C(ind_SPC4269) + &
+    C(ind_SPC4271) + C(ind_SPC4276) + C(ind_SPC4277) + C(ind_SPC4278) + &
+    C(ind_SPC4279) + C(ind_SPC4280) + C(ind_SPC4282) + C(ind_SPC4284) + &
+    C(ind_SPC4287) + C(ind_SPC4291) + C(ind_SPC4296) + C(ind_SPC4300) + &
+    C(ind_SPC4302) + C(ind_SPC4303) + C(ind_SPC4308) + C(ind_SPC4310) + &
+    C(ind_SPC4312) + C(ind_SPC4314) + C(ind_SPC4315) + C(ind_SPC4316) + &
+    C(ind_SPC4320) + C(ind_SPC4322) + C(ind_SPC4324) + C(ind_SPC4328) + &
+    C(ind_SPC4331) + C(ind_SPC4333) + C(ind_SPC4335) + C(ind_SPC4336) + &
+    C(ind_SPC4338) + C(ind_SPC4340) + C(ind_SPC4342) + C(ind_SPC4343) + &
+    C(ind_SPC4349) + C(ind_SPC4360) + C(ind_SPC4361) + C(ind_SPC4362) + &
+    C(ind_SPC4372) + C(ind_SPC4375) + C(ind_SPC4389) + C(ind_SPC4391) + &
+    C(ind_SPC4393) + C(ind_SPC4395) + C(ind_SPC4399) + C(ind_SPC4406) + &
+    C(ind_SPC4408) + C(ind_SPC4410) + C(ind_SPC4420) + C(ind_SPC4424) + &
+    C(ind_SPC4430) + C(ind_SPC4432) + C(ind_SPC4437) + C(ind_SPC4438) + &
+    C(ind_SPC4439) + C(ind_SPC4443) + C(ind_SPC4446) + C(ind_SPC4448) + &
+    C(ind_SPC4450) + C(ind_SPC4455) + C(ind_SPC4458) + C(ind_SPC4461) + &
+    C(ind_SPC4463) + C(ind_SPC4464) + C(ind_SPC4467) + C(ind_SPC4468) + &
+    C(ind_SPC4501) + C(ind_SPC4502) + C(ind_SPC4503) + C(ind_SPC4504) + &
+    C(ind_SPC4505) + C(ind_SPC4550) + C(ind_SPC4554) + C(ind_SPC4562) + &
+    C(ind_SPC4563) + C(ind_SPC4568) + C(ind_SPC4572) + C(ind_SPC4578) + &
+    C(ind_SPC4661) + C(ind_SPC4663) + C(ind_SPC4666) + C(ind_SPC4673) + &
+    C(ind_SPC4678) + C(ind_SPC4680) + C(ind_SPC4683) + C(ind_SPC4690) + &
+    C(ind_SPC4706) + C(ind_SPC4711) + C(ind_SPC4727) + C(ind_SPC4728) + &
+    C(ind_SPC4729) + C(ind_SPC4730) + C(ind_SPC4753) + C(ind_SPC4754) + &
+    C(ind_SPC4755) + C(ind_SPC4756) + C(ind_SPC4757) + C(ind_SPC4758) + &
+    C(ind_SPC4782) + C(ind_SPC4788) + C(ind_SPC4792) + C(ind_SPC4799) + &
+    C(ind_SPC4804) + C(ind_SPC4806) + C(ind_SPC4812) + C(ind_SPC4822) + &
+    C(ind_SPC4826) + C(ind_SPC4832) + C(ind_SPC4833) + C(ind_SPC4837) + &
+    C(ind_SPC4852) + C(ind_SPC4862) + C(ind_SPC4868) + C(ind_SPC4874) + &
+    C(ind_SPC4882) + C(ind_SPC4892) + C(ind_SPC4896) + C(ind_SPC4897) + &
+    C(ind_SPC4903) + C(ind_SPC4908) + C(ind_SPC4917) + C(ind_SPC4926) + &
+    C(ind_SPC4932) + C(ind_SPC4936) + C(ind_SPC4948) + C(ind_SPC4950) + &
+    C(ind_SPC4951) + C(ind_SPC4953) + C(ind_SPC4954) + C(ind_SPC4955) + &
+    C(ind_SPC4956) + C(ind_SPC4972) + C(ind_SPC4973) + C(ind_SPC4979) + &
+    C(ind_SPC4986) + C(ind_SPC4990) + C(ind_SPC4995) + C(ind_SPC5000) + &
+    C(ind_SPC5020) + C(ind_SPC5021) + C(ind_SPC5027) + C(ind_SPC5035) + &
+    C(ind_SPC5043) + C(ind_SPC5048) + C(ind_SPC5059) + C(ind_SPC5060) + &
+    C(ind_SPC5063) + C(ind_SPC5068) + C(ind_SPC5072) + C(ind_SPC5077) + &
+    C(ind_SPC5084) + C(ind_SPC5088) + C(ind_SPC5093) + C(ind_SPC5101) + &
+    C(ind_SPC5107) + C(ind_SPC5108) + C(ind_SPC5109) + C(ind_SPC5110) + &
+    C(ind_SPC5120) + C(ind_SPC5125) + C(ind_SPC5126) + C(ind_SPC5134) + &
+    C(ind_SPC5140) + C(ind_SPC5148) + C(ind_SPC5152) + C(ind_SPC5411) + &
+    C(ind_SPC5412) + C(ind_SPC5414) + C(ind_SPC5415) + C(ind_SPC5416) + &
+    C(ind_SPC5417) + C(ind_SPC5418) + C(ind_SPC5421) + C(ind_SPC5422) + &
+    C(ind_SPC5423) + C(ind_SPC5424) + C(ind_SPC5425) + C(ind_SPC5426) + &
+    C(ind_SPC5427) + C(ind_SPC5428) + C(ind_SPC5429) + C(ind_SPC5430) + &
+    C(ind_SPC5431) + C(ind_SPC5432) + C(ind_SPC5433) + C(ind_SPC5434) + &
+    C(ind_SPC5435) + C(ind_SPC5436) + C(ind_SPC5437) + C(ind_SPC5438) + &
+    C(ind_SPC5439) + C(ind_SPC5440) + C(ind_SPC5441) + C(ind_SPC5442) + &
+    C(ind_SPC5443) + C(ind_SPC5444) + C(ind_SPC5445) + C(ind_SPC5446) + &
+    C(ind_SPC5447) + C(ind_SPC5448) + C(ind_SPC5449) + C(ind_SPC5450) + &
+    C(ind_SPC5451) + C(ind_SPC5452) + C(ind_SPC5453) + C(ind_SPC5454) + &
+    C(ind_SPC5455) + C(ind_SPC5456) + C(ind_SPC5457) + C(ind_SPC5458) + &
+    C(ind_SPC5459) + C(ind_SPC5460) + C(ind_SPC5461) + C(ind_SPC5462) + &
+    C(ind_SPC5463) + C(ind_SPC5464) + C(ind_SPC5465) + C(ind_SPC5466) + &
+    C(ind_SPC5467) + C(ind_SPC5468) + C(ind_SPC5469) + C(ind_SPC5470) + &
+    C(ind_SPC5471) + C(ind_SPC5472) + C(ind_SPC5473) + C(ind_SPC5474) + &
+    C(ind_SPC5475) + C(ind_SPC5476) + C(ind_SPC5477) + C(ind_SPC5478) + &
+    C(ind_SPC5479) + C(ind_SPC5480) + C(ind_SPC5481) + C(ind_SPC5482) + &
+    C(ind_SPC5483) + C(ind_SPC5484) + C(ind_SPC5485) + C(ind_SPC5486) + &
+    C(ind_SPC5487) + C(ind_SPC5488) + C(ind_SPC5489) + C(ind_SPC5490) + &
+    C(ind_SPC5491) + C(ind_SPC5492) + C(ind_SPC5493) + C(ind_SPC5506) + &
+    C(ind_SPC5507) + C(ind_SPC5508) + C(ind_SPC5517) + C(ind_SPC5518) + &
+    C(ind_SPC5526) + C(ind_SPC5531) + C(ind_SPC5538) + C(ind_SPC5544) + &
+    C(ind_SPC5545) + C(ind_SPC5549) + C(ind_SPC5567) + C(ind_SPC5572) + &
+    C(ind_SPC5578) + C(ind_SPC5579) + C(ind_SPC5580) + C(ind_SPC5586) + &
+    C(ind_SPC5595) + C(ind_SPC5601) + C(ind_SPC5604) + C(ind_SPC5616) + &
+    C(ind_SPC5617) + C(ind_SPC5618) + C(ind_SPC5619) + C(ind_SPC5632) + &
+    C(ind_SPC5633) + C(ind_SPC5634) + C(ind_SPC5635) + C(ind_SPC5643) + &
+    C(ind_SPC5644) + C(ind_SPC5655) + C(ind_SPC5656) + C(ind_SPC5657) + &
+    C(ind_SPC5658) + C(ind_SPC5668) + C(ind_SPC5672) + C(ind_SPC5678) + &
+    C(ind_SPC5682) + C(ind_SPC5687) + C(ind_SPC5694) + C(ind_SPC5695) + &
+    C(ind_SPC5706) + C(ind_SPC5712) + C(ind_SPC5717) + C(ind_SPC5419) + &
+    C(ind_SPC5420)
+#ENDINLINE
+
+
 #INLINE F90_INIT
-  TSTART = (0*3600)
-  TEND = TSTART + (24*3600)
-  DT = 0.25*3600  
-  TEMP = 280
-
+  TSTART =   0.00000000D+00
+  TEND   =   0.84600000D+05
+  DT     =   0.60000000D+03
+  TEMP   =   0.28000000D+03
   IF ( TRIM(SPC_NAMES(i)) == 'SPC15' )   VAR(i) = (4.340E+13_dp)*CFACTOR      ! C
   IF ( TRIM(SPC_NAMES(i)) == 'SPC16' )   VAR(i) = (7.470E+09_dp)*CFACTOR      ! C#C
   IF ( TRIM(SPC_NAMES(i)) == 'SPC171' )   VAR(i) = (1.110E+08_dp)*CFACTOR      ! C1CCC(=O)CC1
@@ -134,561 +706,4 @@ CFACTOR = 1.0    ;              {Conversion Factor}
   IF ( TRIM(SPC_NAMES(i)) == 'SPC5701' )   VAR(i) = (2.410E+08_dp)*CFACTOR      ! c1ccccc1C=O
   IF ( TRIM(SPC_NAMES(i)) == 'SPC5702' )   VAR(i) = (2.330E+07_dp)*CFACTOR      ! c1ccccc1CC
   IF ( TRIM(SPC_NAMES(i)) == 'SPC5708' )   VAR(i) = (6.740E+06_dp)*CFACTOR      ! c1ccccc1CCC
-#ENDINLINE         
-
-
-#INLINE F90_RATES
-   REAL(kind=dp) FUNCTION k_SPEC3(K1,K2,K3,K4,K5,K6,temp,M)
-     REAL(kind=dp) :: k
-     ! special rate function for S(IV) + H2O2
-     REAL(dp), INTENT(IN) :: K1,K2,K3,K4,K5,K6,temp,M
-     REAL(dp) :: k1s,k2s,k3s
-    
-     k1s = K1*EXP(K2/temp)
-     k2s = K3*EXP(K4/temp)
-     k3s = K5*EXP(K6/temp)*M
-     k_SPEC3 = k1s+k3s/(1.0d0+k3s/k2s)
-   END FUNCTION k_SPEC3
-
-   REAL(kind=dp) FUNCTION k_SPEC2MCM(K1,K2,K3,temp)
-     ! special rate function for S(IV) + H2O2
-     REAL(dp), INTENT(IN) :: K1,K2,K3,temp
-    
-     k_SPEC2MCM = K1 * (TEMP/300.0d0)**K2 * EXP(K3/temp)
-   END FUNCTION k_SPEC2MCM
-
-   REAL(kind=dp) FUNCTION k_SPEC3MCM(K1,K2,temp,M)
-     ! special rate function for S(IV) + H2O2
-     REAL(dp), INTENT(IN) :: K1,K2,temp,M
-    
-     k_SPEC3MCM = K1 * (1.0d0 + M/K2)
-   END FUNCTION k_SPEC3MCM
-
-   REAL(kind=dp) FUNCTION k_SPEC4MCM(K1,K2,K3,K4,H2O,temp)
-     ! special rate function for S(IV) + H2O2
-     REAL(dp), INTENT(IN) :: K1,K2,K3,K4,H2O,temp
-    
-     k_SPEC4MCM = K1*(1.0d0+K2*EXP(K3/temp)*H2O)*EXP(K4/temp)
-   END FUNCTION k_SPEC4MCM
-
-   REAL(kind=dp) FUNCTION k_SPEC5MCM(K1,K2,K3,K4,temp,M)
-     ! special rate function for S(IV) + H2O2
-     REAL(dp), INTENT(IN) :: K1,K2,K3,K4,temp,M
-     REAL(dp) :: k1s,k2s
-    
-     k1s = K1*M*0.21d0*EXP(K2/temp)
-     k2s = K3*M*0.21d0*EXP(K4/temp)
-     k_SPEC5MCM = k1s*(1.0d0-k2s)
-   END FUNCTION k_SPEC5MCM
-
-   REAL(kind=dp) FUNCTION k_SPEC6MCM(K1,K2,K3,K4,temp)
-     ! special rate function for S(IV) + H2O2
-     REAL(dp), INTENT(IN) :: K1,K2,K3,K4,temp
-     REAL(dp) :: k1s,k2s
-    
-     k1s = K1*EXP(K2/temp)
-     k2s = K3*EXP(K4/temp)
-     k_SPEC6MCM = k1s*(1.0d0-k2s)
-   END FUNCTION k_SPEC6MCM
-
-   REAL(kind=dp) FUNCTION k_SPEC7MCM(K1,K2,K3,K4,K5,K6,temp)
-     ! special rate function for S(IV) + H2O2
-     REAL(dp), INTENT(IN) :: K1,K2,K3,K4,K5,K6,temp
-     REAL(dp) :: k1s,k2s
-    
-     k1s = K1*EXP(K2/temp)
-     k2s = K3*EXP(K4/temp)
-     k_SPEC7MCM = k1s*(K5-K6/(1.0d0+k2s))
-   END FUNCTION k_SPEC7MCM
-
-   REAL(kind=dp) FUNCTION k_TROEMCM(K1,K2,K3,K4,K5,K6,K7,K8,K9,K10,temp,M)
-     ! special rate function for S(IV) + H2O2
-     REAL(dp), INTENT(IN) :: K1,K2,K3,K4,K5,K6,K7,K8,K9,K10,temp,M
-     REAL(dp) :: k1s,k2s,k3s,Fc
-    
-     k1s = K1 * (temp*1.0d0/298.15D0)**K2 * EXP(K3/temp) * M
-     k2s = K4 * (temp*1.0d0/298.15D0)**K5 * EXP(K6/temp) 
-     Fc = K7 * EXP(K8/temp) + K9 * EXP(temp/K10)
-     k3s = LOG10(k1s/k2s)/(0.75d0-1.27d0*LOG10(Fc))
-     k_TROEMCM = k1s/(1.0d0+k1s/k2s) * Fc**(1.0d0/(1.0d0+k3s*k3s))
-  END FUNCTION k_TROEMCM
-
-  REAL(kind=dp) FUNCTION k_PHOTOMCM(K1,K2,K3,chi)
-    REAL(dp), INTENT(IN) :: K1,K2,K3,chi
-    REAL(dp) :: ChiZmcm, yChiZmcm
-    REAL(dp), PARAMETER :: dust=1.0
-    REAL(dp), PARAMETER :: PiHalf = 2.0_dp*ATAN(1.0_dp)
-
-    IF ( chi < PiHalf ) THEN
-      ChiZmcm  = EXP(-1.0d0*K3/COS(chi))
-      yChiZmcm = chi ** K2
-      k_PHOTOMCM = Dust*K1*yChiZmcm*ChiZmcm
-    END IF
-
-  END FUNCTION k_PHOTOMCM
-
-  REAL(kind=dp) FUNCTION Zenith(Time)
-    !-----------------------------------------------------------------------!
-    ! Input:
-    !   - Time
-    REAL(dp) :: Time
-    !-----------------------------------------------------------------------!
-    ! Output:
-    !   - sun angle Zenith
-    !-----------------------------------------------------------------------!
-    ! Temporary variables:
-    !INTEGER :: IDAT
-    REAL(dp) :: LBGMT, LZGMT
-    REAL(dp) :: ML
-    ! 
-    REAL(dp) :: GMT
-    REAL(dp) :: RLT, RPHI
-    !    
-    INTEGER  :: IIYEAR, IYEAR, IMTH, IDAY, IIY, NYEARS, LEAP, NOLEAP
-    REAL(dp) :: YREF,YR
-    !   
-    INTEGER  :: I, IJ, JD, IJD, IN
-    REAL(dp) :: D, RML, W, WR, EC, EPSI, PEPSI, YT, CW, SW, SSW  & 
-    &         , EYT, FEQT1, FEQT2, FEQT3, FEQT4, FEQT5, FEQT6 &
-    &         , FEQT7, FEQT, EQT
-    !         
-    REAL(dp) :: REQT, RA, RRA, TAB, RDECL, DECL, ZPT, CSZ, ZR    &
-    &         , CAZ, RAZ, AZIMUTH
-
-    REAL(dp), PARAMETER :: Pi   = 4.0_dp*ATAN(1.0_dp)
-    REAL(dp), PARAMETER :: rlat = 45.0_dp
-    REAL(dp), PARAMETER :: rlon = 0.0_dp
-    INTEGER,  PARAMETER :: idate= 010621
-    REAL(dp), PARAMETER :: DR   = Pi / 180.d0
-    !           
-    INTEGER :: IMN(12)
-    DATA IMN/31,28,31,30,31,30,31,31,30,31,30,31/
-    !
-    !----------------------------------------------------------------------!
-    !
-    ! set GMT
-    GMT = Time / 3600.0_dp
-    !
-    !  convert to radians
-    RLT = rlat*DR
-    RPHI = rlon*DR
-    !
-    !  parse date
-    IIYEAR = iDate/10000
-    IYEAR = 19*100 + IIYEAR
-    IF (IIYEAR <= 50) IYEAR = IYEAR + 100 
-    IMTH = (iDate - IIYEAR*10000)/100
-    IDAY = iDate - IIYEAR*10000 - IMTH*100
-    !
-    !  identify and correct leap years
-    IIY = (IIYEAR/4)*4
-    IF(IIY.EQ.IIYEAR) IMN(2) = 29
-    !
-    !  count days from Dec.31,1973 to Jan 1, YEAR, then add to 2,442,047.5
-    YREF =  2442047.5_dp
-    NYEARS = IYEAR - 1974
-    LEAP = (NYEARS+1)/4
-    IF(NYEARS.LE.-1) LEAP = (NYEARS-2)/4
-    NOLEAP = NYEARS - LEAP
-    YR = YREF + 365.0_dp*NOLEAP + 366.0_dp*LEAP
-    !
-    IJD = 0
-    IN = IMTH - 1
-    IF(IN.EQ.0) GO TO 40
-    DO 30 I=1,IN
-    IJD = IJD + IMN(I)
-    30   CONTINUE
-    IJD = IJD + IDAY
-    GO TO 50
-    40   IJD = IDAY
-    50   IJ = IYEAR - 1973
-    !
-    !      print julian days current "ijd"
-    JD = IJD + (YR - YREF)
-    D = JD + GMT/24.0_dp
-    !
-    !      calc geom mean longitude
-    ML = 279.2801988_dp + .9856473354_dp*D + 2.267e-13_dp*D*D
-    RML = ML*DR
-    !
-    !      calc equation of time in sec
-    !      w = mean long of perigee
-    !      e = eccentricity
-    !      epsi = mean obliquity of ecliptic
-    W = 282.4932328_dp + 4.70684e-5_dp*D + 3.39e-13_dp*D*D
-    WR = W*DR
-    EC = 1.6720041e-2_dp - 1.1444e-9_dp*D - 9.4e-17_dp*D*D
-    EPSI = 23.44266511_dp - 3.5626e-7_dp*D - 1.23e-15_dp*D*D
-    PEPSI = EPSI*DR
-    YT = (TAN(PEPSI/2.0_dp))**2
-    CW = COS(WR)
-    SW = SIN(WR)
-    SSW = SIN(2.0_dp*WR)
-    EYT = 2.0_dp*EC*YT
-    FEQT1 = SIN(RML)*(-EYT*CW - 2.0_dp*EC*CW)
-    FEQT2 = COS(RML)*(2.0_dp*EC*SW - EYT*SW)
-    FEQT3 = SIN(2.0_dp*RML)*(YT - (5.0_dp*EC*EC/4.0_dp)*(CW*CW-SW*SW))
-    FEQT4 = COS(2.0_dp*RML)*(5.0_dp*EC**2*SSW/4.0_dp)
-    FEQT5 = SIN(3.0_dp*RML)*(EYT*CW)
-    FEQT6 = COS(3.0_dp*RML)*(-EYT*SW)
-    FEQT7 = -SIN(4.0_dp*RML)*(YT*YT/2.0_dp)
-    FEQT = FEQT1 + FEQT2 + FEQT3 + FEQT4 + FEQT5 + FEQT6 + FEQT7
-    EQT = FEQT*13751.0_dp
-    !
-    !   convert eq of time from sec to deg
-    REQT = EQT/240.0_dp
-    !
-    !   calc right ascension in rads
-    RA = ML - REQT
-    RRA = RA*DR
-    !
-    !   calc declination in rads, deg
-    TAB = 0.43360_dp*SIN(RRA)
-    RDECL = ATAN(TAB)
-    DECL = RDECL/DR
-    !
-    !   calc local 3600.0_dp angle
-    LBGMT = 12.0_dp - EQT/3600.0_dp + rlon*24.0_dp/360.0_dp
-    LZGMT = 15.0_dp*(GMT - LBGMT)
-    ZPT = LZGMT*DR
-    CSZ = SIN(RLT)*SIN(RDECL) + COS(RLT)*COS(RDECL)*COS(ZPT)
-    ZR = ACOS(CSZ)
-    ! 
-    !   calc local solar azimuth
-    CAZ = (SIN(RDECL) - SIN(RLT)*COS(ZR))/(COS(RLT)*SIN(ZR))
-    RAZ = ACOS(CAZ)
-    AZIMUTH = RAZ/DR
-    !
-    !--- set Zenith Angle
-    Zenith =  1.745329252e-02_dp * ZR/DR
-  END FUNCTION Zenith
 #ENDINLINE
-
-
-{ Peroxy radicals. }
-{ WARNING: The following species do not have SMILES strings in the database. 
-          If any of these are peroxy radicals the RO2 sum will be wrong. 
-    }
-#INLINE F90_RCONST 
-
-  REAL(dp) :: M, N2, O2, RO2, H2O
-  ! variables
-  REAL(dp)            ::  chi
- 
-  REAL(dp), PARAMETER :: PiHalf = 2.0_dp*ATAN(1.0_dp)
-  REAL(dp), PARAMETER :: RefTemp = 298.15D0
-  REAL(dp), PARAMETER :: Pres = 850.d0 ! hPa
-  REAL(dp), PARAMETER :: p0   = 1013.25d0 ! hPa Normaldruck
-   
-  N2 = 1.960D19
-  O2 = 5.100D18
-  M  = (N2 + O2)/TEMP * Pres/p0
-  H2O = 5.100D17
-
-
-  ! --- Update photo reactions "J(.)" ---
-  chi = Zenith(TIME)
-
-  ! start of executable statements
-  RO2 = &
-    C(ind_SPC5) + C(ind_SPC7) + C(ind_SPC13) + C(ind_SPC25) + & 
-    C(ind_SPC27) + C(ind_SPC40) + C(ind_SPC41) + C(ind_SPC46) + & 
-    C(ind_SPC49) + C(ind_SPC50) + C(ind_SPC51) + C(ind_SPC55) + & 
-    C(ind_SPC59) + C(ind_SPC66) + C(ind_SPC67) + C(ind_SPC68) + & 
-    C(ind_SPC69) + C(ind_SPC81) + C(ind_SPC85) + C(ind_SPC89) + & 
-    C(ind_SPC90) + C(ind_SPC95) + C(ind_SPC99) + C(ind_SPC103) + & 
-    C(ind_SPC112) + C(ind_SPC113) + C(ind_SPC114) + C(ind_SPC121) + & 
-    C(ind_SPC126) + C(ind_SPC129) + C(ind_SPC136) + C(ind_SPC144) + & 
-    C(ind_SPC145) + C(ind_SPC155) + C(ind_SPC156) + C(ind_SPC163) + & 
-    C(ind_SPC167) + C(ind_SPC168) + C(ind_SPC175) + C(ind_SPC179) + & 
-    C(ind_SPC183) + C(ind_SPC187) + C(ind_SPC191) + C(ind_SPC192) + & 
-    C(ind_SPC193) + C(ind_SPC194) + C(ind_SPC196) + C(ind_SPC198) + & 
-    C(ind_SPC200) + C(ind_SPC201) + C(ind_SPC202) + C(ind_SPC204) + & 
-    C(ind_SPC206) + C(ind_SPC208) + C(ind_SPC210) + C(ind_SPC212) + & 
-    C(ind_SPC214) + C(ind_SPC220) + C(ind_SPC222) + C(ind_SPC224) + & 
-    C(ind_SPC225) + C(ind_SPC235) + C(ind_SPC239) + C(ind_SPC246) + & 
-    C(ind_SPC252) + C(ind_SPC255) + C(ind_SPC258) + C(ind_SPC268) + & 
-    C(ind_SPC269) + C(ind_SPC270) + C(ind_SPC271) + C(ind_SPC278) + & 
-    C(ind_SPC284) + C(ind_SPC289) + C(ind_SPC293) + C(ind_SPC296) + & 
-    C(ind_SPC301) + C(ind_SPC307) + C(ind_SPC318) + C(ind_SPC319) + & 
-    C(ind_SPC320) + C(ind_SPC321) + C(ind_SPC333) + C(ind_SPC340) + & 
-    C(ind_SPC342) + C(ind_SPC347) + C(ind_SPC351) + C(ind_SPC356) + & 
-    C(ind_SPC357) + C(ind_SPC358) + C(ind_SPC359) + C(ind_SPC360) + & 
-    C(ind_SPC370) + C(ind_SPC373) + C(ind_SPC376) + C(ind_SPC382) + & 
-    C(ind_SPC383) + C(ind_SPC389) + C(ind_SPC394) + C(ind_SPC398) + & 
-    C(ind_SPC403) + C(ind_SPC412) + C(ind_SPC416) + C(ind_SPC421) + & 
-    C(ind_SPC427) + C(ind_SPC432) + C(ind_SPC438) + C(ind_SPC441) + & 
-    C(ind_SPC443) + C(ind_SPC445) + C(ind_SPC450) + C(ind_SPC455) + & 
-    C(ind_SPC459) + C(ind_SPC464) + C(ind_SPC467) + C(ind_SPC473) + & 
-    C(ind_SPC480) + C(ind_SPC484) + C(ind_SPC497) + C(ind_SPC499) + & 
-    C(ind_SPC504) + C(ind_SPC506) + C(ind_SPC509) + C(ind_SPC534) + & 
-    C(ind_SPC535) + C(ind_SPC536) + C(ind_SPC537) + C(ind_SPC538) + & 
-    C(ind_SPC539) + C(ind_SPC553) + C(ind_SPC557) + C(ind_SPC561) + & 
-    C(ind_SPC573) + C(ind_SPC581) + C(ind_SPC586) + C(ind_SPC592) + & 
-    C(ind_SPC593) + C(ind_SPC638) + C(ind_SPC639) + C(ind_SPC640) + & 
-    C(ind_SPC641) + C(ind_SPC642) + C(ind_SPC643) + C(ind_SPC644) + & 
-    C(ind_SPC645) + C(ind_SPC646) + C(ind_SPC647) + C(ind_SPC648) + & 
-    C(ind_SPC649) + C(ind_SPC650) + C(ind_SPC651) + C(ind_SPC652) + & 
-    C(ind_SPC653) + C(ind_SPC654) + C(ind_SPC655) + C(ind_SPC656) + & 
-    C(ind_SPC657) + C(ind_SPC658) + C(ind_SPC659) + C(ind_SPC660) + & 
-    C(ind_SPC661) + C(ind_SPC662) + C(ind_SPC663) + C(ind_SPC664) + & 
-    C(ind_SPC665) + C(ind_SPC666) + C(ind_SPC667) + C(ind_SPC668) + & 
-    C(ind_SPC669) + C(ind_SPC670) + C(ind_SPC671) + C(ind_SPC672) + & 
-    C(ind_SPC709) + C(ind_SPC712) + C(ind_SPC717) + C(ind_SPC723) + & 
-    C(ind_SPC724) + C(ind_SPC730) + C(ind_SPC733) + C(ind_SPC741) + & 
-    C(ind_SPC745) + C(ind_SPC752) + C(ind_SPC760) + C(ind_SPC761) + & 
-    C(ind_SPC762) + C(ind_SPC763) + C(ind_SPC770) + C(ind_SPC774) + & 
-    C(ind_SPC779) + C(ind_SPC783) + C(ind_SPC790) + C(ind_SPC795) + & 
-    C(ind_SPC796) + C(ind_SPC801) + C(ind_SPC805) + C(ind_SPC814) + & 
-    C(ind_SPC819) + C(ind_SPC829) + C(ind_SPC857) + C(ind_SPC858) + & 
-    C(ind_SPC859) + C(ind_SPC860) + C(ind_SPC861) + C(ind_SPC862) + & 
-    C(ind_SPC863) + C(ind_SPC864) + C(ind_SPC865) + C(ind_SPC866) + & 
-    C(ind_SPC867) + C(ind_SPC868) + C(ind_SPC869) + C(ind_SPC870) + & 
-    C(ind_SPC889) + C(ind_SPC895) + C(ind_SPC898) + C(ind_SPC905) + & 
-    C(ind_SPC910) + C(ind_SPC915) + C(ind_SPC921) + C(ind_SPC927) + & 
-    C(ind_SPC935) + C(ind_SPC938) + C(ind_SPC942) + C(ind_SPC943) + & 
-    C(ind_SPC946) + C(ind_SPC953) + C(ind_SPC959) + C(ind_SPC960) + & 
-    C(ind_SPC976) + C(ind_SPC977) + C(ind_SPC978) + C(ind_SPC979) + & 
-    C(ind_SPC980) + C(ind_SPC981) + C(ind_SPC982) + C(ind_SPC993) + & 
-    C(ind_SPC1002) + C(ind_SPC1003) + C(ind_SPC1009) + C(ind_SPC1015) + & 
-    C(ind_SPC1020) + C(ind_SPC1026) + C(ind_SPC1031) + C(ind_SPC1035) + & 
-    C(ind_SPC1042) + C(ind_SPC1043) + C(ind_SPC1044) + C(ind_SPC1055) + & 
-    C(ind_SPC1056) + C(ind_SPC1057) + C(ind_SPC1068) + C(ind_SPC1075) + & 
-    C(ind_SPC1078) + C(ind_SPC1080) + C(ind_SPC1085) + C(ind_SPC1090) + & 
-    C(ind_SPC1093) + C(ind_SPC1096) + C(ind_SPC1101) + C(ind_SPC1102) + & 
-    C(ind_SPC1106) + C(ind_SPC1109) + C(ind_SPC1113) + C(ind_SPC1118) + & 
-    C(ind_SPC1124) + C(ind_SPC1130) + C(ind_SPC1136) + C(ind_SPC1143) + & 
-    C(ind_SPC1144) + C(ind_SPC1145) + C(ind_SPC1146) + C(ind_SPC1147) + & 
-    C(ind_SPC1148) + C(ind_SPC1158) + C(ind_SPC1159) + C(ind_SPC1160) + & 
-    C(ind_SPC1167) + C(ind_SPC1168) + C(ind_SPC1174) + C(ind_SPC1179) + & 
-    C(ind_SPC1184) + C(ind_SPC1188) + C(ind_SPC1221) + C(ind_SPC1224) + & 
-    C(ind_SPC1229) + C(ind_SPC1234) + C(ind_SPC1239) + C(ind_SPC1244) + & 
-    C(ind_SPC1249) + C(ind_SPC1254) + C(ind_SPC1271) + C(ind_SPC1277) + & 
-    C(ind_SPC1285) + C(ind_SPC1286) + C(ind_SPC1287) + C(ind_SPC1295) + & 
-    C(ind_SPC1299) + C(ind_SPC1303) + C(ind_SPC1312) + C(ind_SPC1318) + & 
-    C(ind_SPC1323) + C(ind_SPC1328) + C(ind_SPC1332) + C(ind_SPC1335) + & 
-    C(ind_SPC1338) + C(ind_SPC1342) + C(ind_SPC1346) + C(ind_SPC1350) + & 
-    C(ind_SPC1355) + C(ind_SPC1356) + C(ind_SPC1368) + C(ind_SPC1374) + & 
-    C(ind_SPC1378) + C(ind_SPC1383) + C(ind_SPC1387) + C(ind_SPC1389) + & 
-    C(ind_SPC1390) + C(ind_SPC1392) + C(ind_SPC1394) + C(ind_SPC1396) + & 
-    C(ind_SPC1397) + C(ind_SPC1399) + C(ind_SPC1402) + C(ind_SPC1406) + & 
-    C(ind_SPC1409) + C(ind_SPC1411) + C(ind_SPC1417) + C(ind_SPC1421) + & 
-    C(ind_SPC1422) + C(ind_SPC1427) + C(ind_SPC1433) + C(ind_SPC1438) + & 
-    C(ind_SPC1441) + C(ind_SPC1443) + C(ind_SPC1447) + C(ind_SPC1450) + & 
-    C(ind_SPC1454) + C(ind_SPC1459) + C(ind_SPC1464) + C(ind_SPC1469) + & 
-    C(ind_SPC1473) + C(ind_SPC1478) + C(ind_SPC1482) + C(ind_SPC1486) + & 
-    C(ind_SPC1492) + C(ind_SPC1497) + C(ind_SPC1502) + C(ind_SPC1507) + & 
-    C(ind_SPC1511) + C(ind_SPC1523) + C(ind_SPC1528) + C(ind_SPC1532) + & 
-    C(ind_SPC1541) + C(ind_SPC1547) + C(ind_SPC1550) + C(ind_SPC1555) + & 
-    C(ind_SPC1560) + C(ind_SPC1561) + C(ind_SPC1577) + C(ind_SPC1580) + & 
-    C(ind_SPC1585) + C(ind_SPC1590) + C(ind_SPC1595) + C(ind_SPC1600) + & 
-    C(ind_SPC1604) + C(ind_SPC1607) + C(ind_SPC1620) + C(ind_SPC1626) + & 
-    C(ind_SPC1629) + C(ind_SPC1644) + C(ind_SPC1647) + C(ind_SPC1654) + & 
-    C(ind_SPC1658) + C(ind_SPC1665) + C(ind_SPC1670) + C(ind_SPC1675) + & 
-    C(ind_SPC1707) + C(ind_SPC1708) + C(ind_SPC1709) + C(ind_SPC1710) + & 
-    C(ind_SPC1711) + C(ind_SPC1712) + C(ind_SPC1713) + C(ind_SPC1714) + & 
-    C(ind_SPC1729) + C(ind_SPC1736) + C(ind_SPC1741) + C(ind_SPC1747) + & 
-    C(ind_SPC1751) + C(ind_SPC1758) + C(ind_SPC1763) + C(ind_SPC1768) + & 
-    C(ind_SPC1772) + C(ind_SPC1780) + C(ind_SPC1788) + C(ind_SPC1789) + & 
-    C(ind_SPC1796) + C(ind_SPC1802) + C(ind_SPC1809) + C(ind_SPC1815) + & 
-    C(ind_SPC1819) + C(ind_SPC1842) + C(ind_SPC1851) + C(ind_SPC1859) + & 
-    C(ind_SPC1863) + C(ind_SPC1864) + C(ind_SPC1873) + C(ind_SPC1877) + & 
-    C(ind_SPC1882) + C(ind_SPC1887) + C(ind_SPC1893) + C(ind_SPC1896) + & 
-    C(ind_SPC1902) + C(ind_SPC1905) + C(ind_SPC1909) + C(ind_SPC1926) + & 
-    C(ind_SPC1927) + C(ind_SPC1928) + C(ind_SPC1929) + C(ind_SPC1930) + & 
-    C(ind_SPC1949) + C(ind_SPC2044) + C(ind_SPC2045) + C(ind_SPC2047) + & 
-    C(ind_SPC2048) + C(ind_SPC2049) + C(ind_SPC2050) + C(ind_SPC2051) + & 
-    C(ind_SPC2052) + C(ind_SPC2053) + C(ind_SPC2054) + C(ind_SPC2055) + & 
-    C(ind_SPC2056) + C(ind_SPC2057) + C(ind_SPC2058) + C(ind_SPC2059) + & 
-    C(ind_SPC2060) + C(ind_SPC2061) + C(ind_SPC2062) + C(ind_SPC2063) + & 
-    C(ind_SPC2064) + C(ind_SPC2066) + C(ind_SPC2067) + C(ind_SPC2068) + & 
-    C(ind_SPC2069) + C(ind_SPC2070) + C(ind_SPC2071) + C(ind_SPC2072) + & 
-    C(ind_SPC2073) + C(ind_SPC2074) + C(ind_SPC2075) + C(ind_SPC2076) + & 
-    C(ind_SPC2077) + C(ind_SPC2079) + C(ind_SPC2080) + C(ind_SPC2081) + & 
-    C(ind_SPC2082) + C(ind_SPC2083) + C(ind_SPC2084) + C(ind_SPC2085) + & 
-    C(ind_SPC2086) + C(ind_SPC2088) + C(ind_SPC2089) + C(ind_SPC2090) + & 
-    C(ind_SPC2091) + C(ind_SPC2092) + C(ind_SPC2093) + C(ind_SPC2094) + & 
-    C(ind_SPC2095) + C(ind_SPC2096) + C(ind_SPC2097) + C(ind_SPC2098) + & 
-    C(ind_SPC2099) + C(ind_SPC2100) + C(ind_SPC2101) + C(ind_SPC2102) + & 
-    C(ind_SPC2104) + C(ind_SPC2105) + C(ind_SPC2106) + C(ind_SPC2107) + & 
-    C(ind_SPC2108) + C(ind_SPC2109) + C(ind_SPC2110) + C(ind_SPC2111) + & 
-    C(ind_SPC2112) + C(ind_SPC2113) + C(ind_SPC2115) + C(ind_SPC2116) + & 
-    C(ind_SPC2117) + C(ind_SPC2118) + C(ind_SPC2119) + C(ind_SPC2120) + & 
-    C(ind_SPC2209) + C(ind_SPC2216) + C(ind_SPC2222) + C(ind_SPC2231) + & 
-    C(ind_SPC2232) + C(ind_SPC2238) + C(ind_SPC2249) + C(ind_SPC2250) + & 
-    C(ind_SPC2257) + C(ind_SPC2262) + C(ind_SPC2265) + C(ind_SPC2269) + & 
-    C(ind_SPC2273) + C(ind_SPC2294) + C(ind_SPC2295) + C(ind_SPC2296) + & 
-    C(ind_SPC2297) + C(ind_SPC2298) + C(ind_SPC2299) + C(ind_SPC2300) + & 
-    C(ind_SPC2314) + C(ind_SPC2318) + C(ind_SPC2321) + C(ind_SPC2323) + & 
-    C(ind_SPC2328) + C(ind_SPC2332) + C(ind_SPC2336) + C(ind_SPC2354) + & 
-    C(ind_SPC2355) + C(ind_SPC2356) + C(ind_SPC2357) + C(ind_SPC2358) + & 
-    C(ind_SPC2359) + C(ind_SPC2367) + C(ind_SPC2369) + C(ind_SPC2370) + & 
-    C(ind_SPC2375) + C(ind_SPC2379) + C(ind_SPC2389) + C(ind_SPC2392) + & 
-    C(ind_SPC2395) + C(ind_SPC2398) + C(ind_SPC2401) + C(ind_SPC2407) + & 
-    C(ind_SPC2408) + C(ind_SPC2409) + C(ind_SPC2430) + C(ind_SPC2438) + & 
-    C(ind_SPC2449) + C(ind_SPC2457) + C(ind_SPC2458) + C(ind_SPC2466) + & 
-    C(ind_SPC2470) + C(ind_SPC2478) + C(ind_SPC2483) + C(ind_SPC2491) + & 
-    C(ind_SPC2494) + C(ind_SPC2510) + C(ind_SPC2511) + C(ind_SPC2512) + & 
-    C(ind_SPC2513) + C(ind_SPC2539) + C(ind_SPC2540) + C(ind_SPC2541) + & 
-    C(ind_SPC2542) + C(ind_SPC2543) + C(ind_SPC2544) + C(ind_SPC2545) + & 
-    C(ind_SPC2546) + C(ind_SPC2547) + C(ind_SPC2548) + C(ind_SPC2549) + & 
-    C(ind_SPC2550) + C(ind_SPC2551) + C(ind_SPC2567) + C(ind_SPC2573) + & 
-    C(ind_SPC2579) + C(ind_SPC2583) + C(ind_SPC2593) + C(ind_SPC2599) + & 
-    C(ind_SPC2600) + C(ind_SPC2601) + C(ind_SPC2608) + C(ind_SPC2613) + & 
-    C(ind_SPC2618) + C(ind_SPC2632) + C(ind_SPC2646) + C(ind_SPC2647) + & 
-    C(ind_SPC2648) + C(ind_SPC2649) + C(ind_SPC2650) + C(ind_SPC2651) + & 
-    C(ind_SPC2652) + C(ind_SPC2666) + C(ind_SPC2673) + C(ind_SPC2679) + & 
-    C(ind_SPC2686) + C(ind_SPC2688) + C(ind_SPC2698) + C(ind_SPC2703) + & 
-    C(ind_SPC2711) + C(ind_SPC2716) + C(ind_SPC2721) + C(ind_SPC2726) + & 
-    C(ind_SPC2733) + C(ind_SPC2737) + C(ind_SPC2741) + C(ind_SPC2746) + & 
-    C(ind_SPC2751) + C(ind_SPC2756) + C(ind_SPC2761) + C(ind_SPC2771) + & 
-    C(ind_SPC2780) + C(ind_SPC2781) + C(ind_SPC2788) + C(ind_SPC2794) + & 
-    C(ind_SPC2798) + C(ind_SPC2805) + C(ind_SPC2818) + C(ind_SPC2819) + & 
-    C(ind_SPC2820) + C(ind_SPC2821) + C(ind_SPC2822) + C(ind_SPC2832) + & 
-    C(ind_SPC2837) + C(ind_SPC2843) + C(ind_SPC2851) + C(ind_SPC2856) + & 
-    C(ind_SPC2862) + C(ind_SPC2871) + C(ind_SPC2896) + C(ind_SPC2897) + & 
-    C(ind_SPC2898) + C(ind_SPC2899) + C(ind_SPC2901) + C(ind_SPC2902) + & 
-    C(ind_SPC2903) + C(ind_SPC2904) + C(ind_SPC2905) + C(ind_SPC2906) + & 
-    C(ind_SPC2907) + C(ind_SPC2908) + C(ind_SPC2909) + C(ind_SPC2911) + & 
-    C(ind_SPC2912) + C(ind_SPC2913) + C(ind_SPC2940) + C(ind_SPC2945) + & 
-    C(ind_SPC2951) + C(ind_SPC2956) + C(ind_SPC2961) + C(ind_SPC2967) + & 
-    C(ind_SPC2975) + C(ind_SPC2976) + C(ind_SPC2984) + C(ind_SPC2989) + & 
-    C(ind_SPC2990) + C(ind_SPC3003) + C(ind_SPC3008) + C(ind_SPC3011) + & 
-    C(ind_SPC3018) + C(ind_SPC3021) + C(ind_SPC3024) + C(ind_SPC3025) + & 
-    C(ind_SPC3029) + C(ind_SPC3033) + C(ind_SPC3036) + C(ind_SPC3040) + & 
-    C(ind_SPC3043) + C(ind_SPC3046) + C(ind_SPC3050) + C(ind_SPC3051) + & 
-    C(ind_SPC3055) + C(ind_SPC3068) + C(ind_SPC3074) + C(ind_SPC3078) + & 
-    C(ind_SPC3086) + C(ind_SPC3098) + C(ind_SPC3099) + C(ind_SPC3100) + & 
-    C(ind_SPC3101) + C(ind_SPC3102) + C(ind_SPC3112) + C(ind_SPC3116) + & 
-    C(ind_SPC3121) + C(ind_SPC3128) + C(ind_SPC3133) + C(ind_SPC3138) + & 
-    C(ind_SPC3146) + C(ind_SPC3150) + C(ind_SPC3154) + C(ind_SPC3155) + & 
-    C(ind_SPC3161) + C(ind_SPC3165) + C(ind_SPC3171) + C(ind_SPC3181) + & 
-    C(ind_SPC3188) + C(ind_SPC3189) + C(ind_SPC3195) + C(ind_SPC3199) + & 
-    C(ind_SPC3205) + C(ind_SPC3219) + C(ind_SPC3222) + C(ind_SPC3228) + & 
-    C(ind_SPC3251) + C(ind_SPC3252) + C(ind_SPC3253) + C(ind_SPC3254) + & 
-    C(ind_SPC3255) + C(ind_SPC3256) + C(ind_SPC3257) + C(ind_SPC3258) + & 
-    C(ind_SPC3260) + C(ind_SPC3261) + C(ind_SPC3262) + C(ind_SPC3263) + & 
-    C(ind_SPC3280) + C(ind_SPC3281) + C(ind_SPC3285) + C(ind_SPC3289) + & 
-    C(ind_SPC3295) + C(ind_SPC3299) + C(ind_SPC3300) + C(ind_SPC3308) + & 
-    C(ind_SPC3313) + C(ind_SPC3322) + C(ind_SPC3329) + C(ind_SPC3333) + & 
-    C(ind_SPC3338) + C(ind_SPC3342) + C(ind_SPC3348) + C(ind_SPC3355) + & 
-    C(ind_SPC3360) + C(ind_SPC3368) + C(ind_SPC3369) + C(ind_SPC3370) + & 
-    C(ind_SPC3371) + C(ind_SPC3372) + C(ind_SPC3384) + C(ind_SPC3389) + & 
-    C(ind_SPC3395) + C(ind_SPC3400) + C(ind_SPC3404) + C(ind_SPC3408) + & 
-    C(ind_SPC3412) + C(ind_SPC3417) + C(ind_SPC3418) + C(ind_SPC3424) + & 
-    C(ind_SPC3429) + C(ind_SPC3436) + C(ind_SPC3441) + C(ind_SPC3445) + & 
-    C(ind_SPC3449) + C(ind_SPC3453) + C(ind_SPC3460) + C(ind_SPC3461) + & 
-    C(ind_SPC3462) + C(ind_SPC3471) + C(ind_SPC3475) + C(ind_SPC3477) + & 
-    C(ind_SPC3482) + C(ind_SPC3483) + C(ind_SPC3491) + C(ind_SPC3498) + & 
-    C(ind_SPC3505) + C(ind_SPC3510) + C(ind_SPC3523) + C(ind_SPC3524) + & 
-    C(ind_SPC3525) + C(ind_SPC3534) + C(ind_SPC3540) + C(ind_SPC3544) + & 
-    C(ind_SPC3551) + C(ind_SPC3560) + C(ind_SPC3565) + C(ind_SPC3570) + & 
-    C(ind_SPC3577) + C(ind_SPC3578) + C(ind_SPC3579) + C(ind_SPC3588) + & 
-    C(ind_SPC3593) + C(ind_SPC3598) + C(ind_SPC3602) + C(ind_SPC3607) + & 
-    C(ind_SPC3617) + C(ind_SPC3623) + C(ind_SPC3626) + C(ind_SPC3634) + & 
-    C(ind_SPC3636) + C(ind_SPC3640) + C(ind_SPC3648) + C(ind_SPC3652) + & 
-    C(ind_SPC3659) + C(ind_SPC3661) + C(ind_SPC3666) + C(ind_SPC3669) + & 
-    C(ind_SPC3672) + C(ind_SPC3680) + C(ind_SPC3683) + C(ind_SPC3689) + & 
-    C(ind_SPC3693) + C(ind_SPC3696) + C(ind_SPC3701) + C(ind_SPC3705) + & 
-    C(ind_SPC3712) + C(ind_SPC3717) + C(ind_SPC3721) + C(ind_SPC3725) + & 
-    C(ind_SPC3732) + C(ind_SPC3738) + C(ind_SPC3743) + C(ind_SPC3756) + & 
-    C(ind_SPC3757) + C(ind_SPC3758) + C(ind_SPC3759) + C(ind_SPC3760) + & 
-    C(ind_SPC3770) + C(ind_SPC3779) + C(ind_SPC3783) + C(ind_SPC3788) + & 
-    C(ind_SPC3795) + C(ind_SPC3800) + C(ind_SPC3802) + C(ind_SPC3810) + & 
-    C(ind_SPC3822) + C(ind_SPC3823) + C(ind_SPC3829) + C(ind_SPC3830) + & 
-    C(ind_SPC3836) + C(ind_SPC3843) + C(ind_SPC3844) + C(ind_SPC3854) + & 
-    C(ind_SPC3855) + C(ind_SPC3860) + C(ind_SPC3861) + C(ind_SPC3869) + & 
-    C(ind_SPC3870) + C(ind_SPC3875) + C(ind_SPC3876) + C(ind_SPC3881) + & 
-    C(ind_SPC3887) + C(ind_SPC3893) + C(ind_SPC3894) + C(ind_SPC3899) + & 
-    C(ind_SPC3904) + C(ind_SPC3911) + C(ind_SPC3915) + C(ind_SPC3919) + & 
-    C(ind_SPC3926) + C(ind_SPC3957) + C(ind_SPC3960) + C(ind_SPC3966) + & 
-    C(ind_SPC3977) + C(ind_SPC3978) + C(ind_SPC3982) + C(ind_SPC3986) + & 
-    C(ind_SPC4011) + C(ind_SPC4017) + C(ind_SPC4022) + C(ind_SPC4023) + & 
-    C(ind_SPC4028) + C(ind_SPC4035) + C(ind_SPC4040) + C(ind_SPC4044) + & 
-    C(ind_SPC4048) + C(ind_SPC4137) + C(ind_SPC4138) + C(ind_SPC4139) + & 
-    C(ind_SPC4140) + C(ind_SPC4141) + C(ind_SPC4158) + C(ind_SPC4159) + & 
-    C(ind_SPC4160) + C(ind_SPC4161) + C(ind_SPC4162) + C(ind_SPC4163) + & 
-    C(ind_SPC4164) + C(ind_SPC4165) + C(ind_SPC4174) + C(ind_SPC4175) + & 
-    C(ind_SPC4176) + C(ind_SPC4177) + C(ind_SPC4178) + C(ind_SPC4189) + & 
-    C(ind_SPC4205) + C(ind_SPC4206) + C(ind_SPC4211) + C(ind_SPC4219) + & 
-    C(ind_SPC4226) + C(ind_SPC4229) + C(ind_SPC4233) + C(ind_SPC4239) + & 
-    C(ind_SPC4240) + C(ind_SPC4242) + C(ind_SPC4244) + C(ind_SPC4247) + & 
-    C(ind_SPC4250) + C(ind_SPC4251) + C(ind_SPC4252) + C(ind_SPC4254) + & 
-    C(ind_SPC4258) + C(ind_SPC4260) + C(ind_SPC4262) + C(ind_SPC4269) + & 
-    C(ind_SPC4271) + C(ind_SPC4276) + C(ind_SPC4277) + C(ind_SPC4278) + & 
-    C(ind_SPC4279) + C(ind_SPC4280) + C(ind_SPC4282) + C(ind_SPC4284) + & 
-    C(ind_SPC4287) + C(ind_SPC4291) + C(ind_SPC4296) + C(ind_SPC4300) + & 
-    C(ind_SPC4302) + C(ind_SPC4303) + C(ind_SPC4308) + C(ind_SPC4310) + & 
-    C(ind_SPC4312) + C(ind_SPC4314) + C(ind_SPC4315) + C(ind_SPC4316) + & 
-    C(ind_SPC4320) + C(ind_SPC4322) + C(ind_SPC4324) + C(ind_SPC4328) + & 
-    C(ind_SPC4331) + C(ind_SPC4333) + C(ind_SPC4335) + C(ind_SPC4336) + & 
-    C(ind_SPC4338) + C(ind_SPC4340) + C(ind_SPC4342) + C(ind_SPC4343) + & 
-    C(ind_SPC4349) + C(ind_SPC4360) + C(ind_SPC4361) + C(ind_SPC4362) + & 
-    C(ind_SPC4372) + C(ind_SPC4375) + C(ind_SPC4389) + C(ind_SPC4391) + & 
-    C(ind_SPC4393) + C(ind_SPC4395) + C(ind_SPC4399) + C(ind_SPC4406) + & 
-    C(ind_SPC4408) + C(ind_SPC4410) + C(ind_SPC4420) + C(ind_SPC4424) + & 
-    C(ind_SPC4430) + C(ind_SPC4432) + C(ind_SPC4437) + C(ind_SPC4438) + & 
-    C(ind_SPC4439) + C(ind_SPC4443) + C(ind_SPC4446) + C(ind_SPC4448) + & 
-    C(ind_SPC4450) + C(ind_SPC4455) + C(ind_SPC4458) + C(ind_SPC4461) + & 
-    C(ind_SPC4463) + C(ind_SPC4464) + C(ind_SPC4467) + C(ind_SPC4468) + & 
-    C(ind_SPC4501) + C(ind_SPC4502) + C(ind_SPC4503) + C(ind_SPC4504) + & 
-    C(ind_SPC4505) + C(ind_SPC4550) + C(ind_SPC4554) + C(ind_SPC4562) + & 
-    C(ind_SPC4563) + C(ind_SPC4568) + C(ind_SPC4572) + C(ind_SPC4578) + & 
-    C(ind_SPC4661) + C(ind_SPC4663) + C(ind_SPC4666) + C(ind_SPC4673) + & 
-    C(ind_SPC4678) + C(ind_SPC4680) + C(ind_SPC4683) + C(ind_SPC4690) + & 
-    C(ind_SPC4706) + C(ind_SPC4711) + C(ind_SPC4727) + C(ind_SPC4728) + & 
-    C(ind_SPC4729) + C(ind_SPC4730) + C(ind_SPC4753) + C(ind_SPC4754) + & 
-    C(ind_SPC4755) + C(ind_SPC4756) + C(ind_SPC4757) + C(ind_SPC4758) + & 
-    C(ind_SPC4782) + C(ind_SPC4788) + C(ind_SPC4792) + C(ind_SPC4799) + & 
-    C(ind_SPC4804) + C(ind_SPC4806) + C(ind_SPC4812) + C(ind_SPC4822) + & 
-    C(ind_SPC4826) + C(ind_SPC4832) + C(ind_SPC4833) + C(ind_SPC4837) + & 
-    C(ind_SPC4852) + C(ind_SPC4862) + C(ind_SPC4868) + C(ind_SPC4874) + & 
-    C(ind_SPC4882) + C(ind_SPC4892) + C(ind_SPC4896) + C(ind_SPC4897) + & 
-    C(ind_SPC4903) + C(ind_SPC4908) + C(ind_SPC4917) + C(ind_SPC4926) + & 
-    C(ind_SPC4932) + C(ind_SPC4936) + C(ind_SPC4948) + C(ind_SPC4950) + & 
-    C(ind_SPC4951) + C(ind_SPC4953) + C(ind_SPC4954) + C(ind_SPC4955) + & 
-    C(ind_SPC4956) + C(ind_SPC4972) + C(ind_SPC4973) + C(ind_SPC4979) + & 
-    C(ind_SPC4986) + C(ind_SPC4990) + C(ind_SPC4995) + C(ind_SPC5000) + & 
-    C(ind_SPC5020) + C(ind_SPC5021) + C(ind_SPC5027) + C(ind_SPC5035) + & 
-    C(ind_SPC5043) + C(ind_SPC5048) + C(ind_SPC5059) + C(ind_SPC5060) + & 
-    C(ind_SPC5063) + C(ind_SPC5068) + C(ind_SPC5072) + C(ind_SPC5077) + & 
-    C(ind_SPC5084) + C(ind_SPC5088) + C(ind_SPC5093) + C(ind_SPC5101) + & 
-    C(ind_SPC5107) + C(ind_SPC5108) + C(ind_SPC5109) + C(ind_SPC5110) + & 
-    C(ind_SPC5120) + C(ind_SPC5125) + C(ind_SPC5126) + C(ind_SPC5134) + & 
-    C(ind_SPC5140) + C(ind_SPC5148) + C(ind_SPC5152) + C(ind_SPC5411) + & 
-    C(ind_SPC5412) + C(ind_SPC5414) + C(ind_SPC5415) + C(ind_SPC5416) + & 
-    C(ind_SPC5417) + C(ind_SPC5418) + C(ind_SPC5421) + C(ind_SPC5422) + & 
-    C(ind_SPC5423) + C(ind_SPC5424) + C(ind_SPC5425) + C(ind_SPC5426) + & 
-    C(ind_SPC5427) + C(ind_SPC5428) + C(ind_SPC5429) + C(ind_SPC5430) + & 
-    C(ind_SPC5431) + C(ind_SPC5432) + C(ind_SPC5433) + C(ind_SPC5434) + & 
-    C(ind_SPC5435) + C(ind_SPC5436) + C(ind_SPC5437) + C(ind_SPC5438) + & 
-    C(ind_SPC5439) + C(ind_SPC5440) + C(ind_SPC5441) + C(ind_SPC5442) + & 
-    C(ind_SPC5443) + C(ind_SPC5444) + C(ind_SPC5445) + C(ind_SPC5446) + & 
-    C(ind_SPC5447) + C(ind_SPC5448) + C(ind_SPC5449) + C(ind_SPC5450) + & 
-    C(ind_SPC5451) + C(ind_SPC5452) + C(ind_SPC5453) + C(ind_SPC5454) + & 
-    C(ind_SPC5455) + C(ind_SPC5456) + C(ind_SPC5457) + C(ind_SPC5458) + & 
-    C(ind_SPC5459) + C(ind_SPC5460) + C(ind_SPC5461) + C(ind_SPC5462) + & 
-    C(ind_SPC5463) + C(ind_SPC5464) + C(ind_SPC5465) + C(ind_SPC5466) + & 
-    C(ind_SPC5467) + C(ind_SPC5468) + C(ind_SPC5469) + C(ind_SPC5470) + & 
-    C(ind_SPC5471) + C(ind_SPC5472) + C(ind_SPC5473) + C(ind_SPC5474) + & 
-    C(ind_SPC5475) + C(ind_SPC5476) + C(ind_SPC5477) + C(ind_SPC5478) + & 
-    C(ind_SPC5479) + C(ind_SPC5480) + C(ind_SPC5481) + C(ind_SPC5482) + & 
-    C(ind_SPC5483) + C(ind_SPC5484) + C(ind_SPC5485) + C(ind_SPC5486) + & 
-    C(ind_SPC5487) + C(ind_SPC5488) + C(ind_SPC5489) + C(ind_SPC5490) + & 
-    C(ind_SPC5491) + C(ind_SPC5492) + C(ind_SPC5493) + C(ind_SPC5506) + & 
-    C(ind_SPC5507) + C(ind_SPC5508) + C(ind_SPC5517) + C(ind_SPC5518) + & 
-    C(ind_SPC5526) + C(ind_SPC5531) + C(ind_SPC5538) + C(ind_SPC5544) + & 
-    C(ind_SPC5545) + C(ind_SPC5549) + C(ind_SPC5567) + C(ind_SPC5572) + & 
-    C(ind_SPC5578) + C(ind_SPC5579) + C(ind_SPC5580) + C(ind_SPC5586) + & 
-    C(ind_SPC5595) + C(ind_SPC5601) + C(ind_SPC5604) + C(ind_SPC5616) + & 
-    C(ind_SPC5617) + C(ind_SPC5618) + C(ind_SPC5619) + C(ind_SPC5632) + & 
-    C(ind_SPC5633) + C(ind_SPC5634) + C(ind_SPC5635) + C(ind_SPC5643) + & 
-    C(ind_SPC5644) + C(ind_SPC5655) + C(ind_SPC5656) + C(ind_SPC5657) + & 
-    C(ind_SPC5658) + C(ind_SPC5668) + C(ind_SPC5672) + C(ind_SPC5678) + & 
-    C(ind_SPC5682) + C(ind_SPC5687) + C(ind_SPC5694) + C(ind_SPC5695) + & 
-    C(ind_SPC5706) + C(ind_SPC5712) + C(ind_SPC5717) + C(ind_SPC5419) + & 
-    C(ind_SPC5420)
-
-
-#ENDINLINE
-

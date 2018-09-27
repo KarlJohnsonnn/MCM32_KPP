@@ -22,11 +22,21 @@ clear all;
 %% KPP INPUT DATA
 [fileID, err_msg] = fopen('SpcConc');
 % Conc_KPP = textscan(fileID,'%f %f %f %f %f %f %f %f %f ', 'HeaderLines',2);
-Names_KPP = textscan(fileID,'%s', 'Delimiter', 't', 'HeaderLines',0);
-Names_KPP = Names_KPP{1,1};
-Names_KPP = strsplit(Names_KPP{1,1});
 
-Conc_KPP = textscan(fileID,repmat('%f',[1,27]), 'HeaderLines',1);
+DATA_KPP = textscan(fileID,'%s', 'Delimiter', 't', 'HeaderLines',0);
+
+DATA_KPP = DATA_KPP{1,1};
+Names_KPP = strsplit(DATA_KPP{1,1});
+n_Species = length(Names_KPP)-1;
+
+n_TimeSteps = size(DATA_KPP,1)-2;
+VALUES_KPP = zeros(n_TimeSteps,n_Species);
+
+for i = 1:n_TimeSteps
+  VALUES_KPP(i,:) = str2num(cell2mat(strsplit(DATA_KPP{i+2,1})'));
+end
+
+%Conc_KPP = textscan(fileID,repmat('%f',[1,n_Species]), 'HeaderLines',1);
 time_KPP = Conc_KPP{1}/3600.0; 
 
 %% AtCSOL INPUT DATA
@@ -37,20 +47,27 @@ for iSpc = 2:size(Names_KPP,2)
 end
 
 
-figure('units','normalized','outerposition',[0 0 1 1]);
+%figure('units','normalized','outerposition',[0 0 1 1]);
 
-% for i = 1:2%size(names,2)-1
+for i = 2:size(Names_KPP,2)-1
     
-   subplot(1,2,1);
-   plot(time_KPP ,    Conc_KPP{21}(:),  '-', 'LineWidth', 3); hold on;
+   %subplot(1,2,1);
+   
+
+
+  figure('units','normalized','outerposition',[0 0 1 1]);
+
+   plot(VALUES_KPP(:,1) ,    VALUES_KPP(:,i),  '-', 'LineWidth', 3);
+   %hold on;
 %    plot(time_AtCSol , Conc_AtCSol{i}(:), '-', 'LineWidth', 3);
    
 %    xlim([time_AtCSol(1), time_AtCSol(end)]);
-   title(Names_KPP{21});
+   title(Names_KPP{i});
    xlabel('Time in [h]');
    ylabel('Concentration in [molec/cm3]');
-   legend('Concentration KPP', 'Concentration AtCSol');
-% end
+   %legend('Concentration KPP', 'Concentration AtCSol');
+end
+aaa=5;
 
 
 

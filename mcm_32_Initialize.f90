@@ -67,6 +67,7 @@ SUBROUTINE Initialize ( )
   TEND   =   0.84600000D+05
   DT     =   0.60000000D+03
   TEMP   =   0.28000000D+03
+  DO i=1,UBOUND(SPC_NAMES,1)
 !  IF ( TRIM(SPC_NAMES(i)) == 'SPC15' )   VAR(i) = (4.340E+13_dp)*CFACTOR      ! C
 !  IF ( TRIM(SPC_NAMES(i)) == 'SPC16' )   VAR(i) = (7.470E+09_dp)*CFACTOR      ! C#C
 !  IF ( TRIM(SPC_NAMES(i)) == 'SPC171' )   VAR(i) = (1.110E+08_dp)*CFACTOR      ! C1CCC(=O)CC1
@@ -156,8 +157,10 @@ SUBROUTINE Initialize ( )
 !  IF ( TRIM(SPC_NAMES(i)) == 'SPC5701' )   VAR(i) = (2.410E+08_dp)*CFACTOR      ! c1ccccc1C=O
 !  IF ( TRIM(SPC_NAMES(i)) == 'SPC5702' )   VAR(i) = (2.330E+07_dp)*CFACTOR      ! c1ccccc1CC
 !  IF ( TRIM(SPC_NAMES(i)) == 'SPC5708' )   VAR(i) = (6.740E+06_dp)*CFACTOR      ! c1ccccc1CCC
+  END DO
 
 ! End INLINED initializations
+  WRITE(*,*) 
 
       
 END SUBROUTINE Initialize

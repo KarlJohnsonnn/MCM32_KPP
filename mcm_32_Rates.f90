@@ -280,6 +280,7 @@ CONTAINS
     REAL(dp), PARAMETER :: dust=1.0
     REAL(dp), PARAMETER :: PiHalf = 2.0_dp*ATAN(1.0_dp)
 
+    k_PHOTOMCM = 0.0_dp
     IF ( chi < PiHalf ) THEN
       ChiZmcm  = EXP(-1.0d0*K3/COS(chi))
       yChiZmcm = chi ** K2
@@ -451,17 +452,20 @@ SUBROUTINE Update_RCONST ( )
 
 ! Begin INLINED RCONST
 
-
-  REAL(dp) :: M, N2, O2, RO2, H2O
-  ! variables
-  REAL(dp), PARAMETER     :: PiHalf = 2.0_dp*ATAN(1.0_dp)
-  REAL(dp)                ::  chi
-
-
-  N2 =   0.19600000D+20
-  O2 =   0.51000000D+19
-  M  = N2 + O2
-  H2O =   0.51000000D+18
+  REAL(dp) :: M0, M, N2, O2, RO2, H2O
+  ! variable
+  REAL(dp)            ::  chi
+  
+  REAL(dp), PARAMETER :: PiHalf = 2.0_dp*ATAN(1.0_dp)
+  REAL(dp), PARAMETER :: RefTemp = 298.15D0
+  REAL(dp), PARAMETER :: Pres = 850.d0 ! hPa
+  REAL(dp), PARAMETER :: p0   = 1013.25d0 ! hPa Normaldruck
+  
+  N2  = 1.960D19
+  O2  = 5.100D18
+  M0  = N2 + O2
+  M   = M0 * RefTemp/TEMP * Pres/p0
+  H2O = 5.100D17
 
 
   ! --- Update photo reactions "J(.)" ---

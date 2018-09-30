@@ -48,12 +48,12 @@ SUBROUTINE Initialize ( )
 
   CFACTOR = 1.000000e+00_dp
 
-  x = (0.)*CFACTOR
+  x = (0.0_dp)*CFACTOR
   DO i = 1, NVAR
     VAR(i) = x
   END DO
 
-  x = (0.)*CFACTOR
+  x = (0.0_dp)*CFACTOR
   DO i = 1, NFIX
     FIX(i) = x
   END DO

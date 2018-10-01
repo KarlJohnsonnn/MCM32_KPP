@@ -54,7 +54,7 @@ PROGRAM mcm_32_Driver
       CALL InitSaveData()
 
 !~~~> Time loop
-      OPEN( unit=999,       file='SpcConc',      status='replace', &
+      OPEN( unit=999,       file='SpcConc.KPP',      status='replace', &
       &     action='write', access='sequential', iostat=io_stat    )
       WRITE(999,*) ' T             ',( TRIM(SPC_NAMES(MONITOR(i)))//'            ', i=1,NMONITOR )
       WRITE(999,*) ' T(idx)  ',( MONITOR(i),' ', i=1,NMONITOR )

@@ -1,6 +1,6 @@
 *.o
 *.mod
-*.exe
+#*.exe
 *.dat
 *.map
 SpcConc

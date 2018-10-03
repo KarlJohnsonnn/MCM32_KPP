@@ -53,7 +53,6 @@ DATA_AtCSol = DATA_KPP{1,1};
 Names_AtCSol = strsplit(DATA_AtCSol{1,1});
 n_Species = length(Names_AtCSol)-1;
 
-length(Names_AtCSol)
 
 n_TimeSteps = size(DATA_AtCSol,1)-2;
 VALUES_AtCSol = zeros(n_TimeSteps,n_Species);
@@ -68,7 +67,11 @@ time_AtCSol = VALUES_AtCSol(:,1)/3600.0;
 Names_AtCSol_unsorted = Names_AtCSol;
 perm = zeros(n_Species,1);
 
+disp('')
+disp('Species List, T=Time')
+
 for i=1:n_Species
+  disp(['    ',char(Names_KPP{1,i})])
   for j=1:n_Species
     if strcmp(char(Names_KPP{1,i}),char(Names_AtCSol_unsorted{1,j}))
       Names_AtCSol{1,i} = Names_KPP{1,i};
@@ -79,11 +82,8 @@ for i=1:n_Species
 end
 
 for i = 23:23%size(Names_KPP,2)-1
-   %figure(1,'units','normalized','outerposition',[0 0 1 1]);
-   %figure;
-   figure('Position',[0 0 1200 900])
+   figure(i,'units','normalized','outerposition',[0 0 1 1]);
    
-
    plot(time_KPP,     VALUES_KPP(:,i),          '-', 'LineWidth', 3); hold on;
    plot(time_AtCSol , VALUES_AtCSol(:,perm(i)), '-', 'LineWidth', 3);
    
@@ -92,7 +92,7 @@ for i = 23:23%size(Names_KPP,2)-1
    xlabel('Time in [h]');
    ylabel('Concentration in [molec/cm3]');
    legend('Concentration KPP', 'Concentration AtCSol');
-   disp('Press a key !')  % Press a key here.You can see the message 'Paused: Press any key' in        % the lower left corner of MATLAB window.
+   disp('Press a key to exit the program!')  % Press a key here.You can see the message 'Paused: Press any key' in        % the lower left corner of MATLAB window.
    pause;
 end
 

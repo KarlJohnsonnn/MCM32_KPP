@@ -1,4 +1,4 @@
-function PrintConcentrations()
+function PrintConcentrations_octave()
 
 close all;
 clear all;
@@ -81,7 +81,7 @@ for i=1:n_Species
   end
 end
 
-for i = 23:23%size(Names_KPP,2)-1
+for i = 8:8%size(Names_KPP,2)-1
    figure(i,'units','normalized','outerposition',[0 0 1 1]);
    
    plot(time_KPP,     VALUES_KPP(:,i),          '-', 'LineWidth', 3); hold on;
@@ -92,6 +92,7 @@ for i = 23:23%size(Names_KPP,2)-1
    xlabel('Time in [h]');
    ylabel('Concentration in [molec/cm3]');
    legend('Concentration KPP', 'Concentration AtCSol');
+   grid on;
    disp('Press a key to exit the program!')  % Press a key here.You can see the message 'Paused: Press any key' in        % the lower left corner of MATLAB window.
    pause;
 end

@@ -150,8 +150,8 @@ SUBROUTINE Initialize ( )
 !  IF ( TRIM(SPC_NAMES(i)) == 'SPC5551' )   VAR(i) = (5.110E+07_dp)*CFACTOR      ! c1c(C)cccc1CC
 !  IF ( TRIM(SPC_NAMES(i)) == 'SPC5588' )   VAR(i) = (7.070E+08_dp)*CFACTOR      ! c1cc(C)ccc1C
 !  IF ( TRIM(SPC_NAMES(i)) == 'SPC5640' )   VAR(i) = (2.550E+07_dp)*CFACTOR      ! c1ccc(O)cc1
-!  IF ( TRIM(SPC_NAMES(i)) == 'SPC5663' )   VAR(i) = (2.830E+08_dp)*CFACTOR      ! c1ccccc1
-!  IF ( TRIM(SPC_NAMES(i)) == 'SPC5664' )   VAR(i) = (2.130E+09_dp)*CFACTOR      ! c1ccccc1C
+  IF ( TRIM(SPC_NAMES(i)) == 'SPC5663' )   VAR(i) = (2.830E+08_dp)*CFACTOR      ! c1ccccc1
+  IF ( TRIM(SPC_NAMES(i)) == 'SPC5664' )   VAR(i) = (2.130E+09_dp)*CFACTOR      ! c1ccccc1C
 !  IF ( TRIM(SPC_NAMES(i)) == 'SPC5683' )   VAR(i) = (1.850E+06_dp)*CFACTOR      ! c1ccccc1C(C)C
 !  IF ( TRIM(SPC_NAMES(i)) == 'SPC5700' )   VAR(i) = (2.170E+08_dp)*CFACTOR      ! c1ccccc1C=C
 !  IF ( TRIM(SPC_NAMES(i)) == 'SPC5701' )   VAR(i) = (2.410E+08_dp)*CFACTOR      ! c1ccccc1C=O

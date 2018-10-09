@@ -40,6 +40,7 @@ PROGRAM mcm_32_Driver
   
       REAL(kind=dp) :: t0,tint
       INTEGER       :: io_stat
+      INTEGER       :: ord(NREACT)
 !~~~> Initialization 
 
       STEPMIN = 0.0d0
@@ -86,6 +87,7 @@ PROGRAM mcm_32_Driver
 
       CALL CPU_TIME(t0)
       T = TSTART
+!     T=43200.0d0
 kron: DO WHILE (T < TEND)
 
         TIME = T
@@ -97,6 +99,14 @@ kron: DO WHILE (T < TEND)
         !CALL SaveData()
         CALL Update_SUN() 
         CALL Update_RCONST()
+!#######################################        
+!     CALL Sort(RCONST,Ord)
+!     DO i=1,UBOUND(Ord,1)
+!       WRITE(700,*) i,Ord(i),RCONST(i)
+!     END DO
+!       WRITE(700,*) 'SUM RCONST',SUM(RCONST)
+!       STOP
+!#######################################        
 
         CALL INTEGRATE( TIN = T, TOUT = T+DT, RSTATUS_U = RSTATE, &
         ICNTRL_U = (/ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 /) )
@@ -119,10 +129,33 @@ kron: DO WHILE (T < TEND)
       WRITE(*,*) ' Integration Time = ', tint-t0
 
 991   FORMAT(F6.1,'%. T=',E9.3,2X,200(A,'=',E11.4,'; '))
+CONTAINS
+SUBROUTINE sort(vec,ord)
+  REAL(8) :: vec(:)
+  INTEGER :: ord(:)
 
-END PROGRAM mcm_32_Driver
+  INTEGER :: i,itemp,j,n
+  REAL(8) :: temp
+  n=SIZE(Vec)
+  DO i=1,n
+    ord(i)=i
+  END DO  
+  DO i=1,n
+    DO j=1,n-i
+      IF (vec(j).gt.vec(j+1)) THEN
+        temp=vec(j)
+        vec(j)=vec(j+1)
+        vec(j+1)=temp
+        itemp=ord(j)
+        ord(j)=ord(j+1)
+        ord(j+1)=itemp
+      END IF
+    END DO
+  END DO
+END SUBROUTINE sort
+
 
 ! End of MAIN function
 ! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+END PROGRAM mcm_32_Driver
 

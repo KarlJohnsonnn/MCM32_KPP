@@ -4,5 +4,6 @@
 *.exe
 *.dat
 *.map
-SpcConc
+SpcCon*
+*.png
 nohup.out

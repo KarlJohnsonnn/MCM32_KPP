@@ -1,7 +1,8 @@
+*.png
 *.o
 *.mod
 *.exe
 *.dat
 *.map
-SpcConc
+SpcConc*
 nohup.out

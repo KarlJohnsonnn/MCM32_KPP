@@ -46,7 +46,7 @@ end
 %% AtCSol INPUT DATA
 [fileID, err_msg] = fopen('SpcConc.AtCSol');
 
-DATA_KPP = textscan(fileID,'%s', 'Delimiter', 't', 'HeaderLines',0);
+DATA_KPP = textscan(fileID, '%s', 'Delimiter', 't', 'HeaderLines', 0);
 
 
 DATA_AtCSol = DATA_KPP{1,1};
@@ -81,11 +81,11 @@ for i=1:n_Species
   end
 end
 
-for i = 8:8%size(Names_KPP,2)-1
-   figure(i,'units','normalized','outerposition',[0 0 1 1]);
+for i = 2:26%size(Names_KPP,2)-1
+   f = figure(i,'units','normalized','outerposition',[0 0 1 1]);
    
-   plot(time_KPP,     VALUES_KPP(:,i),          '-', 'LineWidth', 3); hold on;
-   plot(time_AtCSol , VALUES_AtCSol(:,perm(i)), '-', 'LineWidth', 3);
+   plot(time_KPP,     VALUES_KPP(:,i),          'o-', 'LineWidth', 3); hold on;
+   plot(time_AtCSol , VALUES_AtCSol(:,perm(i)), '+-', 'LineWidth', 3);
    
    xlim([time_AtCSol(1), time_AtCSol(end)]);
    title(Names_KPP{i});
@@ -93,8 +93,9 @@ for i = 8:8%size(Names_KPP,2)-1
    ylabel('Concentration in [molec/cm3]');
    legend('Concentration KPP', 'Concentration AtCSol');
    grid on;
-   disp('Press a key to exit the program!')  % Press a key here.You can see the message 'Paused: Press any key' in        % the lower left corner of MATLAB window.
-   pause;
+   saveas(f,[Names_KPP{i},'_AtCSol-KPP.png']);
+   %disp('Press a key to exit the program!')  % Press a key here.You can see the message 'Paused: Press any key' in        % the lower left corner of MATLAB window.
+   %pause;
 end
 
 

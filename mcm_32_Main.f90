@@ -60,6 +60,10 @@ PROGRAM mcm_32_Driver
       WRITE(999,*) ' T             ',( TRIM(SPC_NAMES(MONITOR(i)))//'            ', i=1,NMONITOR )
       WRITE(999,*) ' T(idx)  ',( MONITOR(i),' ', i=1,NMONITOR )
 
+      WRITE(*,* )
+      WRITE(*,'(A,Es16.8)') '    Sum Initial Values = ', SUM(C)
+      WRITE(*,* )
+
 
       WRITE(*,*) ' Diagnose species'
       DO i = 1 , SIZE(SPC_NAMES)

@@ -13,7 +13,7 @@
 !        R. Sander, Max-Planck Institute for Chemistry, Mainz, Germany
 ! 
 ! File                 : mcm_32_Rates.f90
-! Time                 : Sat Sep 15 19:57:21 2018
+! Time                 : Thu Oct 11 00:34:08 2018
 ! Working directory    : /vols/fs1/work/schimmel/Code/kpp-2.2.3
 ! Equation file        : mcm_32.kpp
 ! Output root filename : mcm_32
@@ -452,20 +452,21 @@ SUBROUTINE Update_RCONST ( )
 
 ! Begin INLINED RCONST
 
+
   REAL(dp) :: M0, M, N2, O2, RO2, H2O
-  ! variable
-  REAL(dp)            ::  chi
-  
-  REAL(dp), PARAMETER :: PiHalf = 2.0_dp*ATAN(1.0_dp)
-  REAL(dp), PARAMETER :: RefTemp = 298.15D0
+  ! variables
+  REAL(dp), PARAMETER     :: PiHalf = 2.0_dp*ATAN(1.0_dp)
   REAL(dp), PARAMETER :: Pres = 850.d0 ! hPa
   REAL(dp), PARAMETER :: p0   = 1013.25d0 ! hPa Normaldruck
-  
-  N2  = 1.960D19
-  O2  = 5.100D18
-  M0  = N2 + O2
-  M   = M0 * RefTemp/TEMP * Pres/p0
-  H2O = 5.100D17
+  REAL(dp), PARAMETER :: RefTemp = 298.15D0
+  REAL(dp)                ::  chi
+
+
+  N2 =   0.19600000D+20
+  O2 =   0.51000000D+19
+  M0 =   0.24700000D+20
+  M   = M0 * RefTemp / TEMP * Pres / p0
+  H2O =   0.51000000D+18
 
 
   ! --- Update photo reactions "J(.)" ---

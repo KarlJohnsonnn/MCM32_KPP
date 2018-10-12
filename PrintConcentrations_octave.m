@@ -82,8 +82,10 @@ for i=1:n_Species
 end
 
 
-for i = [22,23,26,27]%size(Names_KPP,2)-1
-    figure('units','normalized','outerposition',[0 0 1 1]);
+for i = 2:size(Names_KPP,2)-1
+%for i = [2,3,4,5,6,21,22,23,24,25,26,27]
+%for i = [22,23,26,27]%size(Names_KPP,2)-1
+    f = figure('units','normalized','outerposition',[0 0 1 1]);
     
     plot(time_KPP,     VALUES_KPP(:,i),          '-', 'LineWidth', 3); hold on;
     plot(time_AtCSol , VALUES_AtCSol(:,perm(i)), '-', 'LineWidth', 3);
@@ -94,8 +96,16 @@ for i = [22,23,26,27]%size(Names_KPP,2)-1
     ylabel('Concentration in [molec/cm3]');
     legend('Concentration KPP', 'Concentration AtCSol');
     grid on;
-    %    disp('Press a key to exit the program!')  % Press a key here.You can see the message 'Paused: Press any key' in        % the lower left corner of MATLAB window.
+    % Press a key here. 
+    % You can see the message 'Paused: Press any key' in        
+    % the lower left corner of MATLAB window.
+
+    %    disp('Press a key to exit the program!')  
     %    pause;
+
+
+    % save figures 
+    print(f, ['PNG/', Names_KPP{i}, '_AtCSol-KPP.png'], '-dpng')
 end
 
 
